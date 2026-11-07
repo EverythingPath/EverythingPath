@@ -1,0 +1,77 @@
+_id: f2itNakmLMbnepG9
+_key: '!items!f2itNakmLMbnepG9'
+_stats:
+  coreVersion: '12.331'
+folder: FeKDEoyX2eafWdJl
+img: systems/pf1/icons/feats/persuasive.jpg
+name: Calculated Bribe
+system:
+  actions:
+    - _id: HHxKcgamaqI7Y9ic
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  contextNotes:
+    - target: skill.dip
+      text: >-
+        Once per day, while haggling with a merchant or striking a bargain with
+        another intelligent creature, you can spend a number of gold pieces
+        equal to your level times; 10 in order to reroll a check you just made,
+        before the results are revealed. You must take the result of the reroll,
+        even if it's worse than the original roll.
+  description:
+    instructions: >-
+      <p>to take this trait you must follow the Perseverance Knightly code of
+      conduct.</strong></p><p><strong>If a knight violates their code of
+      conduct, they are disgraced and must perform penance to atone for their
+      transgressions. until the penance is completed, disgraced knights no
+      longer receive benefits from their knightly
+      traits.</p><p><strong>Perseverance</strong>: Knights who follow the code
+      of perseverance believe that to truly serve a purpose, an organization or
+      group of individuals must first look to its own survival. Deeds are
+      temporary and forgotten with time. For an organization to be influential,
+      it must persist. These knights collect power and wealth, always looking to
+      the future.</p><p>Their vows are as follows.</p><ul><li><p>I will take on
+      no challenges out of charity. Any task that I undertake for another
+      individual will have an associated price, though it may not be monetary in
+      nature.</p></li><li><p>I shall let neither compassion nor hatred rob me of
+      wealth. I will not give wealth away to those who have done nothing for me,
+      nor shall I engage in needless destruction of potential
+      resources.</p></li><li><p>I will set aside a fraction of all my spoils to
+      guard against any chances of future poverty.</p></li><li><p>If I have an
+      opportunity to seize power, I will not hesitate to take it if it will
+      strengthen my position.</p></li><li><p>I will not take unnecessary risks
+      that place my future or the future of my organization in
+      jeopardy.</p></li></ul>
+    value: >-
+      <p><em>If you follow this code, you are keenly aware of the value of
+      actions as well as goods.</em></p><p><strong>Requirements</strong>: Code
+      of Perseverance</p><p><strong>Benefits</strong>: Once per day while
+      haggling with a merchant or striking a bargain with another intelligent
+      creature, you can spend a number of gold pieces equal to your level times;
+      10 in order to reroll a Diplomacy check you just made, before the results
+      are revealed. You must take the result of the reroll, even if it's worse
+      than the original roll. In addition, you begin play with a set of
+      extravagant noble's clothes worth 100 gp.</p><hr />
+  scriptCalls:
+    - _id: Vk9E3N8SnbCNkphF
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll Diplomacy
+      type: script
+      value: 'await actor.rollSkill("dip", { skipDialog: true });'
+  sources:
+    - id: PZO9426
+      pages: '26'
+  subType: trait
+  tags:
+    - Knightly Code
+  traitType: social
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

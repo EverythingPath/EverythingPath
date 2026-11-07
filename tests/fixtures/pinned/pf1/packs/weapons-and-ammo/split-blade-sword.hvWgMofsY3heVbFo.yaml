@@ -1,0 +1,63 @@
+_id: hvWgMofsY3heVbFo
+_key: '!items!hvWgMofsY3heVbFo'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/split-blade-sword.png
+name: Split-Blade Sword
+system:
+  actions:
+    - _id: rwahme3wypdqijp4
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Split-Blade Sword
+  description:
+    unidentified: >-
+      <p>Patterned after the fiery blades masterfully wielded by Sarenite
+      angels, the split-blade sword is both a holy symbol and a
+      difficult-yet-effective weapon. A split-blade sword resembles a large
+      scimitar whose blade splits into two about two-thirds of the way toward
+      the tip. If your Dexterity score is less than 15, you take a -2 penalty on
+      attacks rolls with a split-blade sword, as you're unable to maneuver its
+      unusual blade.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 200
+  properties:
+    dis: true
+    spc: true
+    trp: true
+  sources:
+    - id: PZO9493
+      pages: '30'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 8
+type: weapon

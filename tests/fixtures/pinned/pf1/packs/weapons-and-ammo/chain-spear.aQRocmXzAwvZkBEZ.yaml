@@ -1,0 +1,67 @@
+_id: aQRocmXzAwvZkBEZ
+_key: '!items!aQRocmXzAwvZkBEZ'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/spear.png
+name: Chain Spear
+system:
+  actions:
+    - _id: z0s0y9wbuzznz47f
+      ability:
+        attack: _default
+        critRange: null
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Chain Spear
+  description:
+    unidentified: >-
+      <p>This vicious weapon is often used in gladiatorial events due to its
+      versatility. The body of the weapon is a standard short spear, primarily
+      used for thrusting. The butt of the spear is fitted with a length of
+      chain, often spiked, with a hook at the end. The hook and chain may be
+      used to make trip attacks. If your trip attack fails by 10 or more, you
+      may drop the chain spear to avoid being knocked prone.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    dbl: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - double
+    - flails
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 13
+type: weapon

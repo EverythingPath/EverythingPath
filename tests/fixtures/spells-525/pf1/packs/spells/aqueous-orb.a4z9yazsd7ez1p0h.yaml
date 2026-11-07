@@ -1,0 +1,79 @@
+_id: a4z9yazsd7ez1p0h
+_key: '!items!a4z9yazsd7ez1p0h'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Aqueous Orb
+system:
+  actions:
+    - _id: z0d0vvi0wfhu5kzo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 10-ft.-diameter sphere
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a rolling sphere of churning water that can engulf those it
+      strikes. The <em>aqueous orb</em> can move up to 30 feet per round,
+      rolling over barriers less than 10 feet tall. It automatically quenches
+      any nonmagical fires and functions as
+      @UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{dispel magic} against
+      magical fires as long as those fires are size Large or less.</p><p>Any
+      creature in the path of the <em>aqueous orb</em> takes 2d6 points of
+      nonlethal damage. A successful Reflex save negates this damage, but a
+      Large or smaller creature that fails its save must make a second save or
+      be engulfed by the <em>aqueous orb</em> and carried along with it.
+      Engulfed creatures are immersed in water and must hold their breath unless
+      capable of breathing water. They gain cover against attacks from outside
+      the <em>aqueous orb</em> but are considered entangled by its churning
+      currents, takes 2d6 points of nonlethal damage at the beginning of their
+      turn each round they remain trapped. Creatures within the orb may attempt
+      a new Reflex save each round to escape into a random square adjacent to
+      the <em>aqueous orb</em>. The orb may hold one Large creature, 4 Medium,
+      or 16 Small or smaller creatures within it.</p><p>The sphere moves as long
+      as you actively direct it (a move action for you); otherwise, it merely
+      stays at rest and churns in place. An <em>aqueous orb</em> stops if it
+      moves outside the spell's range.</p>
+  descriptors:
+    - water
+  learnedAt:
+    bloodline:
+      Aquatic: 3
+    class:
+      arcanist: 3
+      bloodrager: 3
+      druid: 3
+      hunter: 3
+      magus: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a drop of water and a glass bead
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '202'
+  sr: false
+  subschool:
+    - creation
+type: spell

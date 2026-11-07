@@ -1,0 +1,52 @@
+_id: 80f89nrksbofs5vx
+_key: '!items!80f89nrksbofs5vx'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Disguise Other
+system:
+  actions:
+    - _id: 7tsgiqiaj7x4djlt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise self}, except
+      you can disguise either yourself or another creature.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      medium: 2
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1117
+      pages: '217'
+  sr: false
+  subschool:
+    - glamer
+type: spell

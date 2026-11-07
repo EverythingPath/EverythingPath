@@ -1,0 +1,61 @@
+_id: al5pmrh401jooziy
+_key: '!items!al5pmrh401jooziy'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Antithetical Constraint
+system:
+  actions:
+    - _id: pzpclit2bsbabc8h
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You constrain the target such that the target automatically misses with
+      all attacks made against creatures that are not of the opposite alignment
+      of it. For example, a lawful evil target would automatically fail at all
+      attacks except those made against chaotic good creatures, and a neutral
+      good target would automatically fail at all attacks except those made
+      against neutral evil creatures. For the purposes of <i>antithetical
+      constraint</i>, creatures that are chaotic evil, chaotic good, lawful
+      evil, or lawful good are all considered to have the opposite alignment of
+      a target whose alignment is neutral with no other alignment components.
+      This restriction doesn't apply to effects that do not require attack
+      rolls, such as <i>magic missile</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      skald: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9443
+      pages: '26'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,84 @@
+_id: 6AfGnpzoFUpKLJgM
+_key: '!items!6AfGnpzoFUpKLJgM'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/kunai.png
+name: Kunai
+system:
+  actions:
+    - _id: 6x7bosagry2otih2
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 2UPbc9sZO9D8Bdqa
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Kunai
+  description:
+    unidentified: >-
+      <p>Crafted from a single piece of iron, a kunai has a leaf-shaped blade
+      and a ring for a pommel. Adapted from the common trowel, the kunai has a
+      thick blade that is sharpened only near the tip. Unlike finer weapons, the
+      kunai can readily substitute for a crowbar or piton without being damaged
+      in the process.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    fin: true
+  sources:
+    - id: PZO9452
+      pages: '18'
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weight:
+    value: 2
+type: weapon

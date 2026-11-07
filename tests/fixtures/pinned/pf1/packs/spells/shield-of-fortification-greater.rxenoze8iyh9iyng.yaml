@@ -1,0 +1,53 @@
+_id: rxenoze8iyh9iyng
+_key: '!items!rxenoze8iyh9iyng'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Shield of Fortification, Greater
+system:
+  actions:
+    - _id: kqa7jw9s9jocog0w
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.qc7vnye0x975gxdf]{Shield of
+      Fortification}, except there is a 50% chance that the critical hit or
+      sneak attack is negated and damage is instead be rolled normally, rather
+      than 25%.</p>
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 3
+      oracle: 4
+      paladin: 3
+      psychic: 4
+      warpriest: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '192'
+type: spell

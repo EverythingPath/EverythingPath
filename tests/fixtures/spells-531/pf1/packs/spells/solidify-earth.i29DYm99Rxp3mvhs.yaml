@@ -1,0 +1,65 @@
+_id: i29DYm99Rxp3mvhs
+_key: '!items!i29DYm99Rxp3mvhs'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/commodities/stone/paver-brick-brown.webp
+name: Solidify Earth
+system:
+  actions:
+    - _id: HitVAerHTvzqhLbM
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: up to two 10-foot cubes per level (S)
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: rect
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex negates (see text)
+        type: ref
+  components:
+    divineFocus: 2
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Stone, dirt, and other types of earth within the area become more
+      tightly packed. Burrowing creature (including those using <em>earth
+      glide</em>) treat the area as difficult terrain. Any creature that begins
+      its turn burrowing in the affected area becomes
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.oxmugd8SoxVjvRRl]{entangled}
+      for 1 round (Reflex negates). <em>Tremorsense</em> and similar senses are
+      ineffective within the affected area. Creatures with the <em>earth
+      mastery</em> special ability (such as earth elementals) double their bonus
+      on attack and damage rolls so long as both they and their targets are
+      touching the area affected by this spell.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      oracle: 2
+      shaman: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO9478
+      pages: '31'
+  sr: false
+type: spell

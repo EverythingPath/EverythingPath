@@ -1,0 +1,73 @@
+_id: cl8la3rhhfb0imdo
+_key: '!items!cl8la3rhhfb0imdo'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Shadow Invasion
+system:
+  actions:
+    - _id: dai51ou8ldt9l3ma
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft. radius emanation centered on you
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (D); see text
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Using a slashing motion with the spell's focus as part of the casting
+      of <i>shadow invasion</i>, you cut open a rift to the Plane of Shadow that
+      fills a 30-foot area with <i>shadow</i>y energies. This area is stationary
+      and becomes dark and gloomy, reducing the light level by one step (as
+      darkness). Certain spells are enhanced within the area; spells of the
+      <i>shadow</i> subschool that have reduced effects when disbelieved (such
+      as <i>shadow</i> evocation) have their reduced effects increased by 20%
+      (to a maximum of 90%) when determining their effects on targets within the
+      area of <i>shadow invasion</i>.  In addition, the rift created by
+      <i>shadow invasion</i> has a chance of attracting attention from the other
+      side, and the spell can be inverted to bring these watchers through. When
+      <i>shadow invasion</i> is dismissed as a standard action, there is a
+      chance that a single evangelist kyton (<i>Pathfinder RPG Bestiary</i> 185)
+      will be summoned under the caster's command (as per <i>summon monster</i>
+      V). This chance is 5% for every full round that <i>shadow invasion</i> was
+      active. If the caster level of <i>shadow invasion</i> is 16th or greater,
+      this effect summons an interlocutorB3 kyton instead. A kyton summoned this
+      way remains for a number of rounds equal to what the remaining duration of
+      <i>shadow invasion</i> would have been had it not been dismissed.
+      Successfully summoning a kyton this way is a lawful and evil act, as
+      though casting a spell with the lawful and evil descriptors.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      magus: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a masterwork piercing or slashing weapon
+  school: con
+  sources:
+    - id: PZO1141
+      pages: '44'
+  sr: false
+  subschool:
+    - summoning
+type: spell
