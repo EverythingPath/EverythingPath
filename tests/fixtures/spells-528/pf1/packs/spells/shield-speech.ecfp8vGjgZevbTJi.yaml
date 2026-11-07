@@ -1,0 +1,64 @@
+_id: ecfp8vGjgZevbTJi
+_key: '!items!ecfp8vGjgZevbTJi'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Shield Speech
+system:
+  actions:
+    - _id: mL0yX5kSx8787iuM
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: you and one other creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can securely communicate with one creature within range. So long as
+      your target remains within 10 feet of you, you and it can speak freely to
+      each other without fear of being overheard. Communications that involve
+      shield speech cannot be spied on, such as with a
+      @UUID[Compendium.pf1.spells.pwueht12qqo0268e]{divination} spell, and
+      observers of the conversation can tell you are communicating but cannot
+      read lips or hear the conversation unless they are the target of the
+      spell. If you or the target speak to any other creatures, they can hear
+      you normally (only communication between you and the target is protected).
+      The spell does not shield writing, sign language, or any form of
+      communication other than speaking.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      cleric: 1
+      druid: 1
+      hunter: 1
+      oracle: 1
+      skald: 1
+      sorcerer: 1
+      warpriest: 1
+      wizard: 1
+  school: abj
+  sources:
+    - id: PZO9405
+      pages: '25'
+  tags:
+    - '3.5'
+type: spell

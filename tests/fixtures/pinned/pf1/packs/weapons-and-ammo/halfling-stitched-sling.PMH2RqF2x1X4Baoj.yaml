@@ -1,0 +1,65 @@
+_id: PMH2RqF2x1X4Baoj
+_key: '!items!PMH2RqF2x1X4Baoj'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sling.png
+name: Halfling Stitched Sling
+system:
+  actions:
+    - _id: vk6lcbd9kwtzk2ac
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  ammo:
+    type: slingBullet
+  baseTypes:
+    - Halfling Stitched Sling
+    - Light Flail
+  description:
+    unidentified: >-
+      <p>Technically not a unique kind of weapon, a stitched sling is a sling,
+      staff sling, or double sling whose cup is sewn closed around the
+      ammunition, creating a weak sort of light flail. The ammunition sewn into
+      the sling is irrelevant to the type and amount of damage it causes. A
+      stitched sling cannot be used to fire ammunition unless the thread or cord
+      holding the cup closed is cut open (a full-round action that provokes
+      attacks of opportunity).</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: leather
+  properties:
+    dis: true
+    trp: true
+  sources:
+    - id: PZO9415
+      pages: '22'
+  subType: exotic
+  tags:
+    - Halfling
+  weaponSubtype: 1h
+  weight:
+    value: 1
+type: weapon

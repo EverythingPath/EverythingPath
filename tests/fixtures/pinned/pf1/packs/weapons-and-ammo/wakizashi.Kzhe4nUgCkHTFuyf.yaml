@@ -1,0 +1,61 @@
+_id: Kzhe4nUgCkHTFuyf
+_key: '!items!Kzhe4nUgCkHTFuyf'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/swords/sword-katana.webp
+name: Wakizashi
+system:
+  actions:
+    - _id: jvxjrgiwkop1t2bi
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Wakizashi
+  description:
+    unidentified: >-
+      <p>These short, slender blades are between 1 to 2 feet long. They are
+      primarily used as back-up weapons, to decapitate defeated enemies, or to
+      commit seppuku (ritual suicide) as a matter of honor. These blades are
+      specifically worn by samurai and are intended to be paired with a katana.
+      Together, this set of blades is referred to as a daisho.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 35
+  properties:
+    dea: true
+    fin: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

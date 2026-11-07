@@ -1,0 +1,66 @@
+_id: svrjcfbr1zywz0uz
+_key: '!items!svrjcfbr1zywz0uz'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Sense Fear
+system:
+  actions:
+    - _id: ynu16figtyj9v7uk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You sense the fear of those nearby, feeling it in the air around you.
+      You can detect spooked, shaken, scared, frightened, panicked, terrified,
+      and horrified creatures within 30 feet, and you immediately know what
+      level of fear they are experiencing. You determine the creatures'
+      approximate direction from you, though you do not sense a given creature's
+      identity or know which squares the creatures occupy. If you're within 5
+      feet of a creature whose fear you sense, you pinpoint that creature's
+      location, as if using blindsense.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      bloodrager: 1
+      cleric: 2
+      druid: 2
+      hunter: 2
+      inquisitor: 2
+      medium: 1
+      mesmerist: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      ranger: 2
+      shaman: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+  level: 2
+  materials:
+    value: a patch of fur
+  school: div
+  sources:
+    - id: PZO1135
+      pages: '127'
+  sr: false
+type: spell
