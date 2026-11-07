@@ -1,0 +1,52 @@
+_id: e2ito0vg49gmlpqi
+_key: '!items!e2ito0vg49gmlpqi'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Negative Reaction
+system:
+  actions:
+    - _id: 8io4m75m7g72vctc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>The target's actions and words fail to impress. The target of this
+      spell takes a -10 penalty on any Bluff, Diplomacy, and Intimidate checks
+      as well as any performance combat checks it attempts.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      magus: 1
+      medium: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: ill
+  sources:
+    - id: PZO1118
+      pages: '238'
+  subschool:
+    - glamer
+type: spell

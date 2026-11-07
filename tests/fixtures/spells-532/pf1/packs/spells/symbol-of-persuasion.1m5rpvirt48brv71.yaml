@@ -1,0 +1,74 @@
+_id: 1m5rpvirt48brv71
+_key: '!items!1m5rpvirt48brv71'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Symbol of Persuasion
+system:
+  actions:
+    - _id: smmommb7hm205swx
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that all creatures within the radius of a <em>symbol of
+      persuasion</em> instead become charmed by the caster (as the <em>charm
+      monster</em> spell) for 1 hour per caster level.</p><p>Unlike <em>symbol
+      of death</em>, <em>symbol of persuasion</em> has no hit point limit; once
+      triggered, a <em>symbol of persuasion</em> simply remains active for 10
+      minutes per caster level.</p><p><em>Note:</em> Magic traps such as
+      <em>symbol of persuasion</em> are hard to detect and disable. A rogue
+      (only) can use the Perception skill to find a <em>symbol of
+      persuasion</em> and Disable Device to thwart it. The DC in each case is 25
+      + spell level, or 31 for <em>symbol of persuasion</em>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      mesmerist: 6
+      occultist: 4
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      witch: 6
+      wizard: 6
+    subDomain:
+      Revolution: 6
+      Tyranny: 7
+  level: 6
+  materials:
+    gpValue: 5000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      5,000 gp
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '356'
+  subschool:
+    - charm
+type: spell

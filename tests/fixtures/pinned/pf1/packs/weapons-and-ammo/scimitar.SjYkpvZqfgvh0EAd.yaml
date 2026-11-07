@@ -1,0 +1,58 @@
+_id: SjYkpvZqfgvh0EAd
+_key: '!items!SjYkpvZqfgvh0EAd'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Scimitar
+system:
+  actions:
+    - _id: b8tvl2f6459mbgeg
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Scimitar
+  description:
+    unidentified: >-
+      <p>This curved sword is shorter than a longsword and longer than a
+      shortsword. Only the outer edge is sharp, and the back is flat, giving the
+      blade a triangular cross-section.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 15
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,153 @@
+_id: ua3zeWweXn3jTe64
+_key: '!items!ua3zeWweXn3jTe64'
+_stats:
+  coreVersion: '12.331'
+folder: d4bGSdKKLFXKTGuf
+img: systems/pf1/icons/races/half-elf.png
+name: Disregarded
+system:
+  actions:
+    - _id: qLmY5UQz5nykPUZe
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.o8ds5jtvf0hf92dw]{guidance},</p><p>This
+        spell imbues the subject with a touch of divine guidance.</p><p>The
+        creature gets a +1 competence bonus on a single attack roll, saving
+        throw, or skill check. It must choose to use the bonus before making the
+        roll to which it applies.</p>
+      duration:
+        units: spec
+        value: 1 minute or until discharged
+      name: Guidance
+      range:
+        units: touch
+      save:
+        dc: 10 + 0 + @abilities.cha.mod
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: WNFtddsJZMOO4LeD
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.4w51afqi5d9t8nl4]{innocence}</p><p>You
+        surround yourself with an aura of innocence and trustworthiness. You
+        gain a +10 competence bonus on Bluff skill checks to convince others of
+        your innocence. They find it difficult to believe you capable of any
+        wrongdoing. This bonus does not apply to other uses of the Bluff skill,
+        such as feinting in combat, creating a diversion to hide, or
+        communicating secret messages via innuendo, nor does it apply to any use
+        of the skill to convince anyone of anything other than your complete
+        innocence and blamelessness.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Innocence
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: SPqAGOikrdQa9OSZ
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: Living creatures in a 10 ft (3 m) burst
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.99xovzg8h1nh9o9a]{lullaby},
+        </p><p>Any creature within the area that fails a Will save becomes
+        drowsy and inattentive, taking a -5 penalty on Perception checks and a
+        -2 penalty on Will saves against sleep effects while the lullaby is in
+        effect. Lullaby lasts for as long as the caster concentrates, plus up to
+        1 round per caster level thereafter.</p>
+      duration:
+        concentration: true
+        units: round
+        value: '@attributes.hd.total'
+      name: Lullaby
+      range:
+        units: medium
+        value: 100 + (10*@attributes.hd.total)
+      save:
+        dc: 10 + @abilities.cha.mod
+        description: Negates
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: c0h3dxyn1j2IRaYZ
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage
+        hand}.</p><p>You point your finger at an object and can lift it and move
+        it at will from a distance. As a move action, you can propel the object
+        as far as @Distance[15 ft;dual] in any direction, though the spell ends
+        if the distance between you and the object ever exceeds the spell's
+        range.</p>
+      name: Mage Hand
+      range:
+        units: close
+        value: 25 + (floor(@attributes.hd.total / 2) *5)
+      target:
+        value: one non magical unattended object weighing up to 5 lbs (2.3 kg)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  changes:
+    - _id: lffRyaz7
+      formula: '1'
+      target: cl.school.ill
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Half-Elf<br /><strong>Replaced
+      Trait(s)</strong>: Keen Senses</p><hr /><p>Half-elves with this trait
+      practice magical techniques to conceal their fey features from casual
+      scrutiny. These half-elves treat their caster level as 1 higher when
+      casting illusion spells. Half-elves with a Charisma score of 11 or higher
+      also gain the following spell-like abilities
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.o8ds5jtvf0hf92dw]{guidance}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.4w51afqi5d9t8nl4]{innocence}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.99xovzg8h1nh9o9a]{lullaby}</em>, and
+      <em>@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage hand}</em>.
+      The caster level for these effects is equal to the half-elf 's level. The
+      DC for these spells is equal to 10 + the spell's level + the half-elf 's
+      Charisma modifier. This racial trait replaces keen senses.</p>
+  sources:
+    - id: PZO9480
+      pages: '5'
+  subType: racial
+  tags:
+    - Half-Elf
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

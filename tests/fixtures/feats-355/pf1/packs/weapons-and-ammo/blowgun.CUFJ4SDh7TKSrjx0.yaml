@@ -1,0 +1,60 @@
+_id: CUFJ4SDh7TKSrjx0
+_key: '!items!CUFJ4SDh7TKSrjx0'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/blowgun.PNG
+name: Blowgun
+system:
+  actions:
+    - _id: 9xo1fz7ad6f545a6
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: dart
+      damage:
+        parts:
+          - formula: sizeRoll(1, 2, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  ammo:
+    type: dart
+  baseTypes:
+    - Blowgun
+  description:
+    unidentified: >-
+      <p>Blowguns are generally used to deliver debilitating (but rarely fatal)
+      poisons from a distance. They are nearly silent when fired. For a list of
+      appropriate poisons, see Poisons on page 110.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 2
+  sources:
+    - id: PZO1110
+      pages: 142, 145
+    - id: PZO9452
+      pages: '0'
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,55 @@
+_id: mUMuv0KGpbkOVwX9
+_key: '!items!mUMuv0KGpbkOVwX9'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: The Optimist (Tyrant's Grasp)
+system:
+  actions:
+    - _id: H7bj4FddUbRDp7uq
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>As a swift action, a number of times per day equal to your Charisma
+        modifier (minimum 1), you can grant this bonus (+1 trait bonus on saving
+        throws against mind-affecting effects.)  to an ally within 10 feet. This
+        bonus lasts for 1 minute.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: >-
+        Grant ally within 10' a +1 trait bonus on saving throws against
+        mind-affecting effects.
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[1]] Trait bonus against mind-affecting effects.  As a swift action,
+        [[max(1, @abilities.cha.mod)]] times per day, you can grant this bonus
+        to an ally within 10 feet. This bonus lasts for 1 minute.
+        ([[@resources.theOptimistTyrantsGrasp.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>People don’t need to take your word that things are getting better;
+      they only need to look around and see the proof before their eyes. The
+      town’s recovery from the orc occupation more than a decade ago is all but
+      complete, and the monster in the Sarenite temple outside of town has
+      finally been bested. Your irrepressible sense of optimism seems to fly in
+      the face of the hard life that most residents of Roslar’s Coffer face, but
+      you’re convinced that your positive attitude lifts up your
+      community.</em></p><p><strong>Benefits</strong>: You gain a +1 trait bonus
+      on saving throws against mind-affecting effects. Further, your optimism
+      can be infectious. As a swift action a number of times per day equal to
+      your Charisma modifier (minimum 1), you can grant this bonus to an ally
+      within 10 feet. This bonus lasts for 1 minute.</p>
+  sources:
+    - id: PZO9000-24E
+      pages: '7'
+  subType: trait
+  tags:
+    - Tyrant's Grasp
+  traitType: campaign
+  uses:
+    maxFormula: max(1, @abilities.cha.mod)
+    value: 1
+type: feat
