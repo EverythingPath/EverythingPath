@@ -1,0 +1,57 @@
+_id: V57hEfKt1MroRI91
+_key: '!items!V57hEfKt1MroRI91'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_01.jpg
+name: Fire Bolt
+system:
+  abilityType: sp
+  actions:
+    - _id: wrcmlpa3o87zjjkg
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (floor(@class.level / 2))
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can unleash a scorching bolt of divine fire
+      from your outstretched hand. You can target any single foe within 30 feet
+      as a ranged touch attack with this bolt of fire. If you hit the foe, the
+      fire bolt deals 1d6 points of fire damage + 1 point for every two cleric
+      levels you possess. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '44'
+  subType: classFeat
+  tag: classFeat_fireBolt
+  tags:
+    - Domain Power
+    - Fire Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,51 @@
+_id: s59qn59iywsi3b65
+_key: '!items!s59qn59iywsi3b65'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Terrain Bond
+system:
+  actions:
+    - _id: qwmfe7lcw8wxcrov
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: floor(@cl / 2)
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call upon the spirits of nature to help you adapt to your
+      environment. You treat the terrain you are in as your most favored terrain
+      until this spell ends.  If you do not have the favored terrain class
+      feature, you gain no benefit from this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      hunter: 4
+      ranger: 4
+  level: 4
+  materials:
+    value: a pinch of earth taken from your most favored terrain
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '247'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

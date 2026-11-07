@@ -1,0 +1,56 @@
+_id: axe8kelwutjkwh80
+_key: '!items!axe8kelwutjkwh80'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Jitterbugs
+system:
+  actions:
+    - _id: dsbg8bfo6rvslhnk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to perceive itself as being covered in creeping,
+      crawling, stinging bugs. This causes the target to become jittery and
+      unable to stay still, forcing it to constantly move and twitch. The target
+      takes a -4 penalty on all Dexterity checks and Dexterity-based skill
+      checks, and cannot take the delay, ready, or total defense actions.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 1
+      mesmerist: 1
+      psychic: 2
+      skald: 1
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1121
+      pages: '39'
+  subschool:
+    - figment
+type: spell

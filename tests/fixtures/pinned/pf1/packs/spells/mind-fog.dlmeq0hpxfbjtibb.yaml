@@ -1,0 +1,63 @@
+_id: dlmeq0hpxfbjtibb
+_key: '!items!dlmeq0hpxfbjtibb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mind Fog
+system:
+  actions:
+    - _id: 8d0rpdaupdieconb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 30 minutes and 2d6 rounds; see text
+      effect: fog spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Mind fog</i> produces a bank of thin mist that weakens the mental
+      resistance of those caught in it. Creatures in the <i>mind fog</i> take a
+      -10 penalty on Wisdom checks and Will saves. (A creature that successfully
+      saves against the fog is not affected and need not make further saves even
+      if it remains in the fog.) Affected creatures take the penalty as long as
+      they remain in the fog and for 2d6 rounds thereafter. The fog is
+      stationary and lasts for 30 minutes (or until dispersed by wind).</p><p>A
+      moderate wind (11+ mph) disperses the fog in 4 rounds; a strong wind (21+
+      mph) disperses the fog in 1 round.</p><p>The fog is thin and does not
+      significantly hamper vision.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      mesmerist: 5
+      occultist: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      spiritualist: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '313'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,53 @@
+_id: q5hn72m4ipbf92fv
+_key: '!items!q5hn72m4ipbf92fv'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Sickening Strikes
+system:
+  actions:
+    - _id: 7tt5aztn6nwu3fgp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Fortitude negates; see text
+        type: fort
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You are imbued with disease, and any creature you strike with a melee
+      attack must make a Fortitude save or be sickened for 1 minute. Creatures
+      that are immune to disease are immune to this sickened effect.</p>
+  descriptors:
+    - disease
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      magus: 3
+      ranger: 4
+      witch: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '155'
+type: spell

@@ -1,0 +1,76 @@
+_id: HcFcqAws28M3kGqb
+_key: '!items!HcFcqAws28M3kGqb'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/heal-jade-1.jpg
+name: Threefold Aspect (Adult)
+system:
+  actions:
+    - _id: MLH3gQUPhRnsaMR5
+      activation:
+        type: move
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/heal-jade-1.jpg
+      name: Transform
+  changes:
+    - _id: 5mzjUc8o
+      formula: '2'
+      target: int
+      type: enh
+    - _id: qKIgak44
+      formula: '2'
+      target: wis
+      type: enh
+    - _id: JsF8Z03B
+      formula: '-2'
+      target: dexPen
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.w2yf0ksu14e91uae]{Threefold
+      Aspect}</p><p>Threefold aspect allows you to shift your appearance between
+      your natural age and three idealized age categories: young adult
+      (youth/maiden), adulthood (father/mother), or elderly (elder/crone). In
+      each case, your appearance is your own at the appropriate age, rather than
+      that of a new individual.</p><p>You may change between these three aspects
+      or your actual age as a standard action. As the adult aspect, you gain a
+      +2 enhancement bonus to Wisdom and Intelligence, but take a -2 penalty to
+      Dexterity. As enhancement bonuses, these stack with any bonuses or
+      penalties you may have from your actual age (which are untyped
+      bonuses)-the bonuses granted by this spell represent your idealized form
+      in this threefold aspect rather than simply duplicating your ability
+      scores at any one particular
+      age.</p><p>@UUID[Compendium.pf1.spells.Item.jbqo4o2b2tmdz7wv]{True seeing}
+      reveals your natural appearance overlaid with that your aspect,
+      recognizing both as part of your true self.</p><p>Individuals who study
+      you closely and have interacted with you at another apparent age recognize
+      a resemblance (as though family) with a successful DC 20 Perception
+      check.</p><p>Threefold aspect does not alter your clothing or equipment,
+      and does not heal any deformity or injury unrelated to age.</p>
+  duration:
+    units: hour
+    value: '24'
+  level: null
+  scriptCalls:
+    - _id: 8vrOkKefG5MFMgCy
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Others
+      type: script
+      value: |-
+        if(state) {
+          const otherBuffTags = [
+            "threefoldAspectYoungAdult",
+            "threefoldAspectAdult",
+            "threefoldAspectElderly"
+          ];
+
+          const otherBuffs = actor.itemTypes.buff.filter(b => otherBuffTags.includes(b.system.tag) && b.system.tag !== item.system.tag);
+          otherBuffs.forEach(async (buff) => { await buff.setActive(false) });
+        }
+  subType: spell
+  tag: threefoldAspectAdult
+type: buff

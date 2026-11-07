@@ -1,0 +1,61 @@
+_id: 3jaumkutti1ytulq
+_key: '!items!3jaumkutti1ytulq'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Mark of Justice
+system:
+  actions:
+    - _id: tu2jwl69qbetyzse
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent; see text
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mark a subject and state some behavior on the part of the subject
+      that will activate the mark. When activated, the mark curses the subject.
+      Typically, you designate some sort of undesirable behavior that activates
+      the mark, but you can pick any act you please.</p><p>The effect of the
+      mark is identical with the effect of <i>bestow curse</i>.</p><p>Since this
+      spell takes 10 minutes to cast and involves writing on the target, you can
+      cast it only on a creature that is willing or restrained.</p><p>Like the
+      effect of <i>bestow curse</i>, a <i>mark of justice</i> cannot be
+      dispelled, but it can be removed with a break enchantment, limited
+      <i>wish</i>, miracle, remove curse, or <i>wish</i> spell. <i>Remove
+      curse</i> works only if its caster level is equal to or higher than your
+      <i>mark of justice</i> caster level. These restrictions apply regardless
+      of whether the mark has activated.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      cleric: 5
+      inquisitor: 5
+      oracle: 5
+      paladin: 4
+      warpriest: 5
+      witch: 5
+    subDomain:
+      Judgment: 5
+  level: 5
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '312'
+type: spell
