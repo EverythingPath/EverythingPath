@@ -1,0 +1,62 @@
+_id: vxZSrbYP8uSRzLWb
+_key: '!items!vxZSrbYP8uSRzLWb'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/swords/sword-katana.webp
+name: Katana
+system:
+  actions:
+    - _id: lgmmqypkmwoxp2ts
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Katana
+  description:
+    unidentified: >-
+      <p>Specifically constructed for samurai, katanas employ multiple types of
+      steel combined in a distinctive forging process. The result are swords
+      noted for their wickedly sharp yet slender, gently curved blades, designed
+      to make graceful hacking strokes capable of severing opponents' heads and
+      limbs. Though finely balanced, these blades are difficult to master.
+      Characters can use a katana two-handed as a martial weapon, but must take
+      the Exotic Weapon Proficiency (katana) feat to use it one-handed.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    dea: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

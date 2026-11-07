@@ -1,0 +1,79 @@
+_id: f868pfvqa6ksg84w
+_key: '!items!f868pfvqa6ksg84w'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-glow-angry-small-teal.webp
+name: Detect Mindscape
+system:
+  actions:
+    - _id: d4zlqyvp9ulk1e22
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration, up to 1 minute/level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Will negates; see text
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions similarly to
+      @UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect thoughts},
+      allowing you to sense when one or more creatures' consciousnesses are
+      inside a mindscape (see page 234). The amount of information revealed
+      depends on how long you study a particular
+      subject.</p><ul><li><p><strong>First Round</strong>: You sense the
+      presence or absence of a mindscape. At least one of the creatures inside
+      the mindscape must be within the cone-shaped area for you to detect the
+      mindscape.</p></li><li><p><strong>Second Round</strong>: You sense the
+      number of consciousnesses inside the mindscape. Not all of the creatures
+      within the mindscape must be standing inside the cone-shaped area of the
+      spell for you to count them; only one is required to get this reading.
+      However, you can't determine the location of the creatures if you can't
+      see the creatures themselves. You sense their presence only in an abstract
+      way.</p></li><li><p><strong>Third Round</strong>: You sense an image of
+      what's taking place inside the mindscape. The creature controlling the
+      mindscape can sense your efforts, and if it does not wish you to view the
+      mindscape, it can prevent this viewing with a successful Will save.
+      Otherwise, you perceive the visuals remotely, as if watching through a
+      window. If a creature has disguised itself, you see only the creature's
+      mental mask (not its true form).</p></li></ul><p>Each round, you can turn
+      to detect mindscapes in a new area. The spell can penetrate many barriers,
+      but 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3
+      feet of wood or dirt blocks it.</p><p>If you are within a mindscape when
+      you cast this spell, you become aware you're in a mindscape. On the second
+      round, you can still detect how many consciousnesses are inside, but you
+      don't get the image of the mindscape in the third round.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: div
+  sources:
+    - id: PZO1132
+      pages: '164'
+  sr: false
+type: spell

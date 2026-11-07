@@ -1,0 +1,60 @@
+_id: s17i5bbhg2ohde2z
+_key: '!items!s17i5bbhg2ohde2z'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Neutral Buoyancy
+system:
+  actions:
+    - _id: xd1i0h3a5ghvo0oz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's buoyancy becomes and stays neutral, regardless of how
+      dense the target and its gear are. Among other effects, the target neither
+      sinks nor rises when it doesn't attempt a Swim check, making it easier to
+      stay put while performing demanding actions or when helpless or disabled,
+      and the target can swim up and down with equal ease.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      bard: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      medium: 2
+      occultist: 2
+      psychic: 2
+      ranger: 2
+      shaman: 2
+      skald: 2
+  level: 2
+  materials:
+    value: a bag of air
+  school: evo
+  sources:
+    - id: PZO92102
+      pages: '60'
+type: spell

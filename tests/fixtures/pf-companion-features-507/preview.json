@@ -1,0 +1,2141 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1-content/5uKoaeTitZUnfnQ1",
+      "upstreamKey": "pf1-content/5uKoaeTitZUnfnQ1",
+      "pack": "pf-companion-features",
+      "name": "Devotion",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>An animal companion gains a +4 morale bonus on Will saves against enchantment spells and effects.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "save.will",
+          "bonusType": "morale",
+          "value": 4,
+          "condition": {
+            "situation": "enchantment"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/FLDY1YB8IHw4G4gV",
+      "upstreamKey": "pf1-content/FLDY1YB8IHw4G4gV",
+      "pack": "pf-companion-features",
+      "name": "Improved Evasion",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>If your effective druid level is at least 15:</p><p>When subjected to an attack that allows a Reflex saving throw for half damage, an animal companion takes no damage if it makes a successful saving throw and only half damage if the saving throw fails.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "save.ref",
+          "text": "Improved evasion: against an attack that allows a Reflex save for half damage, the animal companion takes no damage on a successful save and half damage on a failed save."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/HYLK9yCcU73xaVNS",
+      "upstreamKey": "pf1-content/HYLK9yCcU73xaVNS",
+      "pack": "pf-companion-features",
+      "name": "Ability Score Increase",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>The animal companion adds +1 to one of its ability scores for every 4 hit dice it gains. Current ability increases allowed: [[ceil((round(@class.level * .75) + 1) / 4)]]</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "The animal companion adds +1 to one of its ability scores for every 4 Hit Dice it gains."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/I9aVgYTVbwwmdZYz",
+      "upstreamKey": "pf1-content/I9aVgYTVbwwmdZYz",
+      "pack": "pf-companion-features",
+      "name": "Bonus Tricks",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p><strong>Tricks selected</strong>:</p><ol><li></li></ol><hr><p>Bonus Tricks Granted: [[(floor(@class.level / 3) + 1)]]</p><p>The value given in this column is the total number of “bonus” tricks that the animal knows in addition to any that the druid might choose to teach it (see the Handle Animal skill for more details on how to teach an animal tricks). These bonus tricks don't require any training time or Handle Animal checks, and they don't count against the normal limit of tricks known by the animal. The druid selects these bonus tricks, and once selected, they can't be changed.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Bonus tricks: 1 + effective druid level / 3 (rounded down). This is the total number of \"bonus\" tricks that the animal knows in addition to any that the druid might choose to teach it (see the Handle Animal skill for more details on how to teach an animal tricks). These bonus tricks don't require any training time or Handle Animal checks, and they don't count against the normal limit of tricks known by the animal. The druid selects these bonus tricks, and once selected, they can't be changed."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/Jcth45jjTCvvGBUS",
+      "upstreamKey": "pf1-content/Jcth45jjTCvvGBUS",
+      "pack": "pf-companion-features",
+      "name": "Evasion",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>This character can avoid damage from many area-effect attacks. If she makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "hjkkclkxt3h2u31v",
+                "activation": {
+                  "type": "passive",
+                  "unchained": {
+                    "type": "passive"
+                  }
+                },
+                "name": "Use",
+                "tag": "evasion"
+              }
+            ],
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "save.ref",
+          "text": "Evasion: against an attack that normally deals half damage on a successful Reflex save, the animal companion takes no damage on a successful save."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/ZaBFpK3HT49DAUpE",
+      "upstreamKey": "pf1-content/ZaBFpK3HT49DAUpE",
+      "pack": "pf-companion-features",
+      "name": "Share Spells",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>The druid may cast a spell with a target of “You” on her animal companion (as a spell with a range of touch) instead of on herself. A druid may cast spells on her animal companion even if the spells normally do not affect creatures of the companion's type (animal). Spells cast in this way must come from a class that grants an animal companion. This ability does not allow the animal to share abilities that are not spells, even if they function like spells.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "The druid may cast a spell with a target of “You” on her animal companion (as a spell with a range of touch) instead of on herself. A druid may cast spells on her animal companion even if the spells normally do not affect creatures of the companion's type (animal). Spells cast in this way must come from a class that grants an animal companion. This ability does not allow the animal to share abilities that are not spells, even if they function like spells."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/fZ8uC8TAnvzYp9YQ",
+      "upstreamKey": "pf1-content/fZ8uC8TAnvzYp9YQ",
+      "pack": "pf-companion-features",
+      "name": "Multiattack",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>An animal companion gains Multiattack as a bonus feat if it has three or more natural attacks and does not already have that feat. If it does not have the requisite three or more natural attacks, the animal companion instead gains a second attack with one of its natural weapons, albeit at a -5 penalty.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf-content.pf-feats.RmhtvELGu73iR8yh"
+        },
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "1",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "An animal companion gains Multiattack as a bonus feat if it has three or more natural attacks and does not already have that feat. If it does not have the requisite three or more natural attacks, the animal companion instead gains a second attack with one of its natural weapons, albeit at a -5 penalty."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/g6t6hQoc95ASlz7D",
+      "upstreamKey": "pf1-content/g6t6hQoc95ASlz7D",
+      "pack": "pf-companion-features",
+      "name": "Link",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>A druid can handle her animal companion as a free action, or push it as a move action, even if she doesn't have any ranks in the Handle Animal skill. The druid gains a +4 circumstance bonus on all wild empathy checks and Handle Animal checks made regarding an animal companion.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "A druid can handle her animal companion as a free action, or push it as a move action, even if she doesn't have any ranks in the Handle Animal skill. The druid gains a +4 circumstance bonus on all wild empathy checks and Handle Animal checks made regarding an animal companion."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/nWKp65a3AOFqJOs6",
+      "upstreamKey": "pf1-content/nWKp65a3AOFqJOs6",
+      "pack": "pf-companion-features",
+      "name": "STR/DEX Bonus",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>Add this modifier to the animal companion's Strength and Dexterity scores.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "str",
+            "formula": "floor(@class.level / 3)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "dex",
+            "formula": "floor(@class.level / 3)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Str/Dex bonus: add effective druid level / 3 (rounded down) to the animal companion's Strength and Dexterity scores."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/oczJR5oLDOOxV8mk",
+      "upstreamKey": "pf1-content/oczJR5oLDOOxV8mk",
+      "pack": "pf-companion-features",
+      "name": "Animal Companion",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "animalCompanion",
+        "associations": []
+      },
+      "description": "<p>An animal companion's abilities are determined by the druid's level and its animal racial traits. They remain creatures of the animal type for purposes of determining which spells can affect them.</p><hr><h2>Animal Skills</h2><p>Animal companions can have ranks in any of the following skills:</p><ul><li>Acrobatics* (Dex)</li><li>Climb* (Str)</li><li>Escape Artist (Dex)</li><li>Fly* (Dex)</li><li>Intimidate (Cha)</li><li>Perception* (Wis)</li><li>Stealth* (Dex)</li><li>Survival (Wis)</li><li>Swim* (Str)</li></ul><p>All of the skills marked with an (*) are class skills for animal companions. Animal companions with an Intelligence of 3 or higher can put ranks into any skill.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "classAssociations": [
+                {
+                  "level": 1,
+                  "name": "Bonus Tricks",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.I9aVgYTVbwwmdZYz"
+                },
+                {
+                  "level": 1,
+                  "name": "Link",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.g6t6hQoc95ASlz7D"
+                },
+                {
+                  "level": 1,
+                  "name": "Natural Armor Bonus",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.rSxgmcPwAAmFL4r9"
+                },
+                {
+                  "level": 1,
+                  "name": "Share Spells",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.ZaBFpK3HT49DAUpE"
+                },
+                {
+                  "level": 1,
+                  "name": "STR/DEX Bonus",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.nWKp65a3AOFqJOs6"
+                },
+                {
+                  "level": 1,
+                  "name": "Animal Companion Feats",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.w8QhU9qZ4VXxO4Ij"
+                },
+                {
+                  "level": 3,
+                  "name": "Evasion",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.Jcth45jjTCvvGBUS"
+                },
+                {
+                  "level": 4,
+                  "name": "Ability Score Increase",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.HYLK9yCcU73xaVNS"
+                },
+                {
+                  "level": 6,
+                  "name": "Devotion",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.5uKoaeTitZUnfnQ1"
+                },
+                {
+                  "level": 9,
+                  "name": "Multiattack",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.fZ8uC8TAnvzYp9YQ"
+                },
+                {
+                  "level": 15,
+                  "name": "Improved Evasion",
+                  "uuid": "Compendium.pf-content.pf-companion-features.Item.FLDY1YB8IHw4G4gV"
+                }
+              ]
+            },
+            "classSkills": {
+              "acr": true,
+              "clm": true,
+              "fly": true,
+              "per": true,
+              "ste": true,
+              "swm": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              },
+              "ref": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 1,
+            "customHD": "(round(@item.level * 0.75) + 1)"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "An animal companion's abilities are determined by the druid's level and its animal racial traits. They remain creatures of the animal type for purposes of determining which spells can affect them.\nAnimal Skills\nAnimal companions can have ranks in any of the following skills:\nAcrobatics* (Dex)\nClimb* (Str)\nEscape Artist (Dex)\nFly* (Dex)\nIntimidate (Cha)\nPerception* (Wis)\nStealth* (Dex)\nSurvival (Wis)\nSwim* (Str)\nAll of the skills marked with an (*) are class skills for animal companions. Animal companions with an Intelligence of 3 or higher can put ranks into any skill."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/rSxgmcPwAAmFL4r9",
+      "upstreamKey": "pf1-content/rSxgmcPwAAmFL4r9",
+      "pack": "pf-companion-features",
+      "name": "Natural Armor Bonus",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>The number noted here is an improvement to the animal companion's existing natural armor bonus.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "nac",
+            "formula": "floor(@class.level / 3) * 2",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Natural armor bonus: 2 × (effective druid level / 3, rounded down). This is an improvement to the animal companion's existing natural armor bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/w8QhU9qZ4VXxO4Ij",
+      "upstreamKey": "pf1-content/w8QhU9qZ4VXxO4Ij",
+      "pack": "pf-companion-features",
+      "name": "Animal Companion Feats",
+      "detail": {
+        "kind": "companionFeature",
+        "tag": "",
+        "associations": ["Animal Companion"]
+      },
+      "description": "<p>Animal companions can select from the following feats:</p><p><em>Note that animal companions cannot select a feat with a requirement of base attack bonus +1 until they gain their second feat at 3 Hit Dice.</em></p><table><tbody><tr><td><p><a href=\"catalog:pf1/jCxcObXJfdDrx4WS\">Acrobatic</a></p></td><td><p><a href=\"catalog:pf1/lxDJhpqwtR3J4UXx\">Agile Maneuvers</a></p></td><td><p><a href=\"catalog:pf1/FszchlqR39lnNduC\">Armor Proficiency, Light</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/qQCgBVieojhmMuHL\">Armor Proficiency, Medium</a></p></td><td><p><a href=\"catalog:pf1/3MqcLuZfUJB8xMby\">Armor Proficiency, Heavy</a></p></td><td><p><a href=\"catalog:pf1/rMR6ahXEfYqASE7D\">Athletic</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/pmAO1Sni8xx71pLF\">Blind-Fight</a></p></td><td><p><a href=\"catalog:pf1/h9nHYLxXvIXBTmup\">Combat Reflexes</a></p></td><td><p><a href=\"catalog:pf1-content/g4dygpwC8Fk6l8fe\">Devotion against the Unnatural</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/O0e0UCim27GPKFuW\">Diehard</a></p></td><td><p><a href=\"catalog:pf1-content/XhsoIZjhnrDrsg8w\">Disruptive Companion</a></p></td><td><p><a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/ehqx8txNRGMaNOPt\">Endurance</a></p></td><td><p><a href=\"catalog:pf1-content/l4JNljLZfIr5QnVs\">Feral Grace</a></p></td><td><p><a href=\"catalog:pf1-content/qD2lU6ciACn98LPI\">Ferocious Beast</a></p></td></tr><tr><td><p><a href=\"catalog:pf1-content/RQWKXq6vKsqGDJMK\">Ferocious Feint</a></p></td><td><p><a href=\"catalog:pf1-content/jqJMif3EA3f5CwK5\">Friendly Face</a></p></td><td><p><a href=\"catalog:pf1/fVRnBIHR4Jq6btvm\">Great Fortitude</a></p></td></tr><tr><td><p><a href=\"catalog:pf1-content/1F0dlShIZp8SrIhJ\">Greater Tenacious Hunter</a></p></td><td><p><a href=\"catalog:pf1-content/O6bLhILylLxX0EPX\">Hefty Brute</a></p></td><td><p><a href=\"catalog:pf1/dn2KgHFQRbuoNRx0\">Improved Bull Rush</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/Uuiu3p982omhMEPj\">Improved Initiative</a></p></td><td><p><a href=\"catalog:pf1-content/QrZnS8x7kNPoocJ0\">Improved Intercept Blow</a></p></td><td><p>Improved Natural Armor</p></td></tr><tr><td><p><a href=\"catalog:pf1/go4xOiSUP8R1QJ5N\">Improved Overrun</a></p></td><td><p><a href=\"catalog:pf1-content/T30vZ3jWRPmkwoRm\">Intercept Blow</a></p></td><td><p><a href=\"catalog:pf1/O0jbkTJcIji9BNiF\">Intimidating Prowess</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/iAbIGhm7T2OK9Brt\">Iron Will</a></p></td><td><p><a href=\"catalog:pf1/0bZf3SDkvVOe2ujH\">Lightning Reflexes</a></p></td><td><p><a href=\"catalog:pf1-content/Z3UeOfVAM9syxe4D\">Linnorm Hunter Style</a></p></td></tr><tr><td><p><a href=\"catalog:pf1-content/wnRO71UYXPCsWlB7\">Linnorm Hunter Retreat</a></p></td><td><p><a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a></p></td><td><p><a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a></p></td></tr><tr><td><p><a href=\"catalog:pf1-content/hNqrulLkwvifCykO\">Reflexive Interception</a></p></td><td><p><a href=\"catalog:pf1/bXeW4kLCErPBFpNB\">Run</a></p></td><td><p><a href=\"catalog:pf1-content/mDwTQyjuSM0mhTu7\">Share Feature</a></p></td></tr><tr><td><p><a href=\"catalog:pf1/7zJTztNW7hdaqjKc\">Skill Focus</a></p></td><td><p><a href=\"catalog:pf1/ugQyUpqPBDsqLyra\">Spring Attack</a></p></td><td><p><a href=\"catalog:pf1/f5FPqAYWlKj3zCIY\">Stealthy</a></p></td></tr><tr><td><p><a href=\"catalog:pf1-content/RyVxVGbRmdwBgXCU\">Tenacious Hunter</a></p></td><td><p><a href=\"catalog:pf1/8snLqsJN4LLL00Nq\">Toughness</a></p></td><td><p><a href=\"catalog:pf1/n250dFlbykAIAg5Z\">Weapon Focus</a></p></td></tr></tbody></table><p>Animal companions with an Intelligence of 3 or higher can select any feat they are physically capable of using. GMs might expand this list to include feats from other sources.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf-content.pf-feats.Item.n1wLrcwaqOSDqrOo"
+        },
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Animal Companion"]
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Animal companions can select from the following feats:\nNote that animal companions cannot select a feat with a requirement of base attack bonus +1 until they gain their second feat at 3 Hit Dice.\nAcrobatic | Agile Maneuvers | Armor Proficiency, Light\nArmor Proficiency, Medium | Armor Proficiency, Heavy | Athletic\nBlind-Fight | Combat Reflexes | Devotion against the Unnatural\nDiehard | Disruptive Companion | Dodge\nEndurance | Feral Grace | Ferocious Beast\nFerocious Feint | Friendly Face | Great Fortitude\nGreater Tenacious Hunter | Hefty Brute | Improved Bull Rush\nImproved Initiative | Improved Intercept Blow | Improved Natural Armor\nImproved Overrun | Intercept Blow | Intimidating Prowess\nIron Will | Lightning Reflexes | Linnorm Hunter Style\nLinnorm Hunter Retreat | Mobility | Power Attack\nReflexive Interception | Run | Share Feature\nSkill Focus | Spring Attack | Stealthy\nTenacious Hunter | Toughness | Weapon Focus\nAnimal companions with an Intelligence of 3 or higher can select any feat they are physically capable of using. GMs might expand this list to include feats from other sources."
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1-content/1F0dlShIZp8SrIhJ",
+      "upstreamKey": "pf1-content/1F0dlShIZp8SrIhJ",
+      "pack": "pf-feats",
+      "name": "Greater Tenacious Hunter",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal is capable of savaging hidden foes when they least expect it.</em></p><p><strong>Prerequisites</strong>: Combat Reflexes, Tenacious Hunter, Perception 3 ranks, Stealth 3 ranks, animal companion.</p><p><strong>Benefits</strong>: The animal companion can attempt a Perception check as a swift action to intentionally search for a stimulus. When using Perception to attempt to pinpoint an invisible foe, the animal companion's bonus from the Tenacious Hunter feat increases to +20. In addition, whenever the animal companion successfully uses Perception to oppose a Stealth check or to pinpoint an invisible creature's location, that foe is denied its Dexterity bonus to AC against all attacks that the animal companion makes before the start of the animal companion's next turn.</p><p><strong>Normal</strong>: Using Perception to intentionally search for a stimulus is a move action.</p>",
+      "prerequisiteText": "Combat Reflexes, Tenacious Hunter, Perception 3 ranks, Stealth 3 ranks, animal companion",
+      "prerequisites": [
+        {
+          "feat": "pf1/h9nHYLxXvIXBTmup",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/RyVxVGbRmdwBgXCU",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.per",
+          "min": 3,
+          "kind": "skillRanks"
+        },
+        {
+          "skillRanks": "skill.ste",
+          "min": 3,
+          "kind": "skillRanks"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "The invisible-pinpointing Perception bonus replaces Tenacious Hunter with +20, requiring original-effect identity and replacement rather than a new independently stacking bonus."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "The companion may actively search with Perception as a swift action. Its Tenacious Hunter bonus becomes +20 when pinpointing an invisible foe. Successfully opposing Stealth or pinpointing invisibility denies that foe Dexterity to AC against the companion’s attacks until its next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/O6bLhILylLxX0EPX",
+      "upstreamKey": "pf1-content/O6bLhILylLxX0EPX",
+      "pack": "pf-feats",
+      "name": "Hefty Brute",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You might be a different subspecies or simply a well-fed and well-grown beast, but either way you're built on a more massive scale than the rest of your kind.</em></p><p><strong>Prerequisites</strong>: Animal companion or familiar.</p><p><strong>Benefits</strong>: You treat your size as one category larger for the purposes of calculating CMB, CMD, carrying capacity, and any size-based special attacks you use or that are used against you (such as grab, swallow whole, and trample).</p>",
+      "prerequisiteText": "Animal companion or familiar",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Animal companion or familiar"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Effective larger size changes CMB/CMD, carrying capacity and monster attack eligibility; no blanket physical size or unconditional modifier."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "You might be a different subspecies or simply a well-fed and well-grown beast, but either way you're built on a more massive scale than the rest of your kind. Prerequisites : Animal companion or familiar. Benefits : You treat your size as one category larger for the purposes of calculating CMB, CMD, carrying capacity, and any size-based special attacks you use or that are used against you (such as grab, swallow whole, and trample)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/QrZnS8x7kNPoocJ0",
+      "upstreamKey": "pf1-content/QrZnS8x7kNPoocJ0",
+      "pack": "pf-feats",
+      "name": "Improved Intercept Blow",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal's intervention completely protects its master from harm.</em></p><p><strong>Prerequisites</strong>: Intercept Blow, base attack bonus +6, animal companion.</p><p><strong>Benefits</strong>: When the animal companion uses Intercept Blow to intercept an opponent's melee attack and succeeds, it can take all the damage from the intercepted attack, in which case its master takes no damage from the intercepted attack and doesn't suffer effects that trigger on a hit.</p>",
+      "prerequisiteText": "Intercept Blow, base attack bonus +6, animal companion",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/T30vZ3jWRPmkwoRm",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Intercepted melee damage and on-hit effects transfer wholly to the animal companion, not ordinary owner totals."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "The animal's intervention completely protects its master from harm. Prerequisites : Intercept Blow, base attack bonus +6, animal companion. Benefits : When the animal companion uses Intercept Blow to intercept an opponent's melee attack and succeeds, it can take all the damage from the intercepted attack, in which case its master takes no damage from the intercepted attack and doesn't suffer effects that trigger on a hit."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/RQWKXq6vKsqGDJMK",
+      "upstreamKey": "pf1-content/RQWKXq6vKsqGDJMK",
+      "pack": "pf-feats",
+      "name": "Ferocious Feint",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Through training or inborn ability, the animal is naturally skilled at feinting against its foes.</em></p><p><strong>Prerequisites</strong>: Bluff 1 rank, animal companion.</p><p><strong>Benefits</strong>: The animal companion uses half its master's class level (minimum 1) in place of its Charisma bonus on Bluff checks to feint an opponent. In addition, the animal companion can use Bluff to feint an opponent as a move action.</p>",
+      "prerequisiteText": "Bluff 1 rank, animal companion",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.blf",
+          "min": 1,
+          "kind": "skillRanks"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Animal companion Bluff uses half master class level instead of Charisma and move-action feint; no additive Bluff modifier."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Through training or inborn ability, the animal is naturally skilled at feinting against its foes. Prerequisites : Bluff 1 rank, animal companion. Benefits : The animal companion uses half its master's class level (minimum 1) in place of its Charisma bonus on Bluff checks to feint an opponent. In addition, the animal companion can use Bluff to feint an opponent as a move action."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/RyVxVGbRmdwBgXCU",
+      "upstreamKey": "pf1-content/RyVxVGbRmdwBgXCU",
+      "pack": "pf-feats",
+      "name": "Tenacious Hunter",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal is capable of quickly pinpointing hidden prey.</em></p><p><strong>Prerequisites</strong>: Perception 3 ranks, Stealth 3 ranks, animal companion.</p><p><strong>Benefits</strong>: The animal companion gains a +2 bonus on Perception checks to oppose Stealth checks. When using Perception to pinpoint an invisible creature's location, this bonus increases to +10. In addition, whenever the animal companion successfully uses Perception to notice a creature using Stealth or to pinpoint an invisible creature's location, that foe is denied its Dexterity bonus to AC against the next attack the animal companion makes on or before the animal companion's next turn.</p>",
+      "prerequisiteText": "Perception 3 ranks, Stealth 3 ranks, animal companion",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.per",
+          "min": 3,
+          "kind": "skillRanks"
+        },
+        {
+          "skillRanks": "skill.ste",
+          "min": 3,
+          "kind": "skillRanks"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.per",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "opposing Stealth checks other than pinpointing an invisible creature"
+            }
+          }
+        },
+        {
+          "target": "skill.per",
+          "bonusType": "untyped",
+          "value": 10,
+          "condition": {
+            "situation": {
+              "local": "using Perception to pinpoint an invisible creature"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Perception +2 against Stealth or +10 pinpointing invisibility is selected manually; next-attack Dexterity denial needs target/timing state."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Benefits: The animal companion gains a +2 bonus on Perception checks to oppose Stealth checks. When using Perception to pinpoint an invisible creature's location, this bonus increases to +10. In addition, whenever the animal companion successfully uses Perception to notice a creature using Stealth or to pinpoint an invisible creature's location, that foe is denied its Dexterity bonus to AC against the next attack the animal companion makes on or before the animal companion's next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/T30vZ3jWRPmkwoRm",
+      "upstreamKey": "pf1-content/T30vZ3jWRPmkwoRm",
+      "pack": "pf-feats",
+      "name": "Intercept Blow",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal willingly throws itself in harm's way to defend its master.</em></p><p><strong>Prerequisites</strong>: Base attack bonus +1, animal companion.</p><p><strong>Benefits</strong>: Whenever the animal companion is adjacent to its master and its master is the target of a melee attack, the animal companion can expend an attack of opportunity as a free action, even if it isn't its turn, to attempt to intercept the attack. The animal companion makes an attack roll at its highest attack bonus with one of its natural attacks, as if it were making an attack of opportunity, with a -2 penalty for each size category the attacking creature is larger than the animal companion. If the result of this attack roll is greater than the attacking creature's attack roll result, the animal companion's master takes only half damage from the attack, and the other half of the damage is dealt to the animal companion. Effects that trigger on every successful hit (such as bleed or the trip special ability) affect both the animal companion and the master, as if both were hit by the attack; however, if it matters (such as for a touch spell that expires after a single hit), treat the animal companion as if it had been hit first.</p><p>If the animal companion knows the defend trick, the animal companion can use Intercept Blow and any feat that lists it as a prerequisite to protect any ally that it is adjacent to and defending (as per the defend trick).</p>",
+      "prerequisiteText": "Base attack bonus +1, animal companion",
+      "prerequisites": [
+        {
+          "bab": 1,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Companion intercept attack with size penalty, split damage, both-hit effects, companion-first single-touch effect and defend-trick expansion need linked recipient/action state."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Benefits: Whenever the animal companion is adjacent to its master and its master is the target of a melee attack, the animal companion can expend an attack of opportunity as a free action, even if it isn't its turn, to attempt to intercept the attack. The animal companion makes an attack roll at its highest attack bonus with one of its natural attacks, as if it were making an attack of opportunity, with a -2 penalty for each size category the attacking creature is larger than the animal companion. If the result of this attack roll is greater than the attacking creature's attack roll result, the animal companion's master takes only half damage from the attack, and the other half of the damage is dealt to the animal companion. Effects that trigger on every successful hit (such as bleed or the trip special ability) affect both the animal companion and the master, as if both were hit by the attack; however, if it matters (such as for a touch spell that expires after a single hit), treat the animal companion as if it had been hit first.\nIf the animal companion knows the defend trick, the animal companion can use Intercept Blow and any feat that lists it as a prerequisite to protect any ally that it is adjacent to and defending (as per the defend trick)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/XhsoIZjhnrDrsg8w",
+      "upstreamKey": "pf1-content/XhsoIZjhnrDrsg8w",
+      "pack": "pf-feats",
+      "name": "Disruptive Companion",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal's presence harries nearby enemies, making concentration difficult.</em></p><p><strong>Prerequisites</strong>: Animal companion.</p><p><strong>Benefits</strong>: The animal companion is trained to interfere with its opponent's concentration, making even rote tasks difficult. Increase the concentration check DC of spells and spell-like abilities that opponents cast while within the animal companion's reach by +2. Additionally, opponents can't take 10 on d20 rolls or checks while within the animal companion's reach. If an opponent has an ability that allows it to always take 10 on certain skill checks while distracted (such as the skill mastery advanced talent), it gains the benefit of such abilities only if its number of skill ranks is at least 4 higher than the animal companion's Hit Dice.</p><p>In addition, the animal companion counts as a fighter with a number of class levels equal to its Hit Dice for the purposes of qualifying for the Disruptive feat, as well as for any feat that lists the Disruptive feat as a prerequisite. The animal companion also adds those feats to the list of animal feats that it can choose from when gaining a new feat.</p>",
+      "prerequisiteText": "Animal companion",
+      "prerequisites": [
+        {
+          "unchecked": "Animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Companion raises nearby enemy concentrationDC2, suppresses take10 except ranks>=HD+4 and counts HD as fighter levels for Disruptive qualification; recipient progression unmodeled."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Benefits: The animal companion is trained to interfere with its opponent's concentration, making even rote tasks difficult. Increase the concentration check DC of spells and spell-like abilities that opponents cast while within the animal companion's reach by +2. Additionally, opponents can't take 10 on d20 rolls or checks while within the animal companion's reach. If an opponent has an ability that allows it to always take 10 on certain skill checks while distracted (such as the skill mastery advanced talent), it gains the benefit of such abilities only if its number of skill ranks is at least 4 higher than the animal companion's Hit Dice.\nIn addition, the animal companion counts as a fighter with a number of class levels equal to its Hit Dice for the purposes of qualifying for the Disruptive feat, as well as for any feat that lists the Disruptive feat as a prerequisite. The animal companion also adds those feats to the list of animal feats that it can choose from when gaining a new feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/Z3UeOfVAM9syxe4D",
+      "upstreamKey": "pf1-content/Z3UeOfVAM9syxe4D",
+      "pack": "pf-feats",
+      "name": "Linnorm Hunter Style",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Style", "Teamwork"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You and your animal companion work together to make coordinated strikes against your enemies.</em></p><p><strong>Prerequisites</strong>: Cha 13, must have or be an animal companion.</p><p><strong>Benefits</strong>: Once per round while using this style, when an ally with this feat hits a target that you both threaten using a melee attack, you gain a +2 bonus on attacks of opportunity made against that target for 1 round. Enemies that provoke attacks of opportunity from your ally also provoke attacks of opportunity from you so long as you threaten them (even if the situation or an ability would normally deny you the attack of opportunity).</p><p><strong>Special</strong>: Animal companions with an Intelligence score of 1 or 2 can take this feat.</p>",
+      "prerequisiteText": "Cha 13, must have or be an animal companion",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "kind": "unchecked",
+          "unchecked": "must have or be an animal companion"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Style once/round allysamefeat hit common-threat foe gives AoOattack+2for1round and mirrored provocations; target/ally/action timing manual."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Benefits: Once per round while using this style, when an ally with this feat hits a target that you both threaten using a melee attack, you gain a +2 bonus on attacks of opportunity made against that target for 1 round. Enemies that provoke attacks of opportunity from your ally also provoke attacks of opportunity from you so long as you threaten them (even if the situation or an ability would normally deny you the attack of opportunity).\nSpecial: Animal companions with an Intelligence score of 1 or 2 can take this feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/g4dygpwC8Fk6l8fe",
+      "upstreamKey": "pf1-content/g4dygpwC8Fk6l8fe",
+      "pack": "pf-feats",
+      "name": "Devotion against the Unnatural",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal's devotion to its master allows it to stand against unnatural forces.</em></p><p><strong>Prerequisites</strong>: Animal companion, devotion special ability.</p><p><strong>Benefits</strong>: The animal companion gains a +2 morale bonus on saving throws against spells, spell-like abilities, and supernatural abilities of aberrations, outsiders, and undead. The animal companion is immune to the unnatural aura ability that some undead creatures (such as wraiths) have.</p>",
+      "prerequisiteText": "Animal companion, devotion special ability",
+      "prerequisites": [
+        {
+          "unchecked": "Animal companion",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "devotion special ability",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The animal's devotion to its master allows it to stand against unnatural forces.\nPrerequisites: Animal companion, devotion special ability.\nBenefits: The animal companion gains a +2 morale bonus on saving throws against spells, spell-like abilities, and supernatural abilities of aberrations, outsiders, and undead. The animal companion is immune to the unnatural aura ability that some undead creatures (such as wraiths) have."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/hNqrulLkwvifCykO",
+      "upstreamKey": "pf1-content/hNqrulLkwvifCykO",
+      "pack": "pf-feats",
+      "name": "Reflexive Interception",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal can defend its master with lightning speed.</em></p><p><strong>Prerequisites</strong>: Intercept Blow, base attack bonus +3, animal companion, evasion.</p><p><strong>Benefits</strong>: Whenever the animal companion is adjacent to its master and its master is attempts a Reflex save, the animal companion can expend an attack of opportunity as a free action, even if it isn't its turn, to attempt a Reflex save to intervene. When using this ability, the animal companion loses the benefits of evasion (and improved evasion if it has it), but if the animal companion succeeds at its saving throw, its master gains the benefit of the animal companion's evasion (or improved evasion if it has it).</p>",
+      "prerequisiteText": "Intercept Blow, base attack bonus +3, animal companion, evasion",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/T30vZ3jWRPmkwoRm",
+          "kind": "feat"
+        },
+        {
+          "bab": 3,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "evasion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The animal can defend its master with lightning speed.\nPrerequisites: Intercept Blow, base attack bonus +3, animal companion, evasion.\nBenefits: Whenever the animal companion is adjacent to its master and its master is attempts a Reflex save, the animal companion can expend an attack of opportunity as a free action, even if it isn't its turn, to attempt a Reflex save to intervene. When using this ability, the animal companion loses the benefits of evasion (and improved evasion if it has it), but if the animal companion succeeds at its saving throw, its master gains the benefit of the animal companion's evasion (or improved evasion if it has it)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/jqJMif3EA3f5CwK5",
+      "upstreamKey": "pf1-content/jqJMif3EA3f5CwK5",
+      "pack": "pf-feats",
+      "name": "Friendly Face",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Other animals of your species adore you. No matter how territorial, ill-tempered, wounded, or hungry they are, they see you as a friend, not an enemy. They'll give your two-legged friend the benefit of the doubt as well.</em></p><p><strong>Prerequisites</strong>: Animal companion.</p><p><strong>Benefits</strong>: Other animals of roughly the same kind as you (cats to felines, eagles to raptors, frogs to amphibians, etc.) have their starting attitudes toward you improved by two steps. Their attitudes towards your master are likewise improved by one step.</p><p><strong>Special</strong>: If your master has the animal focus class feature, this feat also applies to any animals of roughly the same kind as your active animal focus.</p>",
+      "prerequisiteText": "Animal companion",
+      "prerequisites": [
+        {
+          "unchecked": "Animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Other animals of your species adore you. No matter how territorial, ill-tempered, wounded, or hungry they are, they see you as a friend, not an enemy. They'll give your two-legged friend the benefit of the doubt as well.\nPrerequisites: Animal companion.\nBenefits: Other animals of roughly the same kind as you (cats to felines, eagles to raptors, frogs to amphibians, etc.) have their starting attitudes toward you improved by two steps. Their attitudes towards your master are likewise improved by one step.\nSpecial: If your master has the animal focus class feature, this feat also applies to any animals of roughly the same kind as your active animal focus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/l4JNljLZfIr5QnVs",
+      "upstreamKey": "pf1-content/l4JNljLZfIr5QnVs",
+      "pack": "pf-feats",
+      "name": "Feral Grace",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal's grace and agility are honed for battle, making it a deadly combatant.</em></p><p><strong>Prerequisites</strong>: Weapon Finesse, base attack bonus +3, animal companion.</p><p><strong>Benefits</strong>: Choose one of the animal companion's natural attack. When the animal companion makes a melee attack with the chosen natural attack using its Dexterity bonus on attack rolls and its Strength bonus on damage rolls, it adds 1/4 of its Hit Dice as a bonus on damage rolls. This bonus damage doesn't increase or decrease based upon whether the natural attack is a primary or secondary natural attack.</p><p><strong>Special</strong>: You can select this feat multiple times. Its effects don't stack. Each time you select this feat, choose a different natural attack to apply its benefit to.</p>",
+      "prerequisiteText": "Weapon Finesse, base attack bonus +3, animal companion",
+      "prerequisites": [
+        {
+          "feat": "pf1/vWiTqHC4Y3Xn1Pme",
+          "kind": "feat"
+        },
+        {
+          "bab": 3,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The animal's grace and agility are honed for battle, making it a deadly combatant.\nPrerequisites: Weapon Finesse, base attack bonus +3, animal companion.\nBenefits: Choose one of the animal companion's natural attack. When the animal companion makes a melee attack with the chosen natural attack using its Dexterity bonus on attack rolls and its Strength bonus on damage rolls, it adds 1/4 of its Hit Dice as a bonus on damage rolls. This bonus damage doesn't increase or decrease based upon whether the natural attack is a primary or secondary natural attack.\nSpecial: You can select this feat multiple times. Its effects don't stack. Each time you select this feat, choose a different natural attack to apply its benefit to."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/mDwTQyjuSM0mhTu7",
+      "upstreamKey": "pf1-content/mDwTQyjuSM0mhTu7",
+      "pack": "pf-feats",
+      "name": "Share Feature",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The animal expands its capabilities and learns one of its master's class features.</em></p><p><strong>Prerequisites</strong>: Animal companion, master must have the chosen class feature.</p><p><strong>Benefits</strong>: Choose one of the following class features: bravery, camouflage, favored terrain, hide in plain sight, resist nature's lure, track, trackless step, venom immunity, and woodland stride. The animal companion gains the benefits of the selected class feature, using its Hit Dice as its level in its master's class for the purpose of this ability; the animal companion gains the benefits of the base class feature, even if the master alters the class feature via an archetype or other means, though the animal companion doesn't count as having the class feature for the purpose of fulfilling prerequisites.</p>",
+      "prerequisiteText": "Animal companion, master must have the chosen class feature",
+      "prerequisites": [
+        {
+          "unchecked": "Animal companion",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "master must have the chosen class feature",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The animal expands its capabilities and learns one of its master's class features.\nPrerequisites: Animal companion, master must have the chosen class feature.\nBenefits: Choose one of the following class features: bravery, camouflage, favored terrain, hide in plain sight, resist nature's lure, track, trackless step, venom immunity, and woodland stride. The animal companion gains the benefits of the selected class feature, using its Hit Dice as its level in its master's class for the purpose of this ability; the animal companion gains the benefits of the base class feature, even if the master alters the class feature via an archetype or other means, though the animal companion doesn't count as having the class feature for the purpose of fulfilling prerequisites."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/qD2lU6ciACn98LPI",
+      "upstreamKey": "pf1-content/qD2lU6ciACn98LPI",
+      "pack": "pf-feats",
+      "name": "Ferocious Beast",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Through training or natural ability, the animal is skilled at unnerving its enemies.</em></p><p><strong>Prerequisites</strong>: Intimidate 1 rank, animal companion.</p><p><strong>Benefits</strong>: The animal companion uses half its master's class level (minimum 1) in place of its Charisma bonus on Intimidate checks to demoralize an opponent, as well as on Intimidate checks to use the Antagonize feat. In addition, the animal companion can use Intimidate to demoralize an opponent as a move action.</p><p><strong>Special</strong>: An animal companion can't take both Ferocious Beast and Intimidating Prowess.</p>",
+      "prerequisiteText": "Intimidate 1 rank, animal companion",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.int",
+          "min": 1,
+          "kind": "skillRanks"
+        },
+        {
+          "unchecked": "animal companion",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Through training or natural ability, the animal is skilled at unnerving its enemies.\nPrerequisites: Intimidate 1 rank, animal companion.\nBenefits: The animal companion uses half its master's class level (minimum 1) in place of its Charisma bonus on Intimidate checks to demoralize an opponent, as well as on Intimidate checks to use the Antagonize feat. In addition, the animal companion can use Intimidate to demoralize an opponent as a move action.\nSpecial: An animal companion can't take both Ferocious Beast and Intimidating Prowess."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/wnRO71UYXPCsWlB7",
+      "upstreamKey": "pf1-content/wnRO71UYXPCsWlB7",
+      "pack": "pf-feats",
+      "name": "Linnorm Hunter Retreat",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Teamwork"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You and your animal companion have learned to cover each other in combat.</em></p><p><strong>Prerequisites</strong>: Cha 13, Dex 13, Dodge, Linnorm Hunter Style, base attack bonus +4, must have or be an animal companion.</p><p><strong>Benefits</strong>: When an ally with this feat uses Linnorm Hunter Style and hits a target with a melee attack, you can move 5 feet as an immediate action without provoking an attack of opportunity from that target.</p><p><strong>Special</strong>: Animal companions with an Intelligence score of 1 or 2 can take this feat.</p>",
+      "prerequisiteText": "Cha 13, Dex 13, Dodge, Linnorm Hunter Style, base attack bonus +4, must have or be an animal companion",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/Z3UeOfVAM9syxe4D",
+          "kind": "feat"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        },
+        {
+          "kind": "unchecked",
+          "unchecked": "must have or be an animal companion"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You and your animal companion have learned to cover each other in combat.\nPrerequisites: Cha 13, Dex 13, Dodge, Linnorm Hunter Style, base attack bonus +4, must have or be an animal companion.\nBenefits: When an ally with this feat uses Linnorm Hunter Style and hits a target with a melee attack, you can move 5 feet as an immediate action without provoking an attack of opportunity from that target.\nSpecial: Animal companions with an Intelligence score of 1 or 2 can take this feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0bZf3SDkvVOe2ujH",
+      "upstreamKey": "pf1/0bZf3SDkvVOe2ujH",
+      "pack": "feats",
+      "name": "Lightning Reflexes",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Saving Throw"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have faster reflexes than normal.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Reflex saving throws.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.ref",
+          "bonusType": "untyped",
+          "value": 2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/3MqcLuZfUJB8xMby",
+      "upstreamKey": "pf1/3MqcLuZfUJB8xMby",
+      "pack": "feats",
+      "name": "Armor Proficiency, Heavy",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at wearing heavy armor.</em></p><p><strong>Prerequisites</strong>: Light Armor Proficiency, <a href=\"catalog:pf1/qQCgBVieojhmMuHL\">Medium Armor Proficiency</a>.</p><p><strong>Benefits</strong>: See <a href=\"catalog:pf1/FszchlqR39lnNduC\">Armor Proficiency, Light</a>.</p><p><strong>Normal</strong>: See Armor Proficiency, Light.</p><p><strong>Special</strong>: Fighters and paladins automatically have Heavy Armor Proficiency as a bonus feat. They need not select it.</p>",
+      "prerequisiteText": "Light Armor Proficiency, Medium Armor Proficiency",
+      "prerequisites": [
+        {
+          "proficiency": {
+            "category": "light"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "feat": "pf1/qQCgBVieojhmMuHL",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": ["hvy"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/7zJTztNW7hdaqjKc",
+      "upstreamKey": "pf1/7zJTztNW7hdaqjKc",
+      "pack": "feats",
+      "name": "Skill Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Skill"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8snLqsJN4LLL00Nq",
+      "upstreamKey": "pf1/8snLqsJN4LLL00Nq",
+      "pack": "feats",
+      "name": "Toughness",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You have enhanced physical stamina.</i><p><strong>Benefits</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 135"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "hp",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "max(3, @hitDice)"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "upstreamKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "pack": "feats",
+      "name": "Power Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>",
+      "prerequisiteText": "Str 13, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "-1 - floor(@bab / 4)"
+          },
+          "condition": {
+            "option": true
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Choose before attacking: take -1 on melee attacks and combat maneuver checks for +2 melee damage, increasing by -1/+2 at BAB +4 and every +4 thereafter. Damage increases 50% for the stated two-handed or Str ×1.5 primary-natural uses and halves for off-hand or secondary-natural uses. Effects last until your next turn and bonus damage does not apply to touch attacks or effects without hit point damage."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/FszchlqR39lnNduC",
+      "upstreamKey": "pf1/FszchlqR39lnNduC",
+      "pack": "feats",
+      "name": "Armor Proficiency, Light",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at wearing light armor.</em></p><p><strong>Benefits</strong>: When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Dexterity- and Strength-based skill checks.</p><p><strong>Normal</strong>: A character who is wearing armor with which he is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving.</p><p><strong>Special</strong>: All characters except monks, sorcerers, and wizards automatically have Light Armor Proficiency as a bonus feat. They need not select it.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": ["lgt"]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Light armor proficiency confines armor check penalties to Strength- and Dexterity-based skill checks. Monks, sorcerers and wizards do not receive it automatically."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/JreaiTHdyWFNj3Tb",
+      "upstreamKey": "pf1/JreaiTHdyWFNj3Tb",
+      "pack": "feats",
+      "name": "Dodge",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>",
+      "prerequisiteText": "Dex 13",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 122"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": 1
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/O0e0UCim27GPKFuW",
+      "upstreamKey": "pf1/O0e0UCim27GPKFuW",
+      "pack": "feats",
+      "name": "Diehard",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are especially hard to kill. Not only do your wounds automatically stabilize when grievously injured, but you can remain conscious and continue to act even at death's door.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/ehqx8txNRGMaNOPt\">Endurance</a>.</p><p><strong>Benefits</strong>: When your hit point total is below 0, but you are not dead, you automatically stabilize. You do not need to make a Constitution check each round to avoid losing additional hit points. You may choose to act as if you were disabled, rather than dying. You must make this decision as soon as you are reduced to negative hit points (even if it isn't your turn). If you do not choose to act as if you were disabled, you immediately fall unconscious.</p><p>When using this feat, you are staggered. You can take a move action without further injuring yourself, but if you perform any standard action (or any other action deemed as strenuous, including some swift actions, such as casting a quickened spell) you take 1 point of damage after completing the act. If your negative hit points are equal to or greater than your Constitution score, you immediately die.</p><p><strong>Normal</strong>: A character without this feat who is reduced to negative hit points is unconscious and dying.</p><p>Usage: apply Staggered condition.</p>",
+      "prerequisiteText": "Endurance",
+      "prerequisites": [
+        {
+          "feat": "pf1/ehqx8txNRGMaNOPt",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 122"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Below 0 hit points while alive, automatically stabilize without a Constitution check."
+        },
+        {
+          "text": "Below 0 hit points while alive, automatically stabilize. Immediately choose to act disabled or fall unconscious. While acting, you are staggered; a strenuous action deals 1 damage afterward. Die when negative hit points reach your Constitution score."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/O0jbkTJcIji9BNiF",
+      "upstreamKey": "pf1/O0jbkTJcIji9BNiF",
+      "pack": "feats",
+      "name": "Intimidating Prowess",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Skill"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Your physical might is intimidating to others.</i><p><strong>Benefits</strong>: Add your Strength modifier to Intimidate skill checks in addition to your Charisma modifier.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 128"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.int",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "@ability.str.mod"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/R7L4SlGRlnThqFrP",
+      "upstreamKey": "pf1/R7L4SlGRlnThqFrP",
+      "pack": "feats",
+      "name": "Mobility",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Movement", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can easily move through a dangerous melee.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>.</p><p><strong>Benefits</strong>: You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most types of bonuses.</p>",
+      "prerequisiteText": "Dex 13, Dodge",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 130"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "against attacks of opportunity caused by movement within or out of a threatened area"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Movement-provoked opportunity-attack scope supplied as explicit Situation; no ordinary AC bonus or Dexterity-denial override."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Gain +4 dodge AC only against attacks of opportunity caused by moving within or out of a threatened area. Losing your Dexterity bonus to AC also loses this dodge bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Uuiu3p982omhMEPj",
+      "upstreamKey": "pf1/Uuiu3p982omhMEPj",
+      "pack": "feats",
+      "name": "Improved Initiative",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 127"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "init",
+          "bonusType": "untyped",
+          "value": 4
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/bXeW4kLCErPBFpNB",
+      "upstreamKey": "pf1/bXeW4kLCErPBFpNB",
+      "pack": "feats",
+      "name": "Run",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are swift of foot.</em></p><p><strong>Benefits</strong>: When running, you move five times your normal speed (if wearing medium, light, or no armor and carrying no more than a medium load) or four times your speed (if wearing heavy armor or carrying a heavy load). If you make a jump after a running start (see the Acrobatics skill description), you gain a +4 bonus on your Acrobatics check. While running, you retain your Dexterity bonus to your Armor Class.</p><p><strong>Normal</strong>: You move four times your speed while running (if wearing medium, light, or no armor and carrying no more than a medium load) or three times your speed (if wearing heavy armor or carrying a heavy load), and you lose your Dexterity bonus to AC.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 132"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.acr",
+          "bonusType": "untyped",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "to jump after a running start"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Running speed multipliers (×5 medium-or-lighter armor/load; ×4 heavy armor/load) and retention of Dexterity AC while running are not imported. The separate +4 running-jump Acrobatics Modifier is represented (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Run at five times normal speed with medium-or-lighter armor and load, or four times with heavy armor or load. Retain Dexterity AC while running."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/dn2KgHFQRbuoNRx0",
+      "upstreamKey": "pf1/dn2KgHFQRbuoNRx0",
+      "pack": "feats",
+      "name": "Improved Bull Rush",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at pushing your foes around.</em></p><p><strong>Prerequisites</strong>: Str 13, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a bull rush combat maneuver.</p>",
+      "prerequisiteText": "Str 13, Power Attack, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "126"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "122"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "bullRush"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against a bull rush combat maneuver"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Current offensive +2 uses shared bullRush. Prior Greater Bull Rush (#331, pf1/XGvS0hHv58XAeQij) uses an entry-local on-bull-rush Situation, so a single shared selection cannot yet calculate the required +4 cross-batch stack. Prior record is preserved; deliberate promotion remains outstanding (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "cmb",
+          "situation": "bullRush",
+          "text": "Performing a bull rush combat maneuver does not provoke an attack of opportunity."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ehqx8txNRGMaNOPt",
+      "upstreamKey": "pf1/ehqx8txNRGMaNOPt",
+      "pack": "feats",
+      "name": "Endurance",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Harsh conditions or long exertions do not easily tire you.</i><p><strong>Benefits</strong>: You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation.</p><p>You may sleep in light or medium armor without becoming fatigued.</p><p><strong>Normal</strong>: A character without this feat who sleeps in medium or heavier armor is fatigued the next day.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 122"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/f5FPqAYWlKj3zCIY",
+      "upstreamKey": "pf1/f5FPqAYWlKj3zCIY",
+      "pack": "feats",
+      "name": "Stealthy",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Skill"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are good at avoiding unwanted attention and slipping out of bonds.</i><p><strong>Benefits</strong>: You get a +2 bonus on all Escape Artist and Stealth skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 135"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.ste",
+            "formula": "2 + if(gte(@skills.ste.rank, 10), 2)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.esc",
+            "formula": "2 + if(gte(@skills.esc.rank, 10), 2)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/fVRnBIHR4Jq6btvm",
+      "upstreamKey": "pf1/fVRnBIHR4Jq6btvm",
+      "pack": "feats",
+      "name": "Great Fortitude",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Saving Throw", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are resistant to poisons, diseases, and other maladies.</i>\n<p><b>Benefits</b></p>\n<p>You get a +2 bonus on all Fortitude saving throws.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 124"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.fort",
+          "bonusType": "untyped",
+          "value": 2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/go4xOiSUP8R1QJ5N",
+      "upstreamKey": "pf1/go4xOiSUP8R1QJ5N",
+      "pack": "feats",
+      "name": "Improved Overrun",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at running down your foes.</em></p><p><strong>Prerequisites</strong>: Str 13, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing an overrun combat maneuver. In addition, you receive a +2 bonus on checks made to overrrun a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to overrun you. Targets of your overrun attempt may not chose to avoid you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing an overrun combat maneuver.</p><h3>Combat Trick</h3><p>When you are the target of an overrun combat maneuver, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that overrun attempt increases by that number.</p>",
+      "prerequisiteText": "Str 13, Power Attack, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "127"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "123"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "overrun"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against a overrun combat maneuver"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "cmb",
+          "situation": "overrun",
+          "text": "Performing a overrun combat maneuver does not provoke an attack of opportunity."
+        },
+        {
+          "text": "An overrun attempt does not provoke an attack of opportunity, and its target cannot choose to avoid you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h9nHYLxXvIXBTmup",
+      "upstreamKey": "pf1/h9nHYLxXvIXBTmup",
+      "pack": "feats",
+      "name": "Combat Reflexes",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can make additional attacks of opportunity.</em></p><p><strong>Benefits</strong>: You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed.</p><p><strong>Normal</strong>: A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed.</p><p><strong>Special</strong>: The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an attack of opportunity, you can spend 5 stamina points to make a second attack for the same provoking action. That second attack of opportunity takes a -5 penalty on the attack roll and costs one of your attacks of opportunity for the round.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 119-120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "kzof1vn44xdata40",
+                "activation": {
+                  "type": "passive",
+                  "unchained": {
+                    "type": "passive"
+                  }
+                },
+                "name": "Use"
+              }
+            ],
+            "uses": {
+              "maxFormula": "1 + max(0, @abilities.dex.mod)",
+              "per": "round",
+              "value": 0
+            }
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "The normal one attack of opportunity plus additional attacks equal to the Dexterity bonus each round, flat-footed permission, and current resource count are not imported into an attack-of-opportunity consumer. Raw uses.maxFormula is retained only as evidence; its count is never an attack-roll bonus (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "You can make additional attacks of opportunity each round equal to your Dexterity bonus, and may make them while flat-footed. This does not increase opportunist uses."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/iAbIGhm7T2OK9Brt",
+      "upstreamKey": "pf1/iAbIGhm7T2OK9Brt",
+      "pack": "feats",
+      "name": "Iron Will",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Saving Throw"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are more resistant to mental effects.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Will saving throws.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 129"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.will",
+          "bonusType": "untyped",
+          "value": 2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/jCxcObXJfdDrx4WS",
+      "upstreamKey": "pf1/jCxcObXJfdDrx4WS",
+      "pack": "feats",
+      "name": "Acrobatic",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at leaping, jumping, and flying.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Acrobatics and Fly skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "113, 114"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.acr",
+            "formula": "2 + if(gte(@skills.acr.rank, 10), 2)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.fly",
+            "formula": "2 + if(gte(@skills.fly.rank, 10), 2)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/lxDJhpqwtR3J4UXx",
+      "upstreamKey": "pf1/lxDJhpqwtR3J4UXx",
+      "pack": "feats",
+      "name": "Agile Maneuvers",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You've learned to use your quickness in place of brute force when performing combat maneuvers.</i><p><strong>Benefits</strong>: You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus (see Combat) instead of your Strength bonus.</p><p><strong>Normal</strong>: You add your Strength bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 117"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "@ability.dex.mod - @ability.str.mod"
+          },
+          "condition": {
+            "situation": {
+              "local": "Small or larger (baseline CMB uses Strength)"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "cmb",
+            "formula": "if(gt(@abilities.dex.mod, @abilities.str.mod), @abilities.dex.mod - @abilities.str.mod)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Automatic size-aware CMB ability substitution is not represented by the closed Modifier condition schema. Small and larger use Strength for baseline CMB; Tiny, Diminutive and Fine already use Dexterity. The reviewed Dexterity-minus-Strength correction is therefore confined to the explicit local Situation “Small or larger (baseline CMB uses Strength)”. Ordinary CMB stays at its existing baseline until that Situation is selected; do not select it for Tiny or smaller. A size predicate or replacement consumer is still required for automatic application (#719/#720). Contract evidence: docs/character-sheet/resolution-stages.md:36 and src/lib/character-sheet.ts:1131,1182–1185."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/n250dFlbykAIAg5Z",
+      "upstreamKey": "pf1/n250dFlbykAIAg5Z",
+      "pack": "feats",
+      "name": "Weapon Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Weapon", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>",
+      "prerequisiteText": "Proficiency with selected weapon, base attack bonus +1",
+      "prerequisites": [
+        {
+          "unchecked": "Proficiency with selected weapon, base attack bonus +1",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/pmAO1Sni8xx71pLF",
+      "upstreamKey": "pf1/pmAO1Sni8xx71pLF",
+      "pack": "feats",
+      "name": "Blind-Fight",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at attacking opponents that you cannot clearly perceive.</em></p><p><strong>Benefits</strong>: In melee, every time you miss because of concealment (see Combat), you can reroll your miss chance percentile roll one time to see if you actually hit.</p><p>An invisible attacker gets no advantages related to hitting you in melee. That is, you don't lose your Dexterity bonus to Armor Class, and the attacker doesn't get the usual +2 bonus for being invisible. The invisible attacker's bonuses do still apply for ranged attacks, however.</p><p>You do not need to make Acrobatics skill checks to move at full speed while blinded.</p><p><strong>Normal</strong>: Regular attack roll modifiers for invisible attackers trying to hit you apply, and you lose your Dexterity bonus to AC. The speed reduction for darkness and poor visibility also applies.</p><p><strong>Special</strong>: The Blind-Fight feat is of no use against a character who is the subject of a blink spell.</p><h3>Combat Trick</h3><p>Once per round, when you hit a creature that benefits from concealment, you can spend 2 stamina points to ignore the miss chance from that creature's concealment until the end of your next turn.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "The imported feat does not alter structural Dexterity denial or an invisible attacker’s +2 melee attack bonus in the calculator. Correct melee-only defense and the concealment reroll remain readable Notes, not automatic condition changes (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "situation": {
+            "local": "melee attack misses because of concealment"
+          },
+          "text": "In melee, reroll a concealment miss chance once. This does not help against blink."
+        },
+        {
+          "target": "ac",
+          "situation": {
+            "local": "against an invisible melee attacker"
+          },
+          "text": "Invisible melee attackers do not deny your Dexterity AC or gain their normal +2 attack bonus; invisible ranged attacks are unaffected."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/qQCgBVieojhmMuHL",
+      "upstreamKey": "pf1/qQCgBVieojhmMuHL",
+      "pack": "feats",
+      "name": "Armor Proficiency, Medium",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at wearing medium armor.</em></p><p><strong>Prerequisites</strong>: Light Armor Proficiency.</p><p><strong>Benefits</strong>: See <a href=\"catalog:pf1/FszchlqR39lnNduC\">Armor Proficiency, Light</a>.</p><p><strong>Normal</strong>: See Armor Proficiency, Light.</p><p><strong>Special</strong>: Barbarians, clerics, druids, fighters, paladins, and rangers automatically have Medium Armor Proficiency as a bonus feat. They need not select it.</p>",
+      "prerequisiteText": "Light Armor Proficiency",
+      "prerequisites": [
+        {
+          "proficiency": {
+            "category": "light"
+          },
+          "kind": "proficiency"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": ["med"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/rMR6ahXEfYqASE7D",
+      "upstreamKey": "pf1/rMR6ahXEfYqASE7D",
+      "pack": "feats",
+      "name": "Athletic",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You possess inherent physical prowess.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on Climb and Swim skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.clm",
+            "formula": "2 + if(gte(@skills.clm.rank, 10), 2)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.swm",
+            "formula": "2 + if(gte(@skills.swm.rank, 10), 2)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ugQyUpqPBDsqLyra",
+      "upstreamKey": "pf1/ugQyUpqPBDsqLyra",
+      "pack": "feats",
+      "name": "Spring Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Movement"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can deftly move up to a foe, strike, and withdraw before he can react.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>, base attack bonus +4.</p><p><strong>Benefits</strong>: As a full-round action, you can move up to your speed and make a single melee attack without provoking any attacks of opportunity from the target of your attack. You can move both before and after the attack, but you must move at least 10 feet before the attack and the total distance that you move cannot be greater than your speed. You cannot use this ability to attack a foe that is adjacent to you at the start of your turn.</p><p><strong>Normal</strong>: You cannot move before and after an attack.</p>",
+      "prerequisiteText": "Dex 13, Dodge, Mobility, base attack bonus +4",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "9ilekjpdPWfwe7eo",
+                "activation": {
+                  "type": "full",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "One Target"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

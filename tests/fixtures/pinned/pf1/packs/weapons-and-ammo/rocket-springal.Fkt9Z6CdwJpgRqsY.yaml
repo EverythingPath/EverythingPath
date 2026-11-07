@@ -1,0 +1,73 @@
+_id: Fkt9Z6CdwJpgRqsY
+_key: '!items!Fkt9Z6CdwJpgRqsY'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/ballista-wood-green.webp
+name: Rocket Springal
+system:
+  actions:
+    - _id: lfkecaegacskwao3
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(3, 10, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '50'
+        units: ft
+        value: '100'
+  ammo:
+    type: siege
+  baseTypes:
+    - Rocket Springal
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 3d10; <b>Critical</b> x4; <b>Range</b>
+      100 ft. (50 ft. min.); <b>Type</b> fire</p><p><b>Crew</b> 3; <b>Aim</b> 2;
+      <b>Load</b> 3; <b>Speed</b> 0 ft.</p><p><b>Category</b> Indirect-Fire
+      (Huge); <b>Proficiency</b> Siege Engine</p><h3>Description</h3><p>A
+      springal uses a torsion-cranked composite paddle to strike a firing rack
+      containing multiple arrows or black-powder-propelled rockets, which rain
+      down in an arc over a burst area. Springals are indirect-fire weapons that
+      affect an area centered on the target square (targeting DC
+      20).</p><p><em>Arrow</em>: This springal propels a group of arrows that
+      rains down on the targeted square and in a 15-foot burst around that
+      square. One use of arrow springal ammunition costs 20 gp and weighs 10
+      pounds.</p><p><em>Rocket</em>: This highly volatile springal propels a
+      group of black-powder rockets that rain down on the targeted square and in
+      a 15-foot burst around the area. If the rocket springal misfires, it
+      explodes, dealing its damage in a 20- foot blast around the springal. This
+      explosion destroys the rocket springal. One use of rocket springal
+      ammunition costs 500 gp and weighs 30 pounds.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 6000
+  size: huge
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: siege
+  weaponSubtype: indirect
+type: weapon
