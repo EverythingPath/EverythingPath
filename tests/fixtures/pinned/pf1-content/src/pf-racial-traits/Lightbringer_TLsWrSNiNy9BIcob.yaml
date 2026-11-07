@@ -1,0 +1,59 @@
+_id: TLsWrSNiNy9BIcob
+_key: '!items!TLsWrSNiNy9BIcob'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Lightbringer
+system:
+  actions:
+    - _id: WZ2bkL5VGdlQBGbH
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft (6 m) radius
+      description: >-
+        <p>Members of this race with Intelligence scores of 10 or higher may use
+        @UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{light} at will as a
+        spell-like ability.</p>
+      duration:
+        units: minute
+        value: 10 * (@attributes.hd.total +1)
+      name: Light
+      range:
+        units: touch
+      target:
+        value: Object touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 10)
+          per: round
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        You are treated as one level higher when determining the effects of any
+        light-based spell or effect you cast (including spell-like and
+        supernatural abilities).
+  description:
+    instructions: >-
+      <p>Update your Actor on the Attributes tab&gt; Condition Immunities and
+      check the appropriate box to add "dazzle" as a condition to which your
+      actor is immune. You can also add a custom entry for "light-based
+      blindness"</p>
+    value: >-
+      <p>Members of this race are immune to light-based blindness and dazzle
+      effects, and are treated as one level higher when determining the effects
+      of any light-based spells or effects they cast (including spell-like and
+      supernatural abilities). If a member of this race has an Intelligence of
+      10 or higher, it may use light at will as a spell-like ability.</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '228'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+type: feat

@@ -1,0 +1,75 @@
+_id: 55yke7az6gco0tyn
+_key: '!items!55yke7az6gco0tyn'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/abilities/mouth-teeth-rows-needles-purple.webp
+name: Spiked Pit
+system:
+  actions:
+    - _id: bvnuh6zuoppz32st
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, floor(@cl / 2)))d6
+            types:
+              - untyped
+          - formula: 2d6
+            types:
+              - piercing
+      duration:
+        units: spec
+        value: 1 round + 1 round/level
+      effect: 10-ft.-by-10-ft. hole, 10 ft. deep/2 levels
+      measureTemplate:
+        size: '10'
+        type: rect
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates
+        type: ref
+  attackNotes:
+    - 'Depth: [[min(5, floor(@cl / 2)) * 10]] ft'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.8w67l6dzzsi6oz5f]{create pit}, except
+      that the pit is lined with wickedly sharp spikes along its bottom and
+      walls and has a maximum depth of 50 feet. Creatures who fall into the pit
+      take falling damage as normal, plus 2d6 points of piercing damage from the
+      spikes. Any creature or object coming into contact with the spikes along
+      the walls, such as a creature trying to climb out, or rope or other
+      typical aids to climbing, takes 1d6 points of piercing damage each round
+      they are in contact with the walls. For those willing to accept the damage
+      incurred while climbing, the pit's walls have a Climb DC of 20.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+    subDomain:
+      Caves: 3
+  level: 3
+  materials:
+    focus: miniature shovel costing 10 gp
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '246'
+  sr: false
+  subschool:
+    - creation
+type: spell

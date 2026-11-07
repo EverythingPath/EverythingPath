@@ -1,0 +1,52 @@
+_id: WhE4j0Jc82npdMCP
+_key: '!items!WhE4j0Jc82npdMCP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/extra-lay-on-hands.jpg
+name: Lay on Hands
+system:
+  abilityType: su
+  actions:
+    - _id: 5khundxpgv4jz0o3
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      touch: true
+  associations:
+    classes:
+      - Paladin
+  description:
+    value: >-
+      <p>Beginning at 2nd level, a paladin can heal wounds (her own or those of
+      others) by touch. Each day she can use this ability a number of times
+      equal to 1/2 her paladin level plus her <em>Charisma</em> modifier. With
+      one use of this ability, a paladin can heal 1d6 hit points of damage for
+      every two paladin levels she possesses. Using this ability is a standard
+      action, unless the paladin targets herself, in which case it is a swift
+      action. Despite the name of this ability, a paladin only needs one free
+      hand to use this ability.</p>
+
+      <p>Alternatively, a paladin can use this healing power to deal damage to
+      undead creatures, dealing 1d6 points of damage for every two levels the
+      paladin possesses. Using lay on hands in this way requires a successful
+      melee touch attack and doesn’t provoke an <em>attack of opportunity</em>.
+      Undead do not receive a <em>saving throw</em> against this damage.</p>
+  subType: classFeat
+  tag: classFeat_layOnHands
+  uses:
+    maxFormula: floor(@class.level / 2) + @abilities.cha.mod
+    per: day
+type: feat

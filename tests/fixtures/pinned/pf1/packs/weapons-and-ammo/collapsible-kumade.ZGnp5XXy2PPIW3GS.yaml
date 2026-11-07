@@ -1,0 +1,62 @@
+_id: ZGnp5XXy2PPIW3GS
+_key: '!items!ZGnp5XXy2PPIW3GS'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/kumade.png
+name: Collapsible Kumade
+system:
+  actions:
+    - _id: 512witdsr2tbbs3k
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Collapsible Kumade
+  description:
+    unidentified: >-
+      <p>This weapon acts as a kumade, but the handle consists of bamboo
+      sections held together by a taut rope running through the center.
+      Releasing the rope is a standard action that provokes attacks of
+      opportunity and causes the weapon to collapse into a bundle that fits into
+      a backpack. Reassembling the collapsible kumade requires a full-round
+      action that provokes attacks of opportunity.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    grp: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  weaponGroups:
+    - axes
+  weaponSubtype: 2h
+  weight:
+    value: 4
+type: weapon

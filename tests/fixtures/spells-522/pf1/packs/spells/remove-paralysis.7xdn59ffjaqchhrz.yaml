@@ -1,0 +1,59 @@
+_id: 7xdn59ffjaqchhrz
+_key: '!items!7xdn59ffjaqchhrz'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/debuff-chains-shackles-movement-blue.webp
+name: Remove Paralysis
+system:
+  actions:
+    - _id: ld0sz5vsd6q5evz8
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: up to four creatures, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can free one or more creatures from the effects of temporary
+      paralysis or related magic, including spells and effects that cause a
+      creature to gain the staggered condition. If the spell is cast on one
+      creature, the paralysis is negated. If cast on two creatures, each
+      receives another save with a +4 resistance bonus against the effect that
+      afflicts it. If cast on three or four creatures, each receives another
+      save with a +2 resistance bonus.</p><p>The spell does not restore ability
+      scores reduced by penalties, damage, or drain.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      paladin: 2
+      shaman: 2
+      spiritualist: 2
+      warpriest: 2
+    domain:
+      Liberation: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '332'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,60 @@
+_id: sn10ubyz5qyij9nf
+_key: '!items!sn10ubyz5qyij9nf'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Rain of Frogs
+system:
+  actions:
+    - _id: uo8pdti82kkklsls
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 2 rounds
+      effect: one swarm of poisonous frogs
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.vxi9c3xwa83xthka]{summon swarm}, except
+      you summon a swarm of poisonous frogs. This swarm has the statistics of a
+      centipede swarm (<em>Bestiary</em> 43), except it has the animal type and
+      its poison deals Constitution damage instead of Dexterity damage.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      druid: 3
+      hunter: 3
+      psychic: 3
+      shaman: 4
+      skald: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a square of red cloth
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '233'
+  sr: false
+  subschool:
+    - summoning
+type: spell

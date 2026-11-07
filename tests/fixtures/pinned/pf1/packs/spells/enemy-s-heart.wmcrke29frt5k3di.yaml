@@ -1,0 +1,62 @@
+_id: wmcrke29frt5k3di
+_key: '!items!wmcrke29frt5k3di'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Enemy's Heart
+system:
+  actions:
+    - _id: b6kby9gfe6lz2tjh
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration/1 minute per HD of the subject; see text
+      name: Use
+      range:
+        units: touch
+      target:
+        value: living creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cut out an enemy's heart and consume it, absorbing that enemy's
+      power as your own. As part of casting this spell, you perform a coup de
+      grace with a slashing weapon on a helpless, living adjacent target. If the
+      target dies, you eat its heart to gain the spell's benefits. If the target
+      survives, the spell is not wasted and you can try again as long as you
+      continue concentrating on the spell. When you consume the heart, you gain
+      the benefits of a <i>death knell</i> spell, except you gain 1d8 temporary
+      hit points +1 per Hit Die of the target, and the bonus to Strength is a
+      profane bonus.</p>
+  descriptors:
+    - death
+    - evil
+  learnedAt:
+    class:
+      adept: 2
+      antipaladin: 2
+      cleric: 2
+      oracle: 2
+      warpriest: 2
+      witch: 2
+    subDomain:
+      Cannibalism: 2
+  level: 2
+  materials:
+    value: target creature's heart
+  school: nec
+  sources:
+    - id: PZO1121
+      pages: '143'
+    - id: PZO9413
+      pages: '28'
+type: spell

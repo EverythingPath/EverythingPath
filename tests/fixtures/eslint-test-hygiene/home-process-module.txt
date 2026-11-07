@@ -1,0 +1,30 @@
+// The process module, imported or required, is process: HOME off its env is
+// refused as it is off the global. A line ending in "// flagged" must be
+// reported; every other line must pass.
+import process from 'node:process';
+import * as processNamespace from 'process';
+import { env } from 'node:process';
+import { env as processEnv, default as defaultProcess } from 'process';
+const requiredProcess = require('node:process');
+const { env: requiredEnv } = require('process');
+process.env.HOME; // flagged
+process.env['HOME']; // flagged
+processNamespace.env.HOME; // flagged
+defaultProcess['env'].HOME; // flagged
+env.HOME; // flagged
+processEnv['HOME']; // flagged
+requiredProcess.env.HOME; // flagged
+requiredEnv.HOME; // flagged
+require('node:process').env.HOME; // flagged
+const { HOME } = process.env; // flagged
+const { HOME: fromEnv } = env; // flagged
+const { env: { HOME: nested } } = processNamespace; // flagged
+const { HOME: fromRequired } = requiredProcess.env; // flagged
+process.env.PATH;
+env.PATH;
+// The imported module is exactly process for a platform guard.
+it.skipIf(process.platform === 'win32')('a', fn);
+// A fixture parameter named process or env is not the module.
+const readEnv = (process) => process.env.HOME;
+const readFixtureEnv = (env) => env.HOME;
+const readFixtureProcess = ({ env }) => env.HOME;
