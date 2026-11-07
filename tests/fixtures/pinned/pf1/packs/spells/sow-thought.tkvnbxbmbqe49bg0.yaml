@@ -1,0 +1,61 @@
+_id: tkvnbxbmbqe49bg0
+_key: '!items!tkvnbxbmbqe49bg0'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Sow Thought
+system:
+  actions:
+    - _id: n2rnkiklt8mppndw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You plant an idea, concept, or suspicion in the mind of the subject.
+      The target genuinely believes that the idea is his own, but is not
+      required to act upon it. If the idea is contrary to the target's normal
+      thoughts (such as making a paladin think, "I should murder my friends")
+      the target may suspect mind-altering magic is at play. The idea must be
+      fairly clear, enough so that it can be conveyed in one or two sentences.
+      You do not need to share a common language for the spell to succeed, but
+      without a common language you can only sow the most basic rudimentary
+      ideas.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+    subDomain:
+      Innuendo: 1
+  school: enc
+  sources:
+    - id: PZO1121
+      pages: '185'
+  subschool:
+    - compulsion
+type: spell

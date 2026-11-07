@@ -1,0 +1,69 @@
+_id: m231syx7oiqnxsec
+_key: '!items!m231syx7oiqnxsec'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Mirror Mantis
+system:
+  actions:
+    - _id: 1y0emi41avcih060
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    focus: true
+    somatic: true
+  description:
+    value: >-
+      <p>Whenever the target of this spell looks into a mirror or other
+      reflective surface where it can see its own visage clearly, it sees a Red
+      Mantis assassin (in full armor, face hidden by a mantis mask) looking back
+      at it. The reflection is harmless and mimics the target's motions
+      perfectly; no one else can see this illusion. The first time the target
+      sees the Red Mantis reflection, it must succeed at a Will save be or
+      shaken and take a -2 penalty on saves against fear effects for as long as
+      it can see the altered image and for 3 rounds thereafter. A new save must
+      be attempted each time the creature views its reflection during the
+      spell's duration. Once a creature successfully saves, it becomes immune to
+      being shaken by the caster's <i>mirror mantis</i> spell for 24 hours,
+      though it will still see the Red Mantis reflection until the spell
+      ends.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      cleric: 1
+      mesmerist: 1
+      occultist: 1
+      oracle: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      warpriest: 1
+      wizard: 1
+  materials:
+    focus: a hand mirror stained with a dried drop of blood
+  school: ill
+  sources:
+    - id: PZO1138
+      pages: '160'
+  subschool:
+    - phantasm
+type: spell

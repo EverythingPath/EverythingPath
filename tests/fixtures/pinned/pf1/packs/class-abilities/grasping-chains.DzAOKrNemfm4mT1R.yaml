@@ -1,0 +1,30 @@
+_id: DzAOKrNemfm4mT1R
+_key: '!items!DzAOKrNemfm4mT1R'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Grasping Chains
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: 8c5qur3o
+      formula: 4 + if(gte(@class.level, 9), 4)
+      target: skill.clm
+      type: untyped
+    - _id: ow8gnugm
+      formula: if(gte(@class.level, 9), floor(@attributes.speed.land.base / 2))
+      target: climbSpeed
+      type: base
+  description:
+    value: >-
+      <p>At 4th level, chains cover your body and extend from your arms,
+      grasping at the air around you and granting you a +4 bonus on Climb skill
+      checks.</p>
+
+      <p>At 9th level, this bonus increases to +8 and you gain a Climb speed
+      equal to 1/2 your base speed.</p>
+  subType: classFeat
+type: feat

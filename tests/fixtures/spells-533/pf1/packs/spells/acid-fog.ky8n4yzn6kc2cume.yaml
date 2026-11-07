@@ -1,0 +1,80 @@
+_id: ky8n4yzn6kc2cume
+_key: '!items!ky8n4yzn6kc2cume'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/air/fog-gas-smoke-dense-green.webp
+name: Acid Fog
+system:
+  actions:
+    - _id: x81ufq3tc616s6en
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - acid
+      duration:
+        units: round
+        value: '@cl'
+      effect: fog spreads in 20-ft. radius, 20 ft. high
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+    - _id: YpuQZrbI5FsKkuXj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Continious Damage
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Acid fog</i> creates a billowing mass of misty vapors like the
+      <i>solid fog</i> spell. In addition to slowing down creatures and
+      obscuring sight, this spell's vapors are highly acidic. Each round on your
+      turn, starting when you cast the spell, the fog deals 2d6 points of acid
+      damage to each creature and object within it.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 6
+      sorcerer: 6
+      summonerUnchained: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: powdered peas and an animal hoof
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '239'
+  sr: false
+  subschool:
+    - creation
+type: spell

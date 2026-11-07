@@ -1,0 +1,43 @@
+_id: cuOCNj2vlx0Q1X3J
+_key: '!items!cuOCNj2vlx0Q1X3J'
+_stats:
+  coreVersion: '12.343'
+folder: xPJd6syoxDiunnzG
+img: icons/commodities/biological/stinger-insect-grey.webp
+name: Sting
+system:
+  actions:
+    - _id: z4v148zqm8otbmnh
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      name: Attack
+      range:
+        units: melee
+      tag: sting
+  baseTypes:
+    - Sting
+  description:
+    value: >-
+      <p>A primary natural weapon attack with a sharp stinger attached to some
+      body part.</p><p>It deals piercing damage.</p><hr><p>For general rules on
+      natural attacks, see:
+      @UUID[Compendium.pf1.pf1e-rules.nBnUY0koBzXqoEft.JournalEntryPage.8zivKFrhTVkbtjm3]{Natural
+      Attacks} (UMR).</p>
+  held: null
+  proficient: true
+  subType: natural
+  weaponGroups:
+    - natural
+type: attack

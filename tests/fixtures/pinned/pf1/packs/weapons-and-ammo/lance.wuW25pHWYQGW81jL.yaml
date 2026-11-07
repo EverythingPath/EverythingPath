@@ -1,0 +1,61 @@
+_id: wuW25pHWYQGW81jL
+_key: '!items!wuW25pHWYQGW81jL'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/lance.PNG
+name: Lance
+system:
+  actions:
+    - _id: ro167oczjqvll7co
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Lance
+  description:
+    unidentified: >-
+      <p>A lance deals double damage when used from the back of a charging
+      mount. While mounted, you can wield a lance with one hand.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    rch: true
+  sources:
+    - id: PZO1110
+      pages: 143, 147
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

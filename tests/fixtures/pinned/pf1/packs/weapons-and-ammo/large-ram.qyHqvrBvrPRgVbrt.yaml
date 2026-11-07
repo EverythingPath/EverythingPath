@@ -1,0 +1,81 @@
+_id: qyHqvrBvrPRgVbrt
+_key: '!items!qyHqvrBvrPRgVbrt'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: systems/pf1/icons/items/weapons/dwarven-sphinx-hammer.PNG
+name: Large Ram
+system:
+  actions:
+    - _id: z2ae53ip7glhyyv1
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Ram
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d6; <b>Critical</b> x3; <b>Range</b>
+      -; <b>Type</b> B</p><p><b>Crew</b> 5; <b>Aim</b> 0; <b>Load</b> 0;
+      <b>Speed</b> 15 ft.</p><p><b>Category</b> Close Assault;
+      <b>Proficiency</b> Siege Engine</p><h3>Description</h3><p>The most basic
+      close assault weapons are iron-shod logs carried by one or more creatures
+      to combine their strength. A ram can be used to deal damage or to make a
+      Strength check against the target's break DC.</p><p><em>Ramming
+      Charge</em>: Rams require momentum to be effective. All creatures using
+      the ram must use the charge action to gain its full effect. Creatures not
+      wishing to charge may make a ram attack as a full-round action, taking a
+      -4 penalty on attack and damage rolls and Strength checks with the
+      ram.</p><p><em>Breaking</em>: The crew leader makes a Strength check with
+      a +2 bonus, adding +2 for each member of the crew (or equivalent number of
+      larger creatures; see Crew under Siege Engine Rules) assisting. The ram
+      also provides a +4 bonus per size category above
+      Medium.</p><p><em>Damage</em>: The crew leader makes an attack roll with a
+      -4 nonproficiency penalty. A hit deals the listed damage, plus the
+      Strength modifiers of the crew leader and all members of the crew,
+      regardless of their size.</p><p><em>Improvised Ram</em>: Any tree, log, or
+      timber can be used as a ram with a -4 penalty on attack and damage rolls
+      and Strength checks.</p><p><em>Pick</em>: A ram with a pick head grants a
+      +2 circumstance bonus on Strength checks and attack and damage rolls made
+      against stone structures.</p><p><em>Screw</em>: A ram with a screw head
+      grants a +2 circumstance bonus on Strength checks and attack and damage
+      rolls made against earthen structures.</p><p><em>Gallery Ram</em>: This is
+      a ram suspended from chains or ropes within a gallery. A gallery ram does
+      not require a charge action for full momentum. In addition, adding tethers
+      to the back end of the ram allows four additional crew members to assist
+      in using the ram.</p><p><em>Hit Points</em>: Rams have a hardness of 5 and
+      hit points based on their size. A Large ram has 30 hit points. Improvised
+      rams have half the normal hit points.</p>
+  hardness: 5
+  hp:
+    base: 30
+  material:
+    base:
+      value: steel
+  price: 500
+  size: lg
+  sources:
+    - id: PZO1118
+      pages: '166'
+  subType: siege
+  weaponSubtype: assault
+type: weapon
