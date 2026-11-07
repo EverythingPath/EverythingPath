@@ -1,0 +1,48 @@
+_id: UBaGcNVcXL59Bfoq
+_key: '!items!UBaGcNVcXL59Bfoq'
+_stats:
+  coreVersion: '12.331'
+folder: ls4DBb0m4J086nVI
+img: systems/pf1/icons/races/catfolk.png
+name: Cat's Luck
+system:
+  actions:
+    - _id: o8mQiIhqVnFrTVhC
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: reflex roll twice
+  description:
+    value: >-
+      <p><strong>Race</strong>: Catfolk</p><hr /><p>Once per day when a catfolk
+      attempts a Reflex saving throw, he can roll the saving throw twice and
+      take the better result. He must decide to use this ability before the
+      saving throw is attempted.</p>
+  racePoints: 1
+  scriptCalls:
+    - _id: b5vXKgJV
+      category: use
+      hidden: false
+      img: null
+      name: Reflex roll2
+      type: script
+      value: |-
+        actor.rollSavingThrow("ref");
+        actor.rollSavingThrow("ref");
+  sources:
+    - id: PZO9280
+      pages: '239'
+    - id: PZO1120
+      pages: '47'
+    - id: PZO1121
+      pages: '90'
+  subType: racial
+  tags:
+    - Catfolk
+  traitCategory: defense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

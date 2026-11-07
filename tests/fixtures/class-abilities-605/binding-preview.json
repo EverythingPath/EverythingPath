@@ -1,0 +1,943 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/2TsDfK0SKC8IGVx4",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "class-abilities",
+      "name": "Smite Evil",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her <em>Cha</em> bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any <em>DR</em> the creature might possess.</p>\n<p>In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her <em>Charisma</em> modifier (if any) to her <em>AC</em> against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.</p>\n<p>The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rp3my4fea7xog21f",
+                "activation": {
+                  "type": "swift",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Paladin"]
+            },
+            "uses": {
+              "maxFormula": "floor((@attributes.hd.total - 1) / 3) + 1",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2M56kfIOws5yYtxq",
+      "upstreamKey": "pf1/2M56kfIOws5yYtxq",
+      "pack": "class-abilities",
+      "name": "Inspire Competence",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>A bard of 3rd level or higher can use his performance to help an ally succeed at a task. The ally must be within 30 feet and able to see and hear the bard. The ally gets a +2 <em>competence bonus</em> on skill checks with a particular skill as long as she continues to hear the bard’s performance. This bonus increases by +1 for every four levels the bard has attained beyond 3rd (+3 at 7th, +4 at 11th, +5 at 15th, and +6 at 19th).</p>\n<p>Certain uses of this ability are infeasible, such as <em>Stealth</em>, and may be disallowed at the GM’s discretion. A bard can’t inspire competence in himself. inspire competence relies on audible components.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Bard"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2Og23i3rRXu5QQlg",
+      "upstreamKey": "pf1/2Og23i3rRXu5QQlg",
+      "pack": "class-abilities",
+      "name": "Ki Pool",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 4th level, a monk gains a pool of ki points, supernatural energy he can use to accomplish amazing feats. The number of points in a monk's ki pool is equal to 1/2 his monk level + his <em>Wisdom</em> modifier. As long as he has at least 1 point in his ki pool, he can make a ki strike.</p>\n<ul>\n<li><b>At 4th level</b>, ki strike allows his unarmed attacks to be treated as magic weapons for the purpose of overcoming <em>damage reduction</em>.</li>\n<li><b>At 7th level</b>, his unarmed attacks are also treated as <em>cold iron</em> and <em>silver</em> for the purpose of overcoming <em>damage reduction</em>.</li>\n<li><b>At 10th level</b>, his unarmed attacks are also treated as lawful weapons for the purpose of overcoming <em>damage reduction</em>.</li>\n<li><b>At 16th level</b>, his unarmed attacks are treated as <em>adamantine</em> weapons for the purpose of overcoming <em>damage reduction</em> and bypassing <em>hardness</em>.</li>\n</ul>\n<p>By spending 1 point from his ki pool, a monk can do one of the following:</p>\n<ul>\n<li>Make one additional attack at his highest <em>attack bonus</em> when making a flurry of blows attack, or</li>\n<li>Increase his speed by 20 feet for 1 round, or</li>\n<li>Give himself a +4 <em>dodge bonus</em> to <em>AC</em> for 1 round.</li>\n</ul>\n<p>Each of these powers is activated as a <em>swift action</em>.</p>\n<p>The ki pool is replenished each morning after 8 hours of rest or meditation; these hours do not need to be consecutive.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "59"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "v97q09qo7zjo07ob",
+                "activation": {
+                  "type": "swift",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "name": "Use"
+              }
+            ],
+            "associations": {
+              "classes": ["Monk"]
+            },
+            "uses": {
+              "maxFormula": "floor(@class.level / 2) + @abilities.wis.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/bard-inspire-competence-11",
+      "upstreamKey": "pf1/2M56kfIOws5yYtxq",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Competence +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2M56kfIOws5yYtxq",
+        "part": "11:pf1/2M56kfIOws5yYtxq"
+      },
+      "description": "<p>Inspire Competence +4: the Bard table's 11th-level row of Inspire Competence (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Competence entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2M56kfIOws5yYtxq"
+    },
+    {
+      "externalKey": "everythingpath/bard-inspire-competence-15",
+      "upstreamKey": "pf1/2M56kfIOws5yYtxq",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Competence +5",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2M56kfIOws5yYtxq",
+        "part": "15:pf1/2M56kfIOws5yYtxq"
+      },
+      "description": "<p>Inspire Competence +5: the Bard table's 15th-level row of Inspire Competence (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Competence entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2M56kfIOws5yYtxq"
+    },
+    {
+      "externalKey": "everythingpath/bard-inspire-competence-19",
+      "upstreamKey": "pf1/2M56kfIOws5yYtxq",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Competence +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2M56kfIOws5yYtxq",
+        "part": "19:pf1/2M56kfIOws5yYtxq"
+      },
+      "description": "<p>Inspire Competence +6: the Bard table's 19th-level row of Inspire Competence (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Competence entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2M56kfIOws5yYtxq"
+    },
+    {
+      "externalKey": "everythingpath/bard-inspire-competence-7",
+      "upstreamKey": "pf1/2M56kfIOws5yYtxq",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Competence +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2M56kfIOws5yYtxq",
+        "part": "7:pf1/2M56kfIOws5yYtxq"
+      },
+      "description": "<p>Inspire Competence +3: the Bard table's 7th-level row of Inspire Competence (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Competence entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-competence-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2M56kfIOws5yYtxq"
+    },
+    {
+      "externalKey": "everythingpath/monk-ki-pool-10",
+      "upstreamKey": "pf1/2Og23i3rRXu5QQlg",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Pool (lawful)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2Og23i3rRXu5QQlg",
+        "part": "10:pf1/2Og23i3rRXu5QQlg"
+      },
+      "description": "<p>Ki Pool (lawful): the Monk table's 10th-level row of Ki Pool (Pathfinder RPG Core Rulebook pp. 56–60). The Ki Pool entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2Og23i3rRXu5QQlg"
+    },
+    {
+      "externalKey": "everythingpath/monk-ki-pool-16",
+      "upstreamKey": "pf1/2Og23i3rRXu5QQlg",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Pool (adamantine)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2Og23i3rRXu5QQlg",
+        "part": "16:pf1/2Og23i3rRXu5QQlg"
+      },
+      "description": "<p>Ki Pool (adamantine): the Monk table's 16th-level row of Ki Pool (Pathfinder RPG Core Rulebook pp. 56–60). The Ki Pool entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2Og23i3rRXu5QQlg"
+    },
+    {
+      "externalKey": "everythingpath/monk-ki-pool-7",
+      "upstreamKey": "pf1/2Og23i3rRXu5QQlg",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Pool (cold iron/silver)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2Og23i3rRXu5QQlg",
+        "part": "7:pf1/2Og23i3rRXu5QQlg"
+      },
+      "description": "<p>Ki Pool (cold iron/silver): the Monk table's 7th-level row of Ki Pool (Pathfinder RPG Core Rulebook pp. 56–60). The Ki Pool entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2Og23i3rRXu5QQlg"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-10",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 4/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "10:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 4/day: the Paladin table's 10th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-13",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 5/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "13:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 5/day: the Paladin table's 13th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-16",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 6/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "16:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 6/day: the Paladin table's 16th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-19",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 7/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "19:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 7/day: the Paladin table's 19th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-4",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 2/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "4:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 2/day: the Paladin table's 4th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    },
+    {
+      "externalKey": "everythingpath/paladin-smite-evil-7",
+      "upstreamKey": "pf1/2TsDfK0SKC8IGVx4",
+      "pack": "everythingpath-schedules",
+      "name": "Smite Evil 3/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2TsDfK0SKC8IGVx4",
+        "part": "7:pf1/2TsDfK0SKC8IGVx4"
+      },
+      "description": "<p>Smite Evil 3/day: the Paladin table's 7th-level row of Smite Evil (Pathfinder RPG Core Rulebook pp. 60–64). The Smite Evil entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "60–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/paladin-smite-evil-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2TsDfK0SKC8IGVx4"
+    }
+  ]
+}

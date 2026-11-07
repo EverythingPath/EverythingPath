@@ -1,0 +1,66 @@
+_id: iks2d9ve0cgdkryu
+_key: '!items!iks2d9ve0cgdkryu'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Borrow Corruption
+system:
+  actions:
+    - _id: r6dclek160kvw1sh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You touch a creature with at least one manifestation from a corruption
+      (see page 14). You temporarily gain any stains and gifts that corruption
+      grants to the creature, and the creature retains them. If the gifts have
+      limited uses, you count as having no uses remaining. You take 1d3 points
+      of Wisdom drain whenever you cast this spell.  If your campaign uses the
+      sanity system (see page 12), your sanity score decreases by 2 (and thus
+      your sanity edge decreases by 1) each time you cast this spell, instead of
+      you taking Wisdom drain. Only <i>greater restoration</i>, <i>miracle</i>,
+      or <i>wish</i> can remove this decrease. A single casting of <i>greater
+      restoration</i> removes one decrease of sanity from casting <i>borrow
+      corruption</i>, while a casting of <i>miracle</i> or <i>wish</i> removes
+      them all.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 2
+      cleric: 4
+      druid: 4
+      hunter: 4
+      medium: 2
+      occultist: 3
+      oracle: 4
+      psychic: 4
+      shaman: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  materials:
+    value: a dirty scrap of a good priest's raiment
+  school: trs
+  sources:
+    - id: PZO1135
+      pages: '111'
+  sr: false
+type: spell

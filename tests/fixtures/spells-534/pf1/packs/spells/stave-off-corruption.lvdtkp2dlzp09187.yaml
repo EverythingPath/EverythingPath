@@ -1,0 +1,58 @@
+_id: lvdtkp2dlzp09187
+_key: '!items!lvdtkp2dlzp09187'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Stave Off Corruption
+system:
+  actions:
+    - _id: jr60wtomopfcyiw0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: floor(@cl / 2)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You ward the target to slow the advancement of its corruption. The
+      target receives a +2 circumstance bonus on saving throws against the
+      advancement of its corruption, as described in the catalyst section of
+      each corruption. Multiple applications of this spell do not stack, nor
+      does the bonus stack with morale, profane, or sacred bonuses on saving
+      throws against the advancement of the target's corruption.  The material
+      components for this spell vary with the type of corruption. For example,
+      garlic is used for a vampirism corruption, a sprig of wolfsbane is used
+      for a lycanthropy corruption, and so on. The GM can determine appropriate
+      material components, but the components should cost at least 25 gp.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      paladin: 2
+      warpriest: 2
+  level: 2
+  materials:
+    value: see text
+  school: abj
+  sources:
+    - id: PZO1135
+      pages: '128'
+type: spell

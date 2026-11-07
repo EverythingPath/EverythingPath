@@ -1,0 +1,84 @@
+_id: xllxylvvqr82o2d5
+_key: '!items!xllxylvvqr82o2d5'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-glow-angry-small-teal.webp
+name: Detect Thoughts
+system:
+  actions:
+    - _id: 6vg947mflyef49ex
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        units: spec
+        value: concentration, up to 1 min./level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Will negates; see text
+        type: will
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You detect surface thoughts. The amount of information revealed depends
+      on how long you study a particular area or subject.</p><p><i>1st
+      Round</i>: Presence or absence of thoughts (from conscious creatures with
+      Intelligence scores of 1 or higher).</p><p><i>2nd Round</i>: Number of
+      thinking minds and the Intelligence score of each. If the highest
+      Intelligence is 26 or higher (and at least 10 points higher than your own
+      Intelligence score), you are stunned for 1 round and the spell ends. This
+      spell does not let you determine the location of the thinking minds if you
+      can't see the creatures whose thoughts you are detecting.</p><p><i>3rd
+      Round</i>: Surface thoughts of any mind in the area. A target's Will save
+      prevents you from reading its thoughts, and you must cast <i>detect
+      thoughts</i> again to have another chance. Creatures of animal
+      intelligence (Int 1 or 2) have simple, instinctual thoughts.</p><p>Each
+      round, you can turn to detect thoughts in a new area. The spell can
+      penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin
+      sheet of lead, or 3 feet of wood or dirt blocks it.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      investigator: 2
+      medium: 2
+      mesmerist: 2
+      psychic: 1
+      skald: 2
+      sorcerer: 2
+      spiritualist: 2
+      summoner: 2
+      summonerUnchained: 2
+      witch: 2
+      wizard: 2
+    domain:
+      Knowledge: 2
+  level: 2
+  materials:
+    focus: a copper piece
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '268'
+  sr: false
+type: spell

@@ -1,0 +1,960 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "class-abilities",
+      "name": "Challenge (CAV)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Once per day, a cavalier can challenge a foe to combat. As a swift action, the cavalier chooses one target within sight to challenge. The cavalier's melee attacks deal extra damage whenever the attacks are made against the target of his challenge. This extra damage is equal to the cavalier's level.</p>\n<p>The cavalier can use this ability once per day at 1st level, plus one additional time per day for every three levels beyond 1st, to a maximum of seven times per day at 19th level.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "cdai7n8jc3xanvb3",
+                "activation": {
+                  "type": "swift",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "one creature"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Cavalier"]
+            },
+            "uses": {
+              "maxFormula": "1 + floor((@class.level - 1) / 3)",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "class-abilities",
+      "name": "Sneak Attack (SLA)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, if a slayer catches an opponent unable to defend itself effectively from his attack, he can strike a vital spot for extra damage. The slayer’s attack deals extra damage anytime his target would be denied a Dexterity bonus to AC (whether the target actually has a Dexterity bonus or not), or when the slayer flanks his target. This additional damage is 1d6 at 3rd level, and increases by 1d6 every 3 levels thereafter. Should the slayer score a critical hit with a sneak attack, this additional damage is not multiplied. Ranged attacks can count as sneak attacks only if the target is within 30 feet.</p><p>With a weapon that deals nonlethal damage (like a sap, whip, or unarmed strike), a slayer can make a sneak attack that deals nonlethal damage instead of lethal damage. He cannot use a weapon that deals lethal damage to deal nonlethal damage in a sneak attack, not even with the usual –4 penalty.</p><p>The slayer must be able to see the target well enough to pick out a vital spot and must be able to reach such a spot. A slayer cannot use sneak attack while striking a creature with concealment.</p>",
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "54"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "Rge5ZGwhYBkDtwDR",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(floor(@class.level / 3))d6",
+                      "types": ["precision"]
+                    }
+                  ]
+                },
+                "name": "Use",
+                "powerAttack": {
+                  "critMultiplier": null,
+                  "damageBonus": null
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Slayer"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/W1KWAZxUNxfCv8rG",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "class-abilities",
+      "name": "Bloodline Feat (SOR)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "71"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Sorcerer"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor((@class.level - 1) / 6)",
+            "type": "untyped"
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/cavalier-challenge-10",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 4/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "10:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 4/day: the Cavalier table's 10th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-13",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 5/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "13:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 5/day: the Cavalier table's 13th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-16",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 6/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "16:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 6/day: the Cavalier table's 16th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-19",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 7/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "19:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 7/day: the Cavalier table's 19th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-4",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 2/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "4:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 2/day: the Cavalier table's 4th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-7",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 3/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "7:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 3/day: the Cavalier table's 7th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-12",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +4d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "12:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +4d6: the Slayer table's 12th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-15",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +5d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "15:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +5d6: the Slayer table's 15th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-18",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +6d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "18:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +6d6: the Slayer table's 18th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-6",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +2d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "6:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +2d6: the Slayer table's 6th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-9",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +3d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "9:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +3d6: the Slayer table's 9th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/W1KWAZxUNxfCv8rG",
+        "part": "13:pf1/W1KWAZxUNxfCv8rG"
+      },
+      "description": "<p>Bloodline Feat: the Sorcerer table's 13th-level row of Bloodline Feat (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/W1KWAZxUNxfCv8rG"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/W1KWAZxUNxfCv8rG",
+        "part": "19:pf1/W1KWAZxUNxfCv8rG"
+      },
+      "description": "<p>Bloodline Feat: the Sorcerer table's 19th-level row of Bloodline Feat (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/W1KWAZxUNxfCv8rG"
+    }
+  ]
+}
