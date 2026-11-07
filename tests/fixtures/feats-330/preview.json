@@ -1,0 +1,4017 @@
+{
+  "purpose": "Isolated source-backed normalized extraction only, no activated release. Holds and mechanics gaps remain explicit in feats-330 review.",
+  "entries": [
+    {
+      "externalKey": "pf1/0KZvBoqEfb1AUZ64",
+      "upstreamKey": "pf1/0KZvBoqEfb1AUZ64",
+      "pack": "feats",
+      "name": "Scavenger's Luck",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You coax better behavior out of timeworn technology.</em></p><p><strong>Prerequisites</strong>: Knowledge (engineering) 1 rank</p><p><strong>Benefits</strong>: When your check for using a piece of timeworn technology results in a glitch, you can roll again. You must choose to reroll before determining the specific glitch, and must take the second result, even if it's worse. When you use timeworn technology, it doesn't automatically glitch on a natural 1.</p>",
+      "prerequisiteText": "Knowledge (engineering) 1 rank",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.ken",
+          "min": 1,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9272",
+          "pages": "7"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Reroll a timeworn-technology glitch check before selecting the glitch; take the second result. A natural 1 does not automatically glitch."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0VM8AdwP25nHWnV8",
+      "upstreamKey": "pf1/0VM8AdwP25nHWnV8",
+      "pack": "feats",
+      "name": "Greater Feint",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Maneuver",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at making foes overreact to your attacks.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>, <a href=\"catalog:pf1/tocde3sKG1O3GKgd\">Improved Feint</a>, base attack bonus +6, Int 13.</p><p><strong>Benefits</strong>: Whenever you use feint to cause an opponent to lose his Dexterity bonus, he loses that bonus until the beginning of your next turn, in addition to losing his Dexterity bonus against your next attack.</p><p><strong>Normal</strong>: A creature you feint loses its Dexterity bonus against your next attack.</p>",
+      "prerequisiteText": "Combat Expertise, Improved Feint, base attack bonus +6, Int 13",
+      "prerequisites": [
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/tocde3sKG1O3GKgd",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        },
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 125"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A successful feint removes the opponent’s Dexterity bonus until the beginning of your next turn as well as against your next attack."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0X4q0Ypx3L05Sqzg",
+      "upstreamKey": "pf1/0X4q0Ypx3L05Sqzg",
+      "pack": "feats",
+      "name": "Greater Drag",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Foes that you drag are thrown out of balance.</em></p><p><strong>Prerequisites:</strong> Str 13, <a href=\"catalog:pf1/e1zIVW9AcrmRrYvx\">Improved Drag</a>, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, base attack bonus +6.</p><p><strong>Benefit:</strong> You receive a +2 bonus on checks made to drag a foe. This bonus stacks with the bonus granted by Improved Drag. Whenever you drag a foe, his movement provokes attacks of opportunity from all of your allies (but not you).</p><p><strong>Normal:</strong> Creatures moved by drag do not provoke attacks of opportunity.</p><h3>Combat Trick</h3><p>When you succeed at a drag combat maneuver check, you can spend 5 stamina points to gain up to 10 feet of movement for your drag. You can use this movement in place of your normal movement, but only to drag an opponent.</p>",
+      "prerequisiteText": "Str 13, Improved Drag, Power Attack, base attack bonus +6",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/e1zIVW9AcrmRrYvx",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "161"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "121"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "on drag checks"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Dragged foes provoke attacks of opportunity from all your allies, not from you. The +2 drag-check bonus stacks with Improved Drag."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0bZf3SDkvVOe2ujH",
+      "upstreamKey": "pf1/0bZf3SDkvVOe2ujH",
+      "pack": "feats",
+      "name": "Lightning Reflexes",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Saving Throw"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have faster reflexes than normal.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Reflex saving throws.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.ref",
+          "bonusType": "untyped",
+          "value": 2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/0bpGtfB3ksWHe0lW",
+      "upstreamKey": "pf1/0bpGtfB3ksWHe0lW",
+      "pack": "feats",
+      "name": "Tiring Critical",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Critical",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your critical hits cause opponents to become fatigued.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/JNlMhMhcDO8wkXiw\">Critical Focus</a>, base attack bonus +13.</p><p><strong>Benefits</strong>: Whenever you score a critical hit, your opponent becomes fatigued. This feat has no additional effect on a fatigued or exhausted creature.</p><p><strong>Special</strong>: You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery.</p>",
+      "prerequisiteText": "Critical Focus, base attack bonus +13",
+      "prerequisites": [
+        {
+          "feat": "pf1/JNlMhMhcDO8wkXiw",
+          "kind": "feat"
+        },
+        {
+          "bab": 13,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 135"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A critical hit fatigues the opponent, with no additional effect on fatigued or exhausted creatures. Only one critical feat applies unless you have Critical Mastery."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0spsP9ylE3goD3jc",
+      "upstreamKey": "pf1/0spsP9ylE3goD3jc",
+      "pack": "feats",
+      "name": "Mounted Combat",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Defensive",
+          "Mount"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are adept at guiding your mount through combat.</i><p><strong>Prerequisites</strong>: Ride 1 rank.</p><p><strong>Benefits</strong>: Once per round when your mount is hit in combat, you may attempt a Ride check (as an immediate action) to negate the hit. The hit is negated if your Ride check result is greater than the opponent's attack roll.</p>",
+      "prerequisiteText": "Ride 1 rank",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.rid",
+          "min": 1,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 131"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Once per round, an immediate-action Ride check exceeding the attack roll negates a hit on your mount."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0yDBOWqCLugDCUeW",
+      "upstreamKey": "pf1/0yDBOWqCLugDCUeW",
+      "pack": "feats",
+      "name": "Craft Cybernetics",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can build cyberware and install it in a creature's body.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/1foaZv9wfqZVrZ90\">Technologist</a>, Heal 9 ranks, Knowledge (engineering) 9 ranks</p><p><strong>Benefits</strong>: You can create cybernetic items. Creating a cybernetic item takes 1 day for every 1,000 gp in the item's price. To create the object, you must use up raw materials costing half of this total price. See Crafting High-Tech Items on page 16 for more information.</p><p>You can repair a broken cybernetic item if it is one that you could make. Doing so costs half the raw materials and half the time it would take to craft that item from scratch. You can also install a cybernetic item in a creature's body.</p><p>See the Cybertech section on page 35 for more information on installing cyberware.</p>",
+      "prerequisiteText": "Technologist, Heal 9 ranks, Knowledge (engineering) 9 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1/1foaZv9wfqZVrZ90",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.hea",
+          "min": 9,
+          "kind": "skillRanks"
+        },
+        {
+          "skillRanks": "skill.ken",
+          "min": 9,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9272",
+          "pages": "6"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/11ClnanF4PdEPd9g",
+      "upstreamKey": "pf1/11ClnanF4PdEPd9g",
+      "pack": "feats",
+      "name": "Rapid Reload",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Ranged",
+          "Weapon",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Choose a type of crossbow (hand, light, or heavy). You can reload such weapons quickly.</em></p><p><strong>Prerequisite</strong>: Weapon Proficiency (crossbow type chosen).</p><p><strong>Benefit</strong>: The time required for you to reload your chosen type of crossbow is reduced to a free action (for a hand or light crossbow) or a move action (for a heavy crossbow). Reloading a crossbow still provokes an attack of opportunity.</p><p>If you have selected this feat for hand crossbow or light crossbow, you may fire that weapon as many times in a full-attack action as you could attack if you were using a bow.</p><p><strong>Normal</strong>: A character without this feat needs a move action to reload a hand or light crossbow, or a full-round action to reload a heavy crossbow.</p><p><strong>Special</strong>: You can gain Rapid Reload multiple times. Each time you take the feat, it applies to a new type of crossbow.</p>",
+      "prerequisiteText": "Weapon Proficiency (crossbow type chosen)",
+      "prerequisites": [
+        {
+          "unchecked": "Weapon Proficiency (crossbow type chosen)",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 132"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/1AY9Xjbg109TsnVl",
+      "upstreamKey": "pf1/1AY9Xjbg109TsnVl",
+      "pack": "feats",
+      "name": "Greater Disarm",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can knock weapons far from an enemy's grasp.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>, <a href=\"catalog:pf1/711B9WNFgpdDKKf2\">Improved Disarm</a>, base attack bonus +6, Int 13.</p><p><strong>Benefits</strong>: You receive a +2 bonus on checks made to disarm a foe. This bonus stacks with the bonus granted by Improved Disarm. Whenever you successfully disarm an opponent, the weapon lands 15 feet away from its previous wielder, in a random direction.</p><p><strong>Normal</strong>: Disarmed weapons and gear land at the feet of the disarmed creature.</p><h3>Combat Trick</h3><p>You can select this feat even if you don’t meet the ability score prerequisite (Intelligence 13). You gain the benefits of this feat only as long as you have at least 1 stamina point in your stamina pool. When you successfully disarm a foe, you can spend 5 stamina points to select where the weapon lands by choosing a square within 15 feet of the disarmed foe. If you choose a square in your space and have at least one hand free, you can grab the weapon as part of the disarm attempt.</p>",
+      "prerequisiteText": "Combat Expertise, Improved Disarm, base attack bonus +6, Int 13",
+      "prerequisites": [
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/711B9WNFgpdDKKf2",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        },
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "125"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "120"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "disarm"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A successfully disarmed weapon lands 15 feet away from its wielder in a random direction. The +2 disarm-check bonus stacks with Improved Disarm."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/1HfwfBOSWtdxFQ2s",
+      "upstreamKey": "pf1/1HfwfBOSWtdxFQ2s",
+      "pack": "feats",
+      "name": "Improved Channel",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Channeling"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your channeled energy is harder to resist.</em></p><p><strong>Prerequisites</strong>: Channel energy class feature.</p><p><strong>Benefits</strong>: Add 2 to the DC of saving throws made to resist the effects of your channel energy ability.</p>",
+      "prerequisiteText": "Channel energy class feature",
+      "prerequisites": [
+        {
+          "unchecked": "Channel energy class feature",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 126"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/1foaZv9wfqZVrZ90",
+      "upstreamKey": "pf1/1foaZv9wfqZVrZ90",
+      "pack": "feats",
+      "name": "Technologist",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are familiar with the basic mechanics of technology.</em></p><p><strong>Benefits</strong>: You are considered to be trained in any skill used against a technology-based subject. If the skill in question requires training to use even against non-technological subjects, you must still have ranks in that skill in order to gain the benefit of Technologist.</p><p><strong>Normal</strong>: You treat all skill checks made against technology as if they were untrained skill checks. This may mean that you cannot attempt certain skill checks, even if you possess ranks in the skill in question.</p>",
+      "sources": [
+        {
+          "book": "PZO9000-15E",
+          "pages": "9"
+        },
+        {
+          "book": "PZO9272",
+          "pages": "7"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Technology-based skill subjects count as trained except skills that require ranks even for ordinary subjects; this does not grant ranks."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/1hxjrJ68yWsiCCFD",
+      "upstreamKey": "pf1/1hxjrJ68yWsiCCFD",
+      "pack": "feats",
+      "name": "Improved Great Fortitude",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Saving Throw"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can draw upon an inner reserve to resist diseases, poisons, and other grievous harm.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/fVRnBIHR4Jq6btvm\">Great Fortitude</a>.</p><p><strong>Benefits</strong>: Once per day, you may reroll a Fortitude save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse.</p>",
+      "prerequisiteText": "Great Fortitude",
+      "prerequisites": [
+        {
+          "feat": "pf1/fVRnBIHR4Jq6btvm",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 127"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "uses": {
+              "maxFormula": "1",
+              "per": "day",
+              "value": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/26k1Gi7t5BoqxhIj",
+      "upstreamKey": "pf1/26k1Gi7t5BoqxhIj",
+      "pack": "feats",
+      "name": "Vital Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>",
+      "prerequisiteText": "Base attack bonus +6",
+      "prerequisites": [
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "On the attack action, make one attack at your highest base attack bonus and roll the weapon’s damage dice twice before adding other damage bonuses. Extra weapon dice are not multiplied on a critical hit."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2AfSIVge3bg8r6wr",
+      "upstreamKey": "pf1/2AfSIVge3bg8r6wr",
+      "pack": "feats",
+      "name": "Scorpion Style",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Unarmed",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can perform an unarmed strike that greatly hampers your target's movement.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: To use this feat, you must make a single unarmed attack as a standard action. If this unarmed attack hits, you deal damage normally, and the target's base land speed is reduced to 5 feet for a number of rounds equal to your Wisdom modifier unless it makes a Fortitude saving throw (DC 10 + 1/2 your character level + your Wis modifier).</p>",
+      "prerequisiteText": "Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 132"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/2Gd0V8lDe6BkG7nl",
+      "upstreamKey": "pf1/2Gd0V8lDe6BkG7nl",
+      "pack": "feats",
+      "name": "Blinding Critical",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Critical",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your critical hits blind your opponents.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/JNlMhMhcDO8wkXiw\">Critical Focus</a>, base attack bonus +15.</p><p><strong>Benefits</strong>: Whenever you score a critical hit, your opponent is permanently blinded. A successful Fortitude save reduces this to dazzled for 1d4 rounds. The DC of this Fortitude save is equal to 10 + your base attack bonus. This feat has no effect on creatures that do not rely on eyes for sight or creatures with more than two eyes (although multiple critical hits might cause blindness, at the GM's discretion). Blindness can be cured by heal, regeneration, remove blindness, or similar abilities.</p><p><strong>Special</strong>: You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery.</p><h3>Combat Trick</h3><p>When you confirm a critical hit and attempt to blind an opponent with this feat, you can spend up to 5 stamina points to increase the DC of this feat's saving throw by an amount equal to the number of stamina points you spent.</p>",
+      "prerequisiteText": "Critical Focus, base attack bonus +15",
+      "prerequisites": [
+        {
+          "feat": "pf1/JNlMhMhcDO8wkXiw",
+          "kind": "feat"
+        },
+        {
+          "bab": 15,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 119"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "r3uojfvY3tZlrXJK",
+                "actionType": "save",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "description": "<p>Permanently @Condition[blind]{blinded}. A successful Fortitude save reduces this to @Condition[dazzled] for [[1d4]] rounds.</p>",
+                "duration": {
+                  "units": "seeText"
+                },
+                "name": "Use",
+                "save": {
+                  "dc": "10 + @attributes.bab.total",
+                  "description": "Fortitude, dazzled",
+                  "type": "fort"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "A critical hit permanently blinds the opponent; Fortitude DC 10 + base attack bonus reduces this to dazzled for 1d4 rounds. Does not affect creatures without eyes or with more than two eyes. Only one critical feat applies unless you have Critical Mastery."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2YuxcUNFMPNBpekG",
+      "upstreamKey": "pf1/2YuxcUNFMPNBpekG",
+      "pack": "feats",
+      "name": "Silent Spell",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Metamagic",
+          "Magic"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can cast your spells without making any sound.</i><p><strong>Benefits</strong>: A silent spell can be cast with no verbal components. Spells without verbal components are not affected. A silent spell uses up a spell slot one level higher than the spell's actual level.</p><p><strong>Special</strong>: Bard spells cannot be enhanced by this feat.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/2aTFNMs3pW6nUBlr",
+      "upstreamKey": "pf1/2aTFNMs3pW6nUBlr",
+      "pack": "feats",
+      "name": "Improved Unarmed Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Unarmed",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are skilled at fighting while unarmed.</i><p><strong>Benefits</strong>: You are considered to be armed even when unarmed — you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice.</p><p><strong>Normal</strong>: Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Unarmed attacks count as armed without provoking, and may deal lethal or nonlethal damage. This does not change unarmed damage dice."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3HjwKckDBDDPcY2c",
+      "upstreamKey": "pf1/3HjwKckDBDDPcY2c",
+      "pack": "feats",
+      "name": "Greater Spell Penetration",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Magic"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your spells break through spell resistance much more easily than most.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/nWFr8SNcjcMqsXSH\">Spell Penetration</a>.</p><p><strong>Benefits</strong>: You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature's spell resistance. This bonus stacks with the one from Spell Penetration.</p>",
+      "prerequisiteText": "Spell Penetration",
+      "prerequisites": [
+        {
+          "feat": "pf1/nWFr8SNcjcMqsXSH",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 125"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "casterLevel",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "spellResistance"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/3KKtUz4ayCMaHeXQ",
+      "upstreamKey": "pf1/3KKtUz4ayCMaHeXQ",
+      "pack": "feats",
+      "name": "Extra Feature",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Skinwalker"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p>You are an exceptional shapechanger.</p><p><strong>Prerequisites</strong>: Con 13, <a href=\"catalog:pf1/apWl6JIJ8U8p0azq\">skinwalker</a>.</p><p><strong>Benefit</strong>: When you change shape to your bestial form, you may choose one additional feature from those listed in your shapechange ability and gain that benefit while in bestial form.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects stack.</p>",
+      "prerequisiteText": "Con 13, skinwalker",
+      "prerequisites": [
+        {
+          "ability": "constitution",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "race": [
+            "pf1/apWl6JIJ8U8p0azq"
+          ],
+          "kind": "race"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9439",
+          "pages": "7"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "While in bestial form choose one additional shapechange feature; repeated selections stack."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3MqcLuZfUJB8xMby",
+      "upstreamKey": "pf1/3MqcLuZfUJB8xMby",
+      "pack": "feats",
+      "name": "Armor Proficiency, Heavy",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at wearing heavy armor.</em></p><p><strong>Prerequisites</strong>: Light Armor Proficiency, <a href=\"catalog:pf1/qQCgBVieojhmMuHL\">Medium Armor Proficiency</a>.</p><p><strong>Benefits</strong>: See <a href=\"catalog:pf1/FszchlqR39lnNduC\">Armor Proficiency, Light</a>.</p><p><strong>Normal</strong>: See Armor Proficiency, Light.</p><p><strong>Special</strong>: Fighters and paladins automatically have Heavy Armor Proficiency as a bonus feat. They need not select it.</p>",
+      "prerequisiteText": "Light Armor Proficiency, Medium Armor Proficiency",
+      "prerequisites": [
+        {
+          "proficiency": {
+            "category": "light"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "feat": "pf1/qQCgBVieojhmMuHL",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": [
+              "hvy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3S01BGUthIbp3Hju",
+      "upstreamKey": "pf1/3S01BGUthIbp3Hju",
+      "pack": "feats",
+      "name": "Stand Still",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Movement",
+          "Combat Maneuver"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can stop foes that try to move past you.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/h9nHYLxXvIXBTmup\">Combat Reflexes</a>.</p><p><strong>Benefits</strong>: When a foe provokes an attack of opportunity due to moving through your adjacent squares, you can make a combat maneuver check as your attack of opportunity. If successful, the enemy cannot move for the rest of his turn. An enemy can still take the rest of his action, but cannot move. This feat also applies to any creature that attempts to move from a square that is adjacent to you if such movement provokes an attack of opportunity.</p>",
+      "prerequisiteText": "Combat Reflexes",
+      "prerequisites": [
+        {
+          "feat": "pf1/h9nHYLxXvIXBTmup",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Replace a movement-provoked attack of opportunity in an adjacent square with a combat maneuver check; success stops that foe’s movement for the rest of its turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3cq9YbgcMrAXC76j",
+      "upstreamKey": "pf1/3cq9YbgcMrAXC76j",
+      "pack": "feats",
+      "name": "Dazzling Display",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your skill with your favored weapon can frighten enemies.</em></p><p><strong>Prerequisites</strong>: Weapon Focus, proficiency with the selected weapon.</p><p><strong>Benefits</strong>: While wielding the weapon in which you have Weapon Focus, you can perform a bewildering show of prowess as a full-round action. Make an Intimidate check to demoralize all foes within 30 feet who can see your display.</p><h3>Combat Trick</h3><p>When wielding a melee weapon with which you have Weapon Focus, you can make a single melee attack as a standard action against a foe. If the attack hits, you can select any number of foes within 30 feet who saw the attack, including that foe. Spend 2 stamina points per foe you have selected, then attempt an Intimidate check to demoralize those foes.</p>",
+      "prerequisiteText": "Weapon Focus, proficiency with the selected weapon",
+      "prerequisites": [
+        {
+          "feat": "pf1/n250dFlbykAIAg5Z",
+          "kind": "feat"
+        },
+        {
+          "proficiency": {
+            "choice": true
+          },
+          "kind": "proficiency"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "ihr743dvwocso29l",
+                "activation": {
+                  "type": "full",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Use"
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "While wielding the focused weapon, a full-round Intimidate check demoralizes visible foes within 30 feet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3fNdl7eIUJ5d5fwg",
+      "upstreamKey": "pf1/3fNdl7eIUJ5d5fwg",
+      "pack": "feats",
+      "name": "Improved Two-Weapon Fighting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Weapon",
+          "Two Weapons",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at fighting with two weapons.</em></p><p><strong>Prerequisites</strong>: Dex 17, <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a>, base attack bonus +6.</p><p><strong>Benefits</strong>: In addition to the standard single extra attack you get with an off-hand weapon, you get a second attack with it, albeit at a -5 penalty.</p><p><strong>Normal</strong>: Without this feat, you can only get a single extra attack with an off-hand weapon.</p>",
+      "prerequisiteText": "Dex 17, Two-Weapon Fighting, base attack bonus +6",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 17,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/3lfNiysSNv1ahV4F",
+      "upstreamKey": "pf1/3lfNiysSNv1ahV4F",
+      "pack": "feats",
+      "name": "Extra Arcane Pool",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have learned how to draw more power from your arcane pool.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/mpe3JHJMINddqLWr\">Arcane pool</a> class feature.</p><p><strong>Benefit</strong>: Your arcane pool increases by 2.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects stack, granting you an increase to your arcane pool each time you take this feat.</p>",
+      "prerequisiteText": "Arcane pool class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/mpe3JHJMINddqLWr",
+          "classFeatureName": "Arcane Pool",
+          "classFeatureClass": "pf1/xZLcyrEKYZoJPS2k",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1117",
+          "pages": "150"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/3owNW4QoIZK6Pwm5",
+      "upstreamKey": "pf1/3owNW4QoIZK6Pwm5",
+      "pack": "feats",
+      "name": "Psychic Sensitivity",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You unlock the secrets of the occult world.</em></p><p><strong>Benefit</strong>: You gain access to <em>occult skill unlocks</em> for any skills in which you have ranks. If you have no ranks in the appropriate skill, you can’t use the occult skill unlock, even if that skill can be used untrained.</p><p><strong>Normal</strong>: You must have the ability to cast psychic spells in order to use occult skill unlocks.</p>",
+      "sources": [
+        {
+          "book": "PZO1132",
+          "pages": "138"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/3v85ul6tGGBZbtBg",
+      "upstreamKey": "pf1/3v85ul6tGGBZbtBg",
+      "pack": "feats",
+      "name": "Arcane Armor Training",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have learned how to cast spells while wearing armor.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/FszchlqR39lnNduC\">Light Armor Proficiency</a>, caster level 3rd.</p><p><strong>Benefits</strong>: As a swift action, reduce the arcane spell failure chance due to the armor you are wearing by 10% for any spells you cast this round.</p><h3>Combat Trick</h3><p>When casting a spell while wearing armor, you can spend 1 stamina point to activate Arcane Armor Training as a free action.</p>",
+      "prerequisiteText": "Light Armor Proficiency, caster level 3rd",
+      "prerequisites": [
+        {
+          "feat": "pf1/FszchlqR39lnNduC",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "caster level 3rd",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "As a swift action, reduce armor arcane spell failure by 10 percentage points for spells cast this round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3vO9s9gtQcRAjNl2",
+      "upstreamKey": "pf1/3vO9s9gtQcRAjNl2",
+      "pack": "feats",
+      "name": "Technology Adept",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You utilize high-tech firearms to maximum effect.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/BJBC4lbo7xGWPsKJ\">Exotic Weapon Proficiency (firearms)</a>, <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a></p><p><strong>Benefits</strong>: When you attack with a technological firearm that consumes charges, the save DC of any effect caused by that firearm increases by 1. If your bonuses from Point-Blank Shot apply, it increases by 2 instead.</p>",
+      "prerequisiteText": "Dex 13, Exotic Weapon Proficiency (firearms), Point-Blank Shot",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "unchecked": "Exotic Weapon Proficiency (firearms)",
+          "kind": "unchecked"
+        },
+        {
+          "feat": "pf1/8rsFtye3PwM6CKli",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9272",
+          "pages": "7"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A charge-consuming technological firearm increases its effect save DC by 1, or by 2 when Point-Blank Shot applies."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/45zmh18kvRS0H641",
+      "upstreamKey": "pf1/45zmh18kvRS0H641",
+      "pack": "feats",
+      "name": "Signature Skill (Disguise)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Disguise, you earn the following.</p><p><strong>5 Ranks</strong>: You can create a disguise in 1d3 minutes.</p><p><strong>10 Ranks</strong>: You can create a disguise in 1d3 rounds. If you take the full normal amount of time to create your disguise, you take no penalty for disguising your gender, race, or age category.</p><p><strong>15 Ranks</strong>: You can create a disguise as a full-round action.</p><p><strong>20 Ranks</strong>: You can create a disguise as a standard action, or as a full-round action combined with a Bluff check to create a diversion to hide.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "83"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/4FheAz49TCHTCl6O",
+      "upstreamKey": "pf1/4FheAz49TCHTCl6O",
+      "pack": "feats",
+      "name": "Swap Places",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Teamwork",
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at changing places with your ally during a chaotic melee.</em></p><p><strong>Benefit</strong>: Whenever you are adjacent to an ally who also has this feat, you can move into your ally’s square as part of normal movement. At the same time, your ally moves into your previous space as an immediate action. Both you and your ally must be willing and able to move to take advantage of this feat. Your ally must be the same size as you to utilize this feat. Your ally does not provoke an attack of opportunity from this movement, but you provoke as normal. This movement does not count against your ally’s movement on his next turn.</p><h3>Combat Trick</h3><p>When using this feat, you can spend 2 stamina points. If you do, your movement during the swap doesn’t provoke attacks of opportunity.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "172"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "With a willing adjacent same-size ally who also has this feat, exchange spaces during your movement; the ally uses an immediate action and does not provoke, while you provoke normally."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/4VUSgCTR3kUUtKxp",
+      "upstreamKey": "pf1/4VUSgCTR3kUUtKxp",
+      "pack": "feats",
+      "name": "Extra Inspiration",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are more able to draw upon inspiration than most.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/SS99IHuvIvzQ1v92\">Amateur Investigator</a> or <a href=\"catalog:pf1/nKbyztRQCU5XMbbs\">inspiration</a> class feature.</p><p><strong>Benefit</strong>: You gain three extra use per day of inspiration in your inspiration pool.</p><p><strong>Special</strong>: If you have levels in the investigator class, you can take this feat multiple times. Each time you do, you gain three extra uses of inspiration per day.</p>",
+      "prerequisiteText": "Amateur Investigator or inspiration class feature",
+      "prerequisites": [
+        {
+          "anyOf": [
+            {
+              "feat": "pf1/SS99IHuvIvzQ1v92",
+              "kind": "feat"
+            },
+            {
+              "classFeature": "pf1/nKbyztRQCU5XMbbs",
+              "classFeatureName": "Inspiration",
+              "classFeatureClass": "pf1/s27zdYVFenYBVtfu",
+              "kind": "classFeature"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "147"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/4Z5VmbdMnFWyBLwf",
+      "upstreamKey": "pf1/4Z5VmbdMnFWyBLwf",
+      "pack": "feats",
+      "name": "Signature Skill (Linguistics)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Linguistics, you earn the following.</p><p><strong>5 Ranks</strong>: You can use Linguistics instead of Sense Motive to intercept and interpret secret messages (as the Bluff skill). You gain a +1 insight bonus on Perception and Disable Device checks to detect or disarm written magical traps. This bonus increases by 1 for every 5 ranks beyond 5 you possess in Linguistics.</p><p><strong>10 Ranks</strong>: If you succeed at a Linguistics check by at least 10 when examining writing, you can learn the precise meaning rather than general content, and you never draw false conclusions on a failed check. A successful DC 30 Linguistics check reveals the general meaning of speech, a successful DC 35 check reveals 1d4 pieces of specific information, and a successful DC 40 check reveals exact meaning.</p><p><strong>15 Ranks</strong>: You can decipher magical writings (as read magic) by succeeding at a Linguistics check (DC = 25 + caster level). If you identify a written magical trap in this way, you gain a +2 circumstance bonus on Disable Device checks to disarm it.</p><p><strong>20 Ranks</strong>: You can attempt to decipher magical or nonmagical text at a rate of one page per round. If you instead spend 1 minute per page, roll twice and take the better result.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "85"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/4ZCIdXMHwxWABqK7",
+      "upstreamKey": "pf1/4ZCIdXMHwxWABqK7",
+      "pack": "feats",
+      "name": "Technophobe",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Smashing technological abominations brings you joy.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/lpXdFoT6OqS5vi2X\">Improved Sunder</a></p><p><strong>Benefits</strong>: When you reduce a robot to 0 hit points or destroy a technological item possessed by an enemy, you receive a +2 morale bonus on ability checks, attack rolls, saving throws, and skill checks for a number of rounds equal to your Wisdom bonus (minimum 1 round). You receive this bonus for destroying an unattended object so long as it was in the possession of an enemy within the last round.</p>",
+      "prerequisiteText": "Improved Sunder",
+      "prerequisites": [
+        {
+          "feat": "pf1/lpXdFoT6OqS5vi2X",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9272",
+          "pages": "7"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "After reducing a robot to 0 HP or destroying an enemy-held technological item, gain +2 morale on ability checks, attack rolls, saves and skill checks for Wisdom-bonus rounds, minimum 1. An unattended item qualifies only if an enemy possessed it within the last round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/4fAgch4ut1JYPBbL",
+      "upstreamKey": "pf1/4fAgch4ut1JYPBbL",
+      "pack": "feats",
+      "name": "Unseat",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Mount",
+          "Movement",
+          "Offensive",
+          "Combat Maneuver"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at unseating your mounted opponents.</em></p><p><strong>Prerequisites</strong>: Str 13, Ride 1 rank, <a href=\"catalog:pf1/0spsP9ylE3goD3jc\">Mounted Combat</a>, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, <a href=\"catalog:pf1/dn2KgHFQRbuoNRx0\">Improved Bull Rush</a>, base attack bonus +1.</p><p><strong>Benefits</strong>: When charging an opponent while mounted and wielding a lance, resolve the attack as normal. If it hits, you may immediately make a free bull rush attempt in addition to the normal damage. If successful, the target is knocked off his horse and lands prone in a space adjacent to his mount that is directly away from you.</p>",
+      "prerequisiteText": "Str 13, Ride 1 rank, Mounted Combat, Power Attack, Improved Bull Rush, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "skillRanks": "skill.rid",
+          "min": 1,
+          "kind": "skillRanks"
+        },
+        {
+          "feat": "pf1/0spsP9ylE3goD3jc",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/dn2KgHFQRbuoNRx0",
+          "kind": "feat"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A mounted lance charge hit permits a free bull rush; success unseats the foe into an adjacent square directly away from you, prone."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/4hNO4OAWYF5vXphH",
+      "upstreamKey": "pf1/4hNO4OAWYF5vXphH",
+      "pack": "feats",
+      "name": "Craft Magic Arms and Armor",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can create magic armor, shields, and weapons.</i><p><strong>Prerequisites</strong>: Caster level 5th.</p><p><strong>Benefits</strong>: You can create magic weapons, armor, or shields. Enhancing a weapon, suit of armor, or shield takes 1 day for each 1,000 gp in the price of its magical features. To enhance a weapon, suit of armor, or shield, you must use up raw materials costing half of this total price. See the magic item creation rules in Magic Items for more information.</p><p>The weapon, armor, or shield to be enhanced must be a masterwork item that you provide. Its cost is not included in the above cost.</p><p>You can also mend a broken magic weapon, suit of armor, or shield if it is one that you could make. Doing so costs half the raw materials and half the time it would take to craft that item in the first place.</p>",
+      "prerequisiteText": "Caster level 5th",
+      "prerequisites": [
+        {
+          "unchecked": "Caster level 5th",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/53urYIbYYpQuoSLd",
+      "upstreamKey": "pf1/53urYIbYYpQuoSLd",
+      "pack": "feats",
+      "name": "Precise Shot",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are adept at firing ranged attacks into melee.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a>.</p><p><strong>Benefits</strong>: You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.</p><h3>Combat Trick</h3><p>As a standard action, you can spend 2 stamina points and make a ranged attack against a foe engaged in melee with an ally. If the attack hits, it deals no damage, but your ally gains your choice of either a +2 bonus on her next attack roll against that opponent or a +2 bonus to AC against that opponent's next attack. This bonus lasts until the start of your next turn.</p>",
+      "prerequisiteText": "Point-Blank Shot",
+      "prerequisites": [
+        {
+          "feat": "pf1/8rsFtye3PwM6CKli",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "attack.ranged",
+          "text": "Shoot or throw ranged weapons at an opponent engaged in melee without the standard -4 attack penalty."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/54QWaanZra9hi7LV",
+      "upstreamKey": "pf1/54QWaanZra9hi7LV",
+      "pack": "feats",
+      "name": "Extra Mesmerist Tricks",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can use your mesmerist tricks more often.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/JZlCwRBCgOeFxIk7\">Mesmerist trick</a> class feature.</p><p><strong>Benefit</strong>: You can implant two additional mesmerist tricks per day.</p><p><strong>Special</strong>: You can gain Extra Mesmerist Tricks multiple times. Its effects stack.</p>",
+      "prerequisiteText": "Mesmerist trick class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/JZlCwRBCgOeFxIk7",
+          "classFeatureName": "Mesmerist Tricks",
+          "classFeatureClass": "pf1/fLU25FvuRWMCSxPP",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1132",
+          "pages": "133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/57ELWypg7Rq3XBwG",
+      "upstreamKey": "pf1/57ELWypg7Rq3XBwG",
+      "pack": "feats",
+      "name": "Cultivate Magic Plants",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You combine a natural green thumb and knowledge of magic in order to grow magic plants.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/nNVFVFRBCT4O2ab9\">Brew Potion</a>, <a href=\"catalog:pf1/tD76K8QGco9scT0r\">Craft Wondrous Item</a>, Knowledge (nature) 1 rank.</p><p><strong>Benefit</strong>: You can cultivate magic plants. Cultivating a magic plant takes 1 week per 1,000 gp in its base price. When you create a magic plant, you make the same choices that you would normally make when casting the spell. Whoever consumes the fruit of the magic plant is the target of the spell.</p>",
+      "prerequisiteText": "Brew Potion, Craft Wondrous Item, Knowledge (nature) 1 rank",
+      "prerequisites": [
+        {
+          "feat": "pf1/nNVFVFRBCT4O2ab9",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/tD76K8QGco9scT0r",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.kna",
+          "min": 1,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1140",
+          "pages": "109"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Cultivate spell-bearing magic plants in 1 week per 1,000 gp base price; creation records spell choices and the fruit consumer is the target."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6HSMdwX1VS6nZ6Zf",
+      "upstreamKey": "pf1/6HSMdwX1VS6nZ6Zf",
+      "pack": "feats",
+      "name": "Great Cleave",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can strike many adjacent foes with a single blow.</em></p><p><strong>Prerequisites</strong>: Str 13, <a href=\"catalog:pf1/Zeq6RWYv5otvg8q7\">Cleave</a>, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, base attack bonus +4.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the previous foe and also within reach. If you hit, you can continue to make attacks against foes adjacent to the previous foe, so long as they are within your reach. You cannot attack an individual foe more than once during this attack action. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p>",
+      "prerequisiteText": "Str 13, Cleave, Power Attack, base attack bonus +4",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/Zeq6RWYv5otvg8q7",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 124"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "untyped",
+          "value": -2,
+          "condition": {
+            "situation": {
+              "local": "after using Great Cleave until your next turn"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "9qJAoXcYkvy8E6Mf",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "name": "Use",
+                "notes": {
+                  "effect": [
+                    "[[-2]] penalty to your Armor Class until your next turn."
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "As a standard action, chain full-BAB attacks against successive adjacent foes within reach, each foe at most once. Take -2 AC until your next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6Qttn4c2JAddxXP4",
+      "upstreamKey": "pf1/6Qttn4c2JAddxXP4",
+      "pack": "feats",
+      "name": "Signature Skill (Bluff)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Bluff, you earn the following.</p><p><strong>5 Ranks</strong>: The penalty to Bluff a creature after a failed check is halved unless you failed by 5 or more.</p><p><strong>10 Ranks</strong>: You take no penalty to Bluff a creature after a failed check unless you failed by 5 or more.</p><p><strong>15 Ranks</strong>: Creatures magically attempting to read your thoughts, detect your alignment, or reveal when you are lying must attempt a caster level check (DC = 11 + your ranks in Bluff ) or the effect reveals nothing.</p><p><strong>20 Ranks</strong>: As a full-round action, you can make a suggestion (as the spell, maximum duration 1 hour) to a creature within 30 feet (Will negates, DC = 15 + your Charisma modifier). A creature that saves against your suggestion is immune to further uses of this effect for 24 hours, and whenever the suggested creature is specifically confronted with proof of your manipulation, it receives another saving throw. This is an extraordinary mindaffecting compulsion.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "82"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6dfwJL4eOK4J0oK5",
+      "upstreamKey": "pf1/6dfwJL4eOK4J0oK5",
+      "pack": "feats",
+      "name": "Inscribe Magical Tattoo",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can craft magical tattoos.</em></p><p><strong>Prerequisites</strong>: Craft (calligraphy, paintings, or tattoos) 5 ranks, caster level 5th</p><p><strong>Benefit</strong>: You can create magical tattoos, magic items inked directly into the flesh of a willing or helpless creature. Both you and the recipient of the tattoo (if the recipient is not yourself) must be present during the entire tattooing process. Magic tattoos must be placed on a part of the body normally able to hold a magic item slot, but they do not count against or interfere with magic items worn on those slots. A single slot can only hold one magical tattoo (nonmagical tattoos and tattoos acquired from the tattooed sorcerer archetype do not count against this limit). Tattoos may be inscribed on the following slots: belt, body, chest, feet, hands, head, neck, shoulder, ring (up to two), or wrist. They cannot be inscribed on armor, eye, headband, or shield slots.</p><p>Magical tattoos are difficult to destroy, though they count as magic items for the purposes of dispel magic. The spell erase can permanently destroy a magical tattoo, but the bearer of the tattoo can resist the spell with a Will save, in addition to the caster needing to make a successful caster level check to erase the tattoo. Physically removing a magical tattoo with a sharp instrument or defacing it with fire or acid can destroy it as well. Doing so is a full-round action that not only requires the target to be willing or helpless, but also provokes attacks of opportunity. At least 2 points of damage per caster level of the tattoo must be dealt to destroy a magical tattoo in this manner.</p><p>Magical tattoos follow the rules for magic item creation as though they were wondrous items, except that they can use the Craft (calligraphy, paintings, tattoos) skill. New magical tattoos can be researched and designed using the guidelines for pricing new magic items. Magical tattoos are treated as slotless magical items for pricing purposes.</p>",
+      "prerequisiteText": "Craft (calligraphy, paintings, or tattoos) 5 ranks, caster level 5th",
+      "prerequisites": [
+        {
+          "unchecked": "Craft (calligraphy, paintings, or tattoos) 5 ranks",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "caster level 5th",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9237",
+          "pages": "16"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Inscribe a qualifying magic tattoo on a willing or helpless recipient in a permitted slot; one tattoo per slot, no interference with worn items. Creation, pricing and destruction procedures remain prose."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6hmIs98sJoJzzIq0",
+      "upstreamKey": "pf1/6hmIs98sJoJzzIq0",
+      "pack": "feats",
+      "name": "Master Craftsman",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Skill",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Your superior crafting skills allow you to create simple magic items.</i><p><strong>Prerequisites</strong>: 5 ranks in any Craft or Profession skill.</p><p><strong>Benefits</strong>: Choose one Craft or Profession skill in which you possess at least 5 ranks. You receive a +2 bonus on your chosen Craft or Profession skill. Ranks in your chosen skill count as your caster level for the purposes of qualifying for the Craft Magic Arms and Armor and Craft Wondrous Item feats. You can create magic items using these feats, substituting your ranks in the chosen skill for your total caster level. You must use the chosen skill for the check to create the item. The DC to create the item still increases for any necessary spell requirements (see the magic item creation rules in Magic Items). You cannot use this feat to create any spell-trigger or spell-activation item.</p><p><strong>Normal</strong>: Only spellcasters can qualify for the Craft Magic Arms and Armor and Craft Wondrous Item feats.</p>",
+      "prerequisiteText": "5 ranks in any Craft or Profession skill",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "5 ranks in any Craft or Profession skill"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6lqGh0NvprZpUUwV",
+      "upstreamKey": "pf1/6lqGh0NvprZpUUwV",
+      "pack": "feats",
+      "name": "Hover",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Monster"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>This creature can hover in place with ease and can kick up clouds of dust and debris.</em></p><p><strong>Prerequisites</strong>: Fly speed.</p><p><strong>Benefits</strong>: A creature with this feat can halt its movement while flying, allowing it to hover without needing to make a Fly skill check.</p><p>If a creature of size Large or larger with this feat hovers within 20 feet of the ground in an area with lots of loose debris, the draft from its wings creates a hemispherical cloud with a radius of 60 feet. The winds generated can snuff torches, small campfires, exposed lanterns, and other small, open flames of non-magical origin. Clear vision within the cloud is limited to 10 feet. Creatures have concealment at 15 to 20 feet (20% miss chance). At 25 feet or more, creatures have total concealment (50% miss chance, and opponents cannot use sight to locate the creature).</p><p><strong>Normal</strong>: Without this feat, a creature must make a Fly skill check to hover and the creature does not create a cloud of debris while hovering.</p>",
+      "prerequisiteText": "Fly speed",
+      "prerequisites": [
+        {
+          "unchecked": "Fly speed",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1112",
+          "pages": "315"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6wPjZJNZpTfGJjTR",
+      "upstreamKey": "pf1/6wPjZJNZpTfGJjTR",
+      "pack": "feats",
+      "name": "Greater Spring Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Movement"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are a scything wind cutting through the battlefield as you topple your foes.</em></p><p><strong>Prerequisites</strong>: Dex 17, <a href=\"catalog:pf1/B6wEQOUMv2ifm2Nj\">Acrobatic Steps</a>, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/D5VflgZupUiegFAY\">Improved Spring Attack</a>, <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>, <a href=\"catalog:pf1/VMVAqGze4cs3naya\">Nimble Moves</a>, <a href=\"catalog:pf1/ugQyUpqPBDsqLyra\">Spring Attack</a>, base attack bonus +16.</p><p><strong>Benefit</strong>: When you use Spring Attack, you can select three targets to attack during your movement instead of one. The second attack made this way is made at your full base attack bonus – 5, and the third attack made this way is made at your full base attack bonus – 10. All restrictions of Spring Attack apply to each target, and your movement does not provoke attacks of opportunity from any of your targets. You can’t target the same creature more than once.</p><p><strong>Special</strong>: A monk of at least 18th level can select this feat as a monk bonus feat, but only if he has Improved Spring attack and Spring Attack.</p>",
+      "prerequisiteText": "Dex 17, Acrobatic Steps, Dodge, Improved Spring Attack, Mobility, Nimble Moves, Spring Attack, base attack bonus +16",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 17,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/B6wEQOUMv2ifm2Nj",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/D5VflgZupUiegFAY",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/VMVAqGze4cs3naya",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/ugQyUpqPBDsqLyra",
+          "kind": "feat"
+        },
+        {
+          "bab": 16,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1140",
+          "pages": "114"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "kOdcRHOZ8l69hoFp",
+                "activation": {
+                  "type": "full",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "Three Targets"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Spring Attack can target three different foes at full BAB, BAB -5 and BAB -10; all Spring Attack restrictions apply, without movement attacks of opportunity from those foes."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6yGoL82RidBHmXPb",
+      "upstreamKey": "pf1/6yGoL82RidBHmXPb",
+      "pack": "feats",
+      "name": "Extra Performance",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can use your bardic performance ability more often than normal.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/ZfCUTi1MiLgR4T7I\">Bardic performance</a> class feature.</p><p><strong>Benefits</strong>: You can use bardic performance for 6 additional rounds per day.</p><p><strong>Special</strong>: You can gain Extra Performance multiple times. Its effects stack.</p>",
+      "prerequisiteText": "Bardic performance class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/ZfCUTi1MiLgR4T7I",
+          "classFeatureName": "Bardic Performance",
+          "classFeatureClass": "pf1/6GjOjO6r3R06fLwE",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/711B9WNFgpdDKKf2",
+      "upstreamKey": "pf1/711B9WNFgpdDKKf2",
+      "pack": "feats",
+      "name": "Improved Disarm",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at knocking weapons from a foe's grasp.</em></p><p><strong>Prerequisites</strong>: Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a disarm combat maneuver. In addition, you receive a +2 bonus on checks made to disarm a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to disarm you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a disarm combat maneuver.</p><h3>Combat Trick</h3><p>You can select this feat even if you don't meet the ability score prerequisite (Intelligence 13). You gain the benefit of this feat only as long as you have at least 1 stamina point in your stamina pool. When you are the target of a disarm combat maneuver, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that disarm attempt increases by that number.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "127"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "123"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "disarm"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "vs. disarm"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Performing a disarm combat maneuver does not provoke an attack of opportunity."
+        },
+        {
+          "text": "A disarm maneuver does not provoke. Gain +2 on disarm checks and +2 CMD when a foe attempts to disarm you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/75XcMJS5yUIuhzsU",
+      "upstreamKey": "pf1/75XcMJS5yUIuhzsU",
+      "pack": "feats",
+      "name": "Signature Skill (Knowledge)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Knowledge, you earn the following.</p><p><strong>5 Ranks</strong>: When you successfully identify a creature, you gain one additional piece of information for every 5 ranks you possess in that Knowledge skill.</p><p><strong>10 Ranks</strong>: When you successfully identify a creature, you gain a +1 competence bonus on attack rolls, opposed ability checks, skill checks, and caster level checks against creatures of that kind (e.g., glabrezu demons, but not other demons or evil outsiders) for 1 minute. This bonus increases by 1 for every 5 ranks beyond 10 you possess in that Knowledge skill.</p><p><strong>15 Ranks</strong>: When you fail a Knowledge check, you can reroll the check at a –10 penalty. The competence bonus above also applies to saving throws against exceptional, spell-like, or supernatural abilities used by creatures you identify.</p><p><strong>20 Ranks</strong>: Whenever you attempt a Knowledge check, you can roll twice and take the better result.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "85"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/77gXSucrxfrE9yWk",
+      "upstreamKey": "pf1/77gXSucrxfrE9yWk",
+      "pack": "feats",
+      "name": "Empower Spell",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Metamagic",
+          "Magic"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can increase the power of your spells, causing them to deal more damage.</i><p><strong>Benefits</strong>: All variable, numeric effects of an empowered spell are increased by half, including bonuses to those dice rolls.</p><p>Saving throws and opposed rolls are not affected, nor are spells without random variables. An empowered spell uses up a spell slot two levels higher than the spell’s actual level.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 122"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/7P84frgqSmscfkUC",
+      "upstreamKey": "pf1/7P84frgqSmscfkUC",
+      "pack": "feats",
+      "name": "Extra Rage Power",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have unlocked a new ability to use while raging.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/HdzsFdoGauXFjU2S\">Rage power</a> class feature.</p><p><strong>Benefit</strong>: You gain one additional rage power. You must meet all of the prerequisites for this rage power.</p><p><strong>Special</strong>: You can gain Extra Rage Power multiple times.</p>",
+      "prerequisiteText": "Rage power class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/HdzsFdoGauXFjU2S",
+          "classFeatureName": "Rage Powers",
+          "classFeatureClass": "pf1/g3pq7xWWdUVYw6ai",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "160"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/7bJjKqNRrvpXJ4L3",
+      "upstreamKey": "pf1/7bJjKqNRrvpXJ4L3",
+      "pack": "feats",
+      "name": "Augment Summoning",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your summoned creatures are more powerful and robust.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/V2zY7BltkpSXwejy\">Spell Focus (conjuration)</a>.</p><p><strong>Benefits</strong>: Each creature you conjure with any summon spell gains a +4 enhancement bonus to Strength and Constitution for the duration of the spell that summoned it.</p>",
+      "prerequisiteText": "Spell Focus (conjuration)",
+      "prerequisites": [
+        {
+          "feat": "pf1/V2zY7BltkpSXwejy",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/7mD4ZksvKFaorAfj",
+      "upstreamKey": "pf1/7mD4ZksvKFaorAfj",
+      "pack": "feats",
+      "name": "Shield Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick",
+          "Defensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at deflecting blows with your shield.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/WZj7zDvuelEoeXWX\">Shield Proficiency</a>, base attack bonus +1.</p><p><strong>Benefits</strong>: Increase the AC bonus granted by any shield you are using by 1.</p><h3>Combat Trick</h3><p>When an attack is made against you while you are using a shield, you can spend up to 2 stamina points. If you do, the shield’s bonus to AC against that attack increases by an amount equal to the number of stamina points you spent.</p>",
+      "prerequisiteText": "Shield Proficiency, base attack bonus +1",
+      "prerequisites": [
+        {
+          "proficiency": {
+            "category": "shield"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "sac",
+            "formula": "if(@shield.type, 1)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Increase the AC bonus of any shield you are using by 1."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/7zJTztNW7hdaqjKc",
+      "upstreamKey": "pf1/7zJTztNW7hdaqjKc",
+      "pack": "feats",
+      "name": "Skill Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Skill"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8Gd3pvhQtXUmpKi1",
+      "upstreamKey": "pf1/8Gd3pvhQtXUmpKi1",
+      "pack": "feats",
+      "name": "Signature Skill (Sleight of Hand)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Sleight of Hand, you earn the following.</p><p><strong>5 Ranks</strong>: When attempting a disarm or steal maneuver, a successful Sleight of Hand check against your target’s CMD grants a +2 circumstance bonus on your combat maneuver check.</p><p><strong>10 Ranks</strong>: The penalty for attempting a Sleight of Hand check (including drawing a hidden weapon) as a move action is reduced to –10.</p><p><strong>15 Ranks</strong>: You can attempt a Sleight of Hand check (including drawing a hidden weapon) as a swift action at a –20 penalty.</p><p><strong>20 Ranks</strong>: You take no penalty for using Sleight of Hand as a move action, and take only a –10 penalty when using it as a swift action.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "86"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8GgeuFw6SDXaHGh1",
+      "upstreamKey": "pf1/8GgeuFw6SDXaHGh1",
+      "pack": "feats",
+      "name": "Signature Skill (Heal)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Heal, you earn the following.</p><p><strong>5 Ranks</strong>: When you treat deadly wounds, the target recovers hit points and ability damage as if it had rested for a full day.</p><p><strong>10 Ranks</strong>: When you treat deadly wounds, the target recovers hit points as if it had rested for a full day with long-term care.</p><p><strong>15 Ranks</strong>: When you treat deadly wounds, the creature recovers hit point and ability damage as if it had rested for 3 days.</p><p><strong>20 Ranks</strong>: When you treat deadly wounds, the target recovers hit point and ability damage as if it had rested for 3 days with long-term care.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "84"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8VZQJOyAXbXghxd7",
+      "upstreamKey": "pf1/8VZQJOyAXbXghxd7",
+      "pack": "feats",
+      "name": "Self-Sufficient",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You know how to get along in the wild and how to effectively treat wounds.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Heal checks and Survival checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.hea",
+            "formula": "2 + if(gte(@skills.hea.ranks, 10), 2)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.sur",
+            "formula": "2 + if(gte(@skills.sur.ranks, 10), 2)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/8mS9B8Uc8odklIpl",
+      "upstreamKey": "pf1/8mS9B8Uc8odklIpl",
+      "pack": "feats",
+      "name": "Trample",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Mount",
+          "Offensive",
+          "Movement",
+          "Combat Maneuver"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>While mounted, you can ride down opponents and trample them under your mount.</em></p><p><strong>Prerequisites</strong>: Ride 1 rank, <a href=\"catalog:pf1/0spsP9ylE3goD3jc\">Mounted Combat</a>.</p><p><strong>Benefits</strong>: When you attempt to overrun an opponent while mounted, your target may not choose to avoid you. Your mount may make one hoof attack against any target you knock down, gaining the standard +4 bonus on attack rolls against prone targets.</p>",
+      "prerequisiteText": "Ride 1 rank, Mounted Combat",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.rid",
+          "min": 1,
+          "kind": "skillRanks"
+        },
+        {
+          "feat": "pf1/0spsP9ylE3goD3jc",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Mounted overrun cannot be avoided; the mount may make one hoof attack against a knocked-down foe with the normal +4 prone-target attack bonus. No rider-wide attack bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/8rsFtye3PwM6CKli",
+      "upstreamKey": "pf1/8rsFtye3PwM6CKli",
+      "pack": "feats",
+      "name": "Point-Blank Shot",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are especially accurate when making ranged attacks against close targets.</em></p><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.</p><p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack.ranged",
+          "bonusType": "untyped",
+          "value": 1,
+          "condition": {
+            "situation": "within30ft"
+          }
+        },
+        {
+          "target": "damage.ranged",
+          "bonusType": "untyped",
+          "value": 1,
+          "condition": {
+            "situation": "within30ft"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8snLqsJN4LLL00Nq",
+      "upstreamKey": "pf1/8snLqsJN4LLL00Nq",
+      "pack": "feats",
+      "name": "Toughness",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Defensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You have enhanced physical stamina.</i><p><strong>Benefits</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 135"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "hp",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "max(3, @hitDice)"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/8viuSwNbDvZZaiak",
+      "upstreamKey": "pf1/8viuSwNbDvZZaiak",
+      "pack": "feats",
+      "name": "Improved Natural Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Monster"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Attacks made by one of this creature’s natural attacks leave vicious wounds.</em></p><p><strong>Prerequisites</strong>: Natural weapon, base attack bonus +4.</p><p><strong>Benefit</strong>: Choose one of the creature’s natural attack forms (not an unarmed strike). The damage for this natural attack increases by one step on the following list, as if the creature’s size had increased by one category. Damage dice increase as follows: 1d2, 1d3, 1d4, 1d6, 1d8, 2d6, 3d6, 4d6, 6d6, 8d6, 12d6.</p><p>A weapon or attack that deals 1d10 points of damage increases as follows: 1d10, 2d8, 3d8, 4d8, 6d8, 8d8, 12d8.</p><p><strong>Special</strong>: This feat can be taken multiple times. Each time it is taken, it applies to a different natural attack.</p>",
+      "prerequisiteText": "Natural weapon, base attack bonus +4",
+      "prerequisites": [
+        {
+          "unchecked": "Natural weapon",
+          "kind": "unchecked"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1112",
+          "pages": "315"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/91lGWgfmuQFUQit5",
+      "upstreamKey": "pf1/91lGWgfmuQFUQit5",
+      "pack": "feats",
+      "name": "Extra Investigator Talent",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You learn a new way to use your training and inspiration.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/AOnFqb1h3gXbFUup\">Investigator talent</a> class feature.</p><p><strong>Benefit</strong>: You gain one additional investigator talent. You must meet the prerequisites for this investigator talent.</p><p><strong>Special</strong>: You can take this feat multiple times. Each time you do, you gain another investigator talent.</p>",
+      "prerequisiteText": "Investigator talent class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/AOnFqb1h3gXbFUup",
+          "classFeatureName": "Investigator Talent",
+          "classFeatureClass": "pf1/s27zdYVFenYBVtfu",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "147"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9SLkAHfOX4UEnkmS",
+      "upstreamKey": "pf1/9SLkAHfOX4UEnkmS",
+      "pack": "feats",
+      "name": "Craft Pharmaceutical",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can craft pharmaceuticals.</em></p><p><strong>Prerequisites: </strong><a href=\"catalog:pf1/1foaZv9wfqZVrZ90\">Technologist</a>, Heal 9 ranks, Knowledge (nature) 9 ranks</p><p><strong>Benefits</strong>: You can create any pharmaceutical or poison. Creating a pharmaceutical takes 2 hours if its base price is 250 gp or less; otherwise, the creation of the pharmaceutical takes 1 day for every 1,000 gp in its price. To create the pharmaceutical or poison, you must use up raw materials costing half of this total price. See Crafting High-Tech Items on page 16 for more information.</p>",
+      "prerequisiteText": "Technologist, Heal 9 ranks, Knowledge (nature) 9 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1/1foaZv9wfqZVrZ90",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.hea",
+          "min": 9,
+          "kind": "skillRanks"
+        },
+        {
+          "skillRanks": "skill.kna",
+          "min": 9,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9272",
+          "pages": "6"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9j6OM2njOSADu8H9",
+      "upstreamKey": "pf1/9j6OM2njOSADu8H9",
+      "pack": "feats",
+      "name": "Improved Swap Places",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Teamwork",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>When you switch places with your comrade, your sizes don’t matter.</em></p><p><strong>Prerequisites</strong>: Swap Places.</p><p><strong>Benefit</strong>: When you and your ally use Swap Places, your ally can be up to one size larger or smaller than you, and your movement into the ally’s square does not provoke an attack of opportunity. If your ally cannot fit into the space you had been occupying and there are no available adjacent squares to accommodate the rest of the ally’s space, the ally must squeeze. Alternatively, as part of its movement, the ally can attempt a bull rush combat maneuver against a creature that occupies a space your ally would occupy, but this bull rush cannot move the creature more than 5 feet.</p><p><strong>Normal</strong>: Using Swap Places requires you and your ally to be the same size, and your movement into the ally’s square provokes attacks of opportunity.</p><h3>Combat Trick</h3><p>When you attempt a bull rush when using this feat, you can spend 2 stamina points to gain the ability to move the target of that combat maneuver more than 5 feet if necessary to create space for your ally (you must still roll high enough on the bull rush attempt to move the target an extra distance, as normal).</p>",
+      "prerequisiteText": "Swap Places",
+      "prerequisites": [
+        {
+          "feat": "pf1/4FheAz49TCHTCl6O",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "150"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Swap with an ally up to one size larger or smaller without provoking; squeezing and a bull rush moving at most 5 feet can make space for the ally."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/9jvLagEYC2EAJ6lJ",
+      "upstreamKey": "pf1/9jvLagEYC2EAJ6lJ",
+      "pack": "feats",
+      "name": "Fleshwarper",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can create creatures through an abominable alchemical process.</em></p><p><strong>Prerequisites</strong>: Craft (alchemy) 5 ranks, Heal 5 ranks, evil alignment.</p><p><strong>Benefit</strong>: You can create fleshwarped creatures and fleshcraft grafts (see Fleshwarping for full details). A newly created fleshwarped creature has average hit points for its Hit Dice.</p>",
+      "prerequisiteText": "Craft (alchemy) 5 ranks, Heal 5 ranks, evil alignment",
+      "prerequisites": [
+        {
+          "unchecked": "Craft (alchemy) 5 ranks",
+          "kind": "unchecked"
+        },
+        {
+          "skillRanks": "skill.hea",
+          "min": 5,
+          "kind": "skillRanks"
+        },
+        {
+          "alignment": [
+            "LE",
+            "NE",
+            "CE"
+          ],
+          "kind": "alignment"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1135",
+          "pages": "87"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9mcYid7xJY9NiySx",
+      "upstreamKey": "pf1/9mcYid7xJY9NiySx",
+      "pack": "feats",
+      "name": "Enlarge Spell",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Metamagic"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can increase the range of your spells.</em></p><p><strong>Benefits</strong>: You can alter a spell with a range of close, medium, or long to increase its range by 100%. An enlarged spell with a range of close now has a range of 50 ft. + 5 ft./level, while medium-range spells have a range of 200 ft. + 20 ft./level and long-range spells have a range of 800 ft. + 80 ft./level. An enlarged spell uses up a spell slot one level higher than the spell's actual level.</p><p>Spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not benefit from this feat.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 123-124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9p0aAtCyLdcwnftS",
+      "upstreamKey": "pf1/9p0aAtCyLdcwnftS",
+      "pack": "feats",
+      "name": "Wind Stance",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Defensive",
+          "Movement"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your erratic movements make it difficult for enemies to pinpoint your location.</em></p><p><strong>Prerequisites</strong>: Dex 15, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, base attack bonus +6.</p><p><strong>Benefits</strong>: If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks.</p>",
+      "prerequisiteText": "Dex 15, Dodge, base attack bonus +6",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 137"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Moving more than 5 feet grants 20% concealment against ranged attacks for 1 round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ACEQfonKVqh0fwkK",
+      "upstreamKey": "pf1/ACEQfonKVqh0fwkK",
+      "pack": "feats",
+      "name": "Deflect Arrows",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can knock arrows and other projectiles off course, preventing them from hitting you.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: You must have at least one hand free (holding nothing) to use this feat. Once per round when you would normally be hit with an attack from a ranged weapon, you may deflect it so that you take no damage from it. You must be aware of the attack and not flat-footed. Attempting to deflect a ranged attack doesn't count as an action. Unusually massive ranged weapons (such as boulders or ballista bolts) and ranged attacks generated by natural attacks or spell effects can't be deflected.</p><h3>Combat Trick</h3><p>You can spend 5 stamina points to deflect an arrow while you're flat-footed. You must still be aware of the attack.</p>",
+      "prerequisiteText": "Dex 13, Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 121"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "q00cixwhykshnyq6",
+                "activation": {
+                  "type": "free",
+                  "unchained": {
+                    "type": "free"
+                  }
+                },
+                "name": "Use"
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Once per round, with a free hand, awareness of the attack and while not flat-footed, deflect a ranged weapon attack that would hit, taking no damage. This uses no action; massive projectiles, natural attacks and spell effects cannot be deflected."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/AZoNxM18sC74qeo9",
+      "upstreamKey": "pf1/AZoNxM18sC74qeo9",
+      "pack": "feats",
+      "name": "Extra Mental Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You possess increased mental focus.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/dv8TDGs9c7h4awY2\">Mental focus</a> class feature.</p><p><strong>Benefit</strong>: You gain 2 additional points of mental focus.</p>",
+      "prerequisiteText": "Mental focus class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/dv8TDGs9c7h4awY2",
+          "classFeatureName": "Mental Focus",
+          "classFeatureClass": "pf1/5uUzVl0gLZ23vY96",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1132",
+          "pages": "133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Aj5upleDpV0t2wda",
+      "upstreamKey": "pf1/Aj5upleDpV0t2wda",
+      "pack": "feats",
+      "name": "Signature Skill (Climb)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Climb, you earn the following.</p><p><strong>5 Ranks</strong>: You are no longer denied your Dexterity bonus when climbing.</p><p><strong>10 Ranks</strong>: You gain a natural climb speed (but not the +8 racial bonus on Climb checks) of 10 feet, but only on surfaces with a Climb DC of 20 or lower.</p><p><strong>15 Ranks</strong>: You gain a natural climb speed (but not the +8 racial bonus on Climb checks) equal to your base speed on surfaces with a Climb DC of 20 or lower, and of 10 feet on all other surfaces.</p><p><strong>20 Ranks</strong>: You gain a natural climb speed equal to your base speed on all surfaces. If you have both hands free, you gain a +8 racial bonus on Climb checks.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "82"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Ak0uWIHfOROMnywq",
+      "upstreamKey": "pf1/Ak0uWIHfOROMnywq",
+      "pack": "feats",
+      "name": "Block Chakras",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You’ve learned how to block the lower chakras of your foes.</em></p><p><strong>Prerequisites</strong>: Psychic Sensitivity or levels in an occult class, brawler’s flurry or flurry of blows class feature, ki pool.</p><p><strong>Benefit</strong>: As a standard action, you can spend 1 ki point to make a single unarmed strike that attempts to block one of the target’s chakras. If you hit the target and deal damage, you can select either the root, sacral, or navel chakra, as long as you can open that chakra yourself. The target suffers a specific effect based on the chosen chakra (see below), though it can reduce these effects with a successful Fortitude save (DC = 10 + half your character level + the ability modifier you use to calculate your ki pool).</p><ul><li><p>Root: The target’s DR is reduced by 10 for 1 minute. If the target has multiple forms of DR, you choose which DR is reduced. On a successful save, the target’s DR is instead reduced by 5 for 1 round.</p></li><li><p>Sacral: The target can’t use any of its speeds except its land speed (or swim speed for an aquatic creature) for 1 round, and it moves at half speed for 1 minute. If it was flying, the target can attempt a Fly check to fall safely. On a successful save, the target instead moves at half speed for 1 round.</p></li><li><p>Navel: The target takes a –2 penalty on attack rolls and damage rolls, and it reduces the DCs of its spells and abilities by 2 for 1 minute. On a successful save, the penalty and reduction is halved and lasts for 1 round.</p></li></ul>",
+      "prerequisiteText": "Psychic Sensitivity or levels in an occult class, brawler’s flurry or flurry of blows class feature, ki pool",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Psychic Sensitivity or levels in an occult class"
+        },
+        {
+          "kind": "unchecked",
+          "unchecked": "brawler’s flurry or flurry of blows class feature"
+        },
+        {
+          "unchecked": "ki pool",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9493",
+          "pages": "28"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Amz4lAaIp0x0ehPf",
+      "upstreamKey": "pf1/Amz4lAaIp0x0ehPf",
+      "pack": "feats",
+      "name": "Sickening Critical",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Critical",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your critical hits cause opponents to become sickened.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/JNlMhMhcDO8wkXiw\">Critical Focus</a>, base attack bonus +11.</p><p><strong>Benefits</strong>: Whenever you score a critical hit, your opponent becomes sickened for 1 minute. The effects of this feat do not stack. Additional hits instead add to the effect's duration.</p><p><strong>Special</strong>: You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery.</p>",
+      "prerequisiteText": "Critical Focus, base attack bonus +11",
+      "prerequisites": [
+        {
+          "feat": "pf1/JNlMhMhcDO8wkXiw",
+          "kind": "feat"
+        },
+        {
+          "bab": 11,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "A critical hit sickens the opponent for 1 minute. Further hits add duration, not stacked penalties. Only one critical feat applies unless you have Critical Mastery."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/AtAPt8O9FxrYjiej",
+      "upstreamKey": "pf1/AtAPt8O9FxrYjiej",
+      "pack": "feats",
+      "name": "Signature Skill (Escape Artist)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Escape Artist, you earn the following.</p><p><strong>5 Ranks</strong>: If you take a –10 penalty, the time required to use this skill is halved; escaping a grapple or pin is a move action, and escaping a net, animate rope, command plants, or control plants spell is a standard action.</p><p><strong>10 Ranks</strong>: You can attempt to escape from any entangling effect as a standard action with an Escape Artist check (DC = the effect’s save DC + 10). You can attempt an Escape Artist check as a move action to set the DC for a creature to escape from ropes or bindings; you gain a +10 bonus on the check if you instead attempt it as a full-round action.</p><p><strong>15 Ranks</strong>: You can escape any entangling effect (as above) as a move action. As a standard action, you can attempt an Escape Artist check (DC = the effect’s save DC + 20) to suppress a slow or paralysis effect for 1 round, plus 1 round for every 5 by which you exceed the DC. This action counts as purely mental for the purpose of being able to take it while paralyzed.</p><p><strong>20 Ranks</strong>: You can escape being entangled, grappled, or pinned as an immediate action with an Escape Artist check (DC = the effect’s DC + 10 or the attacker’s CMB + 10). You can attempt to suppress a slow or paralysis effect as a standard action (increasing the DC by 10), a move action (increasing the DC by 15), or an immediate action (increasing the DC by 20).</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "84"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/AuzOXSPSI7Q3iNK8",
+      "upstreamKey": "pf1/AuzOXSPSI7Q3iNK8",
+      "pack": "feats",
+      "name": "Extra Item Slot",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are able to wear magic items more easily than other creatures of your kind.</em></p><p><strong>Prerequisites</strong>: Non-humanoid body shape.</p><p><strong>Benefit</strong>: Choose one magic item slot not normally available to creatures with your shape. You can now use magic items in that slot.</p>",
+      "prerequisiteText": "Non-humanoid body shape",
+      "prerequisites": [
+        {
+          "unchecked": "Non-humanoid body shape",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9429",
+          "pages": "18"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/B6wEQOUMv2ifm2Nj",
+      "upstreamKey": "pf1/B6wEQOUMv2ifm2Nj",
+      "pack": "feats",
+      "name": "Acrobatic Steps",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Movement"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can easily move over and through obstacles.</em></p><p><strong>Prerequisites</strong>: Dex 15, <a href=\"catalog:pf1/VMVAqGze4cs3naya\">Nimble Moves</a>.</p><p><strong>Benefits</strong>: Whenever you move, you may move through up to 15 feet of difficult terrain each round as if it were normal terrain. The effects of this feat stack with those provided by Nimble Moves (allowing you to move normally through a total of 20 feet of difficult terrain each round).</p>",
+      "prerequisiteText": "Dex 15, Nimble Moves",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/VMVAqGze4cs3naya",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "113, 115"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/BJBC4lbo7xGWPsKJ",
+      "upstreamKey": "pf1/BJBC4lbo7xGWPsKJ",
+      "pack": "feats",
+      "name": "Exotic Weapon Proficiency",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Proficiency",
+          "Weapon"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose one type of exotic weapon, such as the spiked chain or whip. You understand how to use that type of exotic weapon in combat, and can utilize any special tricks or qualities that exotic weapon might allow.</i><p><strong>Prerequisites</strong>: Base attack bonus +1.</p><p><strong>Benefits</strong>: You make attack rolls with the weapon normally.</p><p><strong>Normal</strong>: A character who uses a weapon with which he is not proficient takes a -4 penalty on attack rolls.</p><p><strong>Special</strong>: You can gain Exotic Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of exotic weapon.</p>",
+      "prerequisiteText": "Base attack bonus +1",
+      "prerequisites": [
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 123"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": [
+              "1 Exotic Weapon"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/BbZIN6lmkZDry3ml",
+      "upstreamKey": "pf1/BbZIN6lmkZDry3ml",
+      "pack": "feats",
+      "name": "Signature Skill (Stealth)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Stealth, you earn the following. </p><p><strong>5 Ranks</strong>: Reduce the Stealth penalty from sniping by 10. </p><p><strong>10 Ranks</strong>: Stealth check penalties for moving quickly are halved, including the ability unlocked at 5 ranks, moving full speed, and reaching concealment after creating a distraction. </p><p><strong>15 Ranks</strong>: If you attack after successfully using Stealth, your target is denied its Dexterity bonus against all attacks that you make before the end of your turn. </p><p><strong>20 Ranks</strong>: If you attack after successfully using Stealth, your target is denied its Dexterity bonus against all attacks that you make before the beginning of your next turn.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "86"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/BkKYCzEGNTzZRiTz",
+      "upstreamKey": "pf1/BkKYCzEGNTzZRiTz",
+      "pack": "feats",
+      "name": "Fleet",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Movement"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are faster than most.</em></p><p><strong>Benefits</strong>: While you are wearing light or no armor, your base speed increases by 5 feet. You lose the benefits of this feat if you carry a medium or heavy load.</p><p><strong>Special</strong>: You can take this feat multiple times. The effects stack.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "landSpeed",
+            "formula": "if(and(lt(@armor.type, 2), lt(@attributes.encumbrance.level, 1)), 5)",
+            "type": "base"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/CLSsMyNmdcNAOUKC",
+      "upstreamKey": "pf1/CLSsMyNmdcNAOUKC",
+      "pack": "feats",
+      "name": "Magical Aptitude",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at spellcasting and using magic items.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Spellcraft checks and Use Magic Device checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.spl",
+            "formula": "2 + if(gte(@skills.spl.rank, 10), 2)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.umd",
+            "formula": "2 + if(gte(@skills.umd.rank, 10), 2)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/CYHloH6aEnfgdxAV",
+      "upstreamKey": "pf1/CYHloH6aEnfgdxAV",
+      "pack": "feats",
+      "name": "Improved Reposition",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have learned how to force your enemies to move around the battlefield.</em></p><p><strong>Prerequisites:</strong> Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>.</p><p><strong>Benefit:</strong> You do not provoke an attack of opportunity when performing a reposition combat maneuver. In addition, you receive a +2 bonus on checks made to reposition a foe. You also receive a +2 bonus to your Combat Maneuver Defense when an opponent tries to reposition you.</p><p><strong>Normal:</strong> You provoke an attack of opportunity when performing a reposition combat maneuver.</p><h3>Combat Trick</h3><p>You can select this feat even if you don’t meet the ability score prerequisite (Intelligence 13). You gain the benefits of this feat only as long as you have at least 1 stamina point in your stamina pool. When you are the target of a reposition combat maneuver, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that reposition attempt increases by that number.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "163"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "123"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "reposition"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "vs. reposition"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Performing a reposition combat maneuver does not provoke an attack of opportunity."
+        },
+        {
+          "text": "A reposition maneuver does not provoke. Gain +2 on reposition checks and +2 CMD when a foe attempts to reposition you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/CjLNTqNGz4zU4zpp",
+      "upstreamKey": "pf1/CjLNTqNGz4zU4zpp",
+      "pack": "feats",
+      "name": "Command Undead",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Using foul powers of necromancy, you can command undead creatures, making them into your servants.</em></p><p><strong>Prerequisites</strong>: Channel negative energy class feature.</p><p><strong>Benefits</strong>: As a standard action, you can use one of your uses of channel negative energy to enslave undead within 30 feet. Undead receive a Will save to negate the effect. The DC for this Will save is equal to 10 + 1/2 your cleric level + your Charisma modifier. Undead that fail their saves fall under your control, obeying your commands to the best of their ability, as if under the effects of control undead. Intelligent undead receive a new saving throw each day to resist your command. You can control any number of undead, so long as their total Hit Dice do not exceed your cleric level. If you use channel energy in this way, it has no other effect (it does not heal or harm nearby creatures). If an undead creature is under the control of another creature, you must make an opposed Charisma check whenever your orders conflict.</p>",
+      "prerequisiteText": "Channel negative energy class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/veyAa4qdI9lqSx6m",
+          "classFeatureName": "Channel Negative Energy",
+          "classFeatureClass": "pf1/uynVENa0deVdmf53",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "x4ytugnyvaxfcp79",
+                "actionType": "save",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "notes": {
+                  "effect": [
+                    "Command Undead: as if under the effects of @UUID[Compendium.pf1.spells.wkp8u7xl1dgpk362]{Control Undead}."
+                  ]
+                },
+                "save": {
+                  "dc": "10 + floor( @classes.cleric.level / 2) + @abilities.cha.mod",
+                  "description": "Will negates",
+                  "type": "will"
+                }
+              }
+            ],
+            "uses": {
+              "maxFormula": "3 + @abilities.cha.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/D10dGyw3V0n77Msl",
+      "upstreamKey": "pf1/D10dGyw3V0n77Msl",
+      "pack": "feats",
+      "name": "Signature Skill (Intimidate)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Intimidate, you earn the following. <br>An asterisk (*) indicates the total duration cannot exceed 1 round plus 1 round for every 5 by which you exceed the DC.</p><p><strong>5 Ranks</strong>: If you exceed the DC to demoralize a target by at least 10, it is frightened for 1 round and shaken thereafter.* A Will save (DC = 10 + your number of ranks in Intimidate) negates the frightened condition, but the target is still shaken, even if it has the stalwart ability.</p><p><strong>10 Ranks</strong>: If you exceed the DC to demoralize a target by at least 10, it is panicked for 1 round or frightened for 1d4 rounds (your choice) and shaken thereafter.* A Will save (DC = 10 + your number of ranks in Intimidate) negates the frightened or panicked condition, but the target is still shaken, even if it has the stalwart ability.</p><p><strong>15 Ranks</strong>: If you exceed the DC to demoralize a target by at least 20, it is cowering for 1 round or panicked for 1d4 rounds (your choice) and frightened thereafter.* A Will save (DC = 10 + your number of ranks in Intimidate) negates the cowering, panicked, and frightened conditions, but the target is still shaken, even if it has the stalwart ability.</p><p><strong>20 Ranks</strong>: If you exceed the DC to demoralize a target by at least 20, it is cowering for 1d4 rounds and panicked thereafter.* A Will save (DC = 10 + your number of ranks in Intimidate) negates the cowering and panicked conditions, but the target is still shaken, even if it has the stalwart ability.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "85"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/D5VflgZupUiegFAY",
+      "upstreamKey": "pf1/D5VflgZupUiegFAY",
+      "pack": "feats",
+      "name": "Improved Spring Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Movement"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You dart through the press of battle like a breeze, assaulting foes as you pass.</em></p><p><strong>Prerequisites</strong>: Dex 15, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>, <a href=\"catalog:pf1/VMVAqGze4cs3naya\">Nimble Moves</a>, <a href=\"catalog:pf1/ugQyUpqPBDsqLyra\">Spring Attack</a>, base attack bonus +9.</p><p><strong>Benefit</strong>: When you use Spring Attack, you can select two targets to attack during your movement instead of one. The second attack made this way is made at your full base attack bonus – 5. All restrictions of Spring Attack apply to both targets, and your movement does not provoke attacks of opportunity from either target. You can’t target the same creature twice.</p><p><strong>Special</strong>: A monk of at least 14th level can select this feat as a monk bonus feat, but only if he has Spring Attack.</p>",
+      "prerequisiteText": "Dex 15, Dodge, Mobility, Nimble Moves, Spring Attack, base attack bonus +9",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/VMVAqGze4cs3naya",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/ugQyUpqPBDsqLyra",
+          "kind": "feat"
+        },
+        {
+          "bab": 9,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1140",
+          "pages": "114"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "kOdcRHOZ8l69hoFp",
+                "activation": {
+                  "type": "full",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "Two Targets"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Spring Attack can target two different foes at full BAB and BAB -5; all Spring Attack restrictions apply, without movement attacks of opportunity from those foes."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/DMSYzt5jD9vk0DGy",
+      "upstreamKey": "pf1/DMSYzt5jD9vk0DGy",
+      "pack": "feats",
+      "name": "Craft Construct",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation",
+          "Monster"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can create construct creatures like golems.</em></p><p><strong>Prerequisites</strong>: Caster level 5th, <a href=\"catalog:pf1/4hNO4OAWYF5vXphH\">Craft Magic Arms and Armor</a>, <a href=\"catalog:pf1/tD76K8QGco9scT0r\">Craft Wondrous Item</a>.</p><p><strong>Benefit</strong>: You can create any construct whose prerequisites you meet. The act of animating a construct takes one day for each 1,000 gp in its market price. To create a construct, you must use up raw materials costing half of its base price, plus the full cost of the basic body created for the construct. Each construct has a special section that summarizes its costs and other prerequisites. A newly created construct has average hit points for its Hit Dice.</p>",
+      "prerequisiteText": "Caster level 5th, Craft Magic Arms and Armor, Craft Wondrous Item",
+      "prerequisites": [
+        {
+          "unchecked": "Caster level 5th",
+          "kind": "unchecked"
+        },
+        {
+          "feat": "pf1/4hNO4OAWYF5vXphH",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/tD76K8QGco9scT0r",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1112",
+          "pages": "314"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/DaedlCctLlmtUbrT",
+      "upstreamKey": "pf1/DaedlCctLlmtUbrT",
+      "pack": "feats",
+      "name": "Extra Bane",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can use your bane ability more often than normal.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/MpvhQz62qw68D2pd\">Bane</a> class feature.</p><p><strong>Benefit</strong>: You can use your bane ability for 3 additional rounds per day.</p>",
+      "prerequisiteText": "Bane class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/MpvhQz62qw68D2pd",
+          "classFeatureName": "Bane",
+          "classFeatureClass": "pf1/Fv3FbmXptuDRiL5y",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1118",
+          "pages": "100"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/DorPGQ2mifJbMKH8",
+      "upstreamKey": "pf1/DorPGQ2mifJbMKH8",
+      "pack": "feats",
+      "name": "Improved Vital Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can make a single attack that deals a large amount of damage.</i><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/26k1Gi7t5BoqxhIj\">Vital Strike</a>, base attack bonus +11.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack three times and add the results together before adding bonuses from Strength, weapon special abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>",
+      "prerequisiteText": "Vital Strike, base attack bonus +11",
+      "prerequisites": [
+        {
+          "feat": "pf1/26k1Gi7t5BoqxhIj",
+          "kind": "feat"
+        },
+        {
+          "bab": 11,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "On the attack action, make one attack at your highest base attack bonus and roll the weapon’s damage dice three times before adding other damage bonuses. Extra weapon dice are not multiplied on a critical hit."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/EdcHghQAYBIDao3s",
+      "upstreamKey": "pf1/EdcHghQAYBIDao3s",
+      "pack": "feats",
+      "name": "Craft Poppet",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Some construct builders learn their art by creating poppets.</em></p><p><strong>Prerequisites</strong>: Caster level 1st.</p><p><strong>Benefit</strong>: You can craft poppets and add augmentations to existing poppets that you control. You are treated as having both Craft Arms and Armor and Craft Wondrous Item for the purpose of fulfilling the prerequisites for Craft Construct.</p>",
+      "prerequisiteText": "Caster level 1st",
+      "prerequisites": [
+        {
+          "unchecked": "Caster level 1st",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9481",
+          "pages": "31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Ee7JHADKEK37tTHs",
+      "upstreamKey": "pf1/Ee7JHADKEK37tTHs",
+      "pack": "feats",
+      "name": "Two-Weapon Fighting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Weapon",
+          "Two Weapons",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can fight with a weapon wielded in each of your hands. You can make one extra attack each round with the secondary weapon.</i><p><strong>Prerequisites</strong>: Dex 15.</p><p><strong>Benefits</strong>: Your penalties on attack rolls for fighting with two weapons are reduced. The penalty for your primary hand lessens by 2 and the one for your off hand lessens by 6. See Two-Weapon Fighting in Combat.</p><p><strong>Normal</strong>: If you wield a second weapon in your off hand, you can get one extra attack per round with that weapon. When fighting in this way you suffer a -6 penalty with your regular attack or attacks with your primary hand and a -10 penalty to the attack with your off hand. If your off-hand weapon is light, the penalties are reduced by 2 each. An unarmed strike is always considered light.</p>",
+      "prerequisiteText": "Dex 15",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Two-weapon fighting attack penalties decrease by 2 for your primary hand and by 6 for your off hand. A light off-hand weapon reduces both penalties by a further 2."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ElqchQT5WB625HPg",
+      "upstreamKey": "pf1/ElqchQT5WB625HPg",
+      "pack": "feats",
+      "name": "Eschew Materials",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Magic"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can cast many spells without needing to utilize minor material components.</i><p><strong>Benefits</strong>: You can cast any spell with a material component costing 1 gp or less without needing that component. The casting of the spell still provokes attacks of opportunity as normal. If the spell requires a material component that costs more than 1 gp, you must have the material component on hand to cast the spell, as normal.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 123"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/F2GJXemdlPolvx4D",
+      "upstreamKey": "pf1/F2GJXemdlPolvx4D",
+      "pack": "feats",
+      "name": "Lingering Performance",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The effects of your bardic performance carry on, even after you have stopped performing.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/ZfCUTi1MiLgR4T7I\">Bardic performance</a> class feature.</p><p><strong>Benefit</strong>: The bonuses and penalties from your bardic performance continue for 2 rounds after you cease performing. Any other requirement, such as range or specific conditions, must still be met for the effect to continue. If you begin a new bardic performance during this time, the effects of the previous performance immediately cease.</p>",
+      "prerequisiteText": "Bardic performance class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/ZfCUTi1MiLgR4T7I",
+          "classFeatureName": "Bardic Performance",
+          "classFeatureClass": "pf1/6GjOjO6r3R06fLwE",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/F8jywnqod8RLELNO",
+      "upstreamKey": "pf1/F8jywnqod8RLELNO",
+      "pack": "feats",
+      "name": "Signature Skill (Use Magic Device)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Use Magic Device, you earn the following. </p><p><strong>5 Ranks</strong>: You can use the aid another action to assist another creature’s Use Magic Device check by attempting a check against the item’s Use Magic Device DC. </p><p><strong>10 Ranks</strong>: If you roll a natural 1 when activating an item, you take a –10 penalty on Use Magic Device checks with that item for 24 hours instead of being unable to activate it. This penalty stacks with itself. </p><p><strong>15 Ranks</strong>: You can use this skill to emulate two races or two alignments simultaneously. </p><p><strong>20 Ranks</strong>: If you roll a natural 1 when activating an item, you can reroll the check at a –10 penalty to activate the item. You must take the result of the second check, even if it is worse, and you can’t reroll it again.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "87"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/F9mKy0SmRo4bTdni",
+      "upstreamKey": "pf1/F9mKy0SmRo4bTdni",
+      "pack": "feats",
+      "name": "Defensive Combat Training",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You excel at defending yourself from all manner of combat maneuvers.</em></p><p><strong>Benefits</strong>: You treat your total Hit Dice as your base attack bonus when calculating your Combat Maneuver Defense (see Combat).</p><h3>Combat Trick</h3><p>When targeted with a combat maneuver, you can spend any number of stamina points to gain a bonus to your CMD equal to the number of stamina points you spent.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 121"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "@hitDice - @bab"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/FSDatwC1s6GoV1Sf",
+      "upstreamKey": "pf1/FSDatwC1s6GoV1Sf",
+      "pack": "feats",
+      "name": "Greater Penetrating Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Weapon",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your attacks penetrate the defenses of most foes.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/TGmNCGtnHf0icozK\">Penetrating Strike</a>, <a href=\"catalog:pf1/n250dFlbykAIAg5Z\">Weapon Focus</a>, 16th-level fighter.</p><p><strong>Benefits</strong>: Your attacks with weapons selected with Weapon Focus ignore up to 10 points of damage reduction. This amount is reduced to 5 points for damage reduction without a type (such as DR 10/ — ).</p>",
+      "prerequisiteText": "Penetrating Strike, Weapon Focus, 16th-level fighter",
+      "prerequisites": [
+        {
+          "feat": "pf1/TGmNCGtnHf0icozK",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/n250dFlbykAIAg5Z",
+          "kind": "feat"
+        },
+        {
+          "classLevel": "pf1/WLqBCT5DqmGAx8Wd",
+          "min": 16,
+          "kind": "classLevel"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 125"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "upstreamKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "pack": "feats",
+      "name": "Power Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>",
+      "prerequisiteText": "Str 13, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "-1 - floor(@bab / 4)"
+          },
+          "condition": {
+            "option": true
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Choose before attacking: take -1 on melee attacks and combat maneuver checks for +2 melee damage, increasing by -1/+2 at BAB +4 and every +4 thereafter. Damage increases 50% for the stated two-handed or Str ×1.5 primary-natural uses and halves for off-hand or secondary-natural uses. Effects last until your next turn and bonus damage does not apply to touch attacks or effects without hit point damage."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/FszchlqR39lnNduC",
+      "upstreamKey": "pf1/FszchlqR39lnNduC",
+      "pack": "feats",
+      "name": "Armor Proficiency, Light",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at wearing light armor.</em></p><p><strong>Benefits</strong>: When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Dexterity- and Strength-based skill checks.</p><p><strong>Normal</strong>: A character who is wearing armor with which he is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving.</p><p><strong>Special</strong>: All characters except monks, sorcerers, and wizards automatically have Light Armor Proficiency as a bonus feat. They need not select it.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 118"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": [
+              "lgt"
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Light armor proficiency confines armor check penalties to Strength- and Dexterity-based skill checks. Monks, sorcerers and wizards do not receive it automatically."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/FtAXizfqhTNauRYh",
+      "upstreamKey": "pf1/FtAXizfqhTNauRYh",
+      "pack": "feats",
+      "name": "Infuse Poison",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p>You can infuse a poison with a magical effect.</p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/nNVFVFRBCT4O2ab9\">Brew Potion</a>, Craft (alchemy) 5 ranks, caster level 3rd.</p><p><strong>Benefit</strong>: You can infuse an ingested poison with any spell of 3rd level or lower that you know and that targets one or more creatures and has a casting time of less than 1 minute. Infusing a poison takes 2 hours if its base price is 250 gp or less; otherwise, infusing a poison takes 1 day for each 1,000 gp in its base price. When you infuse a poison, you set the caster level, which must be sufficient to cast the spell in question and no higher than your own caster level. To infuse a poison, you must use up raw materials costing half of its base price.</p><p>When you create an infused poison, you make any choices that you would normally make when casting the spell.</p><p>Whoever ingests the infused poison is the target of the spell.</p>",
+      "prerequisiteText": "Brew Potion, Craft (alchemy) 5 ranks, caster level 3rd",
+      "prerequisites": [
+        {
+          "feat": "pf1/nNVFVFRBCT4O2ab9",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "Craft (alchemy) 5 ranks",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "caster level 3rd",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9462",
+          "pages": "12"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Infuse ingested poison with a known qualifying spell of level 3 or less, using the specified creation time, half-price materials and chosen caster level."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/GCAaufQOqpQagrSk",
+      "upstreamKey": "pf1/GCAaufQOqpQagrSk",
+      "pack": "feats",
+      "name": "Extra Mercy",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your lay on hands ability adds an additional mercy.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/WhE4j0Jc82npdMCP\">Lay on hands</a> class feature, <a href=\"catalog:pf1/Er8h3fZ2edJEviTv\">mercy</a> class feature.</p><p><strong>Benefits</strong>: Select one additional mercy for which you qualify. When you use lay on hands to heal damage to one target, it also receives the additional effects of this mercy.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take this feat, select a new mercy.</p>",
+      "prerequisiteText": "Lay on hands class feature, mercy class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/WhE4j0Jc82npdMCP",
+          "classFeatureName": "Lay on Hands",
+          "classFeatureClass": "pf1/ohptcds1d5oG6Bjh",
+          "kind": "classFeature"
+        },
+        {
+          "classFeature": "pf1/Er8h3fZ2edJEviTv",
+          "classFeatureName": "Mercy",
+          "classFeatureClass": "pf1/ohptcds1d5oG6Bjh",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Select one additional qualifying mercy; lay on hands adds its effects. Repeated selections must choose different mercies, not stack one mercy."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/GEo7nDHxddLxi66j",
+      "upstreamKey": "pf1/GEo7nDHxddLxi66j",
+      "pack": "feats",
+      "name": "Shield Slam",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>In the right position, your shield can be used to send opponents flying.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/qYv70Ch9RQfi1LQQ\">Improved Shield Bash</a>, <a href=\"catalog:pf1/WZj7zDvuelEoeXWX\">Shield Proficiency</a>, <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a>, base attack bonus +6.</p><p><strong>Benefits</strong>: Any opponents hit by your shield bash are also hit with a free bull rush attack, substituting your attack roll for the combat maneuver check (see Combat). This bull rush does not provoke an attack of opportunity. Opponents who cannot move back due to a wall or other surface are knocked prone after moving the maximum possible distance. You may choose to move with your target if you are able to take a 5-foot step or to spend an action to move this turn.</p>",
+      "prerequisiteText": "Improved Shield Bash, Shield Proficiency, Two-Weapon Fighting, base attack bonus +6",
+      "prerequisites": [
+        {
+          "feat": "pf1/qYv70Ch9RQfi1LQQ",
+          "kind": "feat"
+        },
+        {
+          "proficiency": {
+            "category": "shield"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/GUN1ISsoORAqxNOM",
+      "upstreamKey": "pf1/GUN1ISsoORAqxNOM",
+      "pack": "feats",
+      "name": "Improved Ki Throw",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your enemies are living weapons in your hands.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/dn2KgHFQRbuoNRx0\">Improved Bull Rush</a>, <a href=\"catalog:pf1/IWcbDa0ITsDdiHjo\">Ki Throw</a>.</p><p><strong>Benefit</strong>: When using the Ki Throw feat, you may throw your target into any square you threaten that is occupied by another creature. Make a bull rush combat maneuver check with a –4 penalty against the secondary target. If this check succeeds, the thrown creature lands prone in the secondary target’s square, while the secondary target is pushed back and knocked prone in an adjacent square. If the check fails, the thrown creature lands prone in the nearest square you threaten adjacent to the secondary target.</p><p>If you throw a Large or larger creature into an area containing multiple secondary targets, you take an additional penalty of –4 on your combat maneuver check for each target after the first.</p><p><strong>Special</strong>: A monk may take this as a bonus feat at 14th level.</p><h3>Combat Trick</h3><p>When using this feat to throw a target into another creature’s space, you can spend up to 6 stamina points to reduce the penalty on the bull rush attempt against the secondary target by an amount equal to the number of stamina points you spent.</p>",
+      "prerequisiteText": "Improved Bull Rush, Ki Throw",
+      "prerequisites": [
+        {
+          "feat": "pf1/dn2KgHFQRbuoNRx0",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/IWcbDa0ITsDdiHjo",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "163"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Ki Throw into an occupied threatened square requires a bull rush at -4 against the secondary target, and an additional -4 per secondary target after the first. Success displaces and knocks both prone; failure uses the nearest threatened adjacent square."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/GsjouI6B8X7BA5wN",
+      "upstreamKey": "pf1/GsjouI6B8X7BA5wN",
+      "pack": "feats",
+      "name": "Stunning Fist",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Unarmed",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You know just where to strike to temporarily stun a foe.</em></p><p><strong>Prerequisites</strong>: Dex 13, Wis 13, <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>, base attack bonus +8.</p><p><strong>Benefits</strong>: You must declare that you are using this feat before you make your attack roll (thus, a failed attack roll ruins the attempt). Stunning Fist forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + 1/2 your character level + your Wis modifier), in addition to dealing damage normally. A defender who fails this saving throw is stunned for 1 round (until just before your next turn). A stunned character drops everything held, can't take actions, loses any Dexterity bonus to AC, and takes a -2 penalty to AC. You may attempt a stunning attack once per day for every four levels you have attained (but see Special), and no more than once per round. Constructs, oozes, plants, undead, incorporeal creatures, and creatures immune to critical hits cannot be stunned.</p><p><strong>Special</strong>: A monk receives Stunning Fist as a bonus feat at 1st level, even if he does not meet the prerequisites. A monk may attempt a stunning attack a number of times per day equal to his monk level, plus one more time per day for every four levels he has in classes other than monk.</p>",
+      "prerequisiteText": "Dex 13, Wis 13, Improved Unarmed Strike, base attack bonus +8",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "ability": "wisdom",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "bab": 8,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 135"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/HMCAM3Zyo77kG8Yg",
+      "upstreamKey": "pf1/HMCAM3Zyo77kG8Yg",
+      "pack": "feats",
+      "name": "Far Shot",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are more accurate at longer ranges.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a>.</p><p><strong>Benefits</strong>: You only suffer a -1 penalty per full range increment between you and your target when using a ranged weapon.</p><p><strong>Normal</strong>: You suffer a -2 penalty per full range increment between you and your target.</p><h3>Combat Trick</h3><p>When making a single ranged attack as a standard action, you can spend 5 stamina points to ignore all range penalties on that attack.</p>",
+      "prerequisiteText": "Point-Blank Shot",
+      "prerequisites": [
+        {
+          "feat": "pf1/8rsFtye3PwM6CKli",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "attack.ranged",
+          "text": "Ranged weapon attacks take a -1 penalty per full range increment instead of -2."
+        },
+        {
+          "text": "the source’s -1 penalty per full range increment; range/distance input is outside the automatic routine contract."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/HVu9JzllWoLzKKqH",
+      "upstreamKey": "pf1/HVu9JzllWoLzKKqH",
+      "pack": "feats",
+      "name": "Forge Ring",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General",
+          "Item Creation"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can create magic rings.</i><p><strong>Prerequisites</strong>: Caster level 7th.</p><p><strong>Benefits</strong>: You can create magic rings. Crafting a ring takes 1 day for each 1,000 gp in its base price. To craft a ring, you must use up raw materials costing half of the base price. See the magic item creation rules in Magic Items for more information.</p><p>You can also mend a broken ring if it is one that you could make. Doing so costs half the raw materials and half the time it would take to forge that ring in the first place.</p>",
+      "prerequisiteText": "Caster level 7th",
+      "prerequisites": [
+        {
+          "unchecked": "Caster level 7th",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/HbfpROYGuhT2OLIQ",
+      "upstreamKey": "pf1/HbfpROYGuhT2OLIQ",
+      "pack": "feats",
+      "name": "Greater Reposition",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>When you reposition foes, they are left vulnerable to the attacks of your allies.</em></p><p><strong>Prerequisites:</strong> Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>, <a href=\"catalog:pf1/CYHloH6aEnfgdxAV\">Improved Reposition</a>, base attack bonus +6.</p><p><strong>Benefit:</strong> You receive a +2 bonus on checks made to reposition a foe. This bonus stacks with the bonus granted by Improved Reposition. Whenever you reposition a foe, his movement provokes attacks of opportunity from all of your allies (but not you).</p><p><strong>Normal:</strong> Creatures moved by reposition do not provoke attacks of opportunity.</p><h3>Combat Trick</h3><p>You can select this feat even if you don’t meet the ability score prerequisite (Intelligence 13). You gain the benefits of this feat only as long as you have at least 1 stamina point in your stamina pool. When attempting to reposition a foe, you can spend 5 stamina points to increase your melee reach by 5 feet for the purpose of determining where you can move the foe.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise, Improved Reposition, base attack bonus +6",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/CYHloH6aEnfgdxAV",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "161"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "121"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "reposition"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Repositioned foes provoke attacks of opportunity from all your allies, not from you. The +2 reposition-check bonus stacks with Improved Reposition."
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/iyYyc3rKW0cBZ1cs",
+      "upstreamKey": "pf1/iyYyc3rKW0cBZ1cs",
+      "pack": "class-abilities",
+      "name": "Rogue's Edge (UC)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill.</p>\n<p>At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Rogue (Unchained)"
+              ]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor(@class.level / 5)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/zOxJqI5CG4VoycmQ",
+      "upstreamKey": "pf1/zOxJqI5CG4VoycmQ",
+      "pack": "feats",
+      "name": "Signature Skill",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your ability with a particular skill is the stuff of legends, and you can do things with that skill that others cannot.</em></p><p><b>Prerequisites</b>: 5 ranks in the chosen skill.</p><p><b>Benefit</b>: Choose one skill. You gain the ability listed in that skill’s 5 Ranks entry. As you gain more ranks in the chosen skill, you gain additional abilities. If you have 10 or more ranks in the chosen skill, you gain the appropriate abilities immediately. If your chosen skill is Craft, Knowledge, Perform, or Profession, you gain the listed powers only for one category of that skill, such as Craft (bows). This feat can be taken only once, but it stacks with the rogue’s edge ability and the cutting edge rogue talent.</p>",
+      "prerequisiteText": "5 ranks in the chosen skill",
+      "prerequisites": [
+        {
+          "unchecked": "5 ranks in the chosen skill",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "82"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Imported feat.detail.repeatable stays unreviewed instead of the source one-time selection constraint (#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Choose one skill; unlock its 5-rank ability, gaining the later abilities as ranks increase, immediately gaining those already qualified for. Craft, Knowledge, Perform and Profession apply to one category only. Take this feat only once; it stacks with rogue’s edge and cutting edge."
+        }
+      ]
+    }
+  ]
+}

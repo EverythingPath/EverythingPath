@@ -1,0 +1,53 @@
+_id: ftk1lfeflos25q4s
+_key: '!items!ftk1lfeflos25q4s'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Chord of Shards
+system:
+  actions:
+    - _id: 7n6az7127p62qmxf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - piercing
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>During your bardic performance, you can strike a chord whose notes
+      transform into a shower of razor sharp, crystalline shards. The shards
+      deal 2d6 points of piercing damage to all creatures caught in the area of
+      effect.</p>
+  learnedAt:
+    class:
+      bard: 1
+      skald: 1
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '211'
+  sr: false
+type: spell

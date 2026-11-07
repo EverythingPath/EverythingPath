@@ -1,0 +1,71 @@
+_id: QK5CNiDmMqT3cdFB
+_key: '!items!QK5CNiDmMqT3cdFB'
+_stats:
+  coreVersion: '12.331'
+folder: RXJPpac5E8PiR8Qt
+img: systems/pf1/icons/races/halfling.png
+name: Unlucky Halfling
+system:
+  actions:
+    - _id: ImJlhDtgzPdUUgvJ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.wjdhmfdgwrevax3w]{ill omen}
+        </p><p>You afflict the target with bad luck. On the next d20 roll the
+        target makes, it must roll twice and take the less favorable result. For
+        every five caster levels you have, the target must roll twice on an
+        additional d20 roll (to a maximum of five rolls at 20th level).</p><p>A
+        target who can speak and has at least one free hand and who is aware of
+        the spell and its effects (such as from a Spellcraft check to identify
+        the spell as it is cast) can negate one reroll by spending a move action
+        to utter a brief prayer or good luck charm to appease the spirits of ill
+        fortune.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Ill omen
+      range:
+        units: close
+        value: 25 + (floor(@attributes.hd.total / 2) *5)
+      target:
+        value: one creature
+  changes:
+    - _id: ikRxIhT8
+      formula: '-1'
+      target: allSavingThrows
+      type: untypedPerm
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        +[[1]] Racial bonus to the save DC of all curse spells and spell-like
+        abilities.
+    - target: cl
+      text: >-
+        +[[1]] Racial bonus to the caster level of all curse spells and
+        spell-like abilities.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Halfling<br /><strong>Replaced
+      Trait(s)</strong>: Halfling Luck</p><hr /><p>These halflings take a -1
+      penalty on saving throws but also gain a +1 racial bonus to the caster
+      level and save DC of all curse spells and spell-like abilities. In
+      addition, such halflings can use
+      <em>@UUID[Compendium.pf1.spells.Item.wjdhmfdgwrevax3w]{ill omen}</em> as a
+      spell-like ability once per day. This racial trait replaces halfling
+      luck.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '213'
+  subType: racial
+  tags:
+    - Halfling
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

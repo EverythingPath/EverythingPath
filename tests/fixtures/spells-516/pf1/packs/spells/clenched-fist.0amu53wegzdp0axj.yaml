@@ -1,0 +1,122 @@
+_id: 0amu53wegzdp0axj
+_key: '!items!0amu53wegzdp0axj'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/skills/melee/unarmed-punch-fist-blue.webp
+name: Clenched Fist
+system:
+  actions:
+    - _id: e71yh3e91dn3s2cb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 10-ft. hand
+      name: Use
+      range:
+        units: medium
+    - _id: aZCrEsL6CUaeBo3f
+      ability:
+        attack: _key
+      actionType: msak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      attackBonus: 11[Hand's Strength] - 1[Large] - @sizeBonus[Caster's Size]
+      bab: '@cl'
+      damage:
+        parts:
+          - formula: 1d8 + 11[Strength]
+            types:
+              - untyped
+      name: Strike
+      notes:
+        footer:
+          - Stunned for 1 round on failed Fortitude save.
+      save:
+        description: Fortitude partial; see text
+        type: fort
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 2VnCu7SSsfNmfWon
+      ability:
+        critRange: null
+      actionType: mcman
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      attackBonus: 11[Hand's Strength] + 1[Large] - @sizeBonus[Caster's Size]
+      bab: '@cl'
+      duration:
+        units: inst
+      name: Bull Rush
+      range:
+        units: melee
+      target:
+        value: One Creature
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: b8NB6v1YNJQ0JtrE
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Redirect Fist
+      range:
+        units: unlimited
+      target:
+        value: One Creature
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.wu4y1ilg6iq28cr6]{interposing hand},
+      except that the hand can also push or strike one opponent that you select.
+      The floating hand can move as far as 60 feet and can attack in the same
+      round. Since this hand is directed by you, its ability to notice or attack
+      invisible or concealed creatures is no better than yours.</p><p>The hand
+      attacks once per round, and its attack bonus equals your caster level +
+      your Intelligence, Wisdom, or Charisma modifier (for a wizard, cleric, or
+      sorcerer, respectively) + 11 for the hand's Strength score (33), -1 for
+      being Large. The hand deals 1d8+11 points of damage on each attack, and
+      any creature struck must make a Fortitude save (against this spell's save
+      DC) or be stunned for 1 round. Directing the spell to a new target is a
+      move action.</p><p>The <em>clenched fist</em> can also interpose itself as
+      <em>interposing hand</em> does, or it can bull rush an opponent as
+      @UUID[Compendium.pf1.spells.Item.aoov6nqfm195txdb]{forceful hand} does.
+      Its CMB for bull rush checks uses your caster level in place of its base
+      attack bonus, with a +11 bonus for its Strength score and a +1 bonus for
+      being Large.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 8
+      psychic: 8
+      sorcerer: 8
+      wizard: 8
+    domain:
+      Strength: 8
+  level: 8
+  materials:
+    focus: a leather glove
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '255'
+type: spell

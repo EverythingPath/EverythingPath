@@ -1,0 +1,63 @@
+_id: TZbQBkbZposL3m24
+_key: '!items!TZbQBkbZposL3m24'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/wind-grasp-air-2.jpg
+name: Channel Vigor (Spirit)
+system:
+  changes:
+    - _id: 7yv0dcd8
+      formula: '6'
+      target: will
+      type: competence
+    - _id: wgws3b8p
+      formula: '6'
+      target: skill.blf
+      type: competence
+    - _id: h8mkn78o
+      formula: '6'
+      target: skill.int
+      type: competence
+  description:
+    instructions: >-
+      <p>Deactivate active buff and activate the desired variant upon
+      choice.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.tj3xdnlwtgk5ecln]{Channel
+      Vigor}</p><p>When you cast the spell, choose one of the following portions
+      of your self as your focus target. Thereafter, you may change the focus
+      target as a move action. You can gain the benefit of only one <em>channel
+      vigor</em> spell at a time.</p><ul><li><em>Limbs</em>: You gain the
+      benefits of a haste spell.</li><li><em>Mind</em>: You gain a +4 competence
+      bonus on Knowledge and Perception skill checks and on ranged attack
+      rolls.</li><li><em>Spirit</em>: You gain a +6 competence bonus on Will
+      saving throws and Bluff and Intimidate checks.</li><li><em>Torso</em>: You
+      gain a +6 competence bonus on Fortitude saving throws and concentration
+      checks.</li></ul><p><strong>Haste</strong>: When making a full attack
+      action, you may make one extra attack with one natural or manufactured
+      weapon at your highest base attack bonus. This effect is not cumulative
+      with similar effects, such as that provided by a speed weapon.</p>
+  level: 5
+  scriptCalls:
+    - _id: BVThLSanqI7blVe6
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Others
+      type: script
+      value: |-
+        if(state) {
+          const otherBuffTags = [
+            "channelVigorLimbs",
+            "channelVigorMind",
+            "channelVigorSpirit",
+            "channelVigorTorso"
+          ];
+
+          const otherBuffs = actor.itemTypes.buff.filter(b => otherBuffTags.includes(b.system.tag) && b.system.tag !== item.system.tag);
+          otherBuffs.forEach(async (buff) => { await buff.setActive(false) });
+        }
+  subType: spell
+  tag: channelVigorSpirit
+type: buff

@@ -1,0 +1,41 @@
+_id: M6714EOSXqjOoMwp
+_key: '!items!M6714EOSXqjOoMwp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Cinder Dance
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Oracle
+      - Shaman
+  changes:
+    - _id: F9U6KbKf
+      formula: '10'
+      target: landSpeed
+      type: untyped
+    - _id: Cxo4zlbK
+      formula: min(floor(@class.level / 5), 2)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>Your base speed increases by 10 feet.</p><p>At 5th level, you receive
+      @UUID[Compendium.pf1.feats.VMVAqGze4cs3naya]{Nimble Moves} as a bonus
+      feat.</p><p>At 10th level, you receive
+      @UUID[Compendium.pf1.feats.B6wEQOUMv2ifm2Nj]{Acrobatic Steps} as a bonus
+      feat. You do not need to meet the prerequisites to receive these
+      feats.</p><hr /><p><strong>Oracles only</strong>: Oracles with the
+      @UUID[Compendium.pf1.class-abilities.Item.u9KUlA4J4xUm8Wj8]{lame} oracle
+      curse cannot select this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: '47'
+  subType: classFeat
+  tags:
+    - Revelation
+    - Flame Mystery
+    - Flame Spirit
+    - Shaman Spirit Hex
+type: feat

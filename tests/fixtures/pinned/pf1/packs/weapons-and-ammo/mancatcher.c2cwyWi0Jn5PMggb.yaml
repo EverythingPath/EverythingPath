@@ -1,0 +1,68 @@
+_id: c2cwyWi0Jn5PMggb
+_key: '!items!c2cwyWi0Jn5PMggb'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/mancatcher.png
+name: Mancatcher
+system:
+  actions:
+    - _id: g555cwfk4pg9q0f4
+      ability:
+        attack: _default
+        critMult: 1
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 2, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Mancatcher
+  description:
+    unidentified: >-
+      <p>This polearm consists of two curved metal bands that close around a
+      target when you attack, allowing you to bind an opponent. A mancatcher is
+      built to capture a creature of a particular size category (such as Small
+      or Medium) and doesn't work on creatures of the wrong size. Make a touch
+      attack to hit an opponent and a combat maneuver check to grapple him
+      (without the -4 penalty for not having two hands free); success means you
+      and the target are grappled. Once the target is grappled, you can perform
+      a move or damage grapple action against him. The mancatcher has hardness
+      10 and 5 hit points; breaking it requires a DC 26 Strength check. If you
+      drop the mancatcher, the target can free himself as a standard action.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    rch: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon
