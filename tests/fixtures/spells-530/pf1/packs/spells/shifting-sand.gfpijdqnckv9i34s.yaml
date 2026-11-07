@@ -1,0 +1,69 @@
+_id: gfpijdqnckv9i34s
+_key: '!items!gfpijdqnckv9i34s'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Shifting Sand
+system:
+  actions:
+    - _id: snbhmbylznn6slox
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft. spread
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates; see text
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause an earthen or sandy surface to shift and churn within the
+      area. The <i>shifting sand</i> obliterates tracks and is considered
+      difficult terrain. Acrobatics checks in the area take a penalty equal to
+      your caster level (maximum +10). Creatures entering or beginning their
+      turn in the <i>shifting sand</i> must make a Reflex save each round or
+      become entangled until the beginning of their next turn. If they attempt
+      to move while entangled, they must make a second Reflex save or fall
+      prone. Creatures with the stability racial trait (like dwarves) may apply
+      it as a bonus on their saving throws.</p><p>As a move action, you may move
+      the area of <i>shifting sand</i> up to 10 feet in any direction. Creatures
+      that are entangled or prone in the spell's area are carried along with the
+      <i>shifting sand</i> in the same direction if possible. This movement does
+      not provoke attacks of opportunity. Unattended Medium or smaller objects
+      may also be carried along or shallowly buried by the <i>shifting
+      sand</i>.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a handful of sand
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '243'
+  sr: false
+type: spell

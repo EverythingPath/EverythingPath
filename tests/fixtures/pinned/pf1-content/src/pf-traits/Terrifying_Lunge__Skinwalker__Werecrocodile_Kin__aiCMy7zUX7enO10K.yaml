@@ -1,0 +1,52 @@
+_id: aiCMy7zUX7enO10K
+_key: '!items!aiCMy7zUX7enO10K'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Terrifying Lunge (Skinwalker; Werecrocodile-Kin)
+system:
+  actions:
+    - _id: vlgisYE38nL02rLq
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: demoralize
+  classSkills:
+    int: true
+  contextNotes:
+    - target: melee
+      text: >-
+        Once per day, when you hit a flat-footed foe with a melee attack, you
+        can make an Intimidate check to demoralize that foe as a swift action
+  description:
+    value: >-
+      <p><em>Once badly bitten by a stronger werecrocodile-kin, you learned the
+      importance of showing your
+      strength.</em></p><p><strong>Requirements</strong>: Werecrocodile-Kin
+      Skinwalker Heritage</p><p><strong>Benefits</strong>: Once per day, when
+      you hit a flat-footed foe with a melee attack, you can make an Intimidate
+      check to demoralize that foe as a swift action. Intimidate becomes a class
+      skill for you.</p>
+  scriptCalls:
+    - _id: pCdtl4CIeFH3RZ43
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("int");
+  sources:
+    - id: PZO9439
+      pages: '15'
+  subType: trait
+  tags:
+    - Skinwalker
+    - Werecrocodile-Kin
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

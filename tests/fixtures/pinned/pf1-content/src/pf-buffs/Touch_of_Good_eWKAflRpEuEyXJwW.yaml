@@ -1,0 +1,36 @@
+_id: eWKAflRpEuEyXJwW
+_key: '!items!eWKAflRpEuEyXJwW'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/light_08.jpg
+name: Touch of Good
+system:
+  changes:
+    - _id: 1r623dkc
+      formula: (max(1, floor(@item.level / 2)))
+      target: attack
+      type: sacred
+    - _id: s8ptzg14
+      formula: (max(1, floor(@item.level / 2)))
+      target: skills
+      type: sacred
+    - _id: y7590o6f
+      formula: (max(1, floor(@item.level / 2)))
+      target: allChecks
+      type: sacred
+    - _id: g8qak5rw
+      formula: (max(1, floor(@item.level / 2)))
+      target: allSavingThrows
+      type: sacred
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.7td8qAPvj9YEasha]{Touch of
+      Good}</p><p>Gain a Sacred bonus on attack rolls, skill checks, ability
+      checks, and saving throws equal to half the caster's level (minimum 1) for
+      1 round.</p>
+  duration:
+    units: round
+    value: '1'
+  level: 1
+type: buff
