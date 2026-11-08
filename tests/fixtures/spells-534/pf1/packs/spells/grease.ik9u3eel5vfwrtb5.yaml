@@ -1,0 +1,75 @@
+_id: ik9u3eel5vfwrtb5
+_key: '!items!ik9u3eel5vfwrtb5'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-fall-slip-prone.webp
+name: Grease
+system:
+  actions:
+    - _id: cyb5r8x93d97urfn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: rect
+      name: Use
+      range:
+        units: close
+      save:
+        description: see text
+        type: ref
+      target:
+        value: one object or 10-ft. square
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A <i>grease</i> spell covers a solid surface with a layer of slippery
+      <i>grease</i>. Any creature in the area when the spell is cast must make a
+      successful Reflex save or fall. A creature can walk within or through the
+      area of <i>grease</i> at half normal speed with a DC 10 Acrobatics check.
+      Failure means it can't move that round (and must then make a Reflex save
+      or fall), while failure by 5 or more means it falls (see the Acrobatics
+      skill for details). Creatures that do not move on their turn do not need
+      to make this check and are not considered flat-footed.</p><p>The spell can
+      also be used to create a greasy coating on an item.</p><p>Material objects
+      not in use are always affected by this spell, while an object wielded or
+      employed by a creature requires its bearer to make a Reflex saving throw
+      to avoid the effect. If the initial saving throw fails, the creature
+      immediately drops the item. A saving throw must be made in each round that
+      the creature attempts to pick up or use the <i>grease</i>d item. A
+      creature wearing <i>grease</i>d armor or clothing gains a +10 circumstance
+      bonus on Escape Artist checks and combat maneuver checks made to escape a
+      grapple, and to their CMD to avoid being grappled.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      magus: 1
+      mesmerist: 1
+      skald: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      wizard: 1
+  materials:
+    value: butter
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '291'
+  sr: false
+  subschool:
+    - creation
+type: spell

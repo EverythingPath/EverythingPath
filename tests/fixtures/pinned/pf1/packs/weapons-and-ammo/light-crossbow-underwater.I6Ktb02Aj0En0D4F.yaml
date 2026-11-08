@@ -1,0 +1,63 @@
+_id: I6Ktb02Aj0En0D4F
+_key: '!items!I6Ktb02Aj0En0D4F'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/crossbow-light.PNG
+name: Light Crossbow (Underwater)
+system:
+  actions:
+    - _id: 7dge7avoykxmhu8o
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Light Crossbow
+  description:
+    unidentified: >-
+      <p>An underwater light crossbow functions like its normal counterpart
+      above water, and can be used underwater. When fired underwater, the
+      crossbow has a range increment of 20 feet. Anyone proficient with a normal
+      light crossbow can use an underwater light crossbow.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 70
+  sources:
+    - id: PZO9452
+      pages: '0'
+  tags:
+    - Underwater
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,49 @@
+_id: gquzbutzeh5ezxap
+_key: '!items!gquzbutzeh5ezxap'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Debilitating Pain
+system:
+  actions:
+    - _id: avzbjpc1uxupsjda
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: floor(@cl / 3)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target is overcome with intense pain, causing it to be stunned on a
+      failed save or dazed for 1 round on a successful save.</p>
+  descriptors:
+    - mindAffecting
+    - pain
+  learnedAt:
+    class:
+      psychic: 3
+      witch: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '10'
+  subschool:
+    - compulsion
+type: spell

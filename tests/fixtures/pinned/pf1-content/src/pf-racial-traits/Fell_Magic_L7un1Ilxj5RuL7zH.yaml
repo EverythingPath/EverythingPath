@@ -1,0 +1,186 @@
+_id: L7un1Ilxj5RuL7zH
+_key: '!items!L7un1Ilxj5RuL7zH'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Fell Magic
+system:
+  actions:
+    - _id: JH51IN8gpK4Wsz6C
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Wisdom score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.n390v9tbwxya1tz4]{bleed},</p><p>You
+        cause a living creature that is below 0 hit points but stabilized to
+        resume dying. Upon casting this spell, you target a living creature that
+        has -1 or fewer hit points. That creature begins dying, taking 1 point
+        of damage per round. The creature can be stabilized later normally. This
+        spell causes a creature that is dying to take 1 point of damage.</p>
+      duration:
+        units: inst
+      name: Bleed
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.wis.mod +10'
+        description: Negates
+        type: will
+      target:
+        value: one living creature
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+          value: 1
+    - _id: MhFBz9mXfyJp0Z6U
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - negative
+          - formula: '1'
+            types:
+              - Strength
+      description: >-
+        <p>If you have a Wisdom score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.to1cdmyh5rtfyg2s]{chill touch}</p><p>A
+        touch from your hand, which glows with blue energy, disrupts the life
+        force of living creatures. Each touch channels negative energy that
+        deals 1d6 points of damage. The touched creature also takes 1 point of
+        Strength damage unless it makes a successful Fortitude saving throw. You
+        can use this melee touch attack up to one time per level.</p><p>An
+        undead creature you touch takes no damage of either sort, but it must
+        make a successful Will saving throw or flee as if panicked for 1d4
+        rounds + 1 round per caster level.</p>
+      duration:
+        units: inst
+      name: Chill Touch
+      notes:
+        effect:
+          - >-
+            Each touch channels negative energy that deals 1d6 points of damage.
+            The touched creature also takes [[1]] point of Strength damage
+            unless it makes a successful Fortitude saving throw. You can use
+            this melee touch attack up to one time per level.
+          - >-
+            An undead creature you touch takes no damage of either sort, but it
+            must make a successful Will saving throw or flee as if
+            @Condition[panicked] for [[1d4 + @attributes.hd.total]] rounds
+      range:
+        units: touch
+      save:
+        dc: '@abilities.wis.mod +11'
+        description: Fortitude partial or Will negates; see text
+        type: fort
+      target:
+        value: creature or creatures touched (up to one/level)
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+          value: 1
+    - _id: 4lTM5OHo8snBLVe9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one creature, one object, or a 5 ft (1.5 m) cube
+      description: >-
+        <p>If you have a Wisdom score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{detect
+        poison},</p><p>You determine whether a creature, object, or area has
+        been poisoned or is poisonous. You can determine the exact type of
+        poison with a DC 20 Wisdom check. A character with the Craft (alchemy)
+        skill may try a DC 20 Craft (alchemy) check if the Wisdom check fails,
+        or may try the Craft (alchemy) check prior to the Wisdom check. The
+        spell can penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch
+        of common metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood
+        or dirt blocks it.</p><p>@Distance[5 ft;dual]</p>
+      duration:
+        units: inst
+      name: Detect Poison
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one creature, one object, or a 5 ft (1.5 m) cube
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+          value: 1
+    - _id: 54XvkWdAElUVe24g
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Wisdom score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.t1w2zq5fx7mislq8]{touch of fatigue}.
+        </p><p>You channel negative energy through your touch, fatiguing the
+        target. You must succeed on a touch attack to strike a target. The
+        subject is immediately @Condition[fatigued] for the spell's
+        duration.</p><p>This spell has no effect on a creature that is already
+        fatigued.</p><p>Unlike with normal fatigue, the effect ends as soon as
+        the spell's duration expires.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Touch of Fatigue
+      notes:
+        effect:
+          - >-
+            You channel negative energy through your touch, fatiguing the
+            target. You must succeed on a touch attack to strike a target. The
+            subject is immediately fatigued for the spell's duration.  This
+            spell has no effect on a creature that is already fatigued.  Unlike
+            with normal fatigue, the effect ends as soon as the spell's duration
+            expires.
+      range:
+        units: touch
+      save:
+        dc: '@abilities.wis.mod +10'
+        description: Negates
+        type: fort
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p>Members of this race gain +1 to the DC of any saving throws against
+      necromancy spells that they cast. Members of this race with a Wisdom score
+      of 11 or higher also gain the following spell-like abilities: 1/day—bleed,
+      chill touch, detect poison, touch of fatigue. The caster level for these
+      effects is equal to the user’s character level. The DC for these
+      spell-like abilities is equal to 10 + the spell’s level + the user’s
+      Wisdom modifier.</p>
+  racePoints: 3
+  sources:
+    - id: PZO1121
+      pages: '228'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.wis.total, 11)
+    per: day
+    value: 0
+type: feat

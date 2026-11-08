@@ -1,0 +1,94 @@
+_id: e8zen5nzixnt7bde
+_key: '!items!e8zen5nzixnt7bde'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Horrid Wilting
+system:
+  actions:
+    - _id: pelxmy1hk3nh8dka
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Cast
+      range:
+        units: long
+      save:
+        description: Fortitude half
+        type: fort
+      target:
+        value: living creatures, no two of which can be more than 60 ft. apart
+    - _id: BR7cFsdZINXKSiZb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(20, @cl))d8
+            types:
+              - untyped
+      description: >-
+        <p>Damage to Water Elementals & Plant Creatures.</p><p><em>Note: This
+        action does not cast the spell.</em></p>
+      duration:
+        units: inst
+      name: Alternate Damage
+      range:
+        units: long
+      save:
+        description: Fortitude half
+        type: fort
+      target:
+        value: living creatures, no two of which can be more than 60 ft. apart
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell evaporates moisture from the body of each subject living
+      creature, causing flesh to wither and crack and crumble to dust. This
+      deals 1d6 points of damage per caster level (maximum 20d6). This spell is
+      especially devastating to water elementals and plant creatures, which
+      instead take 1d8 points of damage per caster level (maximum 20d8).</p>
+  learnedAt:
+    bloodline:
+      Daemon: 8
+      Pestilence: 8
+      Undead: 8
+    class:
+      arcanist: 8
+      shaman: 8
+      sorcerer: 8
+      witch: 8
+      wizard: 8
+    domain:
+      Water: 8
+    subDomain:
+      Plague: 8
+      Radiation: 4
+  level: 8
+  materials:
+    value: a bit of sponge
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '298'
+type: spell
