@@ -1,0 +1,115 @@
+_id: EQELT4ORTRAZs06D
+_key: '!items!EQELT4ORTRAZs06D'
+_stats:
+  coreVersion: '12.331'
+folder: d4bGSdKKLFXKTGuf
+img: systems/pf1/icons/races/half-elf.png
+name: Drow Magic
+system:
+  actions:
+    - _id: aZDVj3eWGDloQjXI
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Half-elves with this trait have drow blood somewhere in their
+        background, and can cast
+        @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+        @UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}, and
+        @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire} each
+        once per day, using the half-elf's character level as the caster level
+        for these spell-like abilities</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights
+      range:
+        units: ft
+        value: '@attributes.hd.total * 10 + 100'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: jz10QeliwUp1InZn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20' radius
+      description: >-
+        <p>Half-elves with this trait have drow blood somewhere in their
+        background, and can cast
+        @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+        @UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}, and
+        @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire} each
+        once per day, using the half-elf's character level as the caster level
+        for these spell-like abilities</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Darkness
+      target:
+        value: object touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: qLmIcYlxHwartXOo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5' radius burst
+      description: >-
+        <p>Half-elves with this trait have drow blood somewhere in their
+        background, and can cast
+        @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+        @UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}, and
+        @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire} each
+        once per day, using the half-elf's character level as the caster level
+        for these spell-like abilities</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Faerie Fire
+      range:
+        units: ft
+        value: '@attributes.hd.total *40 +400'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Half-Elf<br /><strong>Replaced
+      Trait(s)</strong>: Adaptability, Multitalented</p><hr /><p>A few
+      half-elves with drow ancestry exhibit the innate magic of that race.
+      Half-elves with this trait have drow blood somewhere in their background,
+      and can cast
+      <em>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+      lights}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}</em>, and
+      <em>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire}
+      </em>each once per day, using the half-elf's character level as the caster
+      level for these spell-like abilities. This racial trait replaces the
+      adaptability and multitalented racial traits.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '42'
+  subType: racial
+  tags:
+    - Half-Elf
+    - Darkborn
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+type: feat

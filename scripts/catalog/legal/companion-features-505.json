@@ -1,0 +1,2917 @@
+{
+  "ticket": "https://github.com/AndreasUnunger/EverythingPath/issues/505",
+  "reviewedBy": "Opus (AI curator) for the owner",
+  "reviewedOn": "2026-10-20",
+  "pinnedSources": [
+    {
+      "repo": "pf1",
+      "tag": "v11.11",
+      "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d"
+    },
+    {
+      "repo": "pf1-content",
+      "tag": "11.4.0",
+      "commit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d"
+    }
+  ],
+  "comparisonSources": {
+    "allowed": ["PRD", "PCGen", "books"],
+    "prohibited": ["Archives of Nethys"],
+    "pcgenCommit": "25523dbcf10e86c280fc0f447167ea43d67419d3",
+    "pcgenFiles": [
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_companionmods_familiar_cr.lst",
+        "sha256": "26a4eef235ca946fe905cf7386cf930c6b2d31d7702ca313e6ada21425fff49b"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+        "sha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst",
+        "sha256": "5ad62f0183b3005a452c93c4d954bcad97033f92dfb8276f214c1c321831db7f"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst",
+        "sha256": "6da07d57030565fec332991219192133f06d699a960d9d2cb9a5da9e9282bb31"
+      }
+    ],
+    "prd": "The PRD capture prd-2026-10-18 has no Core Rulebook pages, so no PRD comparison is recorded."
+  },
+  "reviewBoundary": "All ten complete pinned companion-features bodies (the Familiar record and its nine familiar abilities) and their inert fields reviewed, with the folder record. All cite the Core Rulebook (PZO1110 p.83). PCGen Core Rulebook rows (core_essentials/ce_abilities_familiar_cr.lst, ce_companionmods_familiar_cr.lst and core_rulebook/cr_abilities_class.lst, each declaring SOURCELONG:Core Rulebook) reproduce every ability body and the Familiar's first four paragraphs; the Familiar Basics and table are supported by its companion-mod and ability rows. The PRD capture has no Core Rulebook pages and no book PDFs are available. Eight abilities are admitted under the owner's Core Rulebook policy (2026-10-13). A record whose bound closure keeps Unchained action-cost metadata requires PZO1131 and stays held on it: Scry on Familiar (its own action and the scrying spell) and the Familiar (through Scry on Familiar). Familiar statistics are calculated on the companion by the familiar calculation (#326); these resources carry the rules text. The folder record is excluded. Calculation gaps remain outstanding, never legal holds.",
+  "noticeRequirements": [
+    {
+      "book": "PZO1110",
+      "title": "Core Rulebook",
+      "status": "existing-reviewed",
+      "registryKeys": [
+        "CRB",
+        "pf1-content/notice/8dd5fab68911640215309a2982334c9a51203102bee87397d60992ea13717aed"
+      ],
+      "holdId": null,
+      "bibliographicEvidence": {
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/module/registry/sources.mjs#L107",
+        "line": 107,
+        "literalQuote": "_id: \"PZO1110\",\n      name: \"Core Rulebook\"",
+        "role": "Publication identity only, not rule provenance or complete notice-chain proof."
+      },
+      "registryIdentityEvidence": [
+        {
+          "key": "CRB",
+          "textSha256": "415f9be2652d77f942364bdd6762f1e24409b59d93c97f31b21a1c07f8ab0f86",
+          "provenance": [
+            "https://gitlab.com/foundryvtt_pathfinder1e/pf1-content/-/blob/11.4.0/OGL.txt",
+            "sha256:10bcdc68296b48cc250f38e49de09c9a73645163d7ac7f76e77346a755c35cdc",
+            "Offline comparison against the exact Pathfinder RPG Core Rulebook Section15 line in src/lib/catalog/data/resources.json (pf1-content compilation). The inherited OGL and SRD lines remain in shipped legal resources; not printed-book verification."
+          ]
+        },
+        {
+          "key": "pf1-content/notice/8dd5fab68911640215309a2982334c9a51203102bee87397d60992ea13717aed",
+          "textSha256": "8dd5fab68911640215309a2982334c9a51203102bee87397d60992ea13717aed",
+          "provenance": [
+            "Reviewed by Sol (AI curator) for the owner on 2026-10-07.",
+            "scripts/catalog/legal/inherited-notices-265.json",
+            "https://github.com/AndreasUnunger/EverythingPath/issues/265",
+            "https://gitlab.com/foundryvtt_pathfinder1e/pf1-content/-/blob/02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d/OGL.txt#L56",
+            "pf1-content/OGL.txt:56; tag 11.4.0; commit 02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d; file sha256:10bcdc68296b48cc250f38e49de09c9a73645163d7ac7f76e77346a755c35cdc; line sha256:8dd5fab68911640215309a2982334c9a51203102bee87397d60992ea13717aed",
+            "Checked verbatim wording, copyright date, contributor names and punctuation against the pinned pf1-content compilation; no printed-book verification.",
+            "Complete physical notice line, not a heading or wrapped fragment; no joining required. No byte-identical system notice, product-code or book-title alias is established.",
+            "Review covers this inherited notice block only, not a book’s complete inherited notice chain or any Catalog Entry’s Attribution Assessment.",
+            "https://gitlab.com/foundryvtt_pathfinder1e/pf1-content/-/blob/02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d/OGL.txt#L415",
+            "The separate Pathfinder RPG Core Rulebook line at OGL.txt:415 is the source for the existing CRB/PZO1110 Registry record. This line retains its literal © 2010 and Jason Buhlman wording; no cross-variant alias or printed correction is approved. See notice-265-core-rulebook-variant-comparison."
+          ]
+        }
+      ],
+      "candidates": [
+        "pf1/B4tsrPOAtyEOmwAr",
+        "pf1/EbgtpUXqVup5iXeD",
+        "pf1/GgqfqGq8vopOdN32",
+        "pf1/OrbV3Q6U2BdnL8tR",
+        "pf1/XttM5JcGilkhdFCW",
+        "pf1/YtzidlXTKvVyiNcY",
+        "pf1/iYSmTvVIXZt2uMov",
+        "pf1/mUPO7LpDVJtOoP4W",
+        "pf1/ooxP3ifhV6kC0wTM",
+        "pf1/yNMQccEicirDocG7"
+      ],
+      "boundary": "Existing reviewed CRB notice; no new review."
+    },
+    {
+      "book": "PZO1131",
+      "title": "Pathfinder Unchained",
+      "status": "held-complete-chain",
+      "registryKeys": [
+        "pf1-content/notice/6f81aca96be61467bd8a9bb23af4573934cd649d8e46fa10010f26fb105429f7"
+      ],
+      "holdId": "companion-features-505-notice-PZO1131-complete-chain",
+      "bibliographicEvidence": {
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/module/registry/sources.mjs#L239",
+        "line": 239,
+        "literalQuote": "_id: \"PZO1131\",\n      name: \"Pathfinder Unchained\"",
+        "role": "Publication identity only, not rule provenance or complete notice-chain proof."
+      },
+      "registryIdentityEvidence": [
+        {
+          "key": "pf1-content/notice/6f81aca96be61467bd8a9bb23af4573934cd649d8e46fa10010f26fb105429f7",
+          "textSha256": "6f81aca96be61467bd8a9bb23af4573934cd649d8e46fa10010f26fb105429f7",
+          "provenance": [
+            "Reviewed by Sol (AI curator) for the owner on 2026-10-09.",
+            "scripts/catalog/legal/inherited-notices-289.json",
+            "https://gitlab.com/foundryvtt_pathfinder1e/pf1-content/-/blob/02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d/OGL.txt#L421",
+            "raw line sha256:6f81aca96be61467bd8a9bb23af4573934cd649d8e46fa10010f26fb105429f7"
+          ]
+        }
+      ],
+      "candidates": ["pf1/EbgtpUXqVup5iXeD", "pf1/mUPO7LpDVJtOoP4W"],
+      "boundary": "Existing identities only (as recorded in scripts/catalog/legal/racial-traits-392.json). Pending Unchained notice (S-02, #736) stays held; complete inherited book chain unverified; no book PDFs available."
+    }
+  ],
+  "noticeBoundary": "Observed minimum dependencies only. Every body requires the reviewed Core Rulebook notice; PZO1131 is the pending Unchained notice and stays held. Registry is unchanged and no existing hold is lifted; no identity is claimed from a title match.",
+  "candidates": [
+    {
+      "externalKey": "pf1/B4tsrPOAtyEOmwAr",
+      "name": "Share Spells",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!B4tsrPOAtyEOmwAr",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml",
+        "sha256": "baf938d725090c9763f52785af28108649cdd92ebd0a0f80bb967eaf905bc54e",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml"
+      },
+      "descriptionSha256": "f61cd955c94b03e3734021f00f19169f8bdb6978d67ec33e1b60c8ecf6efa053",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-B4tsrPOAtyEOmwAr",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 63,
+        "literalRow": "Share Spells\t\t\t\tKEY:Familiar ~ Share Spells\t\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Special Quality.Extraordinary\t\t\t\t\t\t\t\t\t\t\tDESC:The wizard may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. A wizard may cast spells on his familiar even if the spells do not normally affect creatures of the familiar's type (magical beast).\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "0ddfd432c1ed0d7bc1863415a145aa9d704b5e4e194c1ec7de3cd8b371b9d46f",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L63"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>The master may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. The master may cast spells on his familiar even if the spells do not normally affect creatures of the familiar’s type (magical beast).</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) compared with its PCGen Core Rulebook row: identical except that the row says \"The wizard\" and \"A wizard\" where the body says \"The master\" twice; the rule is the same. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/B4tsrPOAtyEOmwAr",
+        "name": "Share Spells",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>The master may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. The master may cast spells on his familiar even if the spells do not normally affect creatures of the familiar’s type (magical beast).</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/B4tsrPOAtyEOmwAr",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>The master may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. The master may cast spells on his familiar even if the spells do not normally affect creatures of the familiar’s type (magical beast).</p>",
+            "textSha256": "f61cd955c94b03e3734021f00f19169f8bdb6978d67ec33e1b60c8ecf6efa053",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "The master may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. The master may cast spells on his familiar even if the spells do not normally affect creatures of the familiar’s type (magical beast)."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml. The Note states the rule. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "The master may cast a spell with a target of \"You\" on his familiar (as a touch spell) instead of on himself. The master may cast spells on his familiar even if the spells do not normally affect creatures of the familiar’s type (magical beast)."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 1,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 1 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:49 grants it at PREVARGTEQ:MasterLevel,1."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [],
+        "proseOnlyRules": "Spell targeting rule; nothing to calculate.",
+        "sourceDiscrepancies": [
+          "PCGen's row reads \"The wizard may cast ... A wizard may cast spells on his familiar\"; the pinned body reads \"The master\" in both places. Literal wording recorded, not resolved; the pinned text stays verbatim."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "786a974a9907fef1579d613a0e23e40720fcb065dee271259a22cc3bc24ed5ec",
+        "mappingFingerprint": "5b2299b814ca41cd1bb75681d4e63fc491df393e4aabc33163394d2d5586654c",
+        "evidenceFingerprints": {
+          "companion-features-505-B4tsrPOAtyEOmwAr": "59bdd375a4f2a0c1afc80cdf9814c6bb640f234527f0f3c37f0acfd83d361c1b"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/EbgtpUXqVup5iXeD",
+      "name": "Familiar",
+      "kind": "companionFeature",
+      "companionRecord": "familiarRules",
+      "disposition": "held",
+      "assessmentStatus": "confirmed",
+      "rawType": "class",
+      "rawKey": "!items!EbgtpUXqVup5iXeD",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml",
+        "sha256": "eb3fdbe6e77b84132da86b9beadcb18184a0d22c75b403c2a96bcaaf246eaa30",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml"
+      },
+      "descriptionSha256": "7d23f49a4d1e28e233dc255afda9b1f217b0e481c623d6102d8b837feb3605a0",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110", "PZO1131"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-EbgtpUXqVup5iXeD",
+      "holdIds": [],
+      "noticeHoldIds": ["companion-features-505-notice-PZO1131-complete-chain"],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+        "line": 2578,
+        "literalRow": "Familiar\t\tKEY:Arcane Bond ~ Familiar\t\tOUTPUTNAME:Arcane Bond (Familiar)\tCATEGORY:Special Ability\tTYPE:Class Feature.Wizard Class Feature.ArcaneBond.SpecialQuality.Special Quality.Familiar\tPREVAREQ:Wizard_CF_Familiar,0\t\tDEFINE:FamiliarMasterLVL|0\tDESC:A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.&nl;A familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.&nl;Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master's level.&nl;If a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tABILITY:Internal|AUTOMATIC|Standard Familiar List\tBONUS:VAR|FamiliarMasterLVL|ArcaneBondLVL|TYPE=Base\tFOLLOWERS:Familiar|1\tSOURCEPAGE:p.82",
+        "comparisonLineSha256": "3bb13eaddd1e9e38186009b286ab60dcc3a1f765e438caa05f63fc2b005a7bee",
+        "comparisonFileSha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+          "line": 3,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": false,
+        "book": "PZO1110",
+        "evidenceRole": "partial-root-comparison",
+        "role": "CRB Arcane Bond: Familiar row: its DESC equals the body's first four paragraphs (what a familiar is, the 1-mile range of its master benefits, stacking familiar-granting class levels, replacement ritual) word for word; SOURCEPAGE p.82.",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst#L2578"
+      },
+      "additionalComparisonLeads": [
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 59,
+          "literalRow": "Natural Armor Bonus\t\t\tKEY:Familiar ~ Natural Armor Bonus\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDESC:The number noted here is in addition to the familiar's existing natural armor bonus.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|AC_Natural_Armor|FamiliarAC|TYPE=NaturalArmor.STACK\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83\t\tDEFINE:FamiliarAC|0\t\tBONUS:VAR|FamiliarAC|(1+MASTERVAR(\"FamiliarLVL\"))/2|PREVAREQ:FamiliarACStandard,0\tDEFINE:FamiliarACStandard|0",
+          "comparisonLineSha256": "9107530752d02b3e2050d91d40b83bf7166f6ff33381300a5a6ac8e4a9552464",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ~ Natural Armor Bonus (p.83): the table's natural armor adjustment, (1 + master level) / 2, in addition to the familiar's existing natural armor; equals the table and the imported nac formula ceil(level / 2) at every level 1-20.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L59"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 60,
+          "literalRow": "Intelligence Score\t\t\tKEY:Familiar ~ Intelligence Score\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality\t\t\t\t\t\tDEFINESTAT:MINVALUE|INT|FamiliarIntScore\t\t\t\tDESC:The familiar's Intelligence score.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83\t\tDEFINE:FamiliarIntScore|0\tBONUS:VAR|FamiliarIntScore|5+((1+MASTERVAR(\"FamiliarLVL\"))/2)|PREVAREQ:FamiliarIntScoreStandard,0\tDEFINE:FamiliarIntScoreStandard|0",
+          "comparisonLineSha256": "452d1983b04584e893bdafc07586a8572507acd33b2e9592e353656860de1a2a",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ~ Intelligence Score (p.83): 5 + (1 + master level) / 2, the table's Int column; equals the imported int formula 5 + ceil(level / 2) at every level 1-20.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L60"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_companionmods_familiar_cr.lst",
+          "line": 4,
+          "literalRow": "FOLLOWER:FamiliarLVL=1\tTYPE:Familiar\t\t\t\t\t\t\t\t\t\t\tCOPYMASTERBAB:MASTER\tCOPYMASTERCHECK:MASTER\tCOPYMASTERHP:max(1,MASTER/FamiliarHPDivisor)\tUSEMASTERSKILL:YES\tDEFINE:MasterLevel|0\tDEFINE:FamiliarHPDivisor|0\tDEFINE:CompanionHD|0\tBONUS:VAR|MasterLevel|MASTERVAR(\"FamiliarLVL\")\tBONUS:VAR|FamiliarHPDivisor|2|TYPE=Base\tBONUS:VAR|CompanionHD|MasterLevel",
+          "comparisonLineSha256": "d33edc20f23e21875938e3ac708c88e9eba773a2778625ec6797bd8ac8f4bc8e",
+          "comparisonFileSha256": "26a4eef235ca946fe905cf7386cf930c6b2d31d7702ca313e6ada21425fff49b",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_companionmods_familiar_cr.lst",
+            "line": 1,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "26a4eef235ca946fe905cf7386cf930c6b2d31d7702ca313e6ada21425fff49b"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar companion mod (Core Rulebook file): COPYMASTERBAB, COPYMASTERCHECK, half the master's hit points (FamiliarHPDivisor 2), USEMASTERSKILL and CompanionHD = master level support the Familiar Basics (attacks, saves, hit points, skills, Hit Dice).",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_companionmods_familiar_cr.lst#L4"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 47,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarAlertness|0\t\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Alertness|PREVARGTEQ:MasterLevel,1|PREVAREQ:CF_FamiliarAlertness,0\t\t\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarAlertness|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarAlertness],[PREFACT:1,ABILITIES,CF_FamiliarAlertness=true]",
+          "comparisonLineSha256": "6c7ae4a93dd3675188159cc380de13495492ef0d71f71faf8052f3a8ed49b4ed",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Alertness at PREVARGTEQ:MasterLevel,1, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L47"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 48,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarImprovedEvasion|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Improved Evasion|PREVARGTEQ:MasterLevel,1|PREVAREQ:CF_FamiliarImprovedEvasion,0\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarImprovedEvasion|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarImprovedEvasion],[PREFACT:1,ABILITIES,CF_FamiliarImprovedEvasion=true]",
+          "comparisonLineSha256": "b5ced1a506ca854bb2f8bdcb39bf01c7bc0c378f9b120ff85c22747de11a9f4a",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Improved Evasion at PREVARGTEQ:MasterLevel,1, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L48"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 49,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarShareSpells|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Share Spells|PREVARGTEQ:MasterLevel,1|PREVAREQ:CF_FamiliarShareSpells,0\t\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarShareSpells|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarShareSpells],[PREFACT:1,ABILITIES,CF_FamiliarShareSpells=true]",
+          "comparisonLineSha256": "c81cc4b0ae13cf033dfbefd8610938734bd7f3015f8d61de52ed47e225810f41",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Share Spells at PREVARGTEQ:MasterLevel,1, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L49"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 50,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarEmpathicLink|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Empathic Link|PREVARGTEQ:MasterLevel,1|PREVAREQ:CF_FamiliarEmpathicLink,0\t\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarEmpathicLink|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarEmpathicLink],[PREFACT:1,ABILITIES,CF_FamiliarEmpathicLink=true]",
+          "comparisonLineSha256": "124cbf21b31c2c3ac6e89aa5c121a2002377d44dffcf73efc366208be57540bb",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Empathic Link at PREVARGTEQ:MasterLevel,1, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L50"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 51,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarDeliverTouchSpells|0\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Deliver Touch Spells|PREVARGTEQ:MasterLevel,3|PREVAREQ:CF_FamiliarDeliverTouchSpells,0\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarDeliverTouchSpells|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarDeliverTouchSpells],[PREFACT:1,ABILITIES,CF_FamiliarDeliverTouchSpells=true]",
+          "comparisonLineSha256": "beaeff870aacc91e358f29f0b3a9545cf7e0b0aa9af4631ea4d7bad34cad6fb4",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Deliver Touch Spells at PREVARGTEQ:MasterLevel,3, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L51"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 52,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarSpeakwithMaster|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Speak with Master|PREVARGTEQ:MasterLevel,5|PREVAREQ:CF_FamiliarSpeakwithMaster,0\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarSpeakwithMaster|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarSpeakwithMaster],[PREFACT:1,ABILITIES,CF_FamiliarSpeakwithMaster=true]",
+          "comparisonLineSha256": "c0978258c3d92aba08cd6ffcca8309188a72d0f03c05dbb2528176604f9beca1",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Speak with Master at PREVARGTEQ:MasterLevel,5, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L52"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 53,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarSpeakwithAnimalsofItsKind|0\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Speak with Animals of Its Kind|PREVARGTEQ:MasterLevel,7|PREVAREQ:CF_FamiliarSpeakwithAnimalsofItsKind,0|PRERACE:1,RACESUBTYPE=Augmented Animal\tBONUS:VAR|CF_FamiliarSpeakwithAnimalsofItsKind|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarSpeakwithAnimalsofItsKind],[PREFACT:1,ABILITIES,CF_FamiliarSpeakwithAnimalsofItsKind=true]",
+          "comparisonLineSha256": "bf928d5ac5b88c172b5e8881f1837224b76f0e172073eef951ed59e6e327ad4a",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Speak with Animals of Its Kind at PREVARGTEQ:MasterLevel,7, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L53"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 54,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarSpellResistance|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Spell Resistance|PREVARGTEQ:MasterLevel,11|PREVAREQ:CF_FamiliarSpellResistance,0\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarSpellResistance|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarSpellResistance],[PREFACT:1,ABILITIES,CF_FamiliarSpellResistance=true]",
+          "comparisonLineSha256": "74064916e0f8bac3f0fcc7c933a1144241f5d2ac4804fb51d95cb196168256d4",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Spell Resistance at PREVARGTEQ:MasterLevel,11, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L54"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 55,
+          "literalRow": "CATEGORY=Internal|Companion ~ Familiar.MOD\t\t\t\t\t\t\t\t\t\t\tDEFINE:CF_FamiliarScryonFamiliar|0\t\t\t\t\t\t\t\t\t\tABILITY:Familiar Class Feature|AUTOMATIC|Familiar ~ Scry on Familiar|PREVARGTEQ:MasterLevel,13|PREVAREQ:CF_FamiliarScryonFamiliar,0\t\t\t\t\t\t\t\t\t\t\t\tBONUS:VAR|CF_FamiliarScryonFamiliar|1|TYPE=Boolean|PREMULT:1,[PREABILITY:1,CATEGORY=Archetype,TYPE.CF_FamiliarScryonFamiliar],[PREFACT:1,ABILITIES,CF_FamiliarScryonFamiliar=true]",
+          "comparisonLineSha256": "e70b9f219ce92d0be9937f03e63c286bb7c766089ba99c66abb30526914982a7",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Familiar ability schedule row: Scry on Familiar at PREVARGTEQ:MasterLevel,13, matching the table and the pinned classAssociations.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L55"
+        }
+      ],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar rules (Arcane Bond: Familiar, pp. 82-83): familiar basics, the familiar ability table and the animal companion exclusion",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        },
+        {
+          "book": "PZO1131",
+          "rule": "Unchained action-cost metadata in the bound content closure: the linked Scry on Familiar's own Use action and the scrying spell it links both carry activation.unchained (docs/catalog-import/curation.md, Unchained action costs)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [
+        {
+          "externalKey": "pf1/iYSmTvVIXZt2uMov",
+          "name": "Alertness",
+          "repo": "pf1",
+          "path": "packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml",
+          "sha256": "1acaa07f87fe352157a1b5514ffc1135bdf763f90204ce9c957553289f4ff314",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/ooxP3ifhV6kC0wTM",
+          "name": "Improved Evasion",
+          "repo": "pf1",
+          "path": "packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml",
+          "sha256": "41d72c295c7d17a9d009b5c6fbc5046f6698a36e55540e8e12f0971f3f7e69f0",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/B4tsrPOAtyEOmwAr",
+          "name": "Share Spells",
+          "repo": "pf1",
+          "path": "packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml",
+          "sha256": "baf938d725090c9763f52785af28108649cdd92ebd0a0f80bb967eaf905bc54e",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/share-spells.B4tsrPOAtyEOmwAr.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/YtzidlXTKvVyiNcY",
+          "name": "Empathic Link",
+          "repo": "pf1",
+          "path": "packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml",
+          "sha256": "73d64fa60b801376b7769ad0fa50ab0a71127b0b4910f16ab22617aa06c96ba8",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/XttM5JcGilkhdFCW",
+          "name": "Deliver Touch Spells",
+          "repo": "pf1",
+          "path": "packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml",
+          "sha256": "021e338a88799e78d1450b1509b760023e8e85b10d336fbf1b822f6de760f8b8",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/GgqfqGq8vopOdN32",
+          "name": "Speak with Master",
+          "repo": "pf1",
+          "path": "packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml",
+          "sha256": "49e659d85215b4a0e53c9c8a6a365c57b5d24ac3c47a89567bf038bf3671828b",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/yNMQccEicirDocG7",
+          "name": "Speak with Animals of Its Kind",
+          "repo": "pf1",
+          "path": "packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml",
+          "sha256": "5cb5449bd045cc4159c10699db4b14e599aa53c7da15cdc9414c32ffc1d49daa",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/OrbV3Q6U2BdnL8tR",
+          "name": "Spell Resistance",
+          "repo": "pf1",
+          "path": "packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml",
+          "sha256": "82a54d8372e4919d290b9304186bf54534d06cf23e6e986bde86697e630ef1d5",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        },
+        {
+          "externalKey": "pf1/mUPO7LpDVJtOoP4W",
+          "name": "Scry on Familiar",
+          "repo": "pf1",
+          "path": "packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml",
+          "sha256": "c6b614b7bc3a5a006b13cea40d86c47bacf3ee4325a9b77a8e09709e9112e16b",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "role": "Familiar ability the table links; a companion-features record of this batch."
+        }
+      ],
+      "sourceFields": {
+        "changes": [
+          {
+            "_id": "ZIhKRP5T",
+            "formula": "5 + ceil(@classes.familiar.level / 2)",
+            "operator": "set",
+            "target": "int",
+            "type": "untyped"
+          },
+          {
+            "_id": "nw0v2aFf",
+            "formula": "ceil(@classes.familiar.level / 2)",
+            "target": "nac",
+            "type": "untyped"
+          }
+        ],
+        "classSkills": {
+          "acr": true,
+          "clm": true,
+          "fly": true,
+          "per": true,
+          "ste": true,
+          "swm": true
+        },
+        "description": {
+          "value": "<p>A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.</p><p>A familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.</p><p>Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master’s level.</p><p>If a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.</p><h2>Familiar Basics</h2><p>Use the basic statistics for a creature of the familiar's kind, but with the following changes.</p><p><strong>Hit Dice</strong>: For the purpose of effects related to number of Hit Dice, use the master's character level or the familiar's normal HD total, whichever is higher.</p><p><strong>Hit Points</strong>: The familiar has half the master's total hit points (not including temporary hit points), rounded down, regardless of its actual Hit Dice.</p><p><strong>Attacks</strong>: Use the master's base attack bonus, as calculated from all his classes. Use the familiar's Dexterity or Strength modifier, whichever is greater, to calculate the familiar's melee attack bonus with natural weapons. Damage equals that of a normal creature of the familiar's kind.</p><p><strong>Saving Throws</strong>: For each saving throw, use either the familiar's base save bonus (Fortitude +2, Reflex +2, Will +0) or the master's (as calculated from all his classes), whichever is better. The familiar uses its own ability modifiers to saves, and it doesn't share any of the other bonuses that the master might have on saves.</p><p><strong>Skills</strong>: For each skill in which either the master or the familiar has ranks, use either the normal skill ranks for an animal of that type or the master's skill ranks, whichever is better. In either case, the familiar uses its own ability modifiers. Regardless of a familiar's total skill modifiers, some skills may remain beyond the familiar's ability to use. Familiars treat Acrobatics, Climb, Fly, Perception, Stealth, and Swim as class skills.</p><hr /><p><strong>Usage</strong>: Setup BAB, Saving Throws and Hit Points in Details tab according to familiar and master stats as mentioned above</p><hr /><h2>Familiar Ability Descriptions</h2><p>All familiars have special abilities (or impart abilities to their masters) depending on the master's combined level in classes that grant familiars, as shown on the table below. The abilities are cumulative.</p><table><thead><tr><th style=\"width:15%\">Master Class Level</th><th style=\"width:15%\">Natural Armor Adj.</th><th style=\"width:5%\">Int</th><th>Special</th></tr></thead><tbody><tr><td>1st–2nd</td><td>+1</td><td>6</td><td>@UUID[Compendium.pf1.companion-features.Item.iYSmTvVIXZt2uMov]{Alertness}, @UUID[Compendium.pf1.companion-features.Item.ooxP3ifhV6kC0wTM]{improved evasion}, @UUID[Compendium.pf1.companion-features.Item.B4tsrPOAtyEOmwAr]{share spells}, @UUID[Compendium.pf1.companion-features.Item.YtzidlXTKvVyiNcY]{empathic link}</td></tr><tr><td>3rd–4th</td><td>+2</td><td>7</td><td>@UUID[Compendium.pf1.companion-features.Item.XttM5JcGilkhdFCW]{Deliver touch spells}</td></tr><tr><td>5th–6th</td><td>+3</td><td>8</td><td>@UUID[Compendium.pf1.companion-features.Item.GgqfqGq8vopOdN32]{Speak with master}</td></tr><tr><td>7th–8th</td><td>+4</td><td>9</td><td>@UUID[Compendium.pf1.companion-features.Item.yNMQccEicirDocG7]{Speak with animals of its kind}</td></tr><tr><td>9th–10th</td><td>+5</td><td>10</td><td>—</td></tr><tr><td>11th–12th</td><td>+6</td><td>11</td><td>@UUID[Compendium.pf1.companion-features.Item.OrbV3Q6U2BdnL8tR]{Spell resistance}</td></tr><tr><td>13th–14th</td><td>+7</td><td>12</td><td>@UUID[Compendium.pf1.companion-features.Item.mUPO7LpDVJtOoP4W]{Scry on familiar}</td></tr><tr><td>15th–16th</td><td>+8</td><td>13</td><td>—</td></tr><tr><td>17th–18th</td><td>+9</td><td>14</td><td>—</td></tr><tr><td>19th–20th</td><td>+10</td><td>15</td><td>—</td></tr></tbody></table><p><strong>Natural Armor Adj</strong>.: The number noted here is in addition to the familiar's existing natural armor bonus.</p><p><strong>Int</strong>: The familiar's Intelligence score.</p>"
+        },
+        "hp": null,
+        "links": {
+          "classAssociations": [
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.iYSmTvVIXZt2uMov"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.YtzidlXTKvVyiNcY"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.ooxP3ifhV6kC0wTM"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.B4tsrPOAtyEOmwAr"
+            },
+            {
+              "level": 3,
+              "uuid": "Compendium.pf1.companion-features.Item.XttM5JcGilkhdFCW"
+            },
+            {
+              "level": 5,
+              "uuid": "Compendium.pf1.companion-features.Item.GgqfqGq8vopOdN32"
+            },
+            {
+              "level": 7,
+              "uuid": "Compendium.pf1.companion-features.Item.yNMQccEicirDocG7"
+            },
+            {
+              "level": 11,
+              "uuid": "Compendium.pf1.companion-features.Item.OrbV3Q6U2BdnL8tR"
+            },
+            {
+              "level": 13,
+              "uuid": "Compendium.pf1.companion-features.Item.mUPO7LpDVJtOoP4W"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "tag": "familiar"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar body (pp. 82-83) compared with PCGen: the Core Rulebook Arcane Bond: Familiar row reproduces its first four paragraphs word for word, and the Core Rulebook familiar companion-mod and ability rows support the Familiar Basics, the table's natural armor and Intelligence columns and every ability level. Its bound closure carries Unchained action costs (Scry on Familiar and the scrying spell), so the held Pathfinder Unchained notice (PZO1131) is required and holds it; it also links the held Scry on Familiar. The Foundry \"Usage\" paragraph is tool guidance, not Paizo rules text. Natural armor, Intelligence, spell resistance and the substitutions are calculated by the familiar calculation (#326).",
+      "mechanicsReview": {
+        "externalKey": "pf1/EbgtpUXqVup5iXeD",
+        "name": "Familiar",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.</p><p>A familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.</p><p>Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master’s level.</p><p>If a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.</p><h2>Familiar Basics</h2><p>Use the basic statistics for a creature of the familiar's kind, but with the following changes.</p><p><strong>Hit Dice</strong>: For the purpose of effects related to number of Hit Dice, use the master's character level or the familiar's normal HD total, whichever is higher.</p><p><strong>Hit Points</strong>: The familiar has half the master's total hit points (not including temporary hit points), rounded down, regardless of its actual Hit Dice.</p><p><strong>Attacks</strong>: Use the master's base attack bonus, as calculated from all his classes. Use the familiar's Dexterity or Strength modifier, whichever is greater, to calculate the familiar's melee attack bonus with natural weapons. Damage equals that of a normal creature of the familiar's kind.</p><p><strong>Saving Throws</strong>: For each saving throw, use either the familiar's base save bonus (Fortitude +2, Reflex +2, Will +0) or the master's (as calculated from all his classes), whichever is better. The familiar uses its own ability modifiers to saves, and it doesn't share any of the other bonuses that the master might have on saves.</p><p><strong>Skills</strong>: For each skill in which either the master or the familiar has ranks, use either the normal skill ranks for an animal of that type or the master's skill ranks, whichever is better. In either case, the familiar uses its own ability modifiers. Regardless of a familiar's total skill modifiers, some skills may remain beyond the familiar's ability to use. Familiars treat Acrobatics, Climb, Fly, Perception, Stealth, and Swim as class skills.</p><hr /><p><strong>Usage</strong>: Setup BAB, Saving Throws and Hit Points in Details tab according to familiar and master stats as mentioned above</p><hr /><h2>Familiar Ability Descriptions</h2><p>All familiars have special abilities (or impart abilities to their masters) depending on the master's combined level in classes that grant familiars, as shown on the table below. The abilities are cumulative.</p><table><thead><tr><th style=\"width:15%\">Master Class Level</th><th style=\"width:15%\">Natural Armor Adj.</th><th style=\"width:5%\">Int</th><th>Special</th></tr></thead><tbody><tr><td>1st–2nd</td><td>+1</td><td>6</td><td>@UUID[Compendium.pf1.companion-features.Item.iYSmTvVIXZt2uMov]{Alertness}, @UUID[Compendium.pf1.companion-features.Item.ooxP3ifhV6kC0wTM]{improved evasion}, @UUID[Compendium.pf1.companion-features.Item.B4tsrPOAtyEOmwAr]{share spells}, @UUID[Compendium.pf1.companion-features.Item.YtzidlXTKvVyiNcY]{empathic link}</td></tr><tr><td>3rd–4th</td><td>+2</td><td>7</td><td>@UUID[Compendium.pf1.companion-features.Item.XttM5JcGilkhdFCW]{Deliver touch spells}</td></tr><tr><td>5th–6th</td><td>+3</td><td>8</td><td>@UUID[Compendium.pf1.companion-features.Item.GgqfqGq8vopOdN32]{Speak with master}</td></tr><tr><td>7th–8th</td><td>+4</td><td>9</td><td>@UUID[Compendium.pf1.companion-features.Item.yNMQccEicirDocG7]{Speak with animals of its kind}</td></tr><tr><td>9th–10th</td><td>+5</td><td>10</td><td>—</td></tr><tr><td>11th–12th</td><td>+6</td><td>11</td><td>@UUID[Compendium.pf1.companion-features.Item.OrbV3Q6U2BdnL8tR]{Spell resistance}</td></tr><tr><td>13th–14th</td><td>+7</td><td>12</td><td>@UUID[Compendium.pf1.companion-features.Item.mUPO7LpDVJtOoP4W]{Scry on familiar}</td></tr><tr><td>15th–16th</td><td>+8</td><td>13</td><td>—</td></tr><tr><td>17th–18th</td><td>+9</td><td>14</td><td>—</td></tr><tr><td>19th–20th</td><td>+10</td><td>15</td><td>—</td></tr></tbody></table><p><strong>Natural Armor Adj</strong>.: The number noted here is in addition to the familiar's existing natural armor bonus.</p><p><strong>Int</strong>: The familiar's Intelligence score.</p>",
+        "rawMechanics": {
+          "changes": [
+            {
+              "_id": "ZIhKRP5T",
+              "formula": "5 + ceil(@classes.familiar.level / 2)",
+              "operator": "set",
+              "target": "int",
+              "type": "untyped"
+            },
+            {
+              "_id": "nw0v2aFf",
+              "formula": "ceil(@classes.familiar.level / 2)",
+              "target": "nac",
+              "type": "untyped"
+            }
+          ],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": [
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.iYSmTvVIXZt2uMov"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.YtzidlXTKvVyiNcY"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.ooxP3ifhV6kC0wTM"
+            },
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.companion-features.Item.B4tsrPOAtyEOmwAr"
+            },
+            {
+              "level": 3,
+              "uuid": "Compendium.pf1.companion-features.Item.XttM5JcGilkhdFCW"
+            },
+            {
+              "level": 5,
+              "uuid": "Compendium.pf1.companion-features.Item.GgqfqGq8vopOdN32"
+            },
+            {
+              "level": 7,
+              "uuid": "Compendium.pf1.companion-features.Item.yNMQccEicirDocG7"
+            },
+            {
+              "level": 11,
+              "uuid": "Compendium.pf1.companion-features.Item.OrbV3Q6U2BdnL8tR"
+            },
+            {
+              "level": 13,
+              "uuid": "Compendium.pf1.companion-features.Item.mUPO7LpDVJtOoP4W"
+            }
+          ]
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/EbgtpUXqVup5iXeD",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.</p><p>A familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.</p><p>Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master’s level.</p><p>If a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.</p><h2>Familiar Basics</h2><p>Use the basic statistics for a creature of the familiar's kind, but with the following changes.</p><p><strong>Hit Dice</strong>: For the purpose of effects related to number of Hit Dice, use the master's character level or the familiar's normal HD total, whichever is higher.</p><p><strong>Hit Points</strong>: The familiar has half the master's total hit points (not including temporary hit points), rounded down, regardless of its actual Hit Dice.</p><p><strong>Attacks</strong>: Use the master's base attack bonus, as calculated from all his classes. Use the familiar's Dexterity or Strength modifier, whichever is greater, to calculate the familiar's melee attack bonus with natural weapons. Damage equals that of a normal creature of the familiar's kind.</p><p><strong>Saving Throws</strong>: For each saving throw, use either the familiar's base save bonus (Fortitude +2, Reflex +2, Will +0) or the master's (as calculated from all his classes), whichever is better. The familiar uses its own ability modifiers to saves, and it doesn't share any of the other bonuses that the master might have on saves.</p><p><strong>Skills</strong>: For each skill in which either the master or the familiar has ranks, use either the normal skill ranks for an animal of that type or the master's skill ranks, whichever is better. In either case, the familiar uses its own ability modifiers. Regardless of a familiar's total skill modifiers, some skills may remain beyond the familiar's ability to use. Familiars treat Acrobatics, Climb, Fly, Perception, Stealth, and Swim as class skills.</p><hr /><p><strong>Usage</strong>: Setup BAB, Saving Throws and Hit Points in Details tab according to familiar and master stats as mentioned above</p><hr /><h2>Familiar Ability Descriptions</h2><p>All familiars have special abilities (or impart abilities to their masters) depending on the master's combined level in classes that grant familiars, as shown on the table below. The abilities are cumulative.</p><table><thead><tr><th style=\"width:15%\">Master Class Level</th><th style=\"width:15%\">Natural Armor Adj.</th><th style=\"width:5%\">Int</th><th>Special</th></tr></thead><tbody><tr><td>1st–2nd</td><td>+1</td><td>6</td><td>@UUID[Compendium.pf1.companion-features.Item.iYSmTvVIXZt2uMov]{Alertness}, @UUID[Compendium.pf1.companion-features.Item.ooxP3ifhV6kC0wTM]{improved evasion}, @UUID[Compendium.pf1.companion-features.Item.B4tsrPOAtyEOmwAr]{share spells}, @UUID[Compendium.pf1.companion-features.Item.YtzidlXTKvVyiNcY]{empathic link}</td></tr><tr><td>3rd–4th</td><td>+2</td><td>7</td><td>@UUID[Compendium.pf1.companion-features.Item.XttM5JcGilkhdFCW]{Deliver touch spells}</td></tr><tr><td>5th–6th</td><td>+3</td><td>8</td><td>@UUID[Compendium.pf1.companion-features.Item.GgqfqGq8vopOdN32]{Speak with master}</td></tr><tr><td>7th–8th</td><td>+4</td><td>9</td><td>@UUID[Compendium.pf1.companion-features.Item.yNMQccEicirDocG7]{Speak with animals of its kind}</td></tr><tr><td>9th–10th</td><td>+5</td><td>10</td><td>—</td></tr><tr><td>11th–12th</td><td>+6</td><td>11</td><td>@UUID[Compendium.pf1.companion-features.Item.OrbV3Q6U2BdnL8tR]{Spell resistance}</td></tr><tr><td>13th–14th</td><td>+7</td><td>12</td><td>@UUID[Compendium.pf1.companion-features.Item.mUPO7LpDVJtOoP4W]{Scry on familiar}</td></tr><tr><td>15th–16th</td><td>+8</td><td>13</td><td>—</td></tr><tr><td>17th–18th</td><td>+9</td><td>14</td><td>—</td></tr><tr><td>19th–20th</td><td>+10</td><td>15</td><td>—</td></tr></tbody></table><p><strong>Natural Armor Adj</strong>.: The number noted here is in addition to the familiar's existing natural armor bonus.</p><p><strong>Int</strong>: The familiar's Intelligence score.</p>",
+            "textSha256": "7d23f49a4d1e28e233dc255afda9b1f217b0e481c623d6102d8b837feb3605a0",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.\nA familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.\nLevels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master’s level.\nIf a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.\nFamiliar Basics\nUse the basic statistics for a creature of the familiar's kind, but with the following changes.\nHit Dice: For the purpose of effects related to number of Hit Dice, use the master's character level or the familiar's normal HD total, whichever is higher.\nHit Points: The familiar has half the master's total hit points (not including temporary hit points), rounded down, regardless of its actual Hit Dice.\nAttacks: Use the master's base attack bonus, as calculated from all his classes. Use the familiar's Dexterity or Strength modifier, whichever is greater, to calculate the familiar's melee attack bonus with natural weapons. Damage equals that of a normal creature of the familiar's kind.\nSaving Throws: For each saving throw, use either the familiar's base save bonus (Fortitude +2, Reflex +2, Will +0) or the master's (as calculated from all his classes), whichever is better. The familiar uses its own ability modifiers to saves, and it doesn't share any of the other bonuses that the master might have on saves.\nSkills: For each skill in which either the master or the familiar has ranks, use either the normal skill ranks for an animal of that type or the master's skill ranks, whichever is better. In either case, the familiar uses its own ability modifiers. Regardless of a familiar's total skill modifiers, some skills may remain beyond the familiar's ability to use. Familiars treat Acrobatics, Climb, Fly, Perception, Stealth, and Swim as class skills.\nFamiliar Ability Descriptions\nAll familiars have special abilities (or impart abilities to their masters) depending on the master's combined level in classes that grant familiars, as shown on the table below. The abilities are cumulative.\nMaster Class Level | Natural Armor Adj. | Int | Special\n1st–2nd | +1 | 6 | Alertness, improved evasion, share spells, empathic link\n3rd–4th | +2 | 7 | Deliver touch spells\n5th–6th | +3 | 8 | Speak with master\n7th–8th | +4 | 9 | Speak with animals of its kind\n9th–10th | +5 | 10 | —\n11th–12th | +6 | 11 | Spell resistance\n13th–14th | +7 | 12 | Scry on familiar\n15th–16th | +8 | 13 | —\n17th–18th | +9 | 14 | —\n19th–20th | +10 | 15 | —\nNatural Armor Adj.: The number noted here is in addition to the familiar's existing natural armor bonus.\nInt: The familiar's Intelligence score."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml. The Note keeps the complete CRB familiar rules and the familiar ability table as readable text, with link markup reduced to the linked names; the Foundry \"Usage\" instruction is tool guidance, not a rule, and is left out. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "familiar",
+            "associations": []
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.\nA familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.\nLevels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master’s level.\nIf a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.\nFamiliar Basics\nUse the basic statistics for a creature of the familiar's kind, but with the following changes.\nHit Dice: For the purpose of effects related to number of Hit Dice, use the master's character level or the familiar's normal HD total, whichever is higher.\nHit Points: The familiar has half the master's total hit points (not including temporary hit points), rounded down, regardless of its actual Hit Dice.\nAttacks: Use the master's base attack bonus, as calculated from all his classes. Use the familiar's Dexterity or Strength modifier, whichever is greater, to calculate the familiar's melee attack bonus with natural weapons. Damage equals that of a normal creature of the familiar's kind.\nSaving Throws: For each saving throw, use either the familiar's base save bonus (Fortitude +2, Reflex +2, Will +0) or the master's (as calculated from all his classes), whichever is better. The familiar uses its own ability modifiers to saves, and it doesn't share any of the other bonuses that the master might have on saves.\nSkills: For each skill in which either the master or the familiar has ranks, use either the normal skill ranks for an animal of that type or the master's skill ranks, whichever is better. In either case, the familiar uses its own ability modifiers. Regardless of a familiar's total skill modifiers, some skills may remain beyond the familiar's ability to use. Familiars treat Acrobatics, Climb, Fly, Perception, Stealth, and Swim as class skills.\nFamiliar Ability Descriptions\nAll familiars have special abilities (or impart abilities to their masters) depending on the master's combined level in classes that grant familiars, as shown on the table below. The abilities are cumulative.\nMaster Class Level | Natural Armor Adj. | Int | Special\n1st–2nd | +1 | 6 | Alertness, improved evasion, share spells, empathic link\n3rd–4th | +2 | 7 | Deliver touch spells\n5th–6th | +3 | 8 | Speak with master\n7th–8th | +4 | 9 | Speak with animals of its kind\n9th–10th | +5 | 10 | —\n11th–12th | +6 | 11 | Spell resistance\n13th–14th | +7 | 12 | Scry on familiar\n15th–16th | +8 | 13 | —\n17th–18th | +9 | 14 | —\n19th–20th | +10 | 15 | —\nNatural Armor Adj.: The number noted here is in addition to the familiar's existing natural armor bonus.\nInt: The familiar's Intelligence score."
+            }
+          ],
+          "unsupportedFields": [
+            "companion",
+            "gameContent",
+            "changes",
+            "changes"
+          ]
+        },
+        "companionReview": {
+          "grantingRecord": null,
+          "grantingRule": "The familiar class record that grants the nine familiar abilities by master level (links.classAssociations).",
+          "associations": [],
+          "masterLevel": null,
+          "masterLevelEvidence": [
+            "Table rows 1st-2nd to 19th-20th, validated through master level 20."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "schedule": [
+            {
+              "masterLevel": 1,
+              "abilities": [
+                "pf1/iYSmTvVIXZt2uMov",
+                "pf1/YtzidlXTKvVyiNcY",
+                "pf1/ooxP3ifhV6kC0wTM",
+                "pf1/B4tsrPOAtyEOmwAr"
+              ]
+            },
+            {
+              "masterLevel": 3,
+              "abilities": ["pf1/XttM5JcGilkhdFCW"]
+            },
+            {
+              "masterLevel": 5,
+              "abilities": ["pf1/GgqfqGq8vopOdN32"]
+            },
+            {
+              "masterLevel": 7,
+              "abilities": ["pf1/yNMQccEicirDocG7"]
+            },
+            {
+              "masterLevel": 11,
+              "abilities": ["pf1/OrbV3Q6U2BdnL8tR"]
+            },
+            {
+              "masterLevel": 13,
+              "abilities": ["pf1/mUPO7LpDVJtOoP4W"]
+            }
+          ],
+          "table": [
+            {
+              "masterLevels": [1, 2],
+              "naturalArmor": 1,
+              "intelligence": 6
+            },
+            {
+              "masterLevels": [3, 4],
+              "naturalArmor": 2,
+              "intelligence": 7
+            },
+            {
+              "masterLevels": [5, 6],
+              "naturalArmor": 3,
+              "intelligence": 8
+            },
+            {
+              "masterLevels": [7, 8],
+              "naturalArmor": 4,
+              "intelligence": 9
+            },
+            {
+              "masterLevels": [9, 10],
+              "naturalArmor": 5,
+              "intelligence": 10
+            },
+            {
+              "masterLevels": [11, 12],
+              "naturalArmor": 6,
+              "intelligence": 11
+            },
+            {
+              "masterLevels": [13, 14],
+              "naturalArmor": 7,
+              "intelligence": 12
+            },
+            {
+              "masterLevels": [15, 16],
+              "naturalArmor": 8,
+              "intelligence": 13
+            },
+            {
+              "masterLevels": [17, 18],
+              "naturalArmor": 9,
+              "intelligence": 14
+            },
+            {
+              "masterLevels": [19, 20],
+              "naturalArmor": 10,
+              "intelligence": 15
+            }
+          ],
+          "importedChanges": [
+            {
+              "target": "int",
+              "formula": "5 + ceil(@classes.familiar.level / 2)",
+              "operator": "set",
+              "mapped": false,
+              "review": "Unmapped; contributes nothing on the resource. Equals the table's Int column at every master level 1-20; the familiar calculation sets the familiar's Intelligence from representativeFamiliarProgression (#326)."
+            },
+            {
+              "target": "nac",
+              "formula": "ceil(@classes.familiar.level / 2)",
+              "operator": "add",
+              "mapped": false,
+              "review": "Unmapped; contributes nothing on the resource. Equals the table's natural armor adjustment at every master level 1-20; the familiar calculation adds it to the familiar's ac.natural (#326)."
+            }
+          ],
+          "classSkills": ["acr", "clm", "fly", "per", "ste", "swm"],
+          "classSkillsReview": "The six familiar class skills of the body (Acrobatics, Climb, Fly, Perception, Stealth, Swim) equal the pinned classSkills and the familiar calculation's class skills (#326); they stay inert game content on this resource.",
+          "familiarCalculation": "#326 calculates the familiar from the master's named inputs: half the master's maximum HP, the master's class-derived BAB, the better base saves, the better recorded ranks, natural armor and Intelligence by master level and spell resistance from master level 11; it lists the abilities by name in familiar.progression.specialAbilities. This resource supplies the rules text only.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [
+          "The familiar's statistics (Hit Dice for effects, half the master's hit points, master BAB, better saves, better skill ranks, natural armor and Intelligence by master level) are calculated by the familiar calculation (#326), not by this resource; its two imported changes stay unmapped so nothing is applied twice.",
+          "The 1-mile range of the master benefits is not calculated: the familiar calculation keeps a linked familiar's abilities while its relationship counts.",
+          "Witch and other class-specific familiar rules, improved familiars and familiar archetypes are outside this record."
+        ],
+        "proseOnlyRules": "The replacement ritual (200 gp per wizard level, 8 hours), the magical beast type for type-dependent effects, the animal companion exclusion and the Hit Dice-for-effects rule stay readable prose.",
+        "sourceDiscrepancies": [
+          "Imported sources cite PZO1110 p.83 only; the general familiar rules are on p.82 (PCGen Arcane Bond: Familiar SOURCEPAGE p.82). Recorded, not changed.",
+          "The body adds a Foundry \"Usage\" paragraph (\"Setup BAB, Saving Throws and Hit Points in Details tab ...\") that is not CRB text; it stays in the imported description and is left out of the Note.",
+          "PCGen grants Speak with Animals of Its Kind only to an animal familiar (PRERACE Augmented Animal); the body states no such limit. Recorded, not resolved."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "6a195af661bba1f0acec5e3de34c871ad2a50883d04a9ee10844de4b7f6cac15",
+        "mappingFingerprint": "08746ae1920566a748b5b3b6b6a162d3210c1a24dee670bfbb33334b3dd2b14e",
+        "evidenceFingerprints": {
+          "companion-features-505-EbgtpUXqVup5iXeD": "fdb6d4bac7328d86b506b96f2febf6c2520b730b8b6d80618fe9681e1209c78f"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91",
+          "PZO1131": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/GgqfqGq8vopOdN32",
+      "name": "Speak with Master",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!GgqfqGq8vopOdN32",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml",
+        "sha256": "49e659d85215b4a0e53c9c8a6a365c57b5d24ac3c47a89567bf038bf3671828b",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml"
+      },
+      "descriptionSha256": "b366b9ad975ec2ea04375cbb1be241e0faaa9822fd84f6170246a52d1f93ca27",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-GgqfqGq8vopOdN32",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 66,
+        "literalRow": "Speak with Master\t\t\t\tKEY:Familiar ~ Speak with Master\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Extraordinary.Communicate\t\t\t\t\t\t\t\t\t\t\t\tDESC:If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "ec6009c95f559f65d094bc4eddaee3d4e8d0d3efa7abfd10036a21f0ca1d6866",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L66"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "ex",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/GgqfqGq8vopOdN32",
+        "name": "Speak with Master",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/GgqfqGq8vopOdN32",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help.</p>",
+            "textSha256": "b366b9ad975ec2ea04375cbb1be241e0faaa9822fd84f6170246a52d1f93ca27",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-master.GgqfqGq8vopOdN32.yaml. The Note states the rule. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "If the master is 5th level or higher, a familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 5,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 5 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:52 grants it at PREVARGTEQ:MasterLevel,5."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [],
+        "proseOnlyRules": "Communication rule; nothing to calculate.",
+        "sourceDiscrepancies": [],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "474b824f6e9495bb9e687f5cf901b1ef35fa6cb59d9b7d8696c9f87dc93beba1",
+        "mappingFingerprint": "4bb1ff38dc24c4936d77415def84b4c8a040275b6bbd7b6f1b1a2f6e64a5a622",
+        "evidenceFingerprints": {
+          "companion-features-505-GgqfqGq8vopOdN32": "30646d78d3b8950d07fc005cba6b9d48931cc82d2d6e79a2fb449c3d2662a673"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/NY5BdmnNcdiNt1PL",
+      "name": "Familiar Features",
+      "kind": "folder",
+      "disposition": "excluded",
+      "rawType": "folder",
+      "rawKey": "!folders!NY5BdmnNcdiNt1PL",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/familiar-features.NY5BdmnNcdiNt1PL.yaml",
+        "sha256": "30ece4205704ff92715122e0d6b56217f922e813699ba42ae8dcec4606f7362b",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/familiar-features.NY5BdmnNcdiNt1PL.yaml"
+      },
+      "citedSources": [],
+      "contractReason": "Folder record \"Familiar Features\" (pinned packs/companion-features/familiar-features.NY5BdmnNcdiNt1PL.yaml, _key !folders!): a Foundry compendium folder that only groups the nine familiar abilities and has no game content. The importer classifies folder records as excluded (bounded preview summary: 10 admitted resources, 1 excluded), and the import contract maps pack items, not folders (docs/catalog-import/README.md). No Attribution Assessment or curation record is required.",
+      "reviewedBy": "Opus (AI curator) for the owner",
+      "reviewedOn": "2026-10-20"
+    },
+    {
+      "externalKey": "pf1/OrbV3Q6U2BdnL8tR",
+      "name": "Spell Resistance",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!OrbV3Q6U2BdnL8tR",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml",
+        "sha256": "82a54d8372e4919d290b9304186bf54534d06cf23e6e986bde86697e630ef1d5",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml"
+      },
+      "descriptionSha256": "93abd33aad5e8c51d0ff8f4d9d492bc47166c55d6e146c8dd1bdf93bb2705704",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-OrbV3Q6U2BdnL8tR",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 68,
+        "literalRow": "Spell Resistance\t\t\t\tKEY:Familiar ~ Spell Resistance\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Extraordinary\t\t\t\t\t\t\t\t\t\t\t\t\t\tDESC:If the master is 11th level or higher, a familiar gains spell resistance equal to the master's level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar's spell resistance.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSR:mastervar(\"FamiliarLVL\")+5\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "112081463314c552358d00e0e92b1c77c2b2f6fdb5a3ef953bcb2248971212e0",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L68"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "ex",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "changes": [
+          {
+            "_id": "7GpBCMFX",
+            "formula": "5 + @class.level",
+            "operator": "set",
+            "target": "spellResist",
+            "type": "untyped"
+          }
+        ],
+        "description": {
+          "value": "<p>If the master is 11th level or higher, a familiar gains spell resistance equal to the master’s level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar’s spell resistance.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word; the row's SR token (mastervar(\"FamiliarLVL\")+5) and the imported change (spellResist set to 5 + @class.level) both give the master's level + 5. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/OrbV3Q6U2BdnL8tR",
+        "name": "Spell Resistance",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>If the master is 11th level or higher, a familiar gains spell resistance equal to the master’s level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar’s spell resistance.</p>",
+        "rawMechanics": {
+          "changes": [
+            {
+              "_id": "7GpBCMFX",
+              "formula": "5 + @class.level",
+              "operator": "set",
+              "target": "spellResist",
+              "type": "untyped"
+            }
+          ],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/OrbV3Q6U2BdnL8tR",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>If the master is 11th level or higher, a familiar gains spell resistance equal to the master’s level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar’s spell resistance.</p>",
+            "textSha256": "93abd33aad5e8c51d0ff8f4d9d492bc47166c55d6e146c8dd1bdf93bb2705704",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "If the master is 11th level or higher, a familiar gains spell resistance equal to the master’s level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar’s spell resistance."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/spell-resistance.OrbV3Q6U2BdnL8tR.yaml. The Note states the rule. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "If the master is 11th level or higher, a familiar gains spell resistance equal to the master’s level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar’s spell resistance."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent", "changes"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 11,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 11 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:54 grants it at PREVARGTEQ:MasterLevel,11."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice.",
+          "importedChanges": [
+            {
+              "target": "spellResist",
+              "formula": "5 + @class.level",
+              "operator": "set",
+              "mapped": false,
+              "review": "Unmapped (no spell resistance Modifier target); equals the body's master level + 5 and the familiar calculation's spellResistance from master level 11 through 20 (16 to 25)."
+            }
+          ]
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [
+          "Spell resistance (master level + 5 from master level 11) is calculated by the familiar calculation (#326, familiar.progression.spellResistance); the imported spellResist change stays unmapped on the resource and contributes nothing, so it is not applied twice."
+        ],
+        "proseOnlyRules": "The caster level check against spell resistance stays prose.",
+        "sourceDiscrepancies": [],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "2bd2de980664dc53dd90aff37e4eb82d177b08791d4c98c4dd99b9eff1329327",
+        "mappingFingerprint": "2909e9099fb073196a4d1abfdb01c357b7f7b48d7610b62dfc5762721422052c",
+        "evidenceFingerprints": {
+          "companion-features-505-OrbV3Q6U2BdnL8tR": "e8cfc2559f13b93db71693f3469d78bcbd6094a869bd19cd5acc137c06dfd30a"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/XttM5JcGilkhdFCW",
+      "name": "Deliver Touch Spells",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!XttM5JcGilkhdFCW",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml",
+        "sha256": "021e338a88799e78d1450b1509b760023e8e85b10d336fbf1b822f6de760f8b8",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml"
+      },
+      "descriptionSha256": "b709b479a007fd92ed35c8812317687d6cfb1237205a3db1179bf7d6b136f158",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-XttM5JcGilkhdFCW",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 65,
+        "literalRow": "Deliver Touch Spells\t\t\tKEY:Familiar ~ Deliver Touch Spells\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialAttack.Special Attack.Supernatural\t\t\t\t\t\t\t\t\t\t\t\tDESC:If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "983d48731fa8e3c76890c162a3489c3a6c5bcfb367ca5caa1a2051ada6044955",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L65"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "su",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/XttM5JcGilkhdFCW",
+        "name": "Deliver Touch Spells",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/XttM5JcGilkhdFCW",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates.</p>",
+            "textSha256": "b709b479a007fd92ed35c8812317687d6cfb1237205a3db1179bf7d6b136f158",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/deliver-touch-spells.XttM5JcGilkhdFCW.yaml. The Note states the rule. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "If the master is 3rd level or higher, a familiar can deliver touch spells for him. If the master and the familiar are in contact at the time the master casts a touch spell, he can designate his familiar as the \"toucher.\" The familiar can then deliver the touch spell just as the master would. As usual, if the master casts another spell before the touch is delivered, the touch spell dissipates."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 3,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 3 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:51 grants it at PREVARGTEQ:MasterLevel,3."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [],
+        "proseOnlyRules": "Touch-spell delivery rule; nothing to calculate.",
+        "sourceDiscrepancies": [],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "94070701853b34e78c8319352e2a1fe29664b2082e1e2c20080c36f1ed376ab2",
+        "mappingFingerprint": "ffec4b1e6d05f90a7b8342b1d194ea2d52f8652bff73420a04c85da9284ff049",
+        "evidenceFingerprints": {
+          "companion-features-505-XttM5JcGilkhdFCW": "ce3456dca053aca69012615b433a0d21fb7785e140ff0218194f069a803b02dd"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/YtzidlXTKvVyiNcY",
+      "name": "Empathic Link",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!YtzidlXTKvVyiNcY",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml",
+        "sha256": "73d64fa60b801376b7769ad0fa50ab0a71127b0b4910f16ab22617aa06c96ba8",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml"
+      },
+      "descriptionSha256": "670619369fb7920ff26e1df8ed09c4c6429667ff905bd5f1d8ce825db1907114",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-YtzidlXTKvVyiNcY",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 64,
+        "literalRow": "Empathic Link\t\t\t\tKEY:Familiar ~ Empathic Link\t\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Supernatural.Communicate\t\t\t\t\t\t\t\t\t\t\t\tDESC:The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link's limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "fdff2735c5b3b2e803668486a8326d9ec69045d6837a271067843811f2f5e94b",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L64"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "su",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link’s limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. Existing reviewed CRB notice covers it. #534 records it as a non-spell supporting body of the Share Senses spell, whose description does not link it, so no #534 binding covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/YtzidlXTKvVyiNcY",
+        "name": "Empathic Link",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link’s limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/YtzidlXTKvVyiNcY",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link’s limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does.</p>",
+            "textSha256": "670619369fb7920ff26e1df8ed09c4c6429667ff905bd5f1d8ce825db1907114",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link’s limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/empathic-link.YtzidlXTKvVyiNcY.yaml. The Note states the rule verbatim, its \"emphatically\" included. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "The master has an empathic link with his familiar to a 1 mile distance. The master can communicate emphatically with the familiar, but cannot see through its eyes. Because of the link’s limited nature, only general emotions can be shared. The master has the same connection to an item or place that his familiar does."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 1,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 1 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:50 grants it at PREVARGTEQ:MasterLevel,1."
+          ],
+          "beneficiary": "master",
+          "statisticsOn": "master",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [],
+        "proseOnlyRules": "Communication rule; nothing to calculate.",
+        "sourceDiscrepancies": [
+          "The body and PCGen both read \"communicate emphatically\" (for empathically); the pinned text stays verbatim."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "d847949a0be6a527c9a7e2f5d3e37ae06c5db74f8c4cd17c914dc42365e30f3b",
+        "mappingFingerprint": "a9023ef94ad6310eb845d2574053261241d67323fc5a2af181dd5b16b9f29945",
+        "evidenceFingerprints": {
+          "companion-features-505-YtzidlXTKvVyiNcY": "cdbe8c552fcc6eb69b40034c065294164ee485f90373224ed972888109c14f2c"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/iYSmTvVIXZt2uMov",
+      "name": "Alertness",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!iYSmTvVIXZt2uMov",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml",
+        "sha256": "1acaa07f87fe352157a1b5514ffc1135bdf763f90204ce9c957553289f4ff314",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml"
+      },
+      "descriptionSha256": "804de63873bfcd79fa46abf259309c9f9fad050d8ad0a97326c2b268d2077de1",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-iYSmTvVIXZt2uMov",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 61,
+        "literalRow": "Alertness\t\t\t\t\tKEY:Familiar ~ Alertness\t\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Extraordinary\t\t\t\t\t\t\t\t\t\t\t\t\t\tDESC:While a familiar is within arm's reach, the master gains the Alertness feat.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "6bef91e912bda81a20c5a450422eea0ecf89646aba3ab5f7937a2ce44722c303",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L61"
+      },
+      "additionalComparisonLeads": [
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 37,
+          "literalRow": "Familiar's Alertness ability Active\t\tKEY:Familiar Alertness Choice ~ Alertness Active\tCATEGORY:Special Ability\tTYPE:FamiliarAlertnessChoice.SpecialQuality.Extraordinary\tDESC:PC has a familiar that has the Alertness (Ex) ability and it is within arms' reach, the master gains the Alertness feat.\tABILITY:FEAT|VIRTUAL|Alertness",
+          "comparisonLineSha256": "447ab9840f5823707addfeeef0bf6c562692e2be61c9939c536cd5db0eded55a",
+          "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+            "line": 2,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "PCGen's Familiar Alertness Choice row: the master gains Alertness (ABILITY:FEAT|VIRTUAL|Alertness) while the familiar is within arm's reach, as a player toggle.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L37"
+        }
+      ],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (p. 83) and the CRB Alertness feat (p. 117) it grants",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [
+        {
+          "externalKey": "pf1/Q1cY8r0Pvb66pMG0",
+          "name": "Alertness",
+          "repo": "pf1",
+          "path": "packs/feats/alertness.Q1cY8r0Pvb66pMG0.yaml",
+          "sha256": "3b758a6d290ed992539d97beb03ed7e3c09a76aa222b1fe31859b0c9a30c94a1",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/feats/alertness.Q1cY8r0Pvb66pMG0.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "114, 117"
+            }
+          ],
+          "role": "Inherited rule: the Alertness feat (+2 Perception and Sense Motive, +4 with 10 or more ranks) the master gains."
+        }
+      ],
+      "inheritedRuleComparisonEvidence": [
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst",
+          "line": 13,
+          "literalRow": "Alertness\t\t\t\t\t\t\t\t\t\t\tCATEGORY:FEAT\t\tTYPE:General\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDESC:You often notice things that others might miss.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBONUS:SKILL|Perception|if(skillinfo(\"TOTALRANK\",\"Perception\")>=10,4,2)\tBONUS:SKILL|Sense Motive|if(skillinfo(\"TOTALRANK\",\"Sense Motive\")>=10,4,2)\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.117\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBENEFIT:You get a +2 bonus on Perception and Sense Motive skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
+          "comparisonLineSha256": "0ce4b582ece152250fbc28f67582a7a52acc9ab9de62ecca67100d147aba89ba",
+          "comparisonFileSha256": "5ad62f0183b3005a452c93c4d954bcad97033f92dfb8276f214c1c321831db7f",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst",
+            "line": 3,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "5ad62f0183b3005a452c93c4d954bcad97033f92dfb8276f214c1c321831db7f"
+          },
+          "appliesToRootBody": false,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "inherited-rule-comparison",
+          "role": "CRB Alertness feat row, the granted rule: +2 Perception and Sense Motive, +4 at 10 or more ranks (p.117).",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_feats.lst#L13"
+        }
+      ],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [
+        {
+          "externalKey": "pf1/Q1cY8r0Pvb66pMG0",
+          "name": "Alertness",
+          "repo": "pf1",
+          "path": "packs/feats/alertness.Q1cY8r0Pvb66pMG0.yaml",
+          "sha256": "3b758a6d290ed992539d97beb03ed7e3c09a76aa222b1fe31859b0c9a30c94a1",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/feats/alertness.Q1cY8r0Pvb66pMG0.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "114, 117"
+            }
+          ],
+          "role": "Linked CRB feat the master gains; admitted (confirmed, PZO1110). The closure reaches no further record."
+        }
+      ],
+      "sourceFields": {
+        "abilityType": "ex",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>While a familiar is within arm's reach, the master gains the @UUID[Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0]{Alertness} feat.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. It grants the CRB Alertness feat, whose admitted record (pf1/Q1cY8r0Pvb66pMG0, PZO1110) is its only linked body. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/iYSmTvVIXZt2uMov",
+        "name": "Alertness",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>While a familiar is within arm's reach, the master gains the @UUID[Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0]{Alertness} feat.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/iYSmTvVIXZt2uMov",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>While a familiar is within arm's reach, the master gains the @UUID[Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0]{Alertness} feat.</p>",
+            "textSha256": "804de63873bfcd79fa46abf259309c9f9fad050d8ad0a97326c2b268d2077de1",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "While a familiar is within arm's reach, the master gains the Alertness feat."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/alertness.iYSmTvVIXZt2uMov.yaml. The Note states the rule with the link reduced to the feat name. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "While a familiar is within arm's reach, the master gains the Alertness feat."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 1,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 1 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:47 grants it at PREVARGTEQ:MasterLevel,1."
+          ],
+          "beneficiary": "master",
+          "statisticsOn": "master",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice.",
+          "grantsToMaster": {
+            "feat": "pf1/Q1cY8r0Pvb66pMG0",
+            "condition": "while the familiar is within arm's reach"
+          }
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [
+          "The master gains the Alertness feat only while the familiar is within arm's reach: no Grant from a familiar to its master's sheet exists and the proximity is not tracked, so the player adds the feat while it applies (outstanding; the familiar calculation does not apply proximity benefits to the master, docs/character-familiar-calculations.md)."
+        ],
+        "proseOnlyRules": "The arm's-reach condition stays prose.",
+        "sourceDiscrepancies": [],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "43536efbc151b48a2f71e64c485dd9d54a3dc93d2a0c79e85d430cc652011514",
+        "mappingFingerprint": "be12743836bcefd0cfa48d4678d3089e489e52b4b5854010e67b5800df0abcc2",
+        "evidenceFingerprints": {
+          "companion-features-505-iYSmTvVIXZt2uMov": "8989ef686641e135a7da310f72795b0d72fc1d14cda23b8421df54e34f738926"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/mUPO7LpDVJtOoP4W",
+      "name": "Scry on Familiar",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "held",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!mUPO7LpDVJtOoP4W",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml",
+        "sha256": "c6b614b7bc3a5a006b13cea40d86c47bacf3ee4325a9b77a8e09709e9112e16b",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml"
+      },
+      "descriptionSha256": "857015f5c48f38e444c940e4eb68253f33d22881397fcb5862f17a14ec61f399",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110", "PZO1131"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-mUPO7LpDVJtOoP4W",
+      "holdIds": [],
+      "noticeHoldIds": ["companion-features-505-notice-PZO1131-complete-chain"],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 69,
+        "literalRow": "Scry on Familiar\t\t\t\tKEY:Familiar ~ Scry on Familiar\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Special Quality.SpellLike\t\t\t\t\t\t\t\t\t\t\t\tDESC:If the master is 13th level or higher, he may scry on his familiar (as if casting the scrying spell) once per day.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "cf46161e33d8cbc52162dfbc0ee39a390a72655c5e18f5469bc5c274bbfd49d7",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L69"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (p. 83) and the CRB scrying spell (p. 337) it works as",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        },
+        {
+          "book": "PZO1131",
+          "rule": "Unchained action-cost metadata on its own Use action (activation.unchained: hour) and on the linked scrying spell's action (docs/catalog-import/curation.md, Unchained action costs)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [
+        {
+          "externalKey": "pf1/g66w32kdup1f43bp",
+          "name": "Scrying",
+          "repo": "pf1",
+          "path": "packs/spells/scrying.g66w32kdup1f43bp.yaml",
+          "sha256": "136482fb465b9839086cfef5226135882f1c72a017610305e51f290df4504ec0",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/spells/scrying.g66w32kdup1f43bp.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "337"
+            }
+          ],
+          "role": "Inherited rule: the scrying spell the master casts on the familiar once per day."
+        }
+      ],
+      "inheritedRuleComparisonEvidence": [
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst",
+          "line": 517,
+          "literalRow": "Scrying\t\t\t\tTYPE:Arcane.Divine\tCLASSES:Bard=3|Druid,Sorcerer,Wizard=4|Cleric=5\t\t\t\t\t\t\tSCHOOL:Divination\t\tSUBSCHOOL:Scrying\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCOMPS:V, S, M/DF, F\t\tCASTTIME:1 hour\t\t\tRANGE:See text\t\t\t\tTARGETAREA:Magical sensor\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDURATION:(CASTERLEVEL) minutes\t\t\t\t\t\t\t\t\t\t\tSAVEINFO:Will negates\t\t\t\t\t\t\t\t\t\t\tSPELLRES:Yes\t\t\t\t\tSOURCEPAGE:p.337\tSOURCELINK:http://paizo.com/pathfinderRPG/prd/spells/scrying.html#_scrying\t\t\t\t\t\tDESC:You can observe a creature at any distance.|!PRERULE:1,DisplayFullSpell",
+          "comparisonLineSha256": "2dfaadc583704b4658885a3100828cb921296f07576b6f3328d6b084c854809f",
+          "comparisonFileSha256": "6da07d57030565fec332991219192133f06d699a960d9d2cb9a5da9e9282bb31",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst",
+            "line": 3,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "6da07d57030565fec332991219192133f06d699a960d9d2cb9a5da9e9282bb31"
+          },
+          "appliesToRootBody": false,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "inherited-rule-comparison",
+          "role": "CRB scrying spell row, the inherited rule (identity and metadata).",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_spells.lst#L517"
+        }
+      ],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [
+        {
+          "externalKey": "pf1/g66w32kdup1f43bp",
+          "name": "Scrying",
+          "repo": "pf1",
+          "path": "packs/spells/scrying.g66w32kdup1f43bp.yaml",
+          "sha256": "136482fb465b9839086cfef5226135882f1c72a017610305e51f290df4504ec0",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/spells/scrying.g66w32kdup1f43bp.yaml",
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "337"
+            }
+          ],
+          "role": "Linked CRB spell the ability works as; held (spells-530 whole-content hold). Its own notice minima stay with its assessment."
+        }
+      ],
+      "sourceFields": {
+        "abilityType": "sp",
+        "actions": [
+          {
+            "_id": "IF4zxkSPbdRYfeXa",
+            "activation": {
+              "type": "hour",
+              "unchained": {
+                "type": "hour"
+              }
+            },
+            "duration": {
+              "units": "spec",
+              "value": "1 min./level"
+            },
+            "effect": "magical sensor",
+            "name": "Use",
+            "range": {
+              "units": "seeText"
+            }
+          }
+        ],
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>If the master is 13th level or higher, he may scry on his familiar (as if casting the @UUID[Compendium.pf1.spells.Item.g66w32kdup1f43bp]{scrying} spell) once per day.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat",
+        "uses": {
+          "maxFormula": "1",
+          "per": "day",
+          "value": 1
+        }
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word, and it works as the CRB scrying spell (p. 337). Its own Use action carries Unchained action-cost metadata (activation.unchained: hour), as does the linked scrying spell, so the held Pathfinder Unchained notice (PZO1131) is required and holds it. The linked scrying spell is itself held (spells-530 whole-content hold), so it would stay a dependent omission after PZO1131 clears.",
+      "mechanicsReview": {
+        "externalKey": "pf1/mUPO7LpDVJtOoP4W",
+        "name": "Scry on Familiar",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>If the master is 13th level or higher, he may scry on his familiar (as if casting the @UUID[Compendium.pf1.spells.Item.g66w32kdup1f43bp]{scrying} spell) once per day.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [
+            {
+              "_id": "IF4zxkSPbdRYfeXa",
+              "activation": {
+                "type": "hour",
+                "unchained": {
+                  "type": "hour"
+                }
+              },
+              "duration": {
+                "units": "spec",
+                "value": "1 min./level"
+              },
+              "effect": "magical sensor",
+              "name": "Use",
+              "range": {
+                "units": "seeText"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": {
+            "maxFormula": "1",
+            "per": "day",
+            "value": 1
+          },
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/mUPO7LpDVJtOoP4W",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>If the master is 13th level or higher, he may scry on his familiar (as if casting the @UUID[Compendium.pf1.spells.Item.g66w32kdup1f43bp]{scrying} spell) once per day.</p>",
+            "textSha256": "857015f5c48f38e444c940e4eb68253f33d22881397fcb5862f17a14ec61f399",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "If the master is 13th level or higher, he may scry on his familiar (as if casting the scrying spell) once per day."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/scry-on-familiar.mUPO7LpDVJtOoP4W.yaml. The Note states the rule with the link reduced to the spell name. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "If the master is 13th level or higher, he may scry on his familiar (as if casting the scrying spell) once per day."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 13,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 13 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:55 grants it at PREVARGTEQ:MasterLevel,13."
+          ],
+          "beneficiary": "master",
+          "statisticsOn": "master",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [
+          "Once per day use and the hour-long activation stay inert game content (uses, actions); no resource tracking."
+        ],
+        "proseOnlyRules": "The scrying it allows follows the linked spell's rules, as prose.",
+        "sourceDiscrepancies": [],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "0790c134467d6a401bbd2fdc26130737c3c82bc920c2599356b9e791a923dd5f",
+        "mappingFingerprint": "a3d9f33512f2cca1cb4968730857de729d1a6e9efb53ee82dd3de4afd4ae6598",
+        "evidenceFingerprints": {
+          "companion-features-505-mUPO7LpDVJtOoP4W": "e86847de5488015be95f4bb14fcac81500b223348ac5b3ad0cbc24b778887ae7"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91",
+          "PZO1131": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/ooxP3ifhV6kC0wTM",
+      "name": "Improved Evasion",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!ooxP3ifhV6kC0wTM",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml",
+        "sha256": "41d72c295c7d17a9d009b5c6fbc5046f6698a36e55540e8e12f0971f3f7e69f0",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml"
+      },
+      "descriptionSha256": "441274431a4aee6136d29cacb022b8f8a005c8d0d9e06caecc3adb647bf2abc8",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-ooxP3ifhV6kC0wTM",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 62,
+        "literalRow": "Improved Evasion\t\t\t\tKEY:Familiar ~ Improved Evasion\t\t\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Extraordinary.Defensive\t\t\t\t\t\t\t\t\t\t\t\tDESC:When subjected to an attack that normally allows a Reflex saving throw for half damage, a familiar takes no damage if it makes a successful saving throw and half damage even if the saving throw fails.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "baec3b15c0a4968897e03133864a0322a3dc2abc70121a9cb2d148bb684d59f7",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L62"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "ex",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "contextNotes": [
+          {
+            "target": "ref",
+            "text": "Evasion: Reflex halves becomes Reflex negates"
+          }
+        ],
+        "description": {
+          "value": "<p>When subjected to an attack that normally allows a Reflex saving throw for half damage, a familiar takes no damage if it makes a successful saving throw and half damage even if the saving throw fails.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/ooxP3ifhV6kC0wTM",
+        "name": "Improved Evasion",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>When subjected to an attack that normally allows a Reflex saving throw for half damage, a familiar takes no damage if it makes a successful saving throw and half damage even if the saving throw fails.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [
+            {
+              "target": "ref",
+              "text": "Evasion: Reflex halves becomes Reflex negates"
+            }
+          ],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/ooxP3ifhV6kC0wTM",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>When subjected to an attack that normally allows a Reflex saving throw for half damage, a familiar takes no damage if it makes a successful saving throw and half damage even if the saving throw fails.</p>",
+            "textSha256": "441274431a4aee6136d29cacb022b8f8a005c8d0d9e06caecc3adb647bf2abc8",
+            "status": "checked",
+            "outputs": [],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml. Explicit covered/no-output: the checked note record on its Reflex context note (target ref) carries the complete rule as a Note on save.ref, so the description adds nothing. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          },
+          {
+            "externalKey": "pf1/ooxP3ifhV6kC0wTM",
+            "kind": "note",
+            "target": "ref",
+            "text": "Evasion: Reflex halves becomes Reflex negates",
+            "textSha256": "c4bda1030fc501d348292047182aa99220a77134e71d1e2283f95dabeb9a0fc5",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "target": "save.ref",
+                "text": "Improved evasion: against an attack that allows a Reflex save for half damage, the familiar takes no damage on a successful save and half damage on a failed save."
+              }
+            ],
+            "rationale": "#505 imported context note checked against the complete pinned body at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/improved-evasion.ooxP3ifhV6kC0wTM.yaml. The imported note (\"Reflex halves becomes Reflex negates\") states only evasion's success case and omits half damage on a failed save; the reviewed Note states the complete rule of the body.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "target": "save.ref",
+              "text": "Improved evasion: against an attack that allows a Reflex save for half damage, the familiar takes no damage on a successful save and half damage on a failed save."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 1,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 1 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:48 grants it at PREVARGTEQ:MasterLevel,1."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [
+          "The save outcome (no damage on a successful Reflex save, half on a failed one) is a rule of play, not a sheet number; the reviewed Note on the familiar's Reflex save states it."
+        ],
+        "proseOnlyRules": "Only the save-outcome rule; it stays a Note on save.ref.",
+        "sourceDiscrepancies": [
+          "The imported context note \"Evasion: Reflex halves becomes Reflex negates\" omits the failed-save case of improved evasion; the reviewed note record states the body's complete rule."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "3ca3842dff76931cacbae45858bc33a0b73616da901712da88313cf90ebc6887",
+        "mappingFingerprint": "1810def931eac06f30b3c0d269591d53aebe69763ae841cf3062055966dad4b1",
+        "evidenceFingerprints": {
+          "companion-features-505-ooxP3ifhV6kC0wTM": "55e5f44ebdcbab4e49733eb80e603dde98c7a6c2eb05f14abe14938f6ca95e35"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    },
+    {
+      "externalKey": "pf1/yNMQccEicirDocG7",
+      "name": "Speak with Animals of Its Kind",
+      "kind": "companionFeature",
+      "companionRecord": "familiarAbility",
+      "disposition": "admitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "feat",
+      "rawKey": "!items!yNMQccEicirDocG7",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml",
+        "sha256": "5cb5449bd045cc4159c10699db4b14e599aa53c7da15cdc9414c32ffc1d49daa",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml"
+      },
+      "descriptionSha256": "2d96546e600a0b797277aa9f601f062dfc09264179d38904265f178030c895c4",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "83"
+        }
+      ],
+      "requiredNotices": ["PZO1110"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "companion-features-505-yNMQccEicirDocG7",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+        "line": 67,
+        "literalRow": "Speak with Animals of Its Kind\tKEY:Familiar ~ Speak with Animals of Its Kind\tCATEGORY:Special Ability\tTYPE:Class Feature.Familiar Class Feature.SpecialQuality.Extraordinary.Communicate\t\t\t\t\t\t\t\t\t\t\t\tDESC:If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSOURCEPAGE:p.83",
+        "comparisonLineSha256": "4a9f3a10ee9a80ea8673c10f62be64de2497c5289b94287a62b6524d0176ff10",
+        "comparisonFileSha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst",
+          "line": 2,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "edda5ccc2df39b9c3415b43b6bf208454cd1233824b38070c8f19f97c9b45b93"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": true,
+        "book": "PZO1110",
+        "evidenceRole": "complete-root-comparison",
+        "role": "Core Rulebook familiar ability row (SOURCEPAGE p.83).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst#L67"
+      },
+      "additionalComparisonLeads": [],
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB familiar abilities (Arcane Bond: Familiar, p. 83)",
+          "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml",
+          "comparisonBasis": "Exact named rule in the reviewed body; minimum notice dependency, not complete origin proof."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [],
+      "sourceFields": {
+        "abilityType": "ex",
+        "associations": {
+          "classes": ["Familiar"]
+        },
+        "description": {
+          "value": "<p>If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "83"
+          }
+        ],
+        "subType": "classFeat"
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB familiar ability (p. 83) equals its PCGen Core Rulebook row word for word. Existing reviewed CRB notice covers it.",
+      "mechanicsReview": {
+        "externalKey": "pf1/yNMQccEicirDocG7",
+        "name": "Speak with Animals of Its Kind",
+        "reviewedBy": "Opus (AI curator) for the owner",
+        "reviewedOn": "2026-10-20",
+        "descriptionText": "<p>If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures.</p>",
+        "rawMechanics": {
+          "changes": [],
+          "contextNotes": [],
+          "actions": [],
+          "sources": [
+            {
+              "id": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "uses": null,
+          "classAssociations": []
+        },
+        "curationRecords": [
+          {
+            "externalKey": "pf1/yNMQccEicirDocG7",
+            "kind": "description",
+            "target": "description",
+            "text": "<p>If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures.</p>",
+            "textSha256": "2d96546e600a0b797277aa9f601f062dfc09264179d38904265f178030c895c4",
+            "status": "checked",
+            "outputs": [
+              {
+                "kind": "note",
+                "text": "If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures."
+              }
+            ],
+            "rationale": "#505 complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/companion-features/speak-with-animals-of-its-kind.yNMQccEicirDocG7.yaml. The Note states the rule. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Opus (AI curator) for the owner",
+            "reviewedOn": "2026-10-20",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "83"
+            }
+          ],
+          "detail": {
+            "kind": "companionFeature",
+            "tag": "",
+            "associations": ["Familiar"]
+          },
+          "modifiers": [],
+          "sourceKey": null,
+          "situationalNotes": [
+            {
+              "text": "If the master is 7th level or higher, a familiar can communicate with animals of approximately the same kind as itself (including dire varieties): bats with bats, cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, monkeys with other simians, rats with rodents, toads with amphibians, and weasels with ermines and minks. Such communication is limited by the Intelligence of the conversing creatures."
+            }
+          ],
+          "unsupportedFields": ["companion", "gameContent"]
+        },
+        "companionReview": {
+          "grantingRecord": "pf1/EbgtpUXqVup5iXeD",
+          "grantingRule": "Familiar (CRB pp. 82-83): a familiar grants special abilities by the master's combined level in classes that grant familiars; the abilities are cumulative.",
+          "associations": ["Familiar"],
+          "masterLevel": 7,
+          "masterLevelEvidence": [
+            "Familiar classAssociations level 7 (pinned packs/companion-features/familiar.EbgtpUXqVup5iXeD.yaml, links.classAssociations).",
+            "PCGen data/pathfinder/paizo/roleplaying_game/core_essentials/ce_abilities_familiar_cr.lst:53 grants it at PREVARGTEQ:MasterLevel,7."
+          ],
+          "beneficiary": "familiar",
+          "statisticsOn": "companion",
+          "familiarCalculation": "The familiar calculation (#326, src/lib/character-sheet-familiar.ts familiarProgressionFor) lists this ability by name from the same master level in familiar.progression.specialAbilities.",
+          "classSchedules716": "#716 P7 owes 40 class schedules and lists Familiar as a non-class group (Familiar 25 PCGen rows), so P7 models the master classes' familiar-granting features (such as the wizard's arcane bond), not this familiar ability; no feature is curated twice."
+        },
+        "prerequisiteReview": {
+          "authoredText": "",
+          "normalizedAtoms": [],
+          "publishedClauses": [],
+          "outstandingFacts": [],
+          "review": "A companion feature resource has no selection prerequisite. Its master-level threshold is a familiar progression fact (companionReview.masterLevel), not a prerequisite atom."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [],
+          "review": "No weapon or armor proficiency grant in this body."
+        },
+        "outstandingCalculations": [],
+        "proseOnlyRules": "Communication rule; nothing to calculate.",
+        "sourceDiscrepancies": [
+          "PCGen's schedule row grants it only to an animal familiar (PRERACE:1,RACESUBTYPE=Augmented Animal); the body states no such limit. Recorded, not resolved."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "currentBinding": {
+        "contentFingerprint": "3910c2a200ab8cd75ca324760224fa743aad178d83c8b609e10c98d63a2e809b",
+        "mappingFingerprint": "84f291661ef16bfa8f0d31629f2266342aa9bb66b38f5b07f49e55817d24dda7",
+        "evidenceFingerprints": {
+          "companion-features-505-yNMQccEicirDocG7": "089eb79cbd9668533cc710f77be30451da9ac603681ce48fa6ff64d803c476ec"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91"
+        }
+      }
+    }
+  ],
+  "counts": {
+    "total": 11,
+    "admitted": 8,
+    "held": 2,
+    "dependentlyOmitted": 0,
+    "unsupportedProseOnly": 0,
+    "excluded": 1,
+    "excludedFolders": 1,
+    "recordLevel35Holds": 0
+  },
+  "retainedExceptions": []
+}

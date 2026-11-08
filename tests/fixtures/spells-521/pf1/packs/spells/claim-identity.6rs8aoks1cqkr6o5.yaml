@@ -1,0 +1,69 @@
+_id: 6rs8aoks1cqkr6o5
+_key: '!items!6rs8aoks1cqkr6o5'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Claim Identity
+system:
+  actions:
+    - _id: 13mygv18se76ks0j
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: humanoid creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You steal the target's face, transforming yourself into a flawless
+      imitation of it. All of the target's facial features, vocal cues, and
+      identifying physical traits change, transforming it into an unremarkable
+      member of its race and gender. You transform into a perfect likeness of
+      the target's true form, as if affected by <i>alter self</i>, and gain a
+      +10 bonus on Disguise checks to impersonate the original subject of this
+      spell; you take no penalties on this check if the original target is of a
+      different race, age, size, or gender. <i>Claim identity</i> prevents any
+      other polymorph effects from restoring the target's true face for the
+      spell's duration, though the target can still assume other forms or faces
+      via magic or any natural shapechanging ability.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      antipaladin: 3
+      arcanist: 4
+      bard: 3
+      druid: 4
+      hunter: 4
+      inquisitor: 3
+      investigator: 3
+      shaman: 4
+      skald: 3
+      sorcerer: 4
+      witch: 3
+      wizard: 4
+  level: 4
+  materials:
+    value: a needle and thread
+  school: trs
+  sources:
+    - id: PZO9469
+      pages: '28'
+  subschool:
+    - polymorph
+type: spell

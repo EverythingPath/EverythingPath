@@ -1,0 +1,80 @@
+_id: v58v451n6dj73wvc
+_key: '!items!v58v451n6dj73wvc'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Teleport Trap
+system:
+  actions:
+    - _id: fwqbh1h6xxgut1l4
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: one 40-ft. cube/level (S)
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Teleport trap</i> wards an area, redirecting all teleportation into
+      or out of the area to a specific point within the area determined by you
+      at the time of casting. The destination must be an open space on a solid
+      surface. The spell's area overlaps walls and other solid and liquid
+      objects (preventing intruders from bypassing the ward by teleporting into
+      a wall or through similar means). A teleporting creature that is affected
+      by a <i>teleport trap</i> can resist the effect with a Will save-if the
+      save is successful, the creature simply doesn't teleport at all (but the
+      use of the teleport effect is still consumed)-either to the intended
+      location or the <i>teleport trap</i>'s actual destination. A DC 27
+      Knowledge (arcana) allows such a creature to recognize the <i>teleport
+      trap</i>'s presence, but does not reveal the trap's linked
+      destination.</p><p>At your discretion, the <i>teleport trap</i> can
+      exclude a category of creatures, such as an alignment, a type of creature,
+      or creatures that carry a specific item or know a password (though this
+      only works if the creature is teleporting out of the area, not into it).
+      You select this option and the conditions at the time you cast the spell.
+      Overly complicated conditions may cause the spell to fail entirely.
+      Multiple castings of <i>teleport trap</i> can be linked to cover a larger
+      area, allowing teleported creatures to be directed to a single point
+      within the combined area of the spells.</p><p><i>Teleport trap</i> can be
+      made permanent at the cost of 7,000 gp. A single <i>permanency</i> spell
+      can be used on all <i>teleport trap</i>s that share a linked destination,
+      but the gold piece cost must be paid for each individual spell.</p><p>The
+      Pathfinders of the Grand Lodge make use of permanent <i>teleport trap</i>s
+      in several key locations, trapping would-be intruders in a small wing of
+      jail cells. At least one crypt of the Whispering Tyrant makes use of the
+      spell as well, trapping grave robbers in coffin-sized stone cysts, there
+      to die a slow and agonizing death from thirst and starvation.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+    subDomain:
+      Trap: 7
+  level: 7
+  materials:
+    gpValue: 100
+    value: powdered lodestone and silver worth 100 gp per 40-ft. cube
+  school: abj
+  sources:
+    - id: PZO9226
+      pages: '296'
+    - id: PZO9211
+      pages: '18'
+type: spell
