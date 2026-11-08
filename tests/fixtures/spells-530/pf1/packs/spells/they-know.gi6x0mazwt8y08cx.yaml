@@ -1,0 +1,73 @@
+_id: gi6x0mazwt8y08cx
+_key: '!items!gi6x0mazwt8y08cx'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: They Know
+system:
+  actions:
+    - _id: 837s1fb7mkih6mc8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one intelligent creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instill a target with the fear that the nearest other intelligent
+      creature knows her darkest secret. If she is in the midst of another
+      situation as vital as protecting her darkest secret, such as combat, this
+      doesn't cause her to cease participating, but otherwise, she becomes
+      compelled to use her abilities and skills to determine exactly how much
+      the other individual knows. Even if she isn't around other creatures or
+      otherwise avoids confronting her paranoia for a time, the nagging fear
+      causes the target to become shaken for the duration of the spell (though
+      this doesn't stack with other fear effects to make the target frightened
+      or panicked).  The subject's paranoia increases over time, forcing her to
+      take additional steps to protect herself from the other creature.
+      Depending on her personality (or subject to the GM's discretion), she
+      might confess, publicly demand to know what the other creature knows,
+      attack the other creature to silence it, or offer the other creature a
+      bribe.  The spell fails if the target truly feels she has nothing to
+      hide.</p>
+  descriptors:
+    - emotion
+    - fear
+  learnedAt:
+    class:
+      bard: 3
+      inquisitor: 3
+      mesmerist: 3
+      paladin: 3
+      psychic: 4
+      shaman: 4
+      skald: 3
+      witch: 4
+  level: 3
+  materials:
+    value: a drop of black ink
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '226'
+  subschool:
+    - compulsion
+type: spell

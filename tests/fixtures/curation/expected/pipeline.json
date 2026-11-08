@@ -1,0 +1,937 @@
+{
+  "catalog": {
+    "purpose": "preview",
+    "releaseAdmission": "not-evaluated",
+    "remaps": [],
+    "inputs": [
+      {
+        "repo": "pf1",
+        "tag": "v11.11",
+        "version": "11.11",
+        "contentSha256": "a4f4e89f9f2d5e6b13f6b1e422b7051c612f610a954aa4328a6644504b6208d9"
+      },
+      {
+        "repo": "pf1-content",
+        "tag": "11.4.0",
+        "version": "11.4.0",
+        "contentSha256": "b81f27569262f717561f2891a1b69f1679982c1d86d06bb152eebd6ca4b38963"
+      }
+    ],
+    "summary": {
+      "upstreamRecords": 13,
+      "admitted": 11,
+      "excluded": 2,
+      "unassigned": 0,
+      "byKind": {
+        "itemAbility": 3,
+        "feat": 8
+      }
+    },
+    "entries": [
+      {
+        "externalKey": "pf1-content/Flaming",
+        "upstreamKey": "pf1-content/Flaming",
+        "pack": "pf-special-qualities",
+        "name": "Flaming",
+        "detail": {
+          "kind": "itemAbility",
+          "appliesTo": "weapon",
+          "damageDice": [
+            {
+              "on": "hit",
+              "dice": "1d6",
+              "damageType": "fire"
+            }
+          ],
+          "bonusEquivalent": 1
+        },
+        "description": "<p>A flaming weapon deals an extra 1d6 fire damage on a hit.</p><p>Price +1 bonus</p>",
+        "sources": [],
+        "modifiers": [],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1-content/Keen",
+        "upstreamKey": "pf1-content/Keen",
+        "pack": "pf-special-qualities",
+        "name": "Keen",
+        "detail": {
+          "kind": "itemAbility",
+          "appliesTo": "melee",
+          "bonusEquivalent": 1,
+          "doublesThreat": true,
+          "weaponDamageTypes": [
+            "piercing",
+            "slashing"
+          ]
+        },
+        "description": "<p>Only piercing or slashing melee weapons can be keen. This ability doubles the threat range of a weapon.</p><p>Price +1 bonus</p>",
+        "sources": [],
+        "modifiers": [],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1-content/Shadow",
+        "upstreamKey": "pf1-content/Shadow",
+        "pack": "pf-special-qualities",
+        "name": "Shadow",
+        "detail": {
+          "kind": "itemAbility",
+          "appliesTo": "armor",
+          "bonusEquivalent": 0
+        },
+        "description": "<p>This armor grants a +5 competence bonus on Stealth checks.</p><p>Price +3,750 gp</p>",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "skill.ste",
+            "bonusType": "competence",
+            "value": 5
+          }
+        ],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1/Action",
+        "upstreamKey": "pf1/Action",
+        "pack": "feats",
+        "name": "Action",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "attack",
+            "bonusType": "enhancement",
+            "value": 1,
+            "condition": {
+              "situation": {
+                "local": "Within 30 ft"
+              },
+              "weapon": "$self"
+            }
+          }
+        ],
+        "unsupported": [
+          {
+            "field": "gameContent",
+            "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+            "value": {
+              "actions": [
+                {
+                  "_id": "weaponAction",
+                  "conditionals": [
+                    {
+                      "_id": "closeRange",
+                      "name": "Within 30 ft",
+                      "modifiers": [
+                        {
+                          "formula": "1",
+                          "target": "attack",
+                          "subTarget": "allAttack",
+                          "type": "enh"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "externalKey": "pf1/Compound",
+        "upstreamKey": "pf1/Compound",
+        "pack": "feats",
+        "name": "Compound",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 4,
+            "condition": {
+              "situation": {
+                "local": "vs bull rush while on ground"
+              }
+            }
+          },
+          {
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 4,
+            "condition": {
+              "situation": {
+                "local": "vs trip while on ground"
+              }
+            }
+          }
+        ],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1/Covered",
+        "upstreamKey": "pf1/Covered",
+        "pack": "feats",
+        "name": "Covered",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1/EmptyTarget",
+        "upstreamKey": "pf1/EmptyTarget",
+        "pack": "feats",
+        "name": "EmptyTarget",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [],
+        "unsupported": [],
+        "situationalNotes": [
+          {
+            "text": "May reroll critical confirmation once"
+          }
+        ]
+      },
+      {
+        "externalKey": "pf1/Formula",
+        "upstreamKey": "pf1/Formula",
+        "pack": "feats",
+        "name": "Formula",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "save.will",
+            "bonusType": "morale",
+            "value": {
+              "formula": "floor((@classLevel.fighter + 2) / 4)"
+            },
+            "condition": {
+              "situation": {
+                "local": "vs fear"
+              }
+            }
+          }
+        ],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1/Immunity",
+        "upstreamKey": "pf1/Immunity",
+        "pack": "feats",
+        "name": "Immunity",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [],
+        "unsupported": [],
+        "situationalNotes": [
+          {
+            "target": "saves",
+            "situation": {
+              "local": "Magic Sleep"
+            },
+            "text": "Immune to Magic Sleep"
+          }
+        ]
+      },
+      {
+        "externalKey": "pf1/Numeric",
+        "upstreamKey": "pf1/Numeric",
+        "pack": "feats",
+        "name": "Numeric",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "saves",
+            "bonusType": "racial",
+            "value": 2,
+            "condition": {
+              "situation": {
+                "local": "vs poison"
+              }
+            }
+          }
+        ],
+        "unsupported": []
+      },
+      {
+        "externalKey": "pf1/Prose",
+        "upstreamKey": "pf1/Prose",
+        "pack": "feats",
+        "name": "Prose",
+        "detail": {
+          "kind": "feat",
+          "featTypes": [],
+          "repeatable": "unreviewed"
+        },
+        "description": "<p>When defending against bull rush, gain a +2 racial bonus to CMD.</p>",
+        "sources": [],
+        "modifiers": [
+          {
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 2,
+            "condition": {
+              "situation": {
+                "local": "against bull rush"
+              }
+            }
+          }
+        ],
+        "unsupported": []
+      }
+    ],
+    "resources": [],
+    "racialTraits": {
+      "summary": {
+        "races": 0,
+        "racesWithTraits": 0,
+        "linkedTraits": 0,
+        "unlinkedStandardTraits": 0,
+        "unmatchedTraitNames": 0,
+        "relocatedChanges": 0,
+        "ownerlessModifiers": 0,
+        "ownerlessNotes": 0,
+        "lostModifiers": 0,
+        "addedModifiers": 0,
+        "rehomedNotes": 0,
+        "coveredTraitNotes": 0,
+        "uncoveredTraitNotes": 0,
+        "staleNotes": 0,
+        "ownerlessWeaponProf": 0,
+        "overlaps": 0,
+        "latentOverlaps": 0,
+        "alternates": 0,
+        "alternatesFullyResolved": 0,
+        "descriptionRehomes": {
+          "applied": 0,
+          "stale": 0,
+          "unused": 11
+        },
+        "abilityTraits": {
+          "applied": 0,
+          "stale": 0,
+          "unused": 72
+        }
+      },
+      "races": [],
+      "unresolvedAlternates": [],
+      "descriptionRehomes": [
+        {
+          "race": "pf1/fX9F2amW2BcYoHwb",
+          "trait": "pf1-content/gwRHgXExczYgcJOA",
+          "outputTarget": "skill.ste",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/efwHEwjvL9Z94MJI",
+          "trait": "pf1-content/MiPbhGqPRX7H4C7a",
+          "outputTarget": "spellDC",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/2mWMyKiPWk6Y8cNx",
+          "trait": "pf1-content/DLslPcoXcnvQjIPH",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/9FBT6uqlRgaw9gug",
+          "trait": "pf1-content/Qx1JqPVW0quaOGfY",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/Lt4ZP5GCinGvTfnF",
+          "trait": "pf1-content/ttCN9QWoKGpAXX4H",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/NhEPoXIZWOOunSH7",
+          "trait": "pf1-content/v5Uff6XAqbnWbk4j",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/ZVzH0qb1Tqety6fU",
+          "trait": "pf1-content/xoItsNqchG4wE6OG",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/YCCdi4OEC4WuzelM",
+          "trait": "pf1-content/gh1taO4CBM237eMu",
+          "outputTarget": "ac.natural",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/GAoJIy6ycj3OovQT",
+          "trait": "pf1-content/YLr7f3djG85wvbAT",
+          "outputTarget": "spellDC",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/fX9F2amW2BcYoHwb",
+          "trait": "pf1-content/Jnw41wF4ln2vH7d8",
+          "outputTarget": "spellDC",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        },
+        {
+          "race": "pf1/Vaf5bV3wpk24pVt2",
+          "trait": "pf1-content/XixpDZG7W0XELNni",
+          "outputTarget": "spellDC",
+          "status": "unused",
+          "reason": "The race record is not in these inputs."
+        }
+      ],
+      "abilityTraits": []
+    }
+  },
+  "unsupported": {
+    "purpose": "preview",
+    "summary": {
+      "entries": 1,
+      "issues": 1
+    },
+    "entries": [
+      {
+        "externalKey": "pf1/Action",
+        "pack": "feats",
+        "issues": [
+          {
+            "field": "gameContent",
+            "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+            "value": {
+              "actions": [
+                {
+                  "_id": "weaponAction",
+                  "conditionals": [
+                    {
+                      "_id": "closeRange",
+                      "name": "Within 30 ft",
+                      "modifiers": [
+                        {
+                          "formula": "1",
+                          "target": "attack",
+                          "subTarget": "allAttack",
+                          "type": "enh"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "coverageComplete": true,
+    "summary": {
+      "upstreamRecords": 13,
+      "admitted": 11,
+      "excluded": 2,
+      "unassigned": 0,
+      "byKind": {
+        "itemAbility": 3,
+        "feat": 8
+      }
+    },
+    "packs": [
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "declared": true,
+        "present": true,
+        "admitted": 8,
+        "excluded": 0,
+        "unassigned": 0
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-buffs",
+        "declared": true,
+        "present": true,
+        "admitted": 0,
+        "excluded": 1,
+        "unassigned": 0
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-special-qualities",
+        "declared": true,
+        "present": true,
+        "admitted": 3,
+        "excluded": 1,
+        "unassigned": 0
+      }
+    ],
+    "records": [
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Action.yaml",
+        "externalKey": "pf1/Action",
+        "name": "Action",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Compound.yaml",
+        "externalKey": "pf1/Compound",
+        "name": "Compound",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Covered.yaml",
+        "externalKey": "pf1/Covered",
+        "name": "Covered",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/EmptyTarget.yaml",
+        "externalKey": "pf1/EmptyTarget",
+        "name": "EmptyTarget",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Formula.yaml",
+        "externalKey": "pf1/Formula",
+        "name": "Formula",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Immunity.yaml",
+        "externalKey": "pf1/Immunity",
+        "name": "Immunity",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Numeric.yaml",
+        "externalKey": "pf1/Numeric",
+        "name": "Numeric",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1",
+        "pack": "feats",
+        "path": "packs/feats/Prose.yaml",
+        "externalKey": "pf1/Prose",
+        "name": "Prose",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-buffs",
+        "path": "src/pf-buffs/_Common_Conditional_Modifiers_jTaeREVBdEeawArA.yaml",
+        "externalKey": "pf1-content/jTaeREVBdEeawArA",
+        "name": "*Common Conditional Modifiers",
+        "status": "excluded",
+        "reason": "Named Foundry conditional-modifier helper/template (#228)."
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-special-qualities",
+        "path": "src/pf-special-qualities/Flaming.yaml",
+        "externalKey": "pf1-content/Flaming",
+        "name": "Flaming",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-special-qualities",
+        "path": "src/pf-special-qualities/Keen.yaml",
+        "externalKey": "pf1-content/Keen",
+        "name": "Keen",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-special-qualities",
+        "path": "src/pf-special-qualities/Shadow.yaml",
+        "externalKey": "pf1-content/Shadow",
+        "name": "Shadow",
+        "status": "admitted",
+        "reason": "In scope for preview extraction; release admission remains pending."
+      },
+      {
+        "repo": "pf1-content",
+        "pack": "pf-special-qualities",
+        "path": "src/pf-special-qualities/_Weapon_Enchant_Conditional_Modifiers_upTvrmZoeKq2LI0F.yaml",
+        "externalKey": "pf1-content/upTvrmZoeKq2LI0F",
+        "name": "*Weapon Enchant Conditional Modifiers",
+        "status": "excluded",
+        "reason": "Named Foundry conditional-modifier helper/template (#228)."
+      }
+    ]
+  },
+  "curation": {
+    "passed": true,
+    "missing": [],
+    "applied": [
+      {
+        "externalKey": "pf1/Action",
+        "kind": "conditional",
+        "target": "attack/allAttack",
+        "text": "{\"_id\":\"closeRange\",\"name\":\"Within 30 ft\",\"modifiers\":[{\"formula\":\"1\",\"target\":\"attack\",\"subTarget\":\"allAttack\",\"type\":\"enh\"}]}",
+        "textSha256": "de5d91baa2544f80f941329c9a5f2b3a0472eacd232df3010476e59f3d019a6b",
+        "actionId": "weaponAction",
+        "conditionalId": "closeRange",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "modifier",
+            "target": "attack",
+            "bonusType": "enhancement",
+            "value": 1,
+            "condition": {
+              "situation": {
+                "local": "Within 30 ft"
+              },
+              "weapon": "$self"
+            }
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Compound",
+        "kind": "note",
+        "target": "cmd",
+        "text": "+[[4]] Racial vs bull rush and trip while on ground",
+        "textSha256": "82e283cbbc754e038f1eefc19fcd0246a245567f3287fe305b93a050dfeded4f",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "modifier",
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 4,
+            "condition": {
+              "situation": {
+                "local": "vs bull rush while on ground"
+              }
+            }
+          },
+          {
+            "kind": "modifier",
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 4,
+            "condition": {
+              "situation": {
+                "local": "vs trip while on ground"
+              }
+            }
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Covered",
+        "kind": "note",
+        "target": "allSavingThrows",
+        "text": "Already accounted for by the racial trait",
+        "textSha256": "8b6c5252dd53dbefe390b5ced61916e57cbb72a62c008ed59982db9506825de5",
+        "status": "checked",
+        "outputs": [],
+        "rationale": "Synthetic covered/no-output example: the separate Numeric racial trait supplies the demonstrated effect.",
+        "diagnostics": [],
+        "reviewedBy": "Synthetic fixture reviewer",
+        "reviewedOn": "2026-10-03",
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/EmptyTarget",
+        "kind": "note",
+        "target": "",
+        "text": "May reroll critical confirmation once",
+        "textSha256": "5656a5ae4fd61b565aea5a5cadc3dbc420c156c6979d8c89b3937294bbf267f1",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "note",
+            "text": "May reroll critical confirmation once"
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Formula",
+        "kind": "note",
+        "target": "will",
+        "text": "+[[floor((@class.level + 2) / 4)]] Morale vs fear",
+        "textSha256": "aab05d0760a29c21101b72542a01b7a0f7cf426cd81fe3eb9f6bff9b77161e6f",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "modifier",
+            "target": "save.will",
+            "bonusType": "morale",
+            "value": {
+              "formula": "floor((@classLevel.fighter + 2) / 4)"
+            },
+            "condition": {
+              "situation": {
+                "local": "vs fear"
+              }
+            }
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Immunity",
+        "kind": "note",
+        "target": "allSavingThrows",
+        "text": "Immune to Magic Sleep",
+        "textSha256": "b1fa0e2626c7c1c9e211ad60ba1c43d49f0d5d6e551b11449b827dd548a05d20",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "note",
+            "target": "saves",
+            "situation": {
+              "local": "Magic Sleep"
+            },
+            "text": "Immune to Magic Sleep"
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Numeric",
+        "kind": "note",
+        "target": "allSavingThrows",
+        "text": "+[[2]] Racial vs poison",
+        "textSha256": "529718deaf47707079f5c3e4efe5acfafa79b9b0b81965faf12c0840b5e50f9b",
+        "status": "checked",
+        "outputs": [
+          {
+            "kind": "modifier",
+            "target": "saves",
+            "bonusType": "racial",
+            "value": 2,
+            "condition": {
+              "situation": {
+                "local": "vs poison"
+              }
+            }
+          }
+        ],
+        "rationale": "Checked against the synthetic imported note and description; this is fixture evidence only.",
+        "diagnostics": [],
+        "reviewedBy": "Synthetic fixture reviewer",
+        "reviewedOn": "2026-10-03",
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1/Prose",
+        "kind": "description",
+        "target": "description",
+        "text": "<p>When defending against bull rush, gain a +2 racial bonus to CMD.</p>",
+        "textSha256": "e0f42eefc5a90a4e8d4a30b6311f2c174ad8dbd5b34474b9f7760eb7c7c5bab5",
+        "status": "drafted",
+        "outputs": [
+          {
+            "kind": "modifier",
+            "target": "cmd",
+            "bonusType": "racial",
+            "value": 2,
+            "condition": {
+              "situation": {
+                "local": "against bull rush"
+              }
+            }
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1-content/Flaming",
+        "kind": "itemAbility",
+        "target": "description",
+        "text": "<p>A flaming weapon deals an extra 1d6 fire damage on a hit.</p><p>Price +1 bonus</p>",
+        "textSha256": "e37d5a3e8142d0d36466081c1dde2c973f3355763ae16f26a3d013863bfb6d31",
+        "status": "drafted",
+        "outputs": [
+          {
+            "damageDice": [
+              {
+                "on": "hit",
+                "dice": "1d6",
+                "damageType": "fire"
+              }
+            ],
+            "kind": "itemAbility"
+          },
+          {
+            "bonusEquivalent": 1,
+            "kind": "itemAbility"
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": [
+          {
+            "externalKey": "pf1-content/upTvrmZoeKq2LI0F",
+            "kind": "conditional",
+            "target": "damage/allDamage",
+            "text": "{\"_id\":\"82a2c967wtlp9zil\",\"modifiers\":[{\"_id\":\"16n2fja5uqgden3g\",\"critical\":\"nonCrit\",\"damageType\":[\"fire\"],\"formula\":\"1d6\",\"subTarget\":\"allDamage\",\"target\":\"damage\"}],\"name\":\"Flaming\"}",
+            "textSha256": "3a11dc5d337437033b5f42193abc754b9bd8cba4bdca2fbb356ad178fcb10656",
+            "actionId": "3uh04flt1acambht",
+            "conditionalId": "82a2c967wtlp9zil"
+          }
+        ]
+      },
+      {
+        "externalKey": "pf1-content/Keen",
+        "kind": "itemAbility",
+        "target": "description",
+        "text": "<p>Only piercing or slashing melee weapons can be keen. This ability doubles the threat range of a weapon.</p><p>Price +1 bonus</p>",
+        "textSha256": "44e72ec510a545a54d309d3cdacbab8a48c4e0f771dda1f28d2bc467792f2eb5",
+        "status": "drafted",
+        "outputs": [
+          {
+            "bonusEquivalent": 1,
+            "kind": "itemAbility"
+          },
+          {
+            "doublesThreat": true,
+            "weaponDamageTypes": [
+              "piercing",
+              "slashing"
+            ],
+            "kind": "itemAbility"
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      },
+      {
+        "externalKey": "pf1-content/Shadow",
+        "kind": "itemAbility",
+        "target": "description",
+        "text": "<p>This armor grants a +5 competence bonus on Stealth checks.</p><p>Price +3,750 gp</p>",
+        "textSha256": "b3bf063ca10538dabd13f60cd1dae333d4bb3758828b428ea5d243e7f1b8b41f",
+        "status": "drafted",
+        "outputs": [
+          {
+            "bonusEquivalent": 0,
+            "kind": "itemAbility"
+          },
+          {
+            "kind": "modifier",
+            "target": "skill.ste",
+            "bonusType": "competence",
+            "value": 5
+          }
+        ],
+        "rationale": "Parser draft; check against the imported description before marking checked.",
+        "diagnostics": [],
+        "seedBindings": []
+      }
+    ],
+    "stale": [],
+    "unused": [],
+    "unresolvedMechanics": [],
+    "unresolvedDescriptions": [],
+    "summary": {
+      "required": 10,
+      "drafted": 8,
+      "checked": 2,
+      "missing": 0,
+      "descriptions": {
+        "candidates": 1,
+        "drafted": 1,
+        "checked": 0
+      }
+    }
+  }
+}

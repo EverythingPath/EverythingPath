@@ -1,0 +1,83 @@
+_id: yuftnxwtc9du93ho
+_key: '!items!yuftnxwtc9du93ho'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Hex Glyph
+system:
+  actions:
+    - _id: iklatiu77un9tl7c
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      name: Object touched
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+    - _id: tvXpSLRJwAUP5m8O
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      measureTemplate:
+        size: 5 * @cl
+        type: rect
+      name: Square
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like the spell glyph version of <i>Glyph of
+      Warding</i>, except you can store a hex you know (but not a major hex or a
+      grand hex) instead of a spell. If the hex has a target, it targets the
+      intruder. If the hex has an area or an amorphous effect, the area or
+      effect is centered on the intruder. The triggered hex uses this spell's
+      caster level and DC.</p><p><i>Read magic</i> allows its caster to identify
+      a <i>hex glyph</i> with a successful DC 13 Knowledge (arcana) check.
+      Identifying the glyph does not discharge it and indicates that it stores a
+      hex, but does not indicate the effect of that hex.</p>
+  learnedAt:
+    class:
+      shaman: 3
+      witch: 3
+  level: 3
+  materials:
+    gpValue: 200
+    value: powdered diamond worth 200 gp
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '184'
+  sr: false
+type: spell

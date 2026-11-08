@@ -1,0 +1,63 @@
+_id: 9pu7hu8jhwwgxbcj
+_key: '!items!9pu7hu8jhwwgxbcj'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Heckle
+system:
+  actions:
+    - _id: i1ne6mlxlorjghe6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: 1 creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You badger and nitpick the subject of your spell until its mood sours.
+      The target's attitude shifts one category toward hostile regarding you and
+      everyone within 30 feet of the target at the time the spell is cast. The
+      target also takes a -2 penalty on attack rolls, on saving throws, and on
+      ability and skill checks that rely on Intelligence, Wisdom, or
+      Charisma.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      magus: 3
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a tomato
+  school: enc
+  sources:
+    - id: PZO9465
+      pages: '26'
+  subschool:
+    - compulsion
+type: spell

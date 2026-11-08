@@ -1,0 +1,70 @@
+_id: 0mt9mso6wdhfafpo
+_key: '!items!0mt9mso6wdhfafpo'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/water/orb-ice-glow.webp
+name: Polar Midnight
+system:
+  actions:
+    - _id: nx41fber99vqdvfd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 5d6
+            types:
+              - cold
+      duration:
+        units: round
+        value: '@cl'
+      effect: 30-ft. spread
+      measureTemplate:
+        color: '#76aab7'
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        footer:
+          - '[[/r 1d6]] Dexterity damage'
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You plunge an area into the brutal chill of the arctic
+      night.</p><p>Illumination conditions are dropped by two steps (though only
+      to darkness, not supernatural darkness), and all creatures in the area
+      take 5d6 points of cold damage and 1d6 points of Dexterity damage per
+      round. A successful Fortitude save each round negates the Dexterity damage
+      but not the cold damage.</p><p>Any creature that doesn't move on its turn
+      becomes encased in a sheath of ice equivalent to <i>Wall of Ice</i>, is
+      helpless, and cannot breathe. Corpses in the area for longer than 1 round
+      are transmuted into solid ice; reviving the icy corpse requires <i>true
+      resurrection</i>, <i>miracle</i>, or <i>wish</i>. As a move action, you
+      may move the area of effect up to 10 feet in any direction.</p>
+  descriptors:
+    - cold
+    - darkness
+  learnedAt:
+    class:
+      cleric: 9
+      druid: 9
+      oracle: 9
+      shaman: 9
+      witch: 9
+  level: 9
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '232'
+type: spell
