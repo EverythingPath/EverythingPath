@@ -1,0 +1,759 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/7gHiZBNHjwefbBLI",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "class-abilities",
+      "name": "Bomb",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his <em>Intelligence</em> modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert—their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst—the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster’s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day—once created, a catalyst vial remains usable by the alchemist for years.</p>\n<p>Drawing the components of, creating, and throwing a bomb requires a <em>standard action</em> that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the <em>Throw Splash Weapon</em> special attack. Bombs are considered weapons and can be selected using feats such as <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a> and <a href=\"catalog:pf1/n250dFlbykAIAg5Z\">Weapon Focus</a>. On a direct hit, an alchemist’s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist’s <em>Intelligence</em> modifier. The damage of an alchemist’s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as <a href=\"catalog:pf1/26k1Gi7t5BoqxhIj\">Vital Strike</a>). Splash damage from an alchemist bomb is always equal to the bomb’s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a <em>Reflex</em> save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist’s level + the alchemist’s <em>Intelligence</em> modifier.</p>\n<p>Alchemists can learn new types of bombs as discoveries (see the <em>Discovery</em> ability) as they level up. An alchemist’s bomb, like an extract, becomes inert if used or carried by anyone else.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "28"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "pf6f5msnqitrhl47",
+                "ability": {
+                  "attack": "dex",
+                  "damage": "int",
+                  "damageMult": 1
+                },
+                "actionType": "twak",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "nonCritParts": [
+                    {
+                      "formula": "(ceil(@class.level / 2) - 1)d6",
+                      "types": ["fire"]
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "formula": "1d6",
+                      "types": ["fire"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "measureTemplate": {
+                  "size": "5",
+                  "type": "circle"
+                },
+                "name": "Throw",
+                "notes": {
+                  "effect": [
+                    "[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage"
+                  ]
+                },
+                "range": {
+                  "units": "ft",
+                  "value": "20"
+                },
+                "save": {
+                  "dc": "10 + floor(@class.level / 2) + @abilities.int.mod",
+                  "description": "Reflex halves splash damage",
+                  "type": "ref"
+                },
+                "splash": true,
+                "touch": true
+              }
+            ],
+            "associations": {
+              "classes": ["Alchemist"]
+            },
+            "uses": {
+              "maxFormula": "@class.level + @abilities.int.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/26k1Gi7t5BoqxhIj",
+      "upstreamKey": "pf1/26k1Gi7t5BoqxhIj",
+      "pack": "feats",
+      "name": "Vital Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>",
+      "prerequisiteText": "Base attack bonus +6",
+      "prerequisites": [
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "On the attack action, make one attack at your highest base attack bonus and roll the weapon’s damage dice twice before adding other damage bonuses. Extra weapon dice are not multiplied on a critical hit."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/8rsFtye3PwM6CKli",
+      "upstreamKey": "pf1/8rsFtye3PwM6CKli",
+      "pack": "feats",
+      "name": "Point-Blank Shot",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are especially accurate when making ranged attacks against close targets.</em></p><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.</p><p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack.ranged",
+          "bonusType": "untyped",
+          "value": 1,
+          "condition": {
+            "situation": "within30ft"
+          }
+        },
+        {
+          "target": "damage.ranged",
+          "bonusType": "untyped",
+          "value": 1,
+          "condition": {
+            "situation": "within30ft"
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/n250dFlbykAIAg5Z",
+      "upstreamKey": "pf1/n250dFlbykAIAg5Z",
+      "pack": "feats",
+      "name": "Weapon Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Weapon", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>",
+      "prerequisiteText": "Proficiency with selected weapon, base attack bonus +1",
+      "prerequisites": [
+        {
+          "unchecked": "Proficiency with selected weapon, base attack bonus +1",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    }
+  ],
+  "increments": [
+    {
+      "externalKey": "everythingpath/alchemist-bomb-11",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 6d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "11:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 6d6: the Alchemist table's 11th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-13",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 7d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "13:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 7d6: the Alchemist table's 13th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-15",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 8d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "15:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 8d6: the Alchemist table's 15th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-17",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 9d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "17:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 9d6: the Alchemist table's 17th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-19",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 10d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "19:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 10d6: the Alchemist table's 19th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-3",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 2d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "3:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 2d6: the Alchemist table's 3rd-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-3",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-3",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-3",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-3",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-3",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-5",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 3d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "5:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 3d6: the Alchemist table's 5th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-7",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 4d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "7:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 4d6: the Alchemist table's 7th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-bomb-9",
+      "upstreamKey": "pf1/7gHiZBNHjwefbBLI",
+      "pack": "everythingpath-schedules",
+      "name": "Bomb 5d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7gHiZBNHjwefbBLI",
+        "part": "9:pf1/7gHiZBNHjwefbBLI"
+      },
+      "description": "<p>Bomb 5d6: the Alchemist table's 9th-level row of Bomb (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Bomb entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-bomb-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7gHiZBNHjwefbBLI"
+    }
+  ]
+}

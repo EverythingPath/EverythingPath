@@ -1,0 +1,69 @@
+_id: kfn6zv75qwgc0cwy
+_key: '!items!kfn6zv75qwgc0cwy'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Soul Vault
+system:
+  actions:
+    - _id: 6i7o95721482xe6w
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell protects the target's soul by briefly enveloping the target
+      in an ethereal vault. The target gains a +4 bonus on saving throws against
+      spells and effects that would trap or redirect its soul (such as <i>magic
+      jar</i>, <i>soul bind</i>, and <i>trap the</i> soul) and effects that
+      would transform the target into an undead creature. The target is granted
+      a save to negate such effects even if one is not normally allowed. If it's
+      cast on a living creature that then dies, the target's body and spirit are
+      protected by the spell for its duration. If it's cast on a corpse within 1
+      round of death, the target's body and soul are both protected. Otherwise,
+      only the body receives the protection.  Any spellcaster that worships
+      Abadar may learn and cast <i>soul vault</i> as a 4th level spell, if it
+      isn't normally on her class spell list. <i>Soul vault</i> can be made
+      permanent with the <i>permanency</i> spell at a cost of 7,500 gp and a
+      minimum caster level of 11th.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 3
+      druid: 4
+      hunter: 4
+      inquisitor: 3
+      oracle: 3
+      psychic: 5
+      shaman: 3
+      sorcerer: 4
+      spiritualist: 2
+      warpriest: 3
+      witch: 4
+      wizard: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO9296
+      pages: '33'
+type: spell

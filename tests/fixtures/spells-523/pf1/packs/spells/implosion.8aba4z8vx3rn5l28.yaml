@@ -1,0 +1,54 @@
+_id: 8aba4z8vx3rn5l28
+_key: '!items!8aba4z8vx3rn5l28'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Implosion
+system:
+  actions:
+    - _id: 9e3tnom0uecsc8v0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration (up to 1 round/levels)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one corporeal creature/round
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes a destructive resonance in a corporeal creature's
+      body. Each round you concentrate (including the first), you can cause one
+      creature to collapse in on itself, inflicting 10 points of damage per
+      caster level. If you break concentration, the spell immediately ends,
+      though any implosions that have already happened remain in effect. You can
+      target a particular creature only once with each casting of the spell.
+      Implosion has no effect on creatures in gaseous form or on incorporeal
+      creatures.</p>
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+      psychic: 9
+    domain:
+      Destruction: 9
+  level: 9
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '299'
+type: spell

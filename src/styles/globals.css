@@ -1,0 +1,333 @@
+@import 'tailwindcss';
+/* Only UI code is markup: tests, docs and rules data emit stray utilities (#408). */
+@source not '../../**/*.{test,spec}.{ts,tsx}';
+@source not '../../{tests,e2e,docs,.agents,.claude,convex}';
+@source not '../../**/*.md';
+@import 'tw-animate-css';
+
+/* tw-animate-css's default enter/exit keyframes also animate
+   `filter: blur(var(--tw-enter-blur, 0))` from/to the element's own
+   `filter: none`, even when a surface only asks for fade/zoom/slide. Nothing
+   here uses blur-in/blur-out, and WebKit's Skia compositor crashes when a
+   filter animation ends in an empty filter list. Point animate-in/out at
+   keyframes with the same opacity/transform semantics and no filter. (The
+   library's own keyframes are hoisted after this file, so they cannot be
+   overridden by name.) */
+@theme inline {
+  --animate-in: enter-unfiltered
+    var(--tw-animation-duration, var(--tw-duration, 0.15s)) var(--tw-ease, ease)
+    var(--tw-animation-delay, 0s) var(--tw-animation-iteration-count, 1)
+    var(--tw-animation-direction, normal) var(--tw-animation-fill-mode, none);
+  --animate-out: exit-unfiltered
+    var(--tw-animation-duration, var(--tw-duration, 0.15s)) var(--tw-ease, ease)
+    var(--tw-animation-delay, 0s) var(--tw-animation-iteration-count, 1)
+    var(--tw-animation-direction, normal) var(--tw-animation-fill-mode, none);
+  @keyframes enter-unfiltered {
+    from {
+      opacity: var(--tw-enter-opacity, 1);
+      transform: translate3d(
+          var(--tw-enter-translate-x, 0),
+          var(--tw-enter-translate-y, 0),
+          0
+        )
+        scale3d(
+          var(--tw-enter-scale, 1),
+          var(--tw-enter-scale, 1),
+          var(--tw-enter-scale, 1)
+        )
+        rotate(var(--tw-enter-rotate, 0));
+    }
+  }
+  @keyframes exit-unfiltered {
+    to {
+      opacity: var(--tw-exit-opacity, 1);
+      transform: translate3d(
+          var(--tw-exit-translate-x, 0),
+          var(--tw-exit-translate-y, 0),
+          0
+        )
+        scale3d(
+          var(--tw-exit-scale, 1),
+          var(--tw-exit-scale, 1),
+          var(--tw-exit-scale, 1)
+        )
+        rotate(var(--tw-exit-rotate, 0));
+    }
+  }
+}
+
+@custom-variant dark (&:is(.dark *));
+/* Short viewports (phone landscape, a short tablet window): the bounded
+   Week frame tightens its chrome so the editor keeps room and its footer or
+   strip stays pinned. */
+@custom-variant short (@media (max-height: 520px));
+/* Touch devices have no hover, so a label that waits for the pointer
+   (the collapsed militia rail) is shown another way. */
+@custom-variant touch (@media (hover: none));
+
+:root {
+  /* Base color values */
+  --base-black: oklch(0.05 0 0);
+  --base-gray: oklch(0.82 0.02 200);
+  --base-light-gray: oklch(0.95 0.02 240);
+  --base-dark-gray: oklch(0.11 0 0);
+  --base-mid-gray: oklch(0.15 0 0);
+  --base-border-gray: var(--base-gray);
+  /* Editable fields sit on surfaces from oklch 0.05 (page) to 0.15 (muted
+     panels). Their boundary must read at 3:1 or better against every one of
+     them (WCAG 1.4.11), and their well is lighter than any surface so a field
+     is recognizable as editable before it is focused. Measured: border
+     4.8:1 on the page, 4.7:1 on a card, 4.5:1 on a muted panel. */
+  --base-field-border: oklch(0.58 0.01 200);
+  --base-field: oklch(0.2 0 0);
+  --base-destructive: oklch(0.55 0.22 20);
+
+  /* Design tokens using base colors */
+  --background: var(--base-black);
+  --foreground: oklch(0.92 0 0);
+  --card: var(--base-dark-gray);
+  --card-foreground: oklch(0.92 0 0);
+  --popover: var(--base-dark-gray);
+  --popover-foreground: oklch(0.92 0 0);
+  --primary: var(--base-light-gray);
+  --primary-foreground: var(--base-black);
+  --secondary: var(--base-mid-gray);
+  --secondary-foreground: var(--base-light-gray);
+  --muted: var(--base-mid-gray);
+  --muted-foreground: var(--base-gray);
+  --accent: var(--base-gray);
+  --accent-foreground: var(--base-black);
+  --destructive: var(--base-destructive);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: var(--base-border-gray);
+  --input: var(--base-field-border);
+  --field: var(--base-field);
+  --ring: var(--base-gray);
+  --chart-1: var(--base-gray);
+  --chart-2: var(--base-light-gray);
+  --chart-3: oklch(0.6 0.15 120);
+  --chart-4: oklch(0.68 0 0);
+  --chart-5: var(--base-destructive);
+  --radius: 0rem;
+  --sidebar: var(--base-dark-gray);
+  --sidebar-foreground: oklch(0.92 0 0);
+  --sidebar-primary: var(--base-gray);
+  --sidebar-primary-foreground: var(--base-black);
+  --sidebar-accent: var(--base-mid-gray);
+  --sidebar-accent-foreground: oklch(0.92 0 0);
+  --sidebar-border: var(--base-border-gray);
+  --sidebar-ring: var(--base-gray);
+  --font-sans: var(--font-cinzel);
+  --font-mono: var(--font-vt323);
+  --font-serif: var(--font-medieval);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-field: var(--field);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Long-form reading (the legal notices): a plain text face that keeps
+     letter case, beside Cinzel's small capitals for headings and chrome. A
+     system stack, so no font file ships for it. */
+  --font-text: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced retro fantasy background with grid pattern */
+.retro-grid {
+  background-color: var(--base-black);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(128, 128, 128, 0.03) 0px,
+      transparent 2px,
+      transparent 4px,
+      rgba(128, 128, 128, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(128, 128, 128, 0.03) 0px,
+      transparent 2px,
+      transparent 4px,
+      rgba(128, 128, 128, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(200, 200, 200, 0.02) 0px,
+      transparent 1px,
+      transparent 50px,
+      rgba(200, 200, 200, 0.02) 51px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      rgba(200, 200, 200, 0.02) 0px,
+      transparent 1px,
+      transparent 50px,
+      rgba(200, 200, 200, 0.02) 51px
+    );
+}
+
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The body clips; it never hides. The document scrolls on <html>
+   (overflow-y: scroll below), so the body's overflow is not handed to the
+   viewport: `hidden` would make the body its own scroll container, one as
+   tall as the page that never scrolls. Every sticky bar inside (the phone
+   bottom bar, Setup's footer from 768px) would then stick to the end of
+   the page instead of the viewport, and focus could scroll the body itself,
+   moving the top bar and the Week's pinned chrome with no way back. `clip`
+   crops the same overflow without a scroll container. */
+body.scanlines {
+  overflow: clip;
+}
+
+/* Radix's scroll lock sets the body's overflow to hidden !important while a
+   dialog, sheet or chooser is open, which would drop the sticky bars to the
+   end of the page behind it. The lock's overflow never stopped scrolling
+   here (the document scrolls on <html>); its event blocking does. */
+html body[data-scroll-locked] {
+  overflow: clip !important;
+}
+
+/* From 768px Setup's footer (Next, Start militia week) sticks to the bottom
+   of the viewport (#138 §3). Focus scrolls the detail pane's controls clear
+   of it. */
+html:has([data-setup-layout='wide']),
+[data-rail-host]:has([data-setup-layout='wide']) {
+  scroll-padding-bottom: 5rem;
+}
+
+/* From 768px the Character Sheet's summary row is pinned under the top bar
+   (sheet-summary.tsx sets the top padding). Focus also keeps a control's
+   bottom edge clear of the viewport: WebKit reveals only a text input's
+   caret line, leaving its padding and border below the edge. */
+@media (width >= 48rem) {
+  html:has([data-sheet-summary]) {
+    scroll-padding-bottom: 1rem;
+  }
+}
+
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  pointer-events: none;
+  z-index: 10;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.pixel-border {
+  border: 1px dashed var(--base-gray);
+  outline: none;
+  box-shadow: none;
+}
+
+@layer components {
+  .corner-brackets {
+    @apply relative transition-all duration-300 ease-out;
+  }
+
+  .corner-brackets::before,
+  .corner-brackets::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    /* Not `all`: the hover glow below sets a filter, and a filter that
+       transitions back to `none` crashes WebKit's Skia compositor (#151). */
+    transition:
+      background-size 0.3s ease,
+      opacity 0.3s ease;
+    background:
+      /* top-left corner */
+      linear-gradient(to right, white 8px, transparent 8px) top left no-repeat,
+      linear-gradient(to bottom, white 8px, transparent 8px) top left no-repeat,
+      /* top-right corner */
+        linear-gradient(to left, white 8px, transparent 8px) top right no-repeat,
+      linear-gradient(to bottom, white 8px, transparent 8px) top right no-repeat,
+      /* bottom-left corner */
+        linear-gradient(to right, white 12px, transparent 12px) bottom left
+        no-repeat,
+      linear-gradient(to top, white 12px, transparent 12px) bottom left
+        no-repeat,
+      /* bottom-right corner */
+        linear-gradient(to left, white 12px, transparent 12px) bottom right
+        no-repeat,
+      linear-gradient(to top, white 12px, transparent 12px) bottom right
+        no-repeat;
+    background-size:
+      1.5px 8px,
+      8px 1.5px;
+    opacity: 0.8;
+  }
+
+  /* Glow + expansion on hover */
+  .corner-brackets-hover:hover::before {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+    background-size:
+      1.5px 12px,
+      12px 1.5px;
+    opacity: 1;
+  }
+}
+
+html {
+  font-size: 18px;
+  overflow-y: scroll;
+}

@@ -1,0 +1,72 @@
+_id: JRfUcNzydUeBm76p
+_key: '!items!JRfUcNzydUeBm76p'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/spear-sling.PNG
+name: Spear-Sling
+system:
+  actions:
+    - _id: ej3puu9x4qjl4ksq
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '0'
+  baseTypes:
+    - Spear-Sling
+  description:
+    unidentified: >-
+      <p>A spear-sling consists of a hollow tube with a loop of elastic
+      material, such as rubber or sinew, attached to one end. The wielder draws
+      a harpoon, javelin, shortspear, or spear through the tube, pulling the
+      loop taut. Releasing the loop propels the shaft forward like a bow does an
+      arrow. A harpoon, javelin, shortspear, spear, or other weapon shot from a
+      spear-sling is treated as a projectile weapon instead of a thrown weapon,
+      increasing its maximum range and allowing it to be used underwater. Using
+      a spear-sling requires two hands. Loading a spear-sling is a standard
+      action (a move action if the wielder has the Rapid Reload feat) that
+      provokes attacks of opportunity.</p><p>A spear-sling is made with a
+      particular strength rating, like a composite longbow. Each point of
+      Strength bonus granted by the sling's strength rating adds 50 gp to its
+      cost. If you have a negative Strength modifier, apply it to damage rolls
+      when you use a spear-sling.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - spears
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon
