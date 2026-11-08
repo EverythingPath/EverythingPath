@@ -1,0 +1,64 @@
+_id: dnls28prt57tt5t6
+_key: '!items!dnls28prt57tt5t6'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Monstrous Extremities
+system:
+  actions:
+    - _id: nwsocskcya8wv3w4
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You change one of the extremities of the creature touched-arms or legs
+      only-into another shape of approximately the same size and mass. You can
+      choose a tentacle, a hoof, or a wing.</p><p>The subject must take
+      approximately 10 minutes to familiarize itself with the function and
+      movement of the new extremity to use it properly. These new forms do not
+      allow the subject to fly, run faster, or swim better; however, they do act
+      as natural weapons of the appropriate type, and the subject can use them
+      to make secondary attacks while making attacks with weapons as a
+      full-attack action. The secondary attacks are made using the creature's
+      base attack bonus -5 and adding only 1/2 the creature's Strength bonus on
+      damage rolls. The subject cannot hold a weapon or use any item that would
+      ordinarily fit into the slot of the changed extremity. The subject can
+      receive the benefits of this spell multiple times.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      cleric: 3
+      oracle: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 4
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO9267
+      pages: '237'
+    - id: PZO9420
+      pages: '28'
+  subschool:
+    - polymorph
+type: spell

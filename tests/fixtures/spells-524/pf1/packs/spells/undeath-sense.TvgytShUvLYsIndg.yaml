@@ -1,0 +1,68 @@
+_id: TvgytShUvLYsIndg
+_key: '!items!TvgytShUvLYsIndg'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: systems/pf1/icons/skills/water_03.jpg
+name: Undeath Sense
+system:
+  actions:
+    - _id: 1shP48VopVdnzGN0
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grant the target the ability to pick up on the subtle scents and
+      disturbances to the natural order that are specific to the living dead,
+      granting the target the ability to sense the presence of undead creatures.
+      The target is constantly aware of whether there are any undead auras
+      within 60 feet of her in any direction. If at least one undead aura is
+      present, the target can concentrate on the spell’s effects in order to
+      gain more information on the auras present. This functions similarly to
+      @UUID[Compendium.pf1.spells.aa0w7tk852iqn3ni]{detect undead}, except the
+      number of rounds of concentration needed to learn about the undead auras
+      is reduced by 1 (1 round to learn the number of auras, and 2 rounds to
+      learn the strength and location of each aura).</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      cleric: 2
+      inquisitor: 2
+      investigator: 2
+      oracle: 2
+      paladin: 2
+      shaman: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: ashes from an urn
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '269'
+  sr: false
+type: spell

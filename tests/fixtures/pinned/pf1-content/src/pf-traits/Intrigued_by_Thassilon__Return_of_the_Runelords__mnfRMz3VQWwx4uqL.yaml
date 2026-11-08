@@ -1,0 +1,54 @@
+_id: mnfRMz3VQWwx4uqL
+_key: '!items!mnfRMz3VQWwx4uqL'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Intrigued by Thassilon (Return of the Runelords)
+system:
+  actions:
+    - _id: dy53jKSIG43a40Hz
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per adventure, you may either take 20 on a Use Magic Device
+        check or activate a charged magic item without expending any
+        charges.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  changes:
+    - _id: ioXVGB0E
+      formula: 1 + floor((@attributes.hd.total - 1) /2)
+      target: bonusSkillRanks
+      type: untyped
+  description:
+    value: >-
+      <p><em>The rediscovery of Thassilon’s legacy several years ago was an
+      eye-opener for many, including you. After living so long in the shadow of
+      these enormous ruins, you were intrigued to find out that they were much
+      older than anyone could have guessed and that the runelords who built them
+      may still exist. You’ve made a promise to yourself to uncover all that you
+      can about Thassilon, its runelords, and the mysterious history of that
+      ancient civilization.</em></p><p><strong>Benefits</strong>: You gain
+      Thassilonian as a bonus language, and at 1st level and every 2 levels
+      thereafter, you gain a bonus skill rank that can only be applied to
+      Knowledge (arcana), Knowledge (history), Linguistics, or Use Magic
+      Device.</p><p>Once per adventure, you may either take 20 on a Use Magic
+      Device check or activate a charged magic item without expending any
+      charges.</p>
+  languages:
+    - thassilonian
+  sources:
+    - id: PZO9000-23E
+      pages: '11'
+  subType: trait
+  tags:
+    - Return of the Runelords
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: charges
+    value: 1
+type: feat
