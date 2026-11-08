@@ -1,0 +1,40 @@
+_id: MFogxSkB5dBmUI5i
+_key: '!items!MFogxSkB5dBmUI5i'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/skills/yellow_13.jpg
+name: Prayer (Negative)
+system:
+  changes:
+    - _id: xs01uvaa
+      formula: '-1'
+      target: attack
+      type: untyped
+    - _id: ywa29n6c
+      formula: '-1'
+      target: wdamage
+      type: untyped
+    - _id: 0wyddrhp
+      formula: '-1'
+      target: allSavingThrows
+      type: untyped
+    - _id: qgh4wvhx
+      formula: '-1'
+      target: skills
+      type: untyped
+  description:
+    value: >-
+      <p>You have a -1 luck penalty on attack rolls, weapon damage rolls, saves
+      and skill checks as per @UUID[Compendium.pf1.spells.Item.hu8179fdqfkl0bqj]
+      spell.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subType: spell
+type: buff

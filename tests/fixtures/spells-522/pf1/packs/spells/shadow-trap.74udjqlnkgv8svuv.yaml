@@ -1,0 +1,65 @@
+_id: 74udjqlnkgv8svuv
+_key: '!items!74udjqlnkgv8svuv'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Shadow Trap
+system:
+  actions:
+    - _id: 7des6ij155dmycs0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You pin the target's shadow to its current location, causing the target
+      to become entangled and preventing it from moving farther than 5 feet from
+      its original position, as if its shadow were anchored to the terrain. Each
+      round on its turn, the target can attempt a new saving throw to end the
+      effect as a full-round action. A flying creature can only hover in place
+      or fall while entangled in this manner. This spell automatically fails
+      when cast on a creature that doesn't throw a shadow, and it ends if the
+      creature is entirely in an area with no illumination.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 1
+      bard: 1
+      bloodrager: 1
+      cleric: 1
+      mesmerist: 1
+      occultist: 1
+      oracle: 1
+      psychic: 1
+      shaman: 1
+      skald: 1
+      sorcerer: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  school: ill
+  sources:
+    - id: PZO9466
+      pages: '31'
+  subschool:
+    - shadow
+type: spell

@@ -1,0 +1,39 @@
+_id: mUPO7LpDVJtOoP4W
+_key: '!items!mUPO7LpDVJtOoP4W'
+_stats:
+  coreVersion: '12.343'
+folder: NY5BdmnNcdiNt1PL
+img: icons/magic/perception/orb-eye-scrying.webp
+name: Scry on Familiar
+system:
+  abilityType: sp
+  actions:
+    - _id: IF4zxkSPbdRYfeXa
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      duration:
+        units: spec
+        value: 1 min./level
+      effect: magical sensor
+      name: Use
+      range:
+        units: seeText
+  associations:
+    classes:
+      - Familiar
+  description:
+    value: >-
+      <p>If the master is 13th level or higher, he may scry on his familiar (as
+      if casting the @UUID[Compendium.pf1.spells.Item.g66w32kdup1f43bp]{scrying}
+      spell) once per day.</p>
+  sources:
+    - id: PZO1110
+      pages: '83'
+  subType: classFeat
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

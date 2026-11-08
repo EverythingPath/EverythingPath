@@ -1,0 +1,61 @@
+_id: jKhkfr91Tmd4xfVA
+_key: '!items!jKhkfr91Tmd4xfVA'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/falcata.png
+name: Falcata
+system:
+  actions:
+    - _id: q36zt38qqelst4ya
+      ability:
+        attack: _default
+        critMult: 3
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Falcata
+  description:
+    unidentified: >-
+      <p>This heavy blade has a single sharp edge, concave at the bottom and
+      convex at the top, with a hook-shaped hilt. Its shape distributes the
+      weight to give it the momentum of an axe with the cutting edge of a sword,
+      much like a larger version of a kukri. The hooked hilt is sometimes carved
+      to resemble the head of a horse or bird of prey, and may have a thin chain
+      stretched across its opening, acting as a partial guard for the hand and
+      fingers.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 18
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon
