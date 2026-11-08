@@ -1,0 +1,98 @@
+_id: sq5lzym6a8mmfl7l
+_key: '!items!sq5lzym6a8mmfl7l'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Defoliate
+system:
+  actions:
+    - _id: GfuHIBmyTtm4iKWq
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d8
+            types:
+              - untyped
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#73623f'
+        size: '10'
+        type: circle
+      name: Plant Creature
+      range:
+        units: close
+      target:
+        value: one plant creature
+      touch: true
+    - _id: o3v3wsgjbto8ci7w
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#73623f'
+        size: '60'
+        type: ray
+      name: 60 Ft Line
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: see text
+    - _id: BFYNaibAPLwWjfBv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft spread
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#73623f'
+        size: '10'
+        type: circle
+      name: 10 Ft Spread
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You hurl a tiny ball of negative energy, destroying plant life either
+      in a line 60 feet long or a 10-foot-radius spread. This effect removes the
+      cover and concealment provided by trees and undergrowth, eliminates the
+      movement penalties associated with undergrowth, and so forth.</p><p>You
+      may also target a single plant creature with this spell. You must succeed
+      on a ranged touch attack to hit your target. An affected plant creature
+      takes 2d8 points of damage.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      druid: 2
+      hunter: 1
+      ranger: 1
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Radiation: 8
+  level: 2
+  materials:
+    value: a locust
+  school: nec
+  sources:
+    - id: PZO9412
+      pages: '28'
+type: spell

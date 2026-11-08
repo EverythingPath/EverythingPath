@@ -1,0 +1,62 @@
+_id: afoxrj4mjkhq0cp1
+_key: '!items!afoxrj4mjkhq0cp1'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Lock Gaze
+system:
+  actions:
+    - _id: cx0huwxu5mos4x92
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You compel the target to look at you and only you for the spell's
+      duration or until the spell is discharged. While staring at you, the
+      target is considered to be averting its eyes from every creature but you,
+      granting creatures other than you concealment against the target's
+      attacks. If the target willingly leaves your line of sight, it is blinded
+      for 1 round and the spell ends. If you willingly leave the target's line
+      of sight or become unconscious or dead, the spell creature suffers no ill
+      effects. Blind creatures and creatures immune to gaze attacks are immune
+      to this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      inquisitor: 1
+      magus: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '236'
+  subschool:
+    - compulsion
+type: spell

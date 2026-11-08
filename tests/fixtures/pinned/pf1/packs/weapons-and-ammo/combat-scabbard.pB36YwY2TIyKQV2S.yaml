@@ -1,0 +1,61 @@
+_id: pB36YwY2TIyKQV2S
+_key: '!items!pB36YwY2TIyKQV2S'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/combat-scabbard.png
+name: Combat Scabbard
+system:
+  actions:
+    - _id: 59fdlwxhh97fz59u
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Combat Scabbard
+  description:
+    unidentified: >-
+      <p>This scabbard is an improvised weapon designed to allow you to remove
+      it from your belt as a swift action when drawing the weapon it contains.
+      Taking the Equipment Trick feat (see page 22) for a scabbard gives you
+      additional combat options for using a scabbard. For the purpose of fighter
+      weapon groups, a scabbard for a heavy blade is considered a hammer, and a
+      scabbard for a light blade is considered a close weapon.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    imp: true
+    spc: true
+  sources:
+    - id: PZO9410
+      pages: '6'
+  subType: martial
+  weaponGroups:
+    - hammers
+  weaponSubtype: 1h
+  weight:
+    value: 1
+type: weapon

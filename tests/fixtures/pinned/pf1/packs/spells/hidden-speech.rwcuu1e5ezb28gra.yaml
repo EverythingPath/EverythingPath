@@ -1,0 +1,63 @@
+_id: rwcuu1e5ezb28gra
+_key: '!items!rwcuu1e5ezb28gra'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Hidden Speech
+system:
+  actions:
+    - _id: f12grmlhfdi0byi8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          you plus one creature/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You greatly enhance the ability of the subjects to communicate hidden
+      messages to each other. Each target gains a +10 competence bonus on Bluff
+      checks to send secret message to other recipients. Others using opposed
+      Sense Motive checks to decipher these messages receive a -5 penalty. All
+      subjects affected by the spell must share a language to be able to pass
+      messages.</p>
+  descriptors:
+    - languageDependent
+  learnedAt:
+    class:
+      bard: 2
+      inquisitor: 3
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      witch: 2
+  level: 2
+  materials:
+    value: a cipher written on a piece of parchment
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '227'
+type: spell

@@ -1,0 +1,61 @@
+_id: OSKe4wubLjYQOswq
+_key: '!items!OSKe4wubLjYQOswq'
+_stats:
+  coreVersion: '12.331'
+folder: 96UasAu9CBvgf5hT
+img: icons/creatures/abilities/dragon-breath-purple.webp
+name: Dragonmaw
+system:
+  actions:
+    - _id: WMGT7DDNQ83EBCye
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - match to scales
+      description: >-
+        <p>Once per day, you can deal 1d6 points of additional energy damage
+        with your bite attack. The damage type depends on your scale
+        color:</p><p>acid damage for black or green,</p><p>electricity for
+        blue,</p><p>fire for red, or</p><p>cold for white.</p><p>If you have a
+        different scale color, you still gain the bite attack, but
+        <strong>can't</strong> do the additional energy damage.</p>
+      name: Energy damage as part of bite attack
+      notes:
+        footer:
+          - Energy damage type must match scale color
+  description:
+    instructions: >-
+      <p>You must modify your natural attack(s) to match the parameters
+      specified in this trait, including setting damage, reach, etc.
+      manually.</p>
+    value: >-
+      <p><strong>Race</strong>: Kobold<br /><strong>Replaced Trait(s)</strong>:
+      Armor</p><hr /><p>Your draconic heritage makes you smile- not just because
+      it makes you happy, but also because your powerful jaws and teeth are
+      proof of your kinship to a chromatic dragon. You gain a bite attack that
+      deals 1d4 points of damage. Once per day, you can deal 1d6 points of
+      additional energy damage with your bite attack. The damage type depends on
+      your scale color: acid damage for black or green, electricity for blue,
+      fire for red, or cold for white. If you have a different scale color, you
+      still gain the bite attack, but can't do the additional energy damage.
+      This racial trait replaces the armor racial trait.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.szjeStouwI3F3WdP
+  showInQuickbar: true
+  sources:
+    - id: PZO9432
+      pages: '7'
+  subType: racial
+  tags:
+    - Kobold
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

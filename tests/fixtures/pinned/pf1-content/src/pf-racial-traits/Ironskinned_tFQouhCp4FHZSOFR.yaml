@@ -1,0 +1,73 @@
+_id: tFQouhCp4FHZSOFR
+_key: '!items!tFQouhCp4FHZSOFR'
+_stats:
+  coreVersion: '12.331'
+folder: 3Z2cUyMD0Y57p7YO
+img: icons/commodities/treasure/statue-bust-stone-grey.webp
+name: Ironskinned
+system:
+  actions:
+    - _id: wZMrlv5wt6qzjD9e
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.pcvsgalyw4r29n5b]{Ironskin}</p><p>Your
+        skin hardens and takes on the color and texture of rough iron. You gain
+        a +4 enhancement bonus to your existing natural armor bonus (if you do
+        not have a natural armor bonus, you are considered to have an effective
+        natural armor bonus of +0). This enhancement bonus increases by 1 for
+        every 4 caster levels above 4th, to a maximum of +7 at 15th level. While
+        you're under the effects of this spell, if an opponent confirms a
+        critical hit or sneak attack against you with a physical weapon (not a
+        spell or magical effect), you can dismiss this spell to negate the
+        critical hit or sneak attack and treat it is as a normal hit. Dismissing
+        the spell in this way is not an action, but you must be conscious and
+        aware of the attack to do so.</p>
+      duration:
+        dismiss: true
+        units: spec
+        value: '[[@attributes.hd.total]] minutes (D; see text)'
+      name: Ironskin
+      notes:
+        effect:
+          - '@Apply[Ironskin;level=@attributes.hd.total]'
+          - >-
+            Natural armour should increase by +[[clamp(4 + floor(max(0,
+            (@attributes.hd.total - 4)) / 4), 4, 7)]]
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  classSkills:
+    art: true
+  description:
+    instructions: >-
+      <p>This trait replaces
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.xjUswZbTpNJTr2gy]{Spell-Like
+      Abilities (Duergar - Enlarge Person)}</p>
+    value: >-
+      <p><strong>Race</strong>: Duergar<br /><strong>Replaced Trait(s)</strong>:
+      <em>Enlarge Person</em> Spell-Like Ability</p><hr /><p>The soul of the
+      earth infuses some duergar, giving them the ability to harden their skin.
+      Duergar with this racial trait can use
+      <em>@UUID[Compendium.pf1.spells.Item.pcvsgalyw4r29n5b]{ironskin} </em>(see
+      page 45) once per day as a spell-like ability, using their character level
+      as their caster level. This racial trait replaces the <em>enlarge
+      person</em> spell-like ability.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1130
+      pages: '44'
+  subType: racial
+  tags:
+    - Duergar
+  traitCategory: magical
+type: feat

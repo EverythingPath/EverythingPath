@@ -1,0 +1,82 @@
+_id: mXp0Quu18DWpfUca
+_key: '!items!mXp0Quu18DWpfUca'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/light-sky-3.jpg
+name: Dispel Evil
+system:
+  actions:
+    - _id: oQ3t17yuX4RueyEV
+      ability:
+        attack: _default
+        critRange: 21
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/light-sky-3.jpg
+      name: Use (Banish a creature)
+      range:
+        units: touch
+      save:
+        dc: 10[Base] + 5[Spell Level] + 2[Casting Modifier]
+        description: Will Negates
+        type: will
+      touch: true
+    - _id: GQ5nuNkzVVl4LhLq
+      ability:
+        attack: _default
+        critRange: 21
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/light-sky-3.jpg
+      name: Use (Dispel an enchantment or evil spell)
+      range:
+        units: touch
+      save:
+        dc: 10[Base] + 5[Spell Level] + 2[Casting Modifier]
+        description: Will Negates
+        type: will
+      touch: true
+  contextNotes:
+    - target: ac
+      text: +[[4]] Deflection vs attacks by Evil creatures.
+  description:
+    instructions: >-
+      <p>Change the <code>2[Casting Modifier]</code> section in the actions'
+      saving throw formula to the buff caster's casting modifier. Also, adjust
+      the <code>5[Spell Level]</code> if the caster has it as a different spell
+      level.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.sg3eq6xpsum65fgm]{Dispel
+      Evil}</p><p>First, you gain a +4 deflection bonus to AC against attacks by
+      evil creatures.</p><p>Second, on making a successful melee touch attack
+      against an evil creature from another plane, you can choose to drive that
+      creature back to its home plane. The creature can negate the effects with
+      a successful Will save (spell resistance applies). This use discharges and
+      ends the spell.</p><p>Third, with a touch you can automatically dispel any
+      one enchantment spell cast by an evil creature or any one evil spell.
+      Spells that can't be dispelled by
+      <em>@UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{dispel magic}</em>
+      also can't be dispelled by <em>dispel evil</em>. Saving throws and spell
+      resistance do not apply to this effect. This use discharges and ends the
+      spell.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 9
+  scriptCalls:
+    - _id: WdXcNGUdhCwzEY7K
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Self
+      type: script
+      value: await item.setActive(false)
+  subType: spell
+type: buff

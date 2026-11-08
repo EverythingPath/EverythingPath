@@ -1,0 +1,31 @@
+_id: QYVZS8MfOKzjpCm1
+_key: '!items!QYVZS8MfOKzjpCm1'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/skills/light_04.jpg
+name: Bless
+system:
+  changes:
+    - _id: e9subqu1
+      formula: '1'
+      target: attack
+      type: morale
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[1]] Morale vs Fear effects
+  description:
+    value: >-
+      <p>You have a +1 morale bonus to attack rolls and saves against fear
+      effects as per @UUID[Compendium.pf1.spells.Item.wa0zb2pncesmm9lz]
+      spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '249'
+  subType: spell
+type: buff

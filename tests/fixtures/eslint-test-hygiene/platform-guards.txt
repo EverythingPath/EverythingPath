@@ -1,0 +1,77 @@
+// skipIf and runIf are called on the spot, with only a platform predicate:
+// comparisons of process.platform or os.platform() (os bound from 'os' or
+// 'node:os') with a string literal, joined by &&, || and !. A line ending in
+// "// flagged" must be reported; every other line must pass.
+import * as os from 'node:os';
+const requiredOs = require('os');
+it.skipIf(process.platform === 'win32')('a', fn);
+it.skipIf('win32' === process.platform)('a', fn);
+it.skipIf(process.platform !== 'linux')('a', fn);
+it.skipIf('linux' != process.platform)('a', fn);
+it.skipIf(process.platform == 'darwin')('a', fn);
+it.skipIf(os.platform() === 'win32')('a', fn);
+it.runIf(process.platform === 'linux')('a', fn);
+describe.skipIf(!(process.platform === 'linux'))('a', fn);
+it.skipIf(process.platform === 'win32' || 'darwin' === os.platform())('a', fn);
+it.skipIf(process.platform !== 'linux' && !(process.platform === 'darwin'))('a', fn);
+it.skipIf(process.platform === 'win32').each([1])('a', fn);
+it['skipIf'](process['platform'] === 'win32')('a', fn);
+test['runIf']('linux' === os['platform']())('a', fn);
+describe.skipIf(requiredOs.platform() !== 'linux')('a', fn);
+it.skipIf(process.platform && !existsSync('external-data'))('a', fn); // flagged
+it.skipIf(process.platform === 'win32' && !existsSync('external-data'))('a', fn); // flagged
+it.skipIf(process.platform === 'win32' || process.env.CI)('a', fn); // flagged
+it.skipIf(!existsSync('external-data'))('a', fn); // flagged
+it.runIf(existsSync('external-data'))('a', fn); // flagged
+it.skipIf(process.platform === expectedPlatform)('a', fn); // flagged
+it.skipIf(platformName === 'win32')('a', fn); // flagged
+it.skipIf(process.platform === `win32`)('a', fn); // flagged
+it.skipIf(process.platform === 'win32' ?? true)('a', fn); // flagged
+it.skipIf(process.platform < 'win32')('a', fn); // flagged
+it.skipIf(typeof process.platform === 'string')('a', fn); // flagged
+it.skipIf(os.platform(arg) === 'win32')('a', fn); // flagged
+it.skipIf(other.platform === 'win32')('a', fn); // flagged
+it.skipIf(other.platform() === 'win32')('a', fn); // flagged
+it.skipIf(process.platform)('a', fn); // flagged
+it.skipIf(!process.platform)('a', fn); // flagged
+it.skipIf(skipOnHost)('a', fn); // flagged
+it.skipIf()('a', fn); // flagged
+it.skipIf(process.platform === 'win32', extra)('a', fn); // flagged
+// Static brackets are checked like dots.
+it['skipIf'](!existsSync('external-data'))('a', fn); // flagged
+it['runIf'](existsSync('external-data'))('a', fn); // flagged
+describe[`skipIf`](!existsSync('external-data'))('a', fn); // flagged
+test['runIf'](!existsSync('external-data'))('a', fn); // flagged
+// A variable never passes for the platform method or property.
+const platform = 'hostname';
+it.skipIf(os[platform]() === 'gate-host')('a', fn); // flagged
+it.runIf('gate-host' === os[platform]())('a', fn); // flagged
+describe.skipIf(os.hostname() !== 'gate-host')('a', fn); // flagged
+test.runIf('gate-host' === os['hostname']())('a', fn); // flagged
+it.skipIf(process[key] === 'win32')('a', fn); // flagged
+it.runIf('win32' !== process[key])('a', fn); // flagged
+it.skipIf(process['arch'] === 'x64')('a', fn); // flagged
+const shadowOs = (os) =>
+  it.skipIf(os.platform() === 'win32')('a', fn); // flagged
+const shadowProcess = (process) =>
+  it.runIf(process.platform === 'linux')('a', fn); // flagged
+// A skipIf or runIf that is not called on the spot cannot be checked.
+const skipOnHost = it.skipIf; // flagged
+const runOnHost = test['runIf']; // flagged
+const describeSkip = describe.skipIf; // flagged
+skipOnHost(!existsSync('external-data'))('a', fn);
+it.skipIf.call(it, !existsSync('external-data'))('a', fn); // flagged
+const { skipIf } = it; // flagged
+const { runIf: runWhen } = test; // flagged
+const { skipIf: suiteSkip } = describe; // flagged
+const { 'runIf': viRun } = vi; // flagged
+const { ['skipIf']: computedSkip } = it; // flagged
+// Only an awaited import is the module: the Promise has no platform().
+const pendingOs = import('node:os');
+it.skipIf(pendingOs.platform() === 'win32')('a', fn); // flagged
+const awaitedOs = await import('node:os');
+it.skipIf(awaitedOs.platform() === 'win32')('a', fn);
+// A binding written again anywhere is not exactly the module.
+let changingOs = require('os');
+it.skipIf(changingOs.platform() === 'win32')('a', fn); // flagged
+changingOs = require('node:os');
