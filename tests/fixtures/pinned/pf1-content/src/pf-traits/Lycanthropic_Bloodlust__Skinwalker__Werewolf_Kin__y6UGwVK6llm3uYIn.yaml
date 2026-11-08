@@ -1,0 +1,46 @@
+_id: y6UGwVK6llm3uYIn
+_key: '!items!y6UGwVK6llm3uYIn'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Lycanthropic Bloodlust (Skinwalker; Werewolf-Kin)
+system:
+  actions:
+    - _id: LpLsc8FD7cfcm5cK
+      actionType: heal
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      damage:
+        parts:
+          - formula: 1d6[temp]
+      duration:
+        units: minute
+        value: '1'
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: temp hp after damaging foe with natural attack
+  description:
+    value: >-
+      <p><em>When your lycanthropic heritage awakened, you thrilled at any
+      excuse for violence. Although you might have learned to focus or suppress
+      this urge, it still gives you energy in a
+      fight.</em></p><p><strong>Requirements</strong>: Werewolf-Kin Skinwalker
+      Heritage</p><p><strong>Benefits</strong>: Once per day, when you deal
+      damage to a foe with a natural attack, you may gain 1d6 temporary hit
+      points as an immediate action. These temporary hit points last for 1
+      minute.</p>
+  sources:
+    - id: PZO9439
+      pages: '25'
+  subType: trait
+  tags:
+    - Werewolf-Kin
+    - Skinwalker
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

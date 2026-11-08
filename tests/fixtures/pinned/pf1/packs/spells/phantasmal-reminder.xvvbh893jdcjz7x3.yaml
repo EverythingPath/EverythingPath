@@ -1,0 +1,69 @@
+_id: xvvbh893jdcjz7x3
+_key: '!items!xvvbh893jdcjz7x3'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Phantasmal Reminder
+system:
+  actions:
+    - _id: poi0dm2ghcgyp568
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round (see text)
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will disbelief, then Fortitude partial; see text
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a memory loop of a successful attack made against the
+      target, forcing its conscious mind to recall the details of the attack in
+      such excruciating detail that its physical body is racked by the
+      recollection. This spell can affect only a creature that has taken damage
+      since the end of your last turn. The target first can attempt a Will save
+      to recognize the attack as unreal. If it fails that saving throw, the
+      target must succeed at a Fortitude save or take an amount of damage equal
+      to 1d6 x your caster level (maximum 10d6). Because the damage is a
+      quasi-real memory of existing wounds, this damage can't be reduced or
+      prevented (such as by the <i>shield other</i> spell).  If the target of a
+      <i>phantasmal reminder</i> attack succeeds at the Will save to disbelieve
+      the memory loop and either has natural telepathy or is wearing a <i>helm
+      of telepathy</i>, the memory of damage automatically rebounds to affect
+      you. You must immediately attempt a Will save to disbelieve; if you fail,
+      you take half the spell's damage yourself.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      bard: 4
+      mesmerist: 3
+      psychic: 3
+      shaman: 4
+      skald: 4
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO9468
+      pages: '26'
+  subschool:
+    - phantasm
+type: spell

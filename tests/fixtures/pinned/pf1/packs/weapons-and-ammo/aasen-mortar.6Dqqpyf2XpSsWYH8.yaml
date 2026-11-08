@@ -1,0 +1,91 @@
+_id: 6Dqqpyf2XpSsWYH8
+_key: '!items!6Dqqpyf2XpSsWYH8'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/cannon-banded.webp
+name: Aasen Mortar
+system:
+  actions:
+    - _id: 0rvo9axdjskf59wv
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '50'
+        units: ft
+        value: '200'
+  ammo:
+    type: siege
+  baseTypes:
+    - Aasen Mortar
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 6d6 ; <b>Critical</b> x3; <b>Range</b>
+      200 ft. (50 ft. min.); <b>Type</b> B, P, and S</p>
+
+      <p><b>Misfire</b> 1; <b>Crew</b> 1; <b>Aim</b> 0; <b>Load</b> 1</p>
+
+      <p><b>Category</b> Siege; <b>Proficiency</b> Exotic</p>
+
+      <h3>Description</h3>
+
+      <p>The Aasen mortar is an indirect-fire advanced siege firearm, consisting
+      of a heavy steel barrel, a loading mechanism, and a folding bipod stand,
+      and is used to launch explosives to penetrate enemy defensive lines.</p>
+
+      <p>Aiming the mortar is part of the standard action required to fire it.
+      Reloading the mortar is a full-round action, and the user loads a
+      grenade-like projectile into the breech of the weapon's steel barrel,
+      along with a blank rifle round that propels the bomb when triggered. The
+      weapon uses indirect fire to lob bombs in slow-moving, high arcs, and the
+      user targets a specific square.</p>
+
+      <p>Rules for indirect-fire siege weapons are found on page 160 of Ultimate
+      Combat. Mortars can also be fired as direct-fire siege engines. When used
+      for direct fire, they take a -4 penalty on attack rolls and their range
+      increment is halved, but they do not have a minimum range. After the point
+      of impact is determined, the shell explodes and deals 6d6 points of
+      bludgeoning, piercing, and slashing damage to all creatures in a 30-foot
+      radius (Reflex DC 20 for half ).</p>
+
+      <p>An Aasen mortar has hardness 10 and 35 hit points; it fires special,
+      finned fragmentation bombs that cost 10 gp each and weigh 4 pounds each.
+      These bombs usually arrive on the battlefront in wooden cases containing 6
+      mortars each.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 500
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: siege
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: assault
+  weight:
+    value: 50
+type: weapon

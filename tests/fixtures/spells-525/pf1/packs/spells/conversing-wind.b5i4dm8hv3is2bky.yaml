@@ -1,0 +1,56 @@
+_id: b5i4dm8hv3is2bky
+_key: '!items!b5i4dm8hv3is2bky'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Conversing Wind
+system:
+  actions:
+    - _id: 950owe85kqpkncz1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius spread
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: mi
+        value: '1'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.v8czhud6wpmc9esu]{whispering wind},
+      except it can carry responses and doesn't end after delivering its first
+      message. After the wind completes its initial message, it waits for 1
+      round, then copies what it hear, and returns at the same speed and by the
+      same route. It delivers what it heard to the location where the spell was
+      originally cast. The wind continues back and forth in this way until the
+      duration ends or the spell is dismissed.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      skald: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO9452
+      pages: '30'
+  sr: false
+type: spell

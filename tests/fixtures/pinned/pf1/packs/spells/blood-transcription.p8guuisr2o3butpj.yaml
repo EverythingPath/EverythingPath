@@ -1,0 +1,52 @@
+_id: p8guuisr2o3butpj
+_key: '!items!p8guuisr2o3butpj'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Blood Transcription
+system:
+  actions:
+    - _id: nmhovtr6s4gverap
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one dead spellcaster
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>By consuming 1 pint of blood from a spellcaster killed within the last
+      24 hours, you can attempt to learn a spell that spellcaster knew. Select
+      one spell available to the dead  spellcaster (this must be a spell on your
+      spell list); you gain the knowledge of this spell for 24 hours. During
+      this time, you may write it down (or teach it to your familiar, if you are
+      a witch) using the normal rules for copying a spell from another source.
+      Once you have learned it, you may prepare the spell normally.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      investigator: 2
+      magus: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1117
+      pages: '209'
+  sr: false
+type: spell

@@ -1,0 +1,62 @@
+_id: q8tyi2rrplhf5625
+_key: '!items!q8tyi2rrplhf5625'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Celestial Healing, Greater
+system:
+  actions:
+    - _id: jclj7fk03nl4ovxx
+      actionType: heal
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: floor(@cl / 2)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>As per @UUID[Compendium.pf1.spells.6d6bgiakwmwiu7qv]{celestial
+      healing}, except the target gains fast healing 4 and the target radiates
+      the aura of a good cleric.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      cleric: 4
+      magus: 4
+      oracle: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: 1 drop of blood from a good outsider or 1 dose of holy water
+  school: con
+  sources:
+    - id: PZO9465
+      pages: '13'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,61 @@
+_id: ob4f4lefisnk5lvk
+_key: '!items!ob4f4lefisnk5lvk'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Fleshcurdle
+system:
+  actions:
+    - _id: tc84vfk16yf78zw1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living or undead creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You warp the target creature's flesh, discoloring it and causing it to
+      become misshapen and impairing its function. When you cast this spell, you
+      must choose one of three types of effects to inflict on the
+      target-movement, attacks, or defense.</p><p><i>Attacks</i>: One of the
+      creature's natural attacks takes a -2 penalty on attack and damage rolls,
+      only scores a critical hit on a natural 20, and only deals x2 damage on a
+      confirmed critical hit.</p><p><i>Defense</i>: The creature's natural armor
+      bonus decreases by -4, to a minimum bonus of +0.</p><p><i>Movement</i>:
+      One of the creature's movement speeds (chosen by you) is
+      halved.</p><p>Most undead are susceptible to <i>fleshcurdle</i>, but
+      amorphous creatures and creatures without flesh are immune (such as
+      elementals, oozes, plants, gaseous or incorporeal creatures, and
+      skeletons).</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: scrap of pickled flesh
+  school: trs
+  sources:
+    - id: PZO9237
+      pages: '55'
+  subschool:
+    - polymorph
+type: spell

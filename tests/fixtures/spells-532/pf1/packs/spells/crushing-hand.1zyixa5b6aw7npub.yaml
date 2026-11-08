@@ -1,0 +1,59 @@
+_id: 1zyixa5b6aw7npub
+_key: '!items!1zyixa5b6aw7npub'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Crushing Hand
+system:
+  actions:
+    - _id: kfi03rxnloqoqnvo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 10-ft. hand
+      name: Use
+      range:
+        units: medium
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.wu4y1ilg6iq28cr6]{interposing hand},
+      except that it can also grapple one opponent as
+      @UUID[Compendium.pf1.spells.Item.h2r6m68142borl8k]{grasping hand}. Its CMB
+      and CMD for grapple checks use your caster level in place of its base
+      attack bonus, with a +12 bonus for its Strength score (35) and a +1 bonus
+      for being Large (its Dexterity is 10, granting no bonus to the CMD). A
+      <em>crushing hand</em> deals 2d6+12 points of damage on each successful
+      grapple check against an opponent. The <em>crushing hand</em> can instead
+      be directed to bull rush a target (as
+      @UUID[Compendium.pf1.spells.Item.aoov6nqfm195txdb]{forceful hand}), using
+      the same bonuses outlined above, or it can be directed to interpose
+      itself, as <em>interposing hand</em> does.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      wizard: 9
+    domain:
+      Strength: 9
+  level: 9
+  materials:
+    focus: a soft glove
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '262'
+type: spell

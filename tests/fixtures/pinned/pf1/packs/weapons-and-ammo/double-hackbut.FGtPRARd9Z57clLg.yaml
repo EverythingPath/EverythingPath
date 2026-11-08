@@ -1,0 +1,94 @@
+_id: FGtPRARd9Z57clLg
+_key: '!items!FGtPRARd9Z57clLg'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Double Hackbut
+system:
+  actions:
+    - _id: pu9rats075aw44xc
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      conditionals:
+        - _id: zFPZc6OOv8Lbbyri
+          modifiers:
+            - _id: djiciLcAFuSoA7ih
+              formula: '-4'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Not Mounted
+      damage:
+        parts:
+          - formula: sizeRoll(2, 12, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '50'
+  ammo:
+    capacity: 2
+    explode: 5
+    misfire: 2
+    type: gunBullet
+  baseTypes:
+    - Double Hackbut
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d10 (small), 2d12 (medium);
+      <b>Critical</b> x4; <b>Range</b> 50 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2 (5 ft.); <b>Capacity</b> 2</p>
+
+      <h3>Description</h3>
+
+      <p>This double-length rifle uses a pair of trunnions to mount its barrel
+      into a swiveling mechanism fastened to the top of a lightweight,
+      twowheeled carriage. It takes a full-round action to set up the carriage.
+      The carriage has a hind leg, allowing the wielder to wheel the device
+      about and immediately prop it for stability during combat.</p>
+
+      <p>Unlike other two-handed firearms, you must fire the double hackbut
+      while it is mounted, or else firing it imparts a -4 penalty on attack
+      rolls and the recoil knocks you prone. A Large or larger creature can fire
+      a double hackbut one size smaller than itself without the gun's mounting
+      as a normal two-handed weapon and without the danger of being knocked
+      prone, but takes the normal penalty for firing an inappropriately sized
+      weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 4000
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 18
+type: weapon

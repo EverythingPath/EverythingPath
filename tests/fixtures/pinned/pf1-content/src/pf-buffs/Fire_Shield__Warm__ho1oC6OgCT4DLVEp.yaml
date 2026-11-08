@@ -1,0 +1,44 @@
+_id: ho1oC6OgCT4DLVEp
+_key: '!items!ho1oC6OgCT4DLVEp'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Fire Shield (Warm)
+system:
+  actions:
+    - _id: 4YPyEs9Ei5NJDifa
+      activation:
+        type: passive
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + (min(15, @item.level))[Caster Level]
+            types:
+              - fire
+      img: icons/magic/defensive/armor-shield-barrier-steel.webp
+      name: Use
+  contextNotes:
+    - target: ac
+      text: You take 1/2 damage from cold-based attacks
+    - target: ref
+      text: If successful, you take no damage from a cold-based attack.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.nfm6i9z9r3n2fku7]{Fire
+      Shield}</p><p>Any creature striking you with its body or a handheld weapon
+      deals normal damage, but at the same time the attacker takes 1d6 points of
+      fire damage + 1 point per caster level (maximum +15). If the attacker has
+      spell resistance, it applies to this effect. Creatures wielding melee
+      weapons with reach are not subject to this damage if they attack
+      you.</p><p>The flames are warm to the touch, and either violet or red. You
+      take only half damage from cold-based attacks. If such an attack allows a
+      Reflex save for half damage, you take no damage on a successful saving
+      throw.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 7
+  subType: spell
+type: buff
