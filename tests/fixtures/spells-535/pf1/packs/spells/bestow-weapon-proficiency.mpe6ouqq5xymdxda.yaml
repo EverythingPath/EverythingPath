@@ -1,0 +1,68 @@
+_id: mpe6ouqq5xymdxda
+_key: '!items!mpe6ouqq5xymdxda'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Bestow Weapon Proficiency
+system:
+  actions:
+    - _id: kufnooxws6h5aqef
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You bestow the subject with the ability to use a single type of weapon
+      he is not proficient in as if he were proficient with that weapon. The
+      weapon can be of any type, including an exotic weapon, but the subject of
+      the spell must be holding the weapon.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 2
+      arcanist: 2
+      cleric: 2
+      inquisitor: 2
+      investigator: 2
+      magus: 2
+      medium: 2
+      occultist: 2
+      oracle: 2
+      paladin: 2
+      psychic: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: pieces of shaved metal
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '224'
+  subschool:
+    - compulsion
+type: spell

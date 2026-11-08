@@ -1,0 +1,50 @@
+_id: bqvzc3pn68fhsd9r
+_key: '!items!bqvzc3pn68fhsd9r'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Halfling Vengeance, Mass
+system:
+  actions:
+    - _id: wipgy9816eixud02
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one Small or smaller creature/level, no two of which can be more than
+          30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.2js46u3c4e2oxvyl]{halfling vengeance},
+      except that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      antipaladin: 4
+      cleric: 7
+      inquisitor: 6
+      oracle: 7
+  level: 7
+  school: div
+  sources:
+    - id: PZO90131
+      pages: '72'
+type: spell

@@ -1,0 +1,80 @@
+_id: tkjnm3lw7ni82tag
+_key: '!items!tkjnm3lw7ni82tag'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Resist Energy
+system:
+  actions:
+    - _id: he74zujdowtkfald
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This abjuration grants a creature limited <i>protection</i> from damage
+      of whichever one of five energy types you select: acid, cold, electricity,
+      fire, or sonic. The subject gains <i>resist energy</i> 10 against the
+      energy type chosen, meaning that each time the creature is subjected to
+      such damage (whether from a natural or magical source), that damage is
+      reduced by 10 points before being applied to the creature's hit points.
+      The value of the energy resistance granted increases to 20 points at 7th
+      level and to a maximum of 30 points at 11th level. The spell protects the
+      recipient's equipment as well.</p><p><i>Resist energy</i> absorbs only
+      damage. The subject could still suffer unfortunate side
+      effects.</p><p><i>Resist energy</i> overlaps (and does not stack with)
+      <i>protection from energy</i>. If a character is warded by <i>protection
+      from energy</i> and <i>resist energy</i>, the <i>protection</i> spell
+      absorbs damage until its power is exhausted.</p>
+  learnedAt:
+    bloodline:
+      Celestial: 2
+      Draconic: 2
+    class:
+      adept: 2
+      alchemist: 2
+      arcanist: 2
+      bloodrager: 2
+      cleric: 2
+      druid: 2
+      hunter: 1
+      inquisitor: 2
+      investigator: 2
+      occultist: 2
+      oracle: 2
+      paladin: 2
+      psychic: 2
+      ranger: 1
+      shaman: 2
+      sorcerer: 2
+      spiritualist: 2
+      summoner: 2
+      summonerUnchained: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '334'
+type: spell

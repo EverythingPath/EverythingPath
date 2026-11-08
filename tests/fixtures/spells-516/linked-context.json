@@ -1,0 +1,1041 @@
+{
+  "rootKeys": [
+    "pf1/04px7z4lxxgfsf4j",
+    "pf1/0amu53wegzdp0axj",
+    "pf1/0khn0u6nd4fat6wb",
+    "pf1/0wamdkl9gp19l55w",
+    "pf1/14chms7xurvi85x9",
+    "pf1/17eskras8cjynj10"
+  ],
+  "entries": [
+    {
+      "externalKey": "pf1/04px7z4lxxgfsf4j",
+      "upstreamKey": "pf1/04px7z4lxxgfsf4j",
+      "pack": "spells",
+      "name": "Feather Step, Mass",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "bard": 3,
+          "druid": 3,
+          "hunter": 3,
+          "psychic": 3,
+          "ranger": 3,
+          "skald": 3
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>As <a href=\"catalog:pf1/bf2lu50t56iswz18\">feather step</a>, except this spell affects multiple creatures.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "221"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "c0n7kpcnf4afpo9u",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "10 * @cl"
+                },
+                "measureTemplate": {
+                  "size": "15",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Fortitude negates",
+                  "harmless": true,
+                  "type": "fort"
+                },
+                "target": {
+                  "value": "one creature/level, no two of which can be more than 30 ft. apart"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0amu53wegzdp0axj",
+      "upstreamKey": "pf1/0amu53wegzdp0axj",
+      "pack": "spells",
+      "name": "Clenched Fist",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 8,
+          "psychic": 8,
+          "sorcerer": 8,
+          "wizard": 8
+        },
+        "grantedLevels": {
+          "domain": {
+            "Strength": 8
+          }
+        },
+        "school": "evo",
+        "subschools": [],
+        "descriptors": ["force"]
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/wu4y1ilg6iq28cr6\">interposing hand</a>, except that the hand can also push or strike one opponent that you select. The floating hand can move as far as 60 feet and can attack in the same round. Since this hand is directed by you, its ability to notice or attack invisible or concealed creatures is no better than yours.</p><p>The hand attacks once per round, and its attack bonus equals your caster level + your Intelligence, Wisdom, or Charisma modifier (for a wizard, cleric, or sorcerer, respectively) + 11 for the hand's Strength score (33), -1 for being Large. The hand deals 1d8+11 points of damage on each attack, and any creature struck must make a Fortitude save (against this spell's save DC) or be stunned for 1 round. Directing the spell to a new target is a move action.</p><p>The <em>clenched fist</em> can also interpose itself as <em>interposing hand</em> does, or it can bull rush an opponent as <a href=\"catalog:pf1/aoov6nqfm195txdb\">forceful hand</a> does. Its CMB for bull rush checks uses your caster level in place of its base attack bonus, with a +11 bonus for its Strength score and a +1 bonus for being Large.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "255"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "e71yh3e91dn3s2cb",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "effect": "10-ft. hand",
+                "name": "Use",
+                "range": {
+                  "units": "medium"
+                }
+              },
+              {
+                "_id": "aZCrEsL6CUaeBo3f",
+                "ability": {
+                  "attack": "_key"
+                },
+                "actionType": "msak",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "attackBonus": "11[Hand's Strength] - 1[Large] - @sizeBonus[Caster's Size]",
+                "bab": "@cl",
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "1d8 + 11[Strength]",
+                      "types": ["untyped"]
+                    }
+                  ]
+                },
+                "name": "Strike",
+                "notes": {
+                  "footer": ["Stunned for 1 round on failed Fortitude save."]
+                },
+                "save": {
+                  "description": "Fortitude partial; see text",
+                  "type": "fort"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              },
+              {
+                "_id": "2VnCu7SSsfNmfWon",
+                "ability": {
+                  "critRange": null
+                },
+                "actionType": "mcman",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "attackBonus": "11[Hand's Strength] + 1[Large] - @sizeBonus[Caster's Size]",
+                "bab": "@cl",
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Bull Rush",
+                "range": {
+                  "units": "melee"
+                },
+                "target": {
+                  "value": "One Creature"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              },
+              {
+                "_id": "b8NB6v1YNJQ0JtrE",
+                "activation": {
+                  "type": "move",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Redirect Fist",
+                "range": {
+                  "units": "unlimited"
+                },
+                "target": {
+                  "value": "One Creature"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "When this Spell is cast: Inherit interposing hand and forceful hand behavior. The hand moves up to 60 feet and attacks once each round at caster level plus casting-ability modifier plus 11 Strength minus 1 Large, dealing 1d8+11 and stunning for one round on a failed Fortitude save. Bull rush CMB is caster level +11 Strength +1 Large. Retargeting costs a move action."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0khn0u6nd4fat6wb",
+      "upstreamKey": "pf1/0khn0u6nd4fat6wb",
+      "pack": "spells",
+      "name": "Symbol of Sleep",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 5,
+          "cleric": 5,
+          "mesmerist": 5,
+          "occultist": 4,
+          "oracle": 5,
+          "sorcerer": 5,
+          "warpriest": 5,
+          "witch": 5,
+          "wizard": 5
+        },
+        "grantedLevels": {},
+        "school": "enc",
+        "subschools": ["compulsion"],
+        "descriptors": ["mindAffecting"]
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/g0x2fnktg1553wv1\">symbol of death</a>, except that all creatures of 10 HD or less within 60 feet of the <em>symbol of sleep</em> instead fall into a catatonic slumber for 3d6 x 10 minutes. Unlike with the <em>sleep</em> spell, <em>sleep</em>ing creatures cannot be awakened by nonmagical means before this time expires.</p><p>Unlike <em>symbol of death</em>, <em>symbol of sleep</em> has no hit point limit; once triggered, a <em>symbol of sleep</em> simply remains active for 10 minutes per caster level.</p><p><em>Note:</em> Magic traps such as <em>symbol of sleep</em> are hard to detect and disable. A rogue (only) can use the Perception skill to find a <em>symbol of sleep</em> and Disable Device to thwart it. The DC in each case is 25 + spell level, or 30 for <em>symbol of sleep</em>.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "356"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "va8wl8dk45xj3fb6",
+                "actionType": "spellsave",
+                "activation": {
+                  "cost": 10,
+                  "type": "minute",
+                  "unchained": {
+                    "cost": 10,
+                    "type": "minute"
+                  }
+                },
+                "duration": {
+                  "units": "seeText"
+                },
+                "effect": "one symbol",
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "0"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "type": "will"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0wamdkl9gp19l55w",
+      "upstreamKey": "pf1/0wamdkl9gp19l55w",
+      "pack": "spells",
+      "name": "Planar Ally, Greater",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "cleric": 8,
+          "oracle": 8,
+          "psychic": 8,
+          "shaman": 8
+        },
+        "grantedLevels": {
+          "subDomain": {
+            "Tactics": 8
+          }
+        },
+        "school": "con",
+        "subschools": ["calling"],
+        "descriptors": ["see text for lesser planar ally"]
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/c3vws58yy0pk47gs\">Lesser Planar Ally</a>, except that you may call a single creature of 18 HD or less, or up to three creatures of the same kind whose Hit Dice total no more than 18. The creatures agree to help you and request your return payment together.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "320"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "ne7n8ususcgy9y81",
+                "activation": {
+                  "cost": 10,
+                  "type": "minute",
+                  "unchained": {
+                    "cost": 10,
+                    "type": "minute"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "effect": "up to three called outsiders, totaling no more than 18 HD, no two of which can be more than 30 ft. apart when they appear.",
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/14chms7xurvi85x9",
+      "upstreamKey": "pf1/14chms7xurvi85x9",
+      "pack": "spells",
+      "name": "Owl's Wisdom, Mass",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 6,
+          "cleric": 6,
+          "druid": 6,
+          "hunter": 6,
+          "oracle": 6,
+          "psychic": 6,
+          "shaman": 6,
+          "sorcerer": 6,
+          "summoner": 4,
+          "summonerUnchained": 6,
+          "warpriest": 6,
+          "wizard": 6
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/b9ggsagifzk4fwut\">owl's wisdom</a>, except that it affects multiple creatures.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "318"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "18rgfx9txapi2nrq",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "measureTemplate": {
+                  "size": "15",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "one creature/level, no two of which can be more than 30 ft. apart"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/17eskras8cjynj10",
+      "upstreamKey": "pf1/17eskras8cjynj10",
+      "pack": "spells",
+      "name": "Detect Chaos",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "adept": 1,
+          "cleric": 1,
+          "inquisitor": 1,
+          "oracle": 1,
+          "shaman": 1,
+          "spiritualist": 1,
+          "warpriest": 1
+        },
+        "grantedLevels": {},
+        "school": "div",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/tr7m97npkbgm4wp7\">detect evil</a>, except that it detects the auras of chaotic creatures, clerics of chaotic deities, chaotic spells, and chaotic magic items, and you are vulnerable to an overwhelming chaotic aura if you are lawful.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "266"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "tqdx1hlhsnyz1fnj",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "area": "cone-shaped emanation",
+                "duration": {
+                  "concentration": true,
+                  "units": "spec",
+                  "value": "concentration, up to 10 min./level"
+                },
+                "measureTemplate": {
+                  "size": "60",
+                  "type": "cone"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "60"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/aoov6nqfm195txdb",
+      "upstreamKey": "pf1/aoov6nqfm195txdb",
+      "pack": "spells",
+      "name": "Forceful Hand",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 6,
+          "magus": 6,
+          "occultist": 6,
+          "psychic": 6,
+          "sorcerer": 6,
+          "wizard": 6
+        },
+        "grantedLevels": {},
+        "school": "evo",
+        "subschools": [],
+        "descriptors": ["force"]
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/wu4y1ilg6iq28cr6\">interposing hand</a>, except that it can also pursue and bull rush one opponent you select. The <em>forceful hand</em> gets one bull rush attack per round. This attack does not provoke an attack of opportunity. Its CMB for bull rush checks uses your caster level in place of its base attack bonus, with a +8 bonus for its Strength score (27), and a +1 bonus for being Large. The hand always moves with the opponent to push them back as far as possible. It has no movement limit for this purpose. Directing the spell to a new target is a move action. <em>Forceful hand</em> prevents the opponent from moving closer to you without first succeeding on a bull rush attack, moving both the <em>forceful hand</em> and the target closer to you. The <em>forceful hand</em> can instead be directed to interpose itself, as <em>interposing hand</em> does.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "285"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "bvvvewijkupch9mq",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "effect": "10-ft. hand",
+                "name": "Use",
+                "range": {
+                  "units": "medium"
+                }
+              },
+              {
+                "_id": "BogZf3J9xicvsR2P",
+                "actionType": "mcman",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "attackBonus": "8[Hand's Strength] + 1[Large] - @sizeBonus[Caster Sizebonus]",
+                "attackName": "Bull Rush",
+                "bab": "@cl",
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Bull Rush",
+                "range": {
+                  "units": "melee"
+                },
+                "target": {
+                  "value": "One Creature"
+                }
+              },
+              {
+                "_id": "qDDvUpC9EetA2u5m",
+                "activation": {
+                  "type": "move",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Redirect Hand",
+                "target": {
+                  "value": "One Creature"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Opponent-bound inherited +4 cover AC and summoned-hand statistics, kept distinct from caster modifiers."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "As Interposing Hand, plus one bull rush per round using caster level +8 Strength +1 Large, without AoO or distance limit; redirect as move action. It can instead interpose for inherited +4 cover AC."
+        },
+        {
+          "situation": "bullRush",
+          "text": "The hand, not the caster, uses caster level +8 Strength +1 Large for bull rush, once per round without provoking. This is not a caster CMB bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/b9ggsagifzk4fwut",
+      "upstreamKey": "pf1/b9ggsagifzk4fwut",
+      "pack": "spells",
+      "name": "Owl's Wisdom",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 2,
+          "arcanist": 2,
+          "cleric": 2,
+          "druid": 2,
+          "hunter": 2,
+          "investigator": 2,
+          "medium": 2,
+          "oracle": 2,
+          "paladin": 2,
+          "psychic": 2,
+          "ranger": 2,
+          "shaman": 2,
+          "sorcerer": 2,
+          "summoner": 2,
+          "summonerUnchained": 2,
+          "warpriest": 2,
+          "wizard": 2
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>The transmuted creature becomes wiser. The spell grants a +4 enhancement bonus to Wisdom, adding the usual benefit to Wisdom-related skills. Clerics, druids, and rangers (and other Wisdom-based spellcasters) who receive owl's wisdom do not gain any additional bonus spells for the increased Wisdom, but the save DCs for their spells increase.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "318"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "bzpv150x23bc90xr",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "touch"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "creature touched"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Running +4 enhancement Wisdom with permanent bonus-spell exclusion."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "+4 enhancement Wisdom increases related skills and save DCs; never grants extra bonus spells."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/bf2lu50t56iswz18",
+      "upstreamKey": "pf1/bf2lu50t56iswz18",
+      "pack": "spells",
+      "name": "Feather Step",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "bard": 1,
+          "druid": 1,
+          "hunter": 1,
+          "psychic": 1,
+          "ranger": 1,
+          "skald": 1
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>For the duration of this spell, the subject ignores the adverse movement effects of difficult terrain, and can even take 5-foot steps in difficult terrain.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "221"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "kqxp4i4xp2s5buda",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "10 * @cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Fortitude negates",
+                  "harmless": true,
+                  "type": "fort"
+                },
+                "target": {
+                  "value": "one creature"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Ignores difficult terrain movement effects and permits 5-foot steps in difficult terrain."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/c3vws58yy0pk47gs",
+      "upstreamKey": "pf1/c3vws58yy0pk47gs",
+      "pack": "spells",
+      "name": "Planar Ally, Lesser",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "cleric": 4,
+          "medium": 3,
+          "oracle": 4,
+          "psychic": 4,
+          "shaman": 4,
+          "warpriest": 4
+        },
+        "grantedLevels": {},
+        "school": "con",
+        "subschools": ["calling"],
+        "descriptors": ["see text"]
+      },
+      "description": "<p>By casting this spell, you request your deity to send you an outsider (of 6 HD or less) of the deity's choice. If you serve no particular deity, the spell is a general plea answered by a creature sharing your philosophical alignment. If you know an individual creature's name, you may request that individual by speaking the name during the spell (though you might get a different creature anyway).</p><p>You may ask the creature to perform one task in exchange for a payment from you. Tasks might range from the simple to the complex. You must be able to communicate with the creature called in order to bargain for its services.</p><p>The creature called requires a payment for its services. This payment can take a variety of forms, from donating gold or magic items to an allied temple, to a gift given directly to the creature, to some other action on your part that matches the creature's alignment and goals.</p><p>Regardless, this payment must be made before the creature agrees to perform any services. The bargaining takes at least 1 round, so any actions by the creature begin in the round after it arrives.</p><p>A task taking up to 1 minute per caster level requires a payment of 100 gp per HD of the creature called. For a task taking up to 1 hour per caster level, the creature requires a payment of 500 gp per HD. A long-term task, one requiring up to 1 day per caster level, requires a payment of 1,000 gp per HD.</p><p>A nonhazardous task requires only half the indicated payment, while an especially hazardous task might require a greater gift. Few if any creatures will accept a task that seems suicidal (remember, a called creature actually dies when it is killed, unlike a summoned creature). However, if the task is strongly aligned with the creature's ethos, it may halve or even waive the payment.</p><p>At the end of its task, or when the duration bargained for expires, the creature returns to its home plane (after reporting back to you, if appropriate and possible).</p><p><i>Note:</i> When you use a calling spell that calls an air, chaotic, earth, evil, fire, good, lawful, or water creature, it is a spell of that type.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "320"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "3v5uyzhdmce5dlem",
+                "activation": {
+                  "cost": 10,
+                  "type": "minute",
+                  "unchained": {
+                    "cost": 10,
+                    "type": "minute"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "effect": "one called outsider of 6 HD or less",
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/g0x2fnktg1553wv1",
+      "upstreamKey": "pf1/g0x2fnktg1553wv1",
+      "pack": "spells",
+      "name": "Symbol of Death",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 8,
+          "cleric": 8,
+          "occultist": 6,
+          "oracle": 8,
+          "sorcerer": 8,
+          "witch": 8,
+          "wizard": 8
+        },
+        "grantedLevels": {
+          "domain": {
+            "Rune": 8
+          }
+        },
+        "school": "nec",
+        "subschools": [],
+        "descriptors": ["death"]
+      },
+      "description": "<p>This spell allows you to scribe a potent rune of power upon a surface.</p><p>When triggered, a <i>symbol of death</i> kills one or more creatures within 60 feet of the <i>symbol</i> (treat as a burst) whose combined total current hit points do not exceed 150. The <i>symbol of death</i> affects the closest creatures first, skipping creatures with too many hit points to affect.</p><p>Once triggered, the <i>symbol</i> becomes active and glows, lasting for 10 minutes per caster level or until it has affected 150 hit points' worth of creatures, whichever comes first. A creature that enters the area while the <i>symbol of death</i> is active is subject to its effect, whether or not that creature was in the area when it was triggered. A creature need save against the <i>symbol</i> only once as long as it remains within the area, though if it leaves the area and returns while the <i>symbol</i> is still active, it must save again.</p><p>Until it is triggered, the <i>symbol of death</i> is inactive (though visible and legible at a distance of 60 feet). To be effective, a <i>symbol of death</i> must always be placed in plain sight and in a prominent location. Covering or hiding the rune renders the <i>symbol of death</i> ineffective, unless a creature removes the covering, in which case the <i>symbol of death</i> works normally.</p><p>As a default, a <i>symbol of death</i> is triggered whenever a creature does one or more of the following, as you select: looks at the rune; reads the rune; touches the rune; passes over the rune; or passes through a portal bearing the rune. Regardless of the trigger method or methods chosen, a creature more than 60 feet from a <i>symbol of death</i> can't trigger it (even if it meets one or more of the triggering conditions, such as reading the rune). Once the spell is cast, a <i>symbol of death</i>'s triggering conditions cannot be changed.</p><p>In this case, &quot;reading&quot; the rune means any attempt to study it, identify it, or fathom its meaning. Throwing a cover over a <i>symbol of death</i> to render it inoperative triggers it if the <i>symbol</i> reacts to touch. You can't use a <i>symbol of death</i> offensively; for instance, a touch-triggered <i>symbol of death</i> remains untriggered if an item bearing the <i>symbol of death</i> is used to touch a creature. Likewise, a <i>symbol of death</i> cannot be placed on a weapon and set to activate when the weapon strikes a foe.</p><p>You can also set special triggering limitations of your own. These can be as simple or elaborate as you desire. Special conditions for triggering a <i>symbol of death</i> can be based on a creature's name, identity, or alignment, but otherwise must be based on observable actions or qualities. Intangibles such as level, class, HD, and hit points don't qualify.</p><p>When scribing a <i>symbol of death</i>, you can specify a password or phrase that prevents a creature using it from triggering the <i>symbol</i>'s effect. Anyone using the password remains immune to that particular rune's effects so long as the creature remains within 60 feet of the rune. If the creature leaves the radius and returns later, it must use the password again.</p><p>You also can attune any number of creatures to the <i>symbol of death</i>, but doing this can extend the casting time. Attuning one or two creatures takes negligible time, and attuning a small group (as many as 10 creatures) extends the casting time to 1 hour. Attuning a large group (as many as 25 creatures) takes 24 hours. Attuning larger groups takes an additional 24 hours per 25 creatures. Any creature attuned to a <i>symbol of death</i> cannot trigger it and is immune to its effects, even if within its radius when it is triggered. You are automatically considered attuned to your own <i>symbol</i>s of <i>death,</i> and thus always ignore the effects and cannot inadvertently trigger them.</p><p><i>Read magic</i> allows you to identify a <i>symbol</i> with a Spellcraft check (DC 10 + the <i>symbol</i>'s spell level). Of course, if the <i>symbol</i> is set to be triggered by reading it, this will trigger the <i>symbol</i>.</p><p>A <i>symbol of death</i> can be removed by a successful <i>dispel magic</i> targeted solely on the rune. An <i>erase</i> spell has no effect on a <i>symbol of death</i>. Destruction of the surface where a <i>symbol of death</i> is inscribed destroys the <i>symbol</i> but also triggers it.</p><p><i>Symbol of death</i> can be made permanent with a <i>permanency</i> spell.</p><p>A permanent <i>symbol of death</i> that is disabled or has affected its maximum number of hit points becomes inactive for 10 minutes, but then can be triggered again as normal.</p><p><i>Note:</i> Magic traps such as <i>symbol of death</i> are hard to detect and disable. A rogue (only) can use the Perception skill to find a <i>symbol of death</i> and Disable Device to thwart it. The DC in each case is 25 + spell level, or 33 for <i>symbol of death</i>.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "355"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "3ghytfcvn8jy223f",
+                "actionType": "spellsave",
+                "activation": {
+                  "cost": 10,
+                  "type": "minute",
+                  "unchained": {
+                    "cost": 10,
+                    "type": "minute"
+                  }
+                },
+                "duration": {
+                  "units": "seeText"
+                },
+                "effect": "one symbol",
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "0"
+                },
+                "save": {
+                  "description": "Fortitude negates",
+                  "type": "fort"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/tr7m97npkbgm4wp7",
+      "upstreamKey": "pf1/tr7m97npkbgm4wp7",
+      "pack": "spells",
+      "name": "Detect Evil",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "adept": 1,
+          "cleric": 1,
+          "inquisitor": 1,
+          "oracle": 1,
+          "shaman": 1,
+          "spiritualist": 1,
+          "warpriest": 1
+        },
+        "grantedLevels": {},
+        "school": "div",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>You can sense the presence of evil. The amount of information revealed depends on how long you study a particular area or subject.</p><p><i>1st Round</i>: Presence or absence of evil.</p><p><i>2nd Round</i>: Number of evil auras (creatures, objects, or spells) in the area and the power of the most potent evil aura present.</p><p>If you are of good alignment, and the strongest evil aura's power is overwhelming (see below), and the HD or level of the aura's source is at least twice your character level, you are stunned for 1 round and the spell ends.</p><p><i>3rd Round</i>: The power and location of each aura. If an aura is outside your line of sight, then you discern its direction but not its exact location.</p><p><i>Aura Power</i>: An evil aura's power depends on the type of evil creature or object that you're detecting and its HD, caster level, or (in the case of a cleric) class level; see the table below. If an aura falls into more than one strength category, the spell indicates the stronger of the two.</p><p><i>Lingering Aura</i>: An evil aura lingers after its original source dissipates (in the case of a spell) or is destroyed (in the case of a creature or magic item). If <i>detect evil</i> is cast and directed at such a location, the spell indicates an aura strength of dim (even weaker than a faint aura). How long the aura lingers at this dim level depends on its original power: </p><table><tbody><tr><th>Original Strength</th><th>Duration of Lingering Aura</th></tr> <tr><td>Faint</td><td>1d6 rounds</td></tr> <tr><td>Moderate</td><td>1d6 minutes</td></tr> <tr><td>Strong</td><td>1d6x10 minutes</td></tr> <tr><td>Overwhelming</td><td>1d6 days</td></tr></tbody></table><p>Animals, traps, poisons, and other potential perils are not evil, and as such this spell does not detect them. Creatures with actively evil intents count as evil creatures for the purpose of this spell.</p><p>Each round, you can turn to <i>detect evil</i> in a new area. The spell can penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt blocks it.</p><table>Detect Chaos/Evil/Good/Law <tbody><tr><th>Creature/Object</th><th>Aura Power</th></tr> <tr><th>None</th><th>Faint</th><th>Moderate</th><th>Strong</th><th>Overwhelming</th></tr> <tr><td>Aligned creature<sup>1</sup> (HD)</td><td>5 or lower</td><td>5-10</td><td>11-25</td><td>26-50</td><td>51 or higher</td></tr> <tr><td>Aligned Undead (HD)</td><td>--<br></td><td>2 or lower</td><td>3-8</td><td>9-20</td><td>21 or higher</td></tr> <tr><td>Aligned outsider (HD)</td><td>--<br></td><td>1 or lower</td><td>2-4</td><td>5-10</td><td>11 or higher</td></tr> <tr><td>Cleric or paladin of an aligned deity<sup>2</sup> (class levels)</td><td>--<br></td><td>1</td><td>2-4</td><td>5-10</td><td>11 or higher</td></tr> <tr><td>Aligned magic item or spell (caster level)</td><td>5th or lower</td><td>6th-10th</td><td>11th-15th</td><td>16th-20th</td><td>21st or higher</td></tr> </tbody><tfoot><tr><td>1 Except for undead and outsiders, which have their own entries on the table.</td></tr> <tr><td>2 Some characters who are not clerics may radiate an aura of equivalent power. The class description will indicate whether this applies.</td></tr></tfoot></table>&gt;",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "266"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "mlk2dv2yf5xgq8to",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "area": "cone-shaped emanation",
+                "duration": {
+                  "concentration": true,
+                  "units": "spec",
+                  "value": "concentration, up to 10 min./level"
+                },
+                "measureTemplate": {
+                  "size": "60",
+                  "type": "cone"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "60"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/wu4y1ilg6iq28cr6",
+      "upstreamKey": "pf1/wu4y1ilg6iq28cr6",
+      "pack": "spells",
+      "name": "Interposing Hand",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 5,
+          "magus": 5,
+          "occultist": 5,
+          "psychic": 5,
+          "sorcerer": 5,
+          "wizard": 5
+        },
+        "grantedLevels": {},
+        "school": "evo",
+        "subschools": [],
+        "descriptors": ["force"]
+      },
+      "description": "<p><i>Interposing hand</i> creates a Large magic hand that appears between you and one opponent. This floating, disembodied hand then moves to remain between the two of you, regardless of where you move or how the opponent tries to get around it, providing cover (+4 AC) for you against that opponent. Nothing can fool the hand-it sticks with the selected opponent in spite of <i>darkness,</i> invisibility, polymorphing, or any other attempt at hiding or disguise. The hand does not pursue an opponent, however.</p><p>An <i>interposing hand</i> is 10 feet long and about that wide with its fingers outstretched. It has as many hit points as you do when you're undamaged, and is AC 20 (-1 size, +11 natural). It takes damage as a normal creature, but most magical effects that don't cause damage do not affect it.</p><p>The hand never provokes attacks of opportunity from opponents.</p><p>It cannot push through a <i>Wall of Force or</i> enter an <i>antimagic field</i>, but it suffers the full effect of a <i>prismatic wall</i> or <i>prismatic sphere.</i> The hand makes saving throws as its caster.</p><p><i>Disintegrate</i> or a successful <i>dispel magic</i> destroys it.</p><p>Any creature weighing 2,000 pounds or less that tries to push past the hand is slowed to half its normal speed. The hand cannot reduce the speed of a creature weighing more than 2,000 pounds, but it still affects the creature's attacks.</p><p>Directing the spell to a new target is a move action.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "301"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "r6uxoc2jj59k2cvx",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "effect": "10-ft. hand",
+                "name": "Use",
+                "range": {
+                  "units": "medium"
+                }
+              },
+              {
+                "_id": "kBXEI2XhbFtvyvnM",
+                "activation": {
+                  "type": "move",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Redirect Hand",
+                "range": {
+                  "units": "unlimited"
+                },
+                "target": {
+                  "value": "One Creature"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

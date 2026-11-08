@@ -1,0 +1,69 @@
+_id: Y1wgewApRHLDb3Hq
+_key: '!items!Y1wgewApRHLDb3Hq'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/commodities/currency/coin-inset-skull-gold.webp
+name: Fool's Gold (AA)
+system:
+  actions:
+    - _id: 5TkFFJ78xCR2nPq4
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object, see text)
+        type: fort
+      target:
+        value: 1 gold piece/level touched
+      touch: true
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cast this spell on one or more gold pieces, which make those who
+      have them more vulnerable to your magics. A creature with one or more of
+      these gold pieces in its possession must attempt a Will save (at this
+      spell’s save DC) the first time the creature is forced to attempt a saving
+      throw against a spell, spell-like ability, or supernatural ability you
+      create. If the creature fails, it takes a –2 penalty on all saving throws
+      against your magic effects as long as the gold piece is in its possession.
+      Additionally, if it fails a saving throw against a magic ability of yours
+      that is not harmless and has a duration, the duration is doubled for that
+      creature.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      antipaladin: 1
+      arcanist: 2
+      bard: 1
+      investigator: 1
+      mesmerist: 1
+      occultist: 2
+      psychic: 1
+      shaman: 2
+      skald: 1
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    focus: a lump of gold worth 5 gp
+  school: trs
+  sources:
+    - id: PZO9465
+      pages: '20'
+type: spell
