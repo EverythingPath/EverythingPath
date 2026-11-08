@@ -1,0 +1,55 @@
+_id: 9b4iklatq5hn1z5m
+_key: '!items!9b4iklatq5hn1z5m'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Quench
+system:
+  actions:
+    - _id: xlfcnwwsp4dt1rii
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one 20-ft. cube/level (S)
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      save:
+        description: none or Will negates (object)
+        type: will
+      target:
+        value: one fire-based magic item
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Quench</i> is often used to put out forest fires and other
+      conflagrations. It extinguishes all nonmagical fires in its
+      area.</p><p>The spell also dispels any fire spells in its area, though you
+      must succeed on a dispel check (1d20 +1 per caster level, maximum +15)
+      against each spell to dispel it. The DC to dispel such spells is 11 + the
+      caster level of the fire spell.</p><p>Each creature with the fire subtype
+      within the area of a <i>quench</i> spell takes 1d6 points of damage per
+      caster level (maximum 10d6, no save allowed).</p><p>Alternatively, you can
+      target the spell on a single magic item that creates or controls flame.
+      The item loses all its fire-based magical abilities for 1d4 hours unless
+      it succeeds on a Will save. Artifacts are immune to this effect.</p>
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '329'
+  sr: false
+type: spell

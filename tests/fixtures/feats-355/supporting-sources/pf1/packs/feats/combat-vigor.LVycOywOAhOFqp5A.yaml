@@ -1,0 +1,44 @@
+_id: LVycOywOAhOFqp5A
+_key: '!items!LVycOywOAhOFqp5A'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_04.jpg
+name: Combat Vigor
+system:
+  actions:
+    - _id: 0exZ5RBGzya9d8RU
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - positive
+      name: Use
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><em>You can quickly recuperate from devastating attacks without divine
+      assistance.</em></p><p><b>Prerequisites</b>: Con 13.</p><p><b>Benefit</b>:
+      You gain a vigor pool with a maximum number of points equal to your
+      Constitution bonus. As a standard action, you can spend up to 1 vigor
+      point per 3 Hit Dice you have (minimum 1) to regain 1d6 hit points per
+      vigor point spent (maximum 7d6). Each time you spend vigor points, you
+      become fatigued for 1 minute. You cannot spend vigor points while fatigued
+      or exhausted. Spending vigor points doesn’t provoke attacks of
+      opportunity. The points in your vigor pool are replenished to their
+      maximum after you rest for 8 hours.</p>
+  sources:
+    - id: PZO9475
+      pages: '14'
+  tags:
+    - Combat
+  uses:
+    maxFormula: '@abilities.con.baseMod'
+    per: day
+type: feat

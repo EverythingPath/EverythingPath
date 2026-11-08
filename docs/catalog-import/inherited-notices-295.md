@@ -1,0 +1,80 @@
+# Inherited notice review: #295
+
+Reviewed **2026-10-09** by **Sol (AI curator) for the owner**, following [#264](inherited-notices-264.md) and [#294](inherited-notices-294.md). [Ticket #295](https://github.com/AndreasUnunger/EverythingPath/issues/295) specifies final block **466: one physical occurrence, one unique complete notice**, at `pf1-content/OGL.txt` line **503**. The generic template's fifteen-block instruction does not expand this inventory. This batch establishes compilation-level notice evidence and adds **zero content admissions**.
+
+## Disposition and evidence
+
+| Exact identity                                                                        | Source line | Disposition                                                                                  |
+| ------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------- |
+| `pf1-content/notice/ecc9a08e2a55463199ad43d9cd99139806312856221eb837cab376ec9bbd47d2` | 503         | Reviewed individual Revised 2002 Juju Zombie notice; complete book/inherited-rule chain held |
+
+The [batch evidence](../../scripts/catalog/legal/inherited-notices-295.json) records verbatim text, immutable key, raw-line hash, source provenance, reviewer/date, comparisons, enforced hold and frozen prior-value commitments. The line is complete, not a heading or wrapped fragment. No joining is required. Raw and trimmed hashes both equal the key: this final line has no trailing whitespace. Internal wording, punctuation and copyright date remain unchanged; review date is separate.
+
+Primary evidence is read-only `pf1-content` 11.4.0, commit `02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d`, [OGL.txt line 503](https://gitlab.com/foundryvtt_pathfinder1e/pf1-content/-/blob/02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d/OGL.txt#L503), file SHA-256 `10bcdc68296b48cc250f38e49de09c9a73645163d7ac7f76e77346a755c35cdc`. System comparison uses v11.11, commit `418761d2e16a6037c0156bb4a241f7cea5a2986d`, [OGL.txt](https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/OGL.txt), file SHA-256 `0464e2f13f24c742dc3c2a4c788aab9ab24ca9809873192551b77f784a50d7f9`; the batch identity is absent there. Both exact commits, clean checkouts and zero writable tree paths were verified before catalog commands. Both complete source bodies equal the committed OGL plus respective upstream notice bytes.
+
+The [Paizo PRD licence page](https://paizo.com/pathfinderRPG/prd/openGameLicense.html), HTTP 200, line 536, and [PCGen Bestiary 2 PCC](https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/bestiary_2/bestiary_2.pcc#L91), HTTP 200, line 91, corroborate **Revised 2002**, **Necromancer Games, Inc.**, **Scott Greene** and **Gary Gygax**. Their raw quotes, line/file hashes and PRD decoded comparison text are retained in the evidence. PRD uses `Revised, ©` and `Author Scott Greene`; the pinned source uses `Revised. ©` and `Author: Scott Greene`. PCGen uses `Revised, Copyright`. These are comparison differences, not authorization to change the pinned notice. The search boundary is exactly these two comparison files; neither establishes complete chains or whole-content attribution. No publication declaration is used as a specific-rule match.
+
+The pinned bibliography, `module/registry/sources.mjs`, lines 136–137 and 172–173, confirms the comparison publication **Bestiary 2 (`PZO1116`)** and the unchanged owner-transcription seed **Bestiary 6 (`PZO1137`)**. Exact lines and hashes are recorded as publication-identity anchors only; neither matches a specific rule or supplies a complete notice chain.
+
+The Complete 2011 notice `pf1-content/notice/fdbb36aaeedf25a4c6b9afdf44bf5f17c92e1a7f9b26c096dd252f1ed53c6ada`, reviewed in #294, remains separate. Its record and hold are unchanged. No aliases, product-code mapping, printed verification or complete-chain clearance are inferred. No book PDFs are available and no Archives of Nethys evidence was used.
+
+[Decision #224](https://github.com/AndreasUnunger/EverythingPath/issues/224#issuecomment-5939689134), [#227](https://github.com/AndreasUnunger/EverythingPath/issues/227#issuecomment-5948780647), [#241](https://github.com/AndreasUnunger/EverythingPath/issues/241#issuecomment-5955002698), which supersedes #227, and [PRD #251's acceptance appendix](https://github.com/AndreasUnunger/EverythingPath/issues/251#issuecomment-5958557461) govern this review. The new hold `notice-295-complete-chain-ecc9a08e2a55463199ad43d9cd99139806312856221eb837cab376ec9bbd47d2` is enforced in [held-notices.json](../../scripts/catalog/legal/held-notices.json). No retained exception is asserted or cleared, and this is no new legal-sufficiency conclusion.
+
+The historical starting snapshot has **449 Registry records and 1,497 hold registrations**, all preserved by exact identity and raw value. This batch adds one of each, producing **450 records and 1,498 holds** at handoff. Frozen original subset fingerprints permit later additions. Assessments, attribution evidence, Curation Overlay, legal resources and prior notice versions are unchanged. `candidates: []` records the notice-only scope; no content dependencies or mechanics are invented. All **36 pre-existing advisory source hashes and term locations** were rechecked. Toughness's ordinary stamina and Apotheosis's narrative mythic remain false positives; other leads stay with owning content audits. **#333–#336/#516–#519 inherited-rule notice audits remain required before any of their holds clear.** [#527's observed minima](spells-527.md) do not establish exhaustive origins or full chains.
+
+## Verification
+
+All commands run sequentially with `CI=true VITEST_MAX_WORKERS=1`, the launcher's external `.ep-tmp/` TMPDIR, unchanged standard 8 GiB lint scopes and existing test budgets, inside its single 12 GiB, no-swap, two-core service. No full suite, deployment, git write or GitHub write is run.
+
+```sh
+PF1_CURATION_SYSTEM="$HOME/repos/everythingpath/sources/foundryvtt-pathfinder1"
+PF1_CURATION_CONTENT="$HOME/repos/everythingpath/sources/pf1-content"
+export CI=true VITEST_MAX_WORKERS=1
+pnpm -s typecheck
+pnpm -s lint
+pnpm -s check:initial-migration-writers
+pnpm catalog:pin
+pnpm catalog:format --check
+pnpm catalog:notice-deps
+pnpm catalog:curate --system "$PF1_CURATION_SYSTEM" --content "$PF1_CURATION_CONTENT" --out <task-scratch>/drafts
+pnpm catalog:preview --system "$PF1_CURATION_SYSTEM" --content "$PF1_CURATION_CONTENT" --out <task-scratch>/preview
+pnpm catalog:preview --system "$PF1_CURATION_SYSTEM" --content "$PF1_CURATION_CONTENT" --curation <task-scratch>/drafts/records.json --out <task-scratch>/preview-drafts
+pnpm test tests/catalog
+pnpm test convex/inheritedNotices288.integration.test.ts convex/catalogRelease.integration.test.ts
+```
+
+Both full-source previews extract **23,109 entries and 538 resources**. Their accounting is **61 admitted + 23,193 held + two dependent omissions + 391 reference failures = 23,647 extracted candidates**. The ordinary gate additionally reports 715 unaccounted inventory records and 3,583 missing curation bindings, producing **4,689 global failures**. Drafts replace those missing bindings with **758 unresolved mechanics**, producing **1,864 global failures**. Both gates therefore exit 1 as expected. These existing corpus gaps are outside this notice batch; no draft is promoted. Required notices remain `PZO1110`, with no outstanding notices or resources. Every one of the 61 existing admission rows was inspected in full; this batch adds none.
+
+Independent full-source imports reproduce **every field of all five ordinary and draft-assisted artifacts**, including preview wrappers, source verification, extraction fingerprints, reviewed-input commitments and both complete 538-resource sets. Complete before/after admission equality includes every admitted, held, omitted, retained and failure row plus all required notices. The ordinary gate fingerprint is `fbd3c72dc5536a934c64e7b171fcfd5326fc2744be2f5c3bf7a3de2ac7519baf`; draft-assisted is `830c360bb9fca7636b1b2cab0f55139154f53b1f3c6e7410296d3c26a6655181`. The new Registry row changes the reviewed-input commitment, while admission results stay equal. The drafter's record commitment and verified-pin metadata also match the actual generated records and inputs.
+
+Lossless release transport reconstructs **all 450 Registry records**, canonical size **598,113 bytes**, from **10 chunks in two batches of 463,604 and 153,446 bytes** below the unchanged 512,000-byte cap. Complete Registry fingerprint: `20b09c2383d90d60ea8427b378223dc69716742ec225f11d3c29c43b6567bc5d`. Portable reconstruction copies **all 107 tracked inputs** of `tests/fixtures/feats-330`, including its `pf1-content/src/.gitkeep`, into `mkdtemp` under `tmpdir()` and reproduces **100 entries, zero resources and every artifact field**. Its fingerprint is `df77ec2187824c65127cd7723e14a642429fa433c50872958995a617e6bc086c`. Full-source resources are covered separately in each unrestricted replay; no machine-specific temporary-directory spelling is asserted as a product invariant.
+
+The [10 focused tests](../../tests/catalog/inherited-notices-295.test.ts) cover exact source bodies/key/raw-line hashes, reviewer/date/provenance, variant separation, frozen original subsets, advisory preservation, legal-page generation/permanent retention, independent content-assessment requirements, held/missing/unreviewed notice behavior and complete bounded transport. The batch page has **four sections and four notices**: this individual Registry notice, both complete upstream blocks and the project notice. Test-only extra notice requirements reuse published CRB Lightning Reflexes and its landed evidence; they create no shipping content attribution.
+
+The existing backend suite prepares the complete current Registry through the actual private operator, retries it, selects only isolated fixture state, and verifies every field through the public legal read and page builder. Altered, incomplete and malformed chunks are rejected. This is local fixture evidence, not deployment, release publication or initial cutover.
+
+| Check                                                                   | Result                                                                                                      | Command elapsed   |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------- |
+| `pnpm -s typecheck`                                                     | Pass; repeated on final data                                                                                | 12.79 s / 13.08 s |
+| `pnpm -s lint`                                                          | Pass; unchanged standard 8 GiB scopes                                                                       | 138.82 s          |
+| `pnpm -s check:initial-migration-writers`                               | Pass; 183 registrations                                                                                     | 0.97 s            |
+| `pnpm catalog:pin`                                                      | Pass; `sha256:d7a42ca346d875f9497c7da94325022ac289d7931226a3649979a13f410c8063`                             | 0.27 s            |
+| `pnpm catalog:format --check`                                           | Pass; canonical shared data                                                                                 | 0.59 s            |
+| `pnpm catalog:notice-deps`                                              | Pass; 6,779 dependencies, 3,101 candidates, 43 inventories; zero gaps/waivers/stale, 36 existing advisories | 1.87 s            |
+| Full-source `catalog:curate`                                            | Pass, exit 0; 6,502 records, 3,583 new drafts, zero replaced/missing, 758 unresolved mechanics              | 155.27 s          |
+| Ordinary full-source `catalog:preview`                                  | Expected exit 1; unchanged admissions and 4,689 existing global failures                                    | 189.32 s          |
+| Draft-assisted full-source `catalog:preview`                            | Expected exit 1; unchanged admissions and 1,864 existing global failures                                    | 202.69 s          |
+| Complete independent replay/source/preservation/transport/fixture proof | Pass; every artifact field, both complete gate results and all original raw values preserved                | 478.04 s          |
+| `pnpm test tests/catalog`                                               | Pass; 94 files, 2,034 tests, including all 10 batch tests                                                   | 295.41 s          |
+| Both listed backend release test files                                  | Pass; two files, 30 tests, including complete public legal readback                                         | 5.98 s            |
+| Formatting and `git diff --check`                                       | Pass; no tracked deletions                                                                                  | —                 |
+
+Complete proof outputs, source-stage logs, the full 61-row admission inventory, preview byte hashes and check ledger are preserved externally with compact summaries. The exact task-owned scratch directory was removed; the `.scratch` root and every other session's files were preserved. Only the Registry, enforced holds, batch evidence, focused test and this report changed, all uncommitted.
+
+## Timing and workflow
+
+Briefing, issue/decision review and source comparisons began **09:24 UTC**; artifact and focused-test authoring began approximately **09:27 UTC**. The initial focused run passed **10 batch tests and four notice-hold tests**. The first typecheck found a union-property access in the new comparison assertion; replacing it with a typed partial-object assertion fixed the test, and the restarted check passed. Two scratch-verifier assertions initially confused whole-content holds with notice-hold registrations, then mechanics dispositions with attribution status. The corrected audit compares each complete owning inventory against its original tracked value, verifies every original hold ID there and independently requires unresolved Attribution Assessments. No prior classification, product code, repository test assertion or timeout was changed to resolve these scratch-check errors. No product or tooling fix was needed.
+
+Approximate phase effort: briefing/evidence **3 minutes**; Registry/evidence/focused-test authoring **3 minutes**; verifier preparation and diagnosis **7 minutes**; successful verification commands **24.9 minutes**; report/final audit/hygiene **3 minutes**. Authoring and reporting overlap command execution, so these durations are not additive. The main verification window was approximately **09:28–09:58 UTC**. The service's observed peak was **7,687,512,064 bytes (7.16 GiB)**, with every `memory.events` counter zero. The catalog reporter flagged two existing tests at 9,278/15,000 ms and 8,608/15,000 ms; both passed within unchanged CI budgets.
+
+Full-source extraction and curation dominate the cost of this one-notice batch because notice identities cannot use the content-key selector. Frozen per-entry subset commitments also add substantial evidence size for small batches. Registry reviewer metadata remains free-text provenance; structured reviewer/date lives in batch evidence. Inventory mechanics dispositions and attribution holds have separate meanings, which temporary audits must preserve. Exact variant wording and an individual reviewed notice cannot establish a complete book chain. The launcher's bounded job and compact complete-value fingerprints preserve verification scope without increasing memory budgets or formatting enormous mismatch objects.

@@ -1,0 +1,48 @@
+_id: mZ63Rbpnk9UCwtWN
+_key: '!items!mZ63Rbpnk9UCwtWN'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Animal Focus (Wolf)
+system:
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains the scent ability with a range of 10 feet. The range
+      of this sense increases to 20 feet at 8th level and 30 feet at 15th level.
+      The range doubles if the opponent is upwind, and is halved if the opponent
+      is downwind.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 1
+  scriptCalls:
+    - _id: bPUFbnZSHRXVMpbP
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Senses
+      type: script
+      value: >-
+        const scentRange = Math.clamp(Math.floor((item.system.level - 1) / 7) *
+        10, 10, 30);
+
+
+        if(state) {
+          await item.setItemDictionaryFlag("scentRange", actor.system.traits.senses.sc);
+
+          await actor.update({
+            "system.traits.senses.sc": scentRange,
+          });
+        } else {
+          await actor.update({
+            "system.traits.senses.sc": item.getItemDictionaryFlag("scentRange") ?? 0
+          });
+
+          await item.removeItemDictionaryFlag("scentRange");
+        }
+type: buff

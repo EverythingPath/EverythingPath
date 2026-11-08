@@ -1,0 +1,52 @@
+_id: thnav06t8k8ox78j
+_key: '!items!thnav06t8k8ox78j'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Fester
+system:
+  actions:
+    - _id: 4s9dh5qtr30953ow
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or 1 round; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Necrotic energy permeates the target, blocking healing
+      abilities.</p><p>The subject gains spell resistance equal to 12 + your
+      caster level against effects that restore hit points or grant temporary
+      hit points. In addition, any healing provided by effects that ignore spell
+      resistance (such as fast healing, regeneration, and some spells) are
+      halved. If the target succeeds on a Fortitude saving throw, <i>fester</i>
+      lasts only a single round.</p>
+  learnedAt:
+    class:
+      inquisitor: 3
+      witch: 2
+  level: 2
+  materials:
+    value: rotted meat
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '221'
+type: spell

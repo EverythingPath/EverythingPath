@@ -1,0 +1,66 @@
+_id: o9kqm42x6xkfjem3
+_key: '!items!o9kqm42x6xkfjem3'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Programmed Image
+system:
+  actions:
+    - _id: n3mad0t8o67dwj7n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: permanent until triggered, then 1 round/level
+      effect: >-
+        visual figment that cannot extend beyond a 20-ft. cube + one 10-ft.
+        cube/level (S)
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief (if interacted with)
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kq916lznxo0ig68v]{silent image}, except
+      that this spell's figment activates when a specific condition occurs. The
+      figment includes visual, auditory, olfactory, and thermal elements,
+      including intelligible speech.</p><p>You set the triggering condition
+      (which may be a special word) when casting the spell. The event that
+      triggers the illusion can be as general or as specific and detailed as
+      desired but must be based on an audible, tactile, olfactory, or visual
+      trigger. The trigger cannot be based on some quality not normally obvious
+      to the senses, such as alignment. See <em>magic mouth</em> for more
+      details about such triggers.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      mesmerist: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 25
+    value: fleece and jade dust worth 25 gp
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '327'
+  sr: false
+  subschool:
+    - figment
+type: spell

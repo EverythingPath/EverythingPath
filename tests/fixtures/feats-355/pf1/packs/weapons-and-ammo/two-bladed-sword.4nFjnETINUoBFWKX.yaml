@@ -1,0 +1,62 @@
+_id: 4nFjnETINUoBFWKX
+_key: '!items!4nFjnETINUoBFWKX'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sword-two-bladed.png
+name: Two-Bladed Sword
+system:
+  actions:
+    - _id: yclj5f70lpj12g6y
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Two-Bladed Sword
+  description:
+    unidentified: >-
+      <p>A two-bladed sword is a double weapon-twin blades extend from either
+      side of a central, short haft, allowing the wielder to attack with
+      graceful but deadly flourishes.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 100
+  properties:
+    dbl: true
+  sources:
+    - id: PZO1110
+      pages: 143, 149
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - double
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

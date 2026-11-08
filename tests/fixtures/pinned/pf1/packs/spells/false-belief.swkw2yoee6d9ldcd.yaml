@@ -1,0 +1,55 @@
+_id: swkw2yoee6d9ldcd
+_key: '!items!swkw2yoee6d9ldcd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: False Belief
+system:
+  actions:
+    - _id: rohy674t1297vgpz
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: willing creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You temporarily alter the target's memory (similar to <i>modify</i>
+      memory) to eliminate, change, or implant a memory of up to 1 hour in
+      length. When the duration of this expires, the target's real memory
+      returns, and the false memory fades to little more than a vague outline,
+      like a dream. This false memory seems true to the target, so effects that
+      detect lies or force the target to speak the truth (as the subject
+      understands it) don't detect the falsehood.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+  level: 2
+  materials:
+    value: lemon juice and a scrap of parchment
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '214'
+  subschool:
+    - compulsion
+type: spell
