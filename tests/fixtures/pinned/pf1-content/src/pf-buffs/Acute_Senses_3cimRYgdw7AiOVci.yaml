@@ -1,0 +1,26 @@
+_id: 3cimRYgdw7AiOVci
+_key: '!items!3cimRYgdw7AiOVci'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/alertness.jpg
+name: Acute Senses
+system:
+  changes:
+    - _id: e62ic0bi
+      formula: (min(30,(10 + (floor(@item.level / 8) * 10))))
+      target: skill.per
+      type: enh
+  description:
+    instructions: <p>Set this buff's level equal to the caster level of Acute Senses.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.f9adpo6szijchpva]{Acute
+      Senses}</p><p>You gain a +10 enhancement bonus on Perception checks. This
+      bonus increases to +20 at caster level 8th, and +30 (the maximum) at
+      caster level 16th.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  subType: spell
+type: buff

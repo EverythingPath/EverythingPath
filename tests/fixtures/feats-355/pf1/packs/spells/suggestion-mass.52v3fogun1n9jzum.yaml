@@ -1,0 +1,69 @@
+_id: 52v3fogun1n9jzum
+_key: '!items!52v3fogun1n9jzum'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Suggestion, Mass
+system:
+  actions:
+    - _id: irzvhdu3cv7zb3bw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 hour/level or until completed
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{suggestion}, except
+      that it can affect more creatures. The same <em>suggestion</em> applies to
+      all these creatures.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Maestro: 6
+      Rakshasa: 6
+      Serpentine: 6
+    class:
+      arcanist: 6
+      bard: 5
+      mesmerist: 5
+      occultist: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 6
+      witch: 6
+      wizard: 6
+    subDomain:
+      Innuendo: 6
+  level: 6
+  materials:
+    value: a snake's tongue and a honeycomb
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '350'
+  subschool:
+    - compulsion
+type: spell

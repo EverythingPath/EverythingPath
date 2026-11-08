@@ -1,0 +1,64 @@
+_id: cKJ0wG42qRrrJJeI
+_key: '!items!cKJ0wG42qRrrJJeI'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sword-dueling.png
+name: Dueling Sword
+system:
+  actions:
+    - _id: 8qctu0vskqck35o6
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+  baseTypes:
+    - Dueling Sword
+    - Longsword
+  description:
+    unidentified: >-
+      <p><em>These slightly curved swords measure just over 3 feet in
+      length.</em></p>
+
+      <p>An <em>dueling sword</em> can be used as a martial weapon (in which
+      case it functions as a
+      @UUID[Compendium.pf1.weapons-and-ammo.zWRlna42PMJVX6un]{longsword}), but
+      if you have the feat @UUID[Compendium.pf1.feats.BJBC4lbo7xGWPsKJ]{Exotic
+      Weapon Proficiency (dueling sword)}, you can use the
+      @UUID[Compendium.pf1.feats.vWiTqHC4Y3Xn1Pme]{Weapon Finesse} feat to apply
+      your <em>Dexterity</em> modifier instead of your <em>Strength</em>
+      modifier to <em>attack rolls</em> with a <em>dueling sword</em> sized for
+      you, even though it isn't a light weapon. You can also wield a <em>dueling
+      sword</em> in two hands to apply 1-1/2 times your <em>Strength</em> bonus
+      to damage rolls.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

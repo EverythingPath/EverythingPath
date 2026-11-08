@@ -1,0 +1,60 @@
+_id: uuatu68e7gkxnfbi
+_key: '!items!uuatu68e7gkxnfbi'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Callback
+system:
+  actions:
+    - _id: cjix00j5s7g2oh5g
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 minutes/level or until expended (see text)
+      name: Use
+      range:
+        units: long
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: your familiar or spirit animal
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>If the target takes hit point damage while within range of this spell,
+      it immediately teleports to your space (or adjacent to your space) after
+      the damage is applied. If the target is killed, its corpse teleports
+      instead. Optionally, you can specify a number of points of damage for your
+      familiar to take before the spell takes effect, but you must do so when
+      the spell is cast. Once the familiar has teleported back to you, the spell
+      ends.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      shaman: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a crushed grasshopper
+  school: con
+  sources:
+    - id: PZO1140
+      pages: '228'
+    - id: PZO9454
+      pages: '22'
+  subschool:
+    - teleportation
+type: spell

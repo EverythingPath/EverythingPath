@@ -1,0 +1,52 @@
+_id: l0hv73qsjg7cvsh5
+_key: '!items!l0hv73qsjg7cvsh5'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Bungle
+system:
+  actions:
+    - _id: y3xj8u67msapx7af
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 2 rounds or until triggered
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target takes a -20 penalty on its next attack roll or check that
+      requires a d20 roll. The action must be one deliberately taken by the
+      target on its turn. Creatures with more than 10 HD are unaffected by this
+      spell.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      mesmerist: 1
+      psychic: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '209'
+  subschool:
+    - compulsion
+type: spell

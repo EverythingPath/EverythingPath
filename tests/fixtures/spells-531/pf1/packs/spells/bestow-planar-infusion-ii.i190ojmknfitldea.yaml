@@ -1,0 +1,59 @@
+_id: i190ojmknfitldea
+_key: '!items!i190ojmknfitldea'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Bestow Planar Infusion II
+system:
+  actions:
+    - _id: 8ngn7z58tr920yuj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.Item.kwcyqu98kejbap7d]{bestow planar infusion
+      I}, except that the touched creature gains the improved infusion of the
+      current plane.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      inquisitor: 4
+      magus: 4
+      medium: 4
+      occultist: 4
+      oracle: 4
+      psychic: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1141
+      pages: '39'
+type: spell

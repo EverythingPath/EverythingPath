@@ -1,0 +1,83 @@
+_id: VZg9M6DaaZkIA8ql
+_key: '!items!VZg9M6DaaZkIA8ql'
+_stats:
+  coreVersion: '12.331'
+folder: 1OXMUAUKknfsmQAv
+img: systems/pf1/icons/races/creature-types/undead.png
+name: Undead
+system:
+  changes:
+    - _id: eRg9oi5P
+      formula: '60'
+      operator: set
+      target: sensedv
+      type: base
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        Immune to all mind-affecting effects (charms, compulsions, morale
+        effects, patterns, and phantasms).
+
+        Immune to bleed damage, death effects, disease, paralysis, poison, sleep
+        effects, and stunning.
+    - target: fort
+      text: >-
+        Immune to any effect that requires a Fortitude save (unless the effect
+        also works on objects or is harmless).
+
+        This includes death from massive damage. (but are destroyed immediately
+        when reduced to zero hp or below)
+    - target: will
+      text: >-
+        Harmed by positive energy and healed by negative energy. 
+
+        Not affected by raise dead and reincarnate spells or abilities.
+        Resurrection and true resurrection can affect undead creatures. These
+        spells turn undead creatures back into the living creatures they were
+        before becoming undead.
+    - target: ac
+      text: Not subject to nonlethal damage,
+  description:
+    instructions: >-
+      <p>On the settings tab of you actor, update the hit points ability and
+      fortitude save ability to Charisma.</p>
+    value: >-
+      <p>Undead races are once-living creatures animated by spiritual or
+      supernatural forces. An undead race has the following
+      features.</p><ul><li><p>Undead have no Constitution score. Undead use
+      their Charisma score in place of their Constitution score when calculating
+      hit points, Fortitude saves, and any special ability that relies on
+      Constitution (such as when calculating a breath weapon’s
+      DC).</p></li><li><p>Undead have the darkvision @Distance[60 ft;dual]
+      racial trait.</p></li><li><p>Undead are immune to all mind-affecting
+      effects (charms, compulsions, morale effects, patterns, and
+      phantasms).</p></li><li><p>Undead are immune to bleed damage, death
+      effects, disease, paralysis, poison, sleep effects, and
+      stunning.</p></li><li><p>Undead are not subject to nonlethal damage,
+      ability drain, or energy drain, and are immune to damage to physical
+      ability scores (Constitution, Dexterity, and Strength), as well as to
+      exhaustion and fatigue effects.</p></li><li><p>Undead are harmed by
+      positive energy and healed by negative energy. An undead creature with the
+      fast healing special quality still benefits from that
+      quality.</p></li><li><p>Undead are immune to any effect that requires a
+      Fortitude save (unless the effect also works on objects or is
+      harmless).</p></li><li><p>Undead do not risk death from massive damage,
+      but are immediately destroyed when reduced to 0 hit points or
+      fewer.</p></li><li><p>Undead are not affected by raise dead and
+      reincarnate spells or abilities. Resurrection and true resurrection can
+      affect undead creatures. These spells turn undead creatures back into the
+      living creatures they were before becoming undead.</p></li><li><p>Undead
+      do not breathe, eat, or sleep, unless they want to gain some beneficial
+      effect from one of these activities. This means that an undead creature
+      can drink potions to benefit from their effects and can sleep in order to
+      regain spells, but neither of these activities is required to survive or
+      stay in good health.</p></li></ul>
+  racePoints: 16
+  sources:
+    - id: PZO1121
+      pages: '217'
+  subType: racial
+  tags:
+    - Race Builder
+  traitType: advanced
+type: feat
