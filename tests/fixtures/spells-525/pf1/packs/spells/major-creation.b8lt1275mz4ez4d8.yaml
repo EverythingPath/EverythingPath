@@ -1,0 +1,75 @@
+_id: b8lt1275mz4ez4d8
+_key: '!items!b8lt1275mz4ez4d8'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Major Creation
+system:
+  actions:
+    - _id: 7vuqvqzm1eh84e5f
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: >-
+        unattended, nonmagical object of nonliving plant matter, up to 1 cu.
+        ft./level
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.jsvjsax2eabrlx8g]{minor creation}, except
+      that you can also create an object of mineral nature: stone, crystal,
+      metal, or the like. The duration of the created item varies with its
+      relative hardness and rarity, as indicated on the following
+      table.</p><table><tbody><tr><th><p>Hardness and Rarity
+      Examples</p></th><th><p>Duration</p></th></tr><tr><td><p>Vegetable
+      matter</p></td><td><p>2 hr./level</p></td></tr><tr><td><p>Stone, crystal,
+      base metals</p></td><td><p>1 hr./level</p></td></tr><tr><td><p>Precious
+      metals</p></td><td><p>20
+      min./level</p></td></tr><tr><td><p>Gems</p></td><td><p>10
+      min./level</p></td></tr><tr><td><p>Rare metal*</p></td><td><p>1
+      round/level</p></td></tr><tr><td colspan="2"><p>*Includes adamantine,
+      alchemical silver, and mithral. You can't use major creation to create a
+      cold iron item.</p></td></tr></tbody></table>
+  learnedAt:
+    bloodline:
+      Protean: 5
+    class:
+      adept: 5
+      arcanist: 5
+      occultist: 4
+      psychic: 5
+      sorcerer: 5
+      summoner: 4
+      summonerUnchained: 4
+      witch: 5
+      wizard: 5
+    domain:
+      Artifice: 6
+    subDomain:
+      Flotsam: 5
+  level: 5
+  materials:
+    value: >-
+      a tiny piece of matter of the same sort of item you plan to create with
+      minor creation
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '311'
+  sr: false
+  subschool:
+    - creation
+type: spell

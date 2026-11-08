@@ -1,0 +1,100 @@
+_id: 3bnWn3no2AKMTcyn
+_key: '!items!3bnWn3no2AKMTcyn'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: The Snoop (Tyrant's Grasp)
+system:
+  actions:
+    - _id: APO7dRofWOdXYdGy
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once each day you can reroll a single Bluff or Sense Motive check
+        against a creature you have known for at least 24 hours, using the
+        better result.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: reroll a single Bluff or Sense Motive
+  changes:
+    - _id: Wu7GLMdh
+      formula: '1'
+      target: skill.khi
+      type: trait
+    - _id: F0Jnpb84
+      formula: '1'
+      target: skill.klo
+      type: trait
+  classSkills:
+    khi: true
+    klo: true
+  description:
+    value: >-
+      <p><em>You know a little bit about most everything and everyone in
+      Roslar’s Coffer. It may be your profession, as you could be an archivist,
+      crier, or librarian—or you simply make a hobby of gossip. Either way, you
+      have a gift for recall and reading
+      others.</em></p><p><strong>Benefits</strong>: You gain a +1 trait bonus on
+      Knowledge (history) and Knowledge (local) checks, and these both become
+      class skills for you. Once each day you can reroll a single Bluff or Sense
+      Motive check against a creature you have known for at least 24 hours,
+      using the better result.</p>
+  scriptCalls:
+    - _id: 8lGe3Vt70qIP2dpb
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Bluff or Sense Motive
+      type: script
+      value: |-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Skill:</h3>
+            <p>Please pick a skill to reroll from the buttons below.</p>
+          </div>
+        `;
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Skill`,
+            content: content,
+            buttons: {
+              blf: {
+                label: pf1.config.skills["blf"],
+                callback: () => "blf",
+              },
+              sen: {
+                label: pf1.config.skills["sen"],
+                callback: () => "sen",
+              }
+            },
+            default: 'blf',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        const answer = await getAnswer();
+        if(answer !== null) {
+          actor.rollSkill(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9000-24E
+      pages: '7'
+  subType: trait
+  tags:
+    - Tyrant's Grasp
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

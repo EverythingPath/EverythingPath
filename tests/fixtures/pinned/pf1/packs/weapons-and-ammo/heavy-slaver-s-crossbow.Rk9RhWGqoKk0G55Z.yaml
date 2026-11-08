@@ -1,0 +1,68 @@
+_id: Rk9RhWGqoKk0G55Z
+_key: '!items!Rk9RhWGqoKk0G55Z'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-heavy.PNG
+name: Heavy Slaver's Crossbow
+system:
+  actions:
+    - _id: ziicko2d09mon115
+      ability:
+        attack: _default
+        critMult: 1
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Heavy Slaver's Crossbow
+  description:
+    unidentified: >-
+      <p>This crossbow shoots ammunition called
+      @UUID[Compendium.pf1.weapons-and-ammo.Item.9y3Uo776SKY0Gtel]{bolas bolts}
+      instead of crossbow bolts. It comes in both light and heavy varieties (but
+      not double, hand, or repeating crossbow varieties) with the same reload
+      action as a conventional crossbow of its type.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 400
+  properties:
+    nnl: true
+    spc: true
+    trp: true
+  sources:
+    - id: PZO1130
+      pages: '45'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 12
+type: weapon

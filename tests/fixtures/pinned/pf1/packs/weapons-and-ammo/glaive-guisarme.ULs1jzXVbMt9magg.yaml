@@ -1,0 +1,62 @@
+_id: ULs1jzXVbMt9magg
+_key: '!items!ULs1jzXVbMt9magg'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/glaive-guisarme.png
+name: Glaive-Guisarme
+system:
+  actions:
+    - _id: y8gw0q0wy9ycw1dc
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Glaive-Guisarme
+  description:
+    unidentified: >-
+      <p>This polearm combines the blade of a glaive with a wicked hook. A
+      mounted opponent hit by a glaive-guisarme takes a -2 penalty on her Ride
+      check to stay mounted.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 12
+  properties:
+    brc: true
+    rch: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

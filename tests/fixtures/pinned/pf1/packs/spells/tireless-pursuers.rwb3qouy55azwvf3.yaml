@@ -1,0 +1,51 @@
+_id: rwb3qouy55azwvf3
+_key: '!items!rwb3qouy55azwvf3'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Tireless Pursuers
+system:
+  actions:
+    - _id: unh2kcsa5xo0o3ih
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: you plus one touched creature/3 levels
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.df1xj7itjzu1hcyc]{tireless pursuit},
+      except as noted above.</p>
+  learnedAt:
+    class:
+      hunter: 3
+      inquisitor: 4
+      ranger: 3
+  level: 3
+  materials:
+    value: a hard biscuit broken into pieces
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '249'
+type: spell

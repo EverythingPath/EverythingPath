@@ -1,0 +1,53 @@
+_id: mxats7yz8qmhqu21
+_key: '!items!mxats7yz8qmhqu21'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Destabilize Powder
+system:
+  actions:
+    - _id: 1iz5cu5qdp9v9fx1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: 1 loaded firearm
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell makes the ammunition in the target firearm is prone to
+      misfire. Increase the misfire range by 1 + 1 per five caster levels
+      (maximum +5) for the ammunition currently loaded into that firearm. If
+      aware of this spell's effect prior to firing the altered ammunition (a DC
+      17 Spellcraft check to identify the spell being cast or similar effect),
+      the firearm's user can spend a standard action to clear the altered
+      ammunition from the firearm. Doing so destroys that ammunition.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a few drops of liquor
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '228'
+type: spell

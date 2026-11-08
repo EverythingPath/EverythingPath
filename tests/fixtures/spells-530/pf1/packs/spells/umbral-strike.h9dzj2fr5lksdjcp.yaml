@@ -1,0 +1,67 @@
+_id: h9dzj2fr5lksdjcp
+_key: '!items!h9dzj2fr5lksdjcp'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Umbral Strike
+system:
+  actions:
+    - _id: y1i3kjmqzfg3gmwc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: 1 creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a bolt of dark energy and use it to make a ranged touch
+      attack that ignores concealment (but not total concealment).  If you hit,
+      the target takes 1d6 points of damage per caster level (maximum 20d6).
+      Half of this damage is cold damage and half of it is negative energy. The
+      bolt's shadow expands and covers the target, rendering him blind for the
+      duration of the spell. A successful Fortitude save halves the damage and
+      negates the blind condition.</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      druid: 7
+      inquisitor: 6
+      magus: 6
+      occultist: 6
+      oracle: 7
+      psychic: 7
+      shaman: 7
+      sorcerer: 7
+      spiritualist: 6
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a black crossbow bolt
+  school: nec
+  sources:
+    - id: PZO9466
+      pages: '16'
+  subschool:
+    - shadow
+type: spell

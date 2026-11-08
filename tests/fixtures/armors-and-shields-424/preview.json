@@ -1,0 +1,2875 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/0cIAkfoDAK5Pq2XU",
+      "upstreamKey": "pf1/0cIAkfoDAK5Pq2XU",
+      "pack": "armors-and-shields",
+      "name": "Hellknight Half-Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 850,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>The armor worn by a Hellknight signifer is a vestment of armored plates, chain, and dark fabric. It functions as half-plate, but it can be donned and removed as though it were medium armor. Any spellcaster who wears this armor is treated as if he were wearing Hellknight plate for the purposes of any feats and effects that require one to be wearing Hellknight plate. This armor includes a signifer mask, though signifer masks can be purchased separately.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "It functions as half-plate, but it can be donned and removed as though it were medium armor. Any spellcaster who wears this armor is treated as if he were wearing Hellknight plate for the purposes of any feats and effects that require one to be wearing Hellknight plate."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2fK608aSYU9QDmzw",
+      "upstreamKey": "pf1/2fK608aSYU9QDmzw",
+      "pack": "armors-and-shields",
+      "name": "Heavy Steel Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 20,
+        "weight": 15,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "heavyShield",
+          "bonus": 2,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 15
+        }
+      },
+      "description": "<p>You strap a heavy steel shield to your forearm and grip it with your hand. A heavy steel shield is so heavy that you can't use your shield hand for anything else. Whether wooden or steel, a heavy shield offers the same basic protection and attack benefits, though the two versions respond differently to some spells and effects (such as rusting grasp). A druid can use a heavy wooden shield, but not a heavy steel shield.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "142, 148, 151-152"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "6JirvCBGQLj1EafK",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2LKdIUyCk6Imz6Gq",
+      "upstreamKey": "pf1/2LKdIUyCk6Imz6Gq",
+      "pack": "armors-and-shields",
+      "name": "Reinforced Tunic",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1,
+        "weight": 5,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": 5,
+          "armorCheckPenalty": 0,
+          "asf": 5
+        }
+      },
+      "description": "<p>Sometimes called a leine, this belted tunic has thick cords woven through it that cover vital areas. A reinforced tunic's armor bonus is increased by 2 against attack rolls made to confirm critical hits against the wearer.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "ac",
+          "text": "A reinforced tunic’s armor bonus is increased by 2 against attack rolls made to confirm critical hits against the wearer."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3mQTIhwAaZgvJq12",
+      "upstreamKey": "pf1/3mQTIhwAaZgvJq12",
+      "pack": "armors-and-shields",
+      "name": "Tower Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 30,
+        "weight": 45,
+        "armor": {
+          "slot": "shield",
+          "category": "towerShield",
+          "bonus": 4,
+          "maxDex": 2,
+          "armorCheckPenalty": 10,
+          "asf": 50
+        }
+      },
+      "description": "<p>This massive wooden shield is nearly as tall as its user. In most situations, it provides the indicated shield bonus to your AC. As a standard action, however, you can use a tower shield to grant you total cover until the beginning of your next turn. When using a tower shield in this way, you must choose one edge of your space. That edge is treated as a solid wall for attacks targeting you only. You gain total cover for attacks that pass through this edge and no cover for attacks that do not pass through this edge (see cover, Core Rulebook 195). The shield does not, however, provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. You cannot bash with a tower shield, nor can you use your shield hand for anything else.</p><p>When employing a tower shield in combat, you take a –2 penalty on attack rolls because of the shield's encumbrance.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "9"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "151, 153"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "untyped",
+          "value": -2
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "QXyItA3mOcUSLR3f",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "1"
+                },
+                "name": "Grant total cover",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "ac",
+          "text": "As a standard action, however, you can use a tower shield to grant you total cover until the beginning of your next turn. When using a tower shield in this way, you must choose one edge of your space. That edge is treated as a solid wall for attacks targeting you only. You gain total cover for attacks that pass through this edge and no cover for attacks that do not pass through this edge (see cover, Core Rulebook 195). The shield does not, however, provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. You cannot bash with a tower shield, nor can you use your shield hand for anything else."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/4zQgEV3XyR9zvqwU",
+      "upstreamKey": "pf1/4zQgEV3XyR9zvqwU",
+      "pack": "armors-and-shields",
+      "name": "Hellknight Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 2000,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 9,
+          "maxDex": 1,
+          "armorCheckPenalty": 5,
+          "asf": 35
+        }
+      },
+      "description": "<p>These distinctive suits of armor are a special type of masterwork full plate that grant additional effects when worn by a character with levels in the Hellknight prestige class. Apart from its distinctive look (each order of Hellknights has its own style of armor), a suit of Hellknight plate functions the same as a suit of masterwork full plate.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "These distinctive suits of armor are a special type of masterwork full plate that grant additional effects when worn by a character with levels in the Hellknight prestige class. Apart from its distinctive look (each order of Hellknights has its own style of armor), a suit of Hellknight plate functions the same as a suit of masterwork full plate."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/5TzaS38RPAx1oj9p",
+      "upstreamKey": "pf1/5TzaS38RPAx1oj9p",
+      "pack": "armors-and-shields",
+      "name": "Breastplate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 200,
+        "weight": 30,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 3,
+          "armorCheckPenalty": 4,
+          "asf": 25
+        }
+      },
+      "description": "<p>A breastplate protects a wearer's torso with a single piece of sculpted metal, similar to the core piece of a suit of full plate. Despite its sturdiness, its inflexibility and open back make it inferior to complete suits of metal armor, but still an improvement over most non-metal armors.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6gpjknDwY1HNvQcU",
+      "upstreamKey": "pf1/6gpjknDwY1HNvQcU",
+      "pack": "armors-and-shields",
+      "name": "Quilted Cloth",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 100,
+        "weight": 15,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": 8,
+          "armorCheckPenalty": 0,
+          "asf": 10
+        }
+      },
+      "description": "<p>This enhanced form of padded armor has internal layers specifically designed to trap arrows, bolts, darts, shuriken, thrown daggers, and other small ranged piercing weapons. When these kinds of weapons strike you, they tend to become snagged in these layers and fail to harm you. Wearing quilted cloth armor gives you DR 3/— against attacks of this kind. The special layers of the armor have no effect on other kinds of weapons.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "This enhanced form of padded armor has internal layers specifically designed to trap arrows, bolts, darts, shuriken, thrown daggers, and other small ranged piercing weapons. When these kinds of weapons strike you, they tend to become snagged in these layers and fail to harm you. Wearing quilted cloth armor gives you DR 3/— against attacks of this kind. The special layers of the armor have no effect on other kinds of weapons."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6i0yr19dgO50GygU",
+      "upstreamKey": "pf1/6i0yr19dgO50GygU",
+      "pack": "armors-and-shields",
+      "name": "Field Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1200,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 1,
+          "armorCheckPenalty": 5,
+          "asf": 35
+        }
+      },
+      "description": "<p>This heavy armor is similar to full plate but lighter in construction, sacrificing a bit of protection for greater flexibility and mobility.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6YCQkebsf4vR508H",
+      "upstreamKey": "pf1/6YCQkebsf4vR508H",
+      "pack": "armors-and-shields",
+      "name": "Leather Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 10,
+        "weight": 15,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 2,
+          "maxDex": 6,
+          "armorCheckPenalty": 0,
+          "asf": 10
+        }
+      },
+      "description": "<p>Leather armor is made up of multiple overlapping pieces of leather, boiled to increase their natural toughness and then deliberately stitched together. Although not as sturdy as metal armor, the flexibility it allows wearers makes it among the most widely used types of armor.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/6zjwZeZmhqmAFC82",
+      "upstreamKey": "pf1/6zjwZeZmhqmAFC82",
+      "pack": "armors-and-shields",
+      "name": "Heavy Wooden Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 7,
+        "weight": 10,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "heavyShield",
+          "bonus": 2,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 15
+        }
+      },
+      "description": "<p>A heavy wooden shield is essentially the same as a heavy steel shield, except that it responds differently to some spells and effects (such as <em>rusting grasp</em>). A druid can use a heavy wooden shield, but not a heavy steel shield.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151-152"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "zK6ZJX8WI56bdMNn",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/8e7QxmuuvJLpoGQO",
+      "upstreamKey": "pf1/8e7QxmuuvJLpoGQO",
+      "pack": "armors-and-shields",
+      "name": "Horn Lamellar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 100,
+        "weight": 30,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 5,
+          "maxDex": 3,
+          "armorCheckPenalty": 4,
+          "asf": 25
+        }
+      },
+      "description": "<p>Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9d4JuiQocfhoMewg",
+      "upstreamKey": "pf1/9d4JuiQocfhoMewg",
+      "pack": "armors-and-shields",
+      "name": "Silken Ceremonial",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 30,
+        "weight": 4,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 0,
+          "asf": 0
+        }
+      },
+      "description": "<p>Used for ceremonial displays or occasionally worn (albeit with no additional benefit) over heavier armor, these robes consist of several layers of cloth and an outer layer of silk intricately woven with gold brocade designs and covered with metal studs.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/9UAJTH51u59M1tau",
+      "upstreamKey": "pf1/9UAJTH51u59M1tau",
+      "pack": "armors-and-shields",
+      "name": "Parade Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 25,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 5,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        }
+      },
+      "description": "<p>Most wealthy countries with standing armies have a different uniform for use in showy noncombat situations such as parades, coronation ceremonies, and so on. The appearance of this armor varies by the country of origin and the branch of the military, but still provides some protection in case the soldier needs to fight while in parade dress. For example, one country’s parade armor may be a chain shirt, tabard, leather greaves, and a winged helm. If you’re wearing a country’s parade armor, you gain a +2 circumstance bonus on Diplomacy and Intimidate checks to influence a person from that country. Depending on the country, parade armor may be crafted from leather, metal, or a mixture of both.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.dip",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "to influence a person from the parade armor’s country"
+            }
+          }
+        },
+        {
+          "target": "skill.int",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "to influence a person from the parade armor’s country"
+            }
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/aI6gSI7gnCLCucw0",
+      "upstreamKey": "pf1/aI6gSI7gnCLCucw0",
+      "pack": "armors-and-shields",
+      "name": "Hide Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 15,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 4,
+          "maxDex": 4,
+          "armorCheckPenalty": 3,
+          "asf": 20
+        }
+      },
+      "description": "<p>Hide armor is made from the tanned skin of particularly thickhided beasts, stitched with either multiple overlapping layers of crude leather or exterior pieces of leather stuffed with padding or fur. Damage to the armor is typically repaired by restitching gashes or adding new pieces of hide, giving the most heavily used suits a distinctively patchwork quality.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/aXXjidT6mFzdTsNT",
+      "upstreamKey": "pf1/aXXjidT6mFzdTsNT",
+      "pack": "armors-and-shields",
+      "name": "Elven Chain",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 5150,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 4,
+          "armorCheckPenalty": 3,
+          "asf": 20
+        }
+      },
+      "description": "<p>This extremely light <a href=\"catalog:pf1/unY9jt1B8a5bbnzO\">chainmail</a> is made of very fine mithral links. This armor is treated, in all ways, like light armor, including when determining proficiency. The armor has an arcane spell failure chance of 20%, a maximum Dexterity bonus of +4, and an armor check penalty of -2.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "126"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "464"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "This armor is treated, in all ways, like light armor, including when determining proficiency. The armor has an arcane spell failure chance of 20%, a maximum Dexterity bonus of +4, and an armor check penalty of -2."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/B8H87SCG0E8n0iqw",
+      "upstreamKey": "pf1/B8H87SCG0E8n0iqw",
+      "pack": "armors-and-shields",
+      "name": "Do-Maru",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 200,
+        "weight": 30,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 5,
+          "maxDex": 4,
+          "armorCheckPenalty": 4,
+          "asf": 25
+        }
+      },
+      "description": "<p>The lightest of armors typically favored by samurai, do-maru wraps around the wearer’s body like a short armored coat. It consists primarily of lamellar and lacks a solid breastplate or sleeves, leaving the shoulders and upper body somewhat exposed, but permitting the wearer greater flexibility than do the majority of heavier armors.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/bP0vKIfcGKDgtiUc",
+      "upstreamKey": "pf1/bP0vKIfcGKDgtiUc",
+      "pack": "armors-and-shields",
+      "name": "Four-Mirror",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 125,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 2,
+          "armorCheckPenalty": 5,
+          "asf": 30
+        }
+      },
+      "description": "<p>This armor consists of four plates harnessed together with leather shoulder straps. Two round plates protect your front and back, while two smaller rectangular plates cover the sides of the torso. Four-mirror armor is worn over chainmail to provide added protection, and comes with a spiked helmet with a chainmail hood.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/c5L61pgFgUETqPtm",
+      "upstreamKey": "pf1/c5L61pgFgUETqPtm",
+      "pack": "armors-and-shields",
+      "name": "Gray Maiden Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1500,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 9,
+          "maxDex": 1,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>The Gray Maidens’ distinctive armor is one of their most iconic identifiers. Gray Maiden plate is mechanically identical to full plate, and any effect that functions with full plate functions with Gray Maiden plate. Certain options for Gray Maidens function only when they wear Gray Maiden plate.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Gray Maiden plate is mechanically identical to full plate, and any effect that functions with full plate functions with Gray Maiden plate. Certain options for Gray Maidens function only when they wear Gray Maiden plate."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/CRtBIIyBtNCsxztO",
+      "upstreamKey": "pf1/CRtBIIyBtNCsxztO",
+      "pack": "armors-and-shields",
+      "name": "Splint Mail",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 200,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>Splint mail is made up of overlapping layers of metal strips attached to a backing of leather or sturdy fabric. These splints are of greater size and durability than those that compose a suit of scale mail, improving the protection they afford the wearer, but at the cost of flexibility. A suit of splint mail includes gauntlets.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151, 153"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/dx5t73HKQwvzl7NW",
+      "upstreamKey": "pf1/dx5t73HKQwvzl7NW",
+      "pack": "armors-and-shields",
+      "name": "Armored Kilt",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 20,
+        "weight": 10,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": 6,
+          "armorCheckPenalty": 0,
+          "asf": 0
+        }
+      },
+      "description": "<p>The armored kilt is made of a thick cloth skirt with bars of steel hanging down from the waist and a ring of horizontal steel plates just above the hem. An armored kilt can be worn separately as light armor, or it can be added to other suits of light or medium armor. Adding an armored kilt increases a suit of armor’s armor bonus by +1, but it adds 10 pounds to the armor, lowers the maximum <em>Dex</em> bonus by 1, and increases the armor’s weight category (from light to medium and from medium to heavy). Adding an armored kilt to heavy armor does not provide an armor bonus increase.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "An armored kilt can be worn separately as light armor, or it can be added to other suits of light or medium armor. Adding an armored kilt increases a suit of armor’s armor bonus by +1, but it adds 10 pounds to the armor, lowers the maximum Dex bonus by 1, and increases the armor’s weight category (from light to medium and from medium to heavy). Adding an armored kilt to heavy armor does not provide an armor bonus increase."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/f8Gm8CXYhEqCCNIR",
+      "upstreamKey": "pf1/f8Gm8CXYhEqCCNIR",
+      "pack": "armors-and-shields",
+      "name": "Stone Lamellar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 500,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/gcw5rPJ8u0i6IjhV",
+      "upstreamKey": "pf1/gcw5rPJ8u0i6IjhV",
+      "pack": "armors-and-shields",
+      "name": "Rosewood Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 15,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 2,
+          "maxDex": 6,
+          "armorCheckPenalty": 0,
+          "asf": 10
+        }
+      },
+      "description": "<p>This suit of leather armor is wrapped in special rose vines. Treat this as leather armor with armor spikes. The vines must be watered with at least 1 gallon of water each day or they wither and die, turning the armor into normal leather armor.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Treat this as leather armor with armor spikes. The vines must be watered with at least 1 gallon of water each day or they wither and die, turning the armor into normal leather armor."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/gsE0PAOmCwivue5A",
+      "upstreamKey": "pf1/gsE0PAOmCwivue5A",
+      "pack": "armors-and-shields",
+      "name": "Buckler",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 5,
+        "weight": 5,
+        "armor": {
+          "slot": "shield",
+          "category": "other",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 1,
+          "asf": 5
+        }
+      },
+      "description": "<p>This small metal shield is worn strapped to your forearm. You can use a bow or crossbow without penalty while carrying it. You can also use your shield arm to wield a weapon (whether you are using an off-hand weapon or using your off hand to help wield a two-handed weapon), but you take a –1 penalty on attack rolls while doing so. This penalty stacks with those that may apply for fighting with your off hand and for fighting with two weapons. In any case, if you use a weapon in your off hand, you lose the buckler’s AC bonus until your next turn. You can cast a spell with somatic components using your shield arm, but you lose the buckler’s AC bonus until your next turn. You can’t make a shield bash with a buckler.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack.melee",
+          "bonusType": "untyped",
+          "value": -1,
+          "condition": {
+            "situation": {
+              "local": "while your buckler arm wields a melee weapon (an off-hand weapon, or helping to wield a two-handed weapon)"
+            }
+          }
+        },
+        {
+          "target": "attack.ranged",
+          "bonusType": "untyped",
+          "value": -1,
+          "condition": {
+            "situation": {
+              "local": "while your buckler arm wields a ranged weapon other than a bow or crossbow"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "You can use a bow or crossbow without penalty while carrying it."
+        },
+        {
+          "target": "ac",
+          "text": "In any case, if you use a weapon in your off hand, you lose the buckler’s AC bonus until your next turn. You can cast a spell with somatic components using your shield arm, but you lose the buckler’s AC bonus until your next turn. You can’t make a shield bash with a buckler."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h65qEp22nsyRoeRa",
+      "upstreamKey": "pf1/h65qEp22nsyRoeRa",
+      "pack": "armors-and-shields",
+      "name": "Full Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1500,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 9,
+          "maxDex": 1,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>This metal suit comprises multiple pieces of interconnected and overlaying metal plates, incorporating the benefits of numerous types of lesser armor. A complete suit of full plate (or platemail, as it is often called) includes gauntlets, heavy leather boots, a visored helmet, and a thick layer of padding that is worn underneath the armor. Each suit of full plate must be individually fitted to its owner by a master armorsmith, although a captured suit can be resized to fit a new owner at a cost of 200 to 800 (2d4 x 100) gold pieces.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/h8Jq6rEHJ8xc4SIn",
+      "upstreamKey": "pf1/h8Jq6rEHJ8xc4SIn",
+      "pack": "armors-and-shields",
+      "name": "Steel Madu",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 6,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["piercing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 5
+        }
+      },
+      "description": "<p>The madu is a round, light leather shield with two animal horns—usually from an antelope—extending from opposite edges of the shield. If you are proficient with the madu, you may use it to fight defensively with a –2 penalty instead of the normal –4, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient with the madu, treat it as a light spiked shield. A madu can’t be disarmed. While traditional madus are crafted from leather and animal horn, they can be made entirely out of metal. Whether leather or steel, a madu offers the same basic protection and attack benefits, though the two varieties respond differently to some spells and effects (such as rusting grasp). A druid can use a leather madu, but not a steel madu.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "20"
+        },
+        {
+          "book": "PZO9404",
+          "pages": "22"
+        },
+        {
+          "book": "PZO9410",
+          "pages": "4"
+        },
+        {
+          "book": "PZO1118",
+          "pages": "144"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "fcJZ5sGKl3MfQMcK",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["piercing"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee",
+                  "value": "0"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "If you are proficient with the madu, you may use it to fight defensively with a –2 penalty instead of the normal –4, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient with the madu, treat it as a light spiked shield. A madu can’t be disarmed."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/HpPFigQKr6C6Dej4",
+      "upstreamKey": "pf1/HpPFigQKr6C6Dej4",
+      "pack": "armors-and-shields",
+      "name": "Banded Mail",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 250,
+        "weight": 35,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 1,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>Banded mail is made up of overlapping strips of metal, fastened to a sturdy backing of leather and chain. The size of the metal plates, interconnected metal bands, and layers of underlying armor make it a more significant defense than similar armors, like scale mail or splint mail.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/iGu21zy6QtroUZ4O",
+      "upstreamKey": "pf1/iGu21zy6QtroUZ4O",
+      "pack": "armors-and-shields",
+      "name": "Chain Shirt",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 100,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 4,
+          "maxDex": 4,
+          "armorCheckPenalty": 2,
+          "asf": 20
+        }
+      },
+      "description": "<p>Covering the torso, this shirt is made up of thousands of interlocking metal rings.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/inF1zaK0XoeTdBIc",
+      "upstreamKey": "pf1/inF1zaK0XoeTdBIc",
+      "pack": "armors-and-shields",
+      "name": "Dwarven War-Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 8,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["piercing", "slashing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "other",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 1,
+          "asf": 20
+        }
+      },
+      "description": "<p>This shield’s sides are cut into jagged angles and honed to razor sharpness. Dwarven skirmishers often wield these shields in pairs, savagely hacking opponents to pieces, while some dwarven scoundrels enjoy the shields’ imposing appearance and ease of use. If you have the Two-Weapon Fighting feat and are wielding two dwarven war-shields, increase the higher of the two shield bonuses by 1. You lose this benefit for 1 round when you make a shield bash with one or both dwarven war-shields (unless you have the Improved Shield Bash feat or a similar benefit). A hand holding a dwarven warshield can’t be used for anything else. A dwarven war-shield gains no benefit from shield spikes.</p>",
+      "sources": [
+        {
+          "book": "PZO9481",
+          "pages": "9"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "y7CMMFzD0GiQP2oi",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["piercing", "slashing"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee",
+                  "value": "0"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "ac",
+          "text": "If you have the Two-Weapon Fighting feat and are wielding two dwarven war-shields, increase the higher of the two shield bonuses by 1. You lose this benefit for 1 round when you make a shield bash with one or both dwarven war-shields (unless you have the Improved Shield Bash feat or a similar benefit). A hand holding a dwarven warshield can’t be used for anything else. A dwarven war-shield gains no benefit from shield spikes."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/iRB7ACzHf14VIk4M",
+      "upstreamKey": "pf1/iRB7ACzHf14VIk4M",
+      "pack": "armors-and-shields",
+      "name": "Light Steel Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 9,
+        "weight": 6,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d3",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 1,
+          "asf": 5
+        }
+      },
+      "description": "<p>You strap a light steel shield to your forearm and grip it with your hand. A light steel shield’s weight lets you carry other items in that hand, although you cannot use weapons with it. Whether wooden or steel, a light shield offers the same basic protection and attack benefits, though the two varieties respond differently to some spells and effects (such as rusting grasp). A druid can use a light wooden shield, but not a light steel shield.</p><p>Shield Bash Attacks: You can bash an opponent with a light shield. See &quot;light shield&quot; on Table 1–5: Martial Weapons for the damage dealt by a shield bash with a light shield. Used this way, a light shield is a martial bludgeoning weapon. For the purpose of penalties on attack rolls, treat a light shield as a light weapon. If you use your shield as a weapon, you lose its AC bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "142, 148, 151, 152"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "5a7rixUDzivoeqkq",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/J3o844mQGeLhJk0V",
+      "upstreamKey": "pf1/J3o844mQGeLhJk0V",
+      "pack": "armors-and-shields",
+      "name": "Poisoner's Buckler",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1505,
+        "weight": 3,
+        "armor": {
+          "slot": "shield",
+          "category": "other",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 0,
+          "asf": 0
+        }
+      },
+      "description": "<p>Half-drow make these bucklers to allow for quick application of exactly the right poison in the middle of combat. This mithral buckler is painted black with three deep grooves running over the surface, each fitted with a slot that can hold a vial of poison. As a move action, the user can swipe a weapon over the surface of the buckler, coating it with a single dose of poison. The buckler can hold 3 doses of poison. If the wearer does not have the poison use ability, she faces the standard risk of poisoning herself</p>",
+      "sources": [
+        {
+          "book": "PZO9491",
+          "pages": "23"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "As a move action, the user can swipe a weapon over the surface of the buckler, coating it with a single dose of poison. The buckler can hold 3 doses of poison. If the wearer does not have the poison use ability, she faces the standard risk of poisoning herself"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/jmMTKB2OeTB4dUvm",
+      "upstreamKey": "pf1/jmMTKB2OeTB4dUvm",
+      "pack": "armors-and-shields",
+      "name": "Chain Coat",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 75,
+        "weight": 40,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 4,
+          "maxDex": 5,
+          "armorCheckPenalty": 2,
+          "asf": 30
+        }
+      },
+      "description": "<p>This relatively simple armor consists of heavy chains that wrap around your body and limbs. While it weighs more and provides less protection than other medium armors, it is also less of a hindrance. In addition, if you are wielding a spiked chain, you can affix it to one hand. This functions as a locked gauntlet, and if you are proficient with spiked chains, you can treat the spiked chain as a one-handed weapon while it is attached. You can affix a spiked chain to each hand this way, but you can’t wear locked gauntlets while wearing a chain coat, and you can’t attach any weapon to a chain coat except spiked chains.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "In addition, if you are wielding a spiked chain, you can affix it to one hand. This functions as a locked gauntlet, and if you are proficient with spiked chains, you can treat the spiked chain as a one-handed weapon while it is attached. You can affix a spiked chain to each hand this way, but you can’t wear locked gauntlets while wearing a chain coat, and you can’t attach any weapon to a chain coat except spiked chains."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/juheM3y42yQrYbB9",
+      "upstreamKey": "pf1/juheM3y42yQrYbB9",
+      "pack": "armors-and-shields",
+      "name": "Dancing Scarves",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 150,
+        "weight": 8,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 2,
+          "maxDex": null,
+          "armorCheckPenalty": 0,
+          "asf": 0
+        }
+      },
+      "description": "<p>This set of colorful scarves, is made of heavy silk and reinforced with leather straps. As you move, they flutter and flow, obscuring your shape and protecting against enemy attacks. Varisian dancing scarves provide no benefit while you are standing still. Whenever you move at least 10 feet during your turn, you gain a +2 armor bonus to AC until the beginning of your next turn. Varisian dancing scarves add their enhancement bonus to this armor bonus instead of providing a constant benefit; other magical enhancements (such as light fortification) apply whether or not you are moving. In addition, Varisian dancing scarves provide a +2 circumstance bonus on Bluff checks made to feint in combat.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.blf",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "to feint in combat"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "ac",
+          "text": "Varisian dancing scarves provide no benefit while you are standing still. Whenever you move at least 10 feet during your turn, you gain a +2 armor bonus to AC until the beginning of your next turn. Varisian dancing scarves add their enhancement bonus to this armor bonus instead of providing a constant benefit; other magical enhancements (such as light fortification) apply whether or not you are moving."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/kc4ZuOEIEx1ZlXgJ",
+      "upstreamKey": "pf1/kc4ZuOEIEx1ZlXgJ",
+      "pack": "armors-and-shields",
+      "name": "Leather Madu",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 40,
+        "weight": 5,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["piercing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 5
+        }
+      },
+      "description": "<p>The madu is a round, light leather shield with two animal horns—usually from an antelope—extending from opposite edges of the shield. If you are proficient with the madu, you may use it to fight defensively with a –2 penalty instead of the normal –4, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient with the madu, treat it as a light spiked shield. A madu can’t be disarmed. While traditional madus are crafted from leather and animal horn, they can be made entirely out of metal. Whether leather or steel, a madu offers the same basic protection and attack benefits, though the two varieties respond differently to some spells and effects (such as rusting grasp). A druid can use a leather madu, but not a steel madu.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "20"
+        },
+        {
+          "book": "PZO9404",
+          "pages": "22"
+        },
+        {
+          "book": "PZO9410",
+          "pages": "4"
+        },
+        {
+          "book": "PZO1118",
+          "pages": "144"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "Kfatx6l3DTy93Nfb",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["piercing"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee",
+                  "value": "0"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "If you are proficient with the madu, you may use it to fight defensively with a –2 penalty instead of the normal –4, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient with the madu, treat it as a light spiked shield. A madu can’t be disarmed."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/khCNizGc3q1SZsXg",
+      "upstreamKey": "pf1/khCNizGc3q1SZsXg",
+      "pack": "armors-and-shields",
+      "name": "Stoneplate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1800,
+        "weight": 75,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 9,
+          "maxDex": 1,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>This armor is crafted by dwarven stonesmiths from alchemically strengthened plates of basalt. Stoneplate is heavy and unwieldy, but offers incredible protection to its wearer. It is primarily used by dwarven druids who cannot wear metal armor.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/KwwDSMKGF5P9vrQr",
+      "upstreamKey": "pf1/KwwDSMKGF5P9vrQr",
+      "pack": "armors-and-shields",
+      "name": "Kusari Gusoku",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 350,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 1,
+          "armorCheckPenalty": 7,
+          "asf": 35
+        }
+      },
+      "description": "<p>Kusari gusoku is similar to tatami-do armor; however, a katabira— a type of chain jacket—is worn in place of the chest armor.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/l1qNkx4xGXelq6yY",
+      "upstreamKey": "pf1/l1qNkx4xGXelq6yY",
+      "pack": "armors-and-shields",
+      "name": "Light Wooden Shield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 3,
+        "weight": 5,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d3",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 1,
+          "asf": 5
+        }
+      },
+      "description": "<p>A light wooden shield is essentially the same as a light steel shield, except it responds differently to some spells and effects (such as rusting grasp). A druid can use a light wooden shield, but not a light steel shield.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "142, 148, 151, 152"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "ssnk6JSRh4Vo04Z9",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Lq7YjIXW1SfV4EKr",
+      "upstreamKey": "pf1/Lq7YjIXW1SfV4EKr",
+      "pack": "armors-and-shields",
+      "name": "Steel Snarlshield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 20,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "heavyShield",
+          "bonus": 2,
+          "maxDex": null,
+          "armorCheckPenalty": 3,
+          "asf": 15
+        }
+      },
+      "description": "<p>The snarlshield is a heavy shield that features a dozen rods protruding from its surface. When used as a weapon to bash an opponent, a snarlshield has the disarm quality.</p>",
+      "sources": [
+        {
+          "book": "PZO9481",
+          "pages": "6"
+        },
+        {
+          "book": "PZO9411",
+          "pages": "22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "8pYn5Bv9wzk9XSkW",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "When used as a weapon to bash an opponent, a snarlshield has the disarm quality."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/LvqGhztGDLYS9QES",
+      "upstreamKey": "pf1/LvqGhztGDLYS9QES",
+      "pack": "armors-and-shields",
+      "name": "Ice Coat",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 80,
+        "weight": 24,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 4,
+          "maxDex": 3,
+          "armorCheckPenalty": 2,
+          "asf": 20
+        }
+      },
+      "description": "<p>Used by the Erutaki human tribes and snowcaster elves native to the arctic tundra of the Crown of the World, this heavy parka is treated as an armored coat. It provides the benefits of a cold-weather outfit, and it can be donned or removed as a move action. In addition, the fluffy white fur of the parka blends into arctic landscapes, providing a +2 circumstance bonus on Stealth checks in snowy environments.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.ste",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "in snowy environments"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Used by the Erutaki human tribes and snowcaster elves native to the arctic tundra of the Crown of the World, this heavy parka is treated as an armored coat. It provides the benefits of a cold-weather outfit, and it can be donned or removed as a move action."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mcDNhbR4RQ5Z1ckQ",
+      "upstreamKey": "pf1/mcDNhbR4RQ5Z1ckQ",
+      "pack": "armors-and-shields",
+      "name": "Light Wooden Shield (Quickdraw)",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 53,
+        "weight": 6,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d3",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 5
+        }
+      },
+      "description": "<p>A light wooden shield is essentially the same as a light steel shield, except it responds differently to some spells and effects (such as rusting grasp). A druid can use a light wooden shield, but not a light steel shield.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "9"
+        },
+        {
+          "book": "PZO1115",
+          "pages": "179"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "Gj00ulVkHNK1ec0K",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mDqCTp8wMKbSOo1x",
+      "upstreamKey": "pf1/mDqCTp8wMKbSOo1x",
+      "pack": "armors-and-shields",
+      "name": "Klar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 12,
+        "weight": 6,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["slashing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 1,
+          "asf": 5
+        }
+      },
+      "description": "<p>The traditional form of this tribal weapon is a short blade bound to the skull of a large horned lizard, but a skilled smith can craft one entirely out of metal. A traditional klar counts as a light wooden shield with armor spikes; a metal klar counts as a light steel shield with armor spikes.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "18"
+        },
+        {
+          "book": "PZO1002-PGE",
+          "pages": "11"
+        },
+        {
+          "book": "PZO9000-2S",
+          "pages": "13"
+        },
+        {
+          "book": "PZO1111",
+          "pages": "209"
+        },
+        {
+          "book": "PZO9226",
+          "pages": "290"
+        },
+        {
+          "book": "PZO9410",
+          "pages": "18"
+        },
+        {
+          "book": "PZO9425",
+          "pages": "14"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rP6yTmKvbzBPEkLe",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["slashing"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee",
+                  "value": "0"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "A traditional klar counts as a light wooden shield with armor spikes; a metal klar counts as a light steel shield with armor spikes."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mJYWI4VZBo0c0CCC",
+      "upstreamKey": "pf1/mJYWI4VZBo0c0CCC",
+      "pack": "armors-and-shields",
+      "name": "Armored Coat",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 4,
+          "maxDex": 3,
+          "armorCheckPenalty": 2,
+          "asf": 20
+        }
+      },
+      "description": "<p>This sturdy leather coat is reinforced with metal plates sewn into the lining. An armored coat is more cumbersome than light armor but less effective than most medium armors. The advantage of it is that a person can don it or remove it as a move action (there is no &quot;don hastily&quot; option for an armored coat). If worn over other armor, use the better AC bonus and worse value in all other categories; an armored coat has no effect if worn with heavy armor. The only magic effects that apply are those of armor, clothing, or items worn on top.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The advantage of it is that a person can don it or remove it as a move action (there is no \"don hastily\" option for an armored coat). If worn over other armor, use the better AC bonus and worse value in all other categories; an armored coat has no effect if worn with heavy armor. The only magic effects that apply are those of armor, clothing, or items worn on top."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mPopnW9RhIm8Qv1C",
+      "upstreamKey": "pf1/mPopnW9RhIm8Qv1C",
+      "pack": "armors-and-shields",
+      "name": "Iron Lamellar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 200,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/NhfubfsOa0OqXFMu",
+      "upstreamKey": "pf1/NhfubfsOa0OqXFMu",
+      "pack": "armors-and-shields",
+      "name": "Leather Lamellar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 60,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 4,
+          "maxDex": 3,
+          "armorCheckPenalty": 2,
+          "asf": 20
+        }
+      },
+      "description": "<p>Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/nnDSj5NxUb9Q8z8S",
+      "upstreamKey": "pf1/nnDSj5NxUb9Q8z8S",
+      "pack": "armors-and-shields",
+      "name": "Scale Mail",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 30,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 5,
+          "maxDex": 3,
+          "armorCheckPenalty": 4,
+          "asf": 25
+        }
+      },
+      "description": "<p>Scale mail is made up of dozens of small, overlapping metal plates. Similar to both splint mail and banded mail, scalemail has a flexible arrangement of scales in an attempt to avoid hindering the wearer’s mobility, but at the expense of omitting additional protective layers of armor. A suit of scale mail includes gauntlets.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Nt2xduBMY9qmPOMg",
+      "upstreamKey": "pf1/Nt2xduBMY9qmPOMg",
+      "pack": "armors-and-shields",
+      "name": "Steel Lamellar",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 150,
+        "weight": 35,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 3,
+          "armorCheckPenalty": 5,
+          "asf": 25
+        }
+      },
+      "description": "<p>Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/olBieN7p2yJWgDW4",
+      "upstreamKey": "pf1/olBieN7p2yJWgDW4",
+      "pack": "armors-and-shields",
+      "name": "Armor of Insults",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 16175,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 5,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        },
+        "magic": {
+          "enhancement": 1,
+          "masterwork": false
+        }
+      },
+      "description": "<p>This is a suit of +1 <a href=\"catalog:pf1/xeuREriTfdZR1yCD\">studded leather</a>. Once per day the wearer of the armor may command the mouths to unleash a torrent of verbal abuse directed against every hostile creature within 60 feet who can see and hear the wearer. Each such creature must make a DC 16 Will saving throw to avoid suffering an overwhelming compulsion to attack the wearer for the next 7 rounds. If the creature is unable to attack the wearer on its next turn, or attacking the wearer would put the creature at risk (moving through a threatened square, charging into a pit, and so on) it can act normally that turn. This is a mind-affecting sonic effect, and has no effect on creatures that do not use a spoken language.</p><h3>Construction</h3><p><strong>Requirements</strong> <a href=\"catalog:pf1/4hNO4OAWYF5vXphH\">Craft Magic Arms and Armor</a>, <a href=\"catalog:pf1/n0bsyxchnigkkuqo\">confusion</a>; <strong>Price</strong> 7,675 gp</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "124"
+        },
+        {
+          "book": "PZO1115",
+          "pages": "283"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "P1BzYR6WlK1IJsCx",
+                "actionType": "save",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "area": "60 feet radius",
+                "duration": {
+                  "units": "round",
+                  "value": "7"
+                },
+                "measureTemplate": {
+                  "size": "60",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "60"
+                },
+                "save": {
+                  "dc": "16",
+                  "description": "Will negates",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "hostile creatures"
+                }
+              }
+            ],
+            "uses": {
+              "maxFormula": "1",
+              "per": "day",
+              "value": 1
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Once per day the wearer of the armor may command the mouths to unleash a torrent of verbal abuse directed against every hostile creature within 60 feet who can see and hear the wearer. Each such creature must make a DC 16 Will saving throw to avoid suffering an overwhelming compulsion to attack the wearer for the next 7 rounds. If the creature is unable to attack the wearer on its next turn, or attacking the wearer would put the creature at risk (moving through a threatened square, charging into a pit, and so on) it can act normally that turn. This is a mind-affecting sonic effect, and has no effect on creatures that do not use a spoken language."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/OZHfmAh4i6Bkoun3",
+      "upstreamKey": "pf1/OZHfmAh4i6Bkoun3",
+      "pack": "armors-and-shields",
+      "name": "Wooden Snarlshield",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 50,
+        "weight": 20,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "heavyShield",
+          "bonus": 2,
+          "maxDex": null,
+          "armorCheckPenalty": 3,
+          "asf": 15
+        }
+      },
+      "description": "<p>The snarlshield is a heavy shield that features a dozen rods protruding from its surface. When used as a weapon to bash an opponent, a snarlshield has the disarm quality.</p>",
+      "sources": [
+        {
+          "book": "PZO9481",
+          "pages": "6"
+        },
+        {
+          "book": "PZO9411",
+          "pages": "22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "T05SJ7ZCEohKivG5",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "When used as a weapon to bash an opponent, a snarlshield has the disarm quality."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/q2HbIx7a7YpGJ3Kn",
+      "upstreamKey": "pf1/q2HbIx7a7YpGJ3Kn",
+      "pack": "armors-and-shields",
+      "name": "Agile Breastplate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 400,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 3,
+          "armorCheckPenalty": 4,
+          "asf": 25
+        }
+      },
+      "description": "<p>This breastplate is specially crafted in a manner that allows extra maneuverability for some physical activities. The armor check penalty for Climb checks and Acrobatics checks made to jump is only –1 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The armor check penalty for Climb checks and Acrobatics checks made to jump is only –1 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/q73l4hJuDIREmqDJ",
+      "upstreamKey": "pf1/q73l4hJuDIREmqDJ",
+      "pack": "armors-and-shields",
+      "name": "Kikko",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 250,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 5,
+          "maxDex": 4,
+          "armorCheckPenalty": 3,
+          "asf": 20
+        }
+      },
+      "description": "<p>Kikko armor consists of a clever arrangement of hexagonal plates made from iron and sewn to cloth, granting the wearer greater flexibility than that provided by many armors that afford similar defense. The plates may be left exposed or hidden by a layer of cloth.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/RGgplsDVRbf6svr2",
+      "upstreamKey": "pf1/RGgplsDVRbf6svr2",
+      "pack": "armors-and-shields",
+      "name": "Hide Shirt",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 20,
+        "weight": 18,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 4,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        }
+      },
+      "description": "<p>Made from animal hide and giant lizard scales over a shirt of interwoven cords, these chest and shoulder coverings protect Shoanti riders without restricting their mobility. The wearer of a hide shirt can make a DC 15 Strength check as a standard action. If he succeeds, the armor gains the broken condition and drops to the ground rather than requiring the usual 1 minute it would take to remove it. The armor must be repaired as though it had taken 8 points of damage before it can be used again; a broken hide shirt grants no bonus to Armor Class.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The wearer of a hide shirt can make a DC 15 Strength check as a standard action. If he succeeds, the armor gains the broken condition and drops to the ground rather than requiring the usual 1 minute it would take to remove it. The armor must be repaired as though it had taken 8 points of damage before it can be used again; a broken hide shirt grants no bonus to Armor Class."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/tCw8lthSpIXzvCOj",
+      "upstreamKey": "pf1/tCw8lthSpIXzvCOj",
+      "pack": "armors-and-shields",
+      "name": "Spider-Silk Bodysuit",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 850,
+        "weight": 4,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 6,
+          "armorCheckPenalty": 1,
+          "asf": 10
+        }
+      },
+      "description": "<p>This exotic form-fitting garment is woven entirely from alchemically treated silk harvested from giant spiders or other arachnid creatures. If you have the drow’s weapon familiarity racial trait, you treat the spider-silk bodysuit’s maximum Dexterity bonus as 2 higher.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "If you have the drow’s weapon familiarity racial trait, you treat the spider-silk bodysuit’s maximum Dexterity bonus as 2 higher."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/tmCIvphURV00VhY2",
+      "upstreamKey": "pf1/tmCIvphURV00VhY2",
+      "pack": "armors-and-shields",
+      "name": "Tatami-Do",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1000,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 7,
+          "maxDex": 3,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>Worn by samurai as a lighter-weight alternative to o-yoroi, tatami-do is a full-body field armor that combines both metal lamellar and kikko components into a suit of mail with a cloth backing. It typically includes a collapsible kabuto helmet or an armored hood, as well as arm, shoulder, and thigh guards.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/unY9jt1B8a5bbnzO",
+      "upstreamKey": "pf1/unY9jt1B8a5bbnzO",
+      "pack": "armors-and-shields",
+      "name": "Chainmail",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 150,
+        "weight": 40,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 2,
+          "armorCheckPenalty": 5,
+          "asf": 30
+        }
+      },
+      "description": "<p>Unlike a chain shirt, which covers only the chest, chainmail protects the wearer with a complete mesh of chain links that cover the torso and arms, and extends below the waist. Multiple interconnected pieces offer additional protection over vital areas. The suit includes gauntlets.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "150, 151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/WHTn1ouMVlmsEL1l",
+      "upstreamKey": "pf1/WHTn1ouMVlmsEL1l",
+      "pack": "armors-and-shields",
+      "name": "Fortress Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 2100,
+        "weight": 75,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>This dwarf-forged armor features layers of overlapping plates molded to deflect projectiles—especially those from firearms. Whenever you are the target of a ranged weapon attack that would ignore your armor bonus to AC, you add half the fortress plate’s armor bonus (including enhancement bonuses) to your AC against that attack. This benefit does not apply to energy attacks or magical touch attacks such as rays. Because the armor is designed with dwarves in mind, If you have the dwarf’s weapon familiarity racial trait, you increase this projectile-only bonus by 1. Fortress plate is incredibly bulky, and its armor category can’t be reduced by any effect (including by special materials, such as mithral). Fortress plate includes gauntlets and a helm.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "ac",
+          "text": "Whenever you are the target of a ranged weapon attack that would ignore your armor bonus to AC, you add half the fortress plate’s armor bonus (including enhancement bonuses) to your AC against that attack. This benefit does not apply to energy attacks or magical touch attacks such as rays. Because the armor is designed with dwarves in mind, If you have the dwarf’s weapon familiarity racial trait, you increase this projectile-only bonus by 1. Fortress plate is incredibly bulky, and its armor category can’t be reduced by any effect (including by special materials, such as mithral)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/wVKTG7gN2I8jalGg",
+      "upstreamKey": "pf1/wVKTG7gN2I8jalGg",
+      "pack": "armors-and-shields",
+      "name": "Mountain Pattern",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 250,
+        "weight": 40,
+        "armor": {
+          "slot": "armor",
+          "category": "mediumArmor",
+          "bonus": 6,
+          "maxDex": 3,
+          "armorCheckPenalty": 4,
+          "asf": 30
+        }
+      },
+      "description": "<p>This medium armor consists of hundreds of small, interlocking pieces of steel shaped to resemble an ancient symbol for the word &quot;mountain.&quot; The mail is then riveted to a cloth or leather backing. It is worn like a mail coat and covers your torso, shoulders, and thighs.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/WxHKxEn6HfIJAjFC",
+      "upstreamKey": "pf1/WxHKxEn6HfIJAjFC",
+      "pack": "armors-and-shields",
+      "name": "Hellknight Leather",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 30,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 5,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        }
+      },
+      "description": "<p>There are instances where wearing full plate armor can jeopardize a Hellknight’s life. Primarily worn by Hellknight sailors, this studded leather armor includes heavy gloves and a helm of sculpted leather designed to look like a skull— either a human’s or that of some aquatic creature. Hellknight leather’s statistics are identical to those of studded leather, except it costs 5 gp more and weighs 5 pounds more.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/xeuREriTfdZR1yCD",
+      "upstreamKey": "pf1/xeuREriTfdZR1yCD",
+      "pack": "armors-and-shields",
+      "name": "Studded Leather Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 25,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 5,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        }
+      },
+      "description": "<p>An improved form of leather armor, studded leather armor is covered with dozens of metal protuberances. While these rounded studs offer little defense individually, in the numbers they are arrayed in upon such armor, they help catch lethal edges and channel them away from vital spots. The rigidity caused by the additional metal does, however, result in less mobility than is afforded by a suit of normal leather armor.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151, 153"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/XILfVRciS611ZJvm",
+      "upstreamKey": "pf1/XILfVRciS611ZJvm",
+      "pack": "armors-and-shields",
+      "name": "O-Yoroi",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 1700,
+        "weight": 45,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 2,
+          "armorCheckPenalty": 6,
+          "asf": 35
+        }
+      },
+      "description": "<p>Worn almost exclusively by highranking samurai, o-yoroi—or &quot;great armor&quot;—is a heavy combat armor that consists of various supplementary components that include both plate and lamellar elements. Each suit is crafted for a specific individual and displays the owner’s aesthetic. Upon completion, the suit is colored and sealed with a final lacquer finish. The centerpiece of o-yoroi is a cuirass consisting of two parts—a separate reinforcement for the right side called a waidate, and a kikko cuirass. The upper part of the waidate consists of a leather-covered iron plate. The cuirass’s leather shoulder straps—called watagami—are likewise armored with metal plates. Affixed to the cuirass are a number of supplementary pieces, including wide lamellar shoulder guards, a kikko sleeve for the shield arm, lacquered iron greaves worn over padded silk leggings, and a groin protector. The signature component of each suit of armor is the tiered kabuto helmet and its accompanying ho-ate mask. Ho-ate masks can be made of hardened leather or metal and are fashioned into fearsome visages such as oni, dragons, or other mythical beings.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/xuSBPIosjkEQ0EKM",
+      "upstreamKey": "pf1/xuSBPIosjkEQ0EKM",
+      "pack": "armors-and-shields",
+      "name": "Leaf Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 500,
+        "weight": 20,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 5,
+          "armorCheckPenalty": 0,
+          "asf": 15
+        }
+      },
+      "description": "<p>Druidic elves use alchemical compounds to treat special leaves used in crafting armor for their warriors. Leaf armor is always of masterwork quality.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Y10QTnY9wVXg5VCm",
+      "upstreamKey": "pf1/Y10QTnY9wVXg5VCm",
+      "pack": "armors-and-shields",
+      "name": "Half-Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 600,
+        "weight": 50,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>Half-plate armor combines elements of full plate and chainmail, incorporating several sizable plates of sculpted metal with an underlying mesh of chain links. While this suit protects vital areas with several layers of armor, it is not sculpted to a single individual’s frame, reducing its wearer’s mobility even more than a suit of full plate. Half-plate armor includes gauntlets and a helm.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/YIHLiAF3zd2fJkXp",
+      "upstreamKey": "pf1/YIHLiAF3zd2fJkXp",
+      "pack": "armors-and-shields",
+      "name": "Haramaki",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 3,
+        "weight": 1,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 0,
+          "asf": 0
+        }
+      },
+      "description": "<p>Also called a belly-warmer, a haramaki is a simple silken sash lined with chainmail or articulated metal plates and tied about the stomach to protect it.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/yLlOfnD759pfPms8",
+      "upstreamKey": "pf1/yLlOfnD759pfPms8",
+      "pack": "armors-and-shields",
+      "name": "Wooden Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 20,
+        "weight": 25,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 3,
+          "maxDex": 3,
+          "armorCheckPenalty": 1,
+          "asf": 15
+        }
+      },
+      "description": "<p>This suit of leather armor has plates of fire-treated wood sewn over vital areas. Though not as effective as metal armor, it offers better protection than leather alone. Unlike metal armor, the wood is slightly buoyant, and the armor check penalty for swimming in this armor is 0.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "skill.swm",
+          "text": "Unlike metal armor, the wood is slightly buoyant, and the armor check penalty for swimming in this armor is 0."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/YSkIxGaVmW9pAi2m",
+      "upstreamKey": "pf1/YSkIxGaVmW9pAi2m",
+      "pack": "armors-and-shields",
+      "name": "Agile Half-Plate",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 850,
+        "weight": 55,
+        "armor": {
+          "slot": "armor",
+          "category": "heavyArmor",
+          "bonus": 8,
+          "maxDex": 0,
+          "armorCheckPenalty": 7,
+          "asf": 40
+        }
+      },
+      "description": "<p>This style of half-plate is specially crafted in a manner that allows extra maneuverability for some physical activities. The armor check penalty for Climb checks and jump checks is only –4 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty). In addition, unlike with most heavy armors, the wearer can still run at quadruple speed instead of triple speed.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The armor check penalty for Climb checks and jump checks is only –4 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty). In addition, unlike with most heavy armors, the wearer can still run at quadruple speed instead of triple speed."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/z5iAeUTo3r6qlEfd",
+      "upstreamKey": "pf1/z5iAeUTo3r6qlEfd",
+      "pack": "armors-and-shields",
+      "name": "Light Steel Shield (Quickdraw)",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 59,
+        "weight": 7,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "shield",
+          "handedness": "light",
+          "dice": "1d3",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        },
+        "armor": {
+          "slot": "shield",
+          "category": "lightShield",
+          "bonus": 1,
+          "maxDex": null,
+          "armorCheckPenalty": 2,
+          "asf": 5
+        }
+      },
+      "description": "<p>This light steel shield is specially crafted with a series of straps to allow a character proficient in shields to ready or stow it on her back quickly and easily. If you have a base attack bonus of +1 or higher, you may don or put away a quickdraw shield as a swift action combined with a regular move. If you have the Two-Weapon Fighting feat, you can draw a light or onehanded weapon with one hand and a quickdraw shield with the other in the time it would normally take you to draw one weapon. If you have the Quick Draw feat, you may don or put away a quickdraw shield as a free action.</p>",
+      "sources": [
+        {
+          "book": "PZO1123",
+          "pages": "9"
+        },
+        {
+          "book": "PZO1115",
+          "pages": "179"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "ZhdEskX7UWBenKy2",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Bash",
+                "range": {
+                  "units": "melee"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "If you have a base attack bonus of +1 or higher, you may don or put away a quickdraw shield as a swift action combined with a regular move. If you have the Two-Weapon Fighting feat, you can draw a light or onehanded weapon with one hand and a quickdraw shield with the other in the time it would normally take you to draw one weapon. If you have the Quick Draw feat, you may don or put away a quickdraw shield as a free action."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ziXQ1DlDMGTAUOe9",
+      "upstreamKey": "pf1/ziXQ1DlDMGTAUOe9",
+      "pack": "armors-and-shields",
+      "name": "Padded Armor",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 5,
+        "weight": 10,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 1,
+          "maxDex": 8,
+          "armorCheckPenalty": 0,
+          "asf": 5
+        }
+      },
+      "description": "<p>More than simple clothing, padded armor combines heavy, quilted cloth and layers of densely packed stuffing to create a cheap and basic protection. It is typically worn by those not intending to face lethal combat or those who wish their maneuverability to be impacted as little as possible.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "151"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/zJLsDErTaV81BkJM",
+      "upstreamKey": "pf1/zJLsDErTaV81BkJM",
+      "pack": "armors-and-shields",
+      "name": "Lamellar Cuirass",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 15,
+        "weight": 8,
+        "armor": {
+          "slot": "armor",
+          "category": "lightArmor",
+          "bonus": 2,
+          "maxDex": 4,
+          "armorCheckPenalty": 0,
+          "asf": 5
+        }
+      },
+      "description": "<p>This armor consists of a light breastplate and shoulder guards made from lacquered leather plates bound together and fitted over a silk shirt.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/4hNO4OAWYF5vXphH",
+      "upstreamKey": "pf1/4hNO4OAWYF5vXphH",
+      "pack": "feats",
+      "name": "Craft Magic Arms and Armor",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Item Creation"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can create magic armor, shields, and weapons.</i><p><strong>Prerequisites</strong>: Caster level 5th.</p><p><strong>Benefits</strong>: You can create magic weapons, armor, or shields. Enhancing a weapon, suit of armor, or shield takes 1 day for each 1,000 gp in the price of its magical features. To enhance a weapon, suit of armor, or shield, you must use up raw materials costing half of this total price. See the magic item creation rules in Magic Items for more information.</p><p>The weapon, armor, or shield to be enhanced must be a masterwork item that you provide. Its cost is not included in the above cost.</p><p>You can also mend a broken magic weapon, suit of armor, or shield if it is one that you could make. Doing so costs half the raw materials and half the time it would take to craft that item in the first place.</p>",
+      "prerequisiteText": "Caster level 5th",
+      "prerequisites": [
+        {
+          "unchecked": "Caster level 5th",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/n0bsyxchnigkkuqo",
+      "upstreamKey": "pf1/n0bsyxchnigkkuqo",
+      "pack": "spells",
+      "name": "Confusion",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 4,
+          "bard": 3,
+          "bloodrager": 4,
+          "mesmerist": 3,
+          "occultist": 4,
+          "psychic": 4,
+          "skald": 3,
+          "sorcerer": 4,
+          "spiritualist": 4,
+          "witch": 4,
+          "wizard": 4
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Impossible": 4,
+            "Protean": 4
+          },
+          "domain": {
+            "Madness": 4,
+            "Trickery": 4
+          },
+          "subDomain": {
+            "Entropy": 5,
+            "Lust": 4,
+            "Riot": 4,
+            "Whimsy": 4
+          }
+        },
+        "school": "enc",
+        "subschools": ["compulsion"],
+        "descriptors": ["mindAffecting"]
+      },
+      "description": "<p>This spell causes confusion in the targets, making them unable to determine their actions. Roll on the following table at the start of each subject's turn each round to see what it does in that round.</p><table><tbody><tr><th>d% [[/r d100]]</th><th>Behavior</th></tr> <tr><td>01-25</td><td>Act normally</td></tr> <tr><td>26-50</td><td>Do nothing but babble incoherently</td></tr> <tr><td>51-75</td><td>Deal 1d8 points of damage + Str modifier to self with item in hand</td></tr> <tr><td>76-100</td><td>Attack nearest creature (for this purpose, a familiar counts as part of the subject's self)</td></tr></tbody></table><p>A confused character who can't carry out the indicated action does nothing but babble incoherently. Attackers are not at any special advantage when attacking a confused character. Any confused character who is attacked automatically attacks its attackers on its next turn, as long as it is still confused when its turn comes. Note that a confused character will not make attacks of opportunity against any creature that it is not already devoted to attacking (either because of its most recent action or because it has just been attacked).</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "258"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "yfigs89szwcsy5z6",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "measureTemplate": {
+                  "size": "15",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "medium"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "all creatures in a 15-ft.-radius burst"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+_id: 476th5lyxxemseyx
+_key: '!items!476th5lyxxemseyx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Ablative Barrier
+system:
+  actions:
+    - _id: stj3cdhjp5lvqky7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 hour/level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Invisible layers of solid force surround and protect the target,
+      granting that target a +2 armor bonus to AC. Additionally, the first 5
+      points of lethal damage the target takes from each attack are converted
+      into nonlethal damage. Against attacks that already deal nonlethal damage,
+      the target gains DR 5/-. Once this spell has converted 5 points of damage
+      to nonlethal damage per caster level (maximum 50 points), the spell is
+      discharged.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 3
+      bloodrager: 2
+      investigator: 2
+      magus: 2
+      occultist: 2
+      psychic: 3
+      sorcerer: 3
+      summoner: 2
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a piece of metal cut from a shield
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '221'
+  sr: false
+  subschool:
+    - creation
+type: spell

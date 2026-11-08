@@ -1,0 +1,56 @@
+_id: 85seyvrlrputrpe7
+_key: '!items!85seyvrlrputrpe7'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Erase Impressions
+system:
+  actions:
+    - _id: 6fo8l8piyg3aotpe
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: object touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You banish psychic impressions from the object touched, rendering it
+      devoid of recent history. You choose how much time to erase, up to a
+      maximum of 1 day per caster level. You must <i>erase impressions</i> from
+      the present time back; you cannot choose to leave recent events untouched.
+      Impressions erased in this manner cannot be recovered via <i>object
+      reading</i>, <i>legend lore</i>, or similar measures.  Casting <i>erase
+      impressions</i> o n a corpse r emoves recent psychic impressions from when
+      the creature was alive as well, making those memories unavailable to
+      <i>speak with dead</i>. For example, a 5th-level caster casting the spell
+      on a 2-day-old corpse could erase the past 2 days of psychic impressions
+      from the corpse and 3 additional days of information from just before the
+      creature died.</p>
+  learnedAt:
+    class:
+      medium: 3
+      mesmerist: 4
+      occultist: 3
+      psychic: 5
+      spiritualist: 4
+  level: 5
+  school: abj
+  sources:
+    - id: PZO1132
+      pages: '170'
+type: spell
