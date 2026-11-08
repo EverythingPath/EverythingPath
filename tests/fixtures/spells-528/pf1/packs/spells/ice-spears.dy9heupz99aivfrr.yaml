@@ -1,0 +1,116 @@
+_id: dy9heupz99aivfrr
+_key: '!items!dy9heupz99aivfrr'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/skills/ice_02.jpg
+name: Ice Spears
+system:
+  actions:
+    - _id: sz3v938msvrbaexs
+      ability:
+        critRange: null
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Trip
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - piercing
+          - formula: 2d6
+            types:
+              - cold
+      duration:
+        units: inst
+      effect: 1 ice spear/4 levels
+      extraAttacks:
+        formula:
+          count: floor(@cl / 4) - 1
+          label: 'Ice Spear #{0}'
+        type: custom
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Spears
+      range:
+        units: close
+      save:
+        description: Reflex half and see below
+        type: ref
+    - _id: iHyUmzP8XzXlU7fo
+      ability:
+        attack: _key
+        critRange: null
+      actionType: rcman
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      attackName: Trip
+      bab: '@cl'
+      name: Trip
+      notes:
+        effect:
+          - >-
+            Each additional ice spear beyond the first that strikes a single foe
+            grants a +10 bonus on this combat maneuver check.
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Favored by the spellcasters of Irrisen, this potent spell can disrupt
+      spellcasters, topple enemies, and break even seemingly unstoppable
+      charges.  One or more giant spears of ice lance up out of the ground. Each
+      stalagmite-like icicle affects a 5-foot square and tapers to a height of
+      10 feet. You may cause a number of <i>ice spears</i> equal to one spear
+      for every 4 caster levels you possess to burst from the ground. A creature
+      that occupies a square from which a spear extends (or that is within 10
+      feet of the ground below) takes 2d6 points of piercing damage and 2d6
+      points of cold damage per square-creatures that take up more than 1 square
+      can be hit by multiple spears if your caster level is high enough. The
+      explosive growth can also trip foes. When the spears erupt from the
+      ground, they attempt a combat maneuver check to trip any targets that take
+      damage from the spears, with a total bonus equal to your caster level plus
+      your Intelligence, Wisdom, or Charisma modifier, whichever is highest.
+      Each additional <i>ice spear</i> beyond the first that strikes a single
+      foe grants a +10 bonus on this combat maneuver check. If the check is
+      successful, the <i>ice spears</i> knock the foe prone. A successful Reflex
+      save halves the damage and prevents the trip attempt.  If you cast this
+      spell upon an area covered with ice or snow, such as a glacier, frozen
+      lake, or snow-covered field, the spears strike with additional force.
+      Saves against the effect take a -2 penalty, and the spell effect gains a
+      +4 bonus on the combat maneuver check to trip foes. <i>Ice spears</i>
+      created by this spell remain after they do their damage. They melt as
+      normal depending on the surrounding environment. They no longer damage
+      foes in their square, but can provide cover. An <i>ice spear</i> has
+      hardness 5 and 30 hit points.</p>
+  descriptors:
+    - cold
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a small stalagmite-shaped crystal
+  school: con
+  sources:
+    - id: PZO9067
+      pages: '72'
+    - id: PZO9237
+      pages: '57'
+  sr: false
+type: spell

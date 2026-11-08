@@ -1,0 +1,64 @@
+_id: tkz1c9dphqsqewal
+_key: '!items!tkz1c9dphqsqewal'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/mouth-bite-fangs-vampire.webp
+name: Vampiric Hunger
+system:
+  actions:
+    - _id: l61dguowlbgx6v1q
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target of this spell grows the fangs of a vampire, as well as a
+      thirst for blood. For the duration of this spell, the target gains the
+      ability to drain an opponent's blood during a grapple; if the target
+      establishes or maintains a pin, it drains blood, dealing 1d4 points of
+      Constitution damage. Each round it drains blood in this way, the target
+      heals 5 hit points or gains 5 temporary hit points for the duration of the
+      spell (up to a maximum number of temporary hit points equal to its full
+      normal hit points). If the target does not drain blood in this way while
+      under the effects of this spell, it becomes exhausted at the end of the
+      spell's duration.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      oracle: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9420
+      pages: '29'
+  subschool:
+    - polymorph
+type: spell

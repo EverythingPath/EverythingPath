@@ -1,0 +1,59 @@
+_id: fok7mlsri0kdkqu5
+_key: '!items!fok7mlsri0kdkqu5'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Touch of Blindness
+system:
+  actions:
+    - _id: q8r6ephjwnqjyi7m
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level (see text)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature or creatures touched (up to one/level)
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>A touch from your hand, which is engulfed in darkness, disrupts a
+      creature's vision by coating its eyes in supernatural darkness. Each touch
+      causes the target to become blinded for 1 round unless it makes a
+      successful Fortitude saving throw. You can use this melee touch attack up
+      to one time per caster level. Any touch attack not used after 1 round per
+      caster level is lost.</p>
+  descriptors:
+    - darkness
+    - shadow
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 1
+      bard: 1
+      cleric: 1
+      oracle: 1
+      shaman: 1
+      skald: 1
+      sorcerer: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO9466
+      pages: '29'
+  sr: false
+type: spell

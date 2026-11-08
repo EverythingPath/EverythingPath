@@ -1,0 +1,61 @@
+_id: xlch97n99ea0pog6
+_key: '!items!xlch97n99ea0pog6'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/abilities/cougar-roar-rush-orange.webp
+name: Cat's Grace, Mass
+system:
+  actions:
+    - _id: o0yygnk8iwp7eeal
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ns8jbp0ilbvbvuif]{cat's grace}, except
+      that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      druid: 6
+      hunter: 6
+      magus: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      summoner: 4
+      summonerUnchained: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: pinch of cat fur
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '252'
+type: spell

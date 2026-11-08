@@ -1,0 +1,70 @@
+_id: em8BoW2q3oUV9CHk
+_key: '!items!em8BoW2q3oUV9CHk'
+_stats:
+  coreVersion: '12.331'
+folder: FXD9eTa4oocJE80N
+img: systems/pf1/icons/races/lizardfolk.png
+name: Detect Thoughts
+system:
+  abilityType: sp
+  actions:
+    - _id: 7LrF3q3QJCGyh5zb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{Detect
+        Thoughts}</p><p>You detect surface thoughts. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p><em>1st Round</em>: Presence or absence of thoughts (from
+        conscious creatures with Intelligence scores of 1 or
+        higher).</p><p><em>2nd Round</em>: Number of thinking minds and the
+        Intelligence score of each. If the highest Intelligence is 26 or higher
+        (and at least 10 points higher than your own Intelligence score), you
+        are stunned for 1 round and the spell ends. This spell does not let you
+        determine the location of the thinking minds if you can't see the
+        creatures whose thoughts you are detecting.</p><p><em>3rd Round</em>:
+        Surface thoughts of any mind in the area. A target's Will save prevents
+        you from reading its thoughts, and you must cast <em>detect
+        thoughts</em> again to have another chance. Creatures of animal
+        intelligence (Int 1 or 2) have simple, instinctual thoughts.</p><p>Each
+        round, you can turn to detect thoughts in a new area. The spell can
+        penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of common
+        metal, a thin sheet of lead, or@Distance[3 ft;dual] of wood or dirt
+        blocks it.</p></div>
+      duration:
+        concentration: true
+        units: perm
+        value: concentration, up to 1 min./level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Detect Thoughts
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10+2+@abilities.cha.mod
+        description: Will negates; see text
+        type: will
+  description:
+    value: >-
+      <p><strong>Race</strong>: Green Martian</p><hr /><p>Green Martians possess
+      limited telepathy. allowing them to read the surface thoughts at those
+      around them. they can use
+      <em>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect
+      thoughts}</em> as a constant spell-like ability. The caster level of the
+      spell-like ability is equal to the user's character level.</p>
+  sources:
+    - id: DYN0032-E
+      pages: '24'
+  subType: racial
+  tags:
+    - Green Martian
+  traitCategory: magical
+type: feat
