@@ -1,0 +1,206 @@
+{
+  "purpose": "isolated-local-release-demonstration",
+  "syntheticInputs": true,
+  "remoteCommandsExecuted": false,
+  "activationExecuted": false,
+  "command": [
+    "build",
+    "--number",
+    "1",
+    "--schema",
+    "character-sheet-v1",
+    "--calculation",
+    "sha256:d60ae774f5360e3e12f19acf68e8a9cfd08d1f55f1460721a7c36322db180cea",
+    "--system",
+    "tests/fixtures/catalog-release/pf1",
+    "--content",
+    "tests/fixtures/catalog-release/pf1-content",
+    "--artifact",
+    ".catalog-preview/release-demonstration/release.json",
+    "--allow-unverified-checkouts"
+  ],
+  "inputVerification": {
+    "status": "unverified"
+  },
+  "manifest": {
+    "formatVersion": 1,
+    "releaseNumber": 1,
+    "inputs": {
+      "upstream": "b1c89fd74f69eccc44d5643afcec33f1e20787f458f739aada34243df23e5b7c",
+      "remaps": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "curation": "480e2c63156fd7576b7527b8af4cdeec8ca1b8343cfe4ce232eb6de1b9858a85",
+      "localData": "a56de5f7722da97edcd7de2ea43e3f4680b83b62d02f792d44db0fdce9e86dbe",
+      "parsers": "fa4d1cfa921e564091e196823ab66bb8e3fd919549bf57ab7d195488c4e97d27",
+      "sanitizers": "687446d4870db917f487ab148a7d32ca7fa658c11b2c3e578e68235dfcb82c41",
+      "ruleResources": "20caf823263b1d25f17e52f3d6c631d49f367385e58fd0c954b9c4f41a202bcf",
+      "legal": "520307c80799591ecd7310b7bbff755e85cff8f7920365ef45a71da169836593",
+      "attribution": "e3dae698d6941112764634d03e1f5cf8657a1d0a54b5d1093efb39e587c80ab1"
+    },
+    "baseRelease": null,
+    "compatibility": {
+      "schema": "character-sheet-v1",
+      "calculation": "sha256:d60ae774f5360e3e12f19acf68e8a9cfd08d1f55f1460721a7c36322db180cea"
+    },
+    "inputFingerprint": "11b5f72e01da3f6e057a0a88b9d997ab7676fe92696b4e79acb00b25eb70b95a",
+    "outputFingerprint": "3aa2796f9618b7e8452db8319e5a02e6fd45c9c2da97b8736f81713b39609500",
+    "artifactFingerprint": "f4a8e7ea480975cc3a90bc03c08459e6dc5c77a647d1c172e13c83a5c6fe3cdc",
+    "batches": [
+      {
+        "fingerprint": "13db68c3e56f8e7f8d336fac865b9d48838afd5b05a437e4a2c4041d7ad54ce3",
+        "rowCount": 14,
+        "byteCount": 254434
+      }
+    ]
+  },
+  "artifactFileSha256": "020810d553359383cc7e1e444cba66e8a5404656be6a9ecf986c6a7a9810943f",
+  "artifactBytes": 255761,
+  "rowCounts": {
+    "definition": 0,
+    "resource": 1,
+    "remap": 0,
+    "report": 9,
+    "legal": 4
+  },
+  "reports": {
+    "content": {
+      "admitted": 0,
+      "comparison": {
+        "admitted": 1,
+        "byKind": {
+          "feat": 1
+        },
+        "excluded": 0,
+        "unassigned": 0,
+        "upstreamRecords": 1
+      },
+      "coverageComplete": true,
+      "gatePassed": true,
+      "inputVerification": {
+        "status": "unverified"
+      },
+      "unsupported": {
+        "entries": 0,
+        "issues": 0
+      }
+    },
+    "resources": {
+      "admitted": 1,
+      "comparison": {
+        "admitted": 1,
+        "byKind": {
+          "feat": 1
+        },
+        "excluded": 0,
+        "unassigned": 0,
+        "upstreamRecords": 1
+      },
+      "coverageComplete": true,
+      "gatePassed": true,
+      "inputVerification": {
+        "status": "unverified"
+      },
+      "unsupported": {
+        "entries": 0,
+        "issues": 0
+      }
+    },
+    "holds": {
+      "dependentOmissions": 0,
+      "failures": [],
+      "gatePassed": true,
+      "held": 1,
+      "outstandingNotices": [],
+      "retainedExceptions": 0,
+      "retainedRequiredNotices": []
+    },
+    "retirement": {
+      "count": 0,
+      "gatePassed": true,
+      "retainedUses": []
+    },
+    "curation": {
+      "gatePassed": true,
+      "passed": true,
+      "summary": {
+        "checked": 0,
+        "descriptions": {
+          "candidates": 0,
+          "checked": 0,
+          "drafted": 0
+        },
+        "drafted": 0,
+        "missing": 0,
+        "required": 0
+      }
+    }
+  },
+  "heldRows": [
+    {
+      "kind": "report",
+      "key": "holds:pf1/FixtureFeat",
+      "payload": {
+        "evidence": [],
+        "externalKey": "pf1/FixtureFeat",
+        "missingNotices": [],
+        "name": "Synthetic release fixture",
+        "reason": "missing Attribution Assessment",
+        "requiredNotices": []
+      }
+    }
+  ],
+  "resourceChanges": [
+    {
+      "kind": "report",
+      "key": "resources:builtin:representative-class-catalog",
+      "payload": {
+        "externalKey": "builtin:representative-class-catalog",
+        "fingerprint": "0065518a032b151457ded3d08a42f7b1712b6c6ebfd674163943ca6055ff52fd",
+        "state": "added"
+      }
+    }
+  ],
+  "requiredNotices": [],
+  "permanentNoticeVersions": 3,
+  "identicalRetry": {
+    "exitCode": 0,
+    "identicalBytes": true
+  },
+  "testedPreparation": {
+    "seam": "runCatalogReleaseCommand",
+    "rows": 201,
+    "batches": 3,
+    "injectedFailureAtBatch": 1,
+    "inspectedNextBatchIndex": 1,
+    "resumedRows": 201,
+    "duplicateRows": 0,
+    "preparedRetry": "no-op",
+    "test": "tests/catalog/release-command.test.ts"
+  },
+  "testedActiveSheetPreparation": {
+    "test": "convex/catalogRelease.integration.test.ts",
+    "rows": 211,
+    "batches": 3,
+    "failedSecondBatch": "committed output mismatch rejected atomically",
+    "inspectedNextBatchIndex": 1,
+    "stagedRowsAfterFailure": 100,
+    "resumedRows": 211,
+    "ordinaryStrengthEditDuringPreparation": 14,
+    "savedNextWeekCheck": 17,
+    "frozenHistoryWeek": 9,
+    "activeSheetAndEditedWorkspacePreserved": true,
+    "preparedRetry": "no-op",
+    "remoteDeployment": false
+  },
+  "testedGateFailure": {
+    "test": "tests/catalog/release-operator.test.ts",
+    "input": "tests/fixtures/catalog",
+    "artifactWritten": false
+  },
+  "testedTransport": {
+    "test": "tests/catalog/release-operator.test.ts",
+    "adapter": "installed ConvexHttpClient; HTTP mocked",
+    "requestBodyOver128KiB": true,
+    "writeEpoch": 7,
+    "credentialInBody": false
+  }
+}

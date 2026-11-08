@@ -1,0 +1,33 @@
+_id: Z53orCz6KeTS5LOb
+_key: '!items!Z53orCz6KeTS5LOb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/dodge.jpg
+name: AC Bonus (BRA)
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Brawler
+  changes:
+    - _id: ipjt76kz
+      formula: >-
+        (if(and(lt(@armor.type, 2), lt(@attributes.encumbrance.level, 1)), 1)) *
+        clamp(floor((@class.level - 1) / 4), 0, 4)
+      target: ac
+      type: dodge
+    - _id: tvl84rm2
+      formula: >-
+        (if(and(lt(@armor.type, 2), lt(@attributes.encumbrance.level, 1)), 1)) *
+        clamp(floor((@class.level - 1) / 4), 0, 4)
+      target: cmd
+      type: dodge
+  description:
+    value: >-
+      <p>At 4th level, when a brawler wears light or no armor, she gains a +1
+      dodge bonus to AC and CMD. This bonus increases by 1 at 9th, 13th, and
+      18th levels.<p>These bonuses to AC apply against touch attacks. She loses
+      these bonuses while immobilized or helpless, wearing medium or heavy
+      armor, or carrying a medium or heavy load.</p>
+  subType: classFeat
+type: feat

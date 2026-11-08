@@ -1,0 +1,76 @@
+_id: 6h3p3zr2hbrjea8k
+_key: '!items!6h3p3zr2hbrjea8k'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/earth/orb-lava-orange.webp
+name: Molten Orb
+system:
+  actions:
+    - _id: vrzr6xgawj6irbjg
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - fire
+      duration:
+        units: inst
+      effect: ranged attack
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Direct attack
+      range:
+        units: close
+    - _id: GYrhuZTKoJRAHS1z
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      name: Splash damage
+      save:
+        description: Reflex halves
+        type: ref
+      splash: true
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a fist-sized, red-hot ball of molten metal that you
+      immediately hurl as a splash weapon. A direct hit deals 2d6 points of fire
+      damage. Every creature within 5 feet of where the ball hits takes 1d6
+      points of fire damage from the splash (Reflex half). Each of these
+      creatures takes an additional 1d6 points of fire damage on its turn for
+      the next 1d3 rounds, unless it is cooled off (with water, snow, or any
+      effect that deals 5 or more points of cold damage).</p>
+  descriptors:
+    - earth
+    - fire
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      magus: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1129
+      pages: '188'
+type: spell

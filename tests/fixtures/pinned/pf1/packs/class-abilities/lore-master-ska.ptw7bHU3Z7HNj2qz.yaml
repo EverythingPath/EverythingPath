@@ -1,0 +1,39 @@
+_id: ptw7bHU3Z7HNj2qz
+_key: '!items!ptw7bHU3Z7HNj2qz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/book-tan.jpg
+name: Lore Master (SKA)
+system:
+  abilityType: ex
+  actions:
+    - _id: brFMIj9AcNcG4WTc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Take 20
+      range:
+        units: personal
+  associations:
+    classes:
+      - Skald
+  description:
+    value: >-
+      <p>At 7th level, the skald becomes a master of many different types of
+      lore, and can take 10 on any Knowledge check for which he has ranks. Once
+      per day, the skald can take 20 on any Knowledge check as a standard
+      action, instead of spending the normal amount of time that taking 20
+      requires. He can use this ability to take 20 on a Knowledge check twice
+      per day at 13th level and three times per day at 19th level.</p>
+  sources:
+    - id: PZO1129
+      pages: '52'
+  subType: classFeat
+  uses:
+    maxFormula: floor((@class.level - 1) / 6)
+    per: day
+type: feat

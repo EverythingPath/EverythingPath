@@ -1,0 +1,63 @@
+_id: 2vXORcAOiFLpgGNP
+_key: '!items!2vXORcAOiFLpgGNP'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sanpkhang.png
+name: Sanpkhang
+system:
+  actions:
+    - _id: u4ot9xgo5ikozzsi
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Sanpkhang
+  description:
+    unidentified: >-
+      <p>This elaborate knife is carved with special barbs and grooves, meant to
+      channel toxins into the bloodstream. Any injury poison delivered with a
+      sanpkhang has its DC increased by 1, or by 2 if delivered as part of a
+      critical hit or sneak attack. The vishkanya's<sup>ARG</sup> weapon
+      familiarity racial trait grants proficiency with the sanpkhang.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 60
+  properties:
+    fin: true
+    mnk: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  weaponGroups:
+    - bladesLight
+    - monk
+  weight:
+    value: 1
+type: weapon
