@@ -1,0 +1,61 @@
+_id: j3u8iebs77crgwid
+_key: '!items!j3u8iebs77crgwid'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Winter Grasp
+system:
+  actions:
+    - _id: 90h8t3lj21uxwljm
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius spread
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Ice encrusts the ground, radiating supernatural cold and making it hard
+      for creatures to maintain their balance. This icy ground is treated as
+      normal ice, forcing creatures to spend 2 squares of movement to enter an
+      icy square and increasing the DC of Acrobatics checks in the area by 5. A
+      creature that begins its turn in the affected area takes 1d6 points of
+      cold damage and takes a -2 penalty on saving throws against spells with
+      the cold descriptor for 1 round.</p>
+  descriptors:
+    - cold
+    - water
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      shaman: 2
+      witch: 2
+  level: 2
+  materials:
+    value: ground glass
+  school: con
+  sources:
+    - id: PZO1140
+      pages: '237'
+    - id: PZO9428
+      pages: '26'
+  sr: false
+  subschool:
+    - creation
+type: spell

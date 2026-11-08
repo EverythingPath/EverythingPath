@@ -1,0 +1,33 @@
+_id: CK5L0YJDENqBxLqv
+_key: '!items!CK5L0YJDENqBxLqv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/dodge.jpg
+name: Fast Movement (MNK)
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Monk
+      - Monk (Unchained)
+  changes:
+    - _id: jgegdopu
+      formula: 10 * (floor(@class.level / 3))
+      target: landSpeed
+      type: enh
+  description:
+    value: >-
+      <p>At 3rd level, a monk gains an <em>enhancement bonus</em> to his land
+      speed, as seen below. A monk in armor or carrying a medium or heavy load
+      loses this extra speed.</p><table><thead><tr><th>Starting
+      Level</th><th>Bonus Speed</th></tr></thead><tbody><tr><td>3</td><td>+10
+      ft.</td></tr><tr><td>6</td><td>+20 ft.</td></tr><tr><td>9</td><td>+30
+      ft.</td></tr><tr><td>12</td><td>+40 ft.</td></tr><tr><td>15</td><td>+50
+      ft.</td></tr><tr><td>18</td><td>+60 ft.</td></tr></tbody></table>
+  sources:
+    - id: PZO1110
+      pages: '59'
+    - id: PZO1131
+      pages: '15'
+  subType: classFeat
+type: feat

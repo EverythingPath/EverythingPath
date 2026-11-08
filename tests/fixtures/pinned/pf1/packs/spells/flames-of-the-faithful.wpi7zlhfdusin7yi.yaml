@@ -1,0 +1,52 @@
+_id: wpi7zlhfdusin7yi
+_key: '!items!wpi7zlhfdusin7yi'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Flames of the Faithful
+system:
+  actions:
+    - _id: zsh568idexq6b5om
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object,
+        harmless: true
+        type: fort
+      target:
+        value: weapon touched
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>With a touch, you cause a glowing rune to appear on a single weapon,
+      granting that weapon the <i>flaming</i> property (and allowing it to cause
+      an extra 1d6 points of fire damage on a successful hit). If you are using
+      the judgment class feature, your weapon gains the <i>flaming</i> burst
+      property instead. The spell functions only for weapons that you wield. If
+      the weapon leaves your hand for any reason, the spell effect ends. The
+      effects of this spell do not stack with any existing <i>flaming</i> or
+      <i>flaming</i> burst weapon property that the target weapon may already
+      possess.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      inquisitor: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '222'
+type: spell

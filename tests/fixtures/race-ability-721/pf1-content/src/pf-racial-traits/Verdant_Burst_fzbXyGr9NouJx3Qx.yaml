@@ -1,0 +1,51 @@
+_id: fzbXyGr9NouJx3Qx
+_key: '!items!fzbXyGr9NouJx3Qx'
+_stats:
+  coreVersion: '12.331'
+folder: 8FVoYW1DHtypWyW6
+img: icons/magic/nature/root-vine-hand-strike.webp
+name: Verdant Burst
+system:
+  actions:
+    - _id: ofDkNxisZYIVOFw6
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 30' radius
+      description: >-
+        <p>All plant creatures within @Distance[30 ft;dual] of the slain leshy
+        regain hit 1d8 points, and vines quickly infest the area. If the terrain
+        can support vines, the undergrowth is dense enough to make the region
+        into difficult terrain for 24 hours, after which the plant life
+        diminishes to a normal level; otherwise, this plant life has no
+        significant effect on movement and withers and dies within an hour.</p>
+      duration:
+        units: seeText
+      name: die
+      notes:
+        effect:
+          - Plant creatures heal [[1d8]]]
+  description:
+    value: >-
+      <p><strong>Race</strong>: Vine Leshy</p><hr /><p>When slain, a vine leshy
+      explodes in a burst of fertile energies. All plant creatures within
+      @Distance[30 ft;dual] of the slain leshy regain hit 1d8 points, and vines
+      quickly infest the area. If the terrain can support vines, the undergrowth
+      is dense enough to make the region into difficult terrain for 24 hours,
+      after which the plant life diminishes to a normal level; otherwise, this
+      plant life has no significant effect on movement and withers and dies
+      within an hour.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1140
+      pages: '21'
+  subType: racial
+  tags:
+    - Vine Leshy
+  traitCategory: other
+  uses:
+    maxFormula: '1'
+    per: charges
+    value: 1
+type: feat

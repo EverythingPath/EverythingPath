@@ -1,0 +1,62 @@
+_id: RleWFHpXOUaneeqN
+_key: '!items!RleWFHpXOUaneeqN'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Alternate Spell-Like Ability (Skinwalker - Seascarred)
+system:
+  abilityType: sp
+  actions:
+    - _id: FKADrhXd6yZteFuY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.pg7dbmuuaksxhp3v]{Charm
+        Animal}(aquatic animals only) </p><p>This spell functions like
+        @UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}, except
+        that it affects a creature of the animal type.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm animal
+      notes:
+        effect:
+          - Use Wisdom for concentration checks
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: one aquatic animal
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)  * 3
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Seascarred</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.ZEVsEIPpOyHmpmEe]{Spell-Like
+      Ability (Skinwalker)}</p><hr /><p><strong>Alternate Spell-Like
+      Ability</strong> charm animal (aquatic animals only) 3/day</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '249'
+    - id: PZO9439
+      pages: '20'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Seascarred
+  traitCategory: magical
+  uses:
+    value: 0
+type: feat

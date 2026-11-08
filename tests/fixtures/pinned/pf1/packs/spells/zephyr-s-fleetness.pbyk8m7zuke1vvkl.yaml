@@ -1,0 +1,49 @@
+_id: pbyk8m7zuke1vvkl
+_key: '!items!pbyk8m7zuke1vvkl'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Zephyr's Fleetness
+system:
+  actions:
+    - _id: s3z7kkt2wjr6111u
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/2 levels
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can call upon the spirits of the air to grant agility to your
+      allies. Each target gains a +30 foot enhancement bonus to its land speed
+      and fly speed (if any). Each target can also move (and charge) through
+      difficult terrain without penalty.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      hunter: 3
+      ranger: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO9280
+      pages: '223'
+type: spell

@@ -1,0 +1,75 @@
+_id: 8MBgNjcE2qdluyCF
+_key: '!items!8MBgNjcE2qdluyCF'
+_stats:
+  coreVersion: '12.343'
+folder: kB3UEM2uyAcNWHIc
+img: icons/commodities/stone/ore-pile-grey.webp
+name: Alchemical Coal (choking smoke)
+system:
+  actions:
+    - _id: wkOFj8nP43EojhLu
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Chew
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 8IYJdCyAvCw4pOTz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 15-foot cone
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Breath Weapon
+      save:
+        dc: '15'
+        description: Reflex half and not sickened
+        type: ref
+      uses:
+        autoDeductChargesCost: '1'
+  description:
+    value: >-
+      <p>A kobold who chews and swallows this alchemically treated piece of coal
+      (a <em>full-round action</em>) can make one <em>breath weapon</em> attack
+      during the next minute. If the kobold fails to make a breath attack before
+      this minute expires, it is <em>sickened</em> for 1 hour. Other
+      <em>humanoid</em> creatures that eat alchemical coal are <em>sickened</em>
+      for 1 hour (though certain other creatures may be able to use them, at the
+      GM's discretion). Creatures that are immune to <em>poison</em> are immune
+      to the <em>sickened</em> effect. The type of <em>breath weapon</em>
+      depends on the type of alchemical coal that is chewed by the
+      kobold.</p><p><em>Choking Smoke</em>: This crumbling chunk of chalky white
+      coal allows a kobold to breathe a 15-foot cone of foul vapor that deals
+      1d6 points of acid damage and sickens a creature for 1d4 rounds. A
+      creature that succeeds at a DC 15 <em>Reflex</em> saving throw takes half
+      damage and is not
+      <em>sickened</em>.</p><h3>Construction</h3><p><strong>Craft
+      (Alchemy)</strong> DC 20</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 50
+  sources:
+    - id: PZO1121
+      pages: '135'
+  tags:
+    - Kobold
+  uses:
+    per: single
+type: loot
