@@ -1,0 +1,73 @@
+_id: ciAO4KwMonUzAGY0
+_key: '!items!ciAO4KwMonUzAGY0'
+_stats:
+  coreVersion: '12.343'
+folder: GoxdX8voXN2V3OVY
+img: systems/pf1/icons/feats/extra-rage.jpg
+name: Rage (Unchained)
+system:
+  changes:
+    - _id: D2POwZXV
+      formula: 2 + max(0, floor((@classes.barbarianUnchained.level - 2 ) / 9))
+      target: mattack
+      type: untyped
+    - _id: 8f4QV8tz
+      formula: 2 + max(0, floor((@classes.barbarianUnchained.level - 2 ) / 9))
+      target: mwdamage
+      type: untyped
+    - _id: MUtCJV5t
+      formula: 2 + max(0, floor((@classes.barbarianUnchained.level - 2 ) / 9))
+      target: twdamage
+      type: untyped
+    - _id: RBiWOi4D
+      formula: 2 + max(0, floor((@classes.barbarianUnchained.level - 2 ) / 9))
+      target: will
+      type: untyped
+    - _id: 1waxjG3r
+      formula: '-2'
+      target: ac
+      type: untyped
+  contextNotes:
+    - target: skills
+      text: >-
+        A barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based
+        skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability
+        that requires patience or concentration while raging.
+    - target: allChecks
+      text: >-
+        A barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based
+        skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability
+        that requires patience or concentration while raging.
+  description:
+    value: >-
+      <p>Gain +2 bonus to melee attack and melee damage rolls, thrown weapon
+      damage rolls, and Will saving throws. Additionally you suffer -2 penalty
+      to Armor Class. You also gain 2 temporary hit points per Hit Die and are
+      unable to use various skills. </p><p>See
+      @UUID[Compendium.pf1.class-abilities.2Az38ZPYwjYBKZd2] for more
+      details.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: 2 + @classes.barbarianUnchained.level * 2 + @abilities.con.mod
+  level: null
+  scriptCalls:
+    - _id: BUBGIP6Ubbuf61l6
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Add Temporary Hit Points
+      type: script
+      value: |-
+        if (state) {
+          const level = actor.classes.barbarianUnchained.level;
+          const hpPerHD = 2 + Math.max(0, Math.floor((level - 2) / 9));
+          const hd = actor.system.attributes.hd.total;
+          const addedTHP = hd * hpPerHD;
+          actor.addTempHP(addedTHP);
+        }
+  sources:
+    - id: PZO1131
+      pages: '8'
+  subType: feat
+type: buff

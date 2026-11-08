@@ -1,0 +1,64 @@
+_id: qnp4eosajai8s3sf
+_key: '!items!qnp4eosajai8s3sf'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/water/vortex-water-whirlpool.webp
+name: Sleet Storm
+system:
+  actions:
+    - _id: lf1o50vqryeghy4m
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cylinder (40-ft. radius, 20 ft. high)
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: long
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Driving sleet blocks all sight (even darkvision) within it and causes
+      the ground in the area to be icy. A creature can walk within or through
+      the area of sleet at half normal speed with a DC 10 Acrobatics check.
+      Failure means it can't move in that round, while failure by 5 or more
+      means it falls (see the Acrobatics skill for details).</p><p>The sleet
+      extinguishes torches and small fires.</p>
+  descriptors:
+    - cold
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      druid: 3
+      hunter: 3
+      magus: 3
+      shaman: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+    domain:
+      Weather: 4
+  level: 3
+  materials:
+    value: dust and water
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '344'
+  sr: false
+  subschool:
+    - creation
+type: spell

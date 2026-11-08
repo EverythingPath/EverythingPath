@@ -1,0 +1,62 @@
+_id: nowxktq1nvisdk3k
+_key: '!items!nowxktq1nvisdk3k'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/sonic/explosion-shock-wave-teal.webp
+name: Sound Burst
+system:
+  actions:
+    - _id: bl4acni7ycp0155v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius spread
+      damage:
+        parts:
+          - formula: 1d8
+            types:
+              - sonic
+      duration:
+        units: inst
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You blast an area with a tremendous cacophony. Every creature in the
+      area takes 1d8 points of sonic damage and must succeed on a Fortitude save
+      to avoid being stunned for 1 round. Creatures that cannot hear are not
+      stunned but are still damaged.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 2
+      cleric: 2
+      occultist: 2
+      oracle: 2
+      skald: 2
+      warpriest: 2
+  level: 2
+  materials:
+    focus: a musical instrument
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '346'
+type: spell

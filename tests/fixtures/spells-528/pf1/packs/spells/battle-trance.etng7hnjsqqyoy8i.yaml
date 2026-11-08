@@ -1,0 +1,63 @@
+_id: etng7hnjsqqyoy8i
+_key: '!items!etng7hnjsqqyoy8i'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Battle Trance
+system:
+  actions:
+    - _id: dhribv1j2nefcxfn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You are transformed into a single-minded force of destruction. You gain
+      the ferocity monster special ability, a number of temporary hit points
+      equal to 1d6 + your caster level (maximum +10), and a +4 morale bonus on
+      saving throws against mind-affecting effects. You cannot use the withdraw
+      action or willingly move away from a creature that has attacked you.  When
+      you use this spell, you immediately take 4 points of Intelligence damage.
+      You must make a DC 20 concentration check to cast spells, and all other
+      concentration checks to cast spells have a -5 penalty.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 3
+      antipaladin: 3
+      cleric: 4
+      hunter: 3
+      inquisitor: 3
+      investigator: 3
+      oracle: 4
+      ranger: 3
+      warpriest: 4
+      witch: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1121
+      pages: '58'
+  subschool:
+    - compulsion
+type: spell

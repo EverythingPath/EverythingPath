@@ -1,0 +1,32 @@
+_id: mfQQhjRctUmnNoOW
+_key: '!items!mfQQhjRctUmnNoOW'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/exhausting-critical.jpg
+name: Alter Self (Small)
+system:
+  changes:
+    - _id: ql036cr6
+      formula: '2'
+      target: dex
+      type: size
+  description:
+    instructions: >-
+      <p>Add any relevant abilities notes or changes in the changes tab. Adjust
+      token vision as appropriate.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{Alter
+      Self}</p><p>When you cast this spell, you can assume the form of any Small
+      or Medium creature of the humanoid type. If the form you assume has any of
+      the following abilities, you gain the listed ability: darkvision 60 feet,
+      low-light vision, scent, and swim 30 feet.</p><p><em>Small creature</em>:
+      If the form you take is that of a Small humanoid, you gain a +2 size bonus
+      to your Dexterity.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  subType: spell
+type: buff
