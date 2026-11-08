@@ -1,0 +1,98 @@
+_id: norn02g8zdsspf2j
+_key: '!items!norn02g8zdsspf2j'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/heal-sky-2.jpg
+name: Cure Serious Wounds
+system:
+  actions:
+    - _id: rghj55zutpc5i7hy
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d8 + min(15, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Heal Living
+      range:
+        units: touch
+      save:
+        description: Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: living creature touched
+      touch: true
+    - _id: 8ycjlfgb4Z9i1EbG
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d8 + min(15, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      img: icons/magic/fire/flame-burning-skeleton-explosion.webp
+      name: Harm Undead
+      range:
+        units: touch
+      save:
+        description: Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: undead creature touched
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.xoc3vhg3btmfjauq]{cure light wounds},
+      except that it cures 3d8 points of damage + 1 point per caster level
+      (maximum +15).</p>
+  learnedAt:
+    class:
+      adept: 3
+      alchemist: 3
+      bard: 3
+      cleric: 3
+      druid: 4
+      hunter: 4
+      inquisitor: 3
+      investigator: 3
+      occultist: 3
+      oracle: 3
+      paladin: 4
+      ranger: 4
+      shaman: 3
+      skald: 3
+      spiritualist: 3
+      warpriest: 3
+      witch: 4
+    domain:
+      Healing: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '263'
+  subschool:
+    - healing
+type: spell
