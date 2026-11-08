@@ -1,0 +1,120 @@
+_id: 9rlo80SFRpzskmjx
+_key: '!items!9rlo80SFRpzskmjx'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/commodities/treasure/statue-carved-figurehead.webp
+name: Firewyrm
+system:
+  actions:
+    - _id: gxisf84d5f906tt9
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '120'
+        type: ray
+      name: Line
+      range:
+        units: ft
+        value: '120'
+      save:
+        dc: '20'
+        description: Reflex half
+        type: ref
+    - _id: NgL0XsQ4XS1UXXRK
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Cone
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: '20'
+        description: Reflex half
+        type: ref
+    - _id: GWVpwnyNTo0DuBHP
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      area: 30 ft blast
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Explode
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: '20'
+        description: Reflex halves
+        type: ref
+      target:
+        value: all creatures within 30 ft
+  ammo:
+    type: siege
+  baseTypes:
+    - Firewyrm
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Weight</strong>
+      -</p><p><strong>Damage</strong> 6d6; <strong>Critical</strong> -;
+      <strong>Range</strong> -; <strong>Type</strong>
+      fire</p><p><strong>Crew</strong> 5; <strong>Aim</strong> 2;
+      <strong>Load</strong> 6; <strong>Speed</strong> 0
+      ft.</p><p><strong>Category</strong> Direct-Fire (Gargantuan);
+      <strong>Proficiency</strong> Siege Engine</p><h3>Description</h3><p>This
+      siege engine is a larger version of the firedrake. A firewyrm is too large
+      to be transported to the battlefield in one piece and must be assembled
+      once the component parts reach the battlefield. A firewyrm fires its gout
+      of flame in either a 120-foot line or a 60-foot cone (crew leader's
+      choice). Targets in the area take 6d6 points of fire damage (DC 20 Reflex
+      save halves). Those who fail their saves catch on fire.</p><p>A firewyrm
+      with the broken condition that suffers a further mishap explodes, dealing
+      its damage to all creatures within a 30-foot blast (DC 20 Reflex save
+      halves).</p><p>One use of firewyrm ammunition costs 400 gp and weighs 40
+      pounds.</p>
+  hardness: 10
+  hp:
+    base: 140
+  material:
+    base:
+      value: steel
+  price: 6000
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: exotic
+  weaponSubtype: ranged
+type: weapon

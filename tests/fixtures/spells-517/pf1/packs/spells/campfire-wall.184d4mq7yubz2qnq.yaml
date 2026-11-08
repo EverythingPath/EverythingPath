@@ -1,0 +1,70 @@
+_id: 184d4mq7yubz2qnq
+_key: '!items!184d4mq7yubz2qnq'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/shielding-fire-3.jpg
+name: Campfire Wall
+system:
+  actions:
+    - _id: kz118n4vts0zdizy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 2 hours/level; see below
+      effect: 20-ft.-radius sphere centered on fire source
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can create a barrier around a fire of at least campfire size that
+      shelters everyone inside so long as the fire continues to burn. The
+      barrier appears as a crackling sphere of light and fire that is clearly
+      visible, providing as much illumination as a torch.</p><p>The barrier
+      bocks line of sight, granting creatures on either side of the barrier
+      total concealment from creatures on the other side. Any object or creature
+      passing through the barrier from outside takes 1d6 points of fire damage
+      and is also outlined with light equivalent to that of a torch, for 1d6
+      minutes. Creatures outlined in this way are plainly visible regardless of
+      the light conditions and do not benefit from any sort of concealment,
+      magical or otherwise. The light is not bright enough to have any special
+      effect on undead or creatures vulnerable to light.</p><p>Creatures inside
+      the barrier can leave without penalty, but if they try to return they
+      suffer the same consequences as anyone else. If the fire source at the
+      barrier's center is extinguished or moved, the spell ends.</p>
+  descriptors:
+    - fire
+    - light
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      druid: 2
+      hunter: 2
+      occultist: 2
+      ranger: 2
+      skald: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: ash made from burnt thorns
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '210'
+type: spell

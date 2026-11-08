@@ -1,0 +1,59 @@
+_id: 45rrwvrr14hv2r4f
+_key: '!items!45rrwvrr14hv2r4f'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Touch of Mercy
+system:
+  actions:
+    - _id: bvzsrbuv9bbx23ya
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature deals only nonlethal damage with all of its weapon
+      attacks. Damage taken by creatures or objects that are not subject to
+      nonlethal damage is not converted to nonlethal and remains lethal damage.
+      The weapon retains all of its other normal properties.</p>
+  descriptors:
+    - good
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      oracle: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9431
+      pages: '29'
+  subschool:
+    - compulsion
+type: spell

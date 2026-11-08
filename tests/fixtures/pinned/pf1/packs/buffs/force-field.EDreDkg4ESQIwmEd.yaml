@@ -1,0 +1,37 @@
+_id: EDreDkg4ESQIwmEd
+_key: '!items!EDreDkg4ESQIwmEd'
+_stats:
+  coreVersion: '12.343'
+folder: HKTsCi1OUug346MZ
+img: icons/magic/water/barrier-ice-shield.webp
+name: Force Field
+system:
+  description:
+    instructions: >-
+      <p>Set Item Level according to color code for correct amount of temp.
+      HP</p><table><thead><tr><th>Level</th><th>Color</th><th>Temp
+      HP</th></tr></thead><tbody><tr><td>1</td><td>Brown</td><td>5</td></tr><tr><td>2</td><td>Black</td><td>10</td></tr><tr><td>3</td><td>White</td><td>15</td></tr><tr><td>4</td><td>Gray</td><td>20</td></tr><tr><td>5</td><td>Green</td><td>25</td></tr><tr><td>6</td><td>Red</td><td>30</td></tr><tr><td>7</td><td>Blue</td><td>35</td></tr><tr><td>8</td><td>Orange</td><td>40</td></tr><tr><td>10</td><td>Prismatic</td><td>60</td></tr></tbody></table>
+    value: >-
+      <p>Grants Temporary HP as per
+      @UUID[Compendium.pf1.technology.Item.AmUgZQmCcIxg3DhV]{Force Field}.</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '1'
+  scriptCalls:
+    - _id: mO7uFOuRwiil5I7i
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Add Temporary HP
+      type: script
+      value: |-
+        if (state) {
+          const addedTHP = [,5,10,15,20,25,30,35,40,60][item.system.level || 0] ?? 0;
+          actor.addTempHP(addedTHP);
+        }
+  sources:
+    - id: PZO9272
+      pages: '45'
+  subType: item
+type: buff

@@ -1,0 +1,54 @@
+_id: i22bvq17g4r3bp4j
+_key: '!items!i22bvq17g4r3bp4j'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Pillar of Life
+system:
+  actions:
+    - _id: ku0fxuw4cc89awru
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 5-ft.-square pillar of positive energy, 20 ft. high
+      name: Use
+      range:
+        units: medium
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You conjure a pillar of positive energy in a single 5-foot square
+      within range that radiates light as if it were a sunrod. Living creatures
+      adjacent to the pillar can spend a standard action to touch the pillar and
+      heal 2d8 points of damage + 1 point per caster level (maximum +20).
+      Creatures can move into the square containing the pillar, but if an undead
+      creature moves into the pillar it takes 1d6 points of damage per caster
+      level (maximum 10d6). Undead creatures vulnerable to bright light take 1d8
+      points if damage per caster level (maximum 10d8). A creature cannot
+      benefit or suffer more than once from a single casting of this spell.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      cleric: 5
+      oracle: 5
+      warpriest: 5
+  level: 5
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '236'
+  sr: false
+  subschool:
+    - healing
+type: spell

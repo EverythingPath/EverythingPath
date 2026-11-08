@@ -1,0 +1,72 @@
+_id: qf4bqjgeff1q4hjt
+_key: '!items!qf4bqjgeff1q4hjt'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/sihouette-hold-beam-green.webp
+name: Planar Binding
+system:
+  actions:
+    - _id: tv3dwm5murk1jjjz
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          up to three elementals or outsiders, totaling no more than 12 HD, no
+          two of which can be more than 30 ft. apart when they appear
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.y4b1zmhmsa0gvf06]{Lesser Planar Binding},
+      except that you may call a single creature of 12 HD or less, or up to
+      three creatures of the same kind whose Hit Dice total no more than 12.
+      Each creature gets a saving throw, makes an independent attempt to escape,
+      and must be individually persuaded to aid you.</p>
+  descriptors:
+    - see text for lesser planar binding
+  learnedAt:
+    bloodline:
+      Efreeti: 6
+      Infernal: 6
+    class:
+      arcanist: 6
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      summoner: 5
+      summonerUnchained: 6
+      wizard: 6
+    domain:
+      Void: 6
+    subDomain:
+      Aeon: 6
+      Daemon: 6
+      Demon: 6
+      Devil: 6
+      Inevitable: 6
+      Protean: 6
+  level: 6
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '321'
+  sr: false
+  subschool:
+    - calling
+type: spell

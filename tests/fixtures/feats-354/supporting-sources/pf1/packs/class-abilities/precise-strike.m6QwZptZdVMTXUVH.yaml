@@ -1,0 +1,69 @@
+_id: m6QwZptZdVMTXUVH
+_key: '!items!m6QwZptZdVMTXUVH'
+_stats:
+  coreVersion: '12.343'
+folder: NcsnXMqsi3kBGntM
+img: icons/skills/melee/strike-sword-dagger-runes-red.webp
+name: Precise Strike
+system:
+  abilityType: ex
+  actions:
+    - _id: LjvWTVRSHjr3Wtgf
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '@class.level'
+            types:
+              - precision
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: cNSb88r8WmgL1Sb7
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: '@class.level * 2'
+            types:
+              - precision
+      name: Double damage
+  associations:
+    classes:
+      - Swashbuckler
+  description:
+    instructions: <p>Link charges to <em>Panache</em> class feature</p>
+    value: >-
+      <p>At 3rd level, while she has at least 1 panache point, a swashbuckler
+      gains the ability to strike precisely with a light or one-handed piercing
+      melee weapon (though not natural weapon attacks), adding her swashbuckler
+      level to the damage dealt. To use this deed, a swashbuckler cannot attack
+      with a weapon in her other hand or use a shield other than a buckler. She
+      can even use this ability with thrown light or onehanded piercing melee
+      weapons, so long as the target is within 30 feet of her. Any creature that
+      is immune to sneak attacks is immune to the additional damage granted by
+      precise strike, and any item or ability that protects a creature from
+      critical hits also protects a creature from the additional damage of a
+      precise strike. This additional damage is precision damage, and isn't
+      multiplied on a critical hit.</p><p>As a swift action, a swashbuckler can
+      spend 1 panache point to double her precise strike's damage bonus on the
+      next attack. This benefit must be used before the end of her turn, or it
+      is lost. This deed's cost cannot be reduced by any ability or effect that
+      reduces the amount of panache points a deed costs (such as the Signature
+      Deed feat).</p>
+  sources:
+    - id: PZO1129
+      pages: '57'
+  subType: classFeat
+  tags:
+    - Swashbuckler Deed
+type: feat

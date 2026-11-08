@@ -1,0 +1,57 @@
+_id: p6irfohhgss1iod5
+_key: '!items!p6irfohhgss1iod5'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Ape Walk
+system:
+  actions:
+    - _id: tkwgfc72u8x04w50
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject can climb as well as an ape or monkey, gaining a climb
+      speed of 30 feet and a +8 racial bonus on Climb skill checks. The affected
+      creature must have her hands free to climb in this manner. In addition, as
+      long as she has 10 feet of space in which to make a running start, the
+      subject can make a long jump of up to 10 feet without making an Acrobatics
+      check (an Acrobatics check is still required to jump longer
+      distances).</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 3
+      hunter: 2
+      ranger: 2
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: an ape or monkey paw
+  school: trs
+  sources:
+    - id: PZO9412
+      pages: '28'
+type: spell

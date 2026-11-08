@@ -1,0 +1,20 @@
+# T3 review evidence: binding policy and evidence inventory
+
+Reference for [T3 review evidence](../orchestration/t3-reviews.md): the original-message policy the bridge enforces and what each binding checks and keeps. Read it when a bind or completion refuses, or before changing `scripts/catalog/t3-review-bridge.ts` or `t3-review-evidence.ts`.
+
+## Original-message policy
+
+New bindings use `t3-review-dispatch-v3`, selecting local **review-role-v1**: for frozen `request.role = "review"`, the complete original text must equal the literal `Act as the review sub-agent for this task.\n\n` prefix (two LF characters), followed by the entire unchanged `request.task`. This exact 44-code-unit prefix was observed during #766's 2026-10-23 authentic qualification; the saved original was 4,690 code units and the frozen body 4,646. The regression observations are documented in [the fixture provenance](../../../tests/fixtures/review-766/README.md). This is a versioned local adapter policy, not a versioned server guarantee or an outer-role API echo.
+
+Current binding accepts that one representation. Changed/repeated wrappers, arbitrary preambles, bare bodies, whitespace changes and role/payload/manifest/nonce mismatches reject. Equality compares the whole expected representation once; it never searches for or strips a prefix. Original-message/run/parent/origin checks still apply before equality. Full raw decorated text and observations are archived unchanged and hashed; completion, recording and historical verification replay the policy selected by the binding kind.
+
+Archived `t3-review-dispatch-v2` bindings retain their original exact bare-task equality rule, solely for historical replay. They gain no wrapper support; new binding never emits v2. Existing capture/completion formats and receipt hashes remain unchanged. Never rewrite an old binding, reclassify a failed attempt or manufacture retrospective correlation evidence. Uncorrelated v1 remains rejected. All existing bounds remain, including the 16,000-code-unit **total recovered message** bound (the wrapper counts toward it).
+
+## Evidence checked and retained
+
+- API-observed: dispatch/status task, child node/thread and original run; effective provider/model/options; terminal/pending-work state. Every expected option must appear exactly once with the same value.
+- Independently API-observed: first original local child user message, item/message/run IDs, sender/source thread, `agent`/`mcp` origin and subagent parent lineage. Reads start at the beginning, advance timeline cursors and reconstruct UTF-16 text offsets with stable item/lineage metadata. Inherited/synthetic content, assistant quotations, later steering/runs, missing evidence, ambiguous/truncated/stalled recovery and bound exhaustion reject. The recent-run window is not treated as complete history.
+- Locally declared/requested: author provenance and outer `role`, `title`, retry key, isolation and mode. Their manifest entries prove those declarations reached the task body, not that the server interpreted those outer arguments. Neither status nor thread reads echo those received outer arguments. Opaque IDs are compared literally, never decoded.
+- Durable preservation: full recovered text and raw read arguments/responses, immutable snapshots, dispatch return, binding, terminal status, full report and completion hashes. Completion, recording and every historical verification replay the archived original-message association. The committed report copy must be byte-identical. Historical verification works offline after child-thread or disposable-checkout cleanup; it does not require an undeleted live task forever.
+
+These are writable local artifacts controlled by the orchestrator, not cryptographic attestation of execution or authorship. A determined actor rewriting every artifact and receipt remains outside this boundary. No global nonce registry, scheduler or new trust principal is introduced. Preserve original failures and never represent synthetic fixtures as authentic execution qualification.
