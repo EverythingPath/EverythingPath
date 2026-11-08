@@ -1,0 +1,66 @@
+_id: pbmyom76oatconaq
+_key: '!items!pbmyom76oatconaq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Demanding Message
+system:
+  actions:
+    - _id: 24q2d6zhprny4803
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 10 minutes/level, then 1 hour/level or until completed (D); see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature/level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell initially functions as
+      @UUID[Compendium.pf1.spells.Item.msaqovkgfxi6q8s8]{message} (allowing no
+      save or spell resistance). Once during the <em>message</em> effect, you
+      can concentrate as a standard action to issue a <em>suggestion</em> to one
+      target as part of delivering a <em>message</em>. Spell resistance and a
+      Will save apply to the <em>suggestion</em>, and it lasts for 1 hour per
+      level or until completed.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      medium: 3
+      mesmerist: 3
+      occultist: 4
+      psychic: 3
+      skald: 3
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a piece of copper wire
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '210'
+  subschool:
+    - compulsion
+type: spell

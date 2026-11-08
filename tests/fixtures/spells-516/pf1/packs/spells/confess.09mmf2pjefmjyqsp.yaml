@@ -1,0 +1,63 @@
+_id: 09mmf2pjefmjyqsp
+_key: '!items!09mmf2pjefmjyqsp'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Confess
+system:
+  actions:
+    - _id: m8xbde7ucx1qxc0j
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, floor(@cl / 2)))d6
+            types:
+              - untyped
+      duration:
+        units: round
+        value: '1'
+      name: Lied/Unanswered
+      notes:
+        footer:
+          - Sickened for [[2d4]] rounds
+      range:
+        units: close
+      save:
+        description: Will partial; see text
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You ask the target creature a single question. On the subject's next
+      action, it must answer truthfully in the same language as the question or
+      take 1d6 points of damage per two caster levels (maximum 5d6) and be
+      sickened for 2d4 rounds. A successful Will save negates the sickening
+      effect and halves the damage. A creature that is unable to answer still
+      takes damage.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      inquisitor: 2
+      mesmerist: 2
+      psychic: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '212'
+  subschool:
+    - compulsion
+type: spell

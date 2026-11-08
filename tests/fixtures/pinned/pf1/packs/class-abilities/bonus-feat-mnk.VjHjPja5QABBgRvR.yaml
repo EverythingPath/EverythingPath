@@ -1,0 +1,55 @@
+_id: VjHjPja5QABBgRvR
+_key: '!items!VjHjPja5QABBgRvR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_10.jpg
+name: Bonus Feat (MNK)
+system:
+  associations:
+    classes:
+      - Monk
+      - Monk (Unchained)
+  changes:
+    - _id: fjkapxbj
+      formula: 1 + floor((@class.level + 2) / 4)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>At 1st level, 2nd level, and every 4 levels thereafter, a monk may
+      select a bonus feat. These feats must be taken from the following
+      list:</p>
+
+      <p>@UUID[Compendium.pf1.feats.bZ1YdzkT8NtRIEJ4]{Catch Off-Guard},
+      @UUID[Compendium.pf1.feats.h9nHYLxXvIXBTmup]{Combat Reflexes},
+      @UUID[Compendium.pf1.feats.ACEQfonKVqh0fwkK]{Deflect Arrows},
+      @UUID[Compendium.pf1.feats.JreaiTHdyWFNj3Tb]{Dodge},
+      @UUID[Compendium.pf1.feats.ZmQkRk93nbHxsQSt]{Improved Grapple},
+      @UUID[Compendium.pf1.feats.2AfSIVge3bg8r6wr]{Scorpion Style}, and
+      @UUID[Compendium.pf1.feats.gGfXQq0IZrxdcZDx]{Throw Anything}.</p>
+
+      <p>At 6th level, the following feats are added to the list:</p>
+
+      <p>@UUID[Compendium.pf1.feats.nhUawPP4jfED3CYV]{Gorgon's Fist},
+      @UUID[Compendium.pf1.feats.dn2KgHFQRbuoNRx0]{Improved Bull Rush},
+      @UUID[Compendium.pf1.feats.711B9WNFgpdDKKf2]{Improved Disarm},
+      @UUID[Compendium.pf1.feats.tocde3sKG1O3GKgd]{Improved Feint},
+      @UUID[Compendium.pf1.feats.gTrGPxzN054GfpkM]{Improved Trip}, and
+      @UUID[Compendium.pf1.feats.R7L4SlGRlnThqFrP]{Mobility}.</p>
+
+      <p>At 10th level, the following feats are added to the list:</p>
+
+      <p>@UUID[Compendium.pf1.feats.TbOPtIL8Fv8obXtP]{Improved Critical},
+      @UUID[Compendium.pf1.feats.sOCyCmNxe2MBbEaI]{Medusa's Wrath},
+      @UUID[Compendium.pf1.feats.bHcqTC4Lf3aVl3VO]{Snatch Arrows}, and
+      @UUID[Compendium.pf1.feats.ugQyUpqPBDsqLyra]{Spring Attack}.</p>
+
+      <p>A monk need not have any of the prerequisites normally required for
+      these feats to select them.</p>
+  sources:
+    - id: PZO1110
+      pages: '58'
+    - id: PZO1131
+      pages: '14'
+  subType: classFeat
+type: feat
