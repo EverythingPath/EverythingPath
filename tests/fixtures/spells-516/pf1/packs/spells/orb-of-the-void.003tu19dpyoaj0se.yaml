@@ -1,0 +1,67 @@
+_id: 003tu19dpyoaj0se
+_key: '!items!003tu19dpyoaj0se'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Orb of the Void
+system:
+  actions:
+    - _id: f51em3sqdbrmktqd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: 1-ft.-diameter sphere
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a small weightless sphere of pure negative energy. As a move
+      action, you can move it up to 30 feet per round in any direction. If it
+      enters a space with a living creature, it stops moving for the round and
+      that creature gains one negative level (Fortitude negates). Any creature
+      passing through or ending its turn in the space occupied by the sphere
+      gains one negative level (Fortitude negates). Twenty-four hours after
+      gaining a negative level from the sphere, the subject must make a
+      Fortitude saving throw (the DC of this save is equal to the DC of this
+      spell) for each negative level. If the save succeeds, that negative level
+      is removed. If it fails, that negative level becomes permanent.</p><p>If
+      more than one orb (from different castings of the spell) enters the same
+      space, the orbs automatically fuse together. The resulting orb uses the
+      higher of the two orbs’ DCs as its DC and whichever duration has more time
+      left. If the orbs are from different casters, each must make an opposed
+      Intelligence check to move the sphere.</p><p>An undead creature that
+      passes through or ends its turn in the space occupied by the orb gains 2d4
+      × 5 temporary hit points for 1 hour.</p>
+  learnedAt:
+    class:
+      arcanist: 8
+      cleric: 8
+      oracle: 8
+      psychic: 8
+      sorcerer: 8
+      wizard: 8
+  level: 8
+  materials:
+    gpValue: 50
+    value: a black gemstone of any kind worth 50 gp
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '230'
+type: spell

@@ -1,0 +1,69 @@
+_id: FkNwNCexIJKOgtY2
+_key: '!items!FkNwNCexIJKOgtY2'
+_stats:
+  coreVersion: '12.331'
+folder: PZxrk9JzfGnFGo9P
+img: systems/pf1/icons/races/aasimar.png
+name: Immortal Spark
+system:
+  actions:
+    - _id: 6ZShJACUip60s9nK
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.w8v617tw8wjlcl53]{Age Resistance,
+        Lesser}</p><p>You ignore the physical detriments of being middle-aged.
+        This spell does not cause you to look younger, nor does it prevent you
+        from dying of old age, but as long as the spell is in effect, you ignore
+        the -1 penalties to Strength, Dexterity, and Constitution that accrue
+        once you become middle-aged. You retain the age related bonuses to
+        Intelligence, Wisdom, and Charisma while under the effects of this
+        spell. Additional penalties that you accrue upon becoming old or
+        venerable apply in full.</p>
+      duration:
+        units: hour
+        value: '24'
+      name: Age Resistance, Lesser
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  changes:
+    - _id: YLxLXlUJ
+      formula: '2'
+      target: skill.khi
+      type: untyped
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] bonus vs death effects.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar<br /><strong>Replaced Trait(s)</strong>:
+      Skilled, Spell-Like Ability</p><hr /><p>Aasimars with this racial trait
+      defy the powers of death. They gain a +2 bonus on Knowledge (history)
+      checks and saving throws against death effects and can use <em>lesser
+      @UUID[Compendium.pf1.buffs.Item.8MI2BpO4ewblrCvp]{age resistance}
+      </em>once per day as a spell-like ability. This racial trait replaces the
+      skilled and spell-like ability racial traits.</p>
+  racePoints: 7
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '85'
+  subType: racial
+  tags:
+    - Aasimar
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,63 @@
+_id: rm5kl4j5srzgr333
+_key: '!items!rm5kl4j5srzgr333'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/water/projectile-ice-snowball.webp
+name: Snowball
+system:
+  actions:
+    - _id: n3mop128o1mo4unt
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, @cl))d6
+            types:
+              - cold
+      duration:
+        units: inst
+      effect: one ball of ice and snow
+      img: systems/pf1/icons/spells/ice-blue-1.jpg
+      name: Use
+      range:
+        units: close
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You throw a ball of elemental ice and snow at a single target as a
+      ranged touch attack. The snowball deals 1d6 points of cold damage per
+      caster level you have (maximum 5d6).</p>
+  descriptors:
+    - cold
+    - water
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      druid: 1
+      hunter: 1
+      magus: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      witch: 1
+      wizard: 1
+  school: evo
+  sources:
+    - id: PZO1140
+      pages: '235'
+    - id: PZO9428
+      pages: '26'
+    - id: PZO9067
+      pages: '73'
+type: spell

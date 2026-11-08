@@ -1,0 +1,64 @@
+_id: togu205od8d2tmuf
+_key: '!items!togu205od8d2tmuf'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/heal-sky-3.jpg
+name: Cure Moderate Wounds, Mass
+system:
+  actions:
+    - _id: rcnz5ne4cjoaf0cj
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d8 + min(30, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will half or Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ejk08uk2e3h5eg3a]{mass cure light
+      wounds}, except that it cures 2d8 points of damage + 1 point per caster
+      level (maximum +30).</p>
+  learnedAt:
+    class:
+      bard: 6
+      cleric: 6
+      druid: 7
+      inquisitor: 6
+      occultist: 6
+      oracle: 6
+      shaman: 6
+      skald: 6
+      warpriest: 6
+      witch: 7
+  level: 6
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '263'
+  subschool:
+    - healing
+type: spell

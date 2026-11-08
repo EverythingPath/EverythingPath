@@ -1,0 +1,26 @@
+_id: BkKYCzEGNTzZRiTz
+_key: '!items!BkKYCzEGNTzZRiTz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/fleet.png
+name: Fleet
+system:
+  changes:
+    - _id: y4qckv6r
+      formula: if(and(lt(@armor.type, 2), lt(@attributes.encumbrance.level, 1)), 5)
+      target: landSpeed
+      type: base
+  description:
+    value: >-
+      <p><em>You are faster than most.</em></p><p><strong>Benefits</strong>:
+      While you are wearing light or no armor, your base speed increases by 5
+      feet. You lose the benefits of this feat if you carry a medium or heavy
+      load.</p><p><strong>Special</strong>: You can take this feat multiple
+      times. The effects stack.</p>
+  sources:
+    - id: PZO1110
+      pages: 115, 124
+  tags:
+    - General
+    - Movement
+type: feat
