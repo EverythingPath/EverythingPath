@@ -1,0 +1,38 @@
+_id: a3P821aUxxJbSpVV
+_key: '!items!a3P821aUxxJbSpVV'
+_stats:
+  coreVersion: '12.343'
+folder: g1c5Qbc5VpuXHPcl
+img: icons/tools/laboratory/vial-orange.webp
+name: Mutagen, Str
+system:
+  changes:
+    - _id: 5em86dex
+      formula: '4'
+      target: str
+      type: alchemical
+    - _id: jieaewfc
+      formula: '-2'
+      target: int
+      type: alchemical
+    - _id: vvzlv2eb
+      formula: '2'
+      target: nac
+      type: alchemical
+  description:
+    instructions: <p>Set item level to class level.</p>
+    value: >-
+      <p>+2 natural armor bonus, +4 alchemical bonus to Strength, -2 penalty to
+      Intelligence as per
+      @UUID[Compendium.pf1.class-abilities.Item.zrTVb83VhkFnEv6G].</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '@item.level * 10'
+  hideFromToken: true
+  level: 1
+  sources:
+    - id: PZO1115
+      pages: '26'
+  subType: feat
+type: buff

@@ -1,0 +1,28 @@
+_id: IEQzDi2Oelh3DRNi
+_key: '!items!IEQzDi2Oelh3DRNi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Salamander's Scales
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: 8v3tb846
+      formula: 1 + if(gte(@class.level, 8), 1) + if(gte(@class.level, 20), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 4th level, you gain fire resistance 5 and a +1 natural armor bonus
+      to AC.</p>
+
+      <p>At 8th level, your fire resistance increases to 10 and your natural
+      armor bonus increases to +2.</p>
+
+      <p>At 16th level, your fire resistance increases to 20 and your natural
+      armor bonus increases to +3.</p>
+  subType: classFeat
+type: feat

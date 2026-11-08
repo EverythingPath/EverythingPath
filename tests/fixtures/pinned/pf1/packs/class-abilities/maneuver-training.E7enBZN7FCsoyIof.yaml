@@ -1,0 +1,27 @@
+_id: E7enBZN7FCsoyIof
+_key: '!items!E7enBZN7FCsoyIof'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/athletic.jpg
+name: Maneuver Training
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Monk
+  changes:
+    - _id: 0iguyvon
+      formula: '@class.level - @attributes.bab.total'
+      target: cmb
+      type: untyped
+  description:
+    value: >-
+      <p>At 3rd level, a monk uses his monk level in place of his <em>base
+      attack bonus</em> when calculating his <em>Combat Maneuver Bonus</em>.
+      Base attack bonuses granted from other classes are unaffected and are
+      added normally.</p>
+  sources:
+    - id: PZO1110
+      pages: '59'
+  subType: classFeat
+type: feat

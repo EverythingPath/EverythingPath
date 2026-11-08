@@ -1,0 +1,63 @@
+_id: ay8nnkkegcb1zfb0
+_key: '!items!ay8nnkkegcb1zfb0'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Resist Energy, Communal
+system:
+  actions:
+    - _id: 5zuj37m7zaoi73ql
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.tkjnm3lw7ni82tag]{resist energy}, except
+      you divide the duration in 10-minute intervals among the creatures
+      touched.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      inquisitor: 3
+      investigator: 3
+      occultist: 3
+      oracle: 3
+      paladin: 3
+      psychic: 3
+      ranger: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '242'
+type: spell

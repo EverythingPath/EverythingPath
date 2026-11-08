@@ -1,0 +1,53 @@
+_id: cagn38jcxzmcgf7g
+_key: '!items!cagn38jcxzmcgf7g'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Cast Out
+system:
+  actions:
+    - _id: o4a17dpds2u2eh06
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a melee touch attack you blast a single creature and disrupt any
+      magic controlling it. The target takes 2d8 points of damage + 1 point per
+      caster level (maximum +15). In addition, you make a dispel check against
+      any <i>magic jar</i> effect (including a ghost's malevolence ability) or
+      enchantment (compulsion) spells on the target creature, starting with the
+      highest level spells and proceeding to lower level spells. Treat this as a
+      targeted <i>dispel magic</i> spell, except <i>cast out</i> can dispel one
+      such spell for every four caster levels you possess. A successful Will
+      save halves the damage and limits the dispelling to a single spell or
+      effect.</p>
+  learnedAt:
+    class:
+      inquisitor: 3
+      medium: 2
+      psychic: 4
+  level: 3
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '210'
+type: spell

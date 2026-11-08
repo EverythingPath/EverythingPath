@@ -1,0 +1,75 @@
+_id: dkg7ixwrhp7zx1ui
+_key: '!items!dkg7ixwrhp7zx1ui'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Apathy
+system:
+  actions:
+    - _id: 7pwjtv36sklwyhqw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause a creature to temporarily lose interest in a passion or
+      pursuit, taking the heat off your trail to facilitate a getaway, the
+      finalization of a scheme, or the elimination of incriminating evidence.
+      When casting the spell, you designate a subject or activity about which
+      the target becomes indifferent. While under the effects of <i>apathy</i>,
+      the target takes a -5 penalty on all skill checks and ability checks to
+      investigate, pursue, or otherwise advance its goals in relation to the
+      designated subject. In most cases, however, the target does not attempt
+      such checks if they can be avoided, as it simply has no interest in
+      putting effort into the endeavor.  If the chosen activity is something
+      that would be harmful for the target to refrain from doing (such as
+      eating, sleeping, or holding its breath underwater), the target receives a
+      +5 bonus on the saving throw or other check required by its inaction, and
+      receives a new saving throw to negate the effects of this spell with the
+      same +5 bonus immediately after. The bonus on these saving throws and
+      checks increases by 1 for each subsequent check required by the same
+      condition. If you directly interact with the target of this spell (such as
+      engaging it in combat or targeting it with another spell or effect), the
+      spell immediately ends.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      mesmerist: 4
+      psychic: 5
+      skald: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a shiny bead
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '58'
+  subschool:
+    - compulsion
+type: spell

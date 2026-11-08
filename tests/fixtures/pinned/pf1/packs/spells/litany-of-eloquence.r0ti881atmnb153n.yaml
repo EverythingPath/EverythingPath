@@ -1,0 +1,49 @@
+_id: r0ti881atmnb153n
+_key: '!items!r0ti881atmnb153n'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Litany of Eloquence
+system:
+  actions:
+    - _id: pmvrh9d5zfinh1s1
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your litany is a fascinating diatribe of grace, causing your target to
+      do nothing but listen. The target is fascinated. As usual, obvious danger
+      prevents fascination and potential danger grants a save.  While subject to
+      this spell, the target cannot be the target of another spell that has the
+      word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      inquisitor: 3
+      paladin: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '234'
+  subschool:
+    - charm
+type: spell

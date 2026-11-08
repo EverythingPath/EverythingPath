@@ -1,0 +1,58 @@
+_id: j5zghtreigbaqmx5
+_key: '!items!j5zghtreigbaqmx5'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Funereal Weapon
+system:
+  actions:
+    - _id: tz7ceigmp0ltbw4i
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          weapon touched or 50 projectiles (all of which must be together at the
+          time of casting)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You imbue a weapon with a faint silvery glow that dimly illuminates a
+      5-foot square. An affected weapon also easily bypasses the physical
+      defenses of undead creatures, ignoring 5 points of an undead creature's
+      damage reduction, as long as the damage reduction is not DR/epic. For
+      example, attacks with a weapon affected by this spell completely ignore a
+      zombie's DR 5/slashing or reduce a lich's damage reduction to DR
+      10/bludgeoning and magic.  You can't cast this spell on a natural weapon,
+      such as an unarmed strike. <i>Funereal weapon</i> affects the DR of only
+      undead creatures.</p>
+  learnedAt:
+    class:
+      cleric: 1
+      inquisitor: 1
+      occultist: 1
+      oracle: 1
+      paladin: 1
+      warpriest: 1
+  school: trs
+  sources:
+    - id: PZO9296
+      pages: '42'
+type: spell

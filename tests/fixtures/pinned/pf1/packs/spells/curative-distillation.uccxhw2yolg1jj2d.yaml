@@ -1,0 +1,59 @@
+_id: uccxhw2yolg1jj2d
+_key: '!items!uccxhw2yolg1jj2d'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Curative Distillation
+system:
+  actions:
+    - _id: 4cmye58thl6c1la7
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will half
+        harmless: true
+        type: will
+      target:
+        value: one living creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You concentrate the healing potential of the material component so that
+      it's exceptionally potent and restorative. This spell restores a number of
+      hit points equal to 1d8 + 1 point per caster level (maximum +10) to the
+      target, and also grants the target the benefits of the material component.
+      Roll the hit points restored separately when determining how many total
+      hit points this spell and the material component restore.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      cleric: 3
+      investigator: 2
+      oracle: 3
+      warpriest: 3
+  level: 3
+  materials:
+    gpValue: 50
+    value: >-
+      healing herb, alchemical remedy, or potion of a healing spell worth at
+      least 50 gp
+  school: con
+  sources:
+    - id: PZO9475
+      pages: '8'
+  subschool:
+    - healing
+type: spell
