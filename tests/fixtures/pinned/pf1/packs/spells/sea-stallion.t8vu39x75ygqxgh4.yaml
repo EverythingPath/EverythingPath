@@ -1,0 +1,57 @@
+_id: t8vu39x75ygqxgh4
+_key: '!items!t8vu39x75ygqxgh4'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Sea Stallion
+system:
+  actions:
+    - _id: bqhb5n0izfkuipr0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: a creature you are mounted upon
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.uaznzgoz4h9bw9fr]{sea steed}, but as long
+      as you stay mounted on the target, you also gain the amphibious quality
+      and your melee attacks function as if you were under the effect of
+      <em>freedom of movement</em>. The benefits you gain from this spell are
+      not polymorph effects. If you dismount from the target, you retain the
+      amphibious quality for up to 1 minute, but not the other benefits. You
+      regain all of the benefits once you mount the target creature again.</p>
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 4
+      paladin: 4
+      ranger: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '234'
+  subschool:
+    - polymorph
+type: spell

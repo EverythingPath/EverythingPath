@@ -1,0 +1,72 @@
+_id: 0khn0u6nd4fat6wb
+_key: '!items!0khn0u6nd4fat6wb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/sleep-bubble-purple.webp
+name: Symbol of Sleep
+system:
+  actions:
+    - _id: va8wl8dk45xj3fb6
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that all creatures of 10 HD or less within 60 feet of the
+      <em>symbol of sleep</em> instead fall into a catatonic slumber for 3d6 x
+      10 minutes. Unlike with the <em>sleep</em> spell, <em>sleep</em>ing
+      creatures cannot be awakened by nonmagical means before this time
+      expires.</p><p>Unlike <em>symbol of death</em>, <em>symbol of sleep</em>
+      has no hit point limit; once triggered, a <em>symbol of sleep</em> simply
+      remains active for 10 minutes per caster level.</p><p><em>Note:</em> Magic
+      traps such as <em>symbol of sleep</em> are hard to detect and disable. A
+      rogue (only) can use the Perception skill to find a <em>symbol of
+      sleep</em> and Disable Device to thwart it. The DC in each case is 25 +
+      spell level, or 30 for <em>symbol of sleep</em>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      mesmerist: 5
+      occultist: 4
+      oracle: 5
+      sorcerer: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    gpValue: 1000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      1,000 gp
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '356'
+  subschool:
+    - compulsion
+type: spell

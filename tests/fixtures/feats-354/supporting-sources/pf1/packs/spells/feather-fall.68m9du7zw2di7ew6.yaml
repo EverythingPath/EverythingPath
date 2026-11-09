@@ -1,0 +1,71 @@
+_id: 68m9du7zw2di7ew6
+_key: '!items!68m9du7zw2di7ew6'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/commodities/materials/feather-white.webp
+name: Feather Fall
+system:
+  actions:
+    - _id: jf1nmk51mmjucjvi
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: spec
+        value: until landing or 1 round/level
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates or Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one Medium or smaller freefalling object or creature/level, no two of
+          which may be more than 20 ft. apart
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>The affected creatures or objects fall slowly. <i>Feather fall</i>
+      instantly changes the rate at which the targets fall to a mere 60 feet per
+      round (equivalent to the end of a fall from a few feet), and the subjects
+      take no damage upon landing while the spell is in effect. When the spell
+      duration expires, a normal rate of falling resumes.</p><p>The spell
+      affects one or more Medium or smaller creatures (including gear and
+      carried objects up to each creature's maximum load) or objects, or the
+      equivalent in larger creatures: a Large creature or object counts as two
+      Medium creatures or objects, a Huge creature or object counts as four
+      Medium creatures or objects, and so forth.</p><p>This spell has no special
+      effect on ranged weapons unless they are falling quite a distance. If the
+      spell is cast on a falling item, the object does half normal damage based
+      on its weight, with no bonus for the height of the drop.</p><p><i>Feather
+      fall</i> works only upon free-falling objects. It does not affect a sword
+      blow or a charging or flying creature.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      bloodrager: 1
+      magus: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      spiritualist: 1
+      summoner: 1
+      summonerUnchained: 1
+      wizard: 1
+    domain:
+      Void: 1
+    subDomain:
+      Feather: 2
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '281'
+type: spell

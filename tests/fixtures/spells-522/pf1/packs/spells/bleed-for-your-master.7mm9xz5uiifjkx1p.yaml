@@ -1,0 +1,64 @@
+_id: 7mm9xz5uiifjkx1p
+_key: '!items!7mm9xz5uiifjkx1p'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Bleed for your Master
+system:
+  actions:
+    - _id: 5v2xof2aszanb4j0
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: your animal companion, familiar, or fiendish servant
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>When you would be hit by an attack that requires an attack roll, or
+      when you are within an area of effect that allows you to attempt a Reflex
+      saving throw, with a single touch you compel the target to throw itself in
+      front of the blow or shield you from the effect.</p><p>If an attack roll
+      triggered this spell's casting, the target takes the damage instead of
+      you, even if the attack roll would not normally hit the target's Armor
+      Class.</p><p>If an area of effect that allows you to attempt a Reflex save
+      triggered this spell's casting, the target instead grants you cover
+      against the effect (+2 bonus on Reflex saves) if it is your size or
+      smaller, or improved cover (+4 bonus on Reflex saves and improved evasion
+      against the effect) if it is larger than you. The target automatically
+      fails its Reflex save against the effect but can still benefit from
+      improved evasion and similar mitigating effects. After taking damage, the
+      target is shaken for 1 minute. If the target was already shaken, it
+      becomes frightened instead.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      ranger: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1140
+      pages: '227'
+    - id: PZO9429
+      pages: '24'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

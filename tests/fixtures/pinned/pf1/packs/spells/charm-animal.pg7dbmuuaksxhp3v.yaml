@@ -1,0 +1,53 @@
+_id: pg7dbmuuaksxhp3v
+_key: '!items!pg7dbmuuaksxhp3v'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Charm Animal
+system:
+  actions:
+    - _id: 4xhx337lyzp9jyi8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one animal
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}, except
+      that it affects a creature of the animal type.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Pestilence: 1
+    class:
+      druid: 1
+      hunter: 1
+      psychic: 1
+      ranger: 1
+      shaman: 1
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '254'
+  subschool:
+    - charm
+type: spell

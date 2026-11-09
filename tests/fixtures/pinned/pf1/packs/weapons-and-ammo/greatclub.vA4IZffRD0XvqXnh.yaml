@@ -1,0 +1,61 @@
+_id: vA4IZffRD0XvqXnh
+_key: '!items!vA4IZffRD0XvqXnh'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/clubs/club-simple-barbed-grey.webp
+name: Greatclub
+system:
+  actions:
+    - _id: 4rw5tqhefkc3fotw
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Greatclub
+  description:
+    unidentified: >-
+      <p>This larger, bulkier version of the common club is heavy enough that
+      you can't wield it with one hand. It may be ornate and carved, reinforced
+      with metal, or a simple branch from a tree. Like simple clubs, greatclubs
+      have many names, such as cudgels, bludgeons, shillelaghs, and more.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: wood
+  price: 5
+  sources:
+    - id: PZO1110
+      pages: '143'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - hammers
+    - tribal
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

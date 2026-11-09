@@ -1,0 +1,59 @@
+_id: orfdhrn1ze8h71ds
+_key: '!items!orfdhrn1ze8h71ds'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Bristle
+system:
+  actions:
+    - _id: 77vo5dt6hqo5eize
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You give a creature the ability to redirect a portion of its innate
+      toughness away from its own defense and toward the amount of damage it
+      deals with natural attacks. Each round, as a swift action at the start of
+      its turn, the creature can choose to reduce some or all of its natural
+      armor bonus to AC and gain an enhancement bonus on all damage rolls for
+      natural attacks equal to that amount. The reduction to natural armor, and
+      thus the enhancement bonus on damage rolls, cannot exceed 1 point per 3
+      caster levels, to a maximum penalty/bonus of -5/+5 at 15th level. A
+      creature cannot reduce its natural armor bonus to less than 0 with this
+      spell.</p><p>All attacks directed against the creature use its adjusted AC
+      until the start of its next turn, at which time it can choose to modify
+      its AC again or keep it at its current level. Creatures make this decision
+      without any need for conscious thought or reflection; even creatures with
+      no Intelligence score can benefit from this spell, although they always
+      opt for the maximum possible reduction and bonus, regardless of any
+      tactical advantage they might lose.</p>
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '207'
+type: spell

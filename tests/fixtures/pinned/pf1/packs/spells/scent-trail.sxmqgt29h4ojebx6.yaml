@@ -1,0 +1,64 @@
+_id: sxmqgt29h4ojebx6
+_key: '!items!sxmqgt29h4ojebx6'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Scent Trail
+system:
+  actions:
+    - _id: em84uoo9y93syhra
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You, or a willing creature you touch, lay down a trail of scents that
+      only the creatures you designate at the time of can detect. These
+      creatures find it very easy to follow this trail.</p><p>They gain a +20
+      competence bonus on any Survival checks made for the purpose of tracking
+      the creature laying this trail.</p><p>Subject creatures with the scent
+      special ability gain a +10 competence bonus on Wisdom or Survival checks
+      to follow the trail.</p><p>In addition, you can leave scent messages along
+      the trail.</p><p>Each word or emotion in this message requires spending a
+      move action in the same spot. Subject creatures seeking to understand this
+      message must make another DC 20 Survival check, with a -1 penalty for
+      every word or emotion in the message, in order to understand it. Creatures
+      cannot benefit from this smell if they cannot use, or do not have, a sense
+      of smell. Creatures can use this spell to backtrack through a dungeon,
+      maze, or similar areas even if the creature laying down the trail crossed
+      over the spot multiple times.</p>
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+  level: 2
+  materials:
+    value: a queen ant
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '241'
+type: spell
