@@ -1,0 +1,57 @@
+_id: bzrvvdbmpr9lbrvr
+_key: '!items!bzrvvdbmpr9lbrvr'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Cognitive Block
+system:
+  actions:
+    - _id: eaajb0q1l8fyufbm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You create a mental block in the target's mind, impeding the flow of
+      his mental spellcasting process and forcing him to incorporate a thought
+      component into any spell or spell-like ability he uses. This is in
+      addition to any other components the spell already requires, and doesn't
+      replace the verbal component. Spell-like abilities require this thought
+      component, even though they normally don't need spell components.  As
+      usual with thought components, this addition increases the DC of any
+      concentration checks the target attempts by 10 unless the target takes a
+      move action to center his mind and satisfy the spell's thought
+      component.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      medium: 2
+      mesmerist: 2
+      psychic: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '161'
+  subschool:
+    - compulsion
+type: spell

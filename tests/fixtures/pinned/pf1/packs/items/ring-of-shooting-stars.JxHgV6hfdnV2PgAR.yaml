@@ -1,0 +1,337 @@
+_id: JxHgV6hfdnV2PgAR
+_key: '!items!JxHgV6hfdnV2PgAR'
+_stats:
+  coreVersion: '12.343'
+folder: U5q4LhZ06bCIZWVh
+img: icons/equipment/finger/ring-cabochon-engraved-purple.webp
+name: Ring of Shooting Stars
+system:
+  actions:
+    - _id: 5ZGFSSGnOQH5laZ7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      effect: Up to four lights, all within a 10-ft.-radius area
+      img: icons/magic/light/orbs-firefly-hand-yellow.webp
+      name: Dancing Lights
+      uses:
+        self:
+          maxFormula: '1'
+          per: hour
+          value: 1
+    - _id: ukDYIOqKVGg47Bqq
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 min./level
+      img: icons/magic/light/beam-explosion-orange.webp
+      name: Light
+      range:
+        units: touch
+      target:
+        value: object touched
+      uses:
+        self:
+          maxFormula: '2'
+          per: day
+          value: 2
+    - _id: FKRWYjc82S45Q5vL
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '4'
+      effect: two or more 5-ft.-diameter spheres
+      img: icons/magic/lightning/orb-ball-blue.webp
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Ball Lightning, cast
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+      range:
+        units: ft
+        value: '120'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: 6UHJNOn6hzF4YAAD
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5 feet radius
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '4'
+      effect: two or more 5-ft.-diameter spheres
+      img: icons/magic/lightning/orb-ball-blue.webp
+      measureTemplate:
+        color: '#44c7ef'
+        size: '3'
+        type: circle
+      name: Ball Lightning damage, 1 ball
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+      target:
+        value: any creature within 5 feet
+    - _id: cjuP3P5R2DFYTGOl
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5 feet radius
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '4'
+      effect: two or more 5-ft.-diameter spheres
+      img: icons/magic/lightning/orb-ball-blue.webp
+      measureTemplate:
+        color: '#44c7ef'
+        size: '3'
+        type: circle
+      name: Ball Lightning damage, 2 balls
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+      target:
+        value: any creature within 5 feet
+    - _id: XOYiAJRjdS4IiXIi
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5 feet radius
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '4'
+      effect: two or more 5-ft.-diameter spheres
+      img: icons/magic/lightning/orb-ball-blue.webp
+      measureTemplate:
+        color: '#44c7ef'
+        size: '3'
+        type: circle
+      name: Ball Lightning damage, 3 balls
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+      target:
+        value: any creature within 5 feet
+    - _id: ESplflYY7Sv42Qub
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5 feet radius
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '4'
+      effect: two or more 5-ft.-diameter spheres
+      img: icons/magic/lightning/orb-ball-blue.webp
+      measureTemplate:
+        color: '#44c7ef'
+        size: '3'
+        type: circle
+      name: Ball Lightning damage, 4 balls
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+      target:
+        value: any creature within 5 feet
+    - _id: 8wmKrxiYOxTObPN1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: '12'
+            types:
+              - untyped
+          - formula: '24'
+            types:
+              - fire
+      description: >-
+        <p><strong>Usage</strong>: click up to 3 time to release all 3 shooting
+        stars at once</p>
+      duration:
+        units: inst
+      img: icons/magic/light/projectile-flare-blue.webp
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Shooting star
+      range:
+        units: ft
+        value: '70'
+      save:
+        dc: '13'
+        description: Reflex see text
+        type: ref
+      target:
+        value: One creature
+      uses:
+        self:
+          maxFormula: '3'
+          per: week
+          value: 3
+    - _id: 9S5CYQRimqIyfKpH
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures and objects within a 5-ft.-radius burst
+      duration:
+        dismiss: true
+        units: minute
+        value: '@item.cl'
+      img: icons/magic/light/projectiles-trio-pink.webp
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Faerie Fire
+      range:
+        units: ft
+        value: 400 + (@item.cl * 40)
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: GoUnwE2Aphltv3ti
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 feet arch
+      damage:
+        parts:
+          - formula: 2d8
+            types:
+              - untyped
+      duration:
+        units: inst
+      img: icons/magic/defensive/barrier-shield-dome-blue-purple.webp
+      name: Spark Shower
+      notes:
+        effect:
+          - >-
+            +[[2d8]] against creature wearing metal armor or carrying metal
+            weapons
+      range:
+        units: ft
+        value: '20'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  aura:
+    school: evo
+  cl: 12
+  description:
+    value: >-
+      <p>This ring has two modes of operation: one for when the wearer is in dim
+      light or outdoors at night, and a second one when the wearer is
+      underground or indoors at night. At night or in areas of shadow or
+      darkness, the ring of shooting stars can perform the following functions
+      on command.</p><ul><li>Dancing lights (once per hour)</li><li>Light (twice
+      per night)</li><li>Ball lightning (special, once per
+      night)</li><li>Shooting stars (special, three per week)</li></ul><p>The
+      first special function, ball lightning, releases one to four balls of
+      lightning (ring wearer’s choice). These glowing globes resemble dancing
+      lights, and the wearer controls them similarly (see the dancing lights
+      spell description). The spheres have a 120-foot range and a duration of 4
+      rounds. They can be moved at 120 feet per round. Each sphere is about 3
+      feet in diameter, and any creature who comes within 5 feet of one causes
+      its charge to dissipate, taking electricity damage in the process
+      according to the number of balls created.</p><table><thead><tr><th>Number
+      of Balls</th><th>Damage per Ball</th></tr></thead><tbody><tr><td>1
+      lightning ball</td><td>4d6 points of electricity damage</td></tr><tr><td>2
+      lightning balls</td><td>3d6 points of electricity
+      damage</td></tr><tr><td>3 lightning balls</td><td>2d6 points of
+      electricity damage</td></tr><tr><td>4 lightning balls</td><td>1d6 points
+      of electricity damage</td></tr></tbody></table><p>Once the ball lightning
+      function is activated, the balls can be released at any time before the
+      sun rises. Multiple balls can be released in the same round.</p><p>The
+      second special function produces three shooting stars that can be released
+      from the ring each week, simultaneously or one at a time. Upon impact,
+      they deal 12 points of damage and spread (as a fireball) in a
+      5-foot-radius sphere that deals 24 points of fire damage.</p><p>Any
+      creature struck by a shooting star takes full damage from the impact plus
+      full fire damage from the spread unless it succeeds at a DC 13 Reflex
+      save. Creatures not struck but within the spread ignore the impact damage
+      and take only half damage from the fire spread on a successful DC 13
+      Reflex save. The range is 70 feet, at the end of which the shooting star
+      explodes unless it strikes a creature or object before that. A shooting
+      star always follows a straight line, and any creature in its path must
+      make a successful DC 13 Reflex save or be hit by the
+      projectile.</p><p>Indoors at night, or underground, the ring of shooting
+      stars has the following properties.</p><ul><li>Faerie fire (once per
+      day)</li><li>Spark shower (special, once per day)</li></ul><p>The spark
+      shower is a flying cloud of sizzling purple sparks that fan out from the
+      ring for a distance of 20 feet in an arch 10 feet wide. Creatures within
+      this area take 2d8 points of damage each if not wearing metal armor or
+      carrying metal weapons. Any creature wearing metal armor and/or carrying a
+      metal weapon takes 4d8 points of
+      damage.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.HVu9JzllWoLzKKqH]{Forge Ring},
+      @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire},
+      @UUID[Compendium.pf1.spells.Item.6oq1wcryviik9ice]{fireball},
+      @UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{light},
+      @UUID[Compendium.pf1.spells.Item.m84969gni5iu4bdt]{lightning bolt};
+      <strong>Cost</strong> 25,000 gp</p>
+  hp:
+    base: 10
+  price: 50000
+  slot: ring
+  sources:
+    - id: PZO1123
+      pages: '173'
+    - id: PZO1110
+      pages: '479'
+  subType: wondrous
+type: equipment

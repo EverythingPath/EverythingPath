@@ -1,0 +1,69 @@
+_id: 1brg9wjd0yvttrel
+_key: '!items!1brg9wjd0yvttrel'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Echean's Excellent Enclosure
+system:
+  actions:
+    - _id: m8wp3d6kaqrnw5jv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: immobile 10-ft.-radius emanation
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: touch
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call into being around you an invisible barrier of force within
+      which magic cannot persist. Within the area of the spell, effects are
+      suppressed and creatures are affected as by <i>antimagic field</i>. An
+      immobile sphere of impenetrable force surrounds the field, equivalent in
+      all ways to a spherical <i>Wall of Force</i>, including its immunity to
+      <i>dispel magic</i> and vulnerability to a <i>sphere of annihilation</i>
+      or <i>rod of cancellation</i>. The barrier has hardness 40 and 20 hit
+      points per caster level, and can be damaged by both mundane attacks and
+      spells cast from outside the field. If the bubble of force is destroyed,
+      the spell's duration ends.</p><p>Spells cannot be cast within, into, or
+      out of the enclosure, and teleportation effects that ignore a <i>Wall of
+      Force</i> (such as <i>dimension door</i> or teleport) are thwarted by the
+      enclosure's field of antimagic.</p><p>Echean's excellent enclosure has the
+      same effect on summoned creatures of any type and incorporeal undead that
+      an <i>antimagic field</i> does, causing them to wink out of existence for
+      the duration of Echean's excellent enclosure unless their spell
+      resistance, if any, allows them to remain where they are within the
+      field.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 9
+      sorcerer: 9
+      wizard: 9
+  level: 9
+  materials:
+    gpValue: 100
+    value: >-
+      a sphere of glass worth 100 gp and an iron nail, with which you pierce the
+      glass on casting
+  school: abj
+  sources:
+    - id: PZO9232
+      pages: '11'
+  sr: false
+type: spell

@@ -1,0 +1,88 @@
+_id: cdedzw5d9ui73ua7
+_key: '!items!cdedzw5d9ui73ua7'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/creatures/abilities/dragon-ice-breath-blue.webp
+name: Dragon's Breath
+system:
+  actions:
+    - _id: 75v240ev2mqf2uib
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst or line
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Cone
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half
+        type: ref
+    - _id: bm71NkIoXFYry4eX
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst or line
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: ray
+      name: Line
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You breathe out a blast of energy. Creatures in the affected area take
+      1d6 points of energy damage per caster level (maximum of 12d6). A
+      successful Reflex save results in half damage. The spell's effect and
+      energy type depend on the type of dragon scale used:</p><p><i>Black
+      dragon</i>: 60-foot line of acid.</p><p><i>Blue or bronze dragon</i>:
+      60-foot line of electricity.</p><p><i>Green dragon</i>: 30-foot cone of
+      acid.</p><p><i>Gold or red dragon</i>: 30-foot cone of
+      fire.</p><p><i>Silver or white dragon</i>: 30-foot cone of
+      cold.</p><p><i>Brass dragon</i>: 60-foot line of fire.</p><p><i>Copper
+      dragon</i>: 60-foot line of acid.</p>
+  descriptors:
+    - acid, cold, electricity, or fire
+  learnedAt:
+    bloodline:
+      Kobold: 4
+    class:
+      alchemist: 4
+      arcanist: 4
+      bloodrager: 4
+      investigator: 4
+      magus: 4
+      sorcerer: 4
+      wizard: 4
+    subDomain:
+      Dragon: 4
+  level: 4
+  materials:
+    value: a dragon scale
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '217'
+type: spell

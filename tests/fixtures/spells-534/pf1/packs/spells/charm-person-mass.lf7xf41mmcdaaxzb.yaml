@@ -1,0 +1,63 @@
+_id: lf7xf41mmcdaaxzb
+_key: '!items!lf7xf41mmcdaaxzb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/skills/social/diplomacy-handshake.webp
+name: Charm Person, Mass
+system:
+  actions:
+    - _id: 23dj8xnmffr032ia
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          one or more humanoid creatures, no two of which can be more than 30
+          ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}, except
+      that mass <em>charm person</em> affects a number of humanoid creatures
+      whose combined Hit Dice don't exceed twice your level. If there are more
+      potential targets than you can affect, you choose them one at a time until
+      you reach the limit of HD you can affect. If you cast mass <em>charm
+      person</em> on only one creature, you ignore the spell's HD limit.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      mesmerist: 4
+      occultist: 4
+      psychic: 5
+      shaman: 5
+      skald: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '206'
+  subschool:
+    - charm
+type: spell

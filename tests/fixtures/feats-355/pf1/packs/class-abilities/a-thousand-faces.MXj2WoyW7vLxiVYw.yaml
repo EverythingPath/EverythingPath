@@ -1,0 +1,39 @@
+_id: MXj2WoyW7vLxiVYw
+_key: '!items!MXj2WoyW7vLxiVYw'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/water_07.jpg
+name: A Thousand Faces
+system:
+  abilityType: su
+  actions:
+    - _id: z9wh0ov1bfi5v52q
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Druid
+      - Shifter
+  description:
+    value: >-
+      <p>The character gains the ability to change her appearance at will, as if
+      using the @UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{alter self}
+      spell, but only while in her normal form.</p>
+  sources:
+    - id: PZO1110
+      pages: '51'
+    - errata: 2018-02
+      id: PZO1140
+  subType: classFeat
+type: feat

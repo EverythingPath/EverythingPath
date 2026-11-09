@@ -1,0 +1,55 @@
+_id: 3ixriz492d5rgi4t
+_key: '!items!3ixriz492d5rgi4t'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Litany of Righteousness
+system:
+  actions:
+    - _id: 63rbfqhcx2y2h4ar
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Calling down a litany of anathema, you make an evil more susceptible to
+      the attacks of good creatures. If the target is evil, it takes double
+      damage from attacks made by creatures with a good aura (from a class
+      feature or as a creature with the good subtype). If the target also has
+      the evil subtype; when it is hit with attacks made by creatures with a
+      good aura, it is also dazzled for 1d4 rounds. If this spell targets a
+      nonevil creature (or one that lacks the evil subtype), it has no effect,
+      and the spell is wasted.  While subject to this spell, the target cannot
+      be the target of another spell that has the word "litany" in the
+      title.</p>
+  descriptors:
+    - good
+    - languageDependent
+  learnedAt:
+    class:
+      inquisitor: 3
+      paladin: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1118
+      pages: '235'
+type: spell

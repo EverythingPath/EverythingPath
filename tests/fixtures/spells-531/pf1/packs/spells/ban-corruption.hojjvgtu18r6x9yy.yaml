@@ -1,0 +1,65 @@
+_id: hojjvgtu18r6x9yy
+_key: '!items!hojjvgtu18r6x9yy'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Ban Corruption
+system:
+  actions:
+    - _id: qjzab6tz6ick6vej
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius emanation centered on you
+      duration:
+        concentration: true
+        units: spec
+        value: concentration plus 1 round/level, up to 1 hour/level
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        type: will
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You strip all creatures within the emanation of any gifts associated
+      with corruptions (see page 14). Abilities associated with corruptions
+      cease to function, as if they were magically dispelled. The corruption
+      stains still fully affect creatures. A creature that enters the emanation
+      and fails its saving throw loses its gifts until the spell's duration
+      ends, even if it leaves the emanation, but a successful saving throw
+      renders a creature immune to the spell, even if it enters and exits the
+      emanation several times.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 5
+      inquisitor: 4
+      medium: 3
+      occultist: 4
+      oracle: 5
+      paladin: 4
+      shaman: 5
+      warpriest: 5
+  level: 5
+  materials:
+    focus: a ceremonial dagger
+  school: abj
+  sources:
+    - id: PZO1135
+      pages: '109'
+type: spell
