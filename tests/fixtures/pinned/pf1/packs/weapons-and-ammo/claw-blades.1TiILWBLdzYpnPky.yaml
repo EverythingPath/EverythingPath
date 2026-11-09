@@ -1,0 +1,65 @@
+_id: 1TiILWBLdzYpnPky
+_key: '!items!1TiILWBLdzYpnPky'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/claw-blades.PNG
+name: Claw Blades
+system:
+  actions:
+    - _id: pi9mxeuaukdd30ej
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      enh:
+        value: 1
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Claw Blades
+  description:
+    unidentified: >-
+      <p>These subtle blades can only be used by catfolk with the cat's claws
+      racial trait. Bought in a set of five, they fit over the wearer's claws on
+      one hand. The blades grant the wearer a +1 enhancement bonus on claw
+      attack rolls with that hand and change the weapon type from a natural
+      weapon to a light slashing weapon. Catfolk with the cat's claws racial
+      trait are proficient with this weapon. The claw blades can be enhanced
+      like a masterwork weapon for the normal costs. The listed cost of the item
+      is for one set of five claws for one hand.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 305
+  properties:
+    spc: true
+  sources:
+    - id: PZO1121
+      pages: '93'
+  subType: exotic
+  tags:
+    - Catfolk
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,58 @@
+_id: wI673u60R4CtW09q
+_key: '!items!wI673u60R4CtW09q'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/skills/wounds/injury-eyes-blood-red.webp
+name: Sympathetic Wounds
+system:
+  actions:
+    - _id: qPB6MJczn1Jp9e8n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.menqakfoa1ftvi3f]{shield other}, except some
+      of your wounds transfer to the targeted creature rather than some of their
+      wounds transferring to you. For example, you could link yourself to a
+      nearby chained slave so that when you are wounded, some of the damage is
+      transferred to the slave. You must have at least as many hit dice as the
+      target, otherwise the spell fails. A creature can only be under the
+      effects of one instance of this spell at a time.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      cleric: 2
+      druid: 2
+      hunter: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  materials:
+    gpValue: 250
+    value: 250 gp of powdered amber
+  school: abj
+  sources:
+    - id: PZO9202
+      pages: '43'
+  tags:
+    - '3.5'
+type: spell
