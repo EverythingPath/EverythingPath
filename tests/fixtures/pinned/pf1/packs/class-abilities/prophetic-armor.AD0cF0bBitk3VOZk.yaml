@@ -1,0 +1,31 @@
+_id: AD0cF0bBitk3VOZk
+_key: '!items!AD0cF0bBitk3VOZk'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Prophetic Armor
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: 4dd281tg
+      formula: '@abilities.cha.mod - @abilities.dex.mod'
+      target: ac
+      type: untyped
+    - _id: fblis2zj
+      formula: '@abilities.cha.mod - @abilities.dex.mod'
+      target: ref
+      type: untyped
+  description:
+    value: >-
+      <p>You are so in tune with your primal nature that your instincts often
+      act to save you from danger that your civilized mind isn’t even aware of.
+      You may use your Charisma modifier (instead of your Dexterity modifier) as
+      part of your Armor Class and all Reflex saving throws. Your armor’s
+      maximum Dexterity bonus applies to your Charisma, instead.</p>
+  subType: classFeat
+  tags:
+    - Lunar Mystery
+type: feat

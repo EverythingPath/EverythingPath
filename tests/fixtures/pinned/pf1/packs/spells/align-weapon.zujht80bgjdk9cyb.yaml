@@ -1,0 +1,64 @@
+_id: zujht80bgjdk9cyb
+_key: '!items!zujht80bgjdk9cyb'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/weapons/swords/sword-winged-pink.webp
+name: Align Weapon
+system:
+  actions:
+    - _id: 0b31lkjl3k1imozk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          weapon touched or 50 projectiles (all of which must be together at the
+          time of casting)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Align weapon</i> makes a weapon chaotic, evil, good, or lawful, as
+      you choose. A weapon that is aligned can bypass the damage reduction of
+      certain creatures. This spell has no effect on a weapon that already has
+      an alignment.</p><p>You can't cast this spell on a natural weapon, such as
+      an unarmed strike. When you make a weapon chaotic, evil, good, or lawful,
+      <i>align weapon</i> is a chaotic, evil, good, or lawful spell,
+      respectively.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+    domain:
+      Chaos: 2
+      Evil: 2
+      Good: 2
+      Law: 2
+    subDomain:
+      Demodand: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '240'
+type: spell

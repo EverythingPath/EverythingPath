@@ -1,0 +1,42 @@
+_id: mMzCbplH8uWbU5XR
+_key: '!items!mMzCbplH8uWbU5XR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Second Chance
+system:
+  abilityType: sp
+  actions:
+    - _id: 8llhgxim3lnhmxdo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can give an enemy a second chance to correct the
+      error of its ways. Once per day as a standard action, you can cast
+      @UUID[Compendium.pf1.spells.qr6qcx8zqum6jhc4]{Atonement} as a spell-like
+      ability, targeting a creature that has violated the tenets of a religion
+      you both share or that freely desires to convert to your alignment. If
+      costly material components are required for the atonement, you may choose
+      to accept a permanent negative level as a sacrifice in place of those
+      components. The target of this effect also receives the benefits of a cure
+      serious wounds spell as part of the effects of the atonement.</p>
+  subType: classFeat
+  tag: classFeat_secondChance
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

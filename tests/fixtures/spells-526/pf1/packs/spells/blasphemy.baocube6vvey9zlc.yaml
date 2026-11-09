@@ -1,0 +1,75 @@
+_id: baocube6vvey9zlc
+_key: '!items!baocube6vvey9zlc'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Blasphemy
+system:
+  actions:
+    - _id: m78dfdn7agg3sgnl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: nonevil creatures in a 40-ft.-radius spread centered on you
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '40'
+      save:
+        description: Will partial
+        type: will
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>Any nonevil creature within the area of a <i>blasphemy</i> spell
+      suffers the following ill effects. </p><table
+      border="1"><tbody><tr><th>HD</th><th>Effect</th></tr><tr><td>Equal to
+      caster level</td><td>Dazed</td></tr><tr><td>Up to caster level
+      -1</td><td>Weakened, dazed</td></tr><tr><td>Up to caster level
+      -5</td><td>Paralyzed, weakened, dazed</td></tr><tr><td>Up to caster level
+      -10</td><td>Killed, paralyzed, weakened,
+      dazed</td></tr></tbody></table><p>The effects are cumulative and
+      concurrent. A successful Will save reduces or eliminates these effects.
+      Creatures affected by multiple effects make only one save and apply the
+      result to all the effects.</p><p><i>Dazed</i>: The creature can take no
+      actions for 1 round, though it defends itself normally. Save
+      negates.</p><p><i>Weakened</i>: The creature's Strength score decreases by
+      2d6 points for 2d4 rounds. Save for half.</p><p><i>Paralyzed</i>: The
+      creature is paralyzed and helpless for 1d10 minutes. Save reduces the
+      paralyzed effect to 1 round.</p><p><i>Killed</i>: Living creatures die.
+      Undead creatures are destroyed. Save negates. If the save is successful,
+      the creature instead takes 3d6 points of damage + 1 point per caster level
+      (maximum +25).</p><p>Furthermore, if you are on your home plane when you
+      cast this spell, nonevil extraplanar creatures within the area are
+      instantly banished back to their home planes. Creatures so banished cannot
+      return for at least 24 hours. This effect takes place regardless of
+      whether the creatures hear the <i>blasphemy</i> or not. The banishment
+      effect allows a Will save (at a -4 penalty) to negate.</p><p>Creatures
+      whose Hit Dice exceed your caster level are unaffected by
+      <i>blasphemy</i>.</p>
+  descriptors:
+    - evil
+    - sonic
+  learnedAt:
+    class:
+      cleric: 7
+      inquisitor: 6
+      oracle: 7
+    domain:
+      Evil: 7
+  level: 7
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '249'
+type: spell
