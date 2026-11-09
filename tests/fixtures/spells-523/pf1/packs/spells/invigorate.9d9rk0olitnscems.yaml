@@ -1,0 +1,55 @@
+_id: 9d9rk0olitnscems
+_key: '!items!9d9rk0olitnscems'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Invigorate
+system:
+  actions:
+    - _id: 7fh5tbyrfrqex11s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell banishes feelings of weariness. For the duration, the
+      subject takes no penalties from the fatigued or exhausted conditions. The
+      effect of <i>invigorate</i> is merely an illusion, however, not a
+      substitute for actual rest or respite. When the spell ends, the subject
+      takes 1d6 points of nonlethal damage, along with the return of the
+      original condition(s). A creature can be under the effects of only one
+      <i>invigorate</i> spell at a time; if it is cast a second time on that
+      creature, the first immediately ends.</p>
+  learnedAt:
+    class:
+      bard: 1
+      medium: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+  school: ill
+  sources:
+    - id: PZO1115
+      pages: '230'
+  subschool:
+    - figment
+type: spell

@@ -1,0 +1,64 @@
+_id: jnk5sfl5thmgdb3a
+_key: '!items!jnk5sfl5thmgdb3a'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Diminish Resistance
+system:
+  actions:
+    - _id: z517zh33jw7bn5mp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You weaken a creature's resistance against one energy type you select:
+      acid, cold, electricity, fire, or sonic. The creature's resistance to that
+      energy type decreases by 5 (minimum 0), plus an additional 5 for every 5
+      caster levels beyond 3rd (to a maximum of 20 at 18th level).</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      magus: 2
+      mesmerist: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a pinch of coarse sand
+  school: trs
+  sources:
+    - id: PZO1141
+      pages: '40'
+    - id: PZO9478
+      pages: '30'
+type: spell

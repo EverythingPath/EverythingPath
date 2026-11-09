@@ -1,0 +1,79 @@
+_id: yF0wlmP7n6QHPKe7
+_key: '!items!yF0wlmP7n6QHPKe7'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/fire/elemental-creature-horse.webp
+name: Flame Steed
+system:
+  actions:
+    - _id: vstuz3mmfigp498v
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      effect: one quasi-real creature suitable for a mount
+      name: Use
+      range:
+        units: ft
+        value: '0'
+    - _id: dLuA4LKBqawE4IRS
+      actionType: save
+      activation:
+        type: free
+        unchained:
+          type: free
+      area: 15 ft. Cone
+      duration:
+        units: round
+        value: 1d6
+      effect: sickens creatures in a 15-foot cone of smoke and ash
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Cone
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You conjure a Large, quasi-real creature made of flame. It functions
+      like @UUID[Compendium.pf1.spells.zpwd0f19q1lm04p3]{Phantom Steed}, except
+      as follows.</p>
+
+      <p>The flame steed is immune to fire and has acid, cold, and electricity
+      resistance 10. If it or its rider is attacked, it automatically exhales a
+      15-foot cone of smoke and ash on your turn as a free action. Anyone in the
+      cone must succeed at a Fortitude save (DC equal to the spell DC) or become
+      sickened for 1d6 rounds after leaving the area. This smoke acts as
+      @UUID[Compendium.pf1.spells.tuh5vc2bojaws3ig]{Obscuring Mist} for the
+      purpose of concealment. The smoke persists for 1 round.</p>
+  learnedAt:
+    class:
+      bloodrager: 3
+      cleric: 4
+      druid: 4
+      hunter: 4
+      oracle: 4
+      paladin: 4
+      shaman: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO9494
+      pages: '28'
+  sr: false
+  subschool:
+    - creation
+type: spell
