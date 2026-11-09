@@ -1,0 +1,85 @@
+_id: 0amLz3l4v3ICwuSk
+_key: '!items!0amLz3l4v3ICwuSk'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/polearms/pike-flared-brown.webp
+name: Doru
+system:
+  actions:
+    - _id: 3s5531llotp35unh
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: gRQOlDfRfY3kEaxT
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Doru
+  description:
+    unidentified: >-
+      <p>Balanced by a metal butt, this large spear is weighted so that it can
+      be used in one hand by a proficient wielder. You can use a doru two-handed
+      as a simple weapon. You can also use a doru as a onehanded martial weapon,
+      but its critical hit multiplier decreases to x2.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 4
+  properties:
+    brc: true
+  sources:
+    - id: PZO9285
+      pages: '12'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,53 @@
+_id: shurqk9sutnpijya
+_key: '!items!shurqk9sutnpijya'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mind Swap, Major
+system:
+  actions:
+    - _id: u9ey4wz62s3s8a7h
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature of your same race
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The spell functions as
+      @UUID[Compendium.pf1.spells.Item.nepwelwi6tlh1vo0]{mind swap}, except as
+      noted above. In addition, after 24 hours, instead of using each other's
+      hit points, you each revert to your original hit points, modified by your
+      new Constitution modifiers. This spell can be reversed only with
+      <em>miracle</em>, <em>wish</em>, or another major <em>mind swap</em>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 9
+  level: 9
+  materials:
+    gpValue: 10000
+    value: diamonds worth 10,000 gp
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '176'
+  subschool:
+    - compulsion
+type: spell

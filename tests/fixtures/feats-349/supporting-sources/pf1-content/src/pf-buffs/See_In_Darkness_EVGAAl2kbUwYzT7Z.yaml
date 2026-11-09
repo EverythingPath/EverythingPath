@@ -1,0 +1,24 @@
+_id: EVGAAl2kbUwYzT7Z
+_key: '!items!EVGAAl2kbUwYzT7Z'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/mammals/bat-giant-tattered-purple.webp
+name: See In Darkness
+system:
+  description:
+    value: >-
+      <p>The creature can see perfectly in darkness of any kind, including that
+      created by deeper darkness.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: sid-toggle
+      type: script
+      value: |+
+        actor.update({ "system.traits.senses.sid": state});
+
+type: buff
