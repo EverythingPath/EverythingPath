@@ -1,0 +1,65 @@
+_id: 1ziz3r5a1gzd1jw2
+_key: '!items!1ziz3r5a1gzd1jw2'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Nap Stack
+system:
+  actions:
+    - _id: iw8b325j4p3uadc3
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      area: 30-ft.-radius emanation
+      duration:
+        units: hour
+        value: '8'
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You reduce the amount of uninterrupted sleep or rest creatures within
+      the spell's area need in order to recover from injuries, regain spells, or
+      other special abilities to 2 hours instead of the normal eight. In
+      addition, if creatures continue to sleep or rest beyond the initial 2
+      hours, every additional 2 hours counts as a day of rest for the purpose of
+      recovering hit points, ability damage, as well as for enduring diseases,
+      poisons, or other afflictions. This means 8 total hours of sleep counts as
+      4 days for natural healing and for saving throws as diseases or similar
+      afflictions run their course. When suffering from diseases, poison, or
+      other afflictions, sleepers experience vivid dreams that help them track
+      their recovery. If things go poorly they can, at any time, wake themselves
+      up in order to seek a better alternative. If awoken or otherwise disturbed
+      during this 8-hour period, creatures may return to sleep but they no
+      longer enjoy the benefits of the accelerated recovery time. Creatures can
+      only enjoy the benefits of this spell once in any 1-week period.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  materials:
+    gpValue: 100
+    value: a little silk pillow worth 100 gp
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '233'
+type: spell

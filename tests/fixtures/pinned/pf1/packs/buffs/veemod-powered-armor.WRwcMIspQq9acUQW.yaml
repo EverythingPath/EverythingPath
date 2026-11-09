@@ -1,0 +1,34 @@
+_id: WRwcMIspQq9acUQW
+_key: '!items!WRwcMIspQq9acUQW'
+_stats:
+  coreVersion: '12.343'
+folder: HKTsCi1OUug346MZ
+img: icons/magic/perception/orb-crystal-ball-scrying-blue.webp
+name: Veemod (Powered Armor)
+system:
+  changeFlags:
+    lowLightVision: true
+  changes:
+    - _id: eA8BYlpw
+      formula: '5'
+      target: skill.per
+      type: competence
+    - _id: U9dvj5SC
+      formula: '120'
+      operator: set
+      target: sensedv
+      type: untyped
+  description:
+    value: >-
+      <p>Grants +10 competence bonus on Perception checks, Low-Light Vision and
+      Darkvision 120 ft. while active as per
+      @UUID[Compendium.pf1.technology.Item.eecEg8w7FECEclV5].</p>
+  duration:
+    end: initiative
+    units: hour
+    value: '1'
+  sources:
+    - id: PZO9272
+      pages: '61'
+  subType: item
+type: buff

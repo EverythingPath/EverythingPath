@@ -1,0 +1,76 @@
+_id: yGrLgCtNMMV9cUvt
+_key: '!items!yGrLgCtNMMV9cUvt'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: icons/weapons/thrown/ball-spiked.webp
+name: Caltrops
+system:
+  actions:
+    - _id: fYunecqFrSBmcWnN
+      actionType: mwak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      attackBonus: '-@size[Size]'
+      bab: '0'
+      damage:
+        parts:
+          - formula: '1'
+            types:
+              - untyped
+      name: Attack
+      notes:
+        footer:
+          - >-
+            If the creature is wearing shoes or other footwear, it gets a +2
+            armor bonus to AC.
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: FbzhZuexuXZwf7h0
+      activation:
+        type: move
+        unchained:
+          cost: 2
+          type: action
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Use
+  description:
+    value: >-
+      <p>A caltrop is a four-pronged metal spike crafted so that one prong
+      always faces up no matter how the caltrop comes to rest. You scatter
+      caltrops on the ground in the hope that your enemies step on them or are
+      at least forced to slow down to avoid them. One 2-pound bag of caltrops
+      covers an area 5 feet square.</p><p>Each time a creature moves into an
+      area covered by caltrops (or spends a round fighting while standing in
+      such an area), it runs the risk of stepping on one. Make an attack roll
+      for the caltrops (base attack bonus +0) against the creature. For this
+      attack, the creature’s shield, armor, and deflection bonuses do not count.
+      If the creature is wearing shoes or other footwear, it gets a +2 armor
+      bonus to AC. If the attack succeeds, the creature has stepped on a
+      caltrop. The caltrop deals 1 point of damage, and the creature’s speed is
+      reduced by half because its foot is wounded. This movement penalty lasts
+      for 24 hours, until the creature is successfully treated with a DC 15 Heal
+      check, or until it receives at least 1 point of magical healing. A
+      charging or running creature must immediately stop if it steps on a
+      caltrop. Any creature moving at half speed or slower can pick its way
+      through a bed of caltrops with no trouble.</p><p>Caltrops may not work
+      against unusual opponents.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 1
+  sources:
+    - id: PZO1123
+      pages: '56'
+    - id: PZO1110
+      pages: 155, 158
+  subType: adventuring
+  uses:
+    per: single
+  weight:
+    value: 2
+type: loot

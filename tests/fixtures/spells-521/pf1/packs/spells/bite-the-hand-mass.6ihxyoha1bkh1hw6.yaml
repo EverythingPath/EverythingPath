@@ -1,0 +1,58 @@
+_id: 6ihxyoha1bkh1hw6
+_key: '!items!6ihxyoha1bkh1hw6'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Bite the Hand, Mass
+system:
+  actions:
+    - _id: holcmpxdess1d38t
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          one creature summoned by a spell or spell-like ability/level, no two
+          of which can be more than 30 ft. apart
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.i8kzwa73sjjd07v4]{bite the hand}, except
+      as noted above.</p><p>The target creatures do not need to have all been
+      summoned by the same being.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      druid: 6
+      hunter: 6
+      inquisitor: 6
+      sorcerer: 7
+      summoner: 6
+      witch: 7
+      wizard: 7
+  level: 7
+  school: enc
+  sources:
+    - id: PZO9235
+      pages: '57'
+  subschool:
+    - compulsion
+type: spell

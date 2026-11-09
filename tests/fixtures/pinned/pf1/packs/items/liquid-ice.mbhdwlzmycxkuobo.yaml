@@ -1,0 +1,104 @@
+_id: mbhdwlzmycxkuobo
+_key: '!items!mbhdwlzmycxkuobo'
+_stats:
+  coreVersion: '12.343'
+folder: kB3UEM2uyAcNWHIc
+img: systems/pf1/icons/items/potions/minor-blue.jpg
+name: Liquid Ice
+system:
+  actions:
+    - _id: nGeKcaVkpiW0sIOX
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - cold
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#00ccff'
+        size: '5'
+        type: circle
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      touch: true
+    - _id: wKjf0zKqtfzvsl5M
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: 1d6
+      name: Evaporate
+      range:
+        units: melee
+      target:
+        value: Liquid or object
+  baseTypes:
+    - Liquid Ice
+  description:
+    value: >-
+      <p>Also known as "alchemist's ice," this sealed jar of crystalline blue
+      fluid immediately starts to evaporate once opened. During the next 1d6
+      rounds, you can use it to freeze a liquid or to coat an object in a thin
+      layer of ice. You can also throw liquid ice as a <em>splash weapon</em>. A
+      direct hit deals 1d6 points of cold damage; creatures within 5 feet of
+      where it hits take 1 point of cold damage from the
+      splash.</p><h3>Construction</h3><p><strong>Craft (alchemy)</strong> DC
+      25</p><h3>Alchemical Power Component</h3><p>Liquid ice augments cold
+      magic.</p><ul><li>@UUID[Compendium.pf1.spells.Item.pkm8um5t1cxsn6jh]{Cone
+      of Cold} (M): The spell deals +1 point of damage per <em>caster
+      level</em>.</li><li>@UUID[Compendium.pf1.spells.Item.vdmsaodgnbo8wjfx]{Gentle
+      Repose} (M): The spell's duration increases to 2 days per
+      level.</li><li>@UUID[Compendium.pf1.spells.Item.n879x6fw79jiofew]{Ray of
+      Frost} (F): The spell deals +1 point of
+      damage.</li><li>@UUID[Compendium.pf1.spells.Item.n879x6fw79jiofew]{Ray of
+      Frost} (M): The spell creates an icicle of frozen water vapor that strikes
+      the target and deals 1d3 points of piercing damage and 1 point of cold
+      damage.</li><li>@UUID[Compendium.pf1.spells.Item.1vh2ewwvzvxunoxk]{Protection
+      from Energy} (M): If cast to ward against fire, increase the amount of
+      fire damage absorbed by
+      5.</li><li>@UUID[Compendium.pf1.spells.Item.tkjnm3lw7ni82tag]{Resist
+      Energy} (M): If cast to ward against fire, increase the fire
+      <em>resistance</em> to 12. At <em>caster level</em> 7th, you may use two
+      jars of liquid ice as a power component to increase the fire
+      <em>resistance</em> to 24. At <em>caster level</em> 11th, you may use
+      three jars as a power component to increase the fire <em>resistance</em>
+      to 36.</li></ul><p><sup>(M): the alchemical item is expend as a material
+      component.;<br />(F): the item is used as a focus and is not
+      expend.</sup></p>
+  equipped: false
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 40
+  proficient: true
+  sources:
+    - id: PZO1123
+      pages: '107'
+    - id: PZO1115
+      pages: '184'
+    - id: PZO9410
+      pages: '19'
+  subType: misc
+  tags:
+    - Power Component
+  uses:
+    per: single
+  weaponSubtype: splash
+  weight:
+    value: 2
+type: weapon

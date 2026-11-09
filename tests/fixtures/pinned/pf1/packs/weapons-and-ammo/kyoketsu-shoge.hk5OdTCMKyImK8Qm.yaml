@@ -1,0 +1,67 @@
+_id: hk5OdTCMKyImK8Qm
+_key: '!items!hk5OdTCMKyImK8Qm'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/ankus.png
+name: Kyoketsu Shoge
+system:
+  actions:
+    - _id: yjeovdnai58wb79i
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '20'
+  baseTypes:
+    - Kyoketsu Shoge
+  description:
+    unidentified: >-
+      <p>This weapon consists of a foot-long double-edged blade, with another
+      smaller, curved hook-blade sticking out the side like a rooster's spur.
+      The blade is strung to a large iron hoop with a 10-foot length of rope.
+      The blade can be used as an off-handed melee weapon or thrown like a
+      dagger, while the rope and circlet can be whipped around and swung at
+      opponents as a bludgeoning reach weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 6
+  properties:
+    dis: true
+    grp: true
+    mnk: true
+    rch: true
+  sources:
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - flails
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 1
+type: weapon

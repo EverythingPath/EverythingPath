@@ -1,0 +1,61 @@
+_id: zsz4gewjgec5p6pi
+_key: '!items!zsz4gewjgec5p6pi'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/creatures/magical/fae-fairy-winged-glowing-green.webp
+name: Hold Fey
+system:
+  actions:
+    - _id: 6i6h05ga0ycbl7bu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (D); see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one fey creature
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as per <i>hold person</i>, except it affects a fey
+      instead of a humanoid.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      skald: 2
+      sorcerer: 3
+      warpriest: 2
+      witch: 2
+      wizard: 3
+  level: 3
+  materials:
+    focus: a small, straight piece of iron
+  school: enc
+  sources:
+    - id: PZO9298
+      pages: '12'
+  subschool:
+    - compulsion
+type: spell
