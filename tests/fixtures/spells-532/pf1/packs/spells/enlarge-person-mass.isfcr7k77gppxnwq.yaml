@@ -1,0 +1,56 @@
+_id: isfcr7k77gppxnwq
+_key: '!items!isfcr7k77gppxnwq'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/control/silhouette-grow-shrink-tan.webp
+name: Enlarge Person, Mass
+system:
+  actions:
+    - _id: j2d7zs4xijer3f1p
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: >-
+          One humanoid creature/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      <em>@UUID[Compendium.pf1.spells.jnlr9cuepka1l26e]{enlarge person}</em>,
+      except that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      magus: 4
+      psychic: 4
+      sorcerer: 4
+      summoner: 3
+      summonerUnchained: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: powdered iron
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '278'
+type: spell

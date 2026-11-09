@@ -1,0 +1,50 @@
+_id: 5t62v90lidkv3sml
+_key: '!items!5t62v90lidkv3sml'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Challenge Evil
+system:
+  actions:
+    - _id: rzyhskoj6cyyp0jd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one evil creature
+  components:
+    divineFocus: 1
+    verbal: true
+  description:
+    value: >-
+      <p>You challenge an evil creature to bring the fight to you, or suffer the
+      consequences. You gain a +2 sacred bonus on all melee attacks against the
+      subject of the spell. At the end of its turn, if the target has not made
+      at least one attack on you, it becomes sickened. If you move away from the
+      target, the spell ends.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      paladin: 1
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '210'
+  subschool:
+    - compulsion
+type: spell

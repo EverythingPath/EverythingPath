@@ -1,0 +1,65 @@
+_id: tSvbLpTfOIUnoGd0
+_key: '!items!tSvbLpTfOIUnoGd0'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-repeating.PNG
+name: Repeating Light Crossbow
+system:
+  actions:
+    - _id: x4wazts2gkdokb9o
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: repeatingBolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: repeatingBolt
+  baseTypes:
+    - Repeating Light Crossbow
+  description:
+    unidentified: >-
+      <p>This weapon functions identically to a repeating heavy crossbow, except
+      that its damage, critical, and range values are equivalent to those of a
+      light crossbow instead of a heavy crossbow. Its significantly lighter
+      construction and pull make it both more portable and more useful to those
+      who rely on stealth or speed.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 250
+  sources:
+    - id: PZO1110
+      pages: 143, 145
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 6
+type: weapon

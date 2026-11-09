@@ -1,0 +1,64 @@
+_id: bgtmki0xl4xl4y91
+_key: '!items!bgtmki0xl4xl4y91'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/claws/claw-talons-glowing-orange.webp
+name: Magic Fang, Greater
+system:
+  actions:
+    - _id: zvnt4io82y8dt1aj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.cfzk3vkv1c7ncaug]{Magic Fang}, except that the
+      enhancement bonus on attack and damage rolls is +1 per four caster levels
+      (maximum +5). This bonus does not allow a natural weapon or unarmed strike
+      to bypass damage reduction aside from magic.</p>
+
+      <p>Alternatively, you may imbue all of the creature's natural weapons with
+      a +1 enhancement bonus (regardless of your caster level).</p>
+
+      <p>Greater <em>magic fang</em> can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{Permanency} spell.</p>
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      ranger: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+    domain:
+      Scalykind: 3
+    subDomain:
+      Cannibalism: 3
+      Fist: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '309'
+type: spell
