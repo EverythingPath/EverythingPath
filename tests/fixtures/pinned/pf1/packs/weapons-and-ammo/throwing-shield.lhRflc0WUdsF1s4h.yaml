@@ -1,0 +1,60 @@
+_id: lhRflc0WUdsF1s4h
+_key: '!items!lhRflc0WUdsF1s4h'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/shield-throwing.PNG
+name: Throwing Shield
+system:
+  actions:
+    - _id: kgtvvi21ghqroc3r
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Throwing Shield
+  description:
+    unidentified: >-
+      <p>This shield is designed for throwing and has specially designed straps
+      that allow you to unclasp and throw it as a free action. Tower shields
+      cannot be throwing shields. Neither a shield's enhancement bonus to AC nor
+      its shield spikes apply on your attack or damage rolls. A throwing shield
+      can't be disarmed.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    prf: true
+    trp: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+type: weapon

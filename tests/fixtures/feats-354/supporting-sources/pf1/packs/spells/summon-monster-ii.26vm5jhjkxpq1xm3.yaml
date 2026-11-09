@@ -1,0 +1,62 @@
+_id: 26vm5jhjkxpq1xm3
+_key: '!items!26vm5jhjkxpq1xm3'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/magical/humanoid-silhouette-glowing-pink.webp
+name: Summon Monster II
+system:
+  actions:
+    - _id: 49w4ckwi2g3xck7c
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except that you can
+      summon one creature from the 2nd-level list or 1d3 creatures of the same
+      kind from the 1st-level list.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      medium: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      spiritualist: 2
+      summoner: 2
+      summonerUnchained: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    focus: a tiny bag and a small candle
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '352'
+  sr: false
+  subschool:
+    - summoning
+type: spell

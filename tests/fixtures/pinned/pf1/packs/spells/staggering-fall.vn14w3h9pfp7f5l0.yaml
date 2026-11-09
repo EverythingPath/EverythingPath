@@ -1,0 +1,55 @@
+_id: vn14w3h9pfp7f5l0
+_key: '!items!vn14w3h9pfp7f5l0'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Staggering Fall
+system:
+  actions:
+    - _id: atj3i6p7q5o7wqs0
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: spec
+        value: 1 round/level (see below)
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fort. partial (see below)
+        type: fort
+      target:
+        value: one falling creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell must be cast on a creature as it falls, either from a height
+      or after being knocked prone or tripped. The magic of this spell causes
+      the creature to hit the ground particularly hard, knocking the wind from
+      it. The creature takes an additional 1d6 points of damage from the fall.
+      In addition, the creature becomes staggered for the duration of the spell
+      unless it makes a Will save. Each round the spell's effects persist, the
+      creature may attempt a new Will save as a free action to end the staggered
+      effect early. A creature under the effects of this spell must take a
+      standard action to stand up.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      oracle: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO9232
+      pages: '35'
+type: spell

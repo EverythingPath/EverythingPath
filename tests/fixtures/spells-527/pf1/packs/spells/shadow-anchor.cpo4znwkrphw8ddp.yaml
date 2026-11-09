@@ -1,0 +1,66 @@
+_id: cpo4znwkrphw8ddp
+_key: '!items!cpo4znwkrphw8ddp'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Shadow Anchor
+system:
+  actions:
+    - _id: icg647mpovecgk2u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (D); see text
+      effect: a shadowy shadow tether
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>The target's shadow becomes a flexible tether to its current square.
+      The creature can move up to 5 feet from that square without penalty.
+      Moving farther than 5 feet from the tether point requires the target to
+      make a bull rush combat maneuver check against a CMB of 10 + 1/2 your
+      caster level + your Intelligence modifier (if a witch or wizard) or
+      Charisma modifier (if a bard or sorcerer). The target takes a -1 penalty
+      for every 5 feet of distance between it and its tethered square. Failing
+      this check means the target's move is wasted and it cannot move farther
+      away. If it fails this check by 10 or more, it is pulled 5 feet toward the
+      tether square and is knocked prone. If it beats the check by 10 or more,
+      the spell ends. This spell does not work on creatures that do not cast
+      shadows or reflections. If the target uses a teleportation effect or
+      leaves the current plane, the spell ends.</p>
+  descriptors:
+    - shadow
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1121
+      pages: '211'
+  subschool:
+    - shadow
+type: spell

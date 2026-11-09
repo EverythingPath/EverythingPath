@@ -1,0 +1,68 @@
+_id: auqa5b0x0een6jcm
+_key: '!items!auqa5b0x0een6jcm'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Trace Teleport
+system:
+  actions:
+    - _id: hhbgb68jlz9we17t
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40-ft.-radius emanation centered on you
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '40'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You immediately become aware of any <i>teleport</i>ation effects that
+      begin or end within the spell's area. The spell's area radiates from you
+      and moves as you move. You know the exact origin point of any
+      <i>teleport</i>ation effect that originates within the spell's area, and
+      the exact end point of any <i>teleport</i>ation effect that terminates
+      within the spell's area. Further, you can detect the lingering traces of
+      any <i>teleport</i>ation effect that occurred up to 1 hour previously, in
+      the same fashion. You intuitively know, to the nearest minute, when the
+      <i>teleport</i>ation effect occurred.  Whenever you detect the origin
+      point or termination point of any <i>teleport</i>ation effect with this
+      spell, you can study that origin point or termination point for 1 round.
+      If you do, you can attempt a caster level check (DC = 11 + the
+      <i>teleport</i>ation effect's caster level), taking a -5 penalty if the
+      effect occurred more than 1 minute ago. If you succeed, you gain a glimpse
+      of the <i>teleport</i>ation effect's termination point (if you detected an
+      origin point) or origin point (if you detected a termination point). This
+      glimpse lasts long enough for you to get a brief look at the area, but not
+      long enough to scrutinize it in detail. It doesn't come with any
+      geographic knowledge of the location, so it is not sufficient for
+      <i>teleport</i> or similar magic. You can't retry the caster level check,
+      even if you cast trace <i>teleport</i> again.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      psychic: 4
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: a magnifying lens
+  school: div
+  sources:
+    - id: PZO1134
+      pages: '226'
+  sr: false
+type: spell
