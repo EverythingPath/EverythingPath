@@ -1,0 +1,78 @@
+_id: xuuzj9lr2xbwaim4
+_key: '!items!xuuzj9lr2xbwaim4'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Overwhelming Presence
+system:
+  actions:
+    - _id: umk2jg41y5lq6yz2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates, see text
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your presence inspires incredible awe in those nearby. A creature that
+      fails a save against this spell falls to the ground and prostrates itself
+      before you, believing it bows before a divine presence. A flying creature
+      incapable of hovering must land immediately in order to prostrate itself.
+      These creatures are considered to be helpless for the duration of the
+      spell.</p><p>Each round on its turn, a target of this spell may attempt a
+      new saving throw to end the effect; this is a full-round action that does
+      not provoke attacks of opportunity. A creature that recovers from this
+      spell early after being affected by it for at least 1 round takes 1d6
+      points of Wisdom drain and is staggered for 1d4 rounds. A creature that
+      makes the initial save to resist this spell is merely staggered for 1
+      round.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Imperious: 9
+      Martyred: 9
+    class:
+      arcanist: 9
+      bard: 6
+      cleric: 9
+      inquisitor: 6
+      mesmerist: 6
+      oracle: 9
+      psychic: 4
+      skald: 6
+      sorcerer: 9
+      wizard: 9
+    subDomain:
+      Aristocracy: 9
+  level: 9
+  materials:
+    value: a swan feather
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '230'
+  subschool:
+    - compulsion
+type: spell

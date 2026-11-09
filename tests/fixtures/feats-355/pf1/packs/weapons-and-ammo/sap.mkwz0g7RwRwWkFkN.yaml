@@ -1,0 +1,60 @@
+_id: mkwz0g7RwRwWkFkN
+_key: '!items!mkwz0g7RwRwWkFkN'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/sap.png
+name: Sap
+system:
+  actions:
+    - _id: mwxgnu5mxmfwrb35
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Sap
+  description:
+    unidentified: >-
+      <p>This weapon consists of a soft wrapping around a hard, dense core,
+      typically a leather sheath around a lead rod. The head is wider than the
+      handle and designed to spread out the force of the blow, making it less
+      likely to draw blood or break bones.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    fin: true
+    nnl: true
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - close
+  weight:
+    value: 2
+type: weapon

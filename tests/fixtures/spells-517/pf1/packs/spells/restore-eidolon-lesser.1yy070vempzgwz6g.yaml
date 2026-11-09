@@ -1,0 +1,48 @@
+_id: 1yy070vempzgwz6g
+_key: '!items!1yy070vempzgwz6g'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Restore Eidolon, Lesser
+system:
+  actions:
+    - _id: 4kdgurs9v7ixsa0r
+      actionType: heal
+      activation:
+        cost: 3
+        type: round
+        unchained:
+          cost: 9
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: eidolon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.fxz69pwpqt9b6uss]{lesser restoration},
+      except it only affects an eidolon.</p>
+  learnedAt:
+    class:
+      summoner: 2
+      summonerUnchained: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '235'
+  subschool:
+    - healing
+type: spell

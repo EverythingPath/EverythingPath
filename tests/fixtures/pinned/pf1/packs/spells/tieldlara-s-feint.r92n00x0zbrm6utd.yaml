@@ -1,0 +1,57 @@
+_id: r92n00x0zbrm6utd
+_key: '!items!r92n00x0zbrm6utd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Tieldlara's Feint
+system:
+  actions:
+    - _id: 7ttwyz6hxt9hg3rj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a lascivious wink and a sensuous sway, you flood a foe's mind with
+      lustful thoughts of you, distracting your target and rendering that
+      creature vulnerable to your attacks. An affected creature takes a penalty
+      equal to half your caster level on concentration checks and to its CMD
+      against dirty trickAPG, grapple, and steal combat maneuvers you perform.
+      The creature is also denied its Dexterity bonus to AC for the first melee
+      attack you make against it each round. If the target would not normally be
+      sexually attracted to you, it receives a +4 bonus on its saving throw. If
+      you end your turn more than 20 feet from the target or end your turn where
+      your target cannot see you, this spell immediately ends.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      skald: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1138
+      pages: '27'
+  subschool:
+    - charm
+type: spell
