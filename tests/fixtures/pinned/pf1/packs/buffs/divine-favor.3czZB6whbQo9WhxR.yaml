@@ -1,0 +1,32 @@
+_id: 3czZB6whbQo9WhxR
+_key: '!items!3czZB6whbQo9WhxR'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/skills/weapon_42.jpg
+name: Divine Favor
+system:
+  changes:
+    - _id: ha13jllu
+      formula: clamp(floor(@item.level / 3), 1, 3)
+      target: attack
+      type: luck
+    - _id: 4n037d0l
+      formula: clamp(floor(@item.level / 3), 1, 3)
+      target: wdamage
+      type: luck
+  description:
+    instructions: <p>Set the buff's level equal to the caster level Divine Favor.</p>
+    value: >-
+      <p>You have a luck bonus to attack rolls and weapon damage rolls as per
+      @UUID[Compendium.pf1.spells.Item.21bxbzdaawjrnvyo] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '273'
+  subType: spell
+type: buff

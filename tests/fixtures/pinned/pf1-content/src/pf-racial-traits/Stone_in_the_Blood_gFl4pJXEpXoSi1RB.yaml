@@ -1,0 +1,51 @@
+_id: gFl4pJXEpXoSi1RB
+_key: '!items!gFl4pJXEpXoSi1RB'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Stone in the Blood
+system:
+  actions:
+    - _id: kSmf64Xi2k4wOvw1
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: '1'
+      name: Fast healing 2 (after acid damage)
+      notes:
+        effect:
+          - '@Heal[2]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Earth,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.MtvuVPQzQH0cULmd]{Construct}
+      type,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M7iCedGNTrldJq5R]{Dragon}
+      type, or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.3zmCFKlW8eB3B9B9]{Half-Construct}subtype</p><hr
+      /><p>Members of this race gaining fast healing 2 for 1 round anytime they
+      take acid damage (whether or not this acid damage overcomes their acid
+      resistance, if any). A member of this race can heal up to 2 hit points per
+      level per day with this ability, after which it ceases to function.</p>
+  racePoints: 3
+  sources:
+    - id: PZO1121
+      pages: 223-224
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+  uses:
+    maxFormula: '@attributes.hd.total'
+    per: day
+    value: 0
+type: feat

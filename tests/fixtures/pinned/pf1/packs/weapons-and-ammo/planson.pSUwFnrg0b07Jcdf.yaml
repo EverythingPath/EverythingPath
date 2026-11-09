@@ -1,0 +1,61 @@
+_id: pSUwFnrg0b07Jcdf
+_key: '!items!pSUwFnrg0b07Jcdf'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/planson.png
+name: Planson
+system:
+  actions:
+    - _id: n29wdx49bmgewkrg
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Planson
+  description:
+    unidentified: >-
+      <p>This 5-foot tapered pole is bound in metal with a narrow metal spike
+      projecting from the top. The planson can be used as a club or as a sturdy,
+      if top-heavy, spear to stop a charge.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    brc: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - hammers
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

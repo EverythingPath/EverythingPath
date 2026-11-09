@@ -1,0 +1,180 @@
+_id: p68lfzn3r57xxs9u
+_key: '!items!p68lfzn3r57xxs9u'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/environment/traps/metal-spikes.webp
+name: Conjure Deadfall
+system:
+  actions:
+    - _id: 8ksfbg47gi4aw83q
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      damage:
+        parts:
+          - formula: (min(@cl, 15))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      effect: one spiked, falling block
+      measureTemplate:
+        color: '#8f8f8f'
+        size: '5'
+        type: rect
+      name: 5-Foot Square Block
+      range:
+        units: medium
+      save:
+        description: Reflex negates (see text)
+        type: ref
+    - _id: kqGnhLjmIrXrnSy1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      damage:
+        parts:
+          - formula: (floor(min(@cl, 15) / 2))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      effect: one spiked, falling block
+      measureTemplate:
+        color: '#8f8f8f'
+        size: '10'
+        type: rect
+      name: 10-Foot Square Block
+      range:
+        units: medium
+      save:
+        description: Reflex negates (see text)
+        type: ref
+    - _id: vhAC1X1p4OHAw4iK
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      damage:
+        parts:
+          - formula: (floor(min(@cl, 15) / 3))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      effect: one spiked, falling block
+      measureTemplate:
+        color: '#8f8f8f'
+        size: '15'
+        type: rect
+      name: 15-Foot Square Block
+      range:
+        units: medium
+      save:
+        description: Reflex negates (see text)
+        type: ref
+    - _id: Mxgk8o2rqlDGKZnC
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      damage:
+        parts:
+          - formula: (floor(min(@cl, 15) / 4))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      effect: one spiked, falling block
+      measureTemplate:
+        color: '#8f8f8f'
+        size: '20'
+        type: rect
+      name: 20-Foot Square Block
+      range:
+        units: medium
+      save:
+        description: Reflex negates (see text)
+        type: ref
+    - _id: PfIoAKYkaZqRBNA4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      damage:
+        parts:
+          - formula: (floor(min(@cl, 15) / 5))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      effect: one spiked, falling block
+      measureTemplate:
+        color: '#8f8f8f'
+        size: '25'
+        type: rect
+      name: 25-Foot Square Block
+      range:
+        units: medium
+      save:
+        description: Reflex negates (see text)
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You conjure a large metal cube covered in sharp spikes. If you conjure
+      the block so that it appears in midair, it immediately plummets downward
+      onto all creatures below it. When you cast this spell, you select the size
+      of the square area you wish it to affect. If you choose to create a
+      deadfall over a single 5-foot square, the block deals 1d6 points of
+      bludgeoning damage per caster level (maximum 15d6) to each creature in the
+      area. A deadfall over a 10-foot square deals 1d6 points of bludgeoning
+      damage per 2 caster levels (maximum 7d6), a deadfall over a 15- foot
+      square deals 1d6 points of bludgeoning damage per 3 caster levels (maximum
+      5d6), and so on, to a maximum size of a 25- foot square. Only creatures
+      that are on the outer edge of the area affected by a <i>conjure
+      deadfall</i> spell can attempt Reflex saves to avoid the effect; creatures
+      whose space does not touch the edge of the deadfall do not receive a
+      save.  In order to deal damage, the conjured deadfall must start at least
+      10 feet above the tallest creature in the area to be affected. A conjured
+      deadfall is as tall as it is wide, and the spell fails if you attempt to
+      conjure a deadfall in an area already occupied by a creature or object
+      (including the ceiling). Regardless, a deadfall conjured by this spell
+      disappears as soon as it deals damage or strikes the ground.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      magus: 5
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: fistful of mithral tacks
+  school: con
+  sources:
+    - id: PZO9430
+      pages: '30'
+  subschool:
+    - creation
+type: spell

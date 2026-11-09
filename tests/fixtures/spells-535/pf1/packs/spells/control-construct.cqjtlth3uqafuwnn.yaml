@@ -1,0 +1,52 @@
+_id: cqjtlth3uqafuwnn
+_key: '!items!cqjtlth3uqafuwnn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/magical/construct-iron-stomping-yellow.webp
+name: Control Construct
+system:
+  actions:
+    - _id: or8b2v5tien0u4jh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Use
+      range:
+        units: close
+      save:
+        description: none (see text)
+      target:
+        value: one construct
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You wrest the control of a construct from its master. For as long as
+      you concentrate, you can control the construct as if you were its master.
+      You must make a Spellcraft check each round to maintain control. The DC of
+      the Spellcraft check is (10 + the construct's HD). If the construct's
+      creator or master is present and trying to control the construct, you both
+      must make opposed Spellcraft checks each round to control the
+      construct.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      occultist: 6
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '211'
+  sr: false
+type: spell
