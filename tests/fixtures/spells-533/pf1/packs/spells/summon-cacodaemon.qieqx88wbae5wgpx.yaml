@@ -1,0 +1,55 @@
+_id: qieqx88wbae5wgpx
+_key: '!items!qieqx88wbae5wgpx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Cacodaemon
+system:
+  actions:
+    - _id: zx6hkew3rc6gumhk
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except it summons a
+      single cacodaemon.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      oracle: 2
+      sorcerer: 2
+      summoner: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    focus: a silver hook
+  school: con
+  sources:
+    - id: PZO9239
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

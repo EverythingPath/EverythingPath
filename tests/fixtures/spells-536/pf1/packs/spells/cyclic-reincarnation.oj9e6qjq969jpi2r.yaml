@@ -1,0 +1,63 @@
+_id: oj9e6qjq969jpi2r
+_key: '!items!oj9e6qjq969jpi2r'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Cyclic Reincarnation
+system:
+  actions:
+    - _id: rytznxf7s0qd3dvr
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none, see text
+      target:
+        value: dead creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell allows a dead creature that died no more than 1 year before
+      the casting of the spell to return to life in a body that closely
+      resembles its original body; it functions as
+      @UUID[Compendium.pf1.spells.Item.3w1ozzzf8hk0gdzm]{reincarnate} except as
+      noted. <em>Cyclic reincarnation</em> returns the dead creature to life in
+      a new body of the same race that the target belonged to in life, and the
+      new body appears physically similar to the creature's previous one, to the
+      extent that the creature could be easily mistaken for its own offspring or
+      kin. If the affected creature isn't a humanoid, there is a 75% chance that
+      the creature returns to life as a youth of its race, gaining the young
+      creature simple template instead (or becomes a juvenile, in the case of
+      dragons and other creatures whose power is determined by their age
+      category). You can use <em>cyclic reincarnation</em> on someone who was
+      killed by a death effect or turned into an undead creature and then
+      destroyed, but nonhumanoids so restored always return to life with the
+      young creature simple template (or as a juvenile, in the case of creatures
+      whose power is determined by their age category).</p>
+  learnedAt:
+    class:
+      druid: 6
+      hunter: 6
+  level: 6
+  materials:
+    gpValue: 5000
+    value: oils worth 5,000 gp
+  school: trs
+  sources:
+    - id: PZO9465
+      pages: '13'
+type: spell

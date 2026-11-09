@@ -1,0 +1,49 @@
+_id: 1fkax61jr972560l
+_key: '!items!1fkax61jr972560l'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Create Variant Mummy
+system:
+  actions:
+    - _id: g32jxsin1rnrf28u
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: 1 corpse steeped in a peat bog for at least 24 hours
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.c1e7f0ct04k270wy]{create undead}, except
+      it creates one of the following variant mummies: <em>bog mummy</em>,
+      <em>ice mummy</em>, or <em>Osirian tomb guardian</em>.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      oracle: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: onyx gems worth 50 gp per HD of the undead to be created
+  school: nec
+  sources:
+    - id: PZO9081
+      pages: '73'
+  sr: false
+type: spell

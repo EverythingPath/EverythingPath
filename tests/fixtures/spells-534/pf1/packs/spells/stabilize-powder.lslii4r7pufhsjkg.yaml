@@ -1,0 +1,51 @@
+_id: lslii4r7pufhsjkg
+_key: '!items!lslii4r7pufhsjkg'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Stabilize Powder
+system:
+  actions:
+    - _id: bgkx7yj3qfnj0gt7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: 1 loaded firearm
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Ammunition currently loaded in the target firearm is less prone to
+      misfire. Decrease the misfire range by 1 + 1 per five caster levels
+      (maximum +5, minimum misfire 0) for the ammunition currently loaded into
+      that firearm.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a few drops of liquor
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '245'
+type: spell

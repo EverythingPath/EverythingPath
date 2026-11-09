@@ -1,0 +1,66 @@
+_id: RY3sfrMSDs0OGLAH
+_key: '!items!RY3sfrMSDs0OGLAH'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/flail-dire.png
+name: Dire Flail
+system:
+  actions:
+    - _id: 3cv4jcx6uxmzass3
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Dire Flail
+  description:
+    unidentified: >-
+      <p>A dire flail consists of two spheres of spiked iron dangling from
+      chains at opposite ends of a long haft. This weapon excels at short but
+      powerful strikes, and is typically swung in a constant churning motion.
+      The wielder of a dire flail must have great strength, both to use the
+      weapon effectively and to keep from tiring out.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 90
+  properties:
+    dbl: true
+    dis: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 146
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - double
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,48 @@
+_id: 62eepdqfnmyrawcn
+_key: '!items!62eepdqfnmyrawcn'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Deadly Finale
+system:
+  actions:
+    - _id: ghnfs1b0ria5rheq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: 1 creature/3 levels no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You must have a bardic performance in effect to cast this
+      spell.</p><p>With a flourish, you immediately end your performance,
+      dealing 2d8 points of sonic damage to each target. In addition, each
+      target takes 3d6 points of bleed damage for 1d6 rounds. A save negates the
+      bleed damage but not the sonic damage.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 6
+      skald: 6
+  level: 6
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '214'
+type: spell
