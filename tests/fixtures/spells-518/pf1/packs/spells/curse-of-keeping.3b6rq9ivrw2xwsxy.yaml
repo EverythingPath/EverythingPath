@@ -1,0 +1,58 @@
+_id: 3b6rq9ivrw2xwsxy
+_key: '!items!3b6rq9ivrw2xwsxy'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Curse of Keeping
+system:
+  actions:
+    - _id: ow43bd5n9il9kgh2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You curse the target with the inability to sell, barter, or give away
+      any item it owns, other than ordinary currency, for as long as the spell
+      remains in effect. The target cannot sell, trade, drop, or give away
+      possessions. The target can purchase items using ordinary currency but
+      can't then sell the purchased items. The target can accept gifts from
+      others but can't offer anything in exchange. A <i>Curse of Keeping</i> can
+      be ended by <i>break enchantment</i>, <i>limited wish</i>, <i>remove
+      curse</i>, <i>miracle</i>, or <i>wish</i>. <i>Dispel magic</i> does not
+      affect a <i>Curse of Keeping</i>.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 2
+      mesmerist: 2
+      shaman: 2
+      witch: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9462
+      pages: '30'
+  subschool:
+    - compulsion
+type: spell

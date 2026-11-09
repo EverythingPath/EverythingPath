@@ -1,0 +1,63 @@
+_id: 14chms7xurvi85x9
+_key: '!items!14chms7xurvi85x9'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/birds/raptor-owl-flying-moon.webp
+name: Owl's Wisdom, Mass
+system:
+  actions:
+    - _id: 18rgfx9txapi2nrq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.b9ggsagifzk4fwut]{owl's wisdom}, except
+      that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      druid: 6
+      hunter: 6
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      sorcerer: 6
+      summoner: 4
+      summonerUnchained: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: feathers or droppings from an owl
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '318'
+type: spell

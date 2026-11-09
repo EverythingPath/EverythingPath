@@ -1,0 +1,68 @@
+_id: t44p3oeq43jwcgwg
+_key: '!items!t44p3oeq43jwcgwg'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/magical/spirit-undead-winged-ghost.webp
+name: Polymorph, Greater
+system:
+  actions:
+    - _id: u4q29s3vrk8s7wb9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: living creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.d40ia71c2eljm91k]{Polymorph} except that it
+      allows the creature to take on the form of a dragon or plant creature. If
+      you use this spell to cause the target to take on the form of an animal or
+      magical beast, it functions as
+      @UUID[Compendium.pf1.spells.br37848gchetel0q]{Beast Shape IV}. If the form
+      is that of an elemental, the spell functions as
+      @UUID[Compendium.pf1.spells.hd32fuc6e7j4isbn]{Elemental Body
+      III}<em>.</em> If the form is that of a humanoid, the spell functions as
+      @UUID[Compendium.pf1.spells.kouqz0pm1xl8xilm]{Alter Self}. If the form is
+      that of a plant, the spell functions as
+      @UUID[Compendium.pf1.spells.ik4riccm7tozdwox]{Plant Shape II}<em>.</em> If
+      the form is that of a dragon, the spell functions as
+      @UUID[Compendium.pf1.spells.iqcjiyi9leldfzxt]{Form of the Dragon
+      I}<em>.</em> The subject may choose to resume its normal form as a
+      full-round action; doing so ends the spell.</p>
+  learnedAt:
+    bloodline:
+      Protean: 7
+      Rakshasa: 7
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a piece of the creature whose form you choose
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subschool:
+    - polymorph
+type: spell

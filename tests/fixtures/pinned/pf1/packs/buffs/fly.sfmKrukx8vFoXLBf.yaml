@@ -1,0 +1,37 @@
+_id: sfmKrukx8vFoXLBf
+_key: '!items!sfmKrukx8vFoXLBf'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/feats/wind-stance.jpg
+name: Fly
+system:
+  changes:
+    - _id: jjh08fha
+      formula: >-
+        ifelse(or(gt(@attributes.encumbrance.level, 0), gt(@armor.type, 1)), 40,
+        60)
+      operator: set
+      target: flySpeed
+      type: untyped
+    - _id: f2horpm5
+      formula: floor(@item.level / 2)
+      target: skill.fly
+      type: untyped
+  description:
+    instructions: >-
+      <p>Set items level to caster level. Adjust fly maneuverability to Good
+      upon activation and revert upon deactivation.</p>
+    value: >-
+      <p>Grants fly speed as per
+      @UUID[Compendium.pf1.spells.Item.7d6sv5ecvi7kho3m] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO1110
+      pages: '284'
+  subType: spell
+type: buff
