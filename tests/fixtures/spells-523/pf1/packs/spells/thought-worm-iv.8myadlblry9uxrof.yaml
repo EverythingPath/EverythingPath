@@ -1,0 +1,50 @@
+_id: 8myadlblry9uxrof
+_key: '!items!8myadlblry9uxrof'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Thought Worm IV
+system:
+  actions:
+    - _id: n25honpwesoxmrxp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as per
+      @UUID[Compendium.pf1.spells.Item.3edtpx9oabq3oeeg]{thought worm III},
+      except that the penalty on Will saves is -6 and a target that succeeds at
+      its Will save still takes a -3 penalty on Will saves against your
+      mind-affecting spells and effects for the same duration. This spell can be
+      undercast.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '11'
+  subschool:
+    - compulsion
+type: spell

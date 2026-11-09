@@ -1,0 +1,83 @@
+_id: MtvuVPQzQH0cULmd
+_key: '!items!MtvuVPQzQH0cULmd'
+_stats:
+  coreVersion: '12.331'
+folder: 1OXMUAUKknfsmQAv
+img: systems/pf1/icons/races/creature-types/construct.png
+name: Construct
+system:
+  changeFlags:
+    lowLightVision: true
+  changes:
+    - _id: RxkWk8YJ
+      formula: '60'
+      operator: set
+      target: sensedv
+      type: base
+    - _id: FVxd6Ut3
+      formula: min(3, @size - 2) * 10
+      target: mhp
+      type: untyped
+  contextNotes:
+    - target: fort
+      text: >-
+        Immune to any effect that requires a Fortitude save (unless the effect
+        also works on objects or is harmless).
+
+        This includes death from massive damage. (but are destroyed immediately
+        when reduced to zero hp or below)
+    - target: allSavingThrows
+      text: >-
+        Immune to all mind-affecting effects (charms, compulsions, morale
+        effects, patterns, and phantasms).
+
+        Not subject to ability damage, ability drain, fatigue, exhaustion,
+        energy drain, or nonlethal damage.
+    - target: ac
+      text: >-
+        Not subject to ability damage, ability drain, fatigue, exhaustion,
+        energy drain, or nonlethal damage.
+  description:
+    instructions: >-
+      <p>On the settings tab of you actor, update the hit points ability and
+      fortitude save ability to remove constitution.</p>
+    value: >-
+      <p>A construct race is a group of animated objects or artificially created
+      creatures. A construct race has the following
+      features.</p><ul><li><p>Constructs have no Constitution score. Any DCs or
+      other statistics that rely on a Constitution score treat a construct as
+      having a score of 10 (no bonus or penalty).</p></li><li><p>Constructs have
+      the low-light vision racial trait.</p></li><li><p>Constructs have the
+      darkvision @Distance[60 ft;dual] racial trait.</p></li><li><p>Constructs
+      are immune to all mind-affecting effects (charms, compulsions, morale
+      effects, patterns, and phantasms).</p></li><li><p>Constructs cannot heal
+      damage on their own, but can often be repaired via exposure to a certain
+      kind of effect (depending on the construct’s racial abilities) or through
+      the use of the Craft Construct feat. Constructs can also be healed through
+      spells such as make whole. A construct with the fast healing special
+      quality still benefits from that quality.</p></li><li><p>Constructs are
+      not subject to ability damage, ability drain, fatigue, exhaustion, energy
+      drain, or nonlethal damage.</p></li><li><p>Constructs are immune to any
+      effect that requires a Fortitude save (unless the effect also works on
+      objects or is harmless).</p></li><li><p>Constructs do not risk death due
+      to massive damage, but they are immediately destroyed when reduced to 0
+      hit points or fewer.</p></li><li><p>Constructs cannot be raised or
+      resurrected.</p></li><li><p>Constructs are hard to destroy, and gain bonus
+      hit points based on their size, as shown on the following
+      table.</p></li></ul><table><tbody><tr><th><p>Construct
+      Size</p></th><th><p>Bonus Hit
+      Points</p></th></tr><tr><td><p>Tiny</p></td><td><p>-</p></td></tr><tr><td><p>Small</p></td><td><p>10</p></td></tr><tr><td><p>Medium</p></td><td><p>20</p></td></tr><tr><td><p>Large</p></td><td><p>30</p></td></tr></tbody></table><ul><li><p>Constructs
+      do not breathe, eat, or sleep, unless they want to gain some beneficial
+      effect from one of these activities. This means that a construct can drink
+      potions to benefit from their effects and can sleep in order to regain
+      spells, but neither of these activities is required to survive or stay in
+      good health.</p></li></ul>
+  racePoints: 20
+  sources:
+    - id: PZO1121
+      pages: '216'
+  subType: racial
+  tags:
+    - Race Builder
+  traitType: monstrous
+type: feat

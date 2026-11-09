@@ -1,0 +1,64 @@
+_id: 0jc850iz31ys87vn
+_key: '!items!0jc850iz31ys87vn'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Maddening Oubliette
+system:
+  actions:
+    - _id: vy864wqd2ggqh04u
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target is transported to a dark and dank prison in some unspecified
+      horrific demiplane, where tentacles writhe around, clawed fingers grab at
+      the creature (though they deal no damage), and harsh, whispering voices
+      speak blasphemies and maddening secrets. At the end of each round within
+      this terrifying oubliette, the target can attempt a Will saving throw in
+      order to escape the prison. The saving throw has a penalty equal to the
+      number of rounds the target has spent in the oubliette (minimum -1 and
+      maximum -5). If the target succeeds at its saving throw, it returns to its
+      former space. If that space is occupied or otherwise unavailable, the
+      target is shunted to the nearest available space. When the target returns
+      from the oubliette, it is confused for a number of rounds equal to the
+      number of rounds of imprisonment (minimum 1), unless it was confined in
+      the oubliette for 10 or more rounds, in which case the target is affected
+      as if it were subject to an <i>insanity</i> spell instead.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      oracle: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: the powdered bones of a creature that died in prison
+  school: con
+  sources:
+    - id: PZO9267
+      pages: '237'
+  subschool:
+    - teleportation
+type: spell

@@ -1,0 +1,50 @@
+_id: j7l8cd9r8qog3jpl
+_key: '!items!j7l8cd9r8qog3jpl'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Id Insinuation II
+system:
+  actions:
+    - _id: 4pg45hd5nufy6s24
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: two creatures
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as @UUID[Compendium.pf1.spells.Item.fa3oswb6t4drz74g]{id
+      insinuation I}, except as noted above. In addition, on the first round of
+      the effect, the targets of this spell must roll twice to determine the
+      result of their confused condition. You select which roll is used. This
+      spell can be undercast.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '173'
+  subschool:
+    - compulsion
+type: spell

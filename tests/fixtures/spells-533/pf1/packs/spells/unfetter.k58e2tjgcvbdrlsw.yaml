@@ -1,0 +1,57 @@
+_id: k58e2tjgcvbdrlsw
+_key: '!items!k58e2tjgcvbdrlsw'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Unfetter
+system:
+  actions:
+    - _id: e5njknjzqyvcsx55
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: your eidolon
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell breaks the life link between you and your eidolon. This
+      spell allows your eidolon to venture more than 100 feet away from you
+      without penalty. It can travel any distance while this spell is in effect
+      without penalty, but if the spell expires while the eidolon is farther
+      than 100 feet away, it immediately loses hit points as normal for distance
+      and is possibly sent back to its home plane. While this spell is in
+      effect, you cannot sacrifice hit points to prevent damage to your eidolon.
+      Damage that would be transferred due to the life bond ability is not
+      transferred. If you attempt to use the transposition ability while this
+      spell is in effect, you must roll on the <i>teleport</i> mishap table,
+      using the "studied carefully" row.</p>
+  learnedAt:
+    class:
+      summoner: 1
+      summonerUnchained: 1
+  materials:
+    value: a broken chain
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '253'
+  sr: false
+type: spell

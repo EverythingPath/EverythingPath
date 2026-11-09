@@ -1,0 +1,25 @@
+_id: 5M1texkD3FX1c5D3
+_key: '!items!5M1texkD3FX1c5D3'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/great-cleave.jpg
+name: Unerring Weapon
+system:
+  contextNotes:
+    - target: attack
+      text: >-
+        +[[(min(7,(2 + (floor(@item.level / 4)))))]] Attack to confirm critical
+        hits.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.09juighnblqlqwro]{Unerring
+      Weapon}</p><p>This transmutation grants a +2 bonus on attack rolls to
+      confirm critical hits plus 1 additional bonus point per four caster levels
+      (maximum total bonus +7).</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff
