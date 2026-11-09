@@ -1,0 +1,67 @@
+_id: ao4p40l1bgcxtklf
+_key: '!items!ao4p40l1bgcxtklf'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mortal Terror
+system:
+  actions:
+    - _id: n8tqsa93flqv3g83
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You imbue the target with an exaggerated sense of its own mortality and
+      a drive for self-preservation. The target is shaken, and the first time
+      each round the target takes damage (including the first round of the
+      spell's duration), it must succeed at another Will save or its fear level
+      increases by one step (from shaken to frightened, and from frightened to
+      panicked). If the target fails a saving throw against this effect while
+      panicked, it is transfixed in terror and is helpless for the remainder of
+      the spell's duration. If the target succeeds at the initial Will save, it
+      is shaken for 1 round but its fear level cannot be further increased by
+      this spell's effects during that round.</p>
+  descriptors:
+    - fear
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      mesmerist: 2
+      oracle: 2
+      psychic: 2
+      shaman: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9480
+      pages: '13'
+type: spell

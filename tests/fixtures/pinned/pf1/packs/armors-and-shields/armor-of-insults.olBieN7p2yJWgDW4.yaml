@@ -1,0 +1,88 @@
+_id: olBieN7p2yJWgDW4
+_key: '!items!olBieN7p2yJWgDW4'
+_stats:
+  coreVersion: '12.343'
+folder: Scxh4HUdr1TDOW96
+img: systems/pf1/icons/items/armor/studded-leather.PNG
+name: Armor of Insults
+system:
+  actions:
+    - _id: P1BzYR6WlK1IJsCx
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 60 feet radius
+      duration:
+        units: round
+        value: '7'
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: '16'
+        description: Will negates
+        type: will
+      target:
+        value: hostile creatures
+  armor:
+    acp: 1
+    dex: 5
+    enh: 1
+    material:
+      base:
+        value: leather
+    value: 3
+  aura:
+    school: enc
+  baseTypes:
+    - Studded Leather Armor
+  cl: 7
+  description:
+    unidentified: >-
+      <p>Each metal bit of this suit of studded leather looks more like a tiny
+      sneering face than a simple stud.</p>
+    value: >-
+      <p>This is a suit of +1
+      @UUID[Compendium.pf1.armors-and-shields.Item.xeuREriTfdZR1yCD]{studded
+      leather}. Once per day the wearer of the armor may command the mouths to
+      unleash a torrent of verbal abuse directed against every hostile creature
+      within 60 feet who can see and hear the wearer. Each such creature must
+      make a DC 16 Will saving throw to avoid suffering an overwhelming
+      compulsion to attack the wearer for the next 7 rounds. If the creature is
+      unable to attack the wearer on its next turn, or attacking the wearer
+      would put the creature at risk (moving through a threatened square,
+      charging into a pit, and so on) it can act normally that turn. This is a
+      mind-affecting sonic effect, and has no effect on creatures that do not
+      use a spoken
+      language.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.4hNO4OAWYF5vXphH]{Craft Magic Arms and
+      Armor}, @UUID[Compendium.pf1.spells.Item.n0bsyxchnigkkuqo]{confusion};
+      <strong>Price</strong> 7,675 gp</p>
+  hardness: 2
+  hp:
+    base: 15
+  price: 16175
+  slot: armor
+  sources:
+    - id: PZO1123
+      pages: '124'
+    - id: PZO1115
+      pages: '283'
+  spellFailure: 15
+  unidentified:
+    name: Studded Leather Armor
+    price: 25
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 20
+type: equipment

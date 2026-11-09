@@ -1,0 +1,56 @@
+_id: 9crmpewzt1y0hk73
+_key: '!items!9crmpewzt1y0hk73'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Resounding Blow
+system:
+  actions:
+    - _id: 3bbvdr7jg9pp6qfx
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Fortitude partial; see text
+        type: fort
+      target:
+        value: you
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You must have a melee weapon in hand to cast this spell.</p><p>On a
+      successful melee attack, your weapon resounds with a thunderous clash. The
+      target takes 1d6 points of sonic damage. Your weapon is not harmed by this
+      attack.</p><p>If you are using your judgment ability or smite ability
+      against the target, it is staggered for 1 round on a successful attack. A
+      successful Fortitude save negates the staggering effect.</p><p>On a
+      successful critical hit, the target is stunned for 1 round and deafened
+      for 1d6 rounds. A successful Fortitude save negates the stunning and
+      deafening effects. If you are also using judgment or smite, your foe makes
+      only a single save against all effects.</p><p>This spell immediately ends
+      if your weapon leaves your hand.</p><p><i>Resounding blow</i> stacks with
+      the <i>thundering</i> weapon property.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      antipaladin: 4
+      inquisitor: 5
+      paladin: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '238'
+  sr: false
+type: spell

@@ -1,0 +1,80 @@
+_id: Cv5xR3jr618ojBYm
+_key: '!items!Cv5xR3jr618ojBYm'
+_stats:
+  coreVersion: '12.343'
+folder: MJuhgQnGZJMPbWN6
+img: icons/weapons/guns/gun-purple.webp
+name: Laser pistol
+system:
+  actions:
+    - _id: frtfqcuu2ni27ysw
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '50'
+      touch: true
+      uses:
+        perAttack: true
+  baseTypes:
+    - Laser pistol
+  description:
+    value: >-
+      <h3>Statistics</h3><p><strong>Type</strong> one-handed ranged;
+      <strong>Proficiency</strong> exotic
+      (firearms)</p><p><strong>Damage</strong> 1d6 (small), 1d8 (medium);
+      <strong>Damage Type</strong> F; <strong>Critical</strong>
+      x2</p><p><strong>Range</strong> 50 ft.; <strong>Capacity</strong> 10;
+      <strong>Usage</strong> 1 charge; <strong>Special</strong> Semi-automatic,
+      touch</p><h3>Description</h3><p>A laser pistol emits a beam of intensely
+      focused light capable of burning anything it strikes. A laser attack can
+      pass through force fields and force effects, such as a <em>wall of
+      force</em>, to strike a foe beyond without damaging that field. Objects
+      like glass or other transparent barriers do not provide cover from
+      lasers-but unlike force barriers, a transparent physical barrier still
+      takes damage from a laser passing through it. Invisible creatures are
+      immune to damage caused by a laser weapon. Fog, smoke, and other clouds
+      provide cover in addition to concealment from laser attacks. Darkness
+      (magical or otherwise) has no effect on lasers other than providing
+      concealment, and though a laser consists of highly focused light, it does
+      not provide any
+      illumination.</p><h3>Construction</h3><p><strong>Craft</strong> DC 23;
+      <strong>Cost</strong> 5,000
+      gp</p><p>@UUID[Compendium.pf1.feats.Item.SkiZsGPMlsMNeBhf]{Craft
+      Technological Arms and Armor}, military lab</p>
+  hardness: 10
+  hp:
+    base: 10
+  price: 10000
+  properties:
+    sma: true
+  sources:
+    - id: PZO9272
+      pages: '21'
+  subType: exotic
+  uses:
+    maxFormula: '10'
+    per: charges
+    value: 10
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

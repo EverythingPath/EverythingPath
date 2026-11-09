@@ -1,0 +1,72 @@
+_id: 2f2oph4conz96aiq
+_key: '!items!2f2oph4conz96aiq'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Sense Madness
+system:
+  actions:
+    - _id: uhvo8magqojpyhps
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration, up to 1 round/level
+      name: Use
+      range:
+        units: close
+      target:
+        value: creatures in range (see text)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can sense the presence of mental disturbance in creatures within
+      range, focusing your detection on one creature each round. If the target
+      is currently suffering from any form of madness (see page 182) or
+      addiction (<em>GameMastery Guide</em> 236), has total sanity damage
+      greater than or equal to its sanity edge (see page 12), or is under a
+      magical compulsion that could be detected by <em>detect magic</em>, you
+      can detect the presence of such a disturbance on the first round of
+      concentration.</p><p>If you concentrate on the same creature for an
+      additional round, you learn if the creature's total sanity damage is
+      greater than or equal to its sanity edge, and you can attempt a Sense
+      Motive check against a DC equal to 10 + the save DC of the target's
+      madness or addiction to determine the exact nature of a madness or
+      addiction. Additionally, you can attempt a Spellcraft check with a DC
+      equal to 11 + the caster level of the compulsion against each magical
+      compulsion currently affecting the target that could be detected by
+      <em>detect magic</em>. If successful, you can identify the specific spell
+      affecting the target. You gain a +4 bonus on your Spellcraft check if the
+      effect is <em>confusion</em>, <em>insanity</em>, or a similar effect that
+      explicitly causes madness or <em>insanity</em>. If you successfully
+      identify such an effect with <em>sense madness</em>, the insights provided
+      by this spell grant you a +1 circumstance bonus on your next caster level
+      check in the following 1 minute made to counter, dispel, or remove that
+      specific effect. After attempting a check to identify a madness,
+      addiction, or compulsion, you can't attempt that check against the same
+      creature again, even if you concentrate on the creature again.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      medium: 2
+      occultist: 2
+      oracle: 2
+      paladin: 2
+      psychic: 2
+      warpriest: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1135
+      pages: '127'
+  sr: false
+type: spell

@@ -1,0 +1,59 @@
+_id: nO0zMK4hEqV4QHwz
+_key: '!items!nO0zMK4hEqV4QHwz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_18.jpg
+name: Protection Domain
+system:
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  changes:
+    - _id: CbVbdg44
+      formula: 1 + floor(@class.level / 5)
+      target: allSavingThrows
+      type: resist
+  description:
+    value: >-
+      <p><strong>Granted Powers:</strong> Your faith is your greatest source of
+      protection, and you can use that faith to defend others. In addition, you
+      receive a +1 resistance bonus on saving throws. This bonus increases by 1
+      for every 5 levels you possess.</p><p><strong>Subdomains:</strong>
+      @UUID[Compendium.pf1.class-abilities.Item.S7UVH8q3s6SNETrU]{Defense},
+      @UUID[Compendium.pf1.class-abilities.Item.IdmbX3dusso7BYbO]{Fortifications},
+      @UUID[Compendium.pf1.class-abilities.Item.2na2nqI5wxvd86kg]{Purity},
+      @UUID[Compendium.pf1.class-abilities.Item.rUtu6rTWk3yMAsB0]{Solitude}</p><h3>Domain
+      Powers</h3><p>@UUID[Compendium.pf1.class-abilities.Item.Bw3GiobZvSJb8dGI]{Resistant
+      Touch (Sp)}: As a standard action, you can touch an ally to grant him your
+      resistance bonus for 1 minute. When you use this ability, you lose your
+      resistance bonus granted by the Protection domain for 1 minute. You can
+      use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p><p>@UUID[Compendium.pf1.class-abilities.Item.kHXw5V06TkymXxF3]{Aura
+      of Protection (Su)}: At 8th level, you can emit a 30-foot aura of
+      protection for a number of rounds per day equal to your cleric level. You
+      and your allies within this aura gain a +1 deflection bonus to AC and
+      resistance 5 against all elements (acid, cold, electricity, fire, and
+      sonic). The deflection bonus increases by +1 for every four cleric levels
+      you possess beyond 8th. At 14th level, the resistance against all elements
+      increases to 10. These rounds do not need to be consecutive.</p><h3>Domain
+      Spells</h3><ul><li>1st—@UUID[Compendium.pf1.spells.yk5bgi6j9kbtigof]{Sanctuary}</li><li>2nd—@UUID[Compendium.pf1.spells.menqakfoa1ftvi3f]{Shield
+      Other}</li><li>3rd—@UUID[Compendium.pf1.spells.1vh2ewwvzvxunoxk]{Protection
+      from
+      Energy}</li><li>4th—@UUID[Compendium.pf1.spells.ui70binwqvjsgaam]{Spell
+      Immunity}</li><li>5th—@UUID[Compendium.pf1.spells.4k9bh8ny1il2oner]{Spell
+      Resistance}</li><li>6th—@UUID[Compendium.pf1.spells.niqxt53lhxrjfaty]{Antimagic
+      Field}</li><li>7th—@UUID[Compendium.pf1.spells.5w1zrztwbvd6xkgj]{Repulsion}</li><li>8th—@UUID[Compendium.pf1.spells.blvetbc929cfx4m8]{Mind
+      Blank}</li><li>9th—@UUID[Compendium.pf1.spells.lxxliyxfw9uvbxmt]{Prismatic
+      Sphere}</li></ul>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.class-abilities.Item.Bw3GiobZvSJb8dGI
+  sources:
+    - id: PZO1110
+      pages: '46'
+  subType: classFeat
+  tags:
+    - Domain
+    - Protection Domain
+type: feat

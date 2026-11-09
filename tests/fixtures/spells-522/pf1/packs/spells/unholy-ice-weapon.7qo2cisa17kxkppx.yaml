@@ -1,0 +1,54 @@
+_id: 7qo2cisa17kxkppx
+_key: '!items!7qo2cisa17kxkppx'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/weapons/axes/axe-double-ice-blue.webp
+name: Unholy Ice Weapon
+system:
+  actions:
+    - _id: r6hi8bn936cwnobs
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      effect: one ice weapon
+      name: Use
+      range:
+        units: ft
+        value: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.1ulrw5cgqkyn1ix8]{holy ice weapon},
+      except the weapon is made of frozen unholy water, and instead deals
+      additional damage to creatures that are susceptible to unholy water.</p>
+  descriptors:
+    - cold
+    - evil
+    - water
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  materials:
+    gpValue: 25
+    value: a flask of unholy water or 5 pounds of powdered silver worth 25 gp
+  school: trs
+  sources:
+    - id: PZO1129
+      pages: '198'
+  sr: false
+type: spell

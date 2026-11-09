@@ -1,0 +1,51 @@
+_id: 1okm1u6ig4mws6ue
+_key: '!items!1okm1u6ig4mws6ue'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Bouncy Body
+system:
+  actions:
+    - _id: dmyrt9qluxs8gk86
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's flesh becomes flexible and rubbery. It gains a +2
+      circumstance bonus on grapple combat maneuver checks and Escape Artist
+      checks, as well as to its CMD against combat maneuver checks to grapple.
+      Anytime the target would take falling damage, it treats falls as 20 feet
+      shorter (minimum 0) for the purpose of determining damage. In addition, if
+      the target falls against a hard surface, it can attempt an Acrobatics
+      check (DC = the distance fallen) to attempt to bounce upward; success
+      means the creature bounces upward half the distance fallen.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      arcanist: 1
+      bloodrager: 1
+      investigator: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: trs
+  sources:
+    - id: PZO1130
+      pages: '105'
+  sr: false
+type: spell
