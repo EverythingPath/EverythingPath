@@ -1,0 +1,86 @@
+_id: pIRXX5fRRgO9JfF2
+_key: '!items!pIRXX5fRRgO9JfF2'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/clubs/club-simple-barbed-black.webp
+name: Wahaika
+system:
+  actions:
+    - _id: pwqpwbhrl3r4zlfv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: mWldOL0TOzNk13qe
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Wahaika
+    - Club
+  description:
+    unidentified: >-
+      <p>This short and broad Stone Age club is made of hardened wood or bone.
+      It has a notch on one side that is used for catching weapons. If you are
+      proficient with the weapon, you can use the notch in the wahaika to disarm
+      your foes. Otherwise, treat this weapon as a club. Feats and abilities
+      that affect clubs apply to the wahaika.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 3
+  properties:
+    dis: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

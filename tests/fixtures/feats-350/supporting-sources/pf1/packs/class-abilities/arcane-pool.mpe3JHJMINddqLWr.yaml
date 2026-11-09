@@ -1,0 +1,57 @@
+_id: mpe3JHJMINddqLWr
+_key: '!items!mpe3JHJMINddqLWr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-1.jpg
+name: Arcane Pool
+system:
+  abilityType: su
+  actions:
+    - _id: t72hyk24l7zc4o1m
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Magus
+  description:
+    value: >-
+      <p>At 1st level, the magus gains a reservoir of mystical arcane energy
+      that he can draw upon to fuel his powers and enhance his weapon. This
+      arcane pool has a number of points equal to 1/2 his magus level (minimum
+      1) + his Intelligence modifier. The pool refreshes once per day when the
+      magus prepares his spells.<p>At 1st level, a magus can expend 1 point from
+      his arcane pool as a swift action to grant any weapon he is holding a +1
+      enhancement bonus for 1 minute. For every four levels beyond 1st, the
+      weapon gains another +1 enhancement bonus, to a maximum of +5 at 17th
+      level. These bonuses can be added to the weapon, stacking with existing
+      weapon enhancement to a maximum of +5. Multiple uses of this ability do
+      not stack with themselves.<p>At 5th level, these bonuses can be used to
+      add any of the following weapon properties: dancing, flaming, flaming
+      burst, frost, icy burst, keen, shock, shocking burst, speed, or vorpal.
+      Adding these properties consumes an amount of bonus equal to the
+      property's base price modifier (see the Magic Weapon Special Ability
+      Descriptions). These properties are added to any the weapon already has,
+      but duplicates do not stack. If the weapon is not magical, at least a +1
+      enhancement bonus must be added before any other properties can be added.
+      These bonuses and properties are decided when the arcane pool point is
+      spent and cannot be changed until the next time the magus uses this
+      ability. These bonuses do not function if the weapon is wielded by anyone
+      other than the magus.<p>A magus can only enhance one weapon in this way at
+      one time. If he uses this ability again, the first use immediately
+      ends.</p>
+  subType: classFeat
+  tag: classFeat_arcanePool
+  uses:
+    maxFormula: max(1, floor(@class.level / 2)) + @abilities.int.mod
+    per: day
+type: feat

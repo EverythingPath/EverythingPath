@@ -1,0 +1,61 @@
+_id: 0uxs1dj28glc9o8i
+_key: '!items!0uxs1dj28glc9o8i'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Aphasia
+system:
+  actions:
+    - _id: 3zr9xd8x305jqlfi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You render the target unable to understand any language, including
+      spoken language, written language, sign language, gestures attempting to
+      mimic a crude language, or even truespeech and telepathy. The affected
+      creature is unable to communicate, use command words, cast spells with
+      verbal components, or use any other abilities that requires language.  At
+      the end of each of its turns, the subject can attempt a new saving throw
+      to end the effect. <i>Tongues</i> counters and dispels <i>aphasia</i>, and
+      a creature with the <i>tongues</i> spell active is immune to
+      <i>aphasia</i>. Oracles with the <i>tongues</i> curse ignore
+      <i>aphasia</i> in combat.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '204'
+  subschool:
+    - compulsion
+type: spell

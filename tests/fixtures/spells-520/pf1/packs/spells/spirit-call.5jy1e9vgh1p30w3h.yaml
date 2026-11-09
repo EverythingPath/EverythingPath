@@ -1,0 +1,47 @@
+_id: 5jy1e9vgh1p30w3h
+_key: '!items!5jy1e9vgh1p30w3h'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Spirit Call
+system:
+  actions:
+    - _id: mpdq39f4x5mvpk1v
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: 100-ft.-radius spread centered on you
+      name: Use
+      range:
+        units: ft
+        value: '100'
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call out to nature spirits associated with your spirit (not your
+      wandering spirit) if you are a shaman, or your domain if you are a druid,
+      beckoning them forth to pay attention to your current location. For the
+      duration of the spell, all spells from your spirit magic list or domain
+      list that are cast within the affected area have their caster level
+      increased by 1, and all spellcasters casting such spells receive a +4
+      insight bonus on their concentration checks for those spells only.</p>
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      shaman: 1
+  school: enc
+  sources:
+    - id: PZO9451
+      pages: '31'
+  sr: false
+type: spell

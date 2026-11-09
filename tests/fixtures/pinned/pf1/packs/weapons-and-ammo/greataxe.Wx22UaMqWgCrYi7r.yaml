@@ -1,0 +1,61 @@
+_id: Wx22UaMqWgCrYi7r
+_key: '!items!Wx22UaMqWgCrYi7r'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/greataxe.png
+name: Greataxe
+system:
+  actions:
+    - _id: mqsu8ycqg6lbdbna
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 12, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Greataxe
+  description:
+    unidentified: >-
+      <p>This two-handed battle axe is heavy enough that you can't wield it with
+      one hand. The head may have one blade or two, and may be "bearded"
+      (meaning hooked or trailing at the bottom) to increase cleaving power and
+      help pull down enemy shields. The haft is usually 3 to 4 feet long.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  sources:
+    - id: PZO1110
+      pages: '143'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - axes
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon
