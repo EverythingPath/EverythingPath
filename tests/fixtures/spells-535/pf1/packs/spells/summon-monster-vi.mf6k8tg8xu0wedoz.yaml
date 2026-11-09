@@ -1,0 +1,60 @@
+_id: mf6k8tg8xu0wedoz
+_key: '!items!mf6k8tg8xu0wedoz'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/magical/humanoid-silhouette-glowing-pink.webp
+name: Summon Monster VI
+system:
+  actions:
+    - _id: di3myyoo91w31fpi
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except you can summon
+      one creature from the 6th-level list, 1d3 creatures of the same kind from
+      the 5th-level list, or 1d4+1 creatures of the same kind from a lower-level
+      list.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      cleric: 6
+      oracle: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      spiritualist: 6
+      summonerUnchained: 5
+      warpriest: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a tiny bag and a small candle
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '352'
+  sr: false
+  subschool:
+    - summoning
+type: spell

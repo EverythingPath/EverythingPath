@@ -1,0 +1,90 @@
+_id: DzMgrtqI8ECS74u6
+_key: '!items!DzMgrtqI8ECS74u6'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/dagger-dueling.png
+name: Dueling Dagger
+system:
+  actions:
+    - _id: a0j9urr2qwpuby2g
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: scvblAz2j7mqLUtX
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Dueling Dagger
+    - Dagger
+  description:
+    unidentified: >-
+      <p>This dagger is used in the off hand to block attacks. When you fight
+      defensively or use Combat Expertise while wielding a dueling dagger, your
+      bonus to AC increases by 1. This benefit applies even if you did not
+      attack with the dueling dagger. If you aren't proficient with a dueling
+      dagger, you treat it as a dagger and gain no special benefits. Any effects
+      that apply to daggers apply to dueling daggers.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 12
+  properties:
+    fin: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - thrown
+  weight:
+    value: 1
+type: weapon

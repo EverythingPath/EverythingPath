@@ -1,0 +1,22 @@
+// Home paths, checkouts and Git-history paths in strings and templates, read
+// as written and as evaluated. A line ending in "// flagged" must be
+// reported; every other line must pass.
+const plainString = '/home/me/repo'; // flagged
+const escapedString = '\x2fhome/me/repo'; // flagged
+const macString = '/Users/me/repo'; // flagged
+const plainTemplate = `/home/me/repo`; // flagged
+const escapedTemplate = `\x2fhome/me/repo`; // flagged
+const escapedSlashes = `\x2fhome\x2fme\x2frepos`; // flagged
+const unicodeTemplate = `/Users/me/repo`; // flagged
+const rawTemplate = String.raw`/home/me/repo`; // flagged
+const checkout = `~/repos/everythingpath`; // flagged
+const homeRelative = '~/notes'; // flagged
+const interpolated = `${base}/home/me`; // flagged
+const gitPath = 'abcdef1:src/a.ts'; // flagged
+const escapedGitPath = `\x61bcdef1:src/a.ts`; // flagged
+const gitPathTemplate = `abcdef1:${file}`; // flagged
+const fixturePath = 'tests/fixtures/home.json';
+const scratch = `${tmpdir()}/probe`;
+// Residual: a path split across interpolations has no literal part that
+// names it, so the rule cannot see it without evaluating the template.
+const split = `/ho${''}me/me/repo`;

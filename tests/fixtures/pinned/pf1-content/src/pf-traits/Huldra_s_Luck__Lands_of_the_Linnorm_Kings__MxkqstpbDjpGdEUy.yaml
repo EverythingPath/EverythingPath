@@ -1,0 +1,58 @@
+_id: MxkqstpbDjpGdEUy
+_key: '!items!MxkqstpbDjpGdEUy'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Huldra's Luck (Lands of the Linnorm Kings)
+system:
+  actions:
+    - _id: LDQdC0y2JlySkcDd
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, you may choose to gain a +1 luck bonus on a single
+        saving throw, attack roll, or skill check.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Use
+  contextNotes:
+    - target: skills
+      text: >-
+        Once per day, you may choose to gain a +[[1]] Luck bonus on a single
+        saving throw, attack roll, or skill check.
+        ([[@resources.huldrasLuckLandsOfTheLinnormKings.value]] remaining uses)
+    - target: allSavingThrows
+      text: >-
+        Once per day, you may choose to gain a +[[1]] Luck bonus on a single
+        saving throw, attack roll, or skill check.
+        ([[@resources.huldrasLuckLandsOfTheLinnormKings.value]] remaining uses)
+    - target: attack
+      text: >-
+        Once per day, you may choose to gain a +[[1]] Luck bonus on a single
+        saving throw, attack roll, or skill check.
+        ([[@resources.huldrasLuckLandsOfTheLinnormKings.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>At some point in your life, you were touched by a fey creature
+      called a huldra and inherited a bit of its
+      luck.</em></p><p><strong>Requirements</strong>: <span data-tooltip="
+      Homeland of the Ulfen people on the northwestern tip of Avistan"><span
+      style="text-decoration:underline">Lands of the Linnorm
+      Kings</span></span></p><p><strong>Benefits</strong>: Once per day, you may
+      choose to gain a +1 luck bonus on a single saving throw, attack roll, or
+      skill check.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9428
+      pages: '21'
+  subType: trait
+  tags:
+    - Lands of the Linnorm Kings
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

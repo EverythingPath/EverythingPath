@@ -1,0 +1,57 @@
+_id: 82qn051kayic7k1v
+_key: '!items!82qn051kayic7k1v'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Forceful Strike
+system:
+  actions:
+    - _id: o28rqsuztxdxzc9p
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: 1 creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cast this spell as you strike a creature with a melee weapon,
+      unarmed strike, or natural attack to unleash a concussive blast of force.
+      You deal normal weapon damage from the blow, but also deal an additional
+      amount of force damage equal to 1d4 points per caster level (maximum of
+      10d4). The force of the blow may be enough to knock the target backward as
+      well. To determine if the target is pushed back, make a combat maneuver
+      check with a bonus equal to your caster level to resolve a bull rush
+      attempt against the creature struck. You do not move as a result of this
+      free bull rush, but it can push the target back if it defeats the target's
+      CMD. A successful Fortitude save halves the force damage and negates the
+      bull rush effect.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 4
+      magus: 4
+      oracle: 4
+      paladin: 4
+      warpriest: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO9237
+      pages: '55'
+type: spell

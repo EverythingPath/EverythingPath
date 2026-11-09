@@ -1,0 +1,47 @@
+_id: stlt6dR5tNALAMbS
+_key: '!items!stlt6dR5tNALAMbS'
+_stats:
+  coreVersion: '12.331'
+folder: yj7ChRz79eiCEIlh
+img: systems/pf1/icons/items/weapons/trident.PNG
+name: Spell-Like Ability (Triton)
+system:
+  actions:
+    - _id: OJpIQ8YZ4mAG12Qe
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.9fdte3s6lnanf9rg]{Summon Nature's
+        Ally II} Small water elemental or 1d3 dolphins only.</p><p>This spell
+        functions as @UUID[Compendium.pf1.spells.Item.0jwi6xovzukorxok]{summon
+        nature's ally I}, except that you summon one 2nd-level creature or 1d3
+        1st-level creatures of the same kind.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      effect: one summoned creature
+      name: Summon Nature's Ally II
+      range:
+        units: close
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Triton</p><hr /><p>Tritons can cast <em>summon
+      nature's ally II</em> once per day to summon either a Small water
+      elemental or 1d3 dolphins only.</p>
+  racePoints: 2
+  sources:
+    - id: PZO9482
+      pages: '14'
+  subType: racial
+  tags:
+    - Triton
+  traitCategory: magical
+type: feat

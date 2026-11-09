@@ -1,0 +1,67 @@
+_id: yH3vOEPKWRtwqQj9
+_key: '!items!yH3vOEPKWRtwqQj9'
+_stats:
+  coreVersion: '12.331'
+folder: fEstcJ0Ou5ny9rZm
+img: icons/commodities/wood/bark-beige.webp
+name: Arboreal Vitality
+system:
+  actions:
+    - _id: 8iE8DHBtOmzzAtSv
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>You gain fast healing 2 for 1 round whenever adjacent to a living
+        tree larger than you. </p><p>You can heal up to 2 hit points per level
+        per day with this ability.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Fast healing 2
+      notes:
+        effect:
+          - '@Heal[2]'
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: '@attributes.hd.total'
+          per: day
+  changes:
+    - _id: hOpr284f
+      formula: '30'
+      operator: set
+      target: landSpeed
+      type: base
+    - _id: XqmPgxoH
+      formula: '20'
+      operator: set
+      target: flySpeed
+      type: base
+  description:
+    instructions: >-
+      <p>Remove
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.lhDGN1bu2IsaabX4]{Normal
+      Speed (Gathlain)} racial trait to ensure accurate land and fly
+      speeds.</p><p>You must set your <span style="font-family: Signika,
+      sans-serif">maneuverability to poor on your actor manually</span></p>
+    value: >-
+      <p><strong>Race</strong>: Gathlain<br /><strong>Replaced
+      Trait(s)</strong>: Racial Fly Speed</p><hr /><p>Some gathlains draw
+      exceptional nourishment from any kind of tree through their wings,
+      although their wings are much more delicate. A gathlain with this racial
+      trait has a fly speed of only @Distance[20 ft;dual] (poor maneuverability)
+      but gains fast healing 2 for 1 round whenever he is adjacent to a living
+      tree larger than he is. The gathlain can heal up to 2 hit points per level
+      per day with this ability, after which it ceases to function.</p><p>This
+      modifies the gathlain's fly speed.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9494
+      pages: '10'
+  subType: racial
+  tags:
+    - Gathlain
+type: feat
