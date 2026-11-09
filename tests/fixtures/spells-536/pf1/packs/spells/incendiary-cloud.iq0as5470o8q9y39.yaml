@@ -1,0 +1,66 @@
+_id: iq0as5470o8q9y39
+_key: '!items!iq0as5470o8q9y39'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Incendiary Cloud
+system:
+  actions:
+    - _id: kbjkiry15mseatgj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cloud spreads in 20-ft. radius, 20 ft. high
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex half; see text
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An <i>incendiary cloud</i> spell creates a cloud of roiling smoke shot
+      through with white-hot embers. The smoke obscures all sight as a <i>fog
+      cloud</i> does. In addition, the white-hot embers within the cloud deal
+      6d6 points of fire damage to everything within the cloud on your turn each
+      round. All targets can make Reflex saves each round to take half
+      damage.</p><p>As with a <i>cloudkill</i> spell, the smoke moves away from
+      you at 10 feet per round. Figure out the smoke's new spread each round
+      based on its new point of origin, which is 10 feet farther away from where
+      you were when you cast the spell. By concentrating, you can make the cloud
+      move as much as 60 feet each round. Any portion of the cloud that would
+      extend beyond your maximum range dissipates harmlessly, reducing the
+      remainder's spread thereafter.</p><p>As with <i>fog cloud</i>, wind
+      disperses the smoke, and the spell can't be cast underwater.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 8
+      sorcerer: 8
+      summoner: 6
+      wizard: 8
+    domain:
+      Fire: 8
+  level: 8
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '300'
+  sr: false
+  subschool:
+    - creation
+type: spell

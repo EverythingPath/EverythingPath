@@ -1,0 +1,62 @@
+_id: IfotwHH89d60H3pR
+_key: '!items!IfotwHH89d60H3pR'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/flail-heavy.png
+name: Heavy Flail
+system:
+  actions:
+    - _id: fyf26nkh1gdrf5h9
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Heavy Flail
+  description:
+    unidentified: >-
+      <p>Similar to a light flail, a heavy flail has a larger metal ball and a
+      longer handle.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    dis: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 146
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

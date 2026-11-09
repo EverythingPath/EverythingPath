@@ -1,0 +1,162 @@
+{
+  "snapshot": {
+    "bonuses": [
+      {
+        "availableWeek": 9,
+        "bonusId": "reward",
+        "check": "loyalty",
+        "consumedWeek": null,
+        "source": "Reward",
+        "value": 2
+      }
+    ],
+    "characterActions": {
+      "people": []
+    },
+    "characters": [
+      {
+        "characterId": "officer",
+        "charisma": 15,
+        "constitution": 12,
+        "dexterity": 11,
+        "intelligence": 13,
+        "isActive": true,
+        "level": 12,
+        "strength": 10,
+        "wisdom": 14
+      }
+    ],
+    "economy": {
+      "caches": [
+        {
+          "cacheClass": "minor",
+          "cacheId": "forest-cache",
+          "extradimensional": false,
+          "itemIds": [],
+          "location": "Forest",
+          "returnActivityWeek": null,
+          "secure": true,
+          "status": "hidden"
+        }
+      ],
+      "items": [
+        {
+          "itemId": "sword",
+          "location": "order",
+          "name": "Sword",
+          "valueCopper": 1234,
+          "weight": 2
+        }
+      ],
+      "markets": [],
+      "orders": [
+        {
+          "deliveryDays": 1,
+          "dueActivityWeek": null,
+          "dueDay": 56,
+          "enchantmentValueCopper": 0,
+          "itemId": "sword",
+          "mode": "purchase",
+          "orderId": "sword-order",
+          "orderedDay": 55,
+          "orderedWeek": 8,
+          "priceCopper": 1234,
+          "receipt": null,
+          "settlementId": "town",
+          "source": "special_order"
+        }
+      ]
+    },
+    "eventBenefits": {
+      "markets": [],
+      "skills": []
+    },
+    "focus": "Security",
+    "notoriety": 17,
+    "rank": 4,
+    "roster": {
+      "officers": [
+        {
+          "characterId": "officer",
+          "role": "commandant"
+        }
+      ],
+      "people": [
+        {
+          "characterId": "officer",
+          "hitDice": 8,
+          "kind": "pc"
+        }
+      ],
+      "teams": [
+        {
+          "managerCharacterId": "officer",
+          "name": "Patrol",
+          "notes": "Lost patrol",
+          "rewardCapExempt": false,
+          "status": "missing",
+          "teamId": "patrol",
+          "teamType": "defenders"
+        }
+      ]
+    },
+    "settlements": [
+      {
+        "name": "Town",
+        "occupied": false,
+        "refugeActivatedWeek": 7,
+        "refugeActiveUntilWeek": 10,
+        "reputation": "Friendly",
+        "secured": true,
+        "settlementId": "town",
+        "temporaryReputationShift": -1
+      }
+    ],
+    "training": 42,
+    "treasuryCopper": 12345
+  },
+  "context": {
+    "carriedEvents": [
+      {
+        "eventId": "sickness",
+        "eventType": "sickness",
+        "order": 0,
+        "startedWeek": 7,
+        "targets": [
+          {
+            "kind": "team",
+            "teamId": "patrol"
+          }
+        ]
+      }
+    ],
+    "firstMilitiaWeek": false,
+    "lastBuyoffWeek": 6,
+    "orders": [
+      {
+        "dueDay": 56,
+        "itemId": "sword",
+        "orderId": "sword-order",
+        "orderedDay": 55,
+        "priceCopper": 1234,
+        "receipt": null,
+        "settlementId": "town"
+      }
+    ],
+    "queuedEffects": [
+      {
+        "effect": {
+          "check": "security",
+          "kind": "check_modifier",
+          "value": -2
+        },
+        "effectId": "q",
+        "endsWeek": 10,
+        "sourceId": "queued-security",
+        "startsWeek": 10
+      }
+    ],
+    "startDay": 56,
+    "uneventfulCarry": true
+  }
+}

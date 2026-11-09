@@ -1,0 +1,68 @@
+_id: a24oos1m8mjc793r
+_key: '!items!a24oos1m8mjc793r'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Enshroud Thoughts
+system:
+  actions:
+    - _id: ajo8dhbst342yvqa
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You become warded against the mental prying of others, including the
+      effects of divination spells such as <i>detect thoughts</i> and <i>seek
+      thoughts</i>, as well as enchantment spells such as <i>modify memory</i>
+      and <i>memory lapse</i>. If another creature attempts to target you with a
+      mind-affecting spell that  detects or alters your thoughts or memories,
+      the caster must succeed at a caster level check against a DC equal to 11 +
+      your caster level or the spell fails. Only spells that detect or alter
+      your thoughts or memories are blocked by this spell; effects such as
+      <i>clairaudience/clairvoyance</i>, <i>detect evil</i> , and <i>locate
+      creature</i> continue to affect you as normal.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 2
+      bard: 2
+      hunter: 3
+      inquisitor: 2
+      investigator: 2
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+      ranger: 3
+      shaman: 2
+      skald: 2
+      witch: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO1132
+      pages: '169'
+    - id: PZO9447
+      pages: '13'
+type: spell

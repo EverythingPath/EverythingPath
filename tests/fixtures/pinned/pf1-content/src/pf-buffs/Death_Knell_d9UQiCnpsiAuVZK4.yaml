@@ -1,0 +1,34 @@
+_id: d9UQiCnpsiAuVZK4
+_key: '!items!d9UQiCnpsiAuVZK4'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/affliction_08.jpg
+name: Death Knell
+system:
+  changes:
+    - _id: 9qjgxg0o
+      formula: '2'
+      target: str
+      type: enh
+  contextNotes:
+    - target: cl
+      text: +[[1]] Caster Level
+  description:
+    instructions: >-
+      Add 1d8 temp hit points upon the death of a target that fails it save. Set
+      buff level to the number of HD of the target.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.k0k8gvqyy3rd5gke]{Death
+      Knell}</p><p>If the subject fails its saving throw, it dies, and you gain
+      1d8 temporary hit points and a +2 enhancement bonus to Strength.
+      Additionally, your effective caster level goes up by +1, improving spell
+      effects dependent on caster level. This increase in effective caster level
+      does not grant you access to more spells.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level * 10'
+  level: 1
+  subType: spell
+type: buff
