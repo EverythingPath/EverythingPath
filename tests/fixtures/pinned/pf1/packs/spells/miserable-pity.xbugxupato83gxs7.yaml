@@ -1,0 +1,58 @@
+_id: xbugxupato83gxs7
+_key: '!items!xbugxupato83gxs7'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Miserable Pity
+system:
+  actions:
+    - _id: wpgzhgoeeamqv5rl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level and 1 minute; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.yk5bgi6j9kbtigof]{sanctuary}, except
+      creatures attempting to attack the target who fail their saves also feel a
+      strong sense of pity toward the target, as if it were weak, pathetic, and
+      not a threat. If the target breaks the spell by attacking, any creature
+      that failed its save against the spell gains a +2 morale bonus on attack
+      rolls against the target for 1 minute.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO1117
+      pages: '229'
+type: spell

@@ -1,0 +1,66 @@
+_id: 7aqcjtnwc0m1h2xy
+_key: '!items!7aqcjtnwc0m1h2xy'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Lend Path
+system:
+  actions:
+    - _id: vcu0yik566hjgsjj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You temporarily transfer one of your mythic path abilities to another
+      creature, which can use it as if it were part of the creature's own path.
+      If the target is unable to expend mythic power, it can't activate any part
+      of the ability that requires expending uses of mythic power, but the
+      ability otherwise functions as if the creature were 1st tier.  While your
+      path ability is transferred in this way, you can't use it yourself (even
+      if it's an automatic ability or one that doesn't require expending uses of
+      mythic power).</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      cleric: 5
+      druid: 5
+      hunter: 5
+      magus: 4
+      medium: 2
+      oracle: 5
+      psychic: 5
+      skald: 4
+      sorcerer: 5
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: trs
+  sources:
+    - id: PZO1126
+      pages: '114'
+type: spell

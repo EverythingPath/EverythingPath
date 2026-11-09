@@ -1,0 +1,60 @@
+_id: wa0zb2pncesmm9lz
+_key: '!items!wa0zb2pncesmm9lz'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: systems/pf1/icons/skills/light_04.jpg
+name: Bless
+system:
+  actions:
+    - _id: f1mjszoarng3iehw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: The caster and all allies within a 50-ft. burst, centered on the caster
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '50'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '50'
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Bless</i> fills your allies with courage. Each ally gains a +1
+      morale bonus on attack rolls and on saving throws against fear
+      effects.</p><p><i>Bless</i> counters and dispels <i>bane</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Celestial: 1
+    class:
+      adept: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      paladin: 1
+      shaman: 1
+      warpriest: 1
+    domain:
+      Community: 1
+    subDomain:
+      Leadership: 1
+      Resolve: 1
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '249'
+  subschool:
+    - compulsion
+type: spell

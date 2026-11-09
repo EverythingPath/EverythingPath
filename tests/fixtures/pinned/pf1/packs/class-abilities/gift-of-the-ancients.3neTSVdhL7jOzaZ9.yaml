@@ -1,0 +1,25 @@
+_id: 3neTSVdhL7jOzaZ9
+_key: '!items!3neTSVdhL7jOzaZ9'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Gift of the Ancients
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: 8uflro54
+      formula: 2 + if(gte(@class.level, 8), 2)
+      target: skill.per
+      type: competence
+  description:
+    value: >-
+      <p>At 4th level, you gain a +2 resistance bonus on saving throws against
+      gaze attacks and to resist poison. You also gain a +2 competence bonus on
+      Perception checks.</p>
+
+      <p>At 8th level, these bonuses increase by 2.</p>
+  subType: classFeat
+type: feat

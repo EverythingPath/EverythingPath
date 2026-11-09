@@ -1,0 +1,48 @@
+_id: WhK3MVzZDTCnY6j2
+_key: '!items!WhK3MVzZDTCnY6j2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/ice-sky-3.jpg
+name: Winter's Strike
+system:
+  abilityType: su
+  actions:
+    - _id: c1oxuqkd9495vi8j
+      actionType: spellsave
+      activation:
+        type: free
+        unchained:
+          type: free
+      img: systems/pf1/icons/spells/ice-sky-3.jpg
+      name: Use
+      notes:
+        effect:
+          - Fatigued [[@abilities.wis.mod]] rounds.
+      save:
+        dc: 10 +floor(@attributes.hd.total / 2) + @abilities.wis.mod
+        type: fort
+      tag: wintersStrike
+  description:
+    value: >-
+      <p><em>Your attacks afflict your foes with the relentless fatigue of a
+      winter storm.</em></p><p><strong>Prerequisites</strong>: Nature Magic or
+      the ability to cast druid or ranger spells; Vital Strike, Knowledge
+      (nature) 5 ranks.</p><p><strong>Benefits</strong>: A number of times per
+      day equal to your Wisdom modifier (minimum 1), when you use Vital Strike
+      (or Improved Vital Strike or Greater Vital Strike), your strike saps the
+      strength of your opponent. The creature hit must succeed at a Fortitude
+      save (DC = 10 + 1/2 your character level + your Wisdom modifier) or become
+      fatigued for a number of rounds equal to your Wisdom modifier (minimum 1).
+      You can choose to use this ability as a free action after you hit the
+      target with the attack. This is a supernatural ability.</p><h3>Combat
+      Trick</h3><p>: When using this feat, you can spend up to 5 stamina points
+      to increase the DC of the effect by an amount equal to the number of
+      stamina points you spent.</p>
+  tags:
+    - Combat
+    - Combat Trick
+  uses:
+    maxFormula: max(1, @abilities.wis.mod)
+    per: charges
+    value: 2
+type: feat
