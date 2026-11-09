@@ -1,0 +1,67 @@
+_id: SL536HxlnXKaBne1
+_key: '!items!SL536HxlnXKaBne1'
+_stats:
+  coreVersion: '12.331'
+folder: sq4D60KUCFjxImNV
+img: systems/pf1/icons/races/human.jpg
+name: Piety
+system:
+  actions:
+    - _id: zsI33xgyIGYRYNGW
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>once per day, before attempting an attack roll, saving throw, ability
+        check, or skill check, you can call out to your deity in order to
+        receive a +[[2]] racial bonus on that roll; you can use this ability
+        only if you are able to speak.</p>
+      name: Piety
+  changes:
+    - _id: xDQUheKq
+      formula: '2'
+      target: skill.kre
+      type: racial
+  classSkills:
+    kre: true
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        1/day, before you roll, and only if you are able to speak, you can call
+        out to your deity in order to receive a +[[2]] Racial bonus on that
+        roll.
+    - target: allChecks
+      text: >-
+        1/day, before you roll, and only if you are able to speak, you can call
+        out to your deity in order to receive a +[[2]] Racial bonus on that
+        roll.
+    - target: skills
+      text: >-
+        1/day, before you roll, and only if you are able to speak, you can call
+        out to your deity in order to receive a +[[2]] Racial bonus on that
+        roll.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Human<br /><strong>Replaced Trait(s)</strong>:
+      Bonus Feat</p><hr /><p>Humans place great trust in the gods to protect
+      them. Humans with this trait receive a +2 racial bonus on Knowledge
+      (religion) checks and Knowledge (religion) is always a class skill for
+      them. In addition, once per day before attempting an attack roll, saving
+      throw, ability check, or skill check, such a human can call out to his
+      deity in order to receive a +2 racial bonus on that roll; he can use this
+      ability only if he is able to speak. This racial trait replaces the bonus
+      feat racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1135
+      pages: '41'
+  subType: racial
+  tags:
+    - Human
+  traitCategory: featSkills
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

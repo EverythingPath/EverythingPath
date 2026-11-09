@@ -1,0 +1,27 @@
+_id: 2qcz39w9O2Qlms0Q
+_key: '!items!2qcz39w9O2Qlms0Q'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_16.jpg
+name: Poison Resistance
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Alchemist
+      - Investigator
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[min(6, floor((@class.level + 1) / 3) * 2)]] vs poison
+  description:
+    value: >-
+      <p>At 2nd level, the character gains a +2 bonus on all saving throws
+      against poison. This bonus increases to +4 at 5th level, and then again to
+      +6 at 8th level.</p>
+  sources:
+    - id: PZO1115
+      pages: '31'
+    - id: PZO1129
+      pages: '31'
+  subType: classFeat
+type: feat

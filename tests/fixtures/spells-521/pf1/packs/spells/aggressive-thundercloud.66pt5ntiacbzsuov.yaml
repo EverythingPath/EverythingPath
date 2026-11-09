@@ -1,0 +1,65 @@
+_id: 66pt5ntiacbzsuov
+_key: '!items!66pt5ntiacbzsuov'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/bolts-salvo-clouds-sky.webp
+name: Aggressive Thundercloud
+system:
+  actions:
+    - _id: txepzed3slo461dj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 5-ft.-diameter sphere
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A crackling, spherical storm cloud flies in whichever direction you
+      point and deals electricity damage to those it strikes. It has a fly speed
+      of 20 feet with perfect maneuverability. If it enters a space that
+      contains a creature, the storm stops moving for the round and deals 3d6
+      points of electricity damage to that creature, though a successful Reflex
+      save negates that damage. It provides concealment (20% miss chance) to
+      anything within it, and its flickering light illuminates the same area a
+      candle would.</p><p>The sphere moves as long as you actively direct it (as
+      a move action for you); otherwise, it stays at rest and crackles with
+      lightning. It can be moved by wind effects and counts as a Small creature
+      for the purpose of determining how winds affect it. The sphere has no
+      physical substance and cannot exert any force on corporeal creatures or
+      objects. It disperses if it exceeds the spell's range.</p>
+  descriptors:
+    - electricity
+  learnedAt:
+    class:
+      arcanist: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a piece of a tree struck by lightning
+  school: evo
+  sources:
+    - id: PZO1129
+      pages: '172'
+type: spell

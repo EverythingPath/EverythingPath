@@ -1,0 +1,38 @@
+_id: S9lYCsz7oA7v3GzR
+_key: '!items!S9lYCsz7oA7v3GzR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_11.jpg
+name: Discern Lies
+system:
+  abilityType: sp
+  actions:
+    - _id: kpptt507ttb5fcjd
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 5th level, an inquisitor can
+      @UUID[Compendium.pf1.spells.9vdjohbrj896e2ot]{Discern Lies}, as per the
+      spell, for a number of rounds per day equal to her inquisitor level. These
+      rounds do not need to be consecutive. Activating this ability is an
+      immediate action.</p>
+  subType: classFeat
+  tag: classFeat_discernLies
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat
