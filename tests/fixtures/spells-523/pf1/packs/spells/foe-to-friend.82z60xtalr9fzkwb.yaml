@@ -1,0 +1,51 @@
+_id: 82z60xtalr9fzkwb
+_key: '!items!82z60xtalr9fzkwb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/skills/social/diplomacy-handshake-yellow.webp
+name: Foe to Friend
+system:
+  actions:
+    - _id: xuy7dwdg2zh9od63
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Cast this spell when an enemy is about to make an attack against an
+      ally. The creature makes the attack against a valid target of your choice
+      instead or the attack is negated.</p><p>In addition, the target is
+      considered an ally for determining flanking for 1 round.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 5
+      mesmerist: 5
+      psychic: 7
+      skald: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '224'
+  subschool:
+    - compulsion
+type: spell

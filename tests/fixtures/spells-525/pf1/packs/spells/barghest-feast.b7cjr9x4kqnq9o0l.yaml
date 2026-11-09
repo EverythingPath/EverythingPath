@@ -1,0 +1,50 @@
+_id: b7cjr9x4kqnq9o0l
+_key: '!items!b7cjr9x4kqnq9o0l'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Barghest Feast
+system:
+  actions:
+    - _id: mgw8hzmvgzh50qkt
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 minutes/level; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>The target gains the ability to absorb power from devouring a humanoid
+      corpse. To use this ability, the target must feed on the corpse of one
+      nonevil humanoid creature, a process that takes 1 full round per Hit Die
+      the creature had and provokes attacks of opportunity. For every 2 rounds
+      it feeds on the corpse in this way, the target gains a +1 profane bonus on
+      attack rolls, saving throws, and skill checks (to a maximum of +5).</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      alchemist: 3
+      investigator: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO90117
+      pages: '76'
+type: spell

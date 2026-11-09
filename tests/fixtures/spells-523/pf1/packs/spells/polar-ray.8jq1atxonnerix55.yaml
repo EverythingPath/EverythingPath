@@ -1,0 +1,63 @@
+_id: 8jq1atxonnerix55
+_key: '!items!8jq1atxonnerix55'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/water/beam-ice-impact.webp
+name: Polar Ray
+system:
+  actions:
+    - _id: 97nvnmjz1hveboeb
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(25, @cl))d6
+            types:
+              - cold
+      duration:
+        units: inst
+      effect: ray
+      name: Use
+      notes:
+        effect:
+          - '[[1d4]] Dexterity Drain'
+      range:
+        units: medium
+      touch: true
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A blue-white ray of freezing air and ice springs from your
+      hand.</p><p>You must succeed on a ranged touch attack with the ray to deal
+      damage to a target. The ray deals 1d6 points of cold damage per caster
+      level (maximum 25d6) and 1d4 points of Dexterity drain.</p>
+  descriptors:
+    - cold
+  learnedAt:
+    bloodline:
+      Boreal: 8
+      Marid: 8
+    class:
+      arcanist: 8
+      sorcerer: 8
+      wizard: 8
+    subDomain:
+      Ice: 9
+  level: 8
+  materials:
+    focus: a white ceramic cone or prism
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '323'
+type: spell

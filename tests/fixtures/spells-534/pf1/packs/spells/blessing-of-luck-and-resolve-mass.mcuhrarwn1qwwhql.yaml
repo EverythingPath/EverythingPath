@@ -1,0 +1,57 @@
+_id: mcuhrarwn1qwwhql
+_key: '!items!mcuhrarwn1qwwhql'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Blessing of Luck and Resolve, Mass
+system:
+  actions:
+    - _id: wd6xxdmgi5ux9aj7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 minute/level (D); see text
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.m8nue3zocbg7c5o1]{Blessing of Luck and
+      Resolve}, except that it affects multiple creatures.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 6
+      inquisitor: 6
+      oracle: 6
+      paladin: 4
+      warpriest: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1121
+      pages: '68'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,35 @@
+_id: 7ejl0VF3GAGOjha8
+_key: '!items!7ejl0VF3GAGOjha8'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/mammals/bat-movement-flying-purple.webp
+name: Blindsight 30'
+system:
+  description:
+    value: >-
+      <p>This ability is similar to Blindsense, but is far more discerning.
+      Using nonvisual senses, such as sensitivity to vibrations, keen smell,
+      acute hearing, or Echolocation, a Creature with blindsight maneuvers and
+      fights as well as a sighted Creature. Invisibility, Darkness, and most
+      kinds of Concealment are irrelevant, though the Creature must have line of
+      effect to a Creature or object to discern that Creature or object. The
+      ability's range is specified in the creature's Descriptive Text. The
+      Creature usually does not need to make Perception checks to notice
+      creatures within range of its blindsight ability. Unless noted otherwise,
+      blindsight is continuous, and the Creature need do nothing to use it. Some
+      forms of blindsight, however, must be triggered as a free Action. If so,
+      this is noted in the creature's Description. If a Creature must trigger
+      its blindsight ability, the Creature gains the benefits of blindsight only
+      during its turn.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: blindsight-30-toggle
+      type: script
+      value: |
+        actor.update({ "system.traits.senses.bs": state ? 30 : 0});
+type: buff

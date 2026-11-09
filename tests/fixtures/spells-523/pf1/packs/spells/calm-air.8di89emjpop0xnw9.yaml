@@ -1,0 +1,62 @@
+_id: 8di89emjpop0xnw9
+_key: '!items!8di89emjpop0xnw9'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/air/air-smoke-casting.webp
+name: Calm Air
+system:
+  actions:
+    - _id: qjzn5k6o5xqgoonl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cylinder (5-ft./level radius, 40 ft. high)
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '@cl * 5'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: none (object)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell calms the air and disperses fog, dust, and other particles.
+      The wind force in the area is reduced in strength by one step per 4 caster
+      levels (to a minimum wind force of light) and clouds are dispersed,
+      although parts of nonmagical clouds that extend beyond the area are not
+      affected. If a magical cloud or wind's point of origin is inside the area
+      of a <i>calm air</i> spell, the whole effect is suppressed; otherwise,
+      only the part inside the area is suppressed. Suppression still counts
+      against the duration of a wind or cloud effect. Magical wind and cloud
+      effects are suppressed only if you succeed at a caster level check (DC 11
+      + effect's caster level). You can move the <i>calm air</i> effect by
+      concentrating as a standard action.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 5
+      druid: 4
+      hunter: 4
+      sorcerer: 5
+      summoner: 4
+      wizard: 5
+  level: 5
+  school: abj
+  sources:
+    - id: PZO9452
+      pages: '30'
+  sr: false
+type: spell

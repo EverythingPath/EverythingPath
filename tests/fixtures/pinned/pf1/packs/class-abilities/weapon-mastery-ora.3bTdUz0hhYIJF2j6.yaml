@@ -1,0 +1,37 @@
+_id: 3bTdUz0hhYIJF2j6
+_key: '!items!3bTdUz0hhYIJF2j6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Weapon Mastery (ORA)
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: A3dbx0Jd
+      formula: 1 + clamp(floor((@class.level - 4) / 4), 0, 2)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>Select one weapon with which you are proficient. You gain
+      @UUID[Compendium.pf1.feats.n250dFlbykAIAg5Z]{Weapon Focus} with that
+      weapon. At 8th level, you gain
+      @UUID[Compendium.pf1.feats.TbOPtIL8Fv8obXtP]{Improved Critical} with that
+      weapon. At 12th level, you gain
+      @UUID[Compendium.pf1.feats.IER2MzJrjSvxMlNS]{Greater Weapon Focus} with
+      that weapon. You do not need to meet the prerequisites to receive these
+      feats.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.feats.Item.n250dFlbykAIAg5Z
+  sources:
+    - id: PZO1115
+      pages: '45'
+  subType: classFeat
+  tags:
+    - Revelation
+    - Battle Mystery
+type: feat

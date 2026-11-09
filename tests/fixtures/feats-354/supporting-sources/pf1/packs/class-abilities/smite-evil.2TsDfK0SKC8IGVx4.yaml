@@ -1,0 +1,52 @@
+_id: 2TsDfK0SKC8IGVx4
+_key: '!items!2TsDfK0SKC8IGVx4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/greater-weapon-focus.jpg
+name: Smite Evil
+system:
+  abilityType: su
+  actions:
+    - _id: rp3my4fea7xog21f
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: seeText
+  associations:
+    classes:
+      - Paladin
+  description:
+    value: >-
+      <p>Once per day, a paladin can call out to the powers of good to aid her
+      in her struggle against evil. As a swift action, the paladin chooses one
+      target within sight to smite. If this target is evil, the paladin adds her
+      <em>Cha</em> bonus (if any) to her attack rolls and adds her paladin level
+      to all damage rolls made against the target of her smite. If the target of
+      smite evil is an outsider with the evil subtype, an evil-aligned dragon,
+      or an undead creature, the bonus to damage on the first successful attack
+      increases to 2 points of damage per level the paladin possesses.
+      Regardless of the target, smite evil attacks automatically bypass any
+      <em>DR</em> the creature might possess.</p>
+
+      <p>In addition, while smite evil is in effect, the paladin gains a
+      deflection bonus equal to her <em>Charisma</em> modifier (if any) to her
+      <em>AC</em> against attacks made by the target of the smite. If the
+      paladin targets a creature that is not evil, the smite is wasted with no
+      effect.</p>
+
+      <p>The smite evil effect remains until the target of the smite is dead or
+      the next time the paladin rests and regains her uses of this ability. At
+      4th level, and at every three levels thereafter, the paladin may smite
+      evil one additional time per day, as indicated on Table: Paladin, to a
+      maximum of seven times per day at 19th level.</p>
+  subType: classFeat
+  tag: classFeat_smiteEvil
+  uses:
+    maxFormula: floor((@attributes.hd.total - 1) / 3) + 1
+    per: day
+type: feat

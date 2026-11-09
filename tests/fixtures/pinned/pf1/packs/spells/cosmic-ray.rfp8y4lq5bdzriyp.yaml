@@ -1,0 +1,76 @@
+_id: rfp8y4lq5bdzriyp
+_key: '!items!rfp8y4lq5bdzriyp'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Cosmic Ray
+system:
+  actions:
+    - _id: wl1jhocnangkzcqc
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: spec
+        value: instantaneous and 1 round/level (see text)
+      effect: ray
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+      touch: true
+    - _id: EZKpvzMiuglD8C6R
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: floor(@cl / 2)
+      name: Toxic Cosmic Energy
+      save:
+        description: Fortitude negates
+        type: fort
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fling a ray of deadly cosmic energy at the target creature. If you
+      succeed at a ranged touch attack with the ray, the target takes 1d6 points
+      of damage per caster level (maximum 20d6) and must make a Fortitude save.
+      On a failed save, the target becomes sickened for 1 round per caster level
+      and emits toxic cosmic energy for as long as it is sickened; any creature
+      that comes within 5 feet of the affected target must succeed at a
+      Fortitude save (DC = spell's DC) or become sickened for 1 round per 2
+      caster levels.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 5
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: a piece of meteorite
+  school: evo
+  sources:
+    - id: PZO9449
+      pages: '28'
+type: spell
