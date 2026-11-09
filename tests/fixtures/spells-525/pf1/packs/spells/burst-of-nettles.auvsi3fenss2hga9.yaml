@@ -1,0 +1,69 @@
+_id: auvsi3fenss2hga9
+_key: '!items!auvsi3fenss2hga9'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/acid/projectile-needles-salvo-green.webp
+name: Burst of Nettles
+system:
+  actions:
+    - _id: 27ncgp7yjt3jop5n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius burst
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - acid
+              - areaOfEffect
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#38da0b'
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex half
+        type: ref
+    - _id: xhtUzlJiwPqzmgxu
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      name: Followup Damage
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You release a burst of barbed, acid-filled nettles. Creatures caught in
+      the burst take 3d6 points of damage plus 1d6 points of acid damage on the
+      next round. Those that save take half damage from the initial burst and no
+      damage on the next round.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '210'
+type: spell

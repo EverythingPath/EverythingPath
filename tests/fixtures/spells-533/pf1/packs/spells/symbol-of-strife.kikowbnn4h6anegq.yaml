@@ -1,0 +1,70 @@
+_id: kikowbnn4h6anegq
+_key: '!items!kikowbnn4h6anegq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/symbols/rune-sigil-green-purple.webp
+name: Symbol of Strife
+system:
+  actions:
+    - _id: r3qc2cc2e5lfeoyj
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except all creatures within the radius of a <em>symbol of strife</em> are
+      compelled to attack the nearest conscious creature for 1 round per caster
+      level (similar to the "attack nearest creature" result of the
+      <em>confusion</em> spell), even after leaving the symbol's area of effect.
+      If no other creatures are visible, an affected creature can act normally.
+      Once triggered, the symbol remains active for 10 minutes per caster
+      level.</p><p><em>Symbol of strife</em> can be made permanent with a
+      <em>permanency</em> spell by a caster of 18th level or higher for the cost
+      of 25,000 gp.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 9
+      cleric: 9
+      occultist: 6
+      oracle: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+    subDomain:
+      Riot: 9
+  level: 9
+  materials:
+    gpValue: 15000
+    value: >-
+      mercury and phosphorous, plus powdered diamond and opal worth a total of
+      15,000 gp
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '242'
+  subschool:
+    - compulsion
+type: spell

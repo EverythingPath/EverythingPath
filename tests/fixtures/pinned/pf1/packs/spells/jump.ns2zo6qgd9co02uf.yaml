@@ -1,0 +1,63 @@
+_id: ns2zo6qgd9co02uf
+_key: '!items!ns2zo6qgd9co02uf'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/movement/feet-winged-boots-brown.webp
+name: Jump
+system:
+  actions:
+    - _id: cgdnz57phn91uadx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject gets a +10 enhancement bonus on Acrobatics checks made to
+      attempt high jumps or long jumps. The enhancement bonus increases to +20
+      at caster level 5th, and to +30 (the maximum) at caster level 9th.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      arcanist: 1
+      bloodrager: 1
+      druid: 1
+      hunter: 1
+      investigator: 1
+      magus: 1
+      psychic: 1
+      ranger: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      wizard: 1
+    domain:
+      Vermin: 1
+    subDomain:
+      Competition: 1
+  materials:
+    value: a grasshopper's hind leg
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '303'
+type: spell

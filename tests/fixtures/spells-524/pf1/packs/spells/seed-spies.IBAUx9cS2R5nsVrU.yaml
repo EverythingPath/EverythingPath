@@ -1,0 +1,55 @@
+_id: IBAUx9cS2R5nsVrU
+_key: '!items!IBAUx9cS2R5nsVrU'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/nature/plant-seed-hands-glow-yellow.webp
+name: Seed Spies
+system:
+  actions:
+    - _id: aFi9LAUEXCnBxxKX
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      effect: up to one insect spy/4 levels
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.25bv1s6jwr8imm1o]{insect spies}, except it
+      creates wafting seeds with magical intellect instead of insects. The seeds
+      can hear but not see. They fly at a speed of 10 feet (good
+      maneuverability), but they can’t crawl or climb, although they can cling
+      to rough, soft, or sticky creatures or surfaces.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 2
+      hunter: 2
+      occultist: 2
+      ranger: 2
+      shaman: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a drop of honey
+  school: div
+  sources:
+    - id: PZO1140
+      pages: '14'
+  sr: false
+type: spell
