@@ -1,0 +1,69 @@
+_id: PqJih70EG2A1XNGf
+_key: '!items!PqJih70EG2A1XNGf'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/longbow.PNG
+name: Longbow
+system:
+  actions:
+    - _id: ttojwk1puhibwtkx
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: arrow
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '100'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Longbow
+  description:
+    unidentified: >-
+      <p>At almost 5 feet in height, a longbow is made up of one solid piece of
+      carefully curved wood. You need two hands to use a bow, regardless of its
+      size. A longbow can't be used while mounted. If you have a penalty for low
+      Strength, apply it to damage rolls when you use a longbow. You can apply
+      your Strength modifier to damage rolls when you use a composite longbow,
+      but not a regular longbow. A longbow fires arrows.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 75
+  sources:
+    - id: PZO1110
+      pages: 143, 147
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  weaponGroups:
+    - bows
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

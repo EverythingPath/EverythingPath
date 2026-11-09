@@ -1,0 +1,145 @@
+_id: 4m3vBWg6qo6oNpAf
+_key: '!items!4m3vBWg6qo6oNpAf'
+_stats:
+  coreVersion: '12.331'
+folder: I5gERPgPEuK7wW5I
+img: icons/magic/control/mouth-smile-deception-purple.webp
+name: Shade Magic
+system:
+  actions:
+    - _id: QiiZKqq5P9tGDmAT
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.vr35zocojcg7gei8]{Cloak of
+        Shade}</p><p>This spell provides the subject with some degree of
+        protection from the harmful effects of the sun. The cloaked subject
+        treats environmental heat due to sun exposure as one level less: severe
+        heat is considered very hot conditions, while very hot is considered
+        average temperature (see page 444 of the <em>Core Rulebook</em> for heat
+        dangers). The <em>cloak of shade</em> also reduces any penalties from
+        sunlight by 1. The spell does not, however, eliminate the effects of
+        direct sunlight on creatures vulnerable to sunlight. <em>Cloak of
+        shade</em> has no effect on environmental heat from sources other than
+        the sun.</p>
+      duration:
+        dismiss: true
+        units: hour
+        value: '@attributes.hd.total'
+      name: Cloak of Shade
+      range:
+        units: touch
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: '[[@attributes.hd.total]] creatures'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: IagIeZransxAh6ho
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ech2cibcsmsms9s7]{Dust of
+        Twilight}</p><p>A shower of iridescent black particles clings to and
+        extinguishes torches, lanterns, sunrods, and similar mundane light
+        sources and dispels any spell of 2nd level or lower with the light
+        descriptor (as dispel magic). Creatures in the area must make a
+        Fortitude save or become fatigued.</p>
+      duration:
+        units: inst
+      name: Dust of Twilight
+      notes:
+        effect:
+          - >-
+            Creatures in the area must make a Fortitude save or become
+            @Condition[fatigued].
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: Fortitude negates (fatigue only)
+        type: fort
+      target:
+        value: creatures and objects in a 10-ft. spread
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: FsygvgG6sSwJRpXe
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{Ghost
+        Sound}</p><p><em>Ghost sound</em> allows you to create a volume of sound
+        that rises, recedes, approaches, or remains at a fixed place. You choose
+        what type of sound <em>ghost sound</em> creates when casting it and
+        cannot thereafter change the sound's basic character.</p><p>The volume
+        of sound created depends on your level. You can produce as much noise as
+        four normal humans per caster level (maximum 40 humans). Thus, talking,
+        singing, shouting, walking, marching, or running sounds can be created.
+        The noise a <em>ghost sound</em> spell produces can be virtually any
+        type of sound within the volume limit. A horde of rats running and
+        squeaking is about the same volume as eight humans running and shouting.
+        A roaring lion is equal to the noise from 16 humans, while a roaring
+        dragon is equal to the noise from 32 humans. Anyone who hears a
+        <em>ghost sound</em> receives a Will save to disbelieve.</p><p><em>Ghost
+        sound</em> can enhance the effectiveness of a <em>silent image</em>
+        spell.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      effect: illusory sounds
+      name: Ghost Sound
+      range:
+        units: close
+      save:
+        dc: 10 + 0 + @abilities.cha.mod
+        description: Will disbelief
+        type: will
+      target:
+        value: illusory sounds
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Drow<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Abilities</p><hr /><p>Drow with this trait can cast
+      <em>@UUID[Compendium.pf1.spells.Item.vr35zocojcg7gei8]{cloak of
+      shade}</em><sup>APG</sup>,
+      <em>@UUID[Compendium.pf1.spells.Item.ech2cibcsmsms9s7]{dust of
+      twilight}</em><sup>APG</sup>, and
+      <em>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost sound}</em>
+      as spell-like abilities each once per day. This racial trait replaces a
+      drow's normal spell-like abilities.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9466
+      pages: '15'
+  subType: racial
+  tags:
+    - Drow
+  traitCategory: magical
+type: feat

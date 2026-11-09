@@ -1,0 +1,179 @@
+_id: 2jJkIYgBDpnVusfr
+_key: '!items!2jJkIYgBDpnVusfr'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Utilitarian Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: XcVDLNheHW4r3RjQ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage
+        hand,}</p><p>You point your finger at an object and can lift it and move
+        it at will from a distance. As a move action, you can propel the object
+        as far as @Distance[15 ft;dual] in any direction, though the spell ends
+        if the distance between you and the object ever exceeds the spell's
+        range.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: Concentration
+      name: Mage Hand
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one nonmagical, unattended object weighing up to 5 lbs (2.5 kg)
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: TEW0YDOAQUHPZRnt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ug7ycubjoxgp7ppc]{open/close}</p><p>You
+        can open or close (your choice) a door, chest, box, window, bag, pouch,
+        bottle, barrel, or other container. If anything resists this activity
+        (such as a bar on a door or a lock on a chest), the spell fails. In
+        addition, the spell can only open and close things weighing
+        @Weight[30;dual] or less. Thus, doors, chests, and similar objects sized
+        for enormous creatures may be beyond this spell's ability to affect.</p>
+      duration:
+        units: inst
+      name: Open/Close
+      notes:
+        effect:
+          - DC includes +1 benefit provided by this trait.
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.int.mod + 11'
+        description: negates (object)
+        type: will
+      target:
+        value: object weighing up to 30 lbs (15 kg) that can be opened or closed
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: j0sRL64BcUPT2hJt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.jhyb2ana8jrk2lut]{unseen servant}.
+        </p><p>An unseen servant is an invisible, mindless, shapeless force that
+        performs simple tasks at your command. It can run and fetch things, open
+        unstuck doors, and hold chairs, as well as clean and mend. The servant
+        can perform only one activity at a time, but it repeats the same
+        activity over and over again if told to do so as long as you remain
+        within range. It can open only normal doors, drawers, lids, and the
+        like. It has an effective Strength score of 2 (so it can lift
+        @Weight[20;dual] or drag @Weight[100;dual]). It can trigger traps and
+        such, but it can exert only @Weight[20;dual] of force, which is not
+        enough to activate certain pressure plates and other devices. It can't
+        perform any task that requires a skill check with a DC higher than 10 or
+        that requires a check using a skill that can't be used untrained. This
+        servant cannot fly, climb, or even swim (though it can walk on water).
+        Its base speed is @Distance[15 ft;dual].</p><p>The servant cannot attack
+        in any way; it is never allowed an attack roll. It cannot be killed, but
+        it dissipates if it takes 6 points of damage from area attacks. (It gets
+        no saves against attacks.) If you attempt to send it beyond the spell's
+        range (measured from your current position), the servant ceases to
+        exist.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Unseen Servant
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one invisible, mindless, shapeless servant
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: hZ0mPWeDZvAvhSJK
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+  changes:
+    - _id: c9tRHDOz
+      formula: '1'
+      target: dc.school.trs
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic</p><hr /><p>Some gnomes develop practical magic to assist them
+      with their obsessive projects. These gnomes add 1 to the DC of any saving
+      throws against transmutation spells they cast. If their Intelligence score
+      is 11 or higher, they also gain the following spell-like abilities:
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage
+      hand,}</em>
+      <em>@UUID[Compendium.pf1.spells.Item.ug7ycubjoxgp7ppc]{open/close}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}</em>,
+      and <em>@UUID[Compendium.pf1.spells.Item.jhyb2ana8jrk2lut]{unseen
+      servant}</em>. The DC for these spells is equal to 10 + the spell's level
+      + the gnome's Intelligence modifier. This racial trait replaces gnome
+      magic.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '211'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.int.total, 11)
+    per: day
+    value: 0
+type: feat
