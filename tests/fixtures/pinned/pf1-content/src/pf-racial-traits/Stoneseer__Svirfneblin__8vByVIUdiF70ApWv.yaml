@@ -1,0 +1,164 @@
+_id: 8vByVIUdiF70ApWv
+_key: '!items!8vByVIUdiF70ApWv'
+_stats:
+  coreVersion: '12.331'
+folder: Yu6sNWsnd5R2TDkF
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Stoneseer (Svirfneblin)
+system:
+  abilityType: sp
+  actions:
+    - _id: ZLcXMAMt1GLCsjTL
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}</p><p>The
+        warded creature or object becomes difficult to detect by divination
+        spells such as clairaudience/clairvoyance, locate object, and detect
+        spells. Nondetection also prevents location by such magic items as
+        crystal balls. If a divination is attempted against the warded creature
+        or item, the caster of the divination must succeed on a caster level
+        check (1d20 + caster level) against a DC of 11 + the caster level of the
+        spellcaster who cast nondetection. If you cast nondetection on yourself
+        or on an item currently in your possession, the DC is 15 + your caster
+        level.</p><p>If cast on a creature, nondetection wards the creature's
+        gear as well as the creature itself.</p>
+      duration:
+        units: perm
+      name: Nondetection
+      notes:
+        effect:
+          - >-
+            If a divination is attempted you, they must attempt a caster level
+            check,  the DC for that check is [[15 + @attributes.hd.total]]
+      range:
+        units: touch
+      target:
+        value: creature or object touched
+    - _id: N2OZ5VjiLHYNguZC
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.fv9mgob508qv99zz]{Magic
+        Stone}</p><p>You transmute as many as three pebbles, which can be no
+        larger than sling bullets, so that they strike with great force when
+        thrown or slung. If hurled, they have a range increment of @Distance[20
+        ft;dual]. If slung, treat them as sling bullets (range increment
+        @Distance[50 ft;dual]). The spell gives them a +1 enhancement bonus on
+        attack and damage rolls. The user of the stones makes a normal ranged
+        attack. Each stone that hits deals 1d6+1 points of damage (including the
+        spell's enhancement bonus), or 2d6+2 points against undead.</p>
+      duration:
+        units: spec
+        value: 30 minutes or until discharged
+      name: Magic Stone
+      notes:
+        effect:
+          - each stone deals @Damage[1d6+1] or @Damage[2d6+2] vs undead
+      range:
+        units: touch
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: up to 3 pebbles touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: DhbFz9cOQFb69WHC
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.g1evszmk8wfgnsv5]{stone
+        shape},</p><p>You can form an existing piece of stone into any shape
+        that suits your purpose. While it's possible to make crude coffers,
+        doors, and so forth with stone shape, fine detail isn't possible. There
+        is a 30% chance that any shape including moving parts simply doesn't
+        work.</p>
+      duration:
+        units: inst
+      name: Stone Shape
+      notes:
+        effect:
+          - includes your +1 caster level for earth descriptor spells
+          - >-
+            Target: stone or stone object touched, up to [[11 +
+            @attributes.hd.total]] cu. ft.
+      range:
+        units: touch
+      target:
+        value: >-
+          stone or stone object touched, up to [[11 + @attributes.hd.total]] cu.
+          ft.
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: dtMO1oQv6edLWH4w
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.wgm8mm1za909pwch]{stone
+        tell}</em>;</p><p>You gain the ability to speak with stones, which
+        relate to you who or what has touched them as well as revealing what is
+        covered or concealed behind or under them. The stones relate complete
+        descriptions if asked. A stone's perspective, perception, and knowledge
+        may prevent the stone from providing the details you are looking for.
+        You can speak with natural or worked stone.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Stone Tell
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: cl
+      text: +[[1]] to the caster level of any spells with the earth descriptor.
+  description:
+    instructions: >-
+      <p>You must add the bonus to Caster Level to each spell you cast that has
+      the earth descriptor.</p>
+    value: >-
+      <p><strong>Race</strong>: Svirfneblin<br /><strong>Replaced
+      Trait(s)</strong>: Svirfneblin Magic</p><hr /><p>Svirfneblin add +1 to the
+      caster level of any spells with the earth descriptor they cast.
+      Svirfneblin also gain the following spell-like abilities:
+      Constant-<em>@UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}</em>;
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.fv9mgob508qv99zz]{magic
+      stone}</em>, <em>@UUID[Compendium.pf1.spells.Item.g1evszmk8wfgnsv5]{stone
+      shape}</em>, <em>@UUID[Compendium.pf1.spells.Item.wgm8mm1za909pwch]{stone
+      tell}</em>; caster level equals the svirfneblin's class levels. This
+      racial trait replaces svirfneblin magic.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '204'
+  subType: racial
+  tags:
+    - Svirfneblin
+  traitCategory: magical
+type: feat

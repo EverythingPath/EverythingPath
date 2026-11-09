@@ -1,0 +1,52 @@
+_id: mmc8z9bzozgeg4dm
+_key: '!items!mmc8z9bzozgeg4dm'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Borrow Skill
+system:
+  actions:
+    - _id: kuowyh2ytghciyop
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: up to 1 round/level (see description)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You borrow one of the target's known skills. After touching the
+      subject, you can make a single check with the chosen skill using the
+      subject's skill ranks, but modified by your own key ability.</p><p>If you
+      take longer than the spell's duration to make the check or the check
+      requires more time, then it fails and you must use your own skill ranks
+      (if any). If the borrowed skill is a class skill for you, you gain the +3
+      bonus on checks using that skill.</p>
+  learnedAt:
+    class:
+      bard: 1
+      medium: 1
+      psychic: 1
+      skald: 1
+    subDomain:
+      Cooperation: 1
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '207'
+type: spell

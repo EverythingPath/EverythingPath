@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/5JFfSqLMCpbRmERa",
+      "upstreamKey": "pf1/5JFfSqLMCpbRmERa",
+      "pack": "class-abilities",
+      "name": "Armor Training",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing <em>armor</em>, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum <em>Dexterity</em> bonus allowed.</p><p>In addition, a fighter can also move at his normal speed while wearing medium armor.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "55-56"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Fighter"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "acpA",
+            "formula": "-clamp(floor((@class.level + 1) / 4), 0, 4)",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "mDexA",
+            "formula": "clamp(floor((@class.level + 1) / 4), 0, 4)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus allowed."
+        },
+        {
+          "text": "In addition, a fighter can also move at his normal speed while wearing medium armor."
+        }
+      ]
+    }
+  ],
+  "closure": []
+}

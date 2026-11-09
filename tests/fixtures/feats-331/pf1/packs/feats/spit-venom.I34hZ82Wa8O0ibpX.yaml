@@ -1,0 +1,55 @@
+_id: I34hZ82Wa8O0ibpX
+_key: '!items!I34hZ82Wa8O0ibpX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/races/vishkanya.png
+name: Spit Venom
+system:
+  actions:
+    - _id: tqDVS0yA9JIaLWTZ
+      ability:
+        attack: dex
+      actionType: rwak
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: inst
+      name: Use
+      notes:
+        effect:
+          - Target is blinded for [[1d6]] rounds.
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Fortitude negates
+        type: fort
+      touch: true
+  description:
+    value: >-
+      <p><em>You have mastered the nagaji warrior technique of spitting venom
+      into your opponent’s eyes.</em></p><p><strong>Prerequisites</strong>:
+      Nagaji.</p><p><strong>Benefit</strong>: As a full-round action, you can
+      spit poison up to 10 feet as a ranged touch attack. If you hit, the target
+      must make a successful Fortitude save or be blinded for 1d6 rounds. The DC
+      of this save is equal to 10 + 1/2 your total Hit Dice + your Constitution
+      modifier. You can use this ability once per day plus one additional time
+      per day for every three Hit Dice you have.</p><h3>Combat Trick</h3><p>When
+      you spit poison, you can spend up to 5 stamina points. For each stamina
+      point spent, you can increase the range of the attack by 5 feet.</p>
+  sources:
+    - id: PZO1121
+      pages: '197'
+  tags:
+    - Combat
+    - Nagaji
+    - Combat Trick
+  uses:
+    maxFormula: 1 + floor(@attributes.hd.total / 3)
+    per: charges
+type: feat

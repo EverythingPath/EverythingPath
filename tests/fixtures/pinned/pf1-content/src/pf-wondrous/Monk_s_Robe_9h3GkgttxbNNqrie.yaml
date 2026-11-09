@@ -1,0 +1,51 @@
+_id: 9h3GkgttxbNNqrie
+_key: '!items!9h3GkgttxbNNqrie'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: systems/pf1/icons/items/equipment/tunic.jpg
+name: Monk's Robe
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: v4WrNNsR
+      formula: >-
+        ifelse(gt(max(@classes.monk.level, @classes.monkUnchained.level), 0), 0,
+        1)
+      target: ac
+      type: untyped
+  cl: 10
+  description:
+    instructions: >-
+      <p>If you are not a monk, your unarmed damage becomes 1d8 (for size M).
+      This item will adjust your AC appropriately.</p><p>Any monk should
+      manually update their uses formula for Stunning Fist by +1 and their ac
+      bonus and unarmed damage according to the monk table (with the level
+      adjustment added in) manually.</p>
+    unidentified: <p> This is a simple brown robe.</p>
+    value: >-
+      <h3>Effect</h3><p>When worn, this simple brown robe confers great ability
+      in unarmed combat. If the wearer has levels in monk, her AC and unarmed
+      damage are treated as a monk of 5 levels higher. If donned by a character
+      with the Stunning Fist feat, the robe lets her make one additional
+      stunning attack per day. If the character is not a monk, she gains the AC
+      and unarmed damage of a 5th-level monk (although she does not add her
+      Wisdom bonus to her AC). This AC bonus functions just like the monk's AC
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.6ax0ythzw8n4bta8]{righteous might}
+      </em>or
+      <em>@UUID[Compendium.pf1.spells.Item.9pbl3ktd5oqejl19]{transformation}</em>
+      <strong>Cost</strong> 6,500 gp</p>
+  price: 13000
+  slot: body
+  sources:
+    - id: PZO1123
+      pages: '216'
+    - id: PZO1110
+      pages: '532'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

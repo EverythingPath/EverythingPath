@@ -1,0 +1,60 @@
+_id: ueb1qcb6rdliovic
+_key: '!items!ueb1qcb6rdliovic'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Biting Words
+system:
+  actions:
+    - _id: o5ib66tjezd6z82r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your voice becomes suffused with magic so that you can harm your
+      opponents with but a word. As a standard action, you can target one
+      opponent within 30 feet with a ranged touch attack by speaking to it,
+      dealing an amount of damage equal to 1d6 + your Strength or Charisma
+      modifier, whichever is higher. The damage dealt is bludgeoning, piercing,
+      and slashing damage and can be reduced by damage reduction. Each attack
+      you make reduces the spell's remaining duration by 1 minute. If an attack
+      reduces the remaining duration to 0 minutes or less, the spell ends after
+      the attack resolves.  You can attack with <i>biting words</i> by shouting
+      instead of speaking intelligibly. When doing so, the amount of damage
+      dealt by the attack is reduced to 1d4 + 1/2 your Strength or Charisma
+      modifier (whichever is higher), but the spell doesn't count as having the
+      language-dependent descriptor for that attack.</p>
+  descriptors:
+    - languageDependent
+    - sonic
+  learnedAt:
+    class:
+      bard: 1
+      bloodrager: 1
+      skald: 1
+  school: evo
+  sources:
+    - id: PZO9468
+      pages: '9'
+  sr: false
+type: spell

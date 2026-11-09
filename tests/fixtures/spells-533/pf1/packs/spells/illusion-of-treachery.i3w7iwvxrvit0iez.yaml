@@ -1,0 +1,63 @@
+_id: i3w7iwvxrvit0iez
+_key: '!items!i3w7iwvxrvit0iez'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Illusion of Treachery
+system:
+  actions:
+    - _id: rj7lobg1jq41dapg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: one creature
+  components:
+    focus: true
+    somatic: true
+  description:
+    value: >-
+      <p>You create an illusion that takes the same space as a foe and mimics
+      its movements perfectly. Whenever you cast a spell or throw a weapon, the
+      illusion ceases mimicking the target's actions just long enough to make it
+      look like the target cast the spell or threw the weapon simultaneously
+      with you, such that witnesses who can see both you and the target can't
+      tell with certainty who truly cast the spell or threw the weapon.
+      Witnesses who can see only the target see it as the only apparent source.
+      The subject of this spell doesn't provoke attacks of opportunity from
+      these illusory actions. Each target of the attack or spell counts as
+      interacting with the illusion and thus receives a save to disbelieve.</p>
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 4
+      magus: 4
+      mesmerist: 3
+      occultist: 4
+      psychic: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a tiny marionette
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '216'
+  subschool:
+    - figment
+type: spell

@@ -1,0 +1,55 @@
+_id: 2qbdesr0fwtmi9tj
+_key: '!items!2qbdesr0fwtmi9tj'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: systems/pf1/icons/misc/magic-swirl.png
+name: Brand, Greater
+system:
+  actions:
+    - _id: e397vbzhzi9eu7i7
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.h7ktzr7anfh382xu]{brand}, except that it
+      inflicts 1d6 points of damage when applied and cannot be removed, even
+      temporarily. In addition, a greater <em>brand</em> blazes as bright as a
+      torch when brought within 30 feet of a visible symbol of your faith. While
+      the symbol is blazing, the recipient is sickened.</p>
+
+      <p>Like the effects of
+      @UUID[Compendium.pf1.spells.lsboosfk26m0ycqv]{bestow curse}, a greater
+      <em>brand</em> cannot be dispelled, but it can be removed by any means
+      that removes a @UUID[Compendium.pf1.spells.3jaumkutti1ytulq]{mark of
+      justice}.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      inquisitor: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '207'
+type: spell
