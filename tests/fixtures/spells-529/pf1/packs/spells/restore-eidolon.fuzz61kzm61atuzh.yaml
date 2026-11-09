@@ -1,0 +1,50 @@
+_id: fuzz61kzm61atuzh
+_key: '!items!fuzz61kzm61atuzh'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Restore Eidolon
+system:
+  actions:
+    - _id: esrg6izm7rm79j1m
+      actionType: heal
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: eidolon touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.anya5qwdjhdfyk8u]{restoration}, except it
+      only affects an eidolon.</p>
+  learnedAt:
+    class:
+      summoner: 3
+      summonerUnchained: 3
+  level: 3
+  materials:
+    gpValue: 1000
+    value: diamond dust worth 100 gp or 1,000 gp, see text
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '235'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,31 @@
+_id: Yr2fjmHuiTy4J6nC
+_key: '!items!Yr2fjmHuiTy4J6nC'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/emerald_05.jpg
+name: Animal Focus (Frog)
+system:
+  changes:
+    - _id: 1k9qck46
+      formula: floor(((@item.level)-1)/7)*2+4
+      target: skill.swm
+      type: competence
+  contextNotes:
+    - target: skill.acr
+      text: +[[floor(((@item.level)-1)/7)*2+4]] to jump
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains a +4 competence bonus on Swim checks and on
+      Acrobatics checks to jump. This bonus increases to +6 at 8th level and +8
+      at 15th level.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 7
+  subType: spell
+type: buff

@@ -1,0 +1,65 @@
+_id: mxqi375ya2rka7cp
+_key: '!items!mxqi375ya2rka7cp'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/ankh-gold-blue.webp
+name: True Resurrection
+system:
+  actions:
+    - _id: 5q9q9it912kjn151
+      actionType: heal
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none; see text
+      target:
+        value: dead creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.c5anior2ysy6s2xy]{raise dead}, except
+      that you can resurrect a creature that has been dead for as long as 10
+      years per caster level.</p><p>This spell can even bring back creatures
+      whose bodies have been destroyed, provided that you unambiguously identify
+      the deceased in some fashion (reciting the deceased's time and place of
+      birth or death is the most common method).</p><p>Upon completion of the
+      spell, the creature is immediately restored to full hit points, vigor, and
+      health, with no negative levels (or Constitution points) and all of the
+      prepared spells possessed by the creature when it died.</p><p>You can
+      revive someone killed by a death effect or someone who has been turned
+      into an undead creature and then destroyed.</p><p>This spell can also
+      resurrect elementals or outsiders, but it can't resurrect constructs or
+      undead creatures.</p><p>Even <em>true resurrection</em> can't restore to
+      life a creature who has died of old age.</p>
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+    subDomain:
+      Resurrection: 9
+  level: 9
+  materials:
+    gpValue: 25000
+    value: diamond worth 25,000 gp
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '362'
+  subschool:
+    - healing
+type: spell

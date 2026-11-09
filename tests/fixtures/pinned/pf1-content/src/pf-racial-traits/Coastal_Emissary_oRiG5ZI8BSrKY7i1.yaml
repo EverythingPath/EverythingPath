@@ -1,0 +1,46 @@
+_id: oRiG5ZI8BSrKY7i1
+_key: '!items!oRiG5ZI8BSrKY7i1'
+_stats:
+  coreVersion: '12.331'
+folder: JuBq7kP20NXqHu1h
+img: systems/pf1/icons/skills/blue_06.jpg
+name: Coastal Emissary
+system:
+  actions:
+    - _id: OwkrpHarNkaz6IJC
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, you can roll twice and take the better roll when
+        attempting a Diplomacy or Sense Motive check.</p>
+      name: Roll twice, take better  Diplomacy or Sense Motive check
+      notes:
+        effect:
+          - '@Skill[dip]'
+          - '@Skill[sen]'
+  contextNotes:
+    - target: skill.dip
+      text: Once per day, you can roll twice and take the better roll.
+    - target: skill.sen
+      text: Once per day, you can roll twice and take the better roll.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Locathah<br /><strong>Replaced
+      Trait(s)</strong>: Low-Light Vision</p><hr /><p>Locathahs who dwell in
+      sunlit coastal waters develop close ties with surface dwellers and become
+      skilled negotiators. Once per day when attempting a Diplomacy or Sense
+      Motive check, a locathah with this racial trait can roll twice and use the
+      better result. This racial trait replaces low-light vision.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9482
+      pages: '11'
+  subType: racial
+  tags:
+    - Locathah
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

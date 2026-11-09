@@ -1,0 +1,58 @@
+_id: igwRYyXsVoDgIPSi
+_key: '!items!igwRYyXsVoDgIPSi'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/dogslicer.png
+name: Dogslicer
+system:
+  actions:
+    - _id: jg4rm349amg6h79w
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Dogslicer
+  description:
+    unidentified: >-
+      <p>This short, curved blade was created by goblins, who often drill
+      numerous holes into it in an attempt to reduce its weight. Most dogslicers
+      are sized for Small creatures.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    fin: true
+    frg: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 1
+type: weapon

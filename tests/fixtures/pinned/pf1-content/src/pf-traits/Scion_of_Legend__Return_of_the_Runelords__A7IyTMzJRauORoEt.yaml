@@ -1,0 +1,72 @@
+_id: A7IyTMzJRauORoEt
+_key: '!items!A7IyTMzJRauORoEt'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Scion of Legend (Return of the Runelords)
+system:
+  actions:
+    - _id: bEAiOxwnTGiuoEyJ
+      actionType: heal
+      activation:
+        type: free
+        unchained:
+          type: free
+      description: >-
+        <p>Once per adventure, as a free action, you can call upon a previously
+        forgotten bit of advice or lore imparted to you by the hero to gain an
+        insight bonus equal to your class level (minimum +10) to a skill check.
+        You may choose to apply this bonus after you roll the skill check, but
+        must do so before the result of the roll is known.</p><p>(+[[max(10,
+        @attributes.hd.total)]] Insight bonus)</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  changes:
+    - _id: Vrvh7YyQ
+      formula: '1'
+      type: trait
+    - _id: qkLq89BL
+      formula: '1'
+      type: trait
+  contextNotes:
+    - target: skills
+      text: >-
+        Once per adventure, as a free action, you can gain a (+[[max(10,
+        @attributes.hd.total)]] Insight bonus). You may use this bonus after you
+        roll, but before the result of the roll is known.
+  description:
+    instructions: >-
+      <p>Select two skills for which your associated hero has skill ranks when
+      you take this trait.</p><p>Update the Class skills section of the Details
+      tab of this trait to reflect these two choices.</p><p>Update the target of
+      the changes on the Changes tab of this trait to reflect these two
+      choices.</p>
+    value: >-
+      <p><em>Your character has a personal link or association with one of
+      Varisia’s established heroes. This hero should be a PC you played in a
+      previous campaign (and could be, but need not be, one of the Sihedron
+      Heroes). Your character could be a younger sibling, younger cousin, or
+      even an apprentice of the hero. If enough time has passed, you might be
+      the hero’s child, or your character could have reincarnated from the soul
+      of a hero that died before your character was
+      born.</em></p><p><strong>Benefits</strong>: Choose two skills for which
+      your associated hero has skill ranks. You gain a +1 trait bonus on checks
+      with both of those skills, and those two skills are class skills for
+      you.</p><p>Once per adventure as a free action, you can call upon a
+      previously forgotten bit of advice or lore imparted to you by the hero to
+      gain an insight bonus equal to your class level (minimum +10) to a skill
+      check. You may choose to apply this bonus after you roll the skill check,
+      but must do so before the result of the roll is known.</p><hr />
+  sources:
+    - id: PZO9000-23E
+      pages: '11'
+  subType: trait
+  tags:
+    - Return of the Runelords
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: charges
+    value: 1
+type: feat
