@@ -1,0 +1,61 @@
+_id: ydiw433eopef79r5
+_key: '!items!ydiw433eopef79r5'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/flame-burning-chain.webp
+name: Chains of Fire
+system:
+  actions:
+    - _id: cuso5m3hqc7rcenj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+      target:
+        value: >-
+          one primary target, plus one secondary target/level (each of which
+          must be within 30 ft. of the primary target)
+  attackNotes:
+    - 'Max arcs: [[@cl]]'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.6vfauefzzmwl4az7]{chain lightning},
+      except as noted above, and the spell deals fire damage instead of
+      electricity damage.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a drop of oil and a small piece of flint
+  school: evo
+  sources:
+    - id: PZO1121
+      pages: '131'
+type: spell

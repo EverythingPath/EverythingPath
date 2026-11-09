@@ -1,0 +1,99 @@
+_id: ZYd74LBFS9anW25r
+_key: '!items!ZYd74LBFS9anW25r'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/wind-grasp-air-2.jpg
+name: Channel Vigor (Mind)
+system:
+  changes:
+    - _id: upm4di80
+      formula: '4'
+      target: skill.kar
+      type: competence
+    - _id: rryh2oth
+      formula: '4'
+      target: skill.kdu
+      type: competence
+    - _id: zy64g35s
+      formula: '4'
+      target: skill.ken
+      type: competence
+    - _id: zftevasg
+      formula: '4'
+      target: skill.kge
+      type: competence
+    - _id: kdzcbkim
+      formula: '4'
+      target: skill.khi
+      type: competence
+    - _id: 763ercyo
+      formula: '4'
+      target: skill.klo
+      type: competence
+    - _id: zwhx8ey8
+      formula: '4'
+      target: skill.kna
+      type: competence
+    - _id: pudx38h3
+      formula: '4'
+      target: skill.kno
+      type: competence
+    - _id: 1fswctjg
+      formula: '4'
+      target: skill.kpl
+      type: competence
+    - _id: 93nguc0z
+      formula: '4'
+      target: skill.kre
+      type: competence
+    - _id: cn6zktd2
+      formula: '4'
+      target: skill.per
+      type: competence
+    - _id: 9t8pcgwk
+      formula: '4'
+      target: rattack
+      type: competence
+  description:
+    instructions: >-
+      <p>Deactivate active buff and activate the desired variant upon
+      choice.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.tj3xdnlwtgk5ecln]{Channel
+      Vigor}</p><p>When you cast the spell, choose one of the following portions
+      of your self as your focus target. Thereafter, you may change the focus
+      target as a move action. You can gain the benefit of only one <em>channel
+      vigor</em> spell at a time.</p><ul><li><em>Limbs</em>: You gain the
+      benefits of a haste spell.</li><li><em>Mind</em>: You gain a +4 competence
+      bonus on Knowledge and Perception skill checks and on ranged attack
+      rolls.</li><li><em>Spirit</em>: You gain a +6 competence bonus on Will
+      saving throws and Bluff and Intimidate checks.</li><li><em>Torso</em>: You
+      gain a +6 competence bonus on Fortitude saving throws and concentration
+      checks.</li></ul><p><strong>Haste</strong>: When making a full attack
+      action, you may make one extra attack with one natural or manufactured
+      weapon at your highest base attack bonus. This effect is not cumulative
+      with similar effects, such as that provided by a speed weapon.</p>
+  level: 5
+  scriptCalls:
+    - _id: 7cFYYSVaBTskiCrI
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Others
+      type: script
+      value: |-
+        if(state) {
+          const otherBuffTags = [
+            "channelVigorLimbs",
+            "channelVigorMind",
+            "channelVigorSpirit",
+            "channelVigorTorso"
+          ];
+
+          const otherBuffs = actor.itemTypes.buff.filter(b => otherBuffTags.includes(b.system.tag) && b.system.tag !== item.system.tag);
+          otherBuffs.forEach(async (buff) => { await buff.setActive(false) });
+        }
+  subType: spell
+  tag: channelVigorMind
+type: buff
