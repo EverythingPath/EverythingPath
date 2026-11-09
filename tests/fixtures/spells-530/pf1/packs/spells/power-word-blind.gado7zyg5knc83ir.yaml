@@ -1,0 +1,59 @@
+_id: gado7zyg5knc83ir
+_key: '!items!gado7zyg5knc83ir'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Power Word Blind
+system:
+  actions:
+    - _id: gf4gipbgu1le9q20
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature with 200 hp or less
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You utter a single word of power that causes a creature to become
+      blinded, whether the creature can hear the word or not. The duration of
+      the spell depends on the target's current hit point total.</p><p>Any
+      creature that currently has 201 or more hit points is
+      unaffected.</p><table><tbody><tr><th>Hit
+      points</th><th>Duration</th></tr><tr><td>50 or
+      less</td><td>Permanent</td></tr><tr><td>51-100</td><td>1d4+1
+      minutes</td></tr><tr><td>101-200</td><td>1d4+1
+      rounds</td></tr></tbody></table>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Maestro: 7
+      Shadow: 7
+    class:
+      arcanist: 7
+      mesmerist: 6
+      psychic: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+    domain:
+      Darkness: 7
+      War: 7
+  level: 7
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,66 @@
+_id: ewhFVskXwNn3uVnI
+_key: '!items!ewhFVskXwNn3uVnI'
+_stats:
+  coreVersion: '12.331'
+folder: egPtrKyVhJWvKbJV
+img: icons/magic/death/skull-poison-green.webp
+name: Toxic
+system:
+  actions:
+    - _id: aF8zJ2MUpoeyR4WK
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: 1d2
+            types:
+              - Dex
+      description: >-
+        <p>A number of times per day equal to his Constitution modifier (minimum
+        1/day), a vishkanya can envenom a weapon that he wields with his toxic
+        saliva or blood (using blood requires the vishkanya to be injured when
+        he uses this ability). Applying venom in this way is a swift
+        action.</p><p>Vishkanya Venom: Weapon-injury; save Fort DC 10 + 1/2 the
+        vishkanya's Hit Dice + the vishkanya's Constitution modifier; frequency
+        1/round for 6 rounds; effect 1d2 Dex; cure 1 save.</p>
+      duration:
+        units: round
+      name: Vishkanya venom
+      notes:
+        effect:
+          - frequency 1/round for 6 rounds; effect 1d2 Dex; cure 1 save.
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Negates
+        type: fort
+      target:
+        value: Wielded weapon
+  description:
+    value: >-
+      <p><strong>Race</strong>: Vishkanya</p><hr /><p>A number of times per day
+      equal to his Constitution modifier (minimum 1/day), a vishkanya can
+      envenom a weapon that he wields with his toxic saliva or blood (using
+      blood requires the vishkanya to be injured when he uses this ability).
+      Applying venom in this way is a swift action.</p><p><em>Vishkanya
+      Venom</em>: Weapon-injury; <em>save</em> Fort DC 10 + 1/2 the vishkanya's
+      Hit Dice + the vishkanya's Constitution modifier; <em>frequency</em>
+      1/round for 6 rounds; <em>effect</em> 1d2 Dex; <em>cure</em> 1 save.</p>
+  racePoints: 1
+  sources:
+    - id: PZO9280
+      pages: '253'
+    - id: PZO1121
+      pages: '208'
+    - id: PZO1120
+      pages: '281'
+  subType: racial
+  tags:
+    - Vishkanya
+  traitCategory: offense
+  uses:
+    maxFormula: '@abilities.con.mod'
+    per: day
+type: feat
