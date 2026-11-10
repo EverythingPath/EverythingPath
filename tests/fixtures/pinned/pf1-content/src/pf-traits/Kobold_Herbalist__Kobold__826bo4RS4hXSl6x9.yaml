@@ -1,0 +1,72 @@
+_id: 826bo4RS4hXSl6x9
+_key: '!items!826bo4RS4hXSl6x9'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Kobold Herbalist (Kobold)
+system:
+  actions:
+    - _id: ScxFkkkqg586QNEQ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, you can attempt a DC 20 Survival check instead of a
+        Craft (alchemy) check to create a single dose of scent cloak without
+        paying any cost for raw materials. Any scent cloak created using this
+        method must be used within 24 hours, or it becomes inert.</p>
+      duration:
+        units: hour
+        value: '24'
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Use
+  contextNotes:
+    - target: skill.crf
+      text: >-
+        Once per day, you can attempt a DC 20 Survival check instead of a Craft
+        (alchemy) check to create a single dose of
+        @UUID[Compendium.pf1.items.Item.avdskczyslzefify]{scent cloak} without
+        paying any cost for raw materials. Any scent cloak created using this
+        method must be used within 24 hours, or it becomes inert.
+    - target: skill.sur
+      text: >-
+        Once per day, you can attempt a DC 20 Survival check instead of a Craft
+        (alchemy) check to create a single dose of
+        @UUID[Compendium.pf1.items.Item.avdskczyslzefify]{scent cloak} without
+        paying any cost for raw materials. Any scent cloak created using this
+        method must be used within 24 hours, or it becomes inert.
+  description:
+    value: >-
+      <p><em>You are familiar with the flora of your native forest and have
+      rudimentary skill as an
+      herbalist.</em></p><p><strong>Requirements</strong>:
+      Kobold</p><p><strong>Benefits</strong>: Once per day, you can attempt a DC
+      20 Survival check instead of a Craft (alchemy) check to create a single
+      dose of @UUID[Compendium.pf1.items.Item.avdskczyslzefify]{scent cloak}
+      without paying any cost for raw materials. Any scent cloak created using
+      this method must be used within 24 hours, or it becomes inert.</p>
+  scriptCalls:
+    - _id: xV2tWKwxtaKoWZtx
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("sur");
+  showInQuickbar: true
+  sources:
+    - id: PZO9432
+      pages: '19'
+  subType: trait
+  tags:
+    - Kobold
+    - Green-Scaled
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

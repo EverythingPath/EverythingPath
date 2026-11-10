@@ -1,0 +1,53 @@
+_id: mxexufme4unc4l6c
+_key: '!items!mxexufme4unc4l6c'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Spellstaff
+system:
+  actions:
+    - _id: 68bh39z2n39nzf22
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: wooden quarterstaff touched
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You store one spell that you can normally cast in a wooden
+      quarterstaff. Only one such spell can be stored in a staff at a given
+      time, and you cannot have more than one <i>spellstaff</i> at any given
+      time. You can cast a spell stored within a staff just as though it were
+      among those you had prepared, but it does not count against your normal
+      allotment for a given day. You use up any applicable material components
+      required to cast the spell when you store it in the <i>spellstaff</i>.</p>
+  learnedAt:
+    class:
+      druid: 6
+      hunter: 6
+  level: 6
+  materials:
+    focus: the staff that stores the spell
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '347'
+type: spell

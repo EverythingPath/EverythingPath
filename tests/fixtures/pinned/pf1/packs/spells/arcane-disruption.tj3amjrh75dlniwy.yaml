@@ -1,0 +1,71 @@
+_id: tj3amjrh75dlniwy
+_key: '!items!tj3amjrh75dlniwy'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Arcane Disruption
+system:
+  actions:
+    - _id: u2w5kb7detsxanfa
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell makes it difficult for the subject to cast arcane spells,
+      use spell-like abilities, and use some abilities granted by arcane
+      spellcasting classes. The subject must succeed at a concentration check
+      (DC = 10 + 1/2 its caster level) in order to cast an arcane spell, use any
+      spell-like ability (even those that come from a divine source), use arcane
+      spell completion or spell trigger magic items, or use any of the following
+      class features that come from an arcane spellcasting class: arcane school
+      powers, arcanist exploits, bardic performances, magus arcana, or witch
+      hexes. Spells, spell-like abilities, or class features that take a free,
+      swift, or immediate action aren't affected by this spell, nor are mythic
+      spells or mythic powers.  While under the effect of this spell, if the
+      subject must attempt a concentration check to cast an arcane spell or use
+      an arcane spell-like ability for any reason other than the effect of this
+      spell (such as casting defensively, being injured while casting, and so
+      on), it takes a penalty on that check equal to 1/2 its caster level.</p>
+  descriptors:
+    - curse
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      magus: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a pinch of pepper
+  school: enc
+  sources:
+    - id: PZO9451
+      pages: '30'
+  subschool:
+    - compulsion
+type: spell

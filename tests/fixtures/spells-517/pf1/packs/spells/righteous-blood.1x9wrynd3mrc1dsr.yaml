@@ -1,0 +1,57 @@
+_id: 1x9wrynd3mrc1dsr
+_key: '!items!1x9wrynd3mrc1dsr'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Righteous Blood
+system:
+  actions:
+    - _id: lun52abzi4al8lsl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature of good alignment
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature's innate goodness infuses its body with holy
+      energy. While this energy does not directly empower the target, it can
+      harm embodiments of evil. Any creature that damages the target with a
+      slashing or piercing melee weapon is sprayed by the target's holy blood.
+      If the attacker is a creature with the evil subtype, it takes 1d6 points
+      of damage from divine power each time it successfully hits the target. If
+      the target has the good subtype or an ability that grants it an aura of
+      good (like paladins or some clerics), its blood instead deals 2d6 points
+      of damage. Creatures that don't have the evil subtype or that are using
+      reach weapons are not subject to this damage.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      inquisitor: 2
+      paladin: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO9437
+      pages: '27'
+type: spell

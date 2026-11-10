@@ -1,0 +1,52 @@
+_id: rl9WFgFkv0KceiSd
+_key: '!items!rl9WFgFkv0KceiSd'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Advantageous Distraction (Goblin)
+system:
+  actions:
+    - _id: 26DQH113DLVV2EK3
+      activation:
+        type: swift
+        unchained:
+          type: action
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Use
+      notes:
+        effect:
+          - +[[2]] dodge bonus to AC for 1 round
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: ac
+      text: >-
+        +[[2]] Dodge bonus to your AC for 1 round. Can be activated only once
+        per day, as a swift action.
+  description:
+    value: >-
+      <p><em>Like most goblins, you're easily distracted. Unlike most goblins,
+      though, you have a knack for being distracted at the right time,
+      especially when it comes to avoiding
+      pain.</em></p><p><strong>Requirements</strong>:
+      Goblin</p><p><strong>Benefits</strong>: Once per day as a swift action,
+      you can be momentarily distracted in combat, ducking an axe swing to
+      inspect a toadstool, or stooping behind a tree to lick some bark and
+      accidentally avoiding an arrow, and so on.</p><p>When you activate this
+      ability, you gain a +2 dodge bonus to your AC for 1 round.</p>
+  sources:
+    - id: PZO9419
+      pages: '15'
+  subType: trait
+  tags:
+    - Goblin
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

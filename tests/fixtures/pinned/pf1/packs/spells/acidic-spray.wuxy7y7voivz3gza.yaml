@@ -1,0 +1,84 @@
+_id: wuxy7y7voivz3gza
+_key: '!items!wuxy7y7voivz3gza'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/acid/projectile-stream-bubbles.webp
+name: Acidic Spray
+system:
+  actions:
+    - _id: 5np8zl8yv133p34n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(15, @cl))d6
+            types:
+              - acid
+      duration:
+        units: inst
+      effect: 60-ft. line
+      measureTemplate:
+        size: '60'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Reflex partial (see text)
+        type: ref
+    - _id: Ia0zk2wP1VyteFg2
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (min(7, floor(@cl / 2))d6
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Followup Damage
+      save:
+        description: Reflex half
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A spray of acid erupts from your outstretched hand, dealing 1d6 points
+      of acid damage per caster level (maximum 15d6) to each creature within its
+      area (Reflex half). This acid continues to burn for 1 round, dealing 1d6
+      points of acid damage per two caster levels (maximum 7d6) to any creature
+      that failed its saving throw against the spell (a second Reflex save on
+      the creature's turn negates this additional damage).</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      arcanist: 5
+      magus: 5
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    gpValue: 10
+    value: a vial of acid worth 10 gp
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '204'
+  subschool:
+    - creation
+type: spell

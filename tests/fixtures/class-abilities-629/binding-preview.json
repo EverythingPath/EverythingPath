@@ -1,0 +1,819 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/Xcim6WFtAtxJxnmA",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "class-abilities",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are tagged with <em>Does not stack</em> do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist’s level + the alchemist’s Intelligence modifier.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "28"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Alchemist"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/XmALhWqXdN9yOmtd",
+      "upstreamKey": "pf1/XmALhWqXdN9yOmtd",
+      "pack": "class-abilities",
+      "name": "Favored Enemy",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 1st level, a ranger selects a creature type from the ranger <em>favored enemies</em> table. He gains a +2 bonus on <em>Bluff</em>, <em>Knowledge</em>, <em>Perception</em>, <em>Sense Motive</em>, and <em>Survival</em> checks against creatures of his selected type. Likewise, he gets a +2 bonus on weapon attack and damage rolls against them. A ranger may make <em>Knowledge skill checks</em> untrained when attempting to identify these creatures.</p><p>At 5th level and every five levels thereafter (10th, 15th, and 20th level), the ranger may select an additional <em>favored enemy</em>. In addition, at each such interval, the bonus against any one <em>favored enemy</em> (including the one just selected, if so desired) increases by +2.</p><p>If the ranger chooses <em>humanoids</em> or <em>outsiders</em> as a <em>favored enemy</em>, he must also choose an associated subtype, as indicated on the table below. (Note that there are other types of humanoid to choose from—those called out specifically on the table below are merely the most common.) If a specific creature falls into more than one category of <em>favored enemy</em>, the ranger’s bonuses do not stack; he simply uses whichever bonus is higher.</p><hr><table><thead><tr><th>Type (Subtype)</th></tr></thead><tbody><tr><td>Aberration</td></tr><tr><td>Animal</td></tr><tr><td>Construct</td></tr><tr><td>Dragon</td></tr><tr><td>Fey</td></tr><tr><td>Humanoid (aquatic)</td></tr><tr><td>Humanoid (dwarf)</td></tr><tr><td>Humanoid (elf)</td></tr><tr><td>Humanoid (giant)</td></tr><tr><td>Humanoid (goblinoid)</td></tr><tr><td>Humanoid (gnoll)</td></tr><tr><td>Humanoid (gnome)</td></tr><tr><td>Humanoid (halfling)</td></tr><tr><td>Humanoid (human)</td></tr><tr><td>Humanoid (orc)</td></tr><tr><td>Humanoid (reptilian)</td></tr><tr><td>Humanoid (other subtype)</td></tr><tr><td>Magical beast</td></tr><tr><td>Monstrous humanoid</td></tr><tr><td>Ooze</td></tr><tr><td>Outsider (air)</td></tr><tr><td>Outsider (chaotic)</td></tr><tr><td>Outsider (earth)</td></tr><tr><td>Outsider (evil)</td></tr><tr><td>Outsider (fire)</td></tr><tr><td>Outsider (good)</td></tr><tr><td>Outsider (lawful)</td></tr><tr><td>Outsider (native)</td></tr><tr><td>Outsider (water)</td></tr><tr><td>Plant</td></tr><tr><td>Undead</td></tr><tr><td>Vermin</td></tr></tbody></table>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Ranger"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/alchemist-discovery-10",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "10:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 10th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-12",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "12:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 12th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-14",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "14:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 14th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-14",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-14",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-14",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-14",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-14",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-16",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "16:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 16th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-18",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "18:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 18th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-4",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "4:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 4th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-6",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "6:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 6th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-discovery-8",
+      "upstreamKey": "pf1/Xcim6WFtAtxJxnmA",
+      "pack": "everythingpath-schedules",
+      "name": "Discovery",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Xcim6WFtAtxJxnmA",
+        "part": "8:pf1/Xcim6WFtAtxJxnmA"
+      },
+      "description": "<p>Discovery: the Alchemist table's 8th-level row of Discovery (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Discovery entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-discovery-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Xcim6WFtAtxJxnmA"
+    },
+    {
+      "externalKey": "everythingpath/ranger-favored-enemy-10",
+      "upstreamKey": "pf1/XmALhWqXdN9yOmtd",
+      "pack": "everythingpath-schedules",
+      "name": "3rd Favored Enemy",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/XmALhWqXdN9yOmtd",
+        "part": "10:pf1/XmALhWqXdN9yOmtd"
+      },
+      "description": "<p>3rd Favored Enemy: the Ranger table's 10th-level row of Favored Enemy (Pathfinder RPG Core Rulebook pp. 64–67). The Favored Enemy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "64–67"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/XmALhWqXdN9yOmtd"
+    },
+    {
+      "externalKey": "everythingpath/ranger-favored-enemy-15",
+      "upstreamKey": "pf1/XmALhWqXdN9yOmtd",
+      "pack": "everythingpath-schedules",
+      "name": "4th Favored Enemy",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/XmALhWqXdN9yOmtd",
+        "part": "15:pf1/XmALhWqXdN9yOmtd"
+      },
+      "description": "<p>4th Favored Enemy: the Ranger table's 15th-level row of Favored Enemy (Pathfinder RPG Core Rulebook pp. 64–67). The Favored Enemy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "64–67"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/XmALhWqXdN9yOmtd"
+    },
+    {
+      "externalKey": "everythingpath/ranger-favored-enemy-20",
+      "upstreamKey": "pf1/XmALhWqXdN9yOmtd",
+      "pack": "everythingpath-schedules",
+      "name": "5th Favored Enemy",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/XmALhWqXdN9yOmtd",
+        "part": "20:pf1/XmALhWqXdN9yOmtd"
+      },
+      "description": "<p>5th Favored Enemy: the Ranger table's 20th-level row of Favored Enemy (Pathfinder RPG Core Rulebook pp. 64–67). The Favored Enemy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "64–67"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-20",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-20",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-20",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-20",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-20",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/XmALhWqXdN9yOmtd"
+    },
+    {
+      "externalKey": "everythingpath/ranger-favored-enemy-5",
+      "upstreamKey": "pf1/XmALhWqXdN9yOmtd",
+      "pack": "everythingpath-schedules",
+      "name": "2nd Favored Enemy",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/XmALhWqXdN9yOmtd",
+        "part": "5:pf1/XmALhWqXdN9yOmtd"
+      },
+      "description": "<p>2nd Favored Enemy: the Ranger table's 5th-level row of Favored Enemy (Pathfinder RPG Core Rulebook pp. 64–67). The Favored Enemy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "64–67"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/ranger-favored-enemy-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/XmALhWqXdN9yOmtd"
+    }
+  ]
+}

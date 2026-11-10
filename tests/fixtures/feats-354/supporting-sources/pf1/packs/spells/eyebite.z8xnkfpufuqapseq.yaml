@@ -1,0 +1,80 @@
+_id: z8xnkfpufuqapseq
+_key: '!items!z8xnkfpufuqapseq'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Eyebite
+system:
+  actions:
+    - _id: cwcmlzmjhkp5dh5z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Each round, you can target a single living creature, striking it with
+      waves of power. Depending on the target's HD, this attack has as many as
+      three effects.
+      </p><table><tbody><tr><th>hd</th><th>Effect</th></tr><tr><td>10 or
+      more</td><td>Sickened</td></tr><tr><td>5-9</td><td>Panicked,
+      sickened</td></tr><tr><td>4 or less</td><td>Comatose, panicked,
+      sickened</td></tr></tbody></table><p>The effects are cumulative and
+      concurrent. <i>Sickened:</i> Sudden pain and fever sweeps over the
+      subject's body. A creature affected by this spell remains sickened for 10
+      minutes per caster level. The effects cannot be negated by a <i>remove
+      disease</i> or <i>heal</i> spell, but a <i>remove curse</i> is effective.
+      <i>Panicked:</i> The subject becomes panicked for 1d4 rounds. Even after
+      the panic ends, the creature remains shaken for 10 minutes per caster
+      level, and it automatically becomes panicked again if it comes within
+      sight of you during that time. This is a fear effect. <i>Comatose:</i> The
+      subject falls into a catatonic coma for 10 minutes per caster level.
+      During this time, it cannot be awakened by any means short of dispelling
+      the effect. This is not a <i>sleep</i> effect, and thus elves are not
+      immune to it. You must spend a swift action each round after the first to
+      target a foe.</p>
+  descriptors:
+    - emotion
+    - pain
+  learnedAt:
+    bloodline:
+      Accursed: 6
+      Pestilence: 6
+    class:
+      alchemist: 6
+      arcanist: 6
+      bard: 6
+      investigator: 6
+      mesmerist: 6
+      skald: 6
+      sorcerer: 6
+      spiritualist: 6
+      witch: 6
+      wizard: 6
+    domain:
+      Scalykind: 6
+    subDomain:
+      Curse: 6
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '280'
+type: spell

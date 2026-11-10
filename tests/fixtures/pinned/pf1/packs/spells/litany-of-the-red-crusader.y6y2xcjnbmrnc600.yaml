@@ -1,0 +1,47 @@
+_id: y6y2xcjnbmrnc600
+_key: '!items!y6y2xcjnbmrnc600'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Litany of the Red Crusader
+system:
+  actions:
+    - _id: y34v1f0m8fqbl9xx
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Followers of Arazni have made use of this litany since her days as a
+      crusader and herald. Each time the target creature takes piercing or
+      slashing damage, it takes 1 point of bleed damage; this bleed damage
+      stacks with itself. While subject to this spell, the target cannot be the
+      target of another spell that has the word "litany" in the title.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      inquisitor: 2
+      paladin: 1
+  school: nec
+  sources:
+    - id: PZO90140
+      pages: '72'
+type: spell
