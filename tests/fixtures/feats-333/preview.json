@@ -1,0 +1,613 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/xq2TFr7bsYBBHOi5",
+      "upstreamKey": "pf1/xq2TFr7bsYBBHOi5",
+      "pack": "feats",
+      "name": "Lunge",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can strike foes that would normally be out of reach.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made.</p>",
+      "prerequisiteText": "Base attack bonus +6",
+      "prerequisites": [
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "untyped",
+          "value": -2,
+          "condition": {
+            "option": true
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Imported pf1/xq2TFr7bsYBBHOi5 identity is not the handwritten lunge identity: routine reach +5 is not activated by this imported body (#720). Turn duration and deciding before attacks remain prose."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Decide to use Lunge before making any attacks. Melee reach increases by 5 feet until the end of your turn; the AC penalty lasts until your next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/y3GhqdsCdE9IyYQc",
+      "upstreamKey": "pf1/y3GhqdsCdE9IyYQc",
+      "pack": "feats",
+      "name": "Simple Weapon Proficiency",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are trained in the use of basic weapons.</em></p><p><strong>Benefits</strong>: You make attack rolls with simple weapons without penalty.</p><p><strong>Normal</strong>: When using a weapon with which you are not proficient, you take a -4 penalty on attack rolls.</p><p><strong>Special</strong>: All characters except for druids, monks, and wizards are automatically proficient with all simple weapons. They need not select this feat.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": [
+              "simple"
+            ]
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Raw system.weaponProf simple is not mapped into a runtime proficiency grant (#720); attacks cannot receive the promised benefit from this imported feat."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Make attack rolls with simple weapons without the nonproficiency penalty. Normally a nonproficient weapon imposes −4 on attacks. Druids, monks and wizards are exceptions to the automatic simple-weapon proficiency granted to other characters."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yB4JlE2GC1MYlweS",
+      "upstreamKey": "pf1/yB4JlE2GC1MYlweS",
+      "pack": "feats",
+      "name": "Shield Master",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your mastery of the shield allows you to fight with it without hindrance.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/qYv70Ch9RQfi1LQQ\">Improved Shield Bash</a>, <a href=\"catalog:pf1/WZj7zDvuelEoeXWX\">Shield Proficiency</a>, <a href=\"catalog:pf1/GEo7nDHxddLxi66j\">Shield Slam</a>, <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a>, base attack bonus +11.</p><p><strong>Benefits</strong>: You do not suffer any penalties on attack rolls made with a shield while you are wielding another weapon. Add your shield's enhancement bonus to attacks and damage rolls made with the shield as if it was a weapon enhancement bonus.</p>",
+      "prerequisiteText": "Improved Shield Bash, Shield Proficiency, Shield Slam, Two-Weapon Fighting, base attack bonus +11",
+      "prerequisites": [
+        {
+          "feat": "pf1/qYv70Ch9RQfi1LQQ",
+          "kind": "feat"
+        },
+        {
+          "proficiency": {
+            "category": "shield"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "feat": "pf1/GEo7nDHxddLxi66j",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        },
+        {
+          "bab": 11,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Imported identity does not match handwritten shield-master behavior (#720); shield-only two-weapon penalty exemption and enhancement-to-shield-attack/damage calculation remain outstanding. Consuming attacks contract limits the source any-penalties wording to two-weapon penalties per the FAQ."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "While wielding another weapon, take no attack penalties with the shield. Add the shield’s enhancement bonus to shield attacks and damage as a weapon enhancement bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yE3hVOvBq9rx6TAw",
+      "upstreamKey": "pf1/yE3hVOvBq9rx6TAw",
+      "pack": "feats",
+      "name": "Spellbreaker",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Magic",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can strike at enemy spellcasters who fail to cast defensively when you threaten them.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/QaMwiDFQdDwycTUO\">Disruptive</a>, 10th-level fighter.</p><p><strong>Benefits</strong>: Enemies in your threatened area that fail their checks to cast spells defensively provoke attacks of opportunity from you.</p><p><strong>Normal</strong>: Enemies that fail to cast spells defensively do not provoke attacks of opportunity.</p>",
+      "prerequisiteText": "Disruptive, 10th-level fighter",
+      "prerequisites": [
+        {
+          "feat": "pf1/QaMwiDFQdDwycTUO",
+          "kind": "feat"
+        },
+        {
+          "classLevel": "pf1/WLqBCT5DqmGAx8Wd",
+          "min": 10,
+          "kind": "classLevel"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "An enemy you threaten provokes an attack of opportunity from you on failing a defensive-casting check. Normally that failure does not provoke."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yQ06clVxFV6dOjc1",
+      "upstreamKey": "pf1/yQ06clVxFV6dOjc1",
+      "pack": "feats",
+      "name": "Extra Gnome Magic",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "General"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The raw magic that flows through your gnome blood is stronger than normal.</em></p><p><strong>Prerequisites</strong>: Cha 13, <a href=\"catalog:pf1/efwHEwjvL9Z94MJI\">Gnome</a>.</p><p><strong>Benefit</strong>: You gain an additional three uses per day of your gnome spell-like abilities (dancing lights, ghost sound, prestidigitation). You can use these in any combination; for example, you can use dancing lights four times in one day (taking all three additional uses for the same spell), or you can cast ghost sound twice, prestidigitation twice, speak with animals twice, and dancing lights once. If you have a feat, trait, or other ability that changes your racial 0-level spell-like abilities to other 0-level spells, this feat applies to them instead.</p>",
+      "prerequisiteText": "Cha 13, Gnome",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "race": [
+            "pf1/efwHEwjvL9Z94MJI"
+          ],
+          "kind": "race"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9411",
+          "pages": "26"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Gain three additional uses per day of your gnome spell-like abilities, used in any combination. Replacement racial 0-level spell-like abilities receive these uses instead."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yW1RFRSh4Ma2uYc9",
+      "upstreamKey": "pf1/yW1RFRSh4Ma2uYc9",
+      "pack": "feats",
+      "name": "Paired Opportunists",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Teamwork",
+          "Combat Trick"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You know how to make an enemy pay for lax defenses.</em></p><p><strong>Benefit</strong>: Whenever you are adjacent to an ally who also has this feat, you receive a +4 circumstance bonus on attacks of opportunity against creatures that you both threaten. Enemies that provoke attacks of opportunity from your ally also provoke attacks of opportunity from you so long as you threaten them (even if the situation or an ability would normally deny you the attack of opportunity). This does not allow you to take more than one attack of opportunity against a creature for a given action.</p><h3>Combat Trick</h3><p>As long as an ally that also has this feat is within your melee reach, you can spend 2 stamina points to gain this feat’s benefits until the end of your next turn.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "166"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "circumstance",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "attacks of opportunity against a creature both you and an adjacent ally with Paired Opportunists threaten"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "While adjacent to an ally with this feat, gain +4 circumstance on attacks of opportunity against creatures both of you threaten. An enemy provoking from that ally also provokes from you if you threaten it; a given action still permits only one attack of opportunity. Combat Trick: spend 2 stamina points while such an ally is within melee reach to gain the benefits until the end of your next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ymtj17MI4MdwB0v2",
+      "upstreamKey": "pf1/ymtj17MI4MdwB0v2",
+      "pack": "feats",
+      "name": "Shot on the Run",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Ranged",
+          "Weapon",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can move, fire a ranged weapon, and move again before your foes can react.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>, <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a>, base attack bonus +4.</p><p><strong>Benefits</strong>: As a full-round action, you can move up to your speed and make a single ranged attack at any point during your movement.</p><p><strong>Normal</strong>: You cannot move before and after an attack with a ranged weapon.</p>",
+      "prerequisiteText": "Dex 13, Dodge, Mobility, Point-Blank Shot, base attack bonus +4",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/8rsFtye3PwM6CKli",
+          "kind": "feat"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 133"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "As a full-round action, move up to your speed and make one ranged attack at any point in that movement. Normally you cannot move before and after a ranged attack."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/z5G64ZSUDNdgeICT",
+      "upstreamKey": "pf1/z5G64ZSUDNdgeICT",
+      "pack": "feats",
+      "name": "Improvised Weapon Mastery",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can turn nearly any object into a deadly weapon, from a razor-sharp chair leg to a sack of flour.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/bZ1YdzkT8NtRIEJ4\">Catch Off-Guard</a> or <a href=\"catalog:pf1/gGfXQq0IZrxdcZDx\">Throw Anything</a>, base attack bonus +8.</p><p><strong>Benefits</strong>: You do not suffer any penalties for using an improvised weapon. Increase the amount of damage dealt by the improvised weapon by one step (for example, 1d4 becomes 1d6) to a maximum of 1d8 (2d6 if the improvised weapon is two-handed). The improvised weapon has a critical threat range of 19–20, with a critical multiplier of ×2.</p>",
+      "prerequisiteText": "Catch Off-Guard or Throw Anything, base attack bonus +8",
+      "prerequisites": [
+        {
+          "anyOf": [
+            {
+              "feat": "pf1/bZ1YdzkT8NtRIEJ4",
+              "kind": "feat"
+            },
+            {
+              "feat": "pf1/gGfXQq0IZrxdcZDx",
+              "kind": "feat"
+            }
+          ]
+        },
+        {
+          "bab": 8,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Take no improvised-weapon penalty. Increase damage one step, capped at 1d8 or 2d6 for a two-handed improvised weapon; its critical threat range is 19–20 and multiplier ×2."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/zD6KBnFbY1Nrok5h",
+      "upstreamKey": "pf1/zD6KBnFbY1Nrok5h",
+      "pack": "feats",
+      "name": "Signature Skill (Perception)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Perception, you earn the following.</p><p><strong>5 Ranks</strong>: You remain alert to sounds even in your sleep, and the normal DC increase to Perception checks when you are sleeping is halved. The distance modifier on the DC of Perception checks you attempt is reduced to +1 per 20 feet.</p><p><strong>10 Ranks</strong>: The distance modifier on the DC of Perception checks you attempt is reduced to +1 per 30 feet. In addition, you gain a +5 bonus on Perception checks to notice or locate an invisible creature or object.</p><p><strong>15 Ranks</strong>: You remain alert to sounds even in your sleep, and the normal DC increase to Perception checks when you are sleeping doesn’t apply to you. The distance modifier on the DC of your Perception checks is reduced to +1 per 40 feet.</p><p><strong>20 Ranks</strong>: You gain a +10 bonus on Perception checks to notice invisible creatures or objects. The distance modifier on the DC of Perception checks you attempt is reduced to +1 per 60 feet.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "85"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "At 5 ranks, halve the normal sleeping DC increase and use +1 distance DC per 20 feet; at 10 ranks, use +1 per 30 feet and gain +5 to notice or locate invisible creatures or objects. At 15 ranks, remove the sleeping DC increase and use +1 per 40 feet; at 20 ranks, gain +10 to notice invisible creatures or objects and use +1 per 60 feet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/zKNk7a4XxXsygJ67",
+      "upstreamKey": "pf1/zKNk7a4XxXsygJ67",
+      "pack": "feats",
+      "name": "Greater Vital Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Offensive"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can make a single attack that deals incredible damage.</i><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/DorPGQ2mifJbMKH8\">Improved Vital Strike</a>, <a href=\"catalog:pf1/26k1Gi7t5BoqxhIj\">Vital Strike</a>, base attack bonus +16.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack four times and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>",
+      "prerequisiteText": "Improved Vital Strike, Vital Strike, base attack bonus +16",
+      "prerequisites": [
+        {
+          "feat": "pf1/DorPGQ2mifJbMKH8",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/26k1Gi7t5BoqxhIj",
+          "kind": "feat"
+        },
+        {
+          "bab": 16,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "117, 126"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Imported pf1/zKNk7a4XxXsygJ67 identity does not match handwritten greater-vital-strike behavior (#720); automatic quadrupled weapon dice remains outstanding for this imported body."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "With the attack action, make one attack at your highest base attack bonus and roll weapon damage dice four times before adding other damage bonuses. The extra weapon dice are added on a critical hit without multiplication."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/zN9kRaSjKJ1qsfDE",
+      "upstreamKey": "pf1/zN9kRaSjKJ1qsfDE",
+      "pack": "feats",
+      "name": "Signature Skill (Craft)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Skill Unlock"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/iyYyc3rKW0cBZ1cs\">Rogue's Edge (UC)</a> or 5 ranks in the choosen skill (see <a href=\"catalog:pf1/zOxJqI5CG4VoycmQ\">Signature Skill</a>)</p><p>With sufficient ranks in Craft, you earn the following.</p><p><strong>5 Ranks</strong>: When determining your weekly progress, double the result of your Craft check before multiplying the result by the item’s DC.</p><p><strong>10 Ranks</strong>: You do not ruin any of your raw materials unless you fail a check by 10 or more.</p><p><strong>15 Ranks</strong>: When you determine your progress, the result of your check is how much work you complete each day in silver pieces.</p><p><strong>20 Ranks</strong>: You can craft magic armor, magic weapons, magic rings, and wondrous items that fall under your category of Craft using the normal Craft rules.</p>",
+      "prerequisiteText": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Rogue's Edge (UC) or 5 ranks in the choosen skill (see Signature Skill)"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "83"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "At 5 ranks, double the Craft check result before multiplying by DC for weekly progress. At 10 ranks, materials are ruined only on failure by at least 10. At 15 ranks, the check result gives daily progress in silver pieces. At 20 ranks, use normal Craft rules for magic armor, weapons, rings and wondrous items in your Craft category."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/zOxJqI5CG4VoycmQ",
+      "upstreamKey": "pf1/zOxJqI5CG4VoycmQ",
+      "pack": "feats",
+      "name": "Signature Skill",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your ability with a particular skill is the stuff of legends, and you can do things with that skill that others cannot.</em></p><p><b>Prerequisites</b>: 5 ranks in the chosen skill.</p><p><b>Benefit</b>: Choose one skill. You gain the ability listed in that skill’s 5 Ranks entry. As you gain more ranks in the chosen skill, you gain additional abilities. If you have 10 or more ranks in the chosen skill, you gain the appropriate abilities immediately. If your chosen skill is Craft, Knowledge, Perform, or Profession, you gain the listed powers only for one category of that skill, such as Craft (bows). This feat can be taken only once, but it stacks with the rogue’s edge ability and the cutting edge rogue talent.</p>",
+      "prerequisiteText": "5 ranks in the chosen skill",
+      "prerequisites": [
+        {
+          "unchecked": "5 ranks in the chosen skill",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "82"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Imported feat.detail.repeatable stays unreviewed instead of the source one-time selection constraint (#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Choose one skill; unlock its 5-rank ability, gaining the later abilities as ranks increase, immediately gaining those already qualified for. Craft, Knowledge, Perform and Profession apply to one category only. Take this feat only once; it stacks with rogue’s edge and cutting edge."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ztV5oURW9cFsLdXT",
+      "upstreamKey": "pf1/ztV5oURW9cFsLdXT",
+      "pack": "feats",
+      "name": "Pinpoint Targeting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [
+          "Combat",
+          "Ranged",
+          "Offensive",
+          "Weapon"
+        ],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can target the weak points in your opponent's armor.</em></p><p><strong>Prerequisites</strong>: Dex 19, <a href=\"catalog:pf1/h1vqUG9Kh3f7oKWK\">Improved Precise Shot</a>, <a href=\"catalog:pf1/8rsFtye3PwM6CKli\">Point-Blank Shot</a>, <a href=\"catalog:pf1/53urYIbYYpQuoSLd\">Precise Shot</a>, base attack bonus +16.</p><p><strong>Benefits</strong>: As a standard action, make a single ranged attack. The target does not gain any armor, natural armor, or shield bonuses to its Armor Class. You do not gain the benefit of this feat if you move this round.</p>",
+      "prerequisiteText": "Dex 19, Improved Precise Shot, Point-Blank Shot, Precise Shot, base attack bonus +16",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 19,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/h1vqUG9Kh3f7oKWK",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/8rsFtye3PwM6CKli",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/53urYIbYYpQuoSLd",
+          "kind": "feat"
+        },
+        {
+          "bab": 16,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "As a standard action, make one ranged attack that ignores the target’s armor, natural armor and shield AC bonuses. This benefit does not apply if you move that round."
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/iyYyc3rKW0cBZ1cs",
+      "upstreamKey": "pf1/iyYyc3rKW0cBZ1cs",
+      "pack": "class-abilities",
+      "name": "Rogue's Edge (UC)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill.</p>\n<p>At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Rogue (Unchained)"
+              ]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor(@class.level / 5)",
+            "type": "untyped"
+          }
+        }
+      ]
+    }
+  ]
+}

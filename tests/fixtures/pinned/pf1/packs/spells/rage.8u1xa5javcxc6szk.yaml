@@ -1,0 +1,71 @@
+_id: 8u1xa5javcxc6szk
+_key: '!items!8u1xa5javcxc6szk'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/creatures/abilities/mouth-teeth-human.webp
+name: Rage
+system:
+  actions:
+    - _id: 0enlens404iugqw5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      name: Use
+      range:
+        units: medium
+      target:
+        value: >-
+          one willing living creature per three levels, no two of which may be
+          more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Each affected creature gains a +2 morale bonus to Strength and
+      Constitution, a +1 morale bonus on Will saves, and a -2 penalty to AC. The
+      effect is otherwise identical with a barbarian's rage except that the
+      subjects aren't fatigued at the end of the rage.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Abyssal: 3
+      Boreal: 2
+      Orc: 3
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 2
+      bloodrager: 3
+      investigator: 3
+      mesmerist: 2
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+    domain:
+      Destruction: 3
+      Madness: 3
+    subDomain:
+      Demon: 3
+      Ferocity: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '329'
+  subschool:
+    - compulsion
+type: spell

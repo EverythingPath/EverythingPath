@@ -1,0 +1,58 @@
+_id: pto0ekyn6i9udbrj
+_key: '!items!pto0ekyn6i9udbrj'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Sacred Space
+system:
+  actions:
+    - _id: 5a36kbroh7g77p1c
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius emanation
+      duration:
+        units: hour
+        value: 2 * @cl
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell sanctifies an area with heavenly power. The DC to resist
+      spells or spell-like abilities with the good descriptor or channeled
+      energy that damages evil outsiders (as when using Alignment Channel)
+      increases by +2. In addition, evil outsiders take a -1 penalty on attack
+      rolls, damage rolls, and saving throws, and they cannot be called or
+      summoned into a <i>sacred space</i>. If the <i>sacred space</i> contains
+      an altar, shrine, or other permanent fixture dedicated to your deity,
+      pantheon, or good-aligned higher power, the modifiers given above are
+      doubled. You cannot cast <i>sacred space</i> in an area with a permanent
+      fixture dedicated to a deity other than yours.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      paladin: 2
+      warpriest: 2
+  level: 2
+  materials:
+    value: a vial of ambrosia
+  school: evo
+  sources:
+    - id: PZO1121
+      pages: '89'
+  sr: false
+type: spell
