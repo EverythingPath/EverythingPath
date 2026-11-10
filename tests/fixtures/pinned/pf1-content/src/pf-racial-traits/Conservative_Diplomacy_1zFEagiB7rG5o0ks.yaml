@@ -1,0 +1,47 @@
+_id: 1zFEagiB7rG5o0ks
+_key: '!items!1zFEagiB7rG5o0ks'
+_stats:
+  coreVersion: '12.331'
+folder: KP5QLO1nPv43LcXI
+img: systems/pf1/icons/races/dwarf.png
+name: Conservative Diplomacy
+system:
+  actions:
+    - _id: lmDTllucBVM1zF7t
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Conservative Diplomacy
+      notes:
+        effect:
+          - >-
+            any roll of less than 5  is treated as a 5;  any roll higher than 15
+            is treated as 15.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dwarf<br /><strong>Replaced Trait(s)</strong>:
+      Stonecunning</p><hr /><p>A dwarf can embrace predictable traditions to
+      avoid social missteps. A dwarf with this racial trait can rely upon
+      conservative tactics when attempting a Diplomacy check; this choice must
+      be made before the Diplomacy check is attempted. The dwarf treats any roll
+      of less than 5 on such a Diplomacy check as though she had rolled a 5, but
+      she treats any roll higher than 15 on such a check as though she rolled a
+      15. This racial trait replaces stonecunning.</p>
+  scriptCalls:
+    - _id: sBZ8WDr6
+      category: use
+      hidden: false
+      img: null
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("dip");
+  showInQuickbar: true
+  sources:
+    - id: PZO9476
+      pages: '14'
+  subType: racial
+  tags:
+    - Dwarf
+  traitCategory: featSkills
+type: feat

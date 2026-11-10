@@ -1,0 +1,38 @@
+_id: MPLcJJ9ChkKRQFBm
+_key: '!items!MPLcJJ9ChkKRQFBm'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/races/creature-types/animal.png
+name: Aspect of the Wolf
+system:
+  changes:
+    - _id: oj9babai
+      formula: '4'
+      target: str
+      type: enh
+    - _id: 9cgmr8fu
+      formula: '4'
+      target: dex
+      type: enh
+  contextNotes:
+    - target: skill.per
+      text: Has the Scent ability.
+    - target: cmb
+      text: >-
+        +[[2]] Enhancement to Trip. Can Trip as a Swift Action, which does not
+        provoke AoO.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.knjoprwzcm3jygwk]{Aspect of the
+      Wolf}</p><p>You gain a +4 enhancement bonus to Strength and Dexterity, the
+      scent ability, a +2 enhancement bonus on trip attacks, and can make a trip
+      combat maneuver as a swift action. This trip attack does not provoke
+      attacks of opportunity.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 9
+  subType: spell
+type: buff

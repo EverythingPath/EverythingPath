@@ -1,0 +1,76 @@
+_id: fdEn4hZJkIhJEwrQ
+_key: '!items!fdEn4hZJkIhJEwrQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_04.jpg
+name: Resolve
+system:
+  abilityType: ex
+  actions:
+    - _id: 5ut5v038phvpkrgo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Determined
+      range:
+        units: personal
+    - _id: 6BPQcZcrX7MU7E1T
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Resolute
+      range:
+        units: personal
+    - _id: hCTiPva7CuD0P8C7
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Unstoppable
+      range:
+        units: personal
+  associations:
+    classes:
+      - Samurai
+  description:
+    value: >-
+      <p>Starting at 1st level, the samurai gains resolve that he can call upon
+      to endure even the most devastating wounds and afflictions. He can use
+      this ability once per day at 1st level, plus one additional time per day
+      for every two samurai levels beyond 1st. Whenever the samurai defeats the
+      target of his challenge, he regains one daily use of his resolve, up to
+      his maximum number of uses per day. Defeating the target of his challenge
+      usually involves reducing the target to 0 hit points or fewer, but the GM
+      might rule that an enemy who surrenders or flees the battle is also
+      defeated. He can use this resolve in a number of
+      ways.<p><em>Determined:</em> As a standard action, the samurai can spend
+      one use of his resolve to remove the fatigued, shaken, or sickened
+      condition. If the samurai is at least 8th level, he can alternatively
+      remove the exhausted, frightened, nauseated, or staggered condition. If
+      the condition has a duration longer than 1 hour or is permanent, this
+      ability removes the condition for 1 hour, at which time the condition
+      returns.<p><em>Resolute:</em> Whenever the samurai is required to make a
+      Fortitude or Will save, he can spend one use of his resolve as an
+      immediate action to roll twice and take the better result. He must decide
+      to use this ability before he rolls the saving
+      throw.<p><em>Unstoppable:</em> When the samurai is reduced to fewer than 0
+      hit points but not slain, he can spend one use of his resolve as an
+      immediate action to instantly stabilize and remain conscious. He is
+      staggered, but he does not fall unconscious and begin dying if he takes a
+      standard action. He does fall unconscious if he takes additional damage
+      from any source.</p>
+  subType: classFeat
+  tag: classFeat_resolve
+  uses:
+    maxFormula: ceil(@class.level / 2)
+    per: day
+type: feat

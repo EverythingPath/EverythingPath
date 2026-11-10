@@ -1,0 +1,59 @@
+_id: elsmcz3jzrj1h1ev
+_key: '!items!elsmcz3jzrj1h1ev'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Fool's Forbiddance
+system:
+  actions:
+    - _id: ueenl3zylnabr50p
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius spherical emanation centered on you
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        description: Will partial
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Through your antics and performance, you create an area of warding that
+      adversely affects all enemies that dare enter it. When an enemy creature
+      enters the area it must make an immediate Will saving throw. If it fails,
+      the creature is confused as long as it is in the area and for 1 round
+      after it leaves. If it succeeds on the saving throw, the creature is
+      staggered as long as it is in the area and for 1 round after it
+      leaves.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 6
+      psychic: 8
+      skald: 6
+  level: 6
+  materials:
+    value: a ring of keys
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '224'
+type: spell

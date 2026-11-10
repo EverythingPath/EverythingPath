@@ -1,0 +1,78 @@
+_id: 0sloyg4lliea9rkw
+_key: '!items!0sloyg4lliea9rkw'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Elemental Bombardment
+system:
+  actions:
+    - _id: il6a1goi2ci7qsas
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: floor(@cl / 2)
+      effect: one or more summoned elementals
+      name: Use
+      range:
+        units: long
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You summon elementals from their elemental planes and hurl them onto
+      your enemies with great force. You must have line of effect to a point at
+      least 60 feet above your intended targets and within the spell's range.
+      You can summon one greater elemental, two Huge elementals, four Large
+      elementals, or eight Medium elementals. You aim the elementals at targets
+      within 60 feet of each other, no more than one elemental per
+      target.</p><p>Each elemental can strike only a single target, regardless
+      of its size. When an elemental strikes a target, it makes a single slam
+      attack at its full attack bonus with a +4 circumstance bonus. The
+      elemental deals damage according to the table below. The type and amount
+      of damage dealt varies by the size and type of elemental (see the table).
+      Some elementals inflict an additional special ability upon successfully
+      hitting a target; these additional special abilities are detailed in the
+      elemental's full stat block and are denoted with an asterisk (*). Whether
+      or not it hits, the elemental takes bludgeoning damage according to its
+      size. A summoned elemental acts on the same turn that it lands, starting
+      prone in the nearest available space adjacent to its target.</p><p>You
+      must select one type of elemental to summon when casting this spell (see
+      the table).</p><p>When you use a summoning spell to summon a creature with
+      an elemental subtype, it is a spell of that type.</p> <table
+      border="1"><tbody><tr><th>Elemental
+      Size</th><th>Damage</th></tr><tr><td>Medium</td><td>6d6</td></tr><tr><td>Large</td><td>8d6</td></tr><tr><td>Huge
+      or larger</td><td>12d6</td></tr></tbody></table> <table
+      border="1"><tbody><tr><th>Elemental Type</th><th>Damage
+      Type</th></tr><tr><td>Air</td><td>Half slashing, half
+      electricity</td></tr><tr><td>Earth</td><td>Bludgeoning and earth
+      mastery*</td></tr><tr><td>Fire</td><td>Fire and
+      burn*</td></tr><tr><td>IceB2</td><td>Half bludgeoning, half
+      cold</td></tr><tr><td>Lightning B2</td><td>Electricity and metal
+      mastery*</td></tr><tr><td>Magma B2</td><td>Half bludgeoning, half
+      fire</td></tr><tr><td>Mud B2</td><td>Bludgeoning and
+      entrap*</td></tr><tr><td>Water</td><td>Bludgeoning and
+      drench*</td></tr></tbody></table>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      arcanist: 7
+      druid: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: con
+  sources:
+    - id: PZO9438
+      pages: '14'
+  sr: false
+  subschool:
+    - summoning
+type: spell
