@@ -1,0 +1,49 @@
+_id: 57knlirgsjn5qz93
+_key: '!items!57knlirgsjn5qz93'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Dazzling Blade, Mass
+system:
+  actions:
+    - _id: 7k8rbdqbvtemlo8g
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: One metal weapon/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.jaxzdishpxpvxu3t]{dazzling blade}, except
+      that it affects multiple weapons. Each wielder of a <em>dazzling
+      blade</em> can discharge the weapon's effect to attempt to blind a foe
+      independently of the others.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO9232
+      pages: '5'
+  subschool:
+    - pattern
+type: spell

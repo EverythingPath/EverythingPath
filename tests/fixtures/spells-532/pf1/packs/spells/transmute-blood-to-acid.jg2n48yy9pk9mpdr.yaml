@@ -1,0 +1,64 @@
+_id: jg2n48yy9pk9mpdr
+_key: '!items!jg2n48yy9pk9mpdr'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Transmute Blood To Acid
+system:
+  actions:
+    - _id: bc569ujd3o4vbvaf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration (maximum 1 round/5 levels)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude half
+        type: fort
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You transmute blood in the target's body to acid, dealing 1d6 points of
+      acid damage/2 levels (maximum 12d6) each round.</p><p>The creature is
+      staggered and sickened by the debilitating pain. A successful Fortitude
+      save each round halves the damage and negates the staggered condition for
+      1 round. If this damage reduces the creature to 0 or fewer hit points, it
+      dissolves, leaving only the barest trace of remains. A dissolved
+      creature's equipment is unaffected.</p><p>Anyone who strikes the target
+      with a non-reach melee weapon, natural weapon, or unarmed attack takes 3d6
+      points of acid damage as the acidic blood sprays on the attacker. If the
+      attack is from a piercing or slashing manufactured weapon, the weapon also
+      takes this damage.</p><p>This spell has no effect on creatures immune to
+      critical hits or bleed effects.</p>
+  descriptors:
+    - acid
+    - pain
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      wizard: 9
+  level: 9
+  materials:
+    gpValue: 10
+    value: a wax doll and a vial of acid worth 10 gp
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '244'
+type: spell
