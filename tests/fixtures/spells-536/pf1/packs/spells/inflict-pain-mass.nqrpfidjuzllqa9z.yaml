@@ -1,0 +1,57 @@
+_id: nqrpfidjuzllqa9z
+_key: '!items!nqrpfidjuzllqa9z'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Inflict Pain, Mass
+system:
+  actions:
+    - _id: no3t39nw0wifs3dm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial; see text
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart.
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.c8pgzp2xc1l1upbs]{inflict pain} except as
+      noted above.</p>
+  descriptors:
+    - mindAffecting
+    - pain
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 7
+      inquisitor: 5
+      medium: 4
+      mesmerist: 5
+      occultist: 5
+      psychic: 6
+      sorcerer: 7
+      spiritualist: 5
+      witch: 7
+      wizard: 7
+  level: 7
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '174'
+type: spell

@@ -1,0 +1,62 @@
+_id: 2f3ebhk5p44uyrsc
+_key: '!items!2f3ebhk5p44uyrsc'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Phasic Challenge
+system:
+  actions:
+    - _id: zaz1x5tbxcp7xuwv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see below)
+        type: will
+      target:
+        value: two creatures within 60 feet of one another; see text
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You select one enemy and one willing ally as targets. The enemy gains a
+      new Will saving throw at the beginning of each turn, and on a successful
+      saving throw the spell ends. Both targets remain visible and audible, and
+      can see and hear other creatures, but cannot physically interact with any
+      creature save one another. Spells or weapon attacks from the affected
+      creatures impact only each other, though spells might affect terrain or
+      other factors not related to other creatures. If one of the creatures
+      becomes unconscious or dies, or if the effect is dispelled, the effect
+      ends for both of them.</p>
+  learnedAt:
+    class:
+      arcanist: 8
+      cleric: 8
+      oracle: 8
+      psychic: 8
+      shaman: 8
+      sorcerer: 8
+      spiritualist: 6
+      witch: 7
+      wizard: 8
+  level: 8
+  materials:
+    value: a scrap of a knight's banner
+  school: trs
+  sources:
+    - id: PZO9468
+      pages: '6'
+type: spell

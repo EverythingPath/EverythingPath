@@ -1,0 +1,91 @@
+_id: 68acsi5rli5t9mef
+_key: '!items!68acsi5rli5t9mef'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Unconscious Agenda
+system:
+  actions:
+    - _id: cjb52gf93wgag6nt
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 week/level or until discharged
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: One humanoid
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell plants a subconscious directive in the target's mind that
+      forces him to act as you dictate when specific circumstances arise. The
+      target humanoid can be either conscious or unconscious, but must
+      understand your language. Upon casting this spell, you must state a course
+      of action you <em>wish</em> the target to take. This course of action must
+      be described in 20 words or fewer. You must then state the condition under
+      which you <em>wish</em> the target to take this action, also describing it
+      in 20 or fewer words. Actions or conditions more elaborate than 20 words
+      cause the spell to fail. <em>Unconscious agenda</em> cannot compel a
+      target to kill himself, though it can compel him to perform exceedingly
+      dangerous acts, face impossible odds, or undertake almost any other course
+      of activity.</p><p>You cannot issue new commands to the target after the
+      spell is cast. If the target fails his save against this spell, he is not
+      compelled to act in any way until the specified trigger circumstances are
+      encountered. He also has no knowledge of the details of the spell
+      affecting him, and has no memory of the last 10 minutes (although he might
+      come to notice the missing time or the presence of the caster). He can
+      function as he <em>wish</em>es until the events you detailed as the
+      condition take place. Upon experiencing the prerequisite condition, the
+      target is forced to perform the course of action you described as per the
+      spell <em>dominate person</em>. (If the compelled action is against the
+      victim's nature, he immediately gains a new saving throw at a +5 bonus
+      against the spell to end its effects.) For the next hour, the target acts
+      as you dictated, doing all he can to fulfill your command. If, at the end
+      of the hour, the target still has not completed your command, the target
+      is released from the enchantment and the spell ends. Once the course of
+      action is completed, the spell ends. The target has full memory of acts
+      performed during this hour.</p><p>It's difficult to detect an
+      <em>unconscious agenda</em> before the spell is triggered. Casting
+      <em>detect magic</em> on one affected by it only reveals an aura of
+      enchantment if the caster of <em>detect magic</em> has a higher caster
+      level then the caster of <em>unconscious agenda</em>. Even if the spell is
+      detected, it can only be removed by <em>break enchantment</em>,
+      <em>limited wish</em>, <em>remove curse</em>, <em>miracle</em>, or
+      <em>wish</em>. <em>Dispel magic</em> does not affect <em>unconscious
+      agenda</em>.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      inquisitor: 6
+      skald: 6
+      sorcerer: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1002
+      pages: '419'
+    - id: PZO9005
+      pages: '61'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,67 @@
+_id: vkUakr0V4RE9CAyk
+_key: '!items!vkUakr0V4RE9CAyk'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/bladed-scarf.PNG
+name: Bladed Scarf
+system:
+  actions:
+    - _id: auxvs2rmhnsco24u
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Bladed Scarf
+  description:
+    unidentified: >-
+      <p>Knowing that seductive performances can bring out the worst in
+      watchers, some Varisians craft rows of razor-sharp blades into their
+      scarves. The skill required in using such scarves effectively and not
+      revealing their deadly nature makes them exotic weapons. If you are
+      proficient with a bladed scarf, you deal 1d4 points of slashing damage to
+      any creature that makes a successful grapple check against you while you
+      wield the scarf. You can use the Weapon Finesse feat to apply your
+      Dexterity modifier instead of your Strength modifier on attack rolls with
+      a bladed scarf sized for you, even though it isn't a light weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 12
+  properties:
+    dis: true
+    fin: true
+    trp: true
+  sources:
+    - id: PZO9425
+      pages: '14'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 2
+type: weapon

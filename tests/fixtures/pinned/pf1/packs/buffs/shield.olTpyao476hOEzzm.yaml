@@ -1,0 +1,30 @@
+_id: olTpyao476hOEzzm
+_key: '!items!olTpyao476hOEzzm'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/defensive/shield-barrier-deflect-teal.webp
+name: Shield
+system:
+  changes:
+    - _id: gq5kc0g2
+      formula: '4'
+      target: sac
+      type: base
+  description:
+    value: >-
+      <p>An invisible shield of force hovers in front of you, with the following
+      effects:</p><ul><li>+4 Shield Bonus to AC</li><li>Negates Magic Missile
+      attacks direct at you</li></ul><p>These bonuses apply to incorporeal touch
+      attacks.</p><p>See @UUID[Compendium.pf1.spells.Item.sz7j540uypmqqvti]
+      spell for more details.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '342'
+  subType: spell
+type: buff

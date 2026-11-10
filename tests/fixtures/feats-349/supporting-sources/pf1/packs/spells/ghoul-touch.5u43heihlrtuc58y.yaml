@@ -1,0 +1,64 @@
+_id: 5u43heihlrtuc58y
+_key: '!items!5u43heihlrtuc58y'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/hand-withered-gray.webp
+name: Ghoul Touch
+system:
+  actions:
+    - _id: epkz0s26kaa5vs2r
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1d6+2
+      measureTemplate:
+        color: '#b0b0b0'
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living humanoid touched
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Imbuing you with negative energy, this spell allows you to paralyze a
+      single living humanoid for the duration of the spell with a successful
+      melee touch attack.</p><p>A paralyzed subject exudes a carrion stench that
+      causes all living creatures (except you) in a 10-foot-radius spread to
+      become sickened (Fortitude negates). A <i>neutralize poison</i> spell
+      removes the effect from a sickened creature, and creatures immune to
+      poison are unaffected by the stench. This is a poison effect.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      sorcerer: 2
+      spiritualist: 2
+      wizard: 2
+    subDomain:
+      Undead: 2
+  level: 2
+  materials:
+    value: cloth from a ghoul or earth from a ghoul's lair
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '289'
+type: spell

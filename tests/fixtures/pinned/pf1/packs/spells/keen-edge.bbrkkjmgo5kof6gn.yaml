@@ -1,0 +1,64 @@
+_id: bbrkkjmgo5kof6gn
+_key: '!items!bbrkkjmgo5kof6gn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/weapons/swords/swords-sharp-worn.webp
+name: Keen Edge
+system:
+  actions:
+    - _id: 8a8el3s4f5r676wu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one weapon or 50 projectiles, all of which must be together at the
+          time of casting
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell makes a weapon magically <i>keen</i>, improving its ability
+      to deal telling blows. This transmutation doubles the threat range of the
+      weapon. A threat range of 20 becomes 19-20, a threat range of 19-20
+      becomes 17-20, and a threat range of 18-20 becomes 15-20. The spell can be
+      cast only on piercing or slashing weapons. If cast on arrows or crossbow
+      bolts, the <i>keen edge</i> on a particular projectile ends after one use,
+      whether or not the missile strikes its intended target.</p><p>Treat
+      shuriken as arrows, rather than as thrown weapons, for the purpose of this
+      spell.</p><p>Multiple effects that increase a weapon's threat range (such
+      as the <i>keen</i> special weapon property and the Improved Critical feat)
+      don't stack. You can't cast this spell on a natural weapon, such as a
+      claw.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      inquisitor: 3
+      magus: 3
+      occultist: 3
+      sorcerer: 3
+      wizard: 3
+    subDomain:
+      Murder: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '303'
+type: spell

@@ -1,0 +1,70 @@
+_id: 0cbreqkr1vp7meyi
+_key: '!items!0cbreqkr1vp7meyi'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Contagious Flame
+system:
+  actions:
+    - _id: mqsfv9er7rpkf85n
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Ray
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - fire
+      duration:
+        units: round
+        value: '3'
+      extraAttacks:
+        formula:
+          count: clamp(floor((@cl - 3) / 4), 2, 4)
+          label: 'Ray #{0}'
+        type: custom
+      name: Use
+      range:
+        units: close
+      target:
+        value: three or more rays
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You blast several enemies with beams of fire. You may fire three rays,
+      plus one additional ray for every four levels beyond 11th (to a maximum of
+      five rays at 19th level). Each ray requires a ranged touch attack to hit
+      and deals 4d6 points of fire damage.</p><p>The rays may be fired at the
+      same or different targets, but all rays must be aimed at targets within 30
+      feet of each other and fired simultaneously.</p><p>Every round on your
+      turn, a new ray of fire launches from each creature who took damage from
+      the spell in the previous round-these new rays attack as if you fired
+      them, but their point of origin is the previous creature damaged. You can
+      choose the new targets as a free action, all of whom must be within close
+      range (25 ft. + 5 ft./2 levels) of their new starting point. This
+      contagion of flame continues for a total of three rounds-a creature can be
+      struck more than once by this spell over the course of these three rounds,
+      although never by a ray of fire that launches from itself.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 6
+      occultist: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '212'
+type: spell
