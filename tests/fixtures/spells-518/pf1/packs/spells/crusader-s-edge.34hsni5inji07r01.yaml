@@ -1,0 +1,61 @@
+_id: 34hsni5inji07r01
+_key: '!items!34hsni5inji07r01'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Crusader's Edge
+system:
+  actions:
+    - _id: v5gdufyetukgafxa
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: melee weapon touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell was created by the paladins of the Mendevian Crusades, and
+      co-opted by inquisitors and rangers dedicated to tracking and fighting
+      demons, devils, and other evil extraplanar creatures.</p><p>When you cast
+      this spell on a melee weapon you imbue it with a powerful <i>holy</i>
+      energy, granting the weapon the <i>bane</i> weapon quality against evil
+      outsiders. Furthermore, whenever you score a successful critical hit
+      against an outsider with the evil subtype, you not only deal normal
+      critical damage with the weapon but also nauseate the outsider for 1d3
+      rounds-the outsider can reduce this nauseated condition to sickened for 1
+      round with a successful Fortitude save.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 4
+      oracle: 4
+      paladin: 4
+      warpriest: 4
+  level: 4
+  materials:
+    value: dried blood from an evil outsider, sprinkled on the weapon
+  school: trs
+  sources:
+    - id: PZO9237
+      pages: '53'
+  sr: false
+type: spell

@@ -1,0 +1,65 @@
+_id: u6Hv3AYMgkAtR7Jm
+_key: '!items!u6Hv3AYMgkAtR7Jm'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/spiked-chain.png
+name: Spiked Chain
+system:
+  actions:
+    - _id: f0qtyqexlyyxnsjs
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Spiked Chain
+  description:
+    unidentified: >-
+      <p>A spiked chain is about 4 feet in length and covered in wicked barbs.
+      Some have metal hoops to use as handgrips. You can use the Weapon Finesse
+      feat to apply your Dexterity modifier instead of your Strength modifier to
+      attack rolls with a spiked chain sized for you, even though it isn't a
+      light weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  properties:
+    dis: true
+    fin: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 145
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

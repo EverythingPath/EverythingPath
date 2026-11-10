@@ -1,0 +1,59 @@
+_id: lmnwhrqgxf9cm9jq
+_key: '!items!lmnwhrqgxf9cm9jq'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Certain Grip
+system:
+  actions:
+    - _id: cbqa6r2nzhejr9ci
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject's grip and footing become sure, granting a +4 competence
+      bonus on Climb checks, on Acrobatics checks to balance, and to CMD against
+      bull rush, drag, reposition, and trip attempts. While affected by this
+      spell, the target is also immune to the disarm combat maneuver.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      occultist: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a tiny ball of tar
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '225'
+type: spell

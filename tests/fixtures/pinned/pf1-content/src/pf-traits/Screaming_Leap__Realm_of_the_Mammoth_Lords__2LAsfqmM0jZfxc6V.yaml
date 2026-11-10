@@ -1,0 +1,57 @@
+_id: 2LAsfqmM0jZfxc6V
+_key: '!items!2LAsfqmM0jZfxc6V'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Screaming Leap (Realm of the Mammoth Lords)
+system:
+  actions:
+    - _id: GjO1uAKJ58Aqlfhi
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>Once per day, when you make a charge attack from higher ground, you
+        can use the Intimidate skill to demoralize your target as a swift
+        action.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Use
+  contextNotes:
+    - target: melee
+      text: >-
+        +[[1]] Trait bonus on melee damage rolls when you make a charge attack
+        from higher ground
+  description:
+    value: >-
+      <p><em>The rocky foothills of your homeland are ideal for staging leaping
+      ambushes that leave your victims battered and
+      routed.</em></p><p><strong>Requirements</strong>: <span
+      style="text-decoration:underline" data-tooltip="Land-locked nation in the
+      far north of Avistan"><span style="text-decoration:underline">Realm of the
+      Mammoth Lords</span></span></p><p><strong>Benefits</strong>: You gain a +1
+      trait bonus on melee damage rolls when you make a charge attack from
+      higher ground. Once per day, when you make a charge attack from higher
+      ground, you can use the Intimidate skill to demoralize your target as a
+      swift action.</p>
+  scriptCalls:
+    - _id: 83X8bD4u5dRhNFy4
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("int");
+  sources:
+    - id: PZO9451
+      pages: '13'
+  subType: trait
+  tags:
+    - Realm of the Mammoth Lords
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

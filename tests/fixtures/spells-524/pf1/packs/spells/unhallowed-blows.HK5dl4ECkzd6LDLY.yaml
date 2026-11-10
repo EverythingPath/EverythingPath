@@ -1,0 +1,66 @@
+_id: HK5dl4ECkzd6LDLY
+_key: '!items!HK5dl4ECkzd6LDLY'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Unhallowed Blows
+system:
+  actions:
+    - _id: x47bJ5VYyid0a9VH
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one undead creature/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell empowers the natural attacks or unarmed strikes of undead
+      creatures, granting a +1 enhancement bonus on attack and damage rolls made
+      by the target with its unarmed strikes or attacks with one natural attack.
+      This spell can cause an undead creature’s unarmed strike to deal lethal
+      damage, but in this case, the attack does not gain an enhancement
+      bonus.</p><p><em>Unhallowed blows</em> can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{permanancy} spell. In this
+      case, the caster must be at least 9th level and must expend 2,500 gp worth
+      of diamond dust as a material component.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      sorcerer: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: a pinch of dust from a destroyed undead creature
+  school: trs
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell
