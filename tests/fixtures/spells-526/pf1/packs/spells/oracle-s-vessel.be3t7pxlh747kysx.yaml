@@ -1,0 +1,46 @@
+_id: be3t7pxlh747kysx
+_key: '!items!be3t7pxlh747kysx'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Oracle's Vessel
+system:
+  actions:
+    - _id: 4tmvjmcj4tualdlv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains all the benefits of your oracle's curse, with none of
+      the penalties. In some cases, this has no effect (for example, a fighter
+      with your haunted curse can't cast spells and doesn't gain any benefit
+      from having additional spells known).</p>
+  learnedAt:
+    class:
+      oracle: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '230'
+type: spell

@@ -1,0 +1,66 @@
+_id: EIBbk25EwcmJqoKC
+_key: '!items!EIBbk25EwcmJqoKC'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/battle-aspergillum.png
+name: Battle Aspergillum
+system:
+  actions:
+    - _id: sixmrf2e6ah1si6n
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Battle Aspergillum
+  description:
+    unidentified: >-
+      <p>Named for the common aspergillum, a macelike tool used by priests to
+      sprinkle holy water, this light mace has a hollow head and a metal plug
+      closing off the hole through which the head is filled. When the mace
+      strikes a creature, holy water sprinkles out through tiny holes throughout
+      the weapon's head; creatures subject to damage from holy water take 1
+      point of damage in addition to the normal effect of being struck by the
+      mace (a nonmagical aspergillum can deal holy water damage to an
+      incorporeal creature in this manner, even if the mace itself deals no
+      damage). After 5 hits, the battle aspergillum is empty and needs to be
+      refilled. Filling it with holy water is a standard action that provokes
+      attacks of opportunity (like drinking a potion). A filled aspergillum is
+      normally carried upright, to prevent the holy water from leaking out as
+      the weapon moves.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - hammers
+  weight:
+    value: 4
+type: weapon

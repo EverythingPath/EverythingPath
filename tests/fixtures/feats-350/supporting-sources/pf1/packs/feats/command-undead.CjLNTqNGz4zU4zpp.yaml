@@ -1,0 +1,56 @@
+_id: CjLNTqNGz4zU4zpp
+_key: '!items!CjLNTqNGz4zU4zpp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/command-undead.png
+name: Command Undead
+system:
+  actions:
+    - _id: x4ytugnyvaxfcp79
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - >-
+            Command Undead: as if under the effects of
+            @UUID[Compendium.pf1.spells.wkp8u7xl1dgpk362]{Control Undead}.
+      save:
+        dc: 10 + floor( @classes.cleric.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+  description:
+    instructions: <p>Link this feat to Channel Energy charges.</p>
+    value: >-
+      <p><em>Using foul powers of necromancy, you can command undead creatures,
+      making them into your servants.</em><p><strong>Prerequisites</strong>:
+      Channel negative energy class feature.<p><strong>Benefits</strong>: As a
+      standard action, you can use one of your uses of channel negative energy
+      to enslave undead within 30 feet. Undead receive a Will save to negate the
+      effect. The DC for this Will save is equal to 10 + 1/2 your cleric level +
+      your Charisma modifier. Undead that fail their saves fall under your
+      control, obeying your commands to the best of their ability, as if under
+      the effects of control undead. Intelligent undead receive a new saving
+      throw each day to resist your command. You can control any number of
+      undead, so long as their total Hit Dice do not exceed your cleric level.
+      If you use channel energy in this way, it has no other effect (it does not
+      heal or harm nearby creatures). If an undead creature is under the control
+      of another creature, you must make an opposed Charisma check whenever your
+      orders conflict.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 120
+  tag: feat_commandUndead
+  tags:
+    - General
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

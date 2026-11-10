@@ -1,0 +1,59 @@
+_id: v2of5xrsir2c45at
+_key: '!items!v2of5xrsir2c45at'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Burdened Thoughts
+system:
+  actions:
+    - _id: 7wfggnmxrcb6z6oy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill a creature's mind with the realization of its earthly weight
+      and responsibilities. Disheartened and wearied by these thoughts, the
+      creature gains heavy encumbrance and is unable to fly (if already flying,
+      it must land as soon as possible). If the creature is three or more size
+      categories larger than you, it's also staggered.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 2
+      hunter: 2
+      shaman: 2
+      sorcerer: 3
+      witch: 2
+      wizard: 3
+  level: 3
+  materials:
+    value: a lead bearing wrapped in clay
+  school: enc
+  sources:
+    - id: PZO9453
+      pages: '26'
+  subschool:
+    - compulsion
+type: spell

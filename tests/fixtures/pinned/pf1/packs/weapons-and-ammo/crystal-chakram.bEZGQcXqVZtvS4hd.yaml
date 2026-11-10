@@ -1,0 +1,62 @@
+_id: bEZGQcXqVZtvS4hd
+_key: '!items!bEZGQcXqVZtvS4hd'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/chakram.png
+name: Crystal Chakram
+system:
+  actions:
+    - _id: 95cyy0pjnhpjl9aq
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '30'
+  baseTypes:
+    - Crystal Chakram
+  description:
+    unidentified: >-
+      <p>Shaped and carved from quartz or stranger subterranean crystals, these
+      circular throwing discs have jagged razor-sharp edges. When a crystal
+      chakram strikes a foe, the weapon shatters into tiny sharp fragments; if
+      it misses, there is a 50% chance the chakram shatters when it hits the
+      ground or another solid object; otherwise it can be retrieved and used
+      again. A crystal chakram is treated as ammunition for the purpose of
+      creating magic weapons.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  sources:
+    - id: PZO9216
+      pages: '8'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon
