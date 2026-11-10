@@ -1,0 +1,67 @@
+_id: LVToSTaVYtVk7Sa3
+_key: '!items!LVToSTaVYtVk7Sa3'
+_stats:
+  coreVersion: '12.331'
+folder: 07mYrADfuCRzN0E6
+img: systems/pf1/icons/races/aasimar.png
+name: Spell-Like Ability (Aasimar)
+system:
+  abilityType: sp
+  actions:
+    - _id: anH2BfXHRiq3kuag
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.7x2z0i8rcx7s81fk]{daylight}</em></p><p>You
+        touch an object when you cast this spell, causing the object to shed
+        bright light in a @Distance[60 ft;dual] radius. This illumination
+        increases the light level for an additional 60 feet by one step
+        (darkness becomes dim light, dim light becomes normal light, and normal
+        light becomes bright light). Creatures that take penalties in bright
+        light take them while within the@Distance[60 ft;dual] radius of this
+        magical light. Despite its name, this spell is not the equivalent of
+        daylight for the purposes of creatures that are damaged or destroyed by
+        such light.</p><p>If daylight is cast on a small object that is then
+        placed inside or under a light-proof covering, the spell's effects are
+        blocked until the covering is removed.</p><p>Daylight brought into an
+        area of magical darkness (or vice versa) is temporarily negated, so that
+        the otherwise prevailing light conditions exist in the overlapping areas
+        of effect.</p><p>Daylight counters or dispels any darkness spell of
+        equal or lower level, such as darkness.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: Daylight
+      range:
+        units: touch
+      target:
+        value: object touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar</p><hr /><p>Aasimars can use
+      <em>@UUID[Compendium.pf1.spells.Item.7x2z0i8rcx7s81fk]{daylight}</em> once
+      per day as a spell-like ability (with a caster level equal to the
+      aasimar's character level). Aasimars of specific bloodlines (see below)
+      gain other spell-like abilities in place of <em>daylight</em>.</p>
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '238'
+    - id: PZO1112
+      pages: '7'
+    - id: PZO1121
+      pages: '85'
+  subType: racial
+  tags:
+    - Aasimar
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

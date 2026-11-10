@@ -1,0 +1,65 @@
+_id: fxz69pwpqt9b6uss
+_key: '!items!fxz69pwpqt9b6uss'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/heal-jade-1.jpg
+name: Restoration, Lesser
+system:
+  actions:
+    - _id: rzw52a8drm089bak
+      actionType: heal
+      activation:
+        cost: 3
+        type: round
+        unchained:
+          cost: 9
+          type: action
+      damage:
+        parts:
+          - formula: 1d4
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Lesser restoration</i> dispels any magical effects reducing one of
+      the subject's ability scores or cures 1d4 points of temporary ability
+      damage to one of the subject's ability scores. It also eliminates any
+      fatigue suffered by the character, and improves an exhausted condition to
+      fatigued. It does not restore permanent ability drain.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      inquisitor: 2
+      investigator: 2
+      mesmerist: 2
+      oracle: 2
+      paladin: 1
+      shaman: 2
+      spiritualist: 2
+      warpriest: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '334'
+  subschool:
+    - healing
+type: spell

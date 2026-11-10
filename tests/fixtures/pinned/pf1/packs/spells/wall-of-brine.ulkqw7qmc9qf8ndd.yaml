@@ -1,0 +1,66 @@
+_id: ulkqw7qmc9qf8ndd
+_key: '!items!ulkqw7qmc9qf8ndd'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Wall of Brine
+system:
+  actions:
+    - _id: gg5qxh6v057nvwb6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      effect: wall up to 10 ft./level long and 5 ft./level high (S)
+      name: Use
+      range:
+        units: medium
+      save:
+        description: none; see text
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You conjure a 5-foot-thick wall of seawater with a powerful current
+      flowing toward one side of the wall, selected by you; a creature
+      attempting to swim against this current must spend 4 squares of movement
+      to enter a square of the wall. A creature that begins its turn in the wall
+      is ejected in the direction of the current just before it acts. The wall
+      provides cover against attacks from out of the water, as usual for a body
+      of water. The water and the currents deflect physical ranged attacks into
+      or through the wall, unless a weapon used is exceptionally massive (such
+      as a siege engine). A creature submerged in the wall takes the usual
+      penalties for underwater combat. The wall blocks gases and liquids and
+      prevents water from mixing at its edges.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 4
+      hunter: 3
+      magus: 4
+      ranger: 3
+      shaman: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a bit of coral
+  school: con
+  sources:
+    - id: PZO9280
+      pages: '223'
+  subschool:
+    - creation
+type: spell

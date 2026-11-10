@@ -1,0 +1,31 @@
+name: Disposable preview rehearsal
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    environment: convex-preview
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Deploy once, build against that preview, and check generated drift
+        run: |
+          case "$CONVEX_DEPLOY_KEY" in
+            preview:*) ;;
+            *) echo "A Preview Deploy Key is required." >&2; exit 1 ;;
+          esac
+          echo "target: preview (issue-22-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}, disposable)"
+          pnpm deploy:convex --preview-create "issue-22-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+        env:
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_PREVIEW_DEPLOY_KEY }}
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}

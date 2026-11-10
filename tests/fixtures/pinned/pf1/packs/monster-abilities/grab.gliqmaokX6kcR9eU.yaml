@@ -1,0 +1,85 @@
+_id: gliqmaokX6kcR9eU
+_key: '!items!gliqmaokX6kcR9eU'
+_stats:
+  coreVersion: '12.343'
+folder: ks1gs7KC2CO3U9hN
+img: icons/magic/unholy/strike-hand-glow-pink.webp
+name: Grab
+system:
+  abilityType: ex
+  actions:
+    - _id: 8SrZCKVd8kWPYKsK
+      ability:
+        attack: _default
+      actionType: mcman
+      activation:
+        type: free
+        unchained:
+          type: free
+      attackBonus: '4'
+      conditionals:
+        - _id: xpkYOhRPl29UbNEw
+          modifiers:
+            - _id: xh5Rza6h0vlSazk8
+              formula: '-20'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Partial Use
+      name: Use
+    - _id: GV6pMKwFvm2L4ec2
+      ability:
+        attack: _default
+      actionType: mcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: 4[UMR] + 5[Maintain]
+      conditionals:
+        - _id: xpkYOhRPl29UbNEw
+          modifiers:
+            - _id: xh5Rza6h0vlSazk8
+              formula: '-20'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Partial Use
+      name: Maintain
+  description:
+    value: >-
+      <p>If the creature hits with the indicated attack, it deals the normal
+      amount of damage and tries to start a grapple as a free action without
+      provoking an attack of opportunity. Unless otherwise noted, grab works
+      only against opponents the same size category as the creature or smaller.
+      The creature has the option to conduct the grapple normally or simply use
+      the part of its body it used in the grab to hold the opponent. If it
+      chooses to do the latter, it takes a -20 penalty on its combat maneuver
+      check to start and maintain the grapple, but does not gain the grappled
+      condition itself. A successful hold does not deal any extra damage unless
+      the creature also has the constrict special attack. If the creature does
+      not constrict, each grapple combat maneuver check it succeeds at during
+      successive rounds automatically deals the damage indicated for the attack
+      that established the hold. Otherwise, it deals constrict and grapple
+      damage (the amount is given in the creature's descriptive text).</p><p>
+      Creatures with the grab special attack receive a +4 bonus on combat
+      maneuver checks to start and maintain a grapple.</p><p><em>Format</em>:
+      grab</p><p><em>Location</em>: individual attacks.</p>
+  showInCombat: true
+  showInQuickbar: true
+  sources:
+    - id: PZO1137
+      pages: '294'
+    - id: PZO1112
+      pages: '301'
+    - id: PZO1116
+      pages: '297'
+    - id: PZO1120
+      pages: '295'
+    - id: PZO1127
+      pages: '295'
+    - id: PZO1133
+      pages: '294'
+  subType: misc
+type: feat

@@ -1,0 +1,71 @@
+_id: j7xfcxbi5gbziz4o
+_key: '!items!j7xfcxbi5gbziz4o'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Illusory Script
+system:
+  actions:
+    - _id: s0xdg5jfbze0adjj
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one touched object weighing no more than 10 lbs.
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You write instructions or other information on parchment, paper, or any
+      suitable writing material. The <i>illusory script</i> appears to be some
+      form of foreign or magical writing. Only the person (or people) designated
+      by you at the time of the casting can read the writing; it's
+      unintelligible to any other character.</p><p>Any unauthorized creature
+      attempting to read the script triggers a potent illusory effect and must
+      make a saving throw. A successful saving throw means the creature can look
+      away with only a mild sense of disorientation. Failure means the creature
+      is subject to a <i>suggestion</i> implanted in the script by you at the
+      time the <i>illusory script</i> spell was cast. The <i>suggestion</i>
+      lasts only 30 minutes. Typical <i>suggestion</i>s include "Close the book
+      and leave," "Forget the existence of this note," and so forth. If
+      successfully dispelled by <i>dispel magic,</i> the <i>illusory script</i>
+      and its secret message disappear.</p><p>The hidden message can be read by
+      a combination of the <i>true seeing</i> spell with the <i>read magic</i>
+      or <i>comprehend languages</i> spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    gpValue: 50
+    value: lead-based ink worth 50 gp
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '299'
+  subschool:
+    - phantasm
+type: spell

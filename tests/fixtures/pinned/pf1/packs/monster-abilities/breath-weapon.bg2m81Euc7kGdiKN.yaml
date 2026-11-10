@@ -1,0 +1,74 @@
+_id: bg2m81Euc7kGdiKN
+_key: '!items!bg2m81Euc7kGdiKN'
+_stats:
+  coreVersion: '12.343'
+folder: ks1gs7KC2CO3U9hN
+img: icons/creatures/abilities/dragon-fire-breath-orange.webp
+name: Breath Weapon
+system:
+  abilityType: su
+  actions:
+    - _id: nl3a5LBTO47ruwWd
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 60-ft. cone
+      damage:
+        parts:
+          - formula: 8d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Reflex half
+        type: ref
+  description:
+    instructions: >-
+      <p>Change the damage and area in the action. Also change the saving type
+      if needed.</p><p>Change the recharge formula if needed (currently set to
+      every 1d4 rounds).</p>
+    value: >-
+      <p>Some creatures can exhale a cloud, cone, or line of magical effects. A
+      breath weapon usually deals damage and is often based on some type of
+      energy. Breath weapons allow a Reflex save for half damage (DC = 10 + 1/2
+      breathing creature's racial HD + breathing creature's Constitution
+      modifier; the exact DC is given in the creature's descriptive text). A
+      creature is immune to its own breath weapon unless otherwise noted. Some
+      breath weapons allow a Fortitude save or a Will save instead of a Reflex
+      save. Each breath weapon also includes notes on how often it can be
+      used.</p><p><em>Format:</em> breath weapon (60-ft. cone, 8d6 fire damage,
+      Reflex DC 20 for half, usable every 1d4 rounds</p><p><em>Location:</em>
+      Special Attacks; if the breath does more than just deal damage, it also
+      appears under Special Abilities with its own entry.</p>
+  showInCombat: true
+  showInQuickbar: true
+  sources:
+    - id: PZO1112
+      pages: '298'
+    - id: PZO1116
+      pages: '294'
+    - id: PZO1120
+      pages: '292'
+    - id: PZO1127
+      pages: '290'
+    - id: PZO1133
+      pages: '290'
+    - id: PZO1137
+      pages: '291'
+  subType: misc
+  uses:
+    autoDeductChargesCost: 1d4 + 1
+    maxFormula: '5'
+    per: round
+    rechargeFormula: '@item.uses.value + 1'
+    value: 5
+type: feat

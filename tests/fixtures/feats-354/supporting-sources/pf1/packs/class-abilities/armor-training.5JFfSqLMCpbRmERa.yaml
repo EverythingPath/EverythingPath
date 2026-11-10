@@ -1,0 +1,37 @@
+_id: 5JFfSqLMCpbRmERa
+_key: '!items!5JFfSqLMCpbRmERa'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/armor/field-plate.png
+name: Armor Training
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Fighter
+  changeFlags:
+    mediumArmorFullSpeed: true
+  changes:
+    - _id: pv0gclyb
+      formula: '-clamp(floor((@class.level + 1) / 4), 0, 4)'
+      target: acpA
+      type: untyped
+    - _id: e0zzcqzk
+      formula: clamp(floor((@class.level + 1) / 4), 0, 4)
+      target: mDexA
+      type: untyped
+  description:
+    value: >-
+      <p>Starting at 3rd level, a fighter learns to be more maneuverable while
+      wearing armor. Whenever he is wearing <em>armor</em>, he reduces the armor
+      check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity
+      bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th,
+      and 15th), these bonuses increase by +1 each time, to a maximum –4
+      reduction of the armor check penalty and a +4 increase of the maximum
+      <em>Dexterity</em> bonus allowed.</p><p>In addition, a fighter can also
+      move at his normal speed while wearing medium armor.</p>
+  sources:
+    - id: PZO1110
+      pages: 55-56
+  subType: classFeat
+type: feat
