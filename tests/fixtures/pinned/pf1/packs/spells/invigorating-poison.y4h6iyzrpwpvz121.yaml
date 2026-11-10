@@ -1,0 +1,65 @@
+_id: y4h6iyzrpwpvz121
+_key: '!items!y4h6iyzrpwpvz121'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Invigorating Poison
+system:
+  actions:
+    - _id: 0r8i59hblabsh5gh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The body of the target creature gains a metabolic response that allows
+      it to benefit from normally deadly toxins. When a poison would cause
+      ability damage to the target creature, the target instead gains a +4
+      alchemical bonus to that ability score. The spell then immediately ends,
+      but the bonus lasts for a number of minutes equal to the amount of ability
+      damage the poison would have caused. If the poison would deal more than
+      one type of ability damage, each bonus has a separate duration. If the
+      poison has effects other than ability damage (such as unconsciousness or
+      ability drain), these effects apply normally. This spell affects only a
+      single poison; if multiple poisons affect the target simultaneously, this
+      spell prevents only ability damage and grants the appropriate bonuses for
+      the poison that would cause the most damage.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      oracle: 2
+      shaman: 2
+      warpriest: 2
+  level: 2
+  materials:
+    value: an apple seed
+  school: trs
+  sources:
+    - id: PZO9459
+      pages: '28'
+type: spell

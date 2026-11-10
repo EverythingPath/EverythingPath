@@ -1,0 +1,56 @@
+_id: 1f1a6vb40enjisnq
+_key: '!items!1f1a6vb40enjisnq'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Tough Crowd
+system:
+  actions:
+    - _id: utf33y0t6oa5l5l1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: 1 creature/level
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fortify your allies against attempts to control or mislead them.
+      Each ally in the spell's range gains a +4 insight bonus on the saving
+      throw to resist the next enchantment or illusion spell cast on it. In
+      addition, the DC of any Bluff, Diplomacy, Disguise, or Intimidate check to
+      influence an affected character increases by 4 for the duration of the
+      spell.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      inquisitor: 4
+      mesmerist: 4
+      psychic: 3
+      skald: 4
+      sorcerer: 4
+      witch: 3
+      wizard: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO9465
+      pages: '27'
+type: spell

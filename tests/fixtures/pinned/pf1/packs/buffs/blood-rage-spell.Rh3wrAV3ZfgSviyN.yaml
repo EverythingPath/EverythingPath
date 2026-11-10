@@ -1,0 +1,41 @@
+_id: Rh3wrAV3ZfgSviyN
+_key: '!items!Rh3wrAV3ZfgSviyN'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/skills/wounds/blood-cells-vessel-red.webp
+name: Blood Rage (Spell)
+system:
+  changes:
+    - _id: 19Wm3jHO
+      formula: max(-5, ceil(min(0, (@attributes.hp.value - @item.uses.value) / 5)))
+      priority: -1
+      target: ac
+      type: untyped
+    - _id: tPLtMdTQ
+      formula: >-
+        min(10, floor(max(0, (@item.uses.value - @attributes.hp.value)) / 5) *
+        2)
+      priority: -1
+      target: str
+      type: morale
+  description:
+    instructions: >-
+      <p>Set item level to caster level and limited uses to your current
+      remaining HP when casting the spell.</p>
+    value: >-
+      <p>The subject has a bonus to Strength and malus to AC based on it's
+      current hp as per @UUID[Compendium.pf1.spells.Item.g09p4w3w8enp5tki]
+      spell.</p>
+  duration:
+    end: initiative
+    units: round
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO9413
+      pages: '28'
+  subType: spell
+  uses:
+    per: charges
+type: buff
