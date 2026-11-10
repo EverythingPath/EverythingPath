@@ -1,0 +1,1195 @@
+[
+  {
+    "key": "bleed",
+    "name": "Bleed",
+    "ruleIdentity": "local/crb-condition/bleed",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "A bleeding creature takes the listed damage at the start of each of its turns. Stopped by a DC 15 Heal check or any spell that cures hit point damage (even if the bleed is ability damage). Some bleeds deal ability damage or ability drain instead of hit points. Bleed effects do not stack unless they deal different kinds of damage; for the same kind, take the worse (ability drain is worse than ability damage).",
+        "situation": {
+          "local": "Bleed"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Per-turn hit point/ability damage or drain, parameterized by the source; Heal DC 15 and healing removal triggers."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Bleed"]
+  },
+  {
+    "key": "blinded",
+    "name": "Blinded",
+    "ruleIdentity": "local/crb-condition/blinded",
+    "modifiers": [
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "skill.per",
+        "bonusType": "untyped",
+        "value": -4,
+        "condition": {
+          "situation": "opposed-perception"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "The creature cannot see. Vision-reliant checks and activities fail automatically. All opponents have total concealment against it. To move faster than half speed it must pass a DC 10 Acrobatics check or fall prone. Long-term blindness lets characters adapt and overcome some drawbacks (unspecified).",
+        "situation": {
+          "local": "Blinded"
+        }
+      }
+    ],
+    "unmodeled": [
+      "\u22124 on most Strength- and Dexterity-based skill checks: exceptions are unspecified; select applicable checks at the table.",
+      "Total concealment (50% miss chance); DC 10 Acrobatics to exceed half speed; adaptation is unspecified."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/combat.html"
+    ],
+    "deniesDexterityBonus": true,
+    "sourceSections": ["Conditions: Blinded", "Combat \u2014 Armor Class"]
+  },
+  {
+    "key": "broken",
+    "name": "Broken",
+    "ruleIdentity": "local/crb-condition/broken",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "An ITEM condition. Items damaged beyond half their hit points are broken and work less well. Broken items are worth 75% of normal value. Magic items can be repaired only by mending or make whole from a caster of at least the item's caster level; the condition ends when the item is restored to half hit points or more. Mundane items can be repaired similarly or with Craft (typically DC 20 and 1 hour per point of damage; cost one-tenth of item cost).",
+        "situation": {
+          "local": "Broken"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Item-scoped weapon \u22122 attack/damage, critical range 20/\u00d72; armor/shield AC bonus halved and armor check penalty doubled; tool \u22122 skill checks; wand/staff double charges; value 75%; Craft repair typically DC 20, 1 hour per damage point and one-tenth cost."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Broken"]
+  },
+  {
+    "key": "confused",
+    "name": "Confused",
+    "ruleIdentity": "local/crb-condition/confused",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "The creature cannot act normally and cannot tell ally from foe (all creatures are treated as enemies). Allies casting a beneficial touch spell on it must succeed on a melee touch attack. If attacked, it attacks whoever last attacked it until that creature is dead or out of sight. At the start of each confused creature's turn roll d%: 01-25 act normally; 26-50 do nothing but babble; 51-75 deal 1d8 + Str modifier damage to self with an item in hand; 76-100 attack the nearest creature (a familiar counts as part of the subject). If the indicated action cannot be carried out the creature babbles. Attackers get no special advantage. A confused creature that is attacked automatically attacks its attackers on its next turn (if still confused). It does not make attacks of opportunity against anything it is not already devoted to attacking.",
+        "situation": {
+          "local": "Confused"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Per-turn d% behavior table; self-damage 1d8 + Strength modifier on 51\u201375."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Confused"]
+  },
+  {
+    "key": "cowering",
+    "name": "Cowering",
+    "ruleIdentity": "local/crb-condition/cowering",
+    "modifiers": [
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Frozen in fear, can take no actions.",
+        "situation": {
+          "local": "Cowering"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/combat.html"
+    ],
+    "deniesDexterityBonus": true,
+    "sourceSections": ["Conditions: Cowering", "Combat \u2014 Armor Class"]
+  },
+  {
+    "key": "dazed",
+    "name": "Dazed",
+    "ruleIdentity": "local/crb-condition/dazed",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Unable to act normally; can take no actions but suffers no AC penalty. Typically lasts 1 round.",
+        "situation": {
+          "local": "Dazed"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Dazed"]
+  },
+  {
+    "key": "dazzled",
+    "name": "Dazzled",
+    "ruleIdentity": "local/crb-condition/dazzled",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -1
+      },
+      {
+        "target": "skill.per",
+        "bonusType": "untyped",
+        "value": -1,
+        "condition": {
+          "situation": "sight-based"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Eyes overstimulated; cannot see well.",
+        "situation": {
+          "local": "Dazzled"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Dazzled"]
+  },
+  {
+    "key": "dead",
+    "name": "Dead",
+    "ruleIdentity": "local/crb-condition/dead",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Reached when hit points drop to a negative amount equal to the Constitution score, Con falls to 0, or the creature is killed outright by a spell/effect. The soul leaves the body. Dead characters cannot be healed normally or magically but can be restored to life by magic. The body decays unless preserved; resurrection restores the body to full health or to its condition at death (depending on the spell/device).",
+        "situation": {
+          "local": "Dead"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Death thresholds: hit points at or below \u2212Constitution, Constitution 0, or negative levels at least Hit Dice; resurrection and decay."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Dead"]
+  },
+  {
+    "key": "deafened",
+    "name": "Deafened",
+    "ruleIdentity": "local/crb-condition/deafened",
+    "modifiers": [
+      {
+        "target": "init",
+        "bonusType": "untyped",
+        "value": -4
+      },
+      {
+        "target": "skill.per",
+        "bonusType": "untyped",
+        "value": -4,
+        "condition": {
+          "situation": "opposed-perception"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Cannot hear. Sound-based Perception checks automatically fail. 20% chance of spell failure on spells with verbal components. Long-term deafness lets characters adapt to some drawbacks.",
+        "situation": {
+          "local": "Deafened"
+        }
+      }
+    ],
+    "unmodeled": [
+      "20% spell failure for verbal-component spells; adaptation is unspecified."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Deafened"]
+  },
+  {
+    "key": "disabled",
+    "name": "Disabled",
+    "ruleIdentity": "local/crb-condition/disabled",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "A character at exactly 0 hp, or with negative hp who is stable and conscious, is disabled. May take a single move action or a standard action each round (not both, no full-round actions) but can take swift, immediate and free actions. Moves at half speed. Move actions are safe; a standard action (or any action the GM deems strenuous, including some free actions such as casting a quickened spell) deals 1 damage after it is completed, unless the action increased hp; the character is then at negative hp and dying. A disabled character with negative hp recovers hp naturally if helped. Otherwise, each day after 8 hours rest, a DC 10 Con check (penalty equal to the negative hp total) starts natural recovery; failure loses 1 hp (but not unconsciousness). Once passed, healing continues and the risk is over.",
+        "situation": {
+          "local": "Disabled"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Half speed; 1 hit point lost after strenuous actions; daily DC 10 Constitution recovery check."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Disabled"]
+  },
+  {
+    "key": "dying",
+    "name": "Dying",
+    "ruleIdentity": "local/crb-condition/dying",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Unconscious and near death; a creature with negative hp that has not stabilized is dying. It can take no actions. On its next turn after dropping to negative hp (but not dead), and each later turn, it makes a DC 10 Con check to become stable with a penalty equal to its negative hp total; a natural 20 is an automatic success; a stable character need not roll. On a failed check it loses 1 hp. If negative hp equals its Con score it dies.",
+        "situation": {
+          "local": "Dying"
+        }
+      }
+    ],
+    "unmodeled": [
+      "DC 10 Constitution stabilization check each turn, with negative-hit-point penalty; 1 hit point lost on failure.",
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Dying"]
+  },
+  {
+    "key": "energy-drained",
+    "name": "Energy Drained",
+    "ruleIdentity": "local/crb-condition/energy-drained",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "the character gains one or more negative levels, which may become permanent. If negative levels >= Hit Dice, the character dies.",
+        "situation": {
+          "local": "Energy Drained"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Negative-level count is not recorded: \u22121 per negative level on attacks, saves, skills, ability checks, CMB and CMD; \u22125 current and maximum hit points per level; effective level reduced; daily removal save and death at negative levels \u2265 Hit Dice."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Energy Drained",
+      "Energy Drain and Negative Levels"
+    ]
+  },
+  {
+    "key": "entangled",
+    "name": "Entangled",
+    "ruleIdentity": "local/crb-condition/entangled",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "ability.dex",
+        "bonusType": "untyped",
+        "value": -4
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Ensnared. Movement is impeded but not prevented unless the bonds are anchored to an immobile object or opposing force. Speed halved; cannot run or charge. A spell cast while entangled needs a concentration check (DC 15 + spell level) or the spell is lost.",
+        "situation": {
+          "local": "Entangled"
+        }
+      }
+    ],
+    "unmodeled": ["Half speed; concentration DC 15 + spell level."],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Entangled",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "exhausted",
+    "name": "Exhausted",
+    "ruleIdentity": "local/crb-condition/exhausted",
+    "modifiers": [
+      {
+        "target": "ability.str",
+        "bonusType": "untyped",
+        "value": -6
+      },
+      {
+        "target": "ability.dex",
+        "bonusType": "untyped",
+        "value": -6
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Moves at half speed, cannot run or charge, -6 to Strength and Dexterity. After 1 hour of complete rest it becomes fatigued. A fatigued character becomes exhausted by doing something that would normally cause fatigue.",
+        "situation": {
+          "local": "Exhausted"
+        }
+      }
+    ],
+    "unmodeled": ["Half speed; 1 hour rest changes exhausted to fatigued."],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Exhausted",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "fascinated",
+    "name": "Fascinated",
+    "ruleIdentity": "local/crb-condition/fascinated",
+    "modifiers": [
+      {
+        "target": "skills",
+        "bonusType": "untyped",
+        "value": -4,
+        "condition": {
+          "situation": "reaction-check"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Entranced by a supernatural or spell effect. Stands or sits quietly, taking no actions except paying attention to the effect, for its duration. Any potential threat (e.g. a hostile creature approaching) grants a new saving throw. An obvious threat (drawing a weapon, casting a spell, aiming a ranged weapon at it) automatically breaks the effect. An ally can shake it free as a standard action.",
+        "situation": {
+          "local": "Fascinated"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Fascinated"]
+  },
+  {
+    "key": "fatigued",
+    "name": "Fatigued",
+    "ruleIdentity": "local/crb-condition/fatigued",
+    "modifiers": [
+      {
+        "target": "ability.str",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "ability.dex",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Can neither run nor charge; -2 to Strength and Dexterity. Doing anything that would normally cause fatigue makes the character exhausted. After 8 hours of complete rest, fatigue ends.",
+        "situation": {
+          "local": "Fatigued"
+        }
+      }
+    ],
+    "unmodeled": [
+      "8 hours complete rest removes fatigue; another fatigue-causing effect escalates it."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Fatigued",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "flat-footed",
+    "name": "Flat-Footed",
+    "ruleIdentity": "local/crb-condition/flat-footed",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "A character who has not yet acted during a combat is flat-footed: unable to react normally. Loses the Dexterity bonus to AC (if any) and cannot make attacks of opportunity.",
+        "situation": {
+          "local": "Flat-Footed"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/combat.html"
+    ],
+    "deniesDexterityBonus": true,
+    "sourceSections": [
+      "Conditions: Flat-Footed",
+      "Combat \u2014 Armor Class",
+      "Combat — Combat Maneuver Defense"
+    ]
+  },
+  {
+    "key": "frightened",
+    "name": "Frightened",
+    "ruleIdentity": "local/crb-condition/frightened",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "saves",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "skills",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Flees from the source of its fear as best it can; if it cannot flee, it may fight. It can use special abilities, including spells, to flee and must do so if that is the only way to escape. Frightened is like shaken, except the creature must flee if possible; panicked is more extreme. (Fear section: frightened characters are also shaken; they may choose their path; once out of sight/hearing of the source they act freely, but can be forced to flee again if the source re-appears; unable-to-flee characters fight but remain shaken.)",
+        "situation": {
+          "local": "Frightened"
+        }
+      }
+    ],
+    "unmodeled": ["\u22122 ability checks; fleeing behavior."],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Frightened", "Fear"]
+  },
+  {
+    "key": "grappled",
+    "name": "Grappled",
+    "ruleIdentity": "local/crb-condition/grappled",
+    "modifiers": [
+      {
+        "target": "ability.dex",
+        "bonusType": "untyped",
+        "value": -4
+      },
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "cmb",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "cmd",
+        "bonusType": "circumstance",
+        "value": 2,
+        "condition": {
+          "situation": "grapple-while-invisible"
+        }
+      },
+      {
+        "target": "cmb",
+        "bonusType": "untyped",
+        "value": 2,
+        "condition": {
+          "situation": "grapple-or-escape"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Restrained by a creature, trap or effect. Cannot move; no action that requires two hands. Spell or spell-like ability use requires a concentration check (DC 10 + grappler's CMB + spell level) or the spell is lost. No attacks of opportunity. Cannot use Stealth to hide from the grappling creature, even with hide in plain sight. If it becomes invisible it gains a +2 circumstance bonus on CMD against being grappled and no other benefit.",
+        "situation": {
+          "local": "Grappled"
+        }
+      }
+    ],
+    "unmodeled": ["Concentration DC 10 + grappler CMB + spell level."],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Grappled",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "helpless",
+    "name": "Helpless",
+    "ruleIdentity": "local/crb-condition/helpless",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Paralyzed, held, bound, sleeping, unconscious or otherwise completely at an opponent's mercy. Treated as having Dexterity 0 (-5 modifier). Melee attacks against it gain +4 (as against a prone target); ranged attacks get no special bonus. Rogues can sneak attack it. As a full-round action an enemy can deliver a coup de grace with a melee weapon (or bow/crossbow if adjacent): automatic hit and automatic critical (rogue also adds sneak attack); the defender must pass a Fortitude save (DC 10 + damage dealt) or die. Coup de grace provokes attacks of opportunity. Creatures immune to critical hits take no critical damage and need not save.",
+        "situation": {
+          "local": "Helpless"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Helpless",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "incorporeal",
+    "name": "Incorporeal",
+    "ruleIdentity": "local/crb-condition/incorporeal",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "No physical body. Immune to all nonmagical attack forms. Takes half damage (50%) from magic weapons, spells, spell-like effects and supernatural effects. Takes full damage from other incorporeal creatures and effects, and from all force effects.",
+        "situation": {
+          "local": "Incorporeal"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Immune to nonmagical attacks; half damage from magical corporeal sources, full damage from force/incorporeal sources."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Incorporeal"]
+  },
+  {
+    "key": "invisible",
+    "name": "Invisible",
+    "ruleIdentity": "local/crb-condition/invisible",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": 2,
+        "condition": {
+          "situation": "sighted-opponent"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Visually undetectable. Gains a +2 bonus on attack rolls against sighted opponents and ignores its opponents' Dexterity bonuses to AC (if any). Invisibility section: it can still be heard, smelled or felt; vision-based detection (including darkvision) fails; immune to sneak attack extra damage and ranger favored-enemy extra damage but not immune to critical hits; notice DC 20 Perception within 30 ft; pinpointing is +20 DC; total concealment (50% miss chance) even after pinpointing.",
+        "situation": {
+          "local": "Invisible"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Opponent-facing total concealment, denial of opponent Dexterity bonus to AC, extra-damage restrictions.",
+      "Invisibility: DC 20 to notice presence, +20 DC to pinpoint location, within 30 feet, and 50% miss chance; observer checks and opponent attacks are not tracked."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Invisible", "Invisibility"]
+  },
+  {
+    "key": "nauseated",
+    "name": "Nauseated",
+    "ruleIdentity": "local/crb-condition/nauseated",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Stomach distress. Cannot attack, cast spells, concentrate on spells, or do anything requiring attention. The only action allowed is a single move action per turn.",
+        "situation": {
+          "local": "Nauseated"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Nauseated"]
+  },
+  {
+    "key": "panicked",
+    "name": "Panicked",
+    "ruleIdentity": "local/crb-condition/panicked",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "saves",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "skills",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Must drop whatever it is holding and flee at top speed from the source of fear and from any other dangers, along a random path. Cannot take any other actions. If cornered it cowers and does not attack, typically using the total defense action. May use special abilities, including spells, to flee (and must if that is the only way). The Fear section adds: panicked characters are also shaken; once out of sight/hearing of danger they can act as they want.",
+        "situation": {
+          "local": "Panicked"
+        }
+      }
+    ],
+    "unmodeled": [
+      "\u22122 ability checks; fleeing, dropping held items and cowering when cornered."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Panicked", "Fear"]
+  },
+  {
+    "key": "paralyzed",
+    "name": "Paralyzed",
+    "ruleIdentity": "local/crb-condition/paralyzed",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Frozen in place, unable to move or act. Effective Dexterity and Strength scores of 0; helpless; can take purely mental actions. A flying winged creature falls; a swimmer cannot swim and may drown. Others can move through its square (counts as 2 squares each).",
+        "situation": {
+          "local": "Paralyzed"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Effective Strength 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Movement through the square costs 2 squares; flyers fall and swimmers may drown.",
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": [
+      "Conditions: Paralyzed",
+      "Ability Score Damage, Penalty, and Drain"
+    ]
+  },
+  {
+    "key": "petrified",
+    "name": "Petrified",
+    "ruleIdentity": "local/crb-condition/petrified",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Turned to stone and considered unconscious. If the stone body cracks or breaks but the broken pieces are rejoined when returned to flesh, the character is unharmed; an incomplete body returns incomplete with possible permanent hp loss and/or debilitation.",
+        "situation": {
+          "local": "Petrified"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Statue damage and restoration consequences, including possible permanent hit point loss/debilitation.",
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Petrified"]
+  },
+  {
+    "key": "pinned",
+    "name": "Pinned",
+    "ruleIdentity": "local/crb-condition/pinned",
+    "modifiers": [
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": -4
+      },
+      {
+        "target": "cmd",
+        "bonusType": "circumstance",
+        "value": 2,
+        "condition": {
+          "situation": "grapple-while-invisible"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Tightly bound; can take few actions. Cannot move and is denied its Dexterity bonus (to AC). Takes an additional -4 penalty to AC. Can always try to free itself (combat maneuver or Escape Artist). Can take verbal and mental actions but cannot cast spells with somatic or material components. Spell or spell-like ability use needs a concentration check (DC 10 + grappler's CMB + spell level). Pinned is a more severe version of grappled; their effects do not stack.",
+        "situation": {
+          "local": "Pinned"
+        }
+      }
+    ],
+    "unmodeled": ["Concentration DC 10 + grappler CMB + spell level."],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/combat.html"
+    ],
+    "deniesDexterityBonus": true,
+    "sourceSections": [
+      "Conditions: Pinned",
+      "Conditions: Grappled",
+      "Combat \u2014 Armor Class"
+    ]
+  },
+  {
+    "key": "prone",
+    "name": "Prone",
+    "ruleIdentity": "local/crb-condition/prone",
+    "modifiers": [
+      {
+        "target": "attack.melee",
+        "bonusType": "untyped",
+        "value": -4
+      },
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": 4,
+        "condition": {
+          "situation": "ranged-attack"
+        }
+      },
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": -4,
+        "condition": {
+          "situation": "melee-attack"
+        }
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Lying on the ground. A prone attacker takes -4 on melee attack rolls and cannot use a ranged weapon (except a crossbow). A prone defender gains +4 AC against ranged attacks but takes -4 AC against melee attacks. Standing up is a move-equivalent action that provokes an attack of opportunity.",
+        "situation": {
+          "local": "Prone"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Prone"]
+  },
+  {
+    "key": "shaken",
+    "name": "Shaken",
+    "ruleIdentity": "local/crb-condition/shaken",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "saves",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "skills",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Less severe fear state than frightened or panicked.",
+        "situation": {
+          "local": "Shaken"
+        }
+      }
+    ],
+    "unmodeled": [
+      "\u22122 ability checks; fear effects escalate rather than add their penalties."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/glossary.html"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Shaken", "Fear"]
+  },
+  {
+    "key": "sickened",
+    "name": "Sickened",
+    "ruleIdentity": "local/crb-condition/sickened",
+    "modifiers": [
+      {
+        "target": "attack",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "damage",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "saves",
+        "bonusType": "untyped",
+        "value": -2
+      },
+      {
+        "target": "skills",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "The character feels ill.",
+        "situation": {
+          "local": "Sickened"
+        }
+      }
+    ],
+    "unmodeled": [
+      "\u22122 ability checks; damage modifiers represent weapon damage only."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Sickened"]
+  },
+  {
+    "key": "stable",
+    "name": "Stable",
+    "ruleIdentity": "local/crb-condition/stable",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "A formerly dying character that has stopped losing hp each round but still has negative hp is stable: no longer dying, but unconscious. If stabilized by another's aid (Heal check or magical healing), it no longer loses hp, and each hour it can make a DC 10 Con check (penalty = negative hp total) to become conscious and disabled (hp still negative). If it stabilized on its own without help, it still risks losing hp: each hour it makes a Con check to become stable \"as if aided\", and each failure costs 1 hp.",
+        "situation": {
+          "local": "Stable"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Hourly DC 10 Constitution recovery check with negative-hit-point penalty; self-stabilization failure can cost 1 hit point.",
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Stable"]
+  },
+  {
+    "key": "staggered",
+    "name": "Staggered",
+    "ruleIdentity": "local/crb-condition/staggered",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "May take a single move action or standard action each round (not both, no full-round actions); can still take free, swift and immediate actions. A creature whose nonlethal damage exactly equals its current hit points becomes staggered.",
+        "situation": {
+          "local": "Staggered"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Nonlethal damage equal to current hit points is a trigger; hit point pools are not tracked."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Staggered"]
+  },
+  {
+    "key": "stunned",
+    "name": "Stunned",
+    "ruleIdentity": "local/crb-condition/stunned",
+    "modifiers": [
+      {
+        "target": "ac",
+        "bonusType": "untyped",
+        "value": -2
+      }
+    ],
+    "situationalNotes": [
+      {
+        "text": "Drops everything held, can't take actions.",
+        "situation": {
+          "local": "Stunned"
+        }
+      }
+    ],
+    "unmodeled": [],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions",
+      "https://legacy.aonprd.com/coreRulebook/combat.html"
+    ],
+    "deniesDexterityBonus": true,
+    "sourceSections": ["Conditions: Stunned", "Combat \u2014 Armor Class"]
+  },
+  {
+    "key": "unconscious",
+    "name": "Unconscious",
+    "ruleIdentity": "local/crb-condition/unconscious",
+    "modifiers": [],
+    "situationalNotes": [
+      {
+        "text": "Knocked out and helpless. Caused by negative hit points (but not more than the creature's Con score) or nonlethal damage in excess of current hp.",
+        "situation": {
+          "local": "Unconscious"
+        }
+      }
+    ],
+    "unmodeled": [
+      "Triggers from negative hit points, excess nonlethal damage and ability damage are not tracked.",
+      "Effective Dexterity 0 (\u22125 modifier) and the statistics it changes are not calculated.",
+      "Attackers gain +4 melee attacks; coup de grace Fortitude DC 10 + damage; sneak attack allowed."
+    ],
+    "sources": [
+      {
+        "book": "CRB"
+      }
+    ],
+    "citations": [
+      "https://legacy.aonprd.com/coreRulebook/glossary.html#conditions"
+    ],
+    "deniesDexterityBonus": false,
+    "sourceSections": ["Conditions: Unconscious"]
+  }
+]

@@ -1,0 +1,52 @@
+_id: bU5ry2F5WAKhacZI
+_key: '!items!bU5ry2F5WAKhacZI'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/equipment/back/mantle-collared-leather.webp
+name: Wrathful Mantle
+system:
+  actions:
+    - _id: krjseDJqM3tsX87U
+      activation:
+        type: swift
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 2d8
+            types:
+              - force
+      img: icons/equipment/back/mantle-collared-leather.webp
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      target:
+        value: all creatures within 5 feet (1.5 meters) of you
+  changes:
+    - _id: dl2nqkev
+      formula: (min(5,(floor(@item.level / 4))))
+      target: allSavingThrows
+      type: resist
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.1gz3zdpxu7uic5ky]{Wrathful
+      Mantle}</p><p>You gain a +1 resistance bonus on all saving throws per four
+      caster levels (maximum +5 at 20th level). You can end the wrathful mantle
+      at any time as a swift action to deal 2d8 points of force damage to all
+      creatures within 5 feet.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 5
+  scriptCalls:
+    - _id: pQDrlW471LohxnGC
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Early
+      type: script
+      value: await item.setActive(false)
+  subType: spell
+type: buff

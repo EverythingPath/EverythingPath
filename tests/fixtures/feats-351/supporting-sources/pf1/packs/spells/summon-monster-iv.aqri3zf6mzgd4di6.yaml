@@ -1,0 +1,63 @@
+_id: aqri3zf6mzgd4di6
+_key: '!items!aqri3zf6mzgd4di6'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/magical/humanoid-silhouette-glowing-pink.webp
+name: Summon Monster IV
+system:
+  actions:
+    - _id: u01mvjx6vbmsp07d
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except that you can
+      summon one creature from the 4th-level list, 1d3 creatures of the same
+      kind from the 3rd-level list, or 1d4+1 creatures of the same kind from a
+      lower-level list.</p>
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 4
+      bard: 4
+      cleric: 4
+      medium: 3
+      oracle: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      spiritualist: 4
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a tiny bag and a small candle
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '352'
+  sr: false
+  subschool:
+    - summoning
+type: spell

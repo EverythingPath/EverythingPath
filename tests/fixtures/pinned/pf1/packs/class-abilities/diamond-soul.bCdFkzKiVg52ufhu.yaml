@@ -1,0 +1,28 @@
+_id: bCdFkzKiVg52ufhu
+_key: '!items!bCdFkzKiVg52ufhu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/ice-blue-1.jpg
+name: Diamond Soul
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Monk
+  changes:
+    - _id: kLktwrwl
+      formula: 10 + @class.level
+      target: spellResist
+      type: base
+  description:
+    value: >-
+      <p>At 13th level, a monk gains <em>spell resistance</em> equal to his
+      current monk level + 10. In order to affect the monk with a spell, a
+      spellcaster must get a result on a <em>caster level</em> check (1d20 +
+      <em>caster level</em>) that equals or exceeds the monk’s <em>spell
+      resistance</em>.</p>
+  sources:
+    - id: PZO1110
+      pages: 59-60
+  subType: classFeat
+type: feat

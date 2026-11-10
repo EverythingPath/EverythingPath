@@ -1,0 +1,61 @@
+_id: 08z18ogsc8j3gswx
+_key: '!items!08z18ogsc8j3gswx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Penumbral Disguise
+system:
+  actions:
+    - _id: uswfhz96pjjj8wrn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mask your features with shadowy illumination, gaining a competence
+      bonus equal to your caster level on Disguise checks and Stealth checks
+      attempted while in normal light, dim light, or darkness. In addition,
+      creatures that see you while you are in dim light or darkness are unable
+      to discern any but the most general information about your appearance or
+      actions. For example, they can determine your general shape (such as
+      humanoid), as well as the gist of your actions (such as, "She was trying
+      to break into the store"), but cannot determine your precise actions, your
+      appearance, or any identifying information about you. In bright light,
+      your normal appearance is revealed.</p>
+  descriptors:
+    - shadow
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 3
+      inquisitor: 3
+      investigator: 3
+      mesmerist: 3
+      occultist: 3
+      skald: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO9466
+      pages: '29'
+  sr: false
+type: spell
