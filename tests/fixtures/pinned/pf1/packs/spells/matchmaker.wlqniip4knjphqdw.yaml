@@ -1,0 +1,61 @@
+_id: wlqniip4knjphqdw
+_key: '!items!wlqniip4knjphqdw'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Matchmaker
+system:
+  actions:
+    - _id: y81of7yhlcfl8i8m
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial, see text
+        type: will
+      target:
+        value: two living creatures
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>You entice the target creatures to become romantically interested in
+      one another. Each creature saves and applies spell resistance separately.
+      Both must be affected for the spell to have an effect. If either creatures
+      has a prior unfriendly or hostile attitude toward the other, it receives a
+      +4 bonus on its saving throw.  This spell doesn't override the targets'
+      normal sexual preferences or other limitations. If romantic feelings are
+      incompatible for this reason, the creature instead feels an intimate
+      platonic bond with the other.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      mesmerist: 2
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a rose petal
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '220'
+  subschool:
+    - charm
+type: spell

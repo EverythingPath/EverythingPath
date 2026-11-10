@@ -1,0 +1,66 @@
+_id: scyklgov72pvw884
+_key: '!items!scyklgov72pvw884'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/movement/trail-streak-zigzag-yellow.webp
+name: Blessing of Fervor
+system:
+  actions:
+    - _id: yrbargwwtqtb9yw7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this blessing, you call your allies to move forth and empower them
+      to conquer and become victorious. Each round for the duration of this
+      spell, each of your allies can choose one of the following bonuses for
+      that round at the beginning of its turn (their
+      choice).</p><ul><li><p>Increase its <em>speed</em> by 30
+      feet.</p></li><li><p>Stand up as a swift action without provoking an
+      attack of opportunity.</p></li><li><p>Make one extra attack as part of a
+      full attack action, using its highest base attack
+      bonus.</p></li><li><p>Gain a +2 bonus on attack rolls and a +2 dodge bonus
+      to AC and Reflex saves.</p></li></ul><p>Cast a single spell of 2nd level
+      or lower as if it were an enlarged, extended, silent, or still
+      spell.</p><p>These effects are not cumulative with similar effects, such
+      as those provided by <em>haste</em> or a <em>speed</em> weapon, nor do
+      they actually grant an extra action, so you can't use it to cast a second
+      spell or otherwise take an extra action in the round. <em>Blessing of
+      Fervor</em> does not stack with <em>haste</em>.</p>
+  learnedAt:
+    bloodline:
+      Martyred: 4
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '205'
+type: spell

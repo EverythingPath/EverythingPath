@@ -1,0 +1,65 @@
+_id: dvwyzofd0yifs1ac
+_key: '!items!dvwyzofd0yifs1ac'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/unholy/hand-claw-fog-green.webp
+name: Harm
+system:
+  actions:
+    - _id: ftpjo5ucu3gr4v4w
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: min(150, 10 * @cl)
+            types:
+              - negative
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will half; see text
+        type: will
+      target:
+        value: creature touched
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><em>Harm</em> charges a subject with negative energy that deals 10
+      points of damage per caster level (to a maximum of 150 points at 15th
+      level). If the creature successfully saves, <em>harm</em> deals half this
+      amount. <em>Harm</em> cannot reduce the target's hit points to less than
+      1.</p><p>If used on an undead creature, <em>harm</em> acts like
+      @UUID[Compendium.pf1.spells.4re1j2w8wkvsvnsi]{heal}.</p>
+  learnedAt:
+    class:
+      cleric: 6
+      inquisitor: 6
+      occultist: 6
+      oracle: 6
+      shaman: 7
+      spiritualist: 6
+      warpriest: 6
+      witch: 7
+    domain:
+      Destruction: 6
+    subDomain:
+      Decay: 6
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '293'
+type: spell

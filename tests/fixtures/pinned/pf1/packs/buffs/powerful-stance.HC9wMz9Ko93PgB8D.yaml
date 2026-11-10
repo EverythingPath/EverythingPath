@@ -1,0 +1,31 @@
+_id: HC9wMz9Ko93PgB8D
+_key: '!items!HC9wMz9Ko93PgB8D'
+_stats:
+  coreVersion: '12.343'
+folder: GoxdX8voXN2V3OVY
+img: icons/skills/melee/strike-hammer-destructive-blue.webp
+name: Powerful Stance
+system:
+  changes:
+    - _id: GV1FtNjh
+      formula: 1 + floor(@classes.barbarianUnchained.level / 4)
+      target: mwdamage
+      type: untyped
+    - _id: AHACE8xi
+      formula: 1 + floor(@classes.barbarianUnchained.level / 4)
+      target: twdamage
+      type: untyped
+  description:
+    value: >-
+      <p>The barbarian gains a +1 bonus on melee damage rolls and thrown weapon
+      damage rolls. This bonus increases by 1 for every 4 levels the barbarian
+      has.</p><p>See @UUID[Compendium.pf1.class-abilities.Item.uJ4WSKQo1W8GZ9vr]
+      for more details.</p>
+  level: null
+  sources:
+    - id: PZO1131
+      pages: '11'
+  subType: feat
+  tags:
+    - Stance Rage Power
+type: buff

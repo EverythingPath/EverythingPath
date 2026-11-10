@@ -1,0 +1,61 @@
+_id: 6eAg4BT0RM8tfyUN
+_key: '!items!6eAg4BT0RM8tfyUN'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Quarterstaff
+system:
+  actions:
+    - _id: aqd01i3ja2dxrrcu
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Quarterstaff
+  description:
+    unidentified: >-
+      <p>A quarterstaff is a simple piece of wood, about 5 feet in length. In
+      battle, it's held with one hand at the butt and the other a quarter of the
+      way up the staff, allowing it to block blows and make quick strikes.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: wood
+  properties:
+    dbl: true
+    mnk: true
+  sources:
+    - id: PZO1110
+      pages: 142, 148
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - double
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 4
+type: weapon

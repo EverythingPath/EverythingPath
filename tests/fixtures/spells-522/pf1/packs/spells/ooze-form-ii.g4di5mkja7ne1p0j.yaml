@@ -1,0 +1,57 @@
+_id: g4di5mkja7ne1p0j
+_key: '!items!g4di5mkja7ne1p0j'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/slimes/slime-face-skull-green.webp
+name: Ooze Form II
+system:
+  actions:
+    - _id: nm5vy3w4emd01ofc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.v5i28j1imuannezt]{ooze form I} except you
+      can also assume the form of a Large ooze. You gain blindsight 30 feet and
+      immunity to critical hits and precision damage as
+      well.</p><p><strong>Large Ooze</strong>: If you assume this form, you gain
+      a +2 size bonus to your Strength score, a +8 size bonus to your
+      Constitution score, a slam attack (2d4 plus 1d6 acid and grab), and
+      constrict (2d4), and you take a -8 penalty to your Dexterity score.</p>
+  learnedAt:
+    class:
+      alchemist: 6
+      arcanist: 6
+      investigator: 6
+      magus: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: a bit of the creature whose form you plan to assume
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '233'
+  sr: false
+  subschool:
+    - polymorph
+type: spell
