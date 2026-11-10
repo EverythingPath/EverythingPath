@@ -1,0 +1,92 @@
+_id: qHulLMFoibYb4MOW
+_key: '!items!qHulLMFoibYb4MOW'
+_stats:
+  coreVersion: '12.331'
+folder: qFbWInuNDuv3JE0T
+img: icons/sundries/books/book-embossed-jewel-gold-purple.webp
+name: Mechanical Aptitude
+system:
+  actions:
+    - _id: nXSwgVfwuU2fsims
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  contextNotes:
+    - target: skill.dev
+      text: >-
+        Once per day, you can reroll a check with this skill before the outcome
+        of the check is revealed. You must take the second result, even if it is
+        worse.
+  description:
+    instructions: >-
+      <p>The skill is set to Disable Device by default. If you wish it to be the
+      other skills mentioned above, go to the changes tab and change the target
+      to your chosen skill in the context notes.</p>
+    value: >-
+      <p><em>You have learned much from tinkering with ancient technology from
+      the Jistka Imperium.</em></p><p><strong>Benefits</strong>: Choose one of
+      the following skills: Disable Device, Knowledge (engineering), or Use
+      Magic Device. Once per day, you can reroll a check with that skill before
+      the outcome of the check is revealed. You must take the second result,
+      even if it is worse.</p>
+  scriptCalls:
+    - _id: ZFagA8GomiNi4fb5
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll Chosen Skill
+      type: script
+      value: |-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Skill:</h3>
+            <p>Please pick a skill to reroll from the buttons below.<strong>It must match the one you chose when you took this trait.</strong></p>
+          </div>
+        `;
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Skill`,
+            content: content,
+            buttons: {
+              dev: {
+                label: pf1.config.skills["dev"],
+                callback: () => "dev",
+              },
+              ken: {
+                label: pf1.config.skills["ken"],
+                callback: () => "ken",
+              },
+              umd: {
+                label: pf1.config.skills["umd"],
+                callback: () => "umd",
+              }
+            },
+            default: 'dev',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        const answer = await getAnswer();
+        if(answer !== null) {
+          actor.rollSkill(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9490
+      pages: '19'
+  subType: trait
+  traitType: magic
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

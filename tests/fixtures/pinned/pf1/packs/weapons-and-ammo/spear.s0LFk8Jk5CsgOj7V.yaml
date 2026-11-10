@@ -1,0 +1,86 @@
+_id: s0LFk8Jk5CsgOj7V
+_key: '!items!s0LFk8Jk5CsgOj7V'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/spear.png
+name: Spear
+system:
+  actions:
+    - _id: af1masr66zv64208
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: MJUhc7sNk6f6Lr5m
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Spear
+  description:
+    unidentified: <p>A spear is 5 feet in length and can be thrown.</p>
+  hands: 2
+  hardness: 5
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    brc: true
+  sources:
+    - id: PZO1110
+      pages: 142, 148
+    - id: PZO1123
+      pages: '17'
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+    - tribal
+  weaponSubtype: 2h
+  weight:
+    value: 6
+type: weapon

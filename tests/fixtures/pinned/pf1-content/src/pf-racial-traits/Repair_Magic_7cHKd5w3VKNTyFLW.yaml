@@ -1,0 +1,69 @@
+_id: 7cHKd5w3VKNTyFLW
+_key: '!items!7cHKd5w3VKNTyFLW'
+_stats:
+  coreVersion: '12.331'
+folder: IGdp7NHex91tWhaA
+img: icons/equipment/head/mask-carved-wood-brown.webp
+name: Repair Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: 99NItxyjqsjxx8pW
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      damage:
+        parts:
+          - formula: (min(5, @attributes.hd.total))d6
+            types:
+              - Construct healing Damage repair
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.x23pz2agjub1eh89]{make
+        whole}</p><p>This spell functions as
+        @UUID[Compendium.pf1.spells.Item.24zg8a05hqum3e6j]{mending}, except that
+        it repairs 1d6 points of damage per level when cast on an object or
+        construct creature (maximum 5d6).</p><p>Make whole can fix destroyed
+        magic items (at 0 hit points or less), and restores the magic properties
+        of the item if your caster level is at least twice that of the item.
+        Items with charges (such as wands) and single-use items (such as potions
+        and scrolls) cannot be repaired in this way. When make whole is used on
+        a construct creature, the spell bypasses any immunity to magic as if the
+        spell did not allow spell resistance.</p>
+      duration:
+        units: inst
+      name: Make Whole
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: Negates (Object; Harmless)
+        type: will
+      target:
+        value: >-
+          one object up to [[10 * @attributes.hd.total]] cu. ft. or one
+          construct creature of any size
+  description:
+    value: >-
+      <p><strong>Race</strong>: Wyrwood<br /><strong>Replaced Trait(s)</strong>:
+      Darkvision</p><hr /><p>Some wyrwoods have developed magic to keep them
+      more self-sufficient. They can use
+      @UUID[Compendium.pf1.spells.Item.x23pz2agjub1eh89]{make whole} as a
+      spell-like ability once per day. This racial trait replaces
+      darkvision.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '217'
+  subType: racial
+  tags:
+    - Wyrwood
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

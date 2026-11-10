@@ -1,0 +1,61 @@
+_id: 7Wx6OgcshMS6djwD
+_key: '!items!7Wx6OgcshMS6djwD'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/polearms/glaive-simple.webp
+name: Rhomphaia
+system:
+  actions:
+    - _id: jfjzfkyqumccnrx9
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Rhomphaia
+  description:
+    unidentified: >-
+      <p>This Bronze Age weapon is an early polearm consisting of a long,
+      single-edged blade attached to a sturdy staff, sometimes slightly curved.
+      It serves as both a cutting and a thrusting weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    brc: true
+    frg: true
+    rch: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

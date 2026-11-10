@@ -1,0 +1,66 @@
+_id: LC0RB4eEczWDuEE4
+_key: '!items!LC0RB4eEczWDuEE4'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/rope-gauntlets.png
+name: Rope Gauntlet
+system:
+  actions:
+    - _id: ru2dh61mq30i4afo
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - untyped
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Rope Gauntlet
+  description:
+    unidentified: >-
+      <p>By wrapping your hands and forearms in thin but tough hemp ropes and
+      then soaking the makeshift gloves in water for weight and expansion, you
+      can transform your fists into rock-hard weapons easily capable of killing
+      in a fistfight. Each rope gauntlet takes a full minute to wrap and another
+      minute to soak, but once applied the gauntlet can be worn for a day;
+      removing a rope gauntlet takes 1 full round. When wearing rope gauntlets,
+      you are considered armed and your attacks deal normal damage. If you are
+      proficient with rope gauntlets, you may use the rough edges of the ropes
+      to deal slashing damage rather than bludgeoning damage. Your fingers are
+      mostly exposed, allowing you to wield or carry items in your hands while
+      wearing rope gauntlets, but the constriction of the weapon at your
+      knuckles gives you a -2 penalty on all precision-based tasks involving
+      your hands (such opening locks).</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 0.2
+  properties:
+    fin: true
+  sources:
+    - id: PZO9410
+      pages: '4'
+  subType: exotic
+  weaponGroups:
+    - close
+  weight:
+    value: 2
+type: weapon
