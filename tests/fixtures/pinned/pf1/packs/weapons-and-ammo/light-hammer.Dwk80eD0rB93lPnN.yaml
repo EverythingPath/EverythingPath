@@ -1,0 +1,83 @@
+_id: Dwk80eD0rB93lPnN
+_key: '!items!Dwk80eD0rB93lPnN'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/hammer-light.PNG
+name: Light Hammer
+system:
+  actions:
+    - _id: pjd0b7ma1ybkmq89
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: hkZbgTdv8oulk6oe
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Light Hammer
+  description:
+    unidentified: >-
+      <p>A lighter version of a warhammer, this weapon usually has a sleek metal
+      head with one striking surface.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weight:
+    value: 2
+type: weapon

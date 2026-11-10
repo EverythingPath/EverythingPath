@@ -1,0 +1,64 @@
+_id: O2LhGbHS4g2RRBw1
+_key: '!items!O2LhGbHS4g2RRBw1'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/boarding-gaff.png
+name: Boarding Gaff
+system:
+  actions:
+    - _id: psktvlxwrpu4k9qv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Boarding Gaff
+  description:
+    unidentified: >-
+      <p>A boarding gaff, or gaff hook, is a long pole with a hook for spearing
+      fish. Pirates often add extra, heavier hooks to both ends of boarding
+      gaffs to assist with boarding actions, giving the weapon its common name.
+      A boarding gaff can also be used for fishing.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    dbl: true
+    rch: true
+    trp: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  weaponGroups:
+    - double
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

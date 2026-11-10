@@ -1,0 +1,37 @@
+_id: tlvQVJUUFUVQ92EH
+_key: '!items!tlvQVJUUFUVQ92EH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/extra-lay-on-hands.jpg
+name: Spell Kenning
+system:
+  abilityType: su
+  actions:
+    - _id: 1p6bknrqar6tyj5i
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Skald
+  description:
+    value: >-
+      <p>At 5th level, a skald is learned in the magic of other spellcasters,
+      and can use his own magic to duplicate those classes’ spells. Once per
+      day, a skald can cast any spell on the bard, cleric, or sorcerer/wizard
+      spell list as if it were one of his skald spells known, expending a skald
+      spell slot of the same spell level to cast the desired spell. Casting a
+      spell with spell kenning always has a minimum casting time of 1 full
+      round, regardless of the casting time of the spell.<p>At 11th level, a
+      skald can use this ability twice per day.</p>
+
+      <p>At 17th level, he can use this ability three times per day.</p>
+  subType: classFeat
+  tag: classFeat_spellKenning
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 11), 1) + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

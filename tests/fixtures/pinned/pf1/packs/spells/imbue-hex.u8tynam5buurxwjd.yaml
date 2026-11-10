@@ -1,0 +1,57 @@
+_id: u8tynam5buurxwjd
+_key: '!items!u8tynam5buurxwjd'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Imbue Hex
+system:
+  actions:
+    - _id: nfk2hkex0zfy6elk
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched; see text
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You transfer a single hex you know to the target, and give that target
+      the ability to use the hex. The transferred hex's variable characteristics
+      function according to your level, not the level of the recipient. Only a
+      creature with Intelligence and Wisdom scores of at least 9 can receive
+      this effect. To use this hex, the target must be able to speak and move
+      freely. Once it uses the hex, the spell ends (though any effects of the
+      hex still last for  the full duration). You can transfer only a hex-not a
+      major or grand hex-with this ability.  Once you cast <i>imbue hex</i>, you
+      cannot use the transferred hex until the spell is discharged, dispelled,
+      or dismissed.</p>
+  learnedAt:
+    class:
+      shaman: 5
+      witch: 5
+  level: 5
+  materials:
+    value: a hag's whisker
+  school: evo
+  sources:
+    - id: PZO9451
+      pages: '31'
+type: spell

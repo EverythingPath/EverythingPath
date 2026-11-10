@@ -1,0 +1,54 @@
+_id: yecrgpqffvbrnoon
+_key: '!items!yecrgpqffvbrnoon'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Genie
+system:
+  actions:
+    - _id: z36k6jo6w6cnmus9
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned genie
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.9ueps4vao672p3iu], except you can summon
+      one djnni or [[/r 1d3]] jann.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      oracle: 5
+      sorcerer: 5
+      summoner: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: an oil lamp worth at least 50 gp
+  school: con
+  sources:
+    - id: PZO9441
+      pages: '11'
+  sr: false
+  subschool:
+    - summoning
+type: spell

@@ -1,0 +1,58 @@
+_id: nnocwsre2mckj58a
+_key: '!items!nnocwsre2mckj58a'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Excruciating Deformation
+system:
+  actions:
+    - _id: dm7nh8bde5leja9e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your touch attack causes your target to become painfully malformed. Its
+      limbs twist and buckle, while its body contorts uncontrollably, shifting
+      and warping. Each round the target suffers excruciating pain and takes 2d6
+      points of nonlethal damage, 1 point of Dexterity damage, and 1 point of
+      Constitution damage, and its speed is reduced by 10 feet. Once per round
+      as a free action on its turn, the target can attempt a new Fortitude
+      saving throw to resist the spell for 1 round.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      psychic: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '219'
+  subschool:
+    - polymorph
+type: spell

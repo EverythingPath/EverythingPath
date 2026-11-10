@@ -1,0 +1,59 @@
+_id: 09cH5nya3F2uUv9p
+_key: '!items!09cH5nya3F2uUv9p'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/ankus.png
+name: Ankus
+system:
+  actions:
+    - _id: u96as7o84pj6s5dx
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Ankus
+  description:
+    unidentified: >-
+      <p>Also known as an elephant goad, this tool consists of a 2- to 3-foot
+      rod ending in a spearhead and a backward-facing hook. Traditionally used
+      to train and direct large animals, the ankus can be used as a weapon in a
+      pinch.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    dis: true
+    trp: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 5
+type: weapon
