@@ -1,0 +1,51 @@
+_id: c0hvjnqzry149ugs
+_key: '!items!c0hvjnqzry149ugs'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Curse Water
+system:
+  actions:
+    - _id: s0hdvd583lgjibu4
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: flask of water touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell imbues a flask (1 pint) of water with negative energy,
+      turning it into unholy water (see Equipment). Unholy water damages good
+      outsiders the way holy water damages undead and evil outsiders.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      warpriest: 1
+  materials:
+    gpValue: 25
+    value: 5 lbs. of powdered silver worth 25 gp
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '263'
+type: spell

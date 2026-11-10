@@ -1,0 +1,30 @@
+_id: D2huasedfGMSetP7
+_key: '!items!D2huasedfGMSetP7'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/spells/evil-eye-eerie-1.jpg
+name: Bane
+system:
+  changes:
+    - _id: naa3gpnz
+      formula: '-1'
+      target: attack
+      type: untyped
+  contextNotes:
+    - target: allSavingThrows
+      text: '-[[1]] vs Fear effects'
+  description:
+    value: >-
+      <p>You take a -1 penalty on attack rolls and saving throws vs fear effects
+      as per @UUID[Compendium.pf1.spells.Item.3etxlex8u32g0hrx] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '346'
+  subType: spell
+type: buff

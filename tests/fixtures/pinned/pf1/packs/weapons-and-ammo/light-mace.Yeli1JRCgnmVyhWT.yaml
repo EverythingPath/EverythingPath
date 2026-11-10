@@ -1,0 +1,58 @@
+_id: Yeli1JRCgnmVyhWT
+_key: '!items!Yeli1JRCgnmVyhWT'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Light Mace
+system:
+  actions:
+    - _id: yx8alqrgkwcot6eg
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Light Mace
+  description:
+    unidentified: >-
+      <p>A mace is made up of an ornate metal head attached to a simple wooden
+      or metal shaft. The mace's head is usually flanged to cause more pain or
+      damage. Some more primitive maces are made with stone bound to a wooden
+      haft with leather straps.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 147
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - hammers
+  weight:
+    value: 4
+type: weapon

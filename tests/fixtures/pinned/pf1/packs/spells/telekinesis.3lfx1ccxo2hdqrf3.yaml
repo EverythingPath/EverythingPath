@@ -1,0 +1,136 @@
+_id: 3lfx1ccxo2hdqrf3
+_key: '!items!3lfx1ccxo2hdqrf3'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/control/debuff-energy-snare-blue.webp
+name: Telekinesis
+system:
+  actions:
+    - _id: HKqz7NkiydyKrrOZ
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: round
+        value: '@cl'
+      name: Sustained Force
+      range:
+        units: long
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          an object weighing no more than 25 pounds per caster level (maximum
+          375 pounds)
+    - _id: pwZIYj5o1FdXjK4k
+      ability:
+        attack: _key
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      bab: '@cl'
+      duration:
+        concentration: true
+        units: round
+        value: '@cl'
+      name: Combat Maneuver
+      range:
+        units: long
+    - _id: DktfDMVBp4GR2hx0
+      ability:
+        attack: _key
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: all targets within 10 feet of each other
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Violet Thrust
+      range:
+        units: long
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one object or creature per caster level (maximum 15)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You move objects or creatures by concentrating on them.</p><p>Depending
+      on the version selected, the spell can provide a gentle, sustained force,
+      perform a variety of combat maneuvers, or exert a single short, violent
+      thrust.</p><p><em><strong>Sustained Force</strong></em>: A sustained force
+      moves an object weighing no more than 25 pounds per caster level (maximum
+      375 pounds at 15th level) up to 20 feet per round. A creature can negate
+      the effect on an object it possesses with a successful Will save or with
+      spell resistance.</p><p>This version of the spell can last 1 round per
+      caster level, but it ends if you cease concentration. The weight can be
+      moved vertically, horizontally, or in both directions. An object cannot be
+      moved beyond your range. The spell ends if the object is forced beyond the
+      range. If you cease concentration for any reason, the object falls or
+      stops.</p><p>An object can be telekinetically manipulated as if with one
+      hand.</p><p>For example, a lever or rope can be pulled, a key can be
+      turned, an object rotated, and so on, if the force required is within the
+      weight limitation. You might even be able to untie simple knots, though
+      delicate activities such as these require DC 15 Intelligence
+      checks.</p><p><em><strong>Combat Maneuver</strong></em>: Alternatively,
+      once per round, you can use <em>telekinesis</em> to perform a bull rush,
+      disarm, grapple (including pin), or trip. Resolve these attempts as
+      normal, except that they don't provoke attacks of opportunity, you use
+      your caster level in place of your <em>Combat Maneuver</em> Bonus, and you
+      add your Intelligence modifier (if a wizard) or Charisma modifier (if a
+      sorcerer) in place of your Strength or Dexterity modifier. No save is
+      allowed against these attempts, but spell resistance applies normally.
+      This version of the spell can last 1 round per caster level, but it ends
+      if you cease concentration.</p><p><em><strong>Violent
+      Thrust</strong></em>: Alternatively, the spell energy can be spent in a
+      single round. You can hurl one object or creature per caster level
+      (maximum 15) that are within range and all within 10 feet of each other
+      toward any target within 10 feet per level of all the objects.</p><p>You
+      can hurl up to a total weight of 25 pounds per caster level (maximum 375
+      pounds at 15th level).</p><p>You must succeed on attack rolls (one per
+      creature or object thrown) to hit the target with the items, using your
+      base attack bonus + your Intelligence modifier (if a wizard) or Charisma
+      modifier (if a sorcerer). Weapons cause standard damage (with no Strength
+      bonus; note that arrows or bolts deal damage as daggers of their size when
+      used in this manner). Other objects cause damage ranging from 1 point per
+      25 pounds (for less dangerous objects) to 1d6 points of damage per 25
+      pounds (for hard, dense objects).</p><p>Objects and creatures that miss
+      their target land in a square adjacent to the target.</p><p>Creatures who
+      fall within the weight capacity of the spell can be hurled, but they are
+      allowed Will saves (and spell resistance) to negate the effect, as are
+      those whose held possessions are targeted by the spell.</p><p>If a
+      telekinesed creature is hurled against a solid surface, it takes damage as
+      if it had fallen 10 feet (1d6 points).</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      magus: 5
+      occultist: 5
+      psychic: 4
+      sorcerer: 5
+      spiritualist: 5
+      wizard: 5
+  level: 5
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '357'
+type: spell

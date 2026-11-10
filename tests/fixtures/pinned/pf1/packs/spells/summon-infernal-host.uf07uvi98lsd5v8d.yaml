@@ -1,0 +1,61 @@
+_id: uf07uvi98lsd5v8d
+_key: '!items!uf07uvi98lsd5v8d'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Infernal Host
+system:
+  actions:
+    - _id: qms7x7z76onm0se9
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: 1d4+1 lesser host devils or 1 greater host devil
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.hd7ukybisvv7j5r6], save that it can only
+      be used to summon host devils. These noxious flying devils, known also as
+      gaavs and magaavs, are detailed on page 58 of <em>Pathfinder Campaign
+      Setting: Princes of Darkness, Book of the Damned, Vol. 1</em>.</p>
+  descriptors:
+    - evil
+    - lawful
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      cleric: 5
+      oracle: 5
+      skald: 5
+      sorcerer: 5
+      summoner: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: strip of rune-inscribed parchment
+  school: con
+  sources:
+    - id: PZO9232
+      pages: '59'
+  sr: false
+  subschool:
+    - summoning
+type: spell

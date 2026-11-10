@@ -1,0 +1,57 @@
+_id: KPauZdmqDDxXj6OU
+_key: '!items!KPauZdmqDDxXj6OU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Dire Prophecy
+system:
+  abilityType: su
+  actions:
+    - _id: ziwq5q1kmod7p4j4
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Apply @UUID[Compendium.pf1.commonbuffs.B1lq0g41olpQMfzK]{Dire
+        Prophecy} to target.</p>
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch curses the target so he is doomed to die (Will negates). As
+      long as the curse persists, the target takes a –4 penalty to his Armor
+      Class and on attack rolls, saves, ability checks, and skill
+      checks.</p><p>While the curse persists, the witch may end it by bringing
+      its full force upon her victim all at once. Doing so gives the victim a
+      penalty equal to the witch's caster level to his Armor Class or on any
+      single attack roll, combat maneuver check, opposed ability or skill check,
+      or saving throw. The witch must decide to apply this penalty before the
+      roll to be modified is made. If the witch does not have line of sight to
+      the target, the full force of the curse occurs when the GM considers it
+      most appropriate, such as when the target is in mortal danger.</p><p>A
+      target can only have one dire prophecy upon him at a time.</p><p>Whether
+      or not the target's save against the hex is successful, a creature cannot
+      be the target of this hex for 1 day.</p><p>This is a curse effect.</p>
+  sources:
+    - id: PZO1117
+      pages: '82'
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat
