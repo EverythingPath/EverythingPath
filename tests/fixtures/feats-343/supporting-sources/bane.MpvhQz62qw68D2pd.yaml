@@ -1,0 +1,42 @@
+_id: MpvhQz62qw68D2pd
+_key: '!items!MpvhQz62qw68D2pd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_13.jpg
+name: Bane
+system:
+  abilityType: su
+  actions:
+    - _id: b65nsihaockb2peu
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: weapon held
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 5th level, an inquisitor can imbue one of her weapons with the bane
+      weapon special ability as a swift action. She must select one creature
+      type when she uses this ability (and a subtype if the creature type
+      selected is humanoid or outsider). Once selected, the type can be changed
+      as a swift action. This ability only functions while the inquisitor wields
+      the weapon. If dropped or taken, the weapon resumes granting this ability
+      if it is returned to the inquisitor before the duration expires. This
+      ability lasts for a number of rounds per day equal to the inquisitor’s
+      level. These rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_bane
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

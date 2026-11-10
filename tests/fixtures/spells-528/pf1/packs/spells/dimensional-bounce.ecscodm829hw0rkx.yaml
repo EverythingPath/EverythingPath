@@ -1,0 +1,57 @@
+_id: ecscodm829hw0rkx
+_key: '!items!ecscodm829hw0rkx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Dimensional Bounce
+system:
+  actions:
+    - _id: t6dkqf1gvudgrwzk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged
+      name: Use
+      range:
+        units: close
+      save:
+        description: none and Will negates (object)
+        type: will
+      target:
+        value: you and touched objects or other touched willing creatures
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You designate two locations within range and create a dimensional link
+      between them; you must have line of effect to both locations when casting
+      this spell. As a swift action, you can teleport from your current location
+      to either of the designated locations as if you had cast <i>dimension
+      door</i>. The spell is discharged once you have used it to teleport a
+      number of times equal to one-fourth your caster level (maximum 5
+      times).</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      psychic: 7
+      sorcerer: 7
+      summoner: 6
+      summonerUnchained: 6
+      witch: 7
+      wizard: 7
+  level: 7
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '179'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

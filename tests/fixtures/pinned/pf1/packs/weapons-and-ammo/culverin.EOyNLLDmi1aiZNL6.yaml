@@ -1,0 +1,86 @@
+_id: EOyNLLDmi1aiZNL6
+_key: '!items!EOyNLLDmi1aiZNL6'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Culverin
+system:
+  actions:
+    - _id: s2ou3d1gyje2a96e
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(2, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '30'
+  ammo:
+    capacity: 1
+    explode: 10
+    misfire: 1
+    type: gunBullet
+  baseTypes:
+    - Culverin
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d6 (small), 2d8 (medium);
+      <b>Critical</b> x4; <b>Range</b> 30 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1 (10 ft.); <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>The culverin, also known as a hand bombard, consists of a simple
+      smoothbore tube, sealed at one end except for a small hole used to ignite
+      a gunpowder charge. A wooden stock partially encases the barrel, allowing
+      you to hold it under your arm with relative ease when carrying it. Firing
+      a culverin without support (such as a wall, a window, or a stand) imposes
+      a -4 penalty on attack rolls, and knocks you prone.</p>
+
+      <p>A culverin uses 4 doses of black powder and grapeshot (a handful of
+      pellets) as ammunition. Note that these statistics simulate only the
+      original, hand-held culverins-their larger descendants are considered
+      cannons and are dealt with in the siege weapon section of <em>Ultimate
+      Combat</em>.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 4000
+  properties:
+    sct: true
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 40
+type: weapon

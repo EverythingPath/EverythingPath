@@ -1,0 +1,61 @@
+_id: k84efb6j6ujklng0
+_key: '!items!k84efb6j6ujklng0'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Illusion of Treachery, Greater
+system:
+  actions:
+    - _id: rghvayqww6q88afy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: you and one creature
+  components:
+    focus: true
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.i3w7iwvxrvit0iez]{Illusion of Treachery}
+      except that it also conceals your own actions (as
+      @UUID[Compendium.pf1.spells.nju9j6zlv9sbiznw]{Illusion of Calm}) and
+      renders invisible all spell effects and ranged attacks originating from
+      you until they reach the attack's target (this doesn't cause the attack's
+      target to be unable to avoid the attack, as they still see the attack
+      originating from the spell's target).</p>
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 6
+      magus: 6
+      mesmerist: 4
+      occultist: 5
+      psychic: 5
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a tiny marionette
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '217'
+  subschool:
+    - figment
+type: spell

@@ -1,0 +1,60 @@
+_id: qsp4i9nbi7jv1wb9
+_key: '!items!qsp4i9nbi7jv1wb9'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Clarion Call
+system:
+  actions:
+    - _id: rb3rsksmsdr4clvv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject of this spell gains two benefits. First, the affected
+      creature gains the ability to create a sound like the blast of a mighty
+      horn or trumpet simply by miming the action of sounding one. Second, the
+      subject can speak in a booming voice that carries easily over great
+      distances, lowering the DC of any check to hear what is said by -15. This
+      spell is particularly prized by battlefield commanders and champions who
+      wish to make themselves clearly heard or gain the attention of their
+      allies or foes.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      cleric: 1
+      magus: 1
+      oracle: 1
+      skald: 1
+      sorcerer: 1
+      warpriest: 1
+      wizard: 1
+  materials:
+    value: a piece of brass
+  school: ill
+  sources:
+    - id: PZO9426
+      pages: '28'
+type: spell
