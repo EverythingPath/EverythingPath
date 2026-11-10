@@ -1,0 +1,71 @@
+_id: dijesfaw4xmw0jqa
+_key: '!items!dijesfaw4xmw0jqa'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Poisonous Balm
+system:
+  actions:
+    - _id: 8dm3ucb27jmv7npw
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous, then 1 hour or until triggered plus 6 rounds; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial, then Fortitude negates (see text)
+        harmless: true
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mend the target's injuries, curing 3d8 hit points + 1 point per
+      caster level (maximum +15) as <i>cure serious wounds</i>, but leaving its
+      body laced with a subtle toxin that remains inert until you activate it. A
+      target that decides to attempt the Will save and succeeds is healed for
+      half (as <i>cure serious wounds</i>) and negates the toxin. Otherwise, you
+      can activate the toxin by concentrating on the spell as a standard action,
+      at which point the victim takes 1d3 points of Strength damage per round
+      for 6 rounds. Once the poison is active, the target can attempt a
+      Fortitude save each round to negate that round's damage and end the
+      affliction. If you don't trigger the poison for 1 hour, the spell ends and
+      leaves the target unharmed. <i>Detect poison</i> reveals an inert
+      <i>poisonous balm</i> only if the caster succeeds at a caster level check
+      against a DC equal to 15 + your caster level. Attempts to identify
+      <i>poisonous balm</i> with a skill check incorrectly identify it as
+      <i>cure serious wounds</i> (see the ruse descriptor on page 192). A fooled
+      viewer mistakes <i>poisonous balm</i>'s aura as the lingering aura of an
+      instantaneous effect.</p>
+  descriptors:
+    - poison
+    - ruse
+  learnedAt:
+    class:
+      cleric: 4
+      druid: 5
+      hunter: 5
+      occultist: 4
+      oracle: 4
+      shaman: 4
+      warpriest: 4
+      witch: 5
+  level: 4
+  school: con
+  sources:
+    - id: PZO1134
+      pages: '222'
+  subschool:
+    - healing
+type: spell

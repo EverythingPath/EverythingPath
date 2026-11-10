@@ -1,0 +1,127 @@
+_id: jTaeREVBdEeawArA
+_key: '!items!jTaeREVBdEeawArA'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/mech_8.jpg
+name: '*Common Conditional Modifiers'
+system:
+  actions:
+    - _id: sfzdsn9xp2o0p6hz
+      ability:
+        damage: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      conditionals:
+        - _id: jxal6n985iw36vu9
+          modifiers:
+            - _id: ak4xa7phgj693uas
+              formula: 2[Flanking]
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Flanking
+        - _id: 88eiweat07czn65c
+          modifiers:
+            - _id: isj7cyk3wfoe6f8x
+              formula: 4[Outflank]
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Outflank
+        - _id: fcv3g2cj5y3kqfl5
+          modifiers:
+            - _id: v3uffws5luh85j12
+              formula: 1[Studied Target]
+              subTarget: allAttack
+              target: attack
+              type: untyped
+            - _id: 3uw2f4o4idptmqkg
+              damageType:
+                - untyped
+              formula: 1[Studied Target]
+              subTarget: allDamage
+              target: damage
+          name: Study target
+        - _id: oxr965uy6xud5hmr
+          modifiers:
+            - _id: 4i579lcqh1drwcjb
+              critical: nonCrit
+              damageType:
+                - Precision
+              formula: 1d6[Sneak Attack]
+              subTarget: allDamage
+              target: damage
+          name: Sneak Attack
+        - _id: 52eps820u3plzlol
+          modifiers:
+            - _id: 4p4tjpmu4r8avzsd
+              formula: 1d6[Precise Strike]
+              target: dc
+              type: untyped
+          name: Precise Strike
+        - _id: 6zbc0z8b61hqqcpu
+          modifiers:
+            - _id: lo924s86ycqtc36g
+              formula: '1'
+              target: dc
+              type: untyped
+          name: Generic Bonus to DC
+        - _id: kt5ymbatbk0165y4
+          modifiers:
+            - _id: lzxq0b87k0iu85d8
+              formula: 2[Charging]
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Charging
+        - _id: 3ewzc1uacrtrboco
+          modifiers:
+            - _id: ave20w1b09g41e6f
+              formula: '1'
+              target: charges
+          name: Increased Charge Use
+        - _id: 6558y82m14qmb3kn
+          modifiers:
+            - _id: u3m510hd7m2jiz23
+              critical: crit
+              formula: '1'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Crit Confirm Bonus
+      damage:
+        critParts:
+          - {}
+        nonCritParts:
+          - {}
+        parts:
+          - formula: 1d1
+      duration:
+        units: turn
+      img: systems/pf1/icons/skills/mech_8.jpg
+      measureTemplate:
+        size: '10'
+        type: cone
+      name: Attack
+      save:
+        dc: '10'
+        type: fort
+      tag: commonConditionalModifiers
+  description:
+    instructions: >-
+      <p>Drag and drop to other attacks' conditional modifiers and adjust as
+      needed.</p>
+    value: >-
+      <p>List of pre-made, commonly used Conditional
+      Modifiers.</p><ul><li>Flanking</li><li>Outflank</li><li>Study
+      Target</li><li>Sneak Attack</li><li>Precise Strike</li><li>Bonus to DC
+      </li><li>Charging</li><li>Increased Charge cost</li><li>Crit Confirm
+      Bonus</li></ul>
+  subType: weapon
+  uses:
+    per: charges
+type: attack

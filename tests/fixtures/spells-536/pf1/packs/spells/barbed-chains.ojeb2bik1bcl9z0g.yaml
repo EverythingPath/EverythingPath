@@ -1,0 +1,109 @@
+_id: ojeb2bik1bcl9z0g
+_key: '!items!ojeb2bik1bcl9z0g'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/tools/fasteners/chain-hook-grey.webp
+name: Barbed Chains
+system:
+  actions:
+    - _id: li0k3zob38syrgnj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      effect: '[[min(4, 1 + floor((@cl - 1) / 3))]] chain/s sharpened at one end'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial (see text)
+        type: will
+    - _id: SdIIBDlPJLfuPrnW
+      ability:
+        attack: _key
+      actionType: mwak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - slashing
+      duration:
+        units: inst
+      effect: One Attack with the chain
+      name: Attack
+      range:
+        units: close
+      target:
+        value: One Target
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 83KH56FqL4OchAZ5
+      ability:
+        attack: _key
+      actionType: mcman
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: inst
+      effect: Trip Combat Maneuver
+      name: Trip
+      range:
+        units: close
+      target:
+        value: One Target
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You summon a chain from another realm, causing it to burst out from the
+      ground and strike a target within the spell's range. You can have the
+      chain either make a melee attack (dealing 1d6 points of slashing damage)
+      or attempt a trip combat maneuver against the target. The chain uses your
+      base attack bonus plus your key spellcasting ability score modifier as its
+      attack bonus and combat maneuver bonus. On a successful hit or combat
+      maneuver check, the target must attempt a Will save. If it fails its save,
+      the creature is shaken for 1d4 rounds. You summon one additional chain
+      every 3 levels after 1st, for a total of two chains at 4th level, three at
+      7th level, and a maximum of four at 10th level. Multiple chains can attack
+      the same target but the shaken effect doesn't stack.</p>
+  descriptors:
+    - emotion
+    - fear
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      bloodrager: 1
+      cleric: 1
+      inquisitor: 1
+      occultist: 1
+      oracle: 1
+      shaman: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+  materials:
+    value: a length of chain doused with fresh blood
+  school: con
+  sources:
+    - id: PZO1135
+      pages: '109'
+  sr: false
+  subschool:
+    - summoning
+type: spell
