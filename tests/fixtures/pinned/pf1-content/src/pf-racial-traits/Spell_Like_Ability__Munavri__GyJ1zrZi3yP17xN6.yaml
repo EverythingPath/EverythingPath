@@ -1,0 +1,57 @@
+_id: GyJ1zrZi3yP17xN6
+_key: '!items!GyJ1zrZi3yP17xN6'
+_stats:
+  coreVersion: '12.331'
+folder: mObpPwXSbBNVoXRJ
+img: systems/pf1/icons/spells/evil-eye-eerie-1.jpg
+name: Spell-Like Ability (Munavri)
+system:
+  abilityType: sp
+  actions:
+    - _id: XelHROc4z8M6t6Ca
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{object
+        reading}</em>.</p><p>You read the psychic impressions left upon an
+        object by emotionally or psychically charged events in the item's
+        history, or the information imprinted by the
+        @UUID[Compendium.pf1.spells.Item.9kqq7i49ujvq8n5z]{Charge Object} or
+        @UUID[Compendium.pf1.spells.Item.dymdg2azgrfh7fi3]{Implant False
+        Reading} spells. This spell returns the same information as the
+        @UUID[Compendium.pf1.rules.JournalEntry.x175kVqUfLGPt8tC]{psychometry
+        occult skill unlock}, but gives 1 piece of information when cast and
+        requires 1 round of concentration per additional piece of information
+        instead of 1 minute. You must still attempt an Appraise check to see how
+        much information you gain. You gain a +10 competence bonus on the
+        check.</p>
+      duration:
+        concentration: true
+        units: round
+        value: '@attributes.hd.total'
+      name: Object reading
+      range:
+        units: touch
+      target:
+        value: Touched object
+  description:
+    value: >-
+      <p><strong>Race</strong>: Munavri</p><hr /><p>A munavri can cast
+      <em>@UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{object
+      reading}</em> at will (the caster level is equal to her character
+      level).</p>
+  sources:
+    - id: PZO1137
+      pages: '197'
+    - id: PZO9284
+      pages: '34'
+    - id: PZO9289
+      pages: '37'
+  subType: racial
+  tags:
+    - Munavri
+  traitCategory: magical
+type: feat

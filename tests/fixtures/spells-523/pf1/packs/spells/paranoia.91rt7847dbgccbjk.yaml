@@ -1,0 +1,61 @@
+_id: 91rt7847dbgccbjk
+_key: '!items!91rt7847dbgccbjk'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/control/fear-fright-monster-grin-green.webp
+name: Paranoia
+system:
+  actions:
+    - _id: er995twwodjnkzds
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target believes everyone it sees is an enemy. The target becomes
+      hostile to all creatures, treating all creatures as enemies and only
+      itself as an ally. The target must attempt attacks of opportunity whenever
+      any creature provokes them. Finally, whenever the target is adjacent to
+      two or more creatures, its paranoia overwhelms it, and it takes a -2
+      penalty on attack rolls, weapon damage rolls, ability checks, skill
+      checks, and saving throws.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      medium: 1
+      mesmerist: 1
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '179'
+  subschool:
+    - phantasm
+type: spell

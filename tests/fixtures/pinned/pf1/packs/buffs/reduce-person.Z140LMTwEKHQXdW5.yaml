@@ -1,0 +1,46 @@
+_id: Z140LMTwEKHQXdW5
+_key: '!items!Z140LMTwEKHQXdW5'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/control/silhouette-grow-shrink-blue.webp
+name: Reduce Person
+system:
+  changes:
+    - _id: aKRH9QqJ
+      formula: '-2'
+      target: str
+      type: size
+    - _id: OUzn8Ksy
+      formula: '2'
+      target: dex
+      type: size
+    - _id: pV1p6FTZ
+      formula: '1'
+      target: carryStr
+      type: untyped
+    - _id: yOkQ9biM
+      formula: '0.5'
+      target: carryMult
+      type: untyped
+    - _id: wQ6lK0Ix
+      formula: '-1'
+      target: size
+      type: untyped
+  description:
+    value: >-
+      <p>Adjusts:</p><ul><li>-2 Size penalty to Strength</li><li>+2 Size bonus
+      to Dexterity</li><li>-1 Size</li></ul><p>Included carry capacity
+      adjustments partially account for your gear not changing in
+      size.</p><p>See @UUID[Compendium.pf1.spells.2y9e1l6zso9tdg0a] spell for
+      more details.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: 330, 331
+  subType: spell
+type: buff

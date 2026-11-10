@@ -1,0 +1,65 @@
+_id: 72f7xfijqxxm1mtm
+_key: '!items!72f7xfijqxxm1mtm'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Masochistic Shadow
+system:
+  actions:
+    - _id: pfd13l7t15h1pn6h
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates, then Reflex partial; see text
+        type: ref
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You animate the target's shadow with semi-living energies drawn from
+      the Shadow Plane, instilling a maddening hunger for its owner's life
+      energy within it. If the target fails its Will save, it takes 1d4 points
+      of Strength damage as a quasi-real shadow manifests in its space and
+      attacks it. This shadow remains attached to the target and moves wherever
+      the target moves.  At the start of each subsequent round, the target must
+      succeed at a Reflex save or take 1d4 additional points of Strength damage;
+      a successful save reduces the Strength damage to 1 point. If its Strength
+      score is reduced to 0 by this spell's effects, the target dies. If the
+      target is in bright light, it gains a +2 bonus on Reflex saves against
+      this spell. If the target is in darkness, it takes a -2 penalty on Reflex
+      saves against this spell.</p>
+  descriptors:
+    - evil
+    - shadow
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 4
+      bloodrager: 4
+      magus: 4
+      occultist: 4
+      shaman: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO9466
+      pages: '30'
+type: spell
