@@ -1,0 +1,60 @@
+_id: 0kppkhsencd6tzvh
+_key: '!items!0kppkhsencd6tzvh'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Protection from Spells
+system:
+  actions:
+    - _id: 8i5sye6h1prxywi9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: up to one creature touched per four levels
+  components:
+    focus: true
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject gains a +8 resistance bonus on saving throws against spells
+      and spell-like abilities (but not against supernatural and extraordinary
+      abilities).</p>
+  learnedAt:
+    class:
+      arcanist: 8
+      psychic: 8
+      sorcerer: 8
+      summoner: 6
+      wizard: 8
+    domain:
+      Magic: 8
+  level: 8
+  materials:
+    focus: >-
+      One 1,000 gp diamond per target. Each subject must carry the gem for the
+      duration of the spell. If a subject loses the gem, the spell ceases to
+      affect him.
+    gpValue: 500
+    value: diamond worth 500 gp
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '328'
+type: spell

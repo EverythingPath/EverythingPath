@@ -1,0 +1,52 @@
+_id: 9hnhezzzzrn985o7
+_key: '!items!9hnhezzzzrn985o7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Natural Rhythm
+system:
+  actions:
+    - _id: ixwzmxtvltyh6yzy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You enhance a creature's ability to harm an opponent based on the
+      number of times it has already injured that opponent with a natural
+      attack. Each time the creature successfully strikes an opponent with a
+      natural attack, the subject gains a cumulative +1 bonus on damage rolls
+      made against that opponent when making natural attacks (maximum +5 bonus).
+      If an attack misses, the bonus to damage for all attacks resets to +0.</p>
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+  level: 2
+  materials:
+    value: a handful of pebbles dropped one by one onto the ground
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '233'
+type: spell

@@ -1,0 +1,302 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/2qcz39w9O2Qlms0Q",
+      "upstreamKey": "pf1/2qcz39w9O2Qlms0Q",
+      "pack": "class-abilities",
+      "name": "Poison Resistance",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 2nd level, the character gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "31"
+        },
+        {
+          "book": "PZO1129",
+          "pages": "31"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "saves",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "min(6, floor((max(@classLevel.alchemist, @classLevel.investigator) + 1) / 3) * 2)"
+          },
+          "condition": {
+            "situation": "poison"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Alchemist", "Investigator"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/alchemist-poison-resistance-5",
+      "upstreamKey": "pf1/2qcz39w9O2Qlms0Q",
+      "pack": "everythingpath-schedules",
+      "name": "Poison Resistance +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2qcz39w9O2Qlms0Q",
+        "part": "5:pf1/2qcz39w9O2Qlms0Q"
+      },
+      "description": "<p>Poison Resistance +4: the Alchemist table's 5th-level row of Poison Resistance (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Poison Resistance entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2qcz39w9O2Qlms0Q"
+    },
+    {
+      "externalKey": "everythingpath/alchemist-poison-resistance-8",
+      "upstreamKey": "pf1/2qcz39w9O2Qlms0Q",
+      "pack": "everythingpath-schedules",
+      "name": "Poison Resistance +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2qcz39w9O2Qlms0Q",
+        "part": "8:pf1/2qcz39w9O2Qlms0Q"
+      },
+      "description": "<p>Poison Resistance +6: the Alchemist table's 8th-level row of Poison Resistance (Pathfinder RPG Advanced Player's Guide pp. 26–31). The Poison Resistance entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "26–31"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/alchemist-poison-resistance-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2qcz39w9O2Qlms0Q"
+    },
+    {
+      "externalKey": "everythingpath/investigator-poison-resistance-5",
+      "upstreamKey": "pf1/2qcz39w9O2Qlms0Q",
+      "pack": "everythingpath-schedules",
+      "name": "Poison Resistance +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2qcz39w9O2Qlms0Q",
+        "part": "5:pf1/2qcz39w9O2Qlms0Q"
+      },
+      "description": "<p>Poison Resistance +4: the Investigator table's 5th-level row of Poison Resistance (Pathfinder RPG Advanced Class Guide pp. 30–35). The Poison Resistance entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2qcz39w9O2Qlms0Q"
+    },
+    {
+      "externalKey": "everythingpath/investigator-poison-resistance-8",
+      "upstreamKey": "pf1/2qcz39w9O2Qlms0Q",
+      "pack": "everythingpath-schedules",
+      "name": "Poison Resistance +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/2qcz39w9O2Qlms0Q",
+        "part": "8:pf1/2qcz39w9O2Qlms0Q"
+      },
+      "description": "<p>Poison Resistance +6: the Investigator table's 8th-level row of Poison Resistance (Pathfinder RPG Advanced Class Guide pp. 30–35). The Poison Resistance entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-poison-resistance-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/2qcz39w9O2Qlms0Q"
+    }
+  ]
+}
