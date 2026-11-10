@@ -1,0 +1,162 @@
+_id: RKCOV7Roq9MdxLZ5
+_key: '!items!RKCOV7Roq9MdxLZ5'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Faerie Dragon Magic
+system:
+  actions:
+    - _id: AOTniCdPZvoKblX8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Charisma of 11 or higher you gain 1/day
+        @UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost
+        sound},</p><p>Ghost sound allows you to create a volume of sound that
+        rises, recedes, approaches, or remains at a fixed place. You choose what
+        type of sound ghost sound creates when casting it and cannot thereafter
+        change the sound's basic character.</p><p>The volume of sound created
+        depends on your level. You can produce as much noise as four normal
+        humans per caster level (maximum 40 humans). Thus, talking, singing,
+        shouting, walking, marching, or running sounds can be created. The noise
+        a ghost sound spell produces can be virtually any type of sound within
+        the volume limit. A horde of rats running and squeaking is about the
+        same volume as eight humans running and shouting. A roaring lion is
+        equal to the noise from 16 humans, while a roaring dragon is equal to
+        the noise from 32 humans. Anyone who hears a ghost sound receives a Will
+        save to disbelieve.</p><p>Ghost sound can enhance the effectiveness of a
+        silent image spell.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Ghost Sound
+      notes:
+        effect:
+          - Save DC includes the +1 benefit provided by this trait
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod +10 + 1'
+        description: Disbelief
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: fGfaGzfzFcvNJreo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ik9u3eel5vfwrtb5]{grease}, </p><p>A
+        grease spell covers a solid surface with a layer of slippery grease. Any
+        creature in the area when the spell is cast must make a successful
+        Reflex save or fall. A creature can walk within or through the area of
+        grease at half normal speed with a DC 10 Acrobatics check. Failure means
+        it can't move that round (and must then make a Reflex save or fall),
+        while failure by 5 or more means it falls (see the Acrobatics skill for
+        details). Creatures that do not move on their turn do not need to make
+        this check and are not considered flat-footed.</p><p>The spell can also
+        be used to create a greasy coating on an item.</p><p>Material objects
+        not in use are always affected by this spell, while an object wielded or
+        employed by a creature requires its bearer to make a Reflex saving throw
+        to avoid the effect. If the initial saving throw fails, the creature
+        immediately drops the item. A saving throw must be made in each round
+        that the creature attempts to pick up or use the greased item. A
+        creature wearing greased armor or clothing gains a +10 circumstance
+        bonus on Escape Artist checks and combat maneuver checks made to escape
+        a grapple, and to their CMD to avoid being grappled.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Grease
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 11 + @abilities.cha.mod
+        description: Save or fall
+        type: ref
+      target:
+        value: one object or 10 ft (3 m) square
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: IPKrUnWiCETO0I1p
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.kq916lznxo0ig68v]{silent image}.
+        </p><p>This spell creates the visual illusion of an object, creature, or
+        force, as visualized by you. The illusion does not create sound, smell,
+        texture, or temperature. You can move the image within the limits of the
+        size of the effect.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: Concentration
+      name: Silent Image
+      notes:
+        effect:
+          - DC includes the +1 provided by this trait
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      save:
+        dc: '@abilities.cha.mod +12'
+        description: Disbelief
+        type: will
+      target:
+        value: >-
+          visual figment that cannot extend beyond four 10-ft. Cubes + one
+          10-ft. cube/level (S)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  changes:
+    - _id: ECzrjeCd
+      formula: '1'
+      target: dc.school.ill
+      type: racial
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic</p><hr /><p>Some gnomes ally with capricious faerie dragons or
+      share a supernatural kinship with these enigmatic creatures. Gnomes with
+      this trait add 1 to the DCs of saves against the illusion spells they
+      cast. Additionally, a gnome with a Charisma score of 11 or higher can use
+      each of the following spell-like abilities once per day:
+      <em>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost sound}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.ik9u3eel5vfwrtb5]{grease}</em>, and
+      <em>@UUID[Compendium.pf1.spells.Item.kq916lznxo0ig68v]{silent image}</em>.
+      The caster level for these effects is equal to the gnome's character
+      level. The DC for these spells is equal to 10 + the spell's level + the
+      gnome's Charisma modifier. This trait replaces gnome magic.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9470
+      pages: '10'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 3 *gte(@abilities.cha.total, 11)
+    value: 0
+type: feat

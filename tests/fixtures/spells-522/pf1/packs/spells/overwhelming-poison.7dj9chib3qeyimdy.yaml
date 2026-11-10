@@ -1,0 +1,62 @@
+_id: 7dj9chib3qeyimdy
+_key: '!items!7dj9chib3qeyimdy'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/skills/toxins/poison-bottle-corked-fire-green.webp
+name: Overwhelming Poison
+system:
+  actions:
+    - _id: afodyioewu5woeji
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature or one dose of poison; see text
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell increases the virulence of the targeted dose of poison,
+      making the poison more difficult to resist. The poison is unaffected by
+      <i>delay poison</i>, and the DC to remove it with <i>neutralize poison</i>
+      is increased by 5. Additionally, the poison uses its own saving throw DC
+      or <i>overwhelming</i> poison's DC, whichever is higher.  If cast on a
+      creature that is currently suffering from exposure to one or more doses of
+      poison, the spell applies to one of the doses of your choice, or a random
+      dose of poison affecting the target if you don't know what poisons are
+      afflicting the target. If cast on a creature that is venomous, this spell
+      affects the first dose of poison that creature delivers before the end of
+      the spell's duration.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      antipaladin: 4
+      cleric: 6
+      druid: 6
+      hunter: 4
+      oracle: 6
+      ranger: 4
+      shaman: 6
+      warpriest: 6
+      witch: 6
+  level: 6
+  materials:
+    value: an adder's fang
+  school: nec
+  sources:
+    - id: PZO1134
+      pages: '221'
+  sr: false
+type: spell

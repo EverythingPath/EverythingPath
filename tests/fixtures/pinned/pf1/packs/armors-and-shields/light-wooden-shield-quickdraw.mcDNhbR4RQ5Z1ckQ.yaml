@@ -1,0 +1,58 @@
+_id: mcDNhbR4RQ5Z1ckQ
+_key: '!items!mcDNhbR4RQ5Z1ckQ'
+_stats:
+  coreVersion: '12.343'
+folder: DtVJVwL87ELQxk7u
+img: systems/pf1/icons/items/armor/shield-light-wood.png
+name: Light Wooden Shield (Quickdraw)
+system:
+  actions:
+    - _id: Gj00ulVkHNK1ec0K
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Bash
+      range:
+        units: melee
+  armor:
+    acp: 2
+    material:
+      base:
+        value: wood
+    value: 1
+  description:
+    unidentified: >-
+      <p>A light wooden shield is essentially the same as a light steel shield,
+      except it responds differently to some spells and effects (such as rusting
+      grasp). A druid can use a light wooden shield, but not a light steel
+      shield.</p>
+  equipmentSubtype: lightShield
+  hardness: 5
+  hp:
+    base: 7
+  price: 53
+  slot: shield
+  sources:
+    - id: PZO1123
+      pages: '9'
+    - id: PZO1115
+      pages: '179'
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 6
+type: equipment
