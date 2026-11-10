@@ -1,0 +1,33 @@
+_id: Xwk4zZksBg2KvyEG
+_key: '!items!Xwk4zZksBg2KvyEG'
+_stats:
+  coreVersion: '12.331'
+folder: sT6CSYUbDcX0RaCl
+img: systems/pf1/icons/feats/combat-expertise.jpg
+name: Combat Expertise
+system:
+  changes:
+    - _id: 5yxw4nr2
+      formula: '-(1 + (floor(@attributes.bab.total / 4)))'
+      target: mattack
+      type: untyped
+    - _id: xz31va10
+      formula: (1 + (floor(@attributes.bab.total / 4)))
+      target: ac
+      type: dodge
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.feats.Item.NFxHebU1XhEs5WJh]{Combat
+      Expertise}</p><p>You can choose to take a –1 penalty on melee attack rolls
+      and combat maneuver checks to gain a +1 dodge bonus to your Armor Class.
+      When your base attack bonus reaches +4, and every +4 thereafter, the
+      penalty increases by –1 and the dodge bonus increases by +1.</p><p>You can
+      only choose to use this feat when you declare that you are making an
+      attack or a full-attack action with a melee weapon. The effects of this
+      feat last until your next turn.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '1'
+  level: null
+type: buff

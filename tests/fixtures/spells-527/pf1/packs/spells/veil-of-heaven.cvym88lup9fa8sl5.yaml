@@ -1,0 +1,52 @@
+_id: cvym88lup9fa8sl5
+_key: '!items!cvym88lup9fa8sl5'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Veil of Heaven
+system:
+  actions:
+    - _id: m7996exkownrhfay
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will half
+        type: will
+      target:
+        value: you or all creatures within 5 ft.; see text
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You surround yourself with a veil of positive energy, making it harder
+      for evil outsiders to harm you. For the duration of this spell, you gain a
+      +2 sacred bonus to AC and on saves. Both of these bonuses apply only
+      against attacks or effects created by outsiders with the evil subtype. You
+      can dismiss this spell as a swift action to deal 1d8 points of damage + 1
+      point per paladin level to all such outsiders within 5 feet. A Will save
+      halves this damage.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      paladin: 1
+  school: abj
+  sources:
+    - id: PZO1121
+      pages: '89'
+  sr: false
+type: spell

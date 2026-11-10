@@ -1,0 +1,64 @@
+_id: v5oMOHGuej5FrYqe
+_key: '!items!v5oMOHGuej5FrYqe'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/boarding-pike.png
+name: Boarding Pike
+system:
+  actions:
+    - _id: 6891q4uhjxo1hn9x
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Boarding Pike
+  description:
+    unidentified: >-
+      <p>A boarding pike is an 8-foot-long pole topped with a foot-long tapered
+      metal tip. Boarding pikes look much like longspears, but the metal pike is
+      designed to flow into the wooden haft, leaving no grooves, collars, or
+      spikes that could trap salt water and cause rust. Boarding pikes are
+      mainly used defensively, to repel boarding actions. The pikes are kept in
+      brackets around the mast, so sailors can quickly grab pikes and brace them
+      against the gunwale to repel boarders.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    brc: true
+    rch: true
+  sources:
+    - id: PZO9422
+      pages: '19'
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 9
+type: weapon

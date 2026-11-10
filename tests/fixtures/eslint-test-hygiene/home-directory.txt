@@ -1,0 +1,57 @@
+// Every route to the host's home directory in a test file: HOME off
+// process.env and homedir off the os module. A line ending in "// flagged"
+// must be reported; every other line must pass.
+import { homedir } from 'node:os'; // flagged
+import { homedir as getHome } from 'node:os'; // flagged
+import { tmpdir, homedir as hostHome } from 'os'; // flagged
+import * as os from 'node:os';
+import osDefault from 'os';
+export { homedir as reexportedHome } from 'node:os'; // flagged
+export * from 'os'; // flagged
+os.homedir(); // flagged
+osDefault.homedir(); // flagged
+const readLater = os.homedir; // flagged
+osDefault['homedir'](); // flagged
+os[`homedir`](); // flagged
+const { homedir: fromRequire } = require('os'); // flagged
+const { homedir: fromNodeRequire } = require('node:os'); // flagged
+const requiredOs = require('node:os');
+requiredOs.homedir(); // flagged
+require('node:os').homedir(); // flagged
+require('os')['homedir'](); // flagged
+const { homedir: fromNamespace } = os; // flagged
+const { 'homedir': quotedKey } = osDefault; // flagged
+const { homedir: fromDynamic } = await import('node:os'); // flagged
+(await import('os')).homedir(); // flagged
+process.env.HOME; // flagged
+process.env['HOME']; // flagged
+process['env'].HOME; // flagged
+const { HOME } = process.env; // flagged
+const { HOME: bracketHome } = process['env']; // flagged
+const { env: { HOME: nestedHome } } = process; // flagged
+({ HOME: assignedHome } = process.env); // flagged
+os.tmpdir();
+tmpdir();
+process.env.PATH;
+// Fixture data that only shares the names passes.
+const childEnv = { HOME: 'fixture-home' };
+const fixtureEnv = { HOME: 'fixture-home' };
+fixtureEnv.HOME;
+fixtureEnv['HOME'];
+const { HOME: fixtureHome } = fixtureEnv;
+const fixtureOs = { homedir: () => 'fixture-home' };
+fixtureOs.homedir();
+const { homedir: fixtureHomedir } = fixtureOs;
+const readEnv = (process) => process.env.HOME;
+// An alias of process.env or of an os binding is written from it, so it may
+// be the source.
+const env = process.env;
+env.HOME; // flagged
+const osAlias = os;
+osAlias.homedir(); // flagged
+// Residuals: a computed name, Reflect.get and a value passed through a call
+// are out of a syntactic rule's reach.
+os['home' + 'dir']();
+Reflect.get(os, 'homedir');
+const passEnv = (value) => value;
+passEnv(process.env).HOME;

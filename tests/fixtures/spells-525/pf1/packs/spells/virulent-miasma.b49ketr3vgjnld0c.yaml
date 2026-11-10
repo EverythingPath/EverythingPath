@@ -1,0 +1,58 @@
+_id: b49ketr3vgjnld0c
+_key: '!items!b49ketr3vgjnld0c'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Virulent Miasma
+system:
+  actions:
+    - _id: j1xu5qtsz6btf9v7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Virulent miasma</i> creates fog like <i>fog cloud</i>, except that
+      the vapors carry the taint of disease. Living creatures take a -4 penalty
+      on saving throws against disease effects as long as they remain within the
+      cloud and for 1d4+1 rounds after leaving. This effect of the spell allows
+      a Fortitude save to negate it, and it is subject to spell resistance. A
+      creature that succeeds at its saving throw against the fog (or ignores the
+      fog due to spell resistance) is not affected and need not make further
+      saves even if it remains in the fog.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      bloodrager: 3
+      druid: 3
+      hunter: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a dried scab from a diseased creature
+  school: nec
+  sources:
+    - id: PZO1136
+      pages: '69'
+  sr: false
+type: spell

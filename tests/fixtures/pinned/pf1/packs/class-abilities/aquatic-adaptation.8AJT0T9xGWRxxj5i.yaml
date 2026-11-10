@@ -1,0 +1,30 @@
+_id: 8AJT0T9xGWRxxj5i
+_key: '!items!8AJT0T9xGWRxxj5i'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_05.jpg
+name: Aquatic Adaptation
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: vk3jemkk
+      formula: 30 + if(gte(@class.level, 15), 30)
+      target: swimSpeed
+      type: base
+    - _id: uq8lnaor
+      formula: if(gte(@class.level, 9), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 3rd level, you gain a swim <em>speed</em> of 30 feet. At 9th level,
+      you gain the <em>amphibious</em> special quality and develop a fat layer
+      that grants a +1 <em>natural armor bonus</em> and resist cold 5. When
+      immersed in water, you gain <em>blindsense</em> 30 feet. At 15th level,
+      you gain a swim <em>speed</em> of 60 feet and <em>blindsense</em> of 60
+      feet in water.</p>
+  subType: classFeat
+type: feat
