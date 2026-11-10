@@ -1,0 +1,62 @@
+_id: yf0CZx5k5SEHcgOW
+_key: '!items!yf0CZx5k5SEHcgOW'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/polearms/spear-simple-crescent.webp
+name: Hooked Lance
+system:
+  actions:
+    - _id: 7s4s4gfdfdmcb9il
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Hooked Lance
+  description:
+    unidentified: >-
+      <p>This slender, 10-foot-long polearm has an added hook protruding from
+      the head that is used to snag the clothing and armor of opponents. A
+      hooked lance, unlike a lance, can't be wielded in one hand while mounted
+      and doesn't deal extra damage if used while mounted.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 3
+  properties:
+    rch: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

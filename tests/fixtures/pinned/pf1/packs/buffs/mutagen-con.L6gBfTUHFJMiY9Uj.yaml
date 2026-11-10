@@ -1,0 +1,38 @@
+_id: L6gBfTUHFJMiY9Uj
+_key: '!items!L6gBfTUHFJMiY9Uj'
+_stats:
+  coreVersion: '12.343'
+folder: g1c5Qbc5VpuXHPcl
+img: icons/tools/laboratory/vial-orange.webp
+name: Mutagen, Con
+system:
+  changes:
+    - _id: z8sjbmbz
+      formula: '4'
+      target: con
+      type: alchemical
+    - _id: z55z4u8d
+      formula: '-2'
+      target: cha
+      type: alchemical
+    - _id: ig61op2j
+      formula: '2'
+      target: nac
+      type: alchemical
+  description:
+    instructions: <p>Set item level to class level.</p>
+    value: >-
+      <p>+2 natural armor bonus, +4 alchemical bonus to Constitution, -2 penalty
+      to Charisma as per
+      @UUID[Compendium.pf1.class-abilities.Item.zrTVb83VhkFnEv6G].</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '@item.level * 10'
+  hideFromToken: true
+  level: 1
+  sources:
+    - id: PZO1115
+      pages: '26'
+  subType: feat
+type: buff

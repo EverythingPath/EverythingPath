@@ -1,0 +1,56 @@
+_id: zrg6zgoc5l2zjo5k
+_key: '!items!zrg6zgoc5l2zjo5k'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Siphon Might
+system:
+  actions:
+    - _id: c4pfr5ekuxuy8bwq
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude half
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You drain the might of the target and transfer that power to another
+      creature. The subject takes a penalty to Strength equal to 1d6 + 1 per 2
+      caster levels (maximum 1d6 + 5). This effect can't cause the subject's
+      Strength score to drop below 1. A successful Fortitude save halves this
+      penalty. This penalty doesn't stack with itself or the penalty applied
+      from <i>Ray of Enfeeblement</i>.  You can grant any one creature adjacent
+      to you (including yourself) an enhancement bonus to Strength equal to the
+      Strength penalty imposed by this spell.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      magus: 3
+      sorcerer: 3
+      summoner: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9453
+      pages: '27'
+type: spell

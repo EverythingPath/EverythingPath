@@ -1,0 +1,90 @@
+_id: aoov6nqfm195txdb
+_key: '!items!aoov6nqfm195txdb'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/unholy/hand-claw-fire-blue.webp
+name: Forceful Hand
+system:
+  actions:
+    - _id: bvvvewijkupch9mq
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 10-ft. hand
+      img: icons/magic/unholy/hand-claw-fire-blue.webp
+      name: Use
+      range:
+        units: medium
+    - _id: BogZf3J9xicvsR2P
+      actionType: mcman
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      attackBonus: 8[Hand's Strength] + 1[Large] - @sizeBonus[Caster Sizebonus]
+      attackName: Bull Rush
+      bab: '@cl'
+      duration:
+        units: inst
+      img: icons/magic/unholy/hand-claw-fire-blue.webp
+      name: Bull Rush
+      range:
+        units: melee
+      target:
+        value: One Creature
+    - _id: qDDvUpC9EetA2u5m
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Redirect Hand
+      target:
+        value: One Creature
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.wu4y1ilg6iq28cr6]{interposing hand},
+      except that it can also pursue and bull rush one opponent you select. The
+      <em>forceful hand</em> gets one bull rush attack per round. This attack
+      does not provoke an attack of opportunity. Its CMB for bull rush checks
+      uses your caster level in place of its base attack bonus, with a +8 bonus
+      for its Strength score (27), and a +1 bonus for being Large. The hand
+      always moves with the opponent to push them back as far as possible. It
+      has no movement limit for this purpose. Directing the spell to a new
+      target is a move action. <em>Forceful hand</em> prevents the opponent from
+      moving closer to you without first succeeding on a bull rush attack,
+      moving both the <em>forceful hand</em> and the target closer to you. The
+      <em>forceful hand</em> can instead be directed to interpose itself, as
+      <em>interposing hand</em> does.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 6
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a soft glove
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '285'
+type: spell
