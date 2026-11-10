@@ -1,0 +1,50 @@
+_id: zd8EJDQt5XGFNXV1
+_key: '!items!zd8EJDQt5XGFNXV1'
+_stats:
+  coreVersion: '12.331'
+folder: RzalfyOzV6EaGRvl
+img: systems/pf1/icons/races/sylph.png
+name: Sky Speaker
+system:
+  actions:
+    - _id: MPI3YyeBnB2J1J8b
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>You can ask questions of and receive answers from animals, but the
+        spell doesn't make them any more friendly than normal. Wary and cunning
+        animals are likely to be terse and evasive, while the more stupid ones
+        make inane comments. If an animal is friendly toward you, it may do some
+        favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Speak with Animals
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sylph<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Sylphs with this racial trait feel kinship
+      toward the creatures of the air, and can use <i>speak with animals
+      </i>once per day to speak to birds or other flying animals. Her caster
+      level for these effects is equal to her level. This racial trait replaces
+      the sylph's spell-like ability racial trait.</p>
+  sources:
+    - id: PZO1121
+      pages: '156'
+  subType: racial
+  tags:
+    - Sylph
+  traitCategory: magical
+type: feat

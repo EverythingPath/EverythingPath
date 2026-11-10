@@ -1,0 +1,63 @@
+_id: mczdgwo3xl8c6e26
+_key: '!items!mczdgwo3xl8c6e26'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Ray of Enfeeblement
+system:
+  actions:
+    - _id: iirucput5rdch92z
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: ray
+      name: Use
+      notes:
+        effect:
+          - '[[1d6 + min(5, floor(@cl / 2))]] Strength Penalty'
+      range:
+        units: close
+      save:
+        description: Fortitude half
+        type: fort
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A coruscating ray springs from your hand. You must succeed on a ranged
+      touch attack to strike a target. The subject takes a penalty to Strength
+      equal to 1d6+1 per two caster levels (maximum 1d6+5).</p><p>The subject's
+      Strength score cannot drop below 1. A successful Fortitude save reduces
+      this penalty by half. This penalty does not stack with itself. Apply the
+      highest penalty instead.</p>
+  learnedAt:
+    bloodline:
+      Accursed: 1
+      Daemon: 1
+      Ghoul: 1
+      Oni: 1
+      Shadow: 1
+    class:
+      arcanist: 1
+      bloodrager: 1
+      magus: 1
+      mesmerist: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '329'
+type: spell

@@ -1,0 +1,69 @@
+_id: 2mh7g81k30bv7b5m
+_key: '!items!2mh7g81k30bv7b5m'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Moonstruck
+system:
+  actions:
+    - _id: vawu6uk9co92dhkj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You invoke the mystical power of the moon to drive the target into a
+      mad, bestial frenzy. If the target fails its save, it is dazed for 1
+      round, dropping held items as its nails and teeth elongate and sharpen.
+      The target gains a bite attack and two claw attacks that deal damage
+      appropriate for the creature's size, and for the remainder of the spell's
+      duration the target behaves as if under simultaneous <i>rage</i> and
+      <i>confusion</i> spells, attacking with its natural weapons in preference
+      to other actions. During the final round of the spell's duration, the
+      target is again dazed as it returns to its normal state.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      druid: 4
+      hunter: 4
+      psychic: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+    subDomain:
+      Insanity: 4
+      Moon: 4
+      Rage: 6
+  level: 4
+  materials:
+    value: a pinch of powdered moonstone
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '232'
+  subschool:
+    - compulsion
+type: spell

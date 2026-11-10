@@ -1,0 +1,92 @@
+_id: siv3ub7hbmcklf8c
+_key: '!items!siv3ub7hbmcklf8c'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/control/fear-fright-monster-grin-red-orange.webp
+name: Nightmare
+system:
+  actions:
+    - _id: gpb9ze89s1u9cwk4
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: unlimited
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You send a hideous and unsettling phantasmal vision to a specific
+      creature that you name or otherwise specifically designate.</p><p>The
+      <i>nightmare</i> prevents restful sleep and causes 1d10 points of damage.
+      The <i>nightmare</i> leaves the subject fatigued and unable to regain
+      arcane spells for the next 24 hours.</p><p>The difficulty of the save
+      depends on your knowledge the subject and the physical connection (if any)
+      you have to that creature.</p> <table
+      border="1"><tbody><tr><th>Knowledge</th><th>Will Save
+      Modifier</th></tr><tr><td>None*</td><td>+10</td></tr><tr><td>Secondhand
+      (you have heard of the subject)</td><td>+5</td></tr><tr><td>Firsthand (you
+      have met the subject)</td><td>+0</td></tr><tr><td>Familiar (you know the
+      subject well)</td><td>-5</td></tr><tr><td colspan="2">*You must have some
+      sort of connection to a creature of which you have no
+      knowledge.</td></tr></tbody></table> <table
+      border="1"><tbody><tr><th>Connection</th><th>will Save
+      Modifier</th></tr><tr><td>Likeness or
+      picture</td><td>-2</td></tr><tr><td>Possession or
+      garment</td><td>-4</td></tr><tr><td>Body part, lock of hair, bit of nail,
+      etc.</td><td>-10</td></tr></tbody></table> <i>Dispel evil</i> cast on the
+      subject while you are casting the spell dispels the <i>nightmare</i> and
+      causes you to be stunned for 10 minutes per caster level of the <i>dispel
+      evil</i>.</p><p>If the recipient is awake when the spell begins, you can
+      choose to cease casting (ending the spell) or to enter a trance until the
+      recipient goes to sleep, whereupon you become alert again and complete the
+      casting. If you are disturbed during the trance, you must succeed on a
+      concentration check as if you were in the midst of casting a spell or the
+      spell ends.</p><p>If you choose to enter a trance, you are not aware of
+      your surroundings or the activities around you while in the
+      trance.</p><p>You are defenseless, both physically and mentally, while in
+      the trance. (You always fail Reflex and Will saving throws, for example.)
+      Creatures who don't sleep (such as outsiders) or dream are immune to this
+      spell.</p>
+  descriptors:
+    - evil
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 5
+      arcanist: 5
+      bard: 5
+      investigator: 5
+      medium: 4
+      mesmerist: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      spiritualist: 5
+      wizard: 5
+    domain:
+      Madness: 5
+    subDomain:
+      Night: 6
+  level: 5
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '316'
+  subschool:
+    - phantasm
+type: spell

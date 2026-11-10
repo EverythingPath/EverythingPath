@@ -1,0 +1,51 @@
+_id: vyJuXppTrAQZWfE0
+_key: '!items!vyJuXppTrAQZWfE0'
+_stats:
+  coreVersion: '12.331'
+folder: 96UasAu9CBvgf5hT
+img: icons/creatures/abilities/dragon-breath-purple.webp
+name: Echo Whistler
+system:
+  actions:
+    - _id: FXmsME64VFv3pnzw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Mimic sound
+      notes:
+        effect:
+          - >-
+            +2 circumstance bonus on this check if you're in tunnels or other
+            structures where your voice can echo.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Kobold<br /><strong>Replaced Trait(s)</strong>:
+      Crafty</p><hr /><p>By observing the noises in underground  tunnels, you
+      learned to uncannily mimic any voice or sound  you heard. Three times per
+      day, you can attempt to trick  someone in this way by making a Bluff check
+      against the  listener's Sense Motive check. You get a +2 circumstance 
+      bonus on this check if you're in tunnels or other structures  where your
+      voice can echo. This racial trait replaces crafty.</p>
+  scriptCalls:
+    - _id: M1bLzkWr
+      category: use
+      hidden: false
+      img: null
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("blf");
+  showInQuickbar: true
+  sources:
+    - id: PZO9432
+      pages: '7'
+  subType: racial
+  tags:
+    - Kobold
+  traitCategory: featSkills
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+type: feat
