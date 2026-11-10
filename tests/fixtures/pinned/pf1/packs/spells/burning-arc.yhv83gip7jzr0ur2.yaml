@@ -1,0 +1,75 @@
+_id: yhv83gip7jzr0ur2
+_key: '!items!yhv83gip7jzr0ur2'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/projectile-smoke-swirl-red.webp
+name: Burning Arc
+system:
+  actions:
+    - _id: k67rh2zjsplata2b
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(@cl, 10))d6
+            types:
+              - fire
+          - formula: (min(floor(@cl / 2), 5))d6
+            types:
+              - fire
+          - formula: (min(floor(@cl / 4), 5))d6
+            types:
+              - fire
+          - formula: (min(floor(@cl / 8), 5))d6
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex half
+        type: ref
+      target:
+        value: >-
+          one primary target plus one additional target/3 levels  (each of which
+          must be within 15 ft. of the primary target)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Keleshites brag that they stole this spell from genie-kind thousands of
+      years ago while other civilizations struggled without fire.</p><p>This
+      spell causes an arc of flame to leap from your fingers, burning a number
+      of enemies nearby. It deals 1d6 points of fire damage per caster level
+      (maximum 10d6). For every additional target the discharge arcs to, reduce
+      the number of damage dice by half (rounded down). Therefore, at 9th level,
+      your <i>burning arc</i> deals 9d6 points of fire damage to the primary
+      target, then 4d6 points of fire damage to a secondary target, then 2d6
+      points of fire damage to an additional target.</p><p>Each target can
+      attempt a Reflex saving throw for half damage. The Reflex DC to halve the
+      damage of the secondary bolts is 2 lower than the DC to halve the damage
+      of the primary bolt. You may choose secondary targets as you like, but
+      they must all be within 15 feet of the primary target, and no target can
+      be struck more than once. You can choose to affect fewer secondary targets
+      than the maximum.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO9417
+      pages: '28'
+type: spell

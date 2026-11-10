@@ -1,0 +1,56 @@
+_id: x1nte1KpHWKsDlww
+_key: '!items!x1nte1KpHWKsDlww'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dwarven-dorn-dergar.png
+name: Dwarven Chain-Flail
+system:
+  actions:
+    - _id: 3s819odpl93wr6fz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+  baseTypes:
+    - Dwarven Chain-Flail
+  description:
+    unidentified: >-
+      <p><em>This 10-foot-long chain is weighted at the end by a ball of solid
+      iron the size of a large fist.</em></p>
+
+      <p>By adjusting the slack of the chain, the weapon can be used either with
+      or without reach. Changing between using it as a normal weapon and a reach
+      weapon is a <em>move action</em>.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 50
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponSubtype: 2h
+  weight:
+    value: 15
+type: weapon

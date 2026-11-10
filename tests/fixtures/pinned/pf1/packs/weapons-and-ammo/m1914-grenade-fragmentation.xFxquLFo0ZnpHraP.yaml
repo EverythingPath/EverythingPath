@@ -1,0 +1,67 @@
+_id: xFxquLFo0ZnpHraP
+_key: '!items!xFxquLFo0ZnpHraP'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/thrown/bomb-fuse-black.webp
+name: M1914 Grenade (Fragmentation)
+system:
+  actions:
+    - _id: 4pok671vfi75rydu
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(4, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Attack
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+      save:
+        dc: '15'
+        description: Reflex half
+        type: ref
+  baseTypes:
+    - M1914 Grenade (Fragmentation)
+  description:
+    unidentified: >-
+      <p>Standard M1914 grenades can be fitted with an optional fragmentation
+      sleeve. This sleeve converts the normal concussive blasts into a cloud of
+      deadly shrapnel at the expense of a decreased damage radius.</p>
+
+      <p>The device is armed and detonated in the same manner as a regular M1914
+      grenade, though the explosion radius is reduced to a 15-foot radius and
+      the grenade instead deals 4d6 bludgeoning, piercing, and slashing damage
+      (Reflex DC 15 for half ).</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 75
+  properties:
+    spc: true
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: misc
+  tags:
+    - Modern Firearm
+  weaponSubtype: other
+  weight:
+    value: 1
+type: weapon

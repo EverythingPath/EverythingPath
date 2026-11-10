@@ -1,0 +1,63 @@
+_id: kZlIOR6x4TSRNXiW
+_key: '!items!kZlIOR6x4TSRNXiW'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Ironfang Survivor (Ironfang Invasion)
+system:
+  actions:
+    - _id: 4QQLru9Wf3iOJlkH
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, when you attempt an Intimidate, Sense Motive, or
+        Stealth check against a goblinoid, you can roll two dice and use the
+        better result.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: ac
+      text: +[[2]] Dodge bonus to AC against goblinoids.
+    - target: skill.int
+      text: >-
+        Once per day, on a check against a goblinoid, you can roll two dice and
+        use the better result.
+        ([[@resources.ironfangSurvivorIronfangInvasion.value]] remaining uses)
+    - target: skill.sen
+      text: >-
+        Once per day, on a check against a goblinoid, you can roll two dice and
+        use the better result.
+        ([[@resources.ironfangSurvivorIronfangInvasion.value]] remaining uses)
+    - target: skill.ste
+      text: >-
+        Once per day, on a check against a goblinoid, you can roll two dice and
+        use the better result.
+        ([[@resources.ironfangSurvivorIronfangInvasion.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>Whether you were serving in the military or simply beset by a
+      surprise attack, you barely survived an encounter with the Ironfang
+      Legion, one of Molthune’s infamous monster regiments. Maybe you even
+      survived the horrors of the Ramgate Massacre. You can’t scrub the memories
+      of their brutality from your waking or sleeping mind, and you keenly
+      recall their distinctive fighting
+      styles.</em></p><p><strong>Benefits</strong>: You gain a +2 dodge bonus to
+      AC against goblinoids, and once per day when you attempt an Intimidate,
+      Sense Motive, or Stealth check against a goblinoid, you can roll two dice
+      and use the better result.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-20E
+      pages: '8'
+  subType: trait
+  tags:
+    - Ironfang Invasion
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
