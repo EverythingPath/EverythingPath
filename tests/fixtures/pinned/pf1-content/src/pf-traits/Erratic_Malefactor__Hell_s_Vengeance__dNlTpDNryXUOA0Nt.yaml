@@ -1,0 +1,153 @@
+_id: dNlTpDNryXUOA0Nt
+_key: '!items!dNlTpDNryXUOA0Nt'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Erratic Malefactor (Hell's Vengeance)
+system:
+  actions:
+    - _id: tlsM8uVPkTtFpoh7
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, as long as an ally is within 10 feet of you, you can
+        reroll a single attack roll or skill check before success or failure is
+        known. You must take the results of the second roll, even if it is
+        worse.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: reroll attack or skill check
+  changes:
+    - _id: GBAKnyKk
+      formula: '2'
+      target: init
+      type: trait
+  contextNotes:
+    - target: attack
+      text: >-
+        Once per day, as long as an ally is within 10 feet of you, you can
+        reroll a single attack roll or skill check before success or failure is
+        known. You must take the results of the second roll, even if it is
+        worse.
+    - target: skills
+      text: >-
+        Once per day, as long as an ally is within 10 feet of you, you can
+        reroll a single attack roll or skill check before success or failure is
+        known. You must take the results of the second roll, even if it is
+        worse.
+  description:
+    value: >-
+      <p><em>Some people follow codes and traditions; others look out for only
+      themselves. You don’t care—you do what you want, when you want, sometimes
+      for a good reason, and sometimes for no reason at all. You revel in your
+      status as an outlier, and take pride in the fact that you follow no one
+      else’s orders—at least most of the time. In a lawful land like Cheliax,
+      one has to be more careful and at least pay lip service to the rules and
+      restrictions of society. As a result, you try to manage the chaos that
+      rages within your soul, but you’re always on the lookout for the
+      opportunity to truly unleash destruction. These days, there’s plenty of
+      work for someone who will do what needs to be done, no questions asked,
+      and the rewards from House Thrune for those who work with it are a strong
+      incentive as well. If working with others gives you the freedom to carry
+      out some of your darkest instincts without fear of repercussion, then why
+      not—at least for now. You can worry about the future when it
+      comes.</em></p><p><strong>Requirements</strong>: Chaotic
+      evil</p><p><strong>Benefits</strong>: Your unpredictability and volatile
+      temperament gives you an advantage over your foes. You gain a +2 trait
+      bonus on initiative checks. In addition, you are willing to work with
+      others, and have learned to use your allies’ strengths to reinforce your
+      own skills and abilities. Once per day, as long as an ally is within 10
+      feet of you, you can reroll a single attack roll or skill check before
+      success or failure is known. You must take the results of the second roll,
+      even if it is worse.</p>
+  scriptCalls:
+    - _id: ubqeAwKqh3tMLxuV
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll an attack or skill check
+      type: script
+      value: |-
+        async function getAnswer() {
+          let buttons = {};
+          let content = `
+          <div class="flexcol">
+            <h3>Rerolling a Check:</h3>
+            <p>Please pick an attack or skill check to reroll from the buttons below.</p>
+          `;
+
+          buttons["melee"] = {
+            label: game.i18n.localize("PF1.Melee"),
+            callback: () => "melee"
+          }
+          buttons["ranged"] = {
+            label: game.i18n.localize("PF1.Ranged"),
+            callback: () => "ranged"
+          }
+          buttons["cmb"] = {
+            label: game.i18n.localize("PF1.CMBAbbr"),
+            callback: () => "cmb"
+          }
+
+          // Skill checks
+          actor.allSkills.forEach( skl => {
+            const skill = actor.getSkillInfo(skl).fullName;
+            buttons[skl] = {
+              label: skill,
+              callback: () => skl
+            }
+          });
+
+          return Dialog.wait({
+            title: `${item.name} – Reroll an Attack or Skill check`,
+            content: content,
+            buttons: buttons,
+            default: null,
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        const answer = await getAnswer();
+        if(answer === null) {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        } else {
+          switch(answer) {
+            case "melee": {
+              await actor.rollAttack();
+              break;
+            }
+            case "ranged": {
+              await actor.rollAttack({ ranged: true });
+              break;
+            }
+            case "cmb": {
+              await actor.rollAttack({ maneuver: true });
+              break;
+            }
+            default:
+                await actor.rollSkill(answer);
+          }
+        }
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-18E
+      pages: '12'
+  subType: trait
+  tags:
+    - Hell's Vengeance
+    - Chaotic Evil
+    - Chaotic
+    - Evil
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

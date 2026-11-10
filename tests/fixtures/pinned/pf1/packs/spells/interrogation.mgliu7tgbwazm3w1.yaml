@@ -1,0 +1,54 @@
+_id: mgliu7tgbwazm3w1
+_key: '!items!mgliu7tgbwazm3w1'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Interrogation
+system:
+  actions:
+    - _id: zjbaijet2fguxu0i
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You question the target, backed up by the threat of magical pain. You
+      may ask one question per two caster levels. The target can either answer
+      the question or take 1d4 points of damage plus your Wisdom bonus. The
+      target is not compelled to answer truthfully, but the threat of pain gives
+      it a -4 penalty on Bluff checks to convince you when it is lying.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      arcanist: 1
+      inquisitor: 1
+      mesmerist: 1
+      psychic: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '225'
+type: spell

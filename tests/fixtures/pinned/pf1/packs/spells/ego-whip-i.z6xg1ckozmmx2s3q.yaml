@@ -1,0 +1,53 @@
+_id: z6xg1ckozmmx2s3q
+_key: '!items!z6xg1ckozmmx2s3q'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Ego Whip I
+system:
+  actions:
+    - _id: q637exnro3s47vyk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You can use your psychic power to overwhelm the target's ego, leaving
+      the target feeling hopeless and unsure of itself. Choose Intelligence,
+      Wisdom, or Charisma. The target takes a -2 penalty to that ability score,
+      and is also staggered for the first round it's affected. A successful Will
+      save negates the staggered effect and reduces the duration of the penalty
+      to 1 round.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Psychic: 3
+    class:
+      psychic: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '169'
+  subschool:
+    - compulsion
+type: spell
