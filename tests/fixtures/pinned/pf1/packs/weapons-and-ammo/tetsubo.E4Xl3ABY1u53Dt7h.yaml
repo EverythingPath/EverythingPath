@@ -1,0 +1,59 @@
+_id: E4Xl3ABY1u53Dt7h
+_key: '!items!E4Xl3ABY1u53Dt7h'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/clubs/club-banded-barbed-black.webp
+name: Tetsubo
+system:
+  actions:
+    - _id: iw2l04pf4pmtherc
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Tetsubo
+  description:
+    unidentified: >-
+      <p>A slight improvement over the greatclub, this weapon consists of a
+      long, slender length of wood or metal whose upper half is shod with a
+      thick sheet of studded iron. The iron gives added weight and strength to
+      the club, while the studs are designed to crack helmets and armor.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  sources:
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - hammers
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,58 @@
+_id: la7kuehewu85ybnt
+_key: '!items!la7kuehewu85ybnt'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/nature/hand-weapon-wood-bark-brown.webp
+name: Barkskin
+system:
+  actions:
+    - _id: snnwucn8lrrty663
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: living creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Barkskin</i> toughens a creature's skin. The effect grants a +2
+      enhancement bonus to the creature's existing natural armor bonus. This
+      enhancement bonus increases by 1 for every three caster levels above 3rd,
+      to a maximum of +5 at 12th level.</p><p>The enhancement bonus provided by
+      <i>barkskin</i> stacks with the target's natural armor bonus, but not with
+      other enhancement bonuses to natural armor. A creature without natural
+      armor has an effective natural armor bonus of +0.</p>
+  learnedAt:
+    bloodline:
+      Verdant: 2
+    class:
+      alchemist: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      ranger: 2
+      shaman: 2
+      summoner: 2
+      summonerUnchained: 2
+    domain:
+      Plant: 2
+    subDomain:
+      Defense: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '246'
+type: spell

@@ -1,0 +1,59 @@
+_id: nl4660hr6zhq8cdw
+_key: '!items!nl4660hr6zhq8cdw'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Temporary Resurrection
+system:
+  actions:
+    - _id: 36j1x5gcozthxte0
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: dead creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You restore temporary life to a body that has been dead for less than
+      48 hours. The spell lasts for 24 hours, after which the target dies again.
+      The target gains 1 permanent negative level while under the effect of this
+      spell; this negative level goes away when the target dies or is
+      permanently <i>raise</i>d from the dead (such as with <i>raise</i> dead).
+      The target still counts as a dead corpse (but not undead) for the purpose
+      of spells that revive dead creatures, so a cleric can cast <i>raise</i>
+      dead or a similar spell on the target even while this spell is active.
+      Once a creature has been revived with <i>temporary resurrection</i>, this
+      spell cannot be used on it again until it is permanently <i>raise</i>d
+      from the dead.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      occultist: 6
+      psychic: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    gpValue: 500
+    value: diamond dust worth 500 gp
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '243'
+  sr: false
+type: spell

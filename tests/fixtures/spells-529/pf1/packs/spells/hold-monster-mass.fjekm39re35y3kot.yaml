@@ -1,0 +1,59 @@
+_id: fjekm39re35y3kot
+_key: '!items!fjekm39re35y3kot'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Hold Monster, Mass
+system:
+  actions:
+    - _id: sshy2on5f8ujrfh5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level; see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one or more creatures, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.78kwl5t99j9e8tzh]{hold person}, except
+      that it affects multiple creatures and holds any living creature that
+      fails its Will save.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+    subDomain:
+      Legislation: 9
+  level: 9
+  materials:
+    value: one hard metal bar or rod, which can be as small as a three-penny nail
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '296'
+  subschool:
+    - compulsion
+type: spell

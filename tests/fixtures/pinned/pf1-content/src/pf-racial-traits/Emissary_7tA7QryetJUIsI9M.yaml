@@ -1,0 +1,51 @@
+_id: 7tA7QryetJUIsI9M
+_key: '!items!7tA7QryetJUIsI9M'
+_stats:
+  coreVersion: '12.331'
+folder: MvyTbqu9jQCwjLwg
+img: icons/creatures/eyes/humanoid-single-yellow.webp
+name: Emissary
+system:
+  actions:
+    - _id: 4GdJFU4F3IZltgzC
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Rare fetchlings excel in the role of emissary between the Shadow
+        Plane and the Material Plane. Once per day, such a fetchling can roll
+        twice when making a Bluff or Diplomacy check and take the better
+        roll.</p>
+      name: Roll twice, take better  Bluff or Diplomacy
+      notes:
+        effect:
+          - '@Skill[blf]'
+          - '@Skill[dip]'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: skill.blf
+      text: Once per day, you can roll twice and take the better roll.
+    - target: skill.dip
+      text: Once per day, you can roll twice and take the better roll.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Fetchling<br /><strong>Replaced
+      Trait(s)</strong>: Shadow Blending</p><hr /><p>Rare fetchlings excel in
+      the role of emissary between the Shadow Plane and the Material Plane. Once
+      per day, such a fetchling can roll twice when making a Bluff or Diplomacy
+      check and take the better roll. This racial trait replaces shadow
+      blending.</p>
+  racePoints: 1
+  sources:
+    - id: PZO1121
+      pages: '108'
+  subType: racial
+  tags:
+    - Fetchling
+  traitCategory: featSkills
+type: feat

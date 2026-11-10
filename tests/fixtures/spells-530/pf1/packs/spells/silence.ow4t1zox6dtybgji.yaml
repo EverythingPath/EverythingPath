@@ -1,0 +1,70 @@
+_id: ow4t1zox6dtybgji
+_key: '!items!ow4t1zox6dtybgji'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Silence
+system:
+  actions:
+    - _id: v983ifphcps90u0b
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: >-
+        20-ft.-radius emanation centered on a creature, object, or point in
+        space
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates; see text or none (object)
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Upon the casting of this spell, complete <i>silence</i> prevails in the
+      affected area. All sound is stopped: Conversation is impossible, spells
+      with verbal components cannot be cast, and no noise whatsoever issues
+      from, enters, or passes through the area. The spell can be cast on a point
+      in space, but the effect is stationary unless cast on a mobile object. The
+      spell can be centered on a creature, and the effect then radiates from the
+      creature and moves as it moves. An unwilling creature can attempt a Will
+      save to negate the spell and can use spell resistance, if any. Items in a
+      creature's possession or magic items that emit sound receive the benefits
+      of saves and spell resistance, but unattended objects and points in space
+      do not. Creatures in an area of a <i>silence</i> spell are immune to sonic
+      or language-based attacks, spells, and effects.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      mesmerist: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      warpriest: 2
+    subDomain:
+      Solitude: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '343'
+  subschool:
+    - glamer
+type: spell
