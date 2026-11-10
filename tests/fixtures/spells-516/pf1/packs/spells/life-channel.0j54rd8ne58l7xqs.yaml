@@ -1,0 +1,51 @@
+_id: 0j54rd8ne58l7xqs
+_key: '!items!0j54rd8ne58l7xqs'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Life Channel
+system:
+  actions:
+    - _id: nbkv9ocamhainj9z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one touched creature with negative energy affinity
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>When cast on a creature with negative energy affinity, the target is
+      able to convert channeled positive energy into temporary hit points. When
+      subject to an effect that heals hit points only to living creatures (such
+      as <i>cure light wounds</i> or channel positive energy), the target gains
+      a number of temporary hit points equal to half the number of hit points
+      that the positive energy would normally heal. These temporary hit points
+      go away at the end of this spell's duration.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '101'
+type: spell

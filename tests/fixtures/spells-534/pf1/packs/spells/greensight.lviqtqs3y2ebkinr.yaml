@@ -1,0 +1,60 @@
+_id: lviqtqs3y2ebkinr
+_key: '!items!lviqtqs3y2ebkinr'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Greensight
+system:
+  actions:
+    - _id: 2ztzkvjqjoymq38a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target of this spell gains the ability to see up to 60 feet through
+      thick plant matter as though it were transparent. Greenery, leaves, and
+      vines-even lichen, moss, and slime-offer no concealment to the recipient's
+      sight, though her vision still can be blocked by solid wood, such as trees
+      or wooden structures. Undergrowth does not grant concealment to a creature
+      against a target of the effects of <i>greensight</i>.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      druid: 2
+      hunter: 2
+      ranger: 2
+      shaman: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a leaf
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '231'
+    - id: PZO9232
+      pages: '23'
+  sr: false
+type: spell

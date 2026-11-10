@@ -1,0 +1,64 @@
+_id: zOgD72irWuvqTCUq
+_key: '!items!zOgD72irWuvqTCUq'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/swords/greatsword-crossguard-curved.webp
+name: Elven Thornblade
+system:
+  actions:
+    - _id: n791t1nix8paa8nk
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Elven Thornblade
+  description:
+    unidentified: >-
+      <p>This blade is suited for thrusts and parries, making it especially
+      capable of inflicting deep, penetrating wounds. A wielder with Weapon
+      Finesse can apply her Dexterity modifier to attack rolls with an elven
+      thornblade instead of her Strength modifier. An elven thornblade grants no
+      additional benefit when wielded two-handed. In addition, attacks with an
+      elven thornblade gain a +2 bonus on attack rolls made to confirm critical
+      hits.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 60
+  properties:
+    fin: true
+    spc: true
+  sources:
+    - id: PZO1138
+      pages: '114'
+  subType: exotic
+  tags:
+    - Elf
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon

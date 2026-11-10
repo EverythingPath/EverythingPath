@@ -1,0 +1,60 @@
+_id: qCftXB98XTcZzMJ2
+_key: '!items!qCftXB98XTcZzMJ2'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Driven By Guilt (Strange Aeons)
+system:
+  actions:
+    - _id: ZtaZ31uOOurGS6xm
+      activation:
+        type: swift
+        unchained:
+          type: reaction
+      description: >-
+        <p>once per day, as a swift action, you can add your Charisma bonus to
+        your attack rolls and deal 1 additional point of damage for each class
+        level you have against evil creatures for 1 round.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: attack
+      text: >-
+        Once per day, as a swift action, for 1 round you can add
+        ([[@abilities.cha.mod]]) to your attack rolls and deal
+        ([[@attributes.hd.total]]) additional damage against evil creatures. 
+        ([[@resources.drivenByGuiltStrangeAeons.value]] remaining uses)
+    - target: allSavingThrows
+      text: >-
+        +[[1]] Trait bonus against any spells or spell-like abilities cast by
+        evil creatures.
+  description:
+    value: >-
+      <p><em>You awake after your ordeal with a lingering feeling that you have
+      taken part in something outside the normal bounds of your morals. Whether
+      you were corrupted at one point or compelled to perform some forgotten
+      actions, this guilt drives you to fight against those forces in the world
+      that prey upon the good. You see your present condition as a chance to
+      redeem yourself and banish this unsettling
+      emotion.</em></p><p><strong>Benefits</strong>: You gain a +1 trait bonus
+      on saving throws against any spells or spell-like abilities cast by evil
+      creatures. In addition, once per day as a swift action, you can add your
+      Charisma bonus to your attack rolls and deal 1 additional point of damage
+      for each class level you have against evil creatures for 1 round.
+      </p><p><strong>You must have a good alignment to take this
+      trait.</strong></p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-19E
+      pages: '8'
+  subType: trait
+  tags:
+    - Strange Aeons
+    - Good
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
