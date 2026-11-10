@@ -1,0 +1,53 @@
+_id: 7zvBqNNlc5i5EtFd
+_key: '!items!7zvBqNNlc5i5EtFd'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/wooden-stake.png
+name: Wooden Stake
+system:
+  actions:
+    - _id: zye4zhg9qsamhdqz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Wooden Stake
+  description:
+    unidentified: >-
+      <p>This close combat weapon is just a sharpened piece of wood. Iron spikes
+      that are used as weapons deal damage as wooden stakes.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: wood
+  properties:
+    fin: true
+  sources:
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - close
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,68 @@
+_id: sSvnAbXKDOSrMvGc
+_key: '!items!sSvnAbXKDOSrMvGc'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/cestus.png
+name: Cestus
+system:
+  actions:
+    - _id: n4b4pwbmy5ncp0km
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Cestus
+  description:
+    unidentified: >-
+      <p>The cestus is a glove of leather or thick cloth that covers the wielder
+      from mid-finger to mid-forearm. The close combat weapon is reinforced with
+      metal plates over the fingers and often lined with wicked spikes along the
+      backs of the hands and wrists. While wearing a cestus, you are considered
+      armed and your unarmed attacks deal lethal damage. If you are proficient
+      with a cestus, you can have your unarmed strikes deal bludgeoning or
+      piercing damage. Monks are proficient with the cestus. When using a
+      cestus, your fingers are mostly exposed, allowing you to wield or carry
+      items in that hand, but the constriction of the weapon at your knuckles
+      gives you a -2 penalty on all precision-based tasks involving that hand
+      (such as opening locks). A cestus can't be disarmed.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+    mnk: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - close
+    - monk
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,43 @@
+_id: GkuTWhbg0qcsr11b
+_key: '!items!GkuTWhbg0qcsr11b'
+_stats:
+  coreVersion: '12.331'
+folder: mWu5e6p5urTpiqQ7
+img: systems/pf1/icons/races/tengu.png
+name: Glide
+system:
+  contextNotes:
+    - target: skill.fly
+      text: >-
+        You can make a DC 15 Fly check to fall safely from any height without
+        taking falling damage, as if using
+        @UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather fall}. When
+        falling safely, you may make an additional DC 15 Fly check to glide,
+        moving 5 ft (1.5 m) laterally for every 20 ft (6 m) you fall.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tengu<br /><strong>Replaced Trait(s)</strong>:
+      Gifted Linguist</p><hr /><p>Some tengus can use their feathered arms and
+      legs to glide. Tengus with this racial trait can make a DC 15 Fly check to
+      fall safely from any height without taking falling damage, as if using
+      @UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather fall}. When
+      falling safely, a tengu may make an additional DC 15 Fly check to glide,
+      moving @Distance[5 ft;dual] laterally for every @Distance[20 ft;dual] he
+      falls. This racial trait replaces gifted linguist.</p>
+  scriptCalls:
+    - _id: BC5EnKhE
+      category: use
+      hidden: false
+      img: null
+      name: fly check
+      type: script
+      value: actor.rollSkill("fly");
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '163'
+  subType: racial
+  tags:
+    - Tengu
+  traitCategory: movement
+type: feat

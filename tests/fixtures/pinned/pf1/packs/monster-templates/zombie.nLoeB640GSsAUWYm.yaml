@@ -1,0 +1,146 @@
+_id: nLoeB640GSsAUWYm
+_key: '!items!nLoeB640GSsAUWYm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Zombie
+system:
+  acquired: true
+  changes:
+    - _id: qgxsgf0e
+      formula: '2'
+      target: str
+      type: untyped
+    - _id: r572xpwj
+      formula: '-2'
+      target: dex
+      type: untyped
+    - _id: RvJpZTpq
+      formula: lookup(@size - 2, 0, 1, 2, 3, 4, 7, 11)
+      target: nac
+      type: untyped
+    - _id: MvvcUaz0
+      formula: '10'
+      operator: set
+      target: wis
+      type: untypedPerm
+    - _id: cl9Oe98i
+      formula: '10'
+      operator: set
+      target: cha
+      type: untypedPerm
+    - _id: DDcRGxFL
+      formula: '1'
+      target: bonusFeats
+      type: untypedPerm
+  crOffset: >-
+    ifelse(eq(@attributes.hd.total, 1), 0.25, ifelse(eq(@attributes.hd.total,
+    2), 0.5, ifelse(gte(@attributes.hd.total, 13), ceil(@attributes.hd.total /
+    4) + 2, floor((@attributes.hd.total - 1) / 2))))
+  description:
+    instructions: >-
+      <p>Change the alignment in the <strong>Summary tab</strong> to neutral
+      evil.</p><p><strong>Remove</strong> all <strong>HD from classes</strong>
+      and change all <strong>racial HD</strong> to <strong>D8s</strong> (adding
+      from @UUID[Compendium.pf1.racialhd.Item.mp1Zmbx0OAzSW4oW] according to
+      creature's size).</p><p>In <strong>Settings tab</strong> change
+      <strong>Ability Score Links</strong> on <strong>Hit Points</strong> to
+      <strong>Charisma</strong>.</p><p>Change the <strong>Saving Throws</strong>
+      in the <strong>Details tab</strong> in the <strong>Racial HD</strong> or
+      <strong>gained one</strong> to <strong>Fortitude poor</strong>,
+      <strong>Reflex poor</strong> and <strong>Will
+      good</strong>.</p><p><strong>Remove all</strong> <strong>Defensive
+      Abilities</strong> from the base creature and set <strong>damage
+      resistance</strong> in the sheet <strong>Details
+      tab</strong>.</p><p><strong>Remove all Special Attacks</strong> from the
+      base creature.</p><p>Change <strong>Intelligence</strong> and
+      <strong>Constitution</strong> in the <strong>Attributes tab</strong> and
+      set them to <strong>-</strong>.</p><p>Change the <strong>BAB</strong> in
+      the <strong>Details tab</strong> in the <strong>Racial HD</strong> or
+      <strong>gained one</strong> to <strong>Medium</strong>.</p><p>Set
+      <strong>Skill Ranks</strong> to 0 in <strong>Racial
+      HD</strong>.</p><p><strong>Remove</strong> <strong>all Feats</strong> from
+      the base creature and all <strong>Special Qualities</strong>.</p><p>Set
+      active <strong>Staggered</strong> condition in <strong>Buffs
+      tab</strong>.</p>
+    value: >-
+      <p><strong>Acquired/Inherited Template</strong> Acquired<br
+      /><strong>Simple Template</strong> No<br /><strong>Usable with
+      Summons</strong> No</p><p>Zombies are the animated corpses of dead
+      creatures, forced into foul unlife via necromantic magic like animate
+      dead. While the most commonly encountered zombies are slow and tough,
+      others possess a variety of traits, allowing them to spread disease or
+      move with increased speed.</p><p>Zombies are unthinking automatons, and
+      can do little more than follow orders. When left unattended, zombies tend
+      to mill about in search of living creatures to slaughter and devour.
+      Zombies attack until destroyed, having no regard for their own
+      safety.</p><p>Although capable of following orders, zombies are more often
+      unleashed into an area with no command other than to kill living
+      creatures. As a result, zombies are often encountered in packs, wandering
+      around places the living frequent, looking for victims. Most zombies are
+      created using animate dead. Such zombies are always of the standard type,
+      unless the creator also casts haste or remove paralysis to create fast
+      zombies, or contagion to create plague zombies.</p><p>"Zombie" is an
+      acquired template that can be added to any corporeal creature (other than
+      an undead), referred to hereafter as the base
+      creature.</p><p><strong>Challenge Rating:</strong> This depends on the
+      creature's new total number of Hit Dice, as follows:</p><hr
+      /><table><tbody><tr><td><p><strong>HD</strong></p></td><td><p><strong>CR</strong></p></td><td><p><strong>XP</strong></p></td></tr><tr><td><p>1/2</p></td><td><p>1/8</p></td><td><p>50</p></td></tr><tr><td><p>1</p></td><td><p>1/4</p></td><td><p>100</p></td></tr><tr><td><p>2</p></td><td><p>1/2</p></td><td><p>200</p></td></tr><tr><td><p>3–4</p></td><td><p>1</p></td><td><p>400</p></td></tr><tr><td><p>5–6</p></td><td><p>2</p></td><td><p>600</p></td></tr><tr><td><p>7–8</p></td><td><p>3</p></td><td><p>800</p></td></tr><tr><td><p>9–10</p></td><td><p>4</p></td><td><p>1,200</p></td></tr><tr><td><p>11–12</p></td><td><p>5</p></td><td><p>1,600</p></td></tr><tr><td><p>13–16</p></td><td><p>6</p></td><td><p>2,400</p></td></tr><tr><td><p>17–20</p></td><td><p>7</p></td><td><p>3,200</p></td></tr><tr><td><p>21–24</p></td><td><p>8</p></td><td><p>4,800</p></td></tr><tr><td><p>25–28</p></td><td><p>9</p></td><td><p>6,400</p></td></tr></tbody></table><p><br
+      /><strong>Alignment:</strong> Always neutral
+      evil.</p><p><strong>Type:</strong> The creature's type changes to undead.
+      It retains any subtype except for alignment subtypes (such as good) and
+      subtypes that indicate kind. It does not gain the augmented subtype. It
+      uses all the base creature's statistics and special abilities except as
+      noted here.</p><p><strong>Armor Class:</strong> Natural armor is based on
+      the zombie's size:</p><hr /><table><tbody><tr><td><p><strong>Zombie
+      Size</strong></p></td><td><p><strong>Natural Armor
+      Bonus</strong></p></td></tr><tr><td><p>Tiny or
+      smaller</p></td><td><p>+0</p></td></tr><tr><td><p>Small</p></td><td><p>+1</p></td></tr><tr><td><p>Medium</p></td><td><p>+2</p></td></tr><tr><td><p>Large</p></td><td><p>+3</p></td></tr><tr><td><p>Huge</p></td><td><p>+4</p></td></tr><tr><td><p>Gargantuan</p></td><td><p>+7</p></td></tr><tr><td><p>Colossal</p></td><td><p>+11</p></td></tr></tbody></table><p><br
+      /><strong>Hit Dice:</strong> Drop HD gained from class levels (minimum of
+      1) and change racial HD to d8s. Zombies gain a number of additional HD as
+      noted on the following table.</p><hr
+      /><table><tbody><tr><td><p><strong>Zombie
+      Size</strong></p></td><td><p><strong>Bonus Hit
+      Dice</strong></p></td></tr><tr><td><p>Tiny or
+      smaller</p></td><td><p>—</p></td></tr><tr><td><p>Small or
+      Medium</p></td><td><p>+1
+      HD</p></td></tr><tr><td><p>Large</p></td><td><p>+2
+      HD</p></td></tr><tr><td><p>Huge</p></td><td><p>+4
+      HD</p></td></tr><tr><td><p>Gargantuan</p></td><td><p>+6
+      HD</p></td></tr><tr><td><p>Colossal</p></td><td><p>+10
+      HD</p></td></tr></tbody></table><p><br />Zombies use their Charisma
+      modifiers to determine bonus hit points (instead of
+      Constitution).</p><p><strong>Saves:</strong> Base save bonuses are Fort
+      +1/3 HD, Ref +1/3 HD, and Will +1/2 HD + 2.</p><p><strong>Defensive
+      Abilities:</strong> Zombies lose their defensive abilities and gain all of
+      the qualities and immunities granted by the undead type. Zombies gain DR
+      5/slashing.</p><p><strong>Speed:</strong> Winged zombies can still fly,
+      but maneuverability drops to clumsy. If the base creature flew magically,
+      so can the zombie. Retain all other movement
+      types.</p><p><strong>Attacks:</strong> A zombie retains all the natural
+      weapons, manufactured weapon attacks, and weapon proficiencies of the base
+      creature. It also gains a slam attack that deals damage based on the
+      zombie's size, but as if it were one size category larger than its actual
+      size (see Natural Attacks).</p><p><strong>Special Attacks:</strong> A
+      zombie retains none of the base creature's special
+      attacks.</p><p><strong>Abilities:</strong> Str +2, Dex –2. A zombie has no
+      Con or Int score, and its Wis and Cha become
+      10.</p><p><strong>BAB:</strong> A zombie's base attack is equal to 3/4 its
+      Hit Dice.</p><p><strong>Skills:</strong> A zombie has no skill
+      ranks.</p><p><strong>Feats:</strong> A zombie loses all feats possessed by
+      the base creature, and does not gain feats as its Hit Dice increase, but
+      it does gain Toughness as a bonus feat.</p><p><strong>Special
+      Qualities:</strong> A zombie loses most special qualities of the base
+      creature. It retains any extraordinary special qualities that improve its
+      melee or ranged attacks. A zombie gains the following special
+      quality.</p><ul><li><p>@UUID[Compendium.pf1.template-abilities.Item.Ld4w9QurQancak8a]</p></li></ul>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.kcCRPAHsrWouTbij
+      - uuid: Compendium.pf1.monster-abilities.Item.GrbQIXcmp5VXxYA7
+      - uuid: Compendium.pf1.template-abilities.Item.Ld4w9QurQancak8a
+  sources:
+    - id: PZO1112
+      pages: 288-289
+  subType: template
+type: feat
