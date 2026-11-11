@@ -1,0 +1,58 @@
+_id: 8goh505x858g64pu
+_key: '!items!8goh505x858g64pu'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Protective Penumbra
+system:
+  actions:
+    - _id: zdhmbb2rvfimwxkn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell keeps the target slightly in shadow. A target with light
+      blindness, light sensitivity, or vulnerability to sunlight (such as
+      vampires and wraiths) may ignore penalties from those qualities. The spell
+      gives the target a +2 bonus on saving throws against nonmagical hazards
+      related to bright light, such as glare or sunburn.</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      sorcerer: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '233'
+type: spell

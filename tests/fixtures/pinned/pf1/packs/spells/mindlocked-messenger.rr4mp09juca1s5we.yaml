@@ -1,0 +1,70 @@
+_id: rr4mp09juca1s5we
+_key: '!items!rr4mp09juca1s5we'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mindlocked Messenger
+system:
+  actions:
+    - _id: ax7jx2qbuwbvn38l
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until discharged (see text)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one willing living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You speak a short message (up to 10 words per caster level), implanting
+      both it and the identity of the message's intended recipient in the mind
+      of a willing creature. The creature is aware of the message and who the
+      recipient is.</p><p>Any attempt to speak, write, or otherwise communicate
+      the message to anyone other than its intended recipient causes the target
+      to forget the message for 1d6 minutes. Attempts to read the target's mind
+      (such as with <i>detect</i> thoughts) or to force the target to reveal the
+      message (such as with torture or magical compulsion) likewise cause
+      temporary amnesia regarding the message.</p><p>The target can communicate
+      the message only to someone it believes is the intended recipient, which
+      means that disguises, illusions, and polymorph effects might fool the
+      target into delivering the message. Once the target communicates the
+      message, the message is permanently erased from the target's memory.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      mesmerist: 2
+      psychic: 3
+      shaman: 3
+      skald: 2
+      sorcerer: 3
+      spiritualist: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1129
+      pages: '187'
+  subschool:
+    - compulsion
+type: spell

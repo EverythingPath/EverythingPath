@@ -1,0 +1,54 @@
+_id: 8u47mrsvdw4ssinw
+_key: '!items!8u47mrsvdw4ssinw'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Lost Locale
+system:
+  actions:
+    - _id: 7ycsb14i2t2sgp8g
+      actionType: spellsave
+      activation:
+        cost: 24
+        type: hour
+        unchained:
+          cost: 24
+          type: hour
+      area: one 1-mile cube/level
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: mi
+        value: '1'
+      save:
+        description: Will partial
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.1gm2ngzes1xi3zuu]{lost passage} (see
+      below), except that it affects a larger area. <em>Lost locale</em> can be
+      made permanent with <em>permanency</em> at a cost of 90,000 gp.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      wizard: 9
+  level: 9
+  school: enc
+  sources:
+    - id: PZO9280
+      pages: '220'
+  subschool:
+    - compulsion
+type: spell
