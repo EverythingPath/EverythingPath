@@ -1,0 +1,56 @@
+_id: 4dczr3vd96vbcirc
+_key: '!items!4dczr3vd96vbcirc'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Hunter's Howl
+system:
+  actions:
+    - _id: x1ttvdwu5jmi7ftg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius burst
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a single primal howl, you strike fear in your
+      opponents.</p><p>Until the end of the spell's duration, you treat those
+      affected by it as if they were your favored enemy, gaining a +2 bonus on
+      weapon attack and damage rolls against them, and a +2 bonus on Bluff,
+      Knowledge, Perception, Sense Motive, and Survival checks against them. If
+      an affected creature is already one of your favored enemies, it is shaken
+      instead. This is a mindaffecting fear effect.</p>
+  descriptors:
+    - fear
+    - mindAffecting
+    - emotion
+  learnedAt:
+    class:
+      hunter: 1
+      ranger: 1
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '228'
+  sr: false
+type: spell

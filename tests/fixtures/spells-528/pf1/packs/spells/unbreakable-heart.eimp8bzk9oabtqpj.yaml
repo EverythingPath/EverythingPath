@@ -1,0 +1,67 @@
+_id: eimp8bzk9oabtqpj
+_key: '!items!eimp8bzk9oabtqpj'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Unbreakable Heart
+system:
+  actions:
+    - _id: aeg0in6gtrh6hq5u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 1 creature
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature gains a +4 morale bonus on saving throws against
+      mind-affecting effects that rely on negative emotions (such as <i>crushing
+      despair</i>, <i>rage</i>, or fear effects) or that would force him to harm
+      an ally (such as confusion). If the target is already under such an effect
+      when receiving this spell, that effect is suppressed for the duration of
+      this spell. It does not affect mind-affecting effects based on positive
+      emotions (such as <i>good hope</i> or the inspire cou<i>rage</i> bard
+      ability). A creature can still be charmed or otherwise magically
+      controlled while under this spell's effects, but if such a creature ever
+      receives a new saving throw against that effect as a result of being
+      ordered to attempt to harm or otherwise oppose a true ally, he can roll
+      that saving throw twice and take the better result as his actual roll.
+      <i>Calm emotions</i> counters and dispels <i>unbreakable heart</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      cleric: 1
+      hunter: 1
+      oracle: 1
+      paladin: 1
+      ranger: 1
+      skald: 1
+      warpriest: 1
+      witch: 1
+  school: enc
+  sources:
+    - id: PZO9226
+      pages: '296'
+    - id: PZO9202
+      pages: '37'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,57 @@
+_id: stvj5zjdllpeed22
+_key: '!items!stvj5zjdllpeed22'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/slimes/bubbling-purple.webp
+name: Conjure Black Pudding
+system:
+  actions:
+    - _id: 4is2v4rw2rizsfkm
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned black pudding
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You summon a black pudding (<i>Bestiary</i> 35) that immediately
+      attacks creatures near it. You have no control over the creature, and it
+      may attack you if there are no more obvious opponents. The black pudding
+      is treated as a summoned creature and has the extraplanar subtype. The
+      black pudding's split ability works normally, but all puddings derived
+      from the summoned one disappear when the spell ends.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      arcanist: 6
+      psychic: 6
+      sorcerer: 6
+      summoner: 5
+      summonerUnchained: 5
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 10
+    value: a flask of acid worth 10 gp
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '211'
+  sr: false
+  subschool:
+    - summoning
+type: spell

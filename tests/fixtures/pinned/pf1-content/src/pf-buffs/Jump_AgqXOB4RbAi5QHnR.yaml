@@ -1,0 +1,23 @@
+_id: AgqXOB4RbAi5QHnR
+_key: '!items!AgqXOB4RbAi5QHnR'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/run.jpg
+name: Jump
+system:
+  contextNotes:
+    - target: skill.acr
+      text: +[[(clamped((floor((@item.level + 3) / 4) * 10), 10, 30))]] to Jump.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.ns2zo6qgd9co02uf]{Jump}</p><p>You get
+      a +10 enhancement bonus on Acrobatics checks made to attempt high jumps or
+      long jumps. The enhancement bonus increases to +20 at caster level 5th,
+      and to +30 (the maximum) at caster level 9th.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

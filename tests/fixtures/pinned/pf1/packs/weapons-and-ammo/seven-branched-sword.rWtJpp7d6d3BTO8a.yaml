@@ -1,0 +1,66 @@
+_id: rWtJpp7d6d3BTO8a
+_key: '!items!rWtJpp7d6d3BTO8a'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sword-two-bladed.png
+name: Seven-Branched Sword
+system:
+  actions:
+    - _id: j4962fhm4bcxovw2
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Seven-Branched Sword
+  description:
+    unidentified: >-
+      <p>This unusual sword has a straight 2-foot-long blade with six shorter
+      L-shaped blades protruding from it, three on each side in a staggered
+      pattern. The shorter blades can be used to snag opponents' clothing or
+      armor, or can target weapons in order to disarm them. To snag armor or
+      clothing, the attacker makes a trip attempt. If successful, the victim
+      doesn't fall prone, but instead is snagged and stumbles forward, leaving
+      the victim flat-footed for the remainder of the round.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    dis: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 7
+type: weapon
