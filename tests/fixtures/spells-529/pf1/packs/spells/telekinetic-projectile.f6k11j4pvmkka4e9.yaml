@@ -1,0 +1,53 @@
+_id: f6k11j4pvmkka4e9
+_key: '!items!f6k11j4pvmkka4e9'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/earth/projectile-stone-bullet-pink.webp
+name: Telekinetic Projectile
+system:
+  actions:
+    - _id: bppkhqtbvrt8cbrj
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fling an object weighing up to 5 pounds at the target. You must
+      succeed at a ranged attack (not a ranged touch attack) to hit your target;
+      if you hit, you deal 1d6 points of bludgeoning damage to both the target
+      and the object. The type of object thrown doesn't change the damage type
+      or any other properties of the attack, even if you throw a weapon or magic
+      item in this way.</p>
+  learnedAt:
+    class:
+      occultist: 0
+      psychic: 0
+      spiritualist: 0
+  level: 0
+  school: evo
+  sources:
+    - id: PZO1132
+      pages: '188'
+  sr: false
+  uses:
+    autoDeductChargesCost: '0'
+type: spell

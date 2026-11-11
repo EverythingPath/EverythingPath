@@ -1,0 +1,65 @@
+_id: n98kLjKTeMEM5rdx
+_key: '!items!n98kLjKTeMEM5rdx'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - the Motherless)
+system:
+  abilityType: sp
+  actions:
+    - _id: Z16bpktXlAxiRgRb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.18kryvj2dfuymk9d]{Blur}</p><p>The
+        subject's outline appears blurred, shifting, and wavering. This
+        distortion grants the subject concealment (20% miss chance).</p><p>A see
+        invisibility spell does not counteract the blur effect, but a true
+        seeing spell does.</p><p>Opponents that cannot see the subject ignore
+        the spell's effect (though fighting an unseen opponent carries penalties
+        of its own).</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Blur
+      notes:
+        effect:
+          - '@Apply[Blur]'
+      range:
+        units: touch
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: Negates
+        harmless: true
+        type: will
+      target:
+        value: Creature touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - the Motherless</p><hr /><p>the
+      Motherless can use
+      @UUID[Compendium.pf1.spells.Item.18kryvj2dfuymk9d]{Blur} once per day as a
+      spell-like ability (with a caster level equal to their character
+      level).</p><p></p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '23'
+  subType: racial
+  tags:
+    - Tiefling
+    - the Motherless
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

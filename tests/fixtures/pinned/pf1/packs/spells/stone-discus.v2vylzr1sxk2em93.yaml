@@ -1,0 +1,75 @@
+_id: v2vylzr1sxk2em93
+_key: '!items!v2vylzr1sxk2em93'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/rock-orange-2.jpg
+name: Stone Discus
+system:
+  actions:
+    - _id: xtmnh6omg1l4pyvf
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Stone
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - bludgeoning
+              - slashing
+      duration:
+        units: inst
+      effect: one or more stone discuses
+      extraAttacks:
+        formula:
+          count: min(3, floor((@cl + 1) / 4)) - 1
+          label: 'Stone #{0}'
+        type: custom
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a stone discus, which flies at an enemy. You can create one
+      discus, plus one additional discus at 7th and 11th caster levels. For each
+      discus you create, you decide whether its edge is blunt (and deals
+      bludgeoning damage) or sharp (and deals slashing damage). Each discus
+      requires a ranged attack to hit and deals 4d6 points of damage. The
+      discuses can be launched at more than one target, but all must be aimed at
+      targets within 30 feet of each other and launched simultaneously.</p><p>At
+      caster level 5th, the discuses count as magic and silver.</p><p>At caster
+      level 10th, they also count as cold iron. At caster level 15th, they also
+      count as adamantine.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a pinch of earth or metal
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '194'
+  sr: false
+  subschool:
+    - creation
+type: spell

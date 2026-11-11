@@ -1,0 +1,32 @@
+_id: KLUCuieSvkTD4qem
+_key: '!items!KLUCuieSvkTD4qem'
+_stats:
+  coreVersion: '12.343'
+folder: GoxdX8voXN2V3OVY
+img: icons/skills/melee/strike-axe-blood-red.webp
+name: Reckless Stance
+system:
+  changes:
+    - _id: GV1FtNjh
+      formula: 1 + floor(@classes.barbarianUnchained.level / 4)
+      target: attack
+      type: untyped
+    - _id: 0wRibKqz
+      formula: '- (1 + floor(@classes.barbarianUnchained.level / 4))'
+      target: ac
+      type: untyped
+  description:
+    value: >-
+      <p>The barbarian can focus her ferocity. She gains a +1 bonus on melee
+      damage rolls and thrown weapon damage rolls. This bonus increases by 1 for
+      every 4 levels the barbarian has.</p><p>See
+      @UUID[Compendium.pf1.class-abilities.Item.isntpKkbAc8v2SuT] for more
+      details.</p>
+  level: null
+  sources:
+    - id: PZO1131
+      pages: '12'
+  subType: feat
+  tags:
+    - Stance Rage Power
+type: buff

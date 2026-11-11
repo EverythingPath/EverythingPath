@@ -1,0 +1,66 @@
+_id: oHZXxOeY04Wp3jrE
+_key: '!items!oHZXxOeY04Wp3jrE'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/rapier-spiral.png
+name: Spiral Rapier
+system:
+  actions:
+    - _id: kemk0dg3blhdnz5o
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Spiral Rapier
+    - Rapier
+  description:
+    unidentified: >-
+      <p>This rapier like weapon has a thicker blade than normal, which is
+      shaped into a corkscrewing spiral of sharpened edges. These edges can
+      catch enemy weapons, making it ideal for disarming or parrying. You can
+      use the Weapon Finesse feat to apply your Dexterity modifier instead of
+      your Strength modifier to attack rolls with a spiral rapier sized for you,
+      even though it isn't a light weapon. You can't wield a spiral rapier in
+      two hands in order to apply 1-1/2 times your Strength modifier to its
+      damage. Any effects that apply to rapiers also apply to a spiral
+      rapier.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 80
+  properties:
+    blc: true
+    dis: true
+    fin: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

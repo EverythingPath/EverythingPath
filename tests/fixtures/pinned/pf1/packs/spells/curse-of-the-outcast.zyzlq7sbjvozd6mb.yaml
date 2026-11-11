@@ -1,0 +1,63 @@
+_id: zyzlq7sbjvozd6mb
+_key: '!items!zyzlq7sbjvozd6mb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Curse of the Outcast
+system:
+  actions:
+    - _id: fj1vk3jyp5mqrzdm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Everything about the target seems off-putting and grating, and everyone
+      he meets is compelled to see the worst in him.  Whenever the target
+      attempts a Bluff, Diplomacy, Intimidate, or Perform check, he must roll
+      twice and take the lower result. Additionally, each creature he encounters
+      has its initial attitude toward him reduced by one step (helpful becomes
+      friendly, friendly becomes indifferent, and so on).</p>
+  descriptors:
+    - curse
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 4
+      cleric: 6
+      inquisitor: 4
+      mesmerist: 4
+      oracle: 6
+      shaman: 6
+      skald: 4
+      warpriest: 6
+      witch: 6
+  level: 6
+  materials:
+    value: a handful of earthworms
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '209'
+  subschool:
+    - compulsion
+type: spell

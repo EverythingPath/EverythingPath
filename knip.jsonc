@@ -1,0 +1,45 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema-jsonc.json",
+  "project": [
+    "*.{js,mjs,ts,tsx}",
+    "src/**/*.{js,ts,tsx,css}",
+    "convex/**/*.{js,ts}",
+    "scripts/**/*.{mjs,ts}",
+    "tests/**/*.ts",
+    "e2e/**/*.ts",
+  ],
+  "ignoreExportsUsedInFile": true,
+  // The config requires a provisioned preview. These are its runner entry points.
+  "playwright": {
+    "config": [],
+    "entry": [
+      "e2e/**/*.spec.ts",
+      "e2e/auth.setup.ts",
+      "e2e/start-server.ts",
+      "e2e/support/reporter.ts",
+    ],
+  },
+  "entry": [
+    "scripts/local-convex/codegen.ts",
+    // The one-time PRD capture (#716 P8), run by hand only.
+    "scripts/catalog/prd-capture.ts",
+    "playwright.config.ts",
+    "e2e/bind-preview.ts",
+    "e2e/qualify-release.ts",
+    "e2e/support/testing/runner-probe.ts",
+    "e2e/support/testing/command-probe.ts",
+    "e2e/finalize-evidence.ts",
+    // The orchestrator's record step (runbook "Record the review"), run with node.
+    "scripts/catalog-record-review.ts",
+    // Capture-owned code-mode review bridge, invoked by the portable helper.
+    "scripts/catalog/t3-review-bridge.ts",
+    // The pair queue and final landing guard invoke this driver with node.
+    "scripts/orchestration/pair-queue.mjs",
+    // Shell fixtures build independent dummy review plans with node.
+    "scripts/orchestration/pair-plan-fixture.mjs",
+    // The gate's import scan runs it with node for comment ranges (gate_operator.py).
+    "scripts/orchestration/comment-ranges.mjs",
+  ],
+  // The current version deliberately aliases the latest named rules milestone.
+  "ignoreIssues": { "src/lib/ruleset-versions.ts": ["duplicates"] },
+}

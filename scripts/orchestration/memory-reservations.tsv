@@ -1,0 +1,34 @@
+# Memory reservations for heavy commands (#759), read by admission.sh.
+# <class> <seed GiB> <where the seed comes from>
+# Memory is the owner's `real` measure: memory.current - file + shmem, without
+# reclaimable file cache (resource-policy.md "Re-trial", slice-sampler.sh).
+# Every bounded unit and capped.sh scope records its real peak in
+# $EP_ORCH/admission/peaks.log. Once a class has 3 qualifying runs (ended ok,
+# lasted at least 60 s), it reserves their largest real peak plus the margin,
+# rounded up to 0.5 GiB; until then, the seed below. Any recorded run whose
+# real peak is above that (OOM, killed and short runs too) raises it to that
+# peak plus the margin at once. `admission.sh table` shows each basis. Slice-wide seeds already include whatever else ran at the time,
+# which stands in for the margin; a single job's measured seed gets the margin.
+# Change a seed only from a new measurement, and say where it comes from.
+budget   18    the owner's aggregate limit for admitted reservations, in real memory, under ep-heavy.slice's MemoryMax=20G: 16 (2026-10-18), raised to 18 by the owner (2026-10-20) because a 3-worker gate's own real peak (14.1 GiB over 21 runs) plus the margin reserved all 16 and no curator command could start during a gate
+margin   10    percent added to the largest recorded real peak (orchestrator, 2026-10-19)
+gate-1   11.5  1-worker gates' unit memory.peak, which counts cache and so bounds real: land369-land385 and land716-land759a, 8.5-11.5G, max land373 11.5G (2026-10-17/19)
+gate-2   12    the 3-worker value
+gate-3   12    land384: 11.96 GiB slice-wide real (3-worker gate plus a coder's capped.sh commands)
+gate-4   16    not measured: the gate unit's MemoryMax=16G
+prep-light-1  10    not measured at 1 worker: the 1-worker full value (a light prep can turn full by itself)
+prep-light-2  10.5  the 3-worker value
+prep-light-3  10.5  3-worker light preps' unit memory.peak, which counts cache and so bounds real: prep383 10.3G, prep384b 9.8G, prep385 9.4G (2026-10-18; prep385's slice-wide 15.33 GiB included a coder's lint)
+prep-light-4  16    not measured: the gate unit's MemoryMax=16G
+prep-full-1   10    1-worker full preps' unit memory.peak (bounds real): prep369-prep381 and prep386b, 7.4-9.8G, max prep381 9.8G (2026-10-17/19)
+prep-full-2   13    the 3-worker value
+prep-full-3   13    3-worker full preps' unit memory.peak (bounds real): prep382 12.7G, prep386 12.7G (2026-10-18/19)
+prep-full-4   16    not measured: the gate unit's MemoryMax=16G
+prep-remote   6     cur-prep.sh --remote-suite (no Vitest, any worker count): its checks on #615's landed commit 9917de4e against 39209110, 142 s, 3.76 GiB real at 0.2 s samples (catalog:notice-deps; launch-inventory 2.36), memory.peak 4.32 GiB (2026-11-06, curation-remote-a); seeded from the larger recorded catalog:notice-deps peak, 5.26 GiB real, + 10%, rounded up
+curator-lint    8    capped.sh lint and typecheck (pnpm lint/typecheck, eslint, tsc): $EP_ORCH/admission/peaks.log reclassified by command (admission.sh reclassify, 2026-10-20), 60 runs, 20 qualifying, max pnpm -s lint 7.19 GiB real (ep-impl-759c) + 10%, rounded up
+curator-corpus  9    capped.sh full-corpus commands (catalog:preview, catalog:curate, catalog:notice-deps) and whole-suite or directory test runs: same source, 69 runs, 12 qualifying, max pnpm -s vitest run tests/catalog 8.12 GiB real (ep-impl-716) + 10%, rounded up
+curator-test    7    capped.sh vitest on named test files: same source, 132 runs, 17 qualifying, max pnpm test tests/catalog/buffs-547.test.ts ... 6.07 GiB real (ep-cur-547) + 10%, rounded up
+curator-light   1.5  capped.sh small package scripts (catalog:pin, catalog:format, check:*, prettier): same source, 37 runs, none qualifying (they last seconds, and 5 s samples miss them); measured with 0.2 s samples (2026-10-20, ep-impl-759d): catalog:format 1.19 GiB real, check:initial-migration-writers 0.22, catalog:pin 0.07; the largest + 10%, rounded up
+curator         8.5  capped.sh commands of no known kind (bash -c, scripts), never below the largest curator-* class: same source, 106 runs, 40 qualifying, max a bash -c of check:initial-migration-writers and catalog:pin 7.47 GiB real (ep-impl-716) + 10%, rounded up
+command  12    not measured (any other bounded command): the unit's MemoryMax=12G
+role     0     a model session (bounded.sh role): reserves nothing; its heavy commands reserve through capped.sh, and it is never recorded

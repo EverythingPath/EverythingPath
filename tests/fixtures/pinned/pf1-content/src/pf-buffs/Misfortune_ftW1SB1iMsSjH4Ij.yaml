@@ -1,0 +1,35 @@
+_id: ftW1SB1iMsSjH4Ij
+_key: '!items!ftW1SB1iMsSjH4Ij'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Misfortune
+system:
+  contextNotes:
+    - target: allChecks
+      text: Roll twice and take the worse result.
+    - target: attack
+      text: Roll twice and take the worse result.
+    - target: allSavingThrows
+      text: Roll twice and take the worse result.
+    - target: skills
+      text: Roll twice and take the worse result.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.LKmhG8ZsEICwXtCy]{Misfortune}</p><p>The
+      witch can cause a creature within 30 feet to suffer grave misfortune for 1
+      round. Anytime the creature makes an ability check, attack roll, saving
+      throw, or skill check, it must roll twice and take the worse result. A
+      Will save negates this hex.</p><p>At 8th level and 16th level, the
+      duration of this hex is extended by 1 round. This hex affects all rolls
+      the target must make while it lasts.</p><p>Whether or not the save is
+      successful, a creature cannot be the target of this hex again for 1
+      day.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: clamped(floor(@item.level / 8) + 1, 1, 3)
+  level: 1
+  subType: feat
+type: buff

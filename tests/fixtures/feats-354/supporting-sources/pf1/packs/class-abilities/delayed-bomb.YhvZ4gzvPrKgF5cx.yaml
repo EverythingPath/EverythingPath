@@ -1,0 +1,84 @@
+_id: YhvZ4gzvPrKgF5cx
+_key: '!items!YhvZ4gzvPrKgF5cx'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/thrown/bomb-timer.webp
+name: Delayed Bomb
+system:
+  actions:
+    - _id: PI4ALKQniq0TUXU9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Prepare
+    - _id: FOqQZ47HBxr4OSWb
+      ability:
+        damage: int
+        damageMult: 1
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: icons/magic/fire/explosion-fireball-large-red-orange.webp
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Explosion
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>The alchemist can place a bomb so that it explodes a number of rounds
+      after the alchemist ceases contact with the bomb. This delay can be any
+      number of rounds as chosen by the alchemist, up to a number of rounds
+      equal to his level. If at any point the alchemist reclaims possession of
+      the delayed bomb, he can end the timer and prevent the bomb's detonation.
+      A delayed bomb detonates immediately if any other creature attempts to
+      touch or move it, or if the bomb's contents are removed from the vial
+      (such as if the vial breaks). The bomb deals damage as if it scored a
+      direct hit to any creature in the square with the bomb when it detonates,
+      and splash damage to all adjacent creatures as normal. An alchemist cannot
+      have more than one delayed bomb at one time. If he creates another delayed
+      bomb, the previous bomb becomes inert.
+      @UUID[Compendium.pf1.spells.gmgwyjfpeuuc4t4o]{Dispel Magic} can neutralize
+      a delayed bomb, as can a successful Disable Device check (DC equals 10 +
+      the alchemist's level + the alchemist's Intelligence modifier).</p>
+
+      <p>An alchemist must be at least 8th level before selecting this
+      discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '29'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+type: feat
