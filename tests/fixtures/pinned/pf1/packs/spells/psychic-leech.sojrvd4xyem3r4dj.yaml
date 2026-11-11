@@ -1,0 +1,61 @@
+_id: sojrvd4xyem3r4dj
+_key: '!items!sojrvd4xyem3r4dj'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Psychic Leech
+system:
+  actions:
+    - _id: zxvgkay5ojcdrz4o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>The target experiences feelings of ennui and lethargy, becoming
+      fatigued for the spell's duration. While the target is fatigued and is
+      within the spell's range, you gain a +2 enhancement bonus to Strength and
+      Dexterity. On a successful save, the target is fatigued for only 1d4
+      rounds and you receive no bonus. This spell has no effect if it targets a
+      creature that is already fatigued.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      medium: 3
+      mesmerist: 2
+      psychic: 2
+      sorcerer: 3
+      spiritualist: 2
+      witch: 2
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9461
+      pages: '29'
+  subschool:
+    - compulsion
+type: spell

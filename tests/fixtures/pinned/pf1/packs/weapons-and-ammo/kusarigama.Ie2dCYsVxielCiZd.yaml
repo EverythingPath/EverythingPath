@@ -1,0 +1,69 @@
+_id: Ie2dCYsVxielCiZd
+_key: '!items!Ie2dCYsVxielCiZd'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/scythe.PNG
+name: Kusarigama
+system:
+  actions:
+    - _id: kl1yscmeor73vbs4
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Kusarigama
+  description:
+    unidentified: >-
+      <p>This weapon has a single kama or sickle held in the off hand, attached
+      by 10 feet of fine chain to a weighted metal ball. The sickle can be used
+      to make trip attacks, jabs, and blocks, while the ball is whipped around
+      at high speeds and then smashed into the opponent, or used to tangle an
+      opponent's sword or spear, allowing the wielder to then attack with the
+      sickle.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 12
+  properties:
+    dbl: true
+    grp: true
+    mnk: true
+    rch: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - double
+    - flails
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 3
+type: weapon

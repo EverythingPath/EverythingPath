@@ -1,0 +1,56 @@
+_id: jtmrlwjxomc1x76i
+_key: '!items!jtmrlwjxomc1x76i'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Reloading Hands
+system:
+  actions:
+    - _id: n18p4e5f1hh95mc5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: projectile weapon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Once per round, phantom hands load a single ranged weapon or firearm
+      with conjured ammunition. This ammunition counts as magical for overcoming
+      damage reduction and attacking incorporeal creatures, but is the standard
+      for its type (a normal bullet or pellets and black powder in the case of
+      firearms). Conjured ammunition ceases to exist 1 round after it is removed
+      from the weapon, or at the end of the duration, whichever comes first.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      hunter: 2
+      magus: 2
+      ranger: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '242'
+  subschool:
+    - creation
+type: spell

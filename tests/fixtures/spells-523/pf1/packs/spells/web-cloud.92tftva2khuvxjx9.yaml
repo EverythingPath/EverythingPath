@@ -1,0 +1,62 @@
+_id: 92tftva2khuvxjx9
+_key: '!items!92tftva2khuvxjx9'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Web Cloud
+system:
+  actions:
+    - _id: divq9ajonmdqralr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex partial; see text
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a cloud of flame-resistant strands of adhesive webbing that
+      billows and flows much like a
+      @UUID[Compendium.pf1.spells.Item.im8z5kfg8ohowie9]{cloudkill} spell. The
+      cloud moves away from you at a rate of 10 feet per round, rolling along
+      the surface of the ground. Figure out the cloud's new spread each round
+      based on its new point of origin, which is 10 feet farther away from the
+      point of origin where the caster cast the spell. Creatures trapped in the
+      <em>web</em>bing remain trapped even after the cloud passes, but the area
+      the cloud leaves behind does not count as difficult terrain. Because the
+      <em>web</em>bing is heavier than air, it sinks to the lowest level of the
+      land, even pouring down den or sinkhole openings. The cloud of
+      <em>web</em>bing cannot penetrate liquids, nor can it be cast underwater.
+      The cloud otherwise acts like a <em>web</em> spell. A creature in the
+      cloud at the start of its turn must save against the cloud or be affected.
+      The <em>web</em>bing of this spell is flammable (see the <em>web</em>
+      spell), but has fire resistance 5.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO1121
+      pages: '107'
+  sr: false
+  subschool:
+    - creation
+type: spell

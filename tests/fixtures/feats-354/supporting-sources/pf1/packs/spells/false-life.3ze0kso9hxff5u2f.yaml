@@ -1,0 +1,64 @@
+_id: 3ze0kso9hxff5u2f
+_key: '!items!3ze0kso9hxff5u2f'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/life/heart-shadow-red.webp
+name: False Life
+system:
+  actions:
+    - _id: r7hedq5kywfyniuq
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d10 + min(10, @cl)
+            types:
+              - untyped
+      duration:
+        units: spec
+        value: 1 hour/level or until discharged; see text
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You harness the power of unlife to grant yourself a limited ability to
+      avoid death. While this spell is in effect, you gain temporary hit points
+      equal to 1d10 + 1 per caster level (maximum +10).</p>
+  learnedAt:
+    bloodline:
+      Undead: 2
+    class:
+      alchemist: 2
+      arcanist: 2
+      bloodrager: 2
+      investigator: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      shaman: 2
+      sorcerer: 2
+      spiritualist: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a drop of blood
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '280'
+  sr: false
+type: spell
