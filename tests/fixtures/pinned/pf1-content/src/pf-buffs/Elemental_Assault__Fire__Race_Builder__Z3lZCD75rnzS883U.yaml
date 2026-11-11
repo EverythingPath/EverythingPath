@@ -1,0 +1,37 @@
+_id: Z3lZCD75rnzS883U
+_key: '!items!Z3lZCD75rnzS883U'
+_stats:
+  coreVersion: '12.331'
+folder: Qpty4Od7cOU5vY3R
+img: icons/svg/book.svg
+name: Elemental Assault (Fire, Race Builder)
+system:
+  actions:
+    - _id: CoziaqxaRJxFayJK
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      name: Use
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf-content.pf-racial-traits.Item.UsBkDqNJ8C119TCb]{Elemental
+      Assault}</p><p>You shroud your arms in fire. For 1 round per level, your
+      armor strikes with arms or hands (or weapons help in those hands), deal an
+      extra 1d6 fire damage.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '@attributes.hd.total'
+  sources:
+    - id: PZO1121
+      pages: '232'
+  subType: feat
+  tags:
+    - ''
+type: buff

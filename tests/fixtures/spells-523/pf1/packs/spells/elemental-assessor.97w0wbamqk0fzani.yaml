@@ -1,0 +1,140 @@
+_id: 97w0wbamqk0fzani
+_key: '!items!97w0wbamqk0fzani'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/symbols/elements-air-earth-fire-water.webp
+name: Elemental Assessor
+system:
+  actions:
+    - _id: taraohmdtl3korrg
+      ability:
+        attack: _default
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - fire
+          - formula: 2d6
+            types:
+              - cold
+          - formula: 2d6
+            types:
+              - electric
+          - formula: 2d6
+            types:
+              - acid
+      duration:
+        units: spec
+        value: 1d4+1 rounds (see text)
+      effect: one elemental ray
+      name: Use
+      range:
+        units: close
+      touch: true
+    - _id: th2eHP6eIHqoaBvm
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - acid
+      duration:
+        units: inst
+      img: icons/magic/acid/dissolve-vomit-green-brown.webp
+      name: Continuous Acid Damage
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: djIsLwgPvHAkamaN
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - cold
+      duration:
+        units: inst
+      img: icons/magic/water/strike-ice-blade-axe.webp
+      name: Continuous Cold Damage
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: dDHTpkOQgrL4Rb75
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - electric
+      duration:
+        units: inst
+      img: icons/magic/lightning/bolt-strike-creature-pink.webp
+      name: Continuous Electricity Damage
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: TxDJnPdX2kTNT0a9
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: icons/magic/fire/flame-burning-creature-skeleton.webp
+      name: Continuous Fire Damage
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Azata champions developed this spell to deal with fiends with unknown
+      resistances. A ray of spiraling colors springs from your hand and streaks
+      to its target. You must make a successful ranged touch attack to hit your
+      target with the ray, which deals 2d6 points of acid damage, 2d6 points of
+      cold damage, 2d6 points of electricity damage, and 2d6 points of fire
+      damage. The type of energy that does the most points of damage to the
+      target then persists, dealing another 4d6 points of that type of damage
+      per round for 1d4 rounds.</p>
+  descriptors:
+    - acid
+    - cold
+    - electricity
+    - fire
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: four needles
+  school: evo
+  sources:
+    - id: PZO9255
+      pages: '50'
+type: spell

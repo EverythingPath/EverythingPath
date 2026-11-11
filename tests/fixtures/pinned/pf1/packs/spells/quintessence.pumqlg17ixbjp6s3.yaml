@@ -1,0 +1,69 @@
+_id: pumqlg17ixbjp6s3
+_key: '!items!pumqlg17ixbjp6s3'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Quintessence
+system:
+  actions:
+    - _id: ae6yhh5pzgpa4xx2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates and Will disbelief; see text
+        harmless: true
+        type: will
+      target:
+        value: creature or object touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You draw forth the idealized image of the target creature or object,
+      masking any flaws or damage. An injured or ill creature appears healthy,
+      and a damaged object or one with the broken condition appears intact.
+      However, a corpse  masked by <i>quintessence</i> remains obviously dead,
+      and a completely destroyed object can't be made to seem whole. This
+      illusion has visual and tactile components. Careful examination of or
+      handling the target grants a saving throw to disbelieve, but casual
+      observation does not. Using a broken object for its intended purpose
+      automatically reveals the deception. Appraise checks to assess the value
+      of an object affected by <i>quintessence</i> estimate the value as an item
+      of its type in perfect condition, unless the appraiser disbelieves the
+      illusion.  Unwilling targets can negate the spell's effect on them with
+      successful Will saves or with spell resistance. Those who interact with
+      the target can attempt Will saves to see through the glamer, but spell
+      resistance doesn't apply. <i>Quintessence</i> counters and dispels
+      <i>decrepit disguise</i>.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      medium: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '184'
+  sr: false
+  subschool:
+    - glamer
+type: spell

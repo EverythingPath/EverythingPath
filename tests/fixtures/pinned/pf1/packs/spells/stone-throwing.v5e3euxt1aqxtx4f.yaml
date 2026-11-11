@@ -1,0 +1,66 @@
+_id: v5e3euxt1aqxtx4f
+_key: '!items!v5e3euxt1aqxtx4f'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Stone Throwing
+system:
+  actions:
+    - _id: 5l8ksbh3j5ermk3e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject gains the rock throwing and rock catching abilities
+      (<i>Pathfinder RPG Bestiary</i> 303). It can use these abilities with any
+      solid, mostly inflexible object with a hardness of at least 5.  The
+      subject can hurl rocks up to two categories smaller than its own size. The
+      range increment for this attack is 20 feet, and rocks can be hurled a
+      maximum of 5 range increments. Damage is based on the size of the
+      subject-1d8 points of damage for a Large creature, 1d6 for a Medium
+      creature, or 1d4 for a Small creature-plus 1-1/2 times the thrower's
+      Strength bonus.  For every size category smaller than Large the subject
+      is, it receives a cumulative -5 penalty on Reflex saves to catch rocks (or
+      similar projectiles) thrown at it.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 1
+      cleric: 2
+      druid: 2
+      hunter: 1
+      magus: 2
+      oracle: 2
+      ranger: 1
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: powdered stone
+  school: trs
+  sources:
+    - id: PZO9453
+      pages: '27'
+type: spell

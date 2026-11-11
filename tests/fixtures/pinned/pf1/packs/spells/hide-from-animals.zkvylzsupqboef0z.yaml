@@ -1,0 +1,50 @@
+_id: zkvylzsupqboef0z
+_key: '!items!zkvylzsupqboef0z'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Hide from Animals
+system:
+  actions:
+    - _id: otkf1qa67i8ad3nz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature touched/level
+  components:
+    divineFocus: 1
+    somatic: true
+  description:
+    value: >-
+      <p>Animals cannot sense the warded creatures. Even extraordinary or
+      supernatural sensory capabilities, such as blindsense, blindsight, scent,
+      and tremorsense, cannot detect or locate warded creatures.</p><p>Animals
+      simply act as though the warded creatures are not there.</p><p>If a warded
+      character touches an animal or attacks any creature, even with a spell,
+      the spell ends for all recipients.</p>
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      ranger: 1
+      shaman: 1
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '296'
+type: spell

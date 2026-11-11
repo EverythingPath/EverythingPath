@@ -1,0 +1,51 @@
+_id: a73dq2t8pd5n0y1g
+_key: '!items!a73dq2t8pd5n0y1g'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Retribution
+system:
+  actions:
+    - _id: gcz8rimabx7bdqtc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: one creature who has just struck you with an attack
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p><i>Retribution</i> blasts those who have the temerity to assault your
+      person. You may target anyone who has just struck you with an attack
+      within the previous round, whether with a melee, ranged, or natural
+      weapon, or a spell that requires an attack roll. The target is wracked
+      with shooting pains that impose a -4 penalty on attack rolls, skills
+      checks, and ability checks. On a successful Fortitude save, the penalty
+      only lasts for 1 round.</p><p>A target who worships the same god as you
+      takes a -2 penalty on its saving throw.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      inquisitor: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '239'
+type: spell

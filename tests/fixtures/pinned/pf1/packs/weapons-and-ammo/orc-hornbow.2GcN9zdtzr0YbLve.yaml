@@ -1,0 +1,70 @@
+_id: 2GcN9zdtzr0YbLve
+_key: '!items!2GcN9zdtzr0YbLve'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/orc-hornbow.png
+name: Orc Hornbow
+system:
+  actions:
+    - _id: ll27db3t56nui61f
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: arrow
+      damage:
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Orc Hornbow
+  description:
+    unidentified: >-
+      <p>Larger even than a longbow, these bows are often made from the horns of
+      great beasts. Though they have a shorter range than other bows, their
+      greater destructive power is highly favored by orcs and their kin. All
+      hornbows are composite bows and can be modified to benefit from high
+      Strength scores in the same way as other composite bows. Any effect that
+      applies to both longbows and shortbows also applies to hornbows.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: bone
+  price: 130
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  tags:
+    - Composite
+    - Orc
+  weaponGroups:
+    - bows
+  weaponSubtype: ranged
+  weight:
+    value: 7
+type: weapon
