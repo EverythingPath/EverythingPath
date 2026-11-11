@@ -1,0 +1,46 @@
+_id: iMix2jm1eh8V6cCN
+_key: '!items!iMix2jm1eh8V6cCN'
+_stats:
+  coreVersion: '12.343'
+folder: xPJd6syoxDiunnzG
+img: icons/commodities/claws/claw-pincer-grey.webp
+name: Pincer
+system:
+  actions:
+    - _id: lyysy62a9hqkvo9c
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      name: Attack
+      naturalAttack:
+        primary: false
+      range:
+        units: melee
+      tag: slam
+  baseTypes:
+    - Pincers
+  description:
+    value: >-
+      <p>A secondary natural attack where you crush with a pincer.</p><p>It
+      deals bludgeoning damage.</p><p>This is a <em>typical</em> pincer attack,
+      your particular one may vary from this.</p><hr><p>For general rules on
+      natural attacks, see:
+      @UUID[Compendium.pf1.pf1e-rules.nBnUY0koBzXqoEft.JournalEntryPage.8zivKFrhTVkbtjm3]{Natural
+      Attacks} (UMR).</p>
+  held: null
+  proficient: true
+  subType: natural
+  weaponGroups:
+    - natural
+type: attack

@@ -1,0 +1,75 @@
+_id: 1rt2lg6tt2kms0z0
+_key: '!items!1rt2lg6tt2kms0z0'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Languid Venom
+system:
+  actions:
+    - _id: qp8kjp677ujo325t
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one dose of poison or one venomous creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You greatly extend the time it takes for the poison you touch to take
+      effect, giving that poison an onset time up to 1 hour per caster level.
+      (You touch the poison's container, so you don't risk exposing yourself to
+      a contact poison.) The target doesn't attempt a saving throw when
+      initially exposed to the <em>languid venom</em>, but instead saves at the
+      end of the poison's onset time. If the poison is neutralized or otherwise
+      cured prior to the end of its onset time, it is rendered harmless. Failing
+      saves against multiple doses of <em>languid venom</em> have the normal
+      cumulative effect for poisons (<em>Pathfinder RPG Core Rulebook</em>
+      558).</p><p><em>Languid venom</em> is difficult to detect or identify.
+      <em>Detect poison</em> and similar effects detect <em>languid venom</em>
+      only with a successful caster level check against a DC equal to 11 + your
+      caster level (rolled secretly by the GM). Even if the poison is detected,
+      the DC of Craft (alchemy) or Wisdom checks to identify the poison is
+      increased by 10. If a poison is affected by an additional effect that
+      requires a caster level check to detect the poison or increases the DC to
+      identify it-such as <em>obscure poison</em> (see page 220)-those effects
+      don't stack. Use only the caster level check with the higher DC and
+      increase the DC of the check to identify the poison by the higher of the
+      two.</p><p>If cast upon a venomous creature, <em>languid venom</em> delays
+      the onset of that creature's poison when the creature next delivers its
+      natural poison.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      investigator: 2
+      shaman: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    gpValue: 25
+    value: herbs used in antitoxins worth 25 gp
+  school: nec
+  sources:
+    - id: Languid Venom
+      pages: '218'
+type: spell

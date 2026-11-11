@@ -1,0 +1,51 @@
+_id: R9vCorsZWWgS9Zbc
+_key: '!items!R9vCorsZWWgS9Zbc'
+_stats:
+  coreVersion: '12.331'
+folder: Deq32iqkuiMz2xsk
+img: icons/environment/people/charge.webp
+name: Fires of Hell (Cheliax Faction)
+system:
+  actions:
+    - _id: bFTIfj6l5PwaTaMY
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      img: icons/environment/people/charge.webp
+      name: Use
+      target:
+        value: single weapon you hold
+  contextNotes:
+    - target: attack
+      text: >-
+        Once per day, as a swift action, you can imbue a single weapon you hold
+        with a nimbus that deals an extra 1 point of fire damage for
+        [[@abilities.cha.mod]] rounds.
+        ([[@resources.firesOfHellCheliaxFaction.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>Your parents signed a pact with a fiend of Hell before you were
+      born, and as a result you can summon fire to your
+      aid.</em></p><p><strong>Requirements</strong>: Cheliax
+      Faction</p><p><strong>Benefits</strong>: Once per day, as a swift action,
+      you can summon fire, imbuing a single weapon you hold with a nimbus of
+      fire that deals an extra 1 point of fire damage for a number of rounds
+      equal to your Charisma bonus. This fire gives off light equivalent to a
+      torch. This is a supernatural ability.</p>
+  sources:
+    - id: PZOPSS0000E
+      pages: '15'
+  subType: trait
+  tags:
+    - Cheliax Faction
+    - Pathfinder Society
+  traitType: faction
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

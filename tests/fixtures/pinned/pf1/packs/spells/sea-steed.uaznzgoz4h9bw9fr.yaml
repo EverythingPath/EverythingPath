@@ -1,0 +1,57 @@
+_id: uaznzgoz4h9bw9fr
+_key: '!items!uaznzgoz4h9bw9fr'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Sea Steed
+system:
+  actions:
+    - _id: jo2bygzn3uaukpc9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: a creature you are mounted upon
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target adapts to life in the water, gaining piscine scales that
+      cover its body and growing fins in place of feet. It gains the aquatic
+      subtype, the amphibious quality, and a swim speed equal to its base speed
+      before it came under the effect of this spell. While under the effects of
+      this spell, the target's base speed is reduced by 10 feet (minimum 10
+      feet).</p>
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      paladin: 2
+      ranger: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '234'
+    - id: PZO9429
+      pages: '25'
+  subschool:
+    - polymorph
+type: spell

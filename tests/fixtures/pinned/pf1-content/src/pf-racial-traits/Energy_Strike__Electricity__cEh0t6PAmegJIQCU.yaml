@@ -1,0 +1,103 @@
+_id: cEh0t6PAmegJIQCU
+_key: '!items!cEh0t6PAmegJIQCU'
+_stats:
+  coreVersion: '12.331'
+folder: C4r4Wp69HHAX7XMo
+img: systems/pf1/icons/races/creature-types/elemental.png
+name: Energy Strike (Electricity)
+system:
+  abilityType: su
+  actions:
+    - _id: bmm90lNz9kuzoUVp
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - electric
+      description: >-
+        <p>(when elemental assault is active) </p><p>Once per round as an
+        immediate action, the suli can shock a creature that touches or attacks
+        her with a natural attack, unarmed strike, or metal melee weapon,
+        dealing 1d6 points of electricity damage to the creature.</p>
+      name: Shockshield
+      range:
+        units: touch
+      uses:
+        self:
+          maxFormula: '1'
+          per: round
+          value: 1
+    - _id: lSTzPvxd1Daty7sK
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>Once per day as a swift action, a suli can shroud her arms in
+        electricity. This effect lasts for 1 round per level and can be
+        dismissed as a free action. Unarmed strikes with her arms or hands (or
+        attacks with weapons held in those hands) deal +1d6 points of
+        electricity damage.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Elemental Assault (electricity)
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: allSavingThrows
+      text: You have Electricity Resistance 5.
+  description:
+    instructions: >-
+      <p>Remove
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.0HcXO1YYEXC3TDlc]{Energy
+      Resistance (Suli)};   You must add Electricity Resistance 5 to your actor
+      manually.</p>
+    value: >-
+      <p><strong>Race</strong>: Suli<br /><strong>Replaced Trait(s)</strong>:
+      Elemental Assault</p><hr /><p>A suli with this racial trait has a stronger
+      connection to one energy type than to the other three used by sulis.
+      Choose one energy type: acid, cold, electricity, or fire. The suli's
+      elemental assault ability can only deal energy damage of this type. The
+      suli has resistance 5 to this energy type and no racial resistance to the
+      other three types. While her elemental assault is active, the suli gains
+      an additional ability based on the chosen energy
+      type.</p><p><em>Shockshield (electricity)</em>: Once per round as an
+      immediate action, the suli can shock a creature that touches or attacks
+      her with a natural attack, unarmed strike, or metal melee weapon, dealing
+      1d6 points of electricity damage to the creature.</p><p>This racial trait
+      otherwise works like and replaces
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.RScQcZuZDW9bGV8c]{elemental
+      assault}.</p><p>This is one of four elemental options for the Energy
+      Strike racial trait. The options are:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.RciaNbMBeBVfJMjZ]{Energy
+      Strike (Acid)};
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.Uu1wTwtXGLuFWugv]{Energy
+      Strike (Cold)};
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.cEh0t6PAmegJIQCU]{Energy
+      Strike (Electricity)};
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.Ax9nTBosPUTxsSm8]{Energy
+      Strike (Fire)}</p><p><strong>Related buff:</strong> @Toggle[Elemental
+      Assault (Electricity, Suli)]</p><p></p>
+  links:
+    supplements:
+      - name: Elemental Assault (Electricity, Suli)
+        uuid: Compendium.pf-content.pf-buffs.Item.DyhAwDKVqDT6edB6
+  sources:
+    - id: PZO1121
+      pages: '202'
+  subType: racial
+  tags:
+    - Suli
+  traitCategory: other
+  uses:
+    maxFormula: '1'
+    value: 1
+type: feat
