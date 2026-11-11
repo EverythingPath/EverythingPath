@@ -1,0 +1,57 @@
+_id: IfR6nJz0I3Z2NrDm
+_key: '!items!IfR6nJz0I3Z2NrDm'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/yellow_15.jpg
+name: Veil of Positive Energy
+system:
+  actions:
+    - _id: 9AaQCWErKHXzxZc4
+      activation:
+        type: swift
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '@item.level'
+            types:
+              - positive
+      img: systems/pf1/icons/skills/yellow_15.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      target:
+        value: All undead within 5 feet (1.5 meters) of you
+  changes:
+    - _id: xim8banw
+      formula: '2'
+      target: ac
+      type: sacred
+    - _id: 0mj8gv4l
+      formula: '2'
+      target: allSavingThrows
+      type: sacred
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.xpmhu8rj7gbjns84]{Veil of Positive
+      Energy}</p><p>You gain a +2 sacred bonus to AC against attacks and a+2
+      sacred bonus on saves against effects from undead creatures. You can
+      dismiss these effects as a swift action on your turn to deal a number of
+      points of positive energy damage equal to your level to all undead
+      creatures within 5 feet of you.</p>
+  duration:
+    units: minute
+    value: '@item.level * 10'
+  level: 1
+  scriptCalls:
+    - _id: TKH12Px8Ps6seuLT
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Early
+      type: script
+      value: await item.setActive(false)
+  subType: spell
+type: buff

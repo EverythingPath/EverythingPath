@@ -1,0 +1,52 @@
+_id: ciW6lEBZ9gfkKUBH
+_key: '!items!ciW6lEBZ9gfkKUBH'
+_stats:
+  coreVersion: '12.331'
+folder: qFbWInuNDuv3JE0T
+img: icons/sundries/books/book-embossed-jewel-gold-purple.webp
+name: Draconic Infusion
+system:
+  actions:
+    - _id: KznpAxJqO6374ZDK
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d4
+      img: icons/sundries/books/book-embossed-jewel-gold-purple.webp
+      name: Use
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        [[max(1, floor(@spells.primary.cl.total /2))]] times per day,  when you
+        cast a spell with the <chosen element> descriptor you can add 1d4 
+        damage of same type to one target of the spell. 
+        ([[@resources.draconicInfusion.value]] remaining uses)
+  description:
+    instructions: >-
+      <p>Choose the acid, cold, electricity, or fire spell descriptor when you
+      take this trait. Update the text of the note on the changes tab of this
+      trait to reflect your choice. On the details tab of this trait, edit the
+      action to include the appropriate damage type.</p>
+    value: >-
+      <p><em>You were exposed to an artifact or other powerful magic that
+      infused you with the power of
+      dragons.</em></p><p><strong>Benefits</strong>: Choose the acid, cold,
+      electricity, or fire spell descriptor when you take this trait. Once per
+      day for every 2 caster levels you have (minimum once per day), when you
+      cast a spell that has your chosen elemental descriptor, you can deal an
+      additional 1d4 points of damage of that energy type to one target of that
+      spell.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9470
+      pages: '3'
+  subType: trait
+  traitType: magic
+  uses:
+    maxFormula: max(1, floor(@spells.primary.cl.total /2))
+    per: day
+    value: 1
+type: feat

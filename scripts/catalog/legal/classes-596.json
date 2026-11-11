@@ -1,0 +1,1301 @@
+{
+  "ticket": "https://github.com/AndreasUnunger/EverythingPath/issues/596",
+  "launchSubset": {
+    "run": "#596 run B (Fighter class root and Bonus Feats)",
+    "statement": "MVP launch subset of #596: this inventory curates only pf1/WLqBCT5DqmGAx8Wd (Fighter); the ticket's other 2 keys stay remaining acceptance under #596.",
+    "curatedKeys": ["pf1/WLqBCT5DqmGAx8Wd"],
+    "remainingAcceptance": ["pf1/W3EjUgYLJ1D9qDKw", "pf1/W8dxwZ1CZiwLKsqr"]
+  },
+  "reviewedBy": "Sol (AI curator) for the owner",
+  "reviewedOn": "2026-11-01",
+  "pinnedSources": [
+    {
+      "repo": "pf1",
+      "tag": "v11.11",
+      "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d"
+    },
+    {
+      "repo": "pf1-content",
+      "tag": "11.4.0",
+      "commit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d"
+    }
+  ],
+  "comparisonSources": {
+    "allowed": ["PRD", "PCGen", "books"],
+    "prohibited": ["Archives of Nethys"],
+    "pcgenCommit": "25523dbcf10e86c280fc0f447167ea43d67419d3",
+    "pcgenFiles": [
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst",
+        "sha256": "b17d19a680aaef4080c639ed2755be591cefcc1e3174830b8d9db627fc03b31a"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+        "sha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst",
+        "sha256": "d28c573976075f25a6e5713fd112182c732edbea986a7f82bf0a87811a413928"
+      },
+      {
+        "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/_pathfinder_unchained.pcc",
+        "sha256": "d4c2838ec624feda51153baadb58b09de75a3d9beae78d0a1a9271ff5a891fce"
+      }
+    ],
+    "prd": {
+      "capture": "prd-2026-10-20",
+      "path": "pages/coreRulebook/classes/fighter.html",
+      "sha256": "80143dd3794455f289892ba9c6d9642b13c581e640021e949d0bef6c4e19441c",
+      "captureUrl": "https://web.archive.org/web/20180910110056id_/http://paizo.com:80/pathfinderRPG/prd/coreRulebook/classes/fighter.html"
+    },
+    "books": "No book PDFs are available; book-only evidence stays a named hold."
+  },
+  "reviewBoundary": "The complete pinned body and inert fields of the Fighter (Core Rulebook class) reviewed against the PRD capture prd-2026-10-20 and PCGen's Core Rulebook rows, with its 27 featuresByLevel rows validated through level 20. Confirmed, and dependently omitted while Weapon Training (#625) and its 9/13/17 increments stay held. Calculations the sheet does not support stay outstanding with their owners, never legal holds.",
+  "noticeRequirements": [
+    {
+      "book": "PZO1110",
+      "title": "Core Rulebook",
+      "status": "existing-reviewed",
+      "registryKeys": ["CRB"],
+      "holdId": null,
+      "candidates": ["pf1/WLqBCT5DqmGAx8Wd"]
+    },
+    {
+      "book": "PZO1131",
+      "title": "Pathfinder Unchained",
+      "status": "existing-reviewed",
+      "registryKeys": ["PZO1131"],
+      "holdId": null,
+      "candidates": ["pf1/WLqBCT5DqmGAx8Wd"]
+    }
+  ],
+  "noticeBoundary": "Observed minimum dependencies. The reviewed Core Rulebook notice (CRB, alias PZO1110) covers the class; the reviewed Pathfinder Unchained notice (PZO1131) covers the Artistry and Lore class skills kept as prose. No Registry, held-notices or clearance change.",
+  "candidates": [
+    {
+      "externalKey": "pf1/WLqBCT5DqmGAx8Wd",
+      "name": "Fighter",
+      "kind": "class",
+      "disposition": "dependently-omitted",
+      "assessmentStatus": "confirmed",
+      "rawType": "class",
+      "rawKey": "!items!WLqBCT5DqmGAx8Wd",
+      "source": {
+        "repo": "pf1",
+        "path": "packs/classes/fighter.WLqBCT5DqmGAx8Wd.yaml",
+        "sha256": "87abec6db438015247bbd7619642fa0188751767c0f9e9c241dbd2ff0302075e",
+        "location": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/classes/fighter.WLqBCT5DqmGAx8Wd.yaml"
+      },
+      "descriptionSha256": "99b86e781b98d95345a2f3a000e5f8f52eb0ae0e0030f81c43430878308aeb52",
+      "citedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "55-56"
+        }
+      ],
+      "importedSources": [
+        {
+          "book": "PZO1110",
+          "pages": "55-56"
+        }
+      ],
+      "requiredNotices": ["PZO1110", "PZO1131"],
+      "noticeRequirementsComplete": true,
+      "evidenceId": "classes-596-WLqBCT5DqmGAx8Wd",
+      "holdIds": [],
+      "noticeHoldIds": [],
+      "missingEvidence": null,
+      "dependentOmission": {
+        "expectedReason": "Dependent omission: everythingpath/fighter-weapon-training-13, everythingpath/fighter-weapon-training-17, everythingpath/fighter-weapon-training-9, pf1/RzEzudurxQFirFoF.",
+        "heldDependencies": [
+          "everythingpath/fighter-weapon-training-13",
+          "everythingpath/fighter-weapon-training-17",
+          "everythingpath/fighter-weapon-training-9",
+          "pf1/RzEzudurxQFirFoF"
+        ],
+        "owner": "#625 (Weapon Training: PZO9491, PZO9493 and three unsourced weapons, owner-owed before the final merge)",
+        "rule": "scripts/catalog/admission.ts omitUnavailableDependents: an admitted entry with a held direct dependency is dependently omitted (PRD Decision 17; #547 precedent). No hold is invented for the Fighter."
+      },
+      "comparison": {
+        "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst",
+        "line": 139,
+        "literalRow": "CLASS:Fighter\tHD:10\t\tTYPE:Base.PC\tMAXLEVEL:20\tSOURCEPAGE:p.55\tDEFINE:FighterLVL|0\tBONUS:COMBAT|BASEAB|classlevel(\"APPLIEDAS=NONEPIC\")|TYPE=Base.REPLACE|PREVAREQ:UseAlternateBABProgression,0\tBONUS:SAVE|BASE.Fortitude|classlevel(\"APPLIEDAS=NONEPIC\")/2+2|PREVAREQ:UseAlternateSaveProgression,0\tBONUS:SAVE|BASE.Reflex,BASE.Will|classlevel(\"APPLIEDAS=NONEPIC\")/3|PREVAREQ:UseAlternateSaveProgression,0\tBONUS:VAR|ClassBABFull|classlevel(\"APPLIEDAS=NONEPIC\")|PREVAREQ:UseFractionalBAB,1\tBONUS:VAR|FighterLVL|CL\tBONUS:VAR|ClassSaveGood_Fortitude|classlevel(\"APPLIEDAS=NONEPIC\")|PREVAREQ:UseFractionalSave,1\tBONUS:VAR|ClassSavePoor_Reflex|classlevel(\"APPLIEDAS=NONEPIC\")|PREVAREQ:UseFractionalSave,1\tBONUS:VAR|ClassSavePoor_Will|classlevel(\"APPLIEDAS=NONEPIC\")|PREVAREQ:UseFractionalSave,1\tROLE:Combat.Skill\tFACT:ClassType|PC\tFACT:Abb|Ftr",
+        "comparisonLineSha256": "0146b0869167c73ba6ad3a3e54fde553da6fe0e4f9773f157ae465714e7a557c",
+        "comparisonFileSha256": "b17d19a680aaef4080c639ed2755be591cefcc1e3174830b8d9db627fc03b31a",
+        "publicationTitle": "Core Rulebook",
+        "publicationAnchor": {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst",
+          "line": 3,
+          "text": "SOURCELONG:Core Rulebook",
+          "sha256": "b17d19a680aaef4080c639ed2755be591cefcc1e3174830b8d9db627fc03b31a"
+        },
+        "appliesToRootBody": true,
+        "completeDirectComparison": false,
+        "book": "PZO1110",
+        "evidenceRole": "partial-root-comparison",
+        "role": "Core Rulebook CLASS:Fighter row (SOURCEPAGE p.55): HD:10, BASEAB classlevel (full), Fortitude classlevel/2+2 (good), Reflex and Will classlevel/3 (poor).",
+        "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst#L139"
+      },
+      "additionalComparisonLeads": [
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst",
+          "line": 141,
+          "literalRow": "CLASS:Fighter\tSTARTSKILLPTS:FighterSkillPoints\tDEFINE:FighterSkillPoints|0\tBONUS:VAR|FighterSkillPoints|2",
+          "comparisonLineSha256": "9bce046c7c9351ec46d6d49894f0ad05783a57257c00bb539b5617757edb3934",
+          "comparisonFileSha256": "b17d19a680aaef4080c639ed2755be591cefcc1e3174830b8d9db627fc03b31a",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst",
+            "line": 3,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "b17d19a680aaef4080c639ed2755be591cefcc1e3174830b8d9db627fc03b31a"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Core Rulebook Fighter skill points: BONUS:VAR|FighterSkillPoints|2 (2 + Int per level).",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_classes.lst#L141"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+          "line": 2835,
+          "literalRow": "Fighter Core Class Skills\tKEY:Class Skills ~ Fighter\tCATEGORY:Internal\t\tCSKILL:Climb|TYPE=Craft|Handle Animal|Intimidate|Knowledge (Dungeoneering)|Knowledge (Engineering)|TYPE=Profession|Ride|Survival|Swim",
+          "comparisonLineSha256": "edb3108aa21b044e9a18ac7eaf072ce6971bf44bd897c0fd29e6b2c404002101",
+          "comparisonFileSha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+            "line": 3,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Core Rulebook Class Skills ~ Fighter: the same ten class skills as the PRD and the import.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst#L2835"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+          "line": 2816,
+          "literalRow": "Weapon and Armor Proficiency\tKEY:Weapon and Armor Proficiency ~ Fighter\tCATEGORY:Special Ability\tTYPE:FighterClassFeatures.SpecialQuality\tVISIBLE:DISPLAY\tDESC:A fighter is proficient with all simple and martial weapons and with all armor (heavy, medium, and light) and shields (including tower shields).\t\tDESC:&nl; NOTE:Due to an archetype or other alteration, the fighter proficiencies have been altered.|PREVAREQ:FighterProfsAltered,1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tABILITY:Internal|AUTOMATIC|Weapon Prof ~ Auto|Weapon Prof ~ Simple\tABILITY:Internal|AUTOMATIC|Armor Prof ~ Heavy|PREVAREQ:Fighter_CF_HeavyArmorProficiency,0\tABILITY:Internal|AUTOMATIC|Armor Prof ~ Medium|PREVAREQ:Fighter_CF_MediumArmorProficiency,0\tABILITY:Internal|AUTOMATIC|Armor Prof ~ Light|PREVAREQ:Fighter_CF_LightArmorProficiency,0\tABILITY:Internal|AUTOMATIC|Shield Prof|PREVAREQ:Fighter_CF_ShieldProficiency,0\tABILITY:Internal|AUTOMATIC|Shield Prof ~ Tower|PREVAREQ:Fighter_CF_TowerShieldProficiency,0\tABILITY:Internal|AUTOMATIC|Weapon Prof ~ Martial|PREVAREQ:Fighter_CF_Proficiencies,0",
+          "comparisonLineSha256": "46e07b938523bff763dcd97fdba035a5dfa4d3c8da0458fee38ed0b911afdb6e",
+          "comparisonFileSha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e",
+          "publicationTitle": "Core Rulebook",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst",
+            "line": 3,
+            "text": "SOURCELONG:Core Rulebook",
+            "sha256": "5e1035eb2a788d7d53f724b837696e7c05847128ecfa7aa7856e522abb03686e"
+          },
+          "appliesToRootBody": true,
+          "completeDirectComparison": false,
+          "book": "PZO1110",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Core Rulebook Weapon and Armor Proficiency ~ Fighter: simple and martial weapons, all armor and shields including tower shields (outstanding: not mapped).",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/core_rulebook/cr_abilities_class.lst#L2816"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst",
+          "line": 86,
+          "literalRow": "Artistry\t\t\t\t\t\t\t\tKEYSTAT:INT\t\t\t\t\t\tTYPE:Intelligence.Base.Background\t\tPREVAREQ:UsePathfinderUnchainedSkills,1",
+          "comparisonLineSha256": "cb8b6403a1217099dcb274a0cd97c5860d661dc00e92247b9bc4d06f3fcc3770",
+          "comparisonFileSha256": "d28c573976075f25a6e5713fd112182c732edbea986a7f82bf0a87811a413928",
+          "publicationTitle": "Pathfinder Unchained",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/_pathfinder_unchained.pcc",
+            "line": 14,
+            "text": "SOURCELONG:Pathfinder Unchained",
+            "sha256": "d4c2838ec624feda51153baadb58b09de75a3d9beae78d0a1a9271ff5a891fce"
+          },
+          "appliesToRootBody": false,
+          "completeDirectComparison": false,
+          "book": "PZO1131",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Pathfinder Unchained Artistry background skill: the origin of Foundry's `art` class skill.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst#L86"
+        },
+        {
+          "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst",
+          "line": 87,
+          "literalRow": "Lore (_______________________)\t\t\t\tKEYSTAT:INT\tUSEUNTRAINED:NO\tCLASSES:ALL\tTYPE:Intelligence.Base.Background.Lore\tPREVAREQ:UsePathfinderUnchainedSkills,1",
+          "comparisonLineSha256": "74bcf4dab2ea29d97e421d65f0b9d10091d31ff4c26bef3ddc473f4dfaace959",
+          "comparisonFileSha256": "d28c573976075f25a6e5713fd112182c732edbea986a7f82bf0a87811a413928",
+          "publicationTitle": "Pathfinder Unchained",
+          "publicationAnchor": {
+            "path": "data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/_pathfinder_unchained.pcc",
+            "line": 14,
+            "text": "SOURCELONG:Pathfinder Unchained",
+            "sha256": "d4c2838ec624feda51153baadb58b09de75a3d9beae78d0a1a9271ff5a891fce"
+          },
+          "appliesToRootBody": false,
+          "completeDirectComparison": false,
+          "book": "PZO1131",
+          "evidenceRole": "partial-root-comparison",
+          "role": "Pathfinder Unchained Lore background skill: the origin of Foundry's `lor` class skill.",
+          "comparisonLocation": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst#L87"
+        }
+      ],
+      "prdComparison": {
+        "capture": "prd-2026-10-20",
+        "path": "pages/coreRulebook/classes/fighter.html",
+        "pageSha256": "80143dd3794455f289892ba9c6d9642b13c581e640021e949d0bef6c4e19441c",
+        "captureUrl": "https://web.archive.org/web/20180910110056id_/http://paizo.com:80/pathfinderRPG/prd/coreRulebook/classes/fighter.html",
+        "lines": [
+          {
+            "line": 348,
+            "text": "\t\t\t\t<p><b>Role</b>: Fighters excel at combat&mdash;defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.</p>",
+            "sha256": "31ccd64fc201fedcac244c88a5494823690e138602423a8b721d684ddfc83514"
+          },
+          {
+            "line": 350,
+            "text": "\t\t\t\t<p><b>Hit Die</b>: d10.</p>",
+            "sha256": "c74e985832cf033d45d7d678e2cc6f329188dd7252714a737230d3c4520024d7"
+          },
+          {
+            "line": 352,
+            "text": "\t\t\t\t<p>The fighter's class skills are <a href=\"/pathfinderRPG/prd/coreRulebook/skills/climb.html#climb\" >Climb</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#strength\" >Str</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/craft.html#craft\" >Craft</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#intelligence\" >Int</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/handleAnimal.html#handle-animal\" >Handle Animal</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#charisma-new\" >Cha</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/intimidate.html#intimidate\" >Intimidate</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#charisma-new\" >Cha</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/knowledge.html#knowledge\" >Knowledge</a> (dungeoneering) (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#intelligence\" >Int</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/knowledge.html#knowledge\" >Knowledge</a> (engineering) (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#intelligence\" >Int</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/profession.html#profession\" >Profession</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#wisdom\" >Wis</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/ride.html#ride\" >Ride</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#dexterity\" >Dex</a>), <a href=\"/pathfinderRPG/prd/coreRulebook/skills/survival.html#survival\" >Survival</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#wisdom\" >Wis</a>), and <a href=\"/pathfinderRPG/prd/coreRulebook/skills/swim.html#swim\" >Swim</a> (<a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#strength\" >Str</a>). </p>",
+            "sha256": "9b61e4faed59b4ae9ace5a14140790f0df8565167581e48c874db8d20f230581"
+          },
+          {
+            "line": 353,
+            "text": "\t\t\t\t<p><b>Skill Ranks per Level</b>: 2 + <a href = \"/pathfinderRPG/prd/coreRulebook/gettingStarted.html#intelligence\" >Int</a> modifier.</p>",
+            "sha256": "5676689d70d1ee298541adb4c9e340251047da192152d28bd0ca6264354bacd6"
+          },
+          {
+            "line": 356,
+            "text": "<thead><tr><th>Level</th><th>Base Attack Bonus</th><th>Fort Save</th><th>Ref Save</th><th>Will Save</th><th>Special</th></tr></thead>",
+            "sha256": "f7ecc9a8e8ea36c1f86fc48cca8bf4c3f4b2c4de8f7fa295edda6870fd053cbe"
+          },
+          {
+            "line": 357,
+            "text": "<tr><td>1st</td><td>+1</td><td>+2</td><td>+0</td><td>+0</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a></td></tr>",
+            "sha256": "9bb0c37679530f9faa3bbc46d012035706b59e2174b6be3ce6403a6bf1c826c5"
+          },
+          {
+            "line": 358,
+            "text": "<tr><td>2nd</td><td>+2</td><td>+3</td><td>+0</td><td>+0</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#bravery\" >bravery</a> +1</td></tr>",
+            "sha256": "17dd4c02c5d6eb0f85f130594e64545d443dc0b754840a5f4507bb6ab9f2fcef"
+          },
+          {
+            "line": 359,
+            "text": "<tr><td>3rd</td><td>+3</td><td>+3</td><td>+1</td><td>+1</td><td style=\"white-space: normal;\"><a href=\"#armor-training\" >Armor training</a> 1</td></tr>",
+            "sha256": "d106eda2e3b2e0294c23c2c27ca05cb5f1f9a48732356fe9acaaa0c873aeb516"
+          },
+          {
+            "line": 360,
+            "text": "<tr><td>4th</td><td>+4</td><td>+4</td><td>+1</td><td>+1</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a></td></tr>",
+            "sha256": "5973b3b52c18f45f0e58eb9d405031df7ce1a6476e52d2f78d919c66c7f07871"
+          },
+          {
+            "line": 361,
+            "text": "<tr><td>5th</td><td>+5</td><td>+4</td><td>+1</td><td>+1</td><td style=\"white-space: normal;\"><a href=\"#weapon-training\" >Weapon training</a> 1</td></tr>",
+            "sha256": "74c669386435ef584b938334d60630e0ac75aa0afd14a617f9dc25dca7eb89ea"
+          },
+          {
+            "line": 362,
+            "text": "<tr><td>6th</td><td>+6/+1</td><td>+5</td><td>+2</td><td>+2</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#bravery\" >bravery</a> +2</td></tr>",
+            "sha256": "31512c2013ceeb5b317de56d2203c7fe1d97e65d10c3b39c1779506037756d67"
+          },
+          {
+            "line": 363,
+            "text": "<tr><td>7th</td><td>+7/+2</td><td>+5</td><td>+2</td><td>+2</td><td style=\"white-space: normal;\"><a href=\"#armor-training\" >Armor training</a> 2</td></tr>",
+            "sha256": "4a75e955b12df6f71ddb239e49293e5013414a69b2179b75b870bfb37d566b00"
+          },
+          {
+            "line": 364,
+            "text": "<tr><td>8th</td><td>+8/+3</td><td>+6</td><td>+2</td><td>+2</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a></td></tr>",
+            "sha256": "84056692d90ac8b6326d7c6ad2f1c578ac7c742fdb75ed0593e0b694c0375a77"
+          },
+          {
+            "line": 365,
+            "text": "<tr><td>9th</td><td>+9/+4</td><td>+6</td><td>+3</td><td>+3</td><td style=\"white-space: normal;\"><a href=\"#weapon-training\" >Weapon training</a> 2</td></tr>",
+            "sha256": "ed39bbc34382cb1bace2016affe3479a556673e36cc847b397f751facd26366d"
+          },
+          {
+            "line": 366,
+            "text": "<tr><td>10th</td><td>+10/+5</td><td>+7</td><td>+3</td><td>+3</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#bravery\" >bravery</a> +3</td></tr>",
+            "sha256": "607b6d2c66bd2393bbdd1735dcfcd36855e608d08ffd04db3134eeb99330d959"
+          },
+          {
+            "line": 367,
+            "text": "<tr><td>11th</td><td>+11/+6/+1</td><td>+7</td><td>+3</td><td>+3</td><td style=\"white-space: normal;\"><a href=\"#armor-training\" >Armor training</a> 3</td></tr>",
+            "sha256": "86e913a692f47b22c6beaa346f38c64111329caf88ceae89b6c643645feda9e8"
+          },
+          {
+            "line": 368,
+            "text": "<tr><td>12th</td><td>+12/+7/+2</td><td>+8</td><td>+4</td><td>+4</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a></td></tr>",
+            "sha256": "3a0876c7ad232b0fd28887143b8e247adc84eec9982110029d2464f36fa2e0e4"
+          },
+          {
+            "line": 369,
+            "text": "<tr><td>13th</td><td>+13/+8/+3</td><td>+8</td><td>+4</td><td>+4</td><td style=\"white-space: normal;\"><a href=\"#weapon-training\" >Weapon training</a> 3</td></tr>",
+            "sha256": "5261c9edac8824e8336140e4a64b37094814b3f79348b134d02e49cfd028446b"
+          },
+          {
+            "line": 370,
+            "text": "<tr><td>14th</td><td>+14/+9/+4</td><td>+9</td><td>+4</td><td>+4</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#bravery\" >bravery</a> +4</td></tr>",
+            "sha256": "6aff1c6c7fe1538e8ab498bf4fc8597f8b1f896ab9d11d28e74def19298469f9"
+          },
+          {
+            "line": 371,
+            "text": "<tr><td>15th</td><td>+15/+10/+5</td><td>+9</td><td>+5</td><td>+5</td><td style=\"white-space: normal;\"><a href=\"#armor-training\" >Armor training</a> 4</td></tr>",
+            "sha256": "f08c15b5eadde32d990308001cf1a5ea3ecb08ba62983dbe5762a650e6f3d9d2"
+          },
+          {
+            "line": 372,
+            "text": "<tr><td>16th</td><td>+16/+11/+6/+1</td><td>+10</td><td>+5</td><td>+5</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a></td></tr>",
+            "sha256": "29d1609e67881c4be92670d866aec4ea80a2fcabd00e0bdc071b08931f0fe901"
+          },
+          {
+            "line": 373,
+            "text": "<tr><td>17th</td><td>+17/+12/+7/+2</td><td>+10</td><td>+5</td><td>+5</td><td style=\"white-space: normal;\"><a href=\"#weapon-training\" >Weapon training</a> 4</td></tr>",
+            "sha256": "9341fa45df740216822f8dce13614a14370dc49135ce1fa1e9262b61969d2319"
+          },
+          {
+            "line": 374,
+            "text": "<tr><td>18th</td><td>+18/+13/+8/+3</td><td>+11</td><td>+6</td><td>+6</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#bravery\" >bravery</a> +5</td></tr>",
+            "sha256": "a65082eefe7f5d270507fda16a93bfa61e95ee4b1004bd4c137e8f5c9204c89a"
+          },
+          {
+            "line": 375,
+            "text": "<tr><td>19th</td><td>+19/+14/+9/+4</td><td>+11</td><td>+6</td><td>+6</td><td style=\"white-space: normal;\"><a href=\"#armor-mastery\" >Armor mastery</a></td></tr>",
+            "sha256": "ce4edcf24ca42279de6aeee7449a135fa2aefa363ed3ac9eb1eb8f4bce16ec17"
+          },
+          {
+            "line": 376,
+            "text": "<tr><td>20th</td><td>+20/+15/+10/+5</td><td>+12</td><td>+6</td><td>+6</td><td style=\"white-space: normal;\"><a href=\"#bonus-feats-fighter\" >Bonus feat</a>, <a href=\"#weapon-mastery\" >weapon mastery</a></td></tr></table></div>",
+            "sha256": "29ea4675c349c0a752f0fa6d0a5ebdbdcc9d82e385bb20c3f9a91ff6838ade6a"
+          },
+          {
+            "line": 379,
+            "text": "\t\t\t\t<p><b>Weapon and Armor Proficiency</b>: A fighter is proficient with all <a href = \"/pathfinderRPG/prd/coreRulebook/equipment.html#simple-martial-and-exotic-weapons\" >simple</a> and <a href = \"/pathfinderRPG/prd/coreRulebook/equipment.html#simple-martial-and-exotic-weapons\" >martial</a> weapons and with all armor (heavy, light, and medium) and shields (including tower shields).</p>",
+            "sha256": "060258dcd9368d61b23348897815a94fea56337f86f947e659bf15feb06bbecd"
+          }
+        ],
+        "book": "PZO1110",
+        "completeDirectComparison": false,
+        "role": "Fighter: Role (:348) and class skills (:352) match the body; hit die (:350), skill ranks (:353), the class table (:356-376) and proficiencies (:379) are compared with the imported detail and gameContent. The body omits the PRD's introduction and Alignment lines, which state no imported rule."
+      },
+      "classReview": {
+        "hitDie": {
+          "imported": 10,
+          "prd": "d10 (:350)",
+          "pcgen": "HD:10 (cr_classes.lst:139)"
+        },
+        "bab": {
+          "imported": "full",
+          "prd": "+1 at 1st to +20 at 20th (:357-376)",
+          "pcgen": "BASEAB classlevel (cr_classes.lst:139)"
+        },
+        "saves": {
+          "imported": {
+            "fort": "good",
+            "ref": "poor",
+            "will": "poor"
+          },
+          "prd": "Fort +2 + level/2, Ref and Will level/3 (:357-376)",
+          "pcgen": "Fortitude classlevel/2+2, Reflex and Will classlevel/3 (cr_classes.lst:139)"
+        },
+        "skillRanksPerLevel": {
+          "imported": 2,
+          "prd": "2 + Int modifier (:353)",
+          "pcgen": "BONUS:VAR|FighterSkillPoints|2 (cr_classes.lst:141)"
+        },
+        "classSkills": {
+          "imported": [
+            "skill.clm",
+            "skill.crf",
+            "skill.han",
+            "skill.int",
+            "skill.kdu",
+            "skill.ken",
+            "skill.pro",
+            "skill.rid",
+            "skill.sur",
+            "skill.swm"
+          ],
+          "prd": "Climb, Craft, Handle Animal, Intimidate, Knowledge (dungeoneering), Knowledge (engineering), Profession, Ride, Survival, Swim (:352)",
+          "prose": ["art", "lor"]
+        },
+        "table": [
+          {
+            "level": 1,
+            "bab": "+1",
+            "fort": "+2",
+            "ref": "+0",
+            "will": "+0",
+            "special": "Bonus feat"
+          },
+          {
+            "level": 2,
+            "bab": "+2",
+            "fort": "+3",
+            "ref": "+0",
+            "will": "+0",
+            "special": "Bonus feat, bravery +1"
+          },
+          {
+            "level": 3,
+            "bab": "+3",
+            "fort": "+3",
+            "ref": "+1",
+            "will": "+1",
+            "special": "Armor training 1"
+          },
+          {
+            "level": 4,
+            "bab": "+4",
+            "fort": "+4",
+            "ref": "+1",
+            "will": "+1",
+            "special": "Bonus feat"
+          },
+          {
+            "level": 5,
+            "bab": "+5",
+            "fort": "+4",
+            "ref": "+1",
+            "will": "+1",
+            "special": "Weapon training 1"
+          },
+          {
+            "level": 6,
+            "bab": "+6/+1",
+            "fort": "+5",
+            "ref": "+2",
+            "will": "+2",
+            "special": "Bonus feat, bravery +2"
+          },
+          {
+            "level": 7,
+            "bab": "+7/+2",
+            "fort": "+5",
+            "ref": "+2",
+            "will": "+2",
+            "special": "Armor training 2"
+          },
+          {
+            "level": 8,
+            "bab": "+8/+3",
+            "fort": "+6",
+            "ref": "+2",
+            "will": "+2",
+            "special": "Bonus feat"
+          },
+          {
+            "level": 9,
+            "bab": "+9/+4",
+            "fort": "+6",
+            "ref": "+3",
+            "will": "+3",
+            "special": "Weapon training 2"
+          },
+          {
+            "level": 10,
+            "bab": "+10/+5",
+            "fort": "+7",
+            "ref": "+3",
+            "will": "+3",
+            "special": "Bonus feat, bravery +3"
+          },
+          {
+            "level": 11,
+            "bab": "+11/+6/+1",
+            "fort": "+7",
+            "ref": "+3",
+            "will": "+3",
+            "special": "Armor training 3"
+          },
+          {
+            "level": 12,
+            "bab": "+12/+7/+2",
+            "fort": "+8",
+            "ref": "+4",
+            "will": "+4",
+            "special": "Bonus feat"
+          },
+          {
+            "level": 13,
+            "bab": "+13/+8/+3",
+            "fort": "+8",
+            "ref": "+4",
+            "will": "+4",
+            "special": "Weapon training 3"
+          },
+          {
+            "level": 14,
+            "bab": "+14/+9/+4",
+            "fort": "+9",
+            "ref": "+4",
+            "will": "+4",
+            "special": "Bonus feat, bravery +4"
+          },
+          {
+            "level": 15,
+            "bab": "+15/+10/+5",
+            "fort": "+9",
+            "ref": "+5",
+            "will": "+5",
+            "special": "Armor training 4"
+          },
+          {
+            "level": 16,
+            "bab": "+16/+11/+6/+1",
+            "fort": "+10",
+            "ref": "+5",
+            "will": "+5",
+            "special": "Bonus feat"
+          },
+          {
+            "level": 17,
+            "bab": "+17/+12/+7/+2",
+            "fort": "+10",
+            "ref": "+5",
+            "will": "+5",
+            "special": "Weapon training 4"
+          },
+          {
+            "level": 18,
+            "bab": "+18/+13/+8/+3",
+            "fort": "+11",
+            "ref": "+6",
+            "will": "+6",
+            "special": "Bonus feat, bravery +5"
+          },
+          {
+            "level": 19,
+            "bab": "+19/+14/+9/+4",
+            "fort": "+11",
+            "ref": "+6",
+            "will": "+6",
+            "special": "Armor mastery"
+          },
+          {
+            "level": 20,
+            "bab": "+20/+15/+10/+5",
+            "fort": "+12",
+            "ref": "+6",
+            "will": "+6",
+            "special": "Bonus feat, weapon mastery"
+          }
+        ],
+        "featuresByLevel": [
+          {
+            "classLevel": 1,
+            "externalKey": "pf1/CV8BsY3ciUb9TA1Y",
+            "name": "Bonus Feats",
+            "owner": "#613",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 2,
+            "externalKey": "everythingpath/fighter-bonus-feats-2",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 2,
+            "externalKey": "pf1/h0Brxw6khcjlEf1T",
+            "name": "Bravery",
+            "owner": "#636",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 3,
+            "externalKey": "pf1/5JFfSqLMCpbRmERa",
+            "name": "Armor Training",
+            "owner": "#608",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 4,
+            "externalKey": "everythingpath/fighter-bonus-feats-4",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 5,
+            "externalKey": "pf1/RzEzudurxQFirFoF",
+            "name": "Weapon Training",
+            "owner": "#625",
+            "fullPreviewAdmission": "held"
+          },
+          {
+            "classLevel": 6,
+            "externalKey": "everythingpath/fighter-bonus-feats-6",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 6,
+            "externalKey": "everythingpath/fighter-bravery-6",
+            "name": "Bravery +2",
+            "owner": "#636 (increment of Bravery)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 7,
+            "externalKey": "everythingpath/fighter-armor-training-7",
+            "name": "Armor Training 2",
+            "owner": "#608 (increment of Armor Training)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 7,
+            "externalKey": "pf1/iqeyCQIIVnNt0p3h",
+            "name": "Armor Training (Heavy Armor)",
+            "owner": "#637",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 8,
+            "externalKey": "everythingpath/fighter-bonus-feats-8",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 9,
+            "externalKey": "everythingpath/fighter-weapon-training-9",
+            "name": "Weapon Training 2",
+            "owner": "#625 (increment of Weapon Training)",
+            "fullPreviewAdmission": "held"
+          },
+          {
+            "classLevel": 10,
+            "externalKey": "everythingpath/fighter-bonus-feats-10",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 10,
+            "externalKey": "everythingpath/fighter-bravery-10",
+            "name": "Bravery +3",
+            "owner": "#636 (increment of Bravery)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 11,
+            "externalKey": "everythingpath/fighter-armor-training-11",
+            "name": "Armor Training 3",
+            "owner": "#608 (increment of Armor Training)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 12,
+            "externalKey": "everythingpath/fighter-bonus-feats-12",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 13,
+            "externalKey": "everythingpath/fighter-weapon-training-13",
+            "name": "Weapon Training 3",
+            "owner": "#625 (increment of Weapon Training)",
+            "fullPreviewAdmission": "held"
+          },
+          {
+            "classLevel": 14,
+            "externalKey": "everythingpath/fighter-bonus-feats-14",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 14,
+            "externalKey": "everythingpath/fighter-bravery-14",
+            "name": "Bravery +4",
+            "owner": "#636 (increment of Bravery)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 15,
+            "externalKey": "everythingpath/fighter-armor-training-15",
+            "name": "Armor Training 4",
+            "owner": "#608 (increment of Armor Training)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 16,
+            "externalKey": "everythingpath/fighter-bonus-feats-16",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 17,
+            "externalKey": "everythingpath/fighter-weapon-training-17",
+            "name": "Weapon Training 4",
+            "owner": "#625 (increment of Weapon Training)",
+            "fullPreviewAdmission": "held"
+          },
+          {
+            "classLevel": 18,
+            "externalKey": "everythingpath/fighter-bonus-feats-18",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 18,
+            "externalKey": "everythingpath/fighter-bravery-18",
+            "name": "Bravery +5",
+            "owner": "#636 (increment of Bravery)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 19,
+            "externalKey": "pf1/NwTe1Q2utlsmOAqK",
+            "name": "Armor Mastery",
+            "owner": "#622",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 20,
+            "externalKey": "everythingpath/fighter-bonus-feats-20",
+            "name": "Bonus Feat",
+            "owner": "#613 (increment of Bonus Feats)",
+            "fullPreviewAdmission": "admitted"
+          },
+          {
+            "classLevel": 20,
+            "externalKey": "pf1/McXAM1BoPHZLO1n4",
+            "name": "Weapon Mastery",
+            "owner": "#621",
+            "fullPreviewAdmission": "admitted"
+          }
+        ],
+        "featureCounts": {
+          "bonusFeats": 11,
+          "bravery": 5,
+          "armorTraining": 4,
+          "weaponTraining": 4,
+          "heavyArmor": 1,
+          "armorMastery": 1,
+          "weaponMastery": 1
+        },
+        "validatedThrough": 20
+      },
+      "grantEvidence": {
+        "pcgen": [],
+        "foundry": null,
+        "role": "A class is granted by selection, not by another entry."
+      },
+      "rejectedRootComparisonEvidence": [],
+      "inheritedRuleNotices": [
+        {
+          "book": "PZO1110",
+          "rule": "CRB fighter class: hit die, base attack and saves, class skills, skill ranks and class features (Core Rulebook pp. 55-56)",
+          "location": "https://web.archive.org/web/20180910110056id_/http://paizo.com:80/pathfinderRPG/prd/coreRulebook/classes/fighter.html",
+          "comparisonBasis": "Exact class in the reviewed body and its PRD Core Rulebook section; minimum notice dependency, not complete origin proof."
+        },
+        {
+          "book": "PZO1131",
+          "rule": "Artistry and Lore background class skills (Pathfinder Unchained background skills), independently identified by PCGen pu_skills.lst:86-87",
+          "location": "https://github.com/PCGen/pcgen/blob/25523dbcf10e86c280fc0f447167ea43d67419d3/data/pathfinder/paizo/roleplaying_game/pathfinder_unchained/pu_skills.lst#L86-L87",
+          "comparisonBasis": "Exact named skills in the pinned record's classSkills (art, lor); kept as prose, minimum notice dependency."
+        }
+      ],
+      "inheritedRuleSourceEvidence": [],
+      "inheritedRuleComparisonEvidence": [],
+      "inheritedRuleUnresolvedOrigins": [],
+      "linkedContentReview": [
+        {
+          "externalKey": "pf1/CV8BsY3ciUb9TA1Y",
+          "name": "Bonus Feats",
+          "classLevel": 1,
+          "owner": "#613",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-2",
+          "name": "Bonus Feat",
+          "classLevel": 2,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/h0Brxw6khcjlEf1T",
+          "name": "Bravery",
+          "classLevel": 2,
+          "owner": "#636",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/5JFfSqLMCpbRmERa",
+          "name": "Armor Training",
+          "classLevel": 3,
+          "owner": "#608",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-4",
+          "name": "Bonus Feat",
+          "classLevel": 4,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/RzEzudurxQFirFoF",
+          "name": "Weapon Training",
+          "classLevel": 5,
+          "owner": "#625",
+          "fullPreviewAdmission": "held"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-6",
+          "name": "Bonus Feat",
+          "classLevel": 6,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bravery-6",
+          "name": "Bravery +2",
+          "classLevel": 6,
+          "owner": "#636 (increment of Bravery)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-armor-training-7",
+          "name": "Armor Training 2",
+          "classLevel": 7,
+          "owner": "#608 (increment of Armor Training)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/iqeyCQIIVnNt0p3h",
+          "name": "Armor Training (Heavy Armor)",
+          "classLevel": 7,
+          "owner": "#637",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-8",
+          "name": "Bonus Feat",
+          "classLevel": 8,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-weapon-training-9",
+          "name": "Weapon Training 2",
+          "classLevel": 9,
+          "owner": "#625 (increment of Weapon Training)",
+          "fullPreviewAdmission": "held"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-10",
+          "name": "Bonus Feat",
+          "classLevel": 10,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bravery-10",
+          "name": "Bravery +3",
+          "classLevel": 10,
+          "owner": "#636 (increment of Bravery)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-armor-training-11",
+          "name": "Armor Training 3",
+          "classLevel": 11,
+          "owner": "#608 (increment of Armor Training)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-12",
+          "name": "Bonus Feat",
+          "classLevel": 12,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-weapon-training-13",
+          "name": "Weapon Training 3",
+          "classLevel": 13,
+          "owner": "#625 (increment of Weapon Training)",
+          "fullPreviewAdmission": "held"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-14",
+          "name": "Bonus Feat",
+          "classLevel": 14,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bravery-14",
+          "name": "Bravery +4",
+          "classLevel": 14,
+          "owner": "#636 (increment of Bravery)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-armor-training-15",
+          "name": "Armor Training 4",
+          "classLevel": 15,
+          "owner": "#608 (increment of Armor Training)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-16",
+          "name": "Bonus Feat",
+          "classLevel": 16,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-weapon-training-17",
+          "name": "Weapon Training 4",
+          "classLevel": 17,
+          "owner": "#625 (increment of Weapon Training)",
+          "fullPreviewAdmission": "held"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-18",
+          "name": "Bonus Feat",
+          "classLevel": 18,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bravery-18",
+          "name": "Bravery +5",
+          "classLevel": 18,
+          "owner": "#636 (increment of Bravery)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/NwTe1Q2utlsmOAqK",
+          "name": "Armor Mastery",
+          "classLevel": 19,
+          "owner": "#622",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "everythingpath/fighter-bonus-feats-20",
+          "name": "Bonus Feat",
+          "classLevel": 20,
+          "owner": "#613 (increment of Bonus Feats)",
+          "fullPreviewAdmission": "admitted"
+        },
+        {
+          "externalKey": "pf1/McXAM1BoPHZLO1n4",
+          "name": "Weapon Mastery",
+          "classLevel": 20,
+          "owner": "#621",
+          "fullPreviewAdmission": "admitted"
+        }
+      ],
+      "sourceFields": {
+        "armorProf": ["lgt", "med", "hvy", "shl", "twr"],
+        "bab": "high",
+        "classSkills": {
+          "art": true,
+          "clm": true,
+          "crf": true,
+          "han": true,
+          "int": true,
+          "kdu": true,
+          "ken": true,
+          "lor": true,
+          "pro": true,
+          "rid": true,
+          "sur": true,
+          "swm": true
+        },
+        "description": {
+          "value": "<p><strong>Role</strong>: Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.</p><h2>Class Skills</h2><p>The fighter’s class skills are Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (engineering) (Int), Profession (Wis), Ride (Dex), Survival (Wis), and Swim (Str).</p>"
+        },
+        "hd": 10,
+        "hp": 10,
+        "links": {
+          "classAssociations": [
+            {
+              "level": 1,
+              "uuid": "Compendium.pf1.class-abilities.Item.CV8BsY3ciUb9TA1Y"
+            },
+            {
+              "level": 2,
+              "uuid": "Compendium.pf1.class-abilities.Item.h0Brxw6khcjlEf1T"
+            },
+            {
+              "level": 3,
+              "uuid": "Compendium.pf1.class-abilities.Item.5JFfSqLMCpbRmERa"
+            },
+            {
+              "level": 5,
+              "uuid": "Compendium.pf1.class-abilities.Item.RzEzudurxQFirFoF"
+            },
+            {
+              "level": 7,
+              "uuid": "Compendium.pf1.class-abilities.Item.iqeyCQIIVnNt0p3h"
+            },
+            {
+              "level": 20,
+              "uuid": "Compendium.pf1.class-abilities.Item.McXAM1BoPHZLO1n4"
+            }
+          ]
+        },
+        "savingThrows": {
+          "fort": {
+            "value": "high"
+          }
+        },
+        "skillsPerLevel": 2,
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "55-56"
+          }
+        ],
+        "tag": "fighter",
+        "wealth": "5d6 * 10",
+        "weaponProf": ["simple", "martial"]
+      },
+      "fullSourceDescriptionReviewed": true,
+      "rationale": "Complete CRB class (pp. 55-56) compared with the PRD capture (coreRulebook/classes/fighter.html): d10 (:350), the ten class skills (:352), 2 + Int skill ranks (:353) and Table: Fighter (:356-376: full base attack bonus, good Fortitude, poor Reflex and Will), matching the imported hitDie 10, bab full, saves fort good / ref poor / will poor, skillRanksPerLevel 2 and classSkills; PCGen's Core Rulebook rows agree (cr_classes.lst:139 HD:10 and BAB/save formulas, :141 two skill points, cr_abilities_class.lst:2835 Class Skills ~ Fighter). S3's reviewed schedule gives 27 featuresByLevel rows, each checked against the table: 11 bonus feats (1st and every even level), Bravery 2/6/10/14/18, Armor Training 3/7/11/15, Weapon Training 5/9/13/17, Heavy Armor at 7 (a kept Foundry non-row), Armor Mastery at 19 and Weapon Mastery at 20. Foundry's class skills add Artistry and Lore, Pathfinder Unchained background skills (PCGen pu_skills.lst:86-87), kept as prose, so PZO1131 is required beside PZO1110; both are reviewed. Weapon and armor proficiencies (:379) stay in gameContent: an outstanding calculation. The binding covers the whole 28-body closure, Bravery's Note included. The Fighter is dependently omitted while Weapon Training (#625) and its 9/13/17 increments stay held on owner-owed evidence; it admits with no re-review once that assessment is confirmed and its body is unchanged.",
+      "mechanicsReview": {
+        "externalKey": "pf1/WLqBCT5DqmGAx8Wd",
+        "name": "Fighter",
+        "reviewedBy": "Sol (AI curator) for the owner",
+        "reviewedOn": "2026-11-01",
+        "descriptionText": "<p><strong>Role</strong>: Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.</p><h2>Class Skills</h2><p>The fighter’s class skills are Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (engineering) (Int), Profession (Wis), Ride (Dex), Survival (Wis), and Swim (Str).</p>",
+        "curationRecords": [
+          {
+            "externalKey": "pf1/WLqBCT5DqmGAx8Wd",
+            "kind": "description",
+            "target": "description",
+            "text": "<p><strong>Role</strong>: Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.</p><h2>Class Skills</h2><p>The fighter’s class skills are Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (engineering) (Int), Profession (Wis), Ride (Dex), Survival (Wis), and Swim (Str).</p>",
+            "textSha256": "99b86e781b98d95345a2f3a000e5f8f52eb0ae0e0030f81c43430878308aeb52",
+            "status": "checked",
+            "outputs": [],
+            "rationale": "#596 (run B) complete pinned body and inert fields reviewed at https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/418761d2e16a6037c0156bb4a241f7cea5a2986d/packs/classes/fighter.WLqBCT5DqmGAx8Wd.yaml. Covered, no output: the Role paragraph is flavour text with no rule, and the Class Skills paragraph is supplied by the imported detail.classSkills (the ten CRB class skills, PRD coreRulebook/classes/fighter.html:352); Foundry's extra Artistry and Lore class skills (Pathfinder Unchained background skills) stay prose as the importer reports. Attribution is assessed separately.",
+            "diagnostics": [],
+            "reviewedBy": "Sol (AI curator) for the owner",
+            "reviewedOn": "2026-11-01",
+            "seedBindings": []
+          }
+        ],
+        "mappedFacts": {
+          "sources": [
+            {
+              "book": "PZO1110",
+              "pages": "55-56"
+            }
+          ],
+          "detail": {
+            "kind": "class",
+            "hitDie": 10,
+            "bab": "full",
+            "saves": {
+              "fort": "good",
+              "ref": "poor",
+              "will": "poor"
+            },
+            "classSkills": [
+              "skill.clm",
+              "skill.crf",
+              "skill.han",
+              "skill.int",
+              "skill.kdu",
+              "skill.ken",
+              "skill.pro",
+              "skill.rid",
+              "skill.sur",
+              "skill.swm"
+            ],
+            "tag": "fighter",
+            "classKind": "base",
+            "skillRanksPerLevel": 2,
+            "featuresByLevel": [
+              {
+                "classLevel": 1,
+                "externalKey": "pf1/CV8BsY3ciUb9TA1Y"
+              },
+              {
+                "classLevel": 2,
+                "externalKey": "everythingpath/fighter-bonus-feats-2"
+              },
+              {
+                "classLevel": 2,
+                "externalKey": "pf1/h0Brxw6khcjlEf1T"
+              },
+              {
+                "classLevel": 3,
+                "externalKey": "pf1/5JFfSqLMCpbRmERa"
+              },
+              {
+                "classLevel": 4,
+                "externalKey": "everythingpath/fighter-bonus-feats-4"
+              },
+              {
+                "classLevel": 5,
+                "externalKey": "pf1/RzEzudurxQFirFoF"
+              },
+              {
+                "classLevel": 6,
+                "externalKey": "everythingpath/fighter-bonus-feats-6"
+              },
+              {
+                "classLevel": 6,
+                "externalKey": "everythingpath/fighter-bravery-6"
+              },
+              {
+                "classLevel": 7,
+                "externalKey": "everythingpath/fighter-armor-training-7"
+              },
+              {
+                "classLevel": 7,
+                "externalKey": "pf1/iqeyCQIIVnNt0p3h"
+              },
+              {
+                "classLevel": 8,
+                "externalKey": "everythingpath/fighter-bonus-feats-8"
+              },
+              {
+                "classLevel": 9,
+                "externalKey": "everythingpath/fighter-weapon-training-9"
+              },
+              {
+                "classLevel": 10,
+                "externalKey": "everythingpath/fighter-bonus-feats-10"
+              },
+              {
+                "classLevel": 10,
+                "externalKey": "everythingpath/fighter-bravery-10"
+              },
+              {
+                "classLevel": 11,
+                "externalKey": "everythingpath/fighter-armor-training-11"
+              },
+              {
+                "classLevel": 12,
+                "externalKey": "everythingpath/fighter-bonus-feats-12"
+              },
+              {
+                "classLevel": 13,
+                "externalKey": "everythingpath/fighter-weapon-training-13"
+              },
+              {
+                "classLevel": 14,
+                "externalKey": "everythingpath/fighter-bonus-feats-14"
+              },
+              {
+                "classLevel": 14,
+                "externalKey": "everythingpath/fighter-bravery-14"
+              },
+              {
+                "classLevel": 15,
+                "externalKey": "everythingpath/fighter-armor-training-15"
+              },
+              {
+                "classLevel": 16,
+                "externalKey": "everythingpath/fighter-bonus-feats-16"
+              },
+              {
+                "classLevel": 17,
+                "externalKey": "everythingpath/fighter-weapon-training-17"
+              },
+              {
+                "classLevel": 18,
+                "externalKey": "everythingpath/fighter-bonus-feats-18"
+              },
+              {
+                "classLevel": 18,
+                "externalKey": "everythingpath/fighter-bravery-18"
+              },
+              {
+                "classLevel": 19,
+                "externalKey": "pf1/NwTe1Q2utlsmOAqK"
+              },
+              {
+                "classLevel": 20,
+                "externalKey": "everythingpath/fighter-bonus-feats-20"
+              },
+              {
+                "classLevel": 20,
+                "externalKey": "pf1/McXAM1BoPHZLO1n4"
+              }
+            ]
+          },
+          "modifiers": [],
+          "situationalNotes": [],
+          "unsupportedFields": ["classSkills", "classSkills", "gameContent"]
+        },
+        "bindingClosure": {
+          "bodies": 28,
+          "rule": "collectContentClosure (scripts/catalog/admission.ts): the class and every featuresByLevel row, each increment reaching its parent through attributionFrom; Bravery's curated Note (note will, 9a041362...) and Bonus Feats' retraining Note are inside it.",
+          "staleWhen": "Any later curation of a row (for example a Weapon Training Note) changes the content fingerprint and needs a re-bind."
+        },
+        "proficiencyReview": {
+          "grants": [],
+          "outstandingFacts": [
+            "Simple and martial weapons, all armor and shields including tower shields (PRD :379; Foundry weaponProf simple/martial, armorProf lgt/med/hvy/shl/twr) stay in gameContent"
+          ],
+          "review": "The importer keeps the class proficiencies only in gameContent (unmapped), so they are an outstanding calculation, not a hold."
+        },
+        "outstandingCalculations": [
+          {
+            "calculation": "Class weapon and armor proficiencies (simple and martial weapons, all armor, shields and tower shields; PRD :379)",
+            "owner": "#716",
+            "reason": "The importer keeps them in gameContent only; no class proficiency facts reach the sheet."
+          },
+          {
+            "calculation": "Feat retraining at 4th, 8th, 12th, 16th and 20th level",
+            "owner": "#716",
+            "reason": "Bonus Feats' Note states it (#613); no retraining action."
+          },
+          {
+            "calculation": "A non-Combat feat in a Fighter bonus feat slot warns rather than refuses",
+            "owner": "#313",
+            "reason": "The sheet warns, never refuses, on a feat of another type."
+          },
+          {
+            "calculation": "Weapon Training's later groups (9th, 13th, 17th) and its CMB and CMD bonuses",
+            "owner": "#716",
+            "reason": "Held with Weapon Training (#625); class-abilities-625.json lists them."
+          }
+        ],
+        "sourceDiscrepancies": [
+          "Foundry's classSkills add art and lor (Pathfinder Unchained background skills) to the CRB list; its own description lists only the CRB ten. Recorded; kept as prose.",
+          "Foundry cites pages 55-56; the class table and features run to p. 56 and S3's schedule cites pp. 55-57. Recorded, not resolved."
+        ],
+        "sharedSourceReview": "No rule equates this body with another effect for Source stacking; no sourceKey. Exact Rule Identity retained."
+      },
+      "launchSubset": true,
+      "currentBinding": {
+        "contentFingerprint": "a52cdb454ef1c4b94f4e45d831cf57bb15f116d3ef01a74197aa77e8f644cdae",
+        "mappingFingerprint": "47e4055c0b54d309a0b1fb00e8ad4152add32a9ffcda389b9fdbd1c8227849d3",
+        "evidenceFingerprints": {
+          "classes-596-WLqBCT5DqmGAx8Wd": "6a63493773776d1c3d5f84dc71697c45fb59818b9b69faeeb3db91a6b1261f0c"
+        },
+        "noticeFingerprints": {
+          "PZO1110": "3b174532c84220c604c9ccadd857165a0b05c3abf1a400f4bdbbdcefb053cf91",
+          "PZO1131": "d5fefe86a85b0a2eef0315b5eac3cad22cadf28ddafcf2f983a6cb1974c4a925"
+        }
+      }
+    }
+  ],
+  "counts": {
+    "total": 1,
+    "admitted": 0,
+    "held": 0,
+    "dependentlyOmitted": 1,
+    "unsupportedProseOnly": 0,
+    "excluded": 0,
+    "excludedFolders": 0,
+    "recordLevel35Holds": 0
+  },
+  "retainedExceptions": []
+}

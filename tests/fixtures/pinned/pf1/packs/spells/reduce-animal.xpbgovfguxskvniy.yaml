@@ -1,0 +1,45 @@
+_id: xpbgovfguxskvniy
+_key: '!items!xpbgovfguxskvniy'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Reduce Animal
+system:
+  actions:
+    - _id: pg9c51cokjbv25e3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one willing animal of Small, Medium, Large, or Huge size
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.2y9e1l6zso9tdg0a]{reduce person}, except
+      that it affects a single willing animal. Reduce the damage dealt by the
+      animal's natural attacks as appropriate for its new size (see Chapter 6
+      how to adjust damage for size).</p>
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      ranger: 3
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '330'
+  sr: false
+type: spell
