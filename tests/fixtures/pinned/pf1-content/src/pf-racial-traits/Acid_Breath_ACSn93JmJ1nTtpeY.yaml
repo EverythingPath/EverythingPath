@@ -1,0 +1,59 @@
+_id: ACSn93JmJ1nTtpeY
+_key: '!items!ACSn93JmJ1nTtpeY'
+_stats:
+  coreVersion: '12.331'
+folder: NdqSKNr56WP9EuED
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Acid Breath
+system:
+  abilityType: su
+  actions:
+    - _id: aBP4Sju8K35x3Osm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5-foot cone of acidic water
+      damage:
+        parts:
+          - formula: min(5, floor(@attributes.hd.total / 2))
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#135dbe'
+        size: '5'
+        type: cone
+      name: Acid breath weapon
+      range:
+        units: ft
+        value: '0'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: 1/2
+        type: ref
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Undines whose outsider heritage can be
+      traced to a water mephit can wield acid as a weapon. Such an undine has a
+      breath weapon that is a @Distance[5 ft;dual] cone of acidic water usable
+      once per day. The breath deals 1d8 points of acid damage per two character
+      levels (maximum 5d8). A Reflex saving throw (DC 10 + 1/2 the undine's
+      level + the undine's Constitution modifier) halves the damage. This racial
+      trait replaces the spell-like ability racial trait.</p>
+  sources:
+    - id: PZO1121
+      pages: '174'
+  subType: racial
+  tags:
+    - Undine
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

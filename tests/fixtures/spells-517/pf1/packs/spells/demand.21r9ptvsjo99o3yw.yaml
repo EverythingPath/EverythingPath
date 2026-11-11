@@ -1,0 +1,73 @@
+_id: 21r9ptvsjo99o3yw
+_key: '!items!21r9ptvsjo99o3yw'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Demand
+system:
+  actions:
+    - _id: co5fhjdqeqdy6tpo
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: 1 round; see text
+      name: Use
+      range:
+        units: seeText
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.d0d86z521shpman1]{sending}, but the
+      message can also contain a <em>suggestion</em> (see the
+      @UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{suggestion} spell),
+      which the subject does its best to carry out. A successful Will save
+      negates the <em>suggestion</em> effect but not the contact itself. The
+      <em>demand</em>, if received, is understood even if the subject's
+      Intelligence score is as low as 1. If the message is impossible or
+      meaningless according to the circumstances that exist for the subject at
+      the time the <em>demand</em> is issued, the message is understood but the
+      <em>suggestion</em> is ineffective.</p><p>The <em>demand's</em> message to
+      the creature must be 25 words or less, including the <em>suggestion</em>.
+      The creature can also give a short reply immediately.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 8
+      mesmerist: 6
+      psychic: 8
+      sorcerer: 8
+      witch: 8
+      wizard: 8
+    domain:
+      Charm: 8
+      Nobility: 8
+    subDomain:
+      Torture: 8
+  level: 8
+  materials:
+    value: fine copper wire
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '265'
+  subschool:
+    - compulsion
+type: spell

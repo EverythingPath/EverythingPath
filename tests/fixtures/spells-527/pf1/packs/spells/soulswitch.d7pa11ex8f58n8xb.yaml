@@ -1,0 +1,67 @@
+_id: d7pa11ex8f58n8xb
+_key: '!items!d7pa11ex8f58n8xb'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Soulswitch
+system:
+  actions:
+    - _id: r9gfg41scawm1ghu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: you and your familiar
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You may only cast this spell if you currently have a familiar. You
+      place your soul into the body of your familiar, and your familiar's soul
+      is placed in your body. This functions as if you possessed your familiar
+      using <i>magic jar</i>; your familiar simultaneously possesses your body
+      in the same manner. You can't freely transfer your soul between your body
+      and your familiar's-if you choose to return to your body as a standard
+      action, the spell ends. If either body is killed, both spirits return to
+      their original bodies, the spell ends, and the original owner of the slain
+      body dies.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      cleric: 5
+      druid: 5
+      hunter: 5
+      inquisitor: 5
+      magus: 5
+      oracle: 5
+      shaman: 5
+      skald: 5
+      sorcerer: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: two brass collars worth 50 gp each
+  school: nec
+  sources:
+    - id: PZO9454
+      pages: '23'
+type: spell

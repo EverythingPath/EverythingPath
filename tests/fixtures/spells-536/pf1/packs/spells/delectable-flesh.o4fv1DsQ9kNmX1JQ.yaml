@@ -1,0 +1,71 @@
+_id: o4fv1DsQ9kNmX1JQ
+_key: '!items!o4fv1DsQ9kNmX1JQ'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/consumables/meat/hock-leg-red-brown.webp
+name: Delectable Flesh
+system:
+  actions:
+    - _id: knmyabmtxum5p0wd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          all creatures in a 15-foot-radius burst centered on a single living
+          creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Choose a creature within range as the object of hunger. All other
+      creatures within 15 feet of the target that can see or smell the target's
+      delectable flesh must succeed at a Will save or spiral into a depraved
+      state from which they gain a single purpose — to consume as much of the
+      target's delicious flesh as possible. The creature chosen as the target of
+      this spell is not affected by this depravity.</p>
+
+      <p>A depraved creature gains a bite attack, two claw attacks, and the
+      scent ability if it didn't already have them. It drops any items it was
+      carrying and attacks the target of the spell with these natural weapons,
+      acting as if it were confused and the target had attacked it first. This
+      effect lasts for the spell's duration or until the depraved creature can
+      no longer see or smell the object of its hunger for a full minute.
+      Additionally, a depraved creature can attempt a new saving throw to end
+      this effect at the end of any turn in which the affected creature makes an
+      attack against the object of its hunger. If a creature that eats for
+      nourishment succeeds at a save to end the depraved effect early, it takes
+      a -2 penalty on ability checks, attack rolls, concentration checks, saving
+      throws, and skill checks whenever it is within 15 feet of the target.</p>
+  descriptors:
+    - mindAffecting
+    - polymorph
+  learnedAt:
+    class:
+      arcanist: 6
+      druid: 7
+      shaman: 7
+      sorcerer: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '19'
+type: spell

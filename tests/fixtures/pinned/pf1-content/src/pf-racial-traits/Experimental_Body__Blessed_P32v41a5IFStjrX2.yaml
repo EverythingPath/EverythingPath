@@ -1,0 +1,66 @@
+_id: P32v41a5IFStjrX2
+_key: '!items!P32v41a5IFStjrX2'
+_stats:
+  coreVersion: '12.331'
+folder: IGdp7NHex91tWhaA
+img: icons/equipment/head/mask-carved-wood-brown.webp
+name: 'Experimental Body: Blessed'
+system:
+  abilityType: sp
+  actions:
+    - _id: ZhQUbThtvBweaoqy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.21bxbzdaawjrnvyo]{Divine
+        Favor}</p><p>Calling upon the strength and wisdom of a deity, you gain a
+        +1 luck bonus on attack and weapon damage rolls for every three caster
+        levels you have (at least +1, maximum +3). The bonus doesn't apply to
+        spell damage.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Divine Favor
+      notes:
+        effect:
+          - '@Apply[Divine Favor;level=@attributes.hd.total]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Race</strong>: Wyrwood<br /><strong>Replaced Trait(s)</strong>:
+      Darkvision; Low-Light Vision</p><hr /><p>Some wyrwoods have been built
+      from rare materials in an effort to imbue them with special properties.
+      Choose one of the following abilities.</p><p><em>Blessed</em>: These
+      wyrwoods contain divine relics. Wyrwoods with this trait can use
+      @UUID[Compendium.pf1.spells.Item.21bxbzdaawjrnvyo]{Divine Favor} once per
+      day as a spell-like ability with a caster level equal to their Hit
+      Dice.</p><p><em>Enchanted</em>: Crafted from the remnants of broken
+      staves, wands and other items, these wyrwoods have a natural attunement to
+      the arcane. Wyrwoods with this trait treat their Intelligence score as 2
+      higher for the purpose of determining bonus spells or extracts per
+      day.</p><p><em>Fey-Touched</em>: These wyrwoods have components that
+      create a powerful link to the First World. Wyrwoods with this trait can
+      use @UUID[Compendium.pf1.spells.Item.pg7dbmuuaksxhp3v]{Charm animal} once
+      per day as a spell-like ability with a caster level equal to their Hit
+      Dice.</p><p><em>Scorched</em>: These wyrwoods are built from the ruins of
+      cities and structures destroyed by conflict. Once per day, after a
+      successful melee attack against an enemy, wyrwoods with this trait can
+      deal an additional number of points of damage equal to their Wisdom
+      modifier as a free action.</p><p>This replaces darkvision and low-light
+      vision.</p>
+  sources:
+    - id: PZO9495
+      pages: '6'
+  subType: racial
+  tags:
+    - Wyrwood
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

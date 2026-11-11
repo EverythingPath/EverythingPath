@@ -1,0 +1,62 @@
+_id: h9JemJZJl9jJWZX5
+_key: '!items!h9JemJZJl9jJWZX5'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/air/fog-gas-smoke-green.webp
+name: Drunkard's Breath
+system:
+  actions:
+    - _id: w2voo58jp6c0g11h
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Fortitude negates; see text
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell emanates from your mouth and functions like
+      @UUID[Compendium.pf1.spells.kjke96zd1j1jz48z]{Stinking Cloud}, except as
+      noted above. The effect is barely visible and does not obscure vision. The
+      nausea effect resembles that of an extreme hangover. This is a poison
+      effect. Cayden Cailean's church uses this spell to disperse angry crowds,
+      such as when celebrations get out of hand.</p>
+  learnedAt:
+    class:
+      bard: 2
+      cleric: 2
+      oracle: 2
+      skald: 2
+      warpriest: 2
+  level: 2
+  materials:
+    value: a rotten egg or cabbage leaves
+  school: con
+  sources:
+    - id: PZO9014
+      pages: '61'
+  sr: false
+  subschool:
+    - creation
+  tags:
+    - '3.5'
+type: spell

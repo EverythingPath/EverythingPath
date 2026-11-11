@@ -1,0 +1,88 @@
+_id: bTmiY6Bkj2kSPUKV
+_key: '!items!bTmiY6Bkj2kSPUKV'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dwarven-sphinx-hammer.PNG
+name: Dwarven Sphinx Hammer
+system:
+  actions:
+    - _id: m50ds28lnooa637f
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: gPJm6BQCjG4UP2yQ
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Dwarven Sphinx Hammer
+  description:
+    unidentified: >-
+      <p>The dwarven sphinx hammer is a long-handled hammer with a striking head
+      that is artfully designed to look like a ram-headed criosphinx. Most
+      commonly found among the Pahmet, the dwarven sphinx hammer is balanced for
+      use as both a melee weapon and a thrown weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 45
+  sources:
+    - id: PZO9491
+      pages: '8'
+  subType: exotic
+  tags:
+    - Dwarf
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

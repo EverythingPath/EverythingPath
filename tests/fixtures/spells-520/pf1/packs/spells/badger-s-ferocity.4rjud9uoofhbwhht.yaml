@@ -1,0 +1,58 @@
+_id: 4rjud9uoofhbwhht
+_key: '!items!4rjud9uoofhbwhht'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Badger's Ferocity
+system:
+  actions:
+    - _id: cri980zlf0jwmg7y
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one weapon/3 levels
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions like
+      @UUID[Compendium.pf1.spells.Item.bbrkkjmgo5kof6gn]{keen edge}, except it
+      affects multiple weapons and requires your concentration. You select the
+      weapons to be affected, and can only affect one weapon per creature. If a
+      creature's weapon exceeds the spell's range, the spell ends for that
+      weapon.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 3
+      druid: 3
+      hunter: 2
+      occultist: 2
+      oracle: 3
+      ranger: 2
+      sorcerer: 2
+      warpriest: 3
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '207'
+type: spell

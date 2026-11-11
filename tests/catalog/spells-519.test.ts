@@ -1,0 +1,608 @@
+// @vitest-environment node
+import { createHash } from 'node:crypto';
+import {
+  cp,
+  mkdir,
+  mkdtemp,
+  readFile,
+  readdir,
+  rm,
+  writeFile,
+} from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { afterEach, expect, it } from 'vitest';
+import { parse } from 'yaml';
+import review from '../../scripts/catalog/legal/spells-519.json';
+import { reviewedCuration as curation } from '../../scripts/catalog/reviewed-curation-data';
+import { importCatalog } from '../../scripts/catalog/import';
+import { buildAssessmentBinding } from '../../scripts/catalog/admission';
+import {
+  sourceDescription,
+  upstreamRecord,
+} from '../../scripts/catalog/records';
+import { reviewedAdmission } from '../../src/lib/catalog/reviewed-data';
+import { withFullBindingContext738 } from './full-binding-context-738';
+import { calculateCharacterSheetProjections } from '../../src/lib/character-sheet';
+import provenance from '../fixtures/spells-519/provenance.json';
+import preview from '../fixtures/spells-519/preview.json';
+import { recordedSpellSheet, spellFixture } from '../fixtures/spells-519/sheet';
+import { assessWithUnclearedHolds } from './uncleared-holds';
+import {
+  classListAssessment,
+  expectWaveCl2InventoryRow,
+  expectWaveCl6InventoryRow,
+  expectWaveCl7InventoryRow,
+  isWaveCl2Row,
+  isWaveCl6Row,
+  isWaveCl7Row,
+} from './launch-reassessment';
+
+const keys = review.candidates.map((row) => row.externalKey);
+// Wave CL6 (#517, #519 and #520) re-assesses the batch's 18 class-list-only
+// Spells in place: 17 admitted, and Stone Shield held on a named content hold.
+const STONE_SHIELD_HOLD = 'spells-519-owner-owed-content-3nxf2nap088jjzbi';
+const waveCl6 = review.candidates.filter((row) => isWaveCl6Row(row));
+const waveCl6Admitted = waveCl6.filter((row) => row.disposition === 'admitted');
+// Wave CL7 (#521, #528 and #541, and the Harrow keys) re-assesses and admits
+// Shadow Conjuration, Greater in place, once shadow conjuration's Harrow
+// bloodline row is pinned (root decision 2026-11-10).
+const SHADOW_CONJURATION_GREATER = 'pf1/44nj6jzo81o9mng9';
+const fixtureRoot = resolve('tests/fixtures/spells-519');
+const inputs = {
+  systemPath: join(fixtureRoot, 'pf1'),
+  contentPath: join(fixtureRoot, 'pf1-content'),
+  candidateKeys: keys,
+  remaps: [],
+  curation,
+};
+const sha256 = (text: string) =>
+  createHash('sha256').update(text).digest('hex');
+const temporary: string[] = [];
+afterEach(async () => {
+  await Promise.all(
+    temporary
+      .splice(0)
+      .map((path) => rm(path, { recursive: true, force: true })),
+  );
+});
+
+it('accounts for exactly the ticket100 pinned records, excluding only the school folder and retaining99 individual whole-content holds', async () => {
+  expect(keys).toHaveLength(100);
+  expect(new Set(keys).size).toBe(100);
+  expect(sha256(keys.join('\n'))).toBe(
+    'c3fa1c30c53d905c84b5084e396574ce8c82bcf43f6c754001093fb750134ecf',
+  );
+  expect(provenance.rawSources.map((row) => row.externalKey)).toEqual(keys);
+  expect(await readdir(join(inputs.systemPath, 'packs/spells'))).toHaveLength(
+    100,
+  );
+  expect(provenance.dependencies).toHaveLength(28);
+  const assessments = reviewedAdmission.assessments.filter((row) =>
+    keys.includes(row.externalKey),
+  );
+  expect(assessments).toHaveLength(99);
+  for (const candidate of review.candidates) {
+    const raw = await readFile(
+      join(inputs.systemPath, candidate.source.path),
+      'utf8',
+    );
+    expect(sha256(raw), candidate.name).toBe(candidate.source.sha256);
+    const record = upstreamRecord.parse(parse(raw));
+    expect(`pf1/${record._id}`).toBe(candidate.externalKey);
+    if (candidate.kind === 'folder') {
+      expect(candidate).toMatchObject({
+        externalKey: 'pf1/4NHp2XrrZ02oHYog',
+        name: 'Abjuration',
+        disposition: 'excluded',
+      });
+      expect(
+        assessments.some((row) => row.externalKey === candidate.externalKey),
+      ).toBe(false);
+      continue;
+    }
+    expect(record.type).toBe('spell');
+    // Wave CL2 admits Mirror Image, which Shocking Image reaches; wave CL6 the
+    // batch's class-list-only Spells but Stone Shield (a named hold); wave CL7
+    // Shadow Conjuration, Greater.
+    const relaunched =
+      isWaveCl2Row(candidate) ||
+      isWaveCl7Row(candidate) ||
+      (isWaveCl6Row(candidate) &&
+        candidate.externalKey !== 'pf1/3nxf2nap088jjzbi');
+    expect(candidate.disposition).toBe(relaunched ? 'admitted' : 'held');
+    expect(sha256(sourceDescription(record))).toBe(candidate.descriptionSha256);
+    expect(candidate.mechanicsReview?.descriptionReview).toBe(
+      'complete-full-description-and-all-actions',
+    );
+    for (const [field, value] of Object.entries(
+      candidate.mechanicsReview?.metadata ?? {},
+    ))
+      expect(value, `${candidate.name}: ${field}`).toEqual(
+        record.system[field] ?? null,
+      );
+    expect(candidate.mechanicsReview?.requiredRecords).toEqual([]);
+    expect(candidate.mechanicsReview?.recordedSpellModifiers).toBe(0);
+    const assessment = assessments.find(
+      (row) => row.externalKey === candidate.externalKey,
+    );
+    expect(assessment).toMatchObject({
+      ...classListAssessment(candidate, {
+        reviewedBy: 'Sol (AI curator) for the owner',
+        reviewedOn: '2026-10-08',
+      }),
+      requiredNotices: candidate.requiredNotices,
+    });
+    expect(candidate.noticeRequirementsComplete).toBe(relaunched);
+    expect(
+      reviewedAdmission.evidence[candidate.evidenceId ?? '']?.content,
+    ).toContain(candidate.source.sha256);
+    expect(
+      reviewedAdmission.evidence[candidate.evidenceId ?? '']?.content,
+    ).toContain(candidate.source.location);
+  }
+  for (const source of [...provenance.rawSources, ...provenance.dependencies])
+    expect(
+      sha256(await readFile(join(inputs.systemPath, source.path), 'utf8')),
+      source.path,
+    ).toBe(source.sha256);
+});
+
+it('reproduces the checked99-description preview without admitting context, changing Spell stats or losing exact Source metadata', async () => {
+  const artifact = await importCatalog(inputs);
+  expect(artifact.catalog.entries).toEqual(preview.entries);
+  expect(artifact.catalog.entries).toHaveLength(99);
+  expect(artifact.curation.passed).toBe(true);
+  expect(artifact.curation.summary).toMatchObject({
+    required: 0,
+    checked: 0,
+    missing: 0,
+    descriptions: { candidates: 99, checked: 99, drafted: 0 },
+  });
+  expect(artifact.curation.unresolvedMechanics).toEqual([]);
+  expect(artifact.curation.unresolvedDescriptions).toHaveLength(
+    review.mechanicsSummary.outstandingCandidates,
+  );
+  const batch = curation.records.filter((row) =>
+    keys.includes(row.externalKey),
+  );
+  expect(batch).toHaveLength(99);
+  for (const row of batch) {
+    expect(row.kind).toBe('description');
+    expect(row.status).toBe('checked');
+    expect(row.outputs.every((output) => output.kind === 'note')).toBe(true);
+  }
+  for (const entry of artifact.catalog.entries) {
+    expect(entry.detail.kind).toBe('spell');
+    expect(entry.modifiers, entry.name).toEqual([]);
+    expect(entry.sourceKey).toBeUndefined();
+    const candidate = review.candidates.find(
+      (row) => row.externalKey === entry.externalKey,
+    );
+    if (candidate?.kind !== 'spell') throw new Error('Missing reviewed Spell');
+    expect(entry.sources).toEqual(candidate.importedSources);
+    const assessment = reviewedAdmission.assessments.find(
+      (row) => row.externalKey === entry.externalKey,
+    );
+    if (!assessment) throw new Error('Missing assessment');
+    expect(assessment).toMatchObject(
+      buildAssessmentBinding({
+        ...withFullBindingContext738({ entry, artifact }),
+        ...reviewedAdmission,
+        requiredNotices: assessment.requiredNotices,
+        evidenceIds: Object.keys(assessment.evidenceFingerprints),
+      }),
+    );
+  }
+  const gate = assessWithUnclearedHolds({ artifact, ...reviewedAdmission });
+  expect(gate.admitted).toEqual([]);
+  expect(
+    [
+      ...new Set(
+        [...gate.held, ...gate.failures, ...gate.dependentOmissions].map(
+          (row) => row.externalKey,
+        ),
+      ),
+    ].sort(),
+  ).toEqual(
+    review.candidates
+      .filter((row) => row.kind === 'spell')
+      .map((row) => row.externalKey)
+      .sort(),
+  );
+});
+
+it('pins Magic Missile, False Life, Spider Climb and Spell Resistance to source numbers without activating running effects', () => {
+  const missile = spellFixture('Magic Missile');
+  expect(missile.externalKey).toBe('pf1/49yc9dpr4kvgki2s');
+  expect(missile.sources).toEqual([{ book: 'PZO1110', pages: '309' }]);
+  expect(missile.detail).toMatchObject({
+    school: 'evo',
+    levels: { wizard: 1 },
+  });
+  expect(missile.description).toContain('1d4+1');
+  expect(missile.description).toContain(
+    'maximum of five missiles at 9th level',
+  );
+  const falseLife = spellFixture('False Life');
+  expect(falseLife.description).toContain(
+    '1d10 + 1 per caster level (maximum +10)',
+  );
+  expect(
+    review.candidates.find((row) => row.name === falseLife.name)
+      ?.mechanicsReview?.outstanding,
+  ).toEqual([]);
+  expect(falseLife.modifiers).toEqual([]);
+  const climb = spellFixture('Spider Climb');
+  expect(climb.description).toContain(
+    'climb speed of 20 feet and a +8 racial bonus',
+  );
+  const resistance = spellFixture('Spell Resistance');
+  expect(resistance.description).toContain('12 + your caster level');
+  for (const [name, classTag, level] of [
+    ['Magic Missile', 'wizard', 1],
+    ['False Life', 'wizard', 2],
+    ['Spider Climb', 'wizard', 2],
+    ['Spell Resistance', 'cleric', 5],
+  ] as const) {
+    const result = calculateCharacterSheetProjections(
+      recordedSpellSheet(name, classTag),
+    );
+    for (const projection of [result.current, result.permanent]) {
+      expect(projection.abilities.strength.score).toBe(10);
+      expect(projection.breakdowns['attack.melee'].total).toBe(0);
+      expect(projection.breakdowns['damage.melee'].total).toBe(0);
+      expect(projection.spellEffects).toEqual([]);
+      expect(
+        projection.spellCollections.spellsWithoutSpellcasting,
+      ).toContainEqual(
+        expect.objectContaining({
+          entryId: 'spell-row',
+          spellLevel: level,
+          explicitLevel: level,
+        }),
+      );
+    }
+  }
+});
+
+it('preserves shared Situations and inherited numeric boundaries without applying any reference Note as a Modifier', () => {
+  expect(spellFixture('Contagious Zeal').situationalNotes).toContainEqual(
+    expect.objectContaining({
+      target: 'saves',
+      situation: 'fear',
+      text: expect.stringContaining('+4 morale'),
+    }),
+  );
+  for (const situation of ['overrun', 'trip'])
+    expect(spellFixture('Phantom Limb').situationalNotes).toContainEqual(
+      expect.objectContaining({
+        target: 'cmd',
+        situation,
+        text: expect.stringContaining('+4 CMD'),
+      }),
+    );
+  for (const situation of [
+    'bullRush',
+    'grapple',
+    'overrun',
+    'reposition',
+    'trip',
+  ])
+    expect(spellFixture('Titanic Anchoring').situationalNotes).toContainEqual(
+      expect.objectContaining({
+        target: 'cmd',
+        situation,
+        text: expect.stringContaining('+10 CMD'),
+      }),
+    );
+  expect(
+    review.candidates
+      .find((row) => row.name === 'Mental Barrier IV')
+      ?.mechanicsReview?.outstanding.join(' '),
+  ).toContain('+8 shield');
+  expect(
+    review.candidates
+      .find((row) => row.name === 'Spellcasting Contract')
+      ?.mechanicsReview?.discrepancies.join(' '),
+  ).toContain('AC/saves/checks');
+  expect(
+    review.candidates
+      .find((row) => row.name === 'Shared Wrath')
+      ?.mechanicsReview?.outstanding.join(' '),
+  ).toContain('CL12 Improved Critical');
+  const result = calculateCharacterSheetProjections(
+    recordedSpellSheet('Contagious Zeal', 'cleric'),
+    { situations: ['fear'] },
+  );
+  expect(result.current.derivedStatistics.will.total).toBe(0);
+  expect(result.permanent.derivedStatistics.will.total).toBe(0);
+});
+
+it('uses fixture-only admission permission in memory and still enforces the complete APG notice-chain hold', async () => {
+  const artifact = await importCatalog(inputs);
+  const examples = artifact.catalog.entries.filter((entry) =>
+    // Sleep requires only the Core Rulebook (wave CL6 adds PZO1131 to Magic
+    // Missile, whose uncleared importer group would hold it here).
+    ['Sleep', "Crafter's Fortune"].includes(entry.name),
+  );
+  expect(examples).toHaveLength(2);
+  const evidence = {
+    fixture: {
+      content:
+        'Fixture-only permission, never shipping evidence or real-content review.',
+    },
+  };
+  const apgKey =
+    'pf1-content/notice/7d75468ec859d3452bcef8458792e6ef19c7aafcf9cbaf2f759fdf4bc923b2a2';
+  const notice = reviewedAdmission.registry[apgKey];
+  if (!notice) throw new Error('Missing APG notice');
+  // The notice-hold clearance's drafted PRD record for PZO1115 (2026-10-30)
+  // claims the code too; it stands aside so the alias resolves.
+  const { PZO1115: _drafted, ...committedRegistry } =
+    reviewedAdmission.registry;
+  const registry = {
+    ...committedRegistry,
+    [apgKey]: { ...notice, aliases: ['PZO1115'] },
+  };
+  const assessments = examples.map((entry) => {
+    const shipping = reviewedAdmission.assessments.find(
+      (row) => row.externalKey === entry.externalKey,
+    );
+    if (!shipping) throw new Error('Missing held assessment');
+    return {
+      ...shipping,
+      status: 'confirmed' as const,
+      rationale: 'Fixture-only in-memory admission test.',
+      ...buildAssessmentBinding({
+        entry,
+        artifact,
+        evidence,
+        registry,
+        requiredNotices: shipping.requiredNotices,
+        evidenceIds: ['fixture'],
+      }),
+    };
+  });
+  const gate = assessWithUnclearedHolds({
+    artifact,
+    ...reviewedAdmission,
+    evidence,
+    registry,
+    assessments,
+  });
+  expect(gate.admitted).toContainEqual(
+    expect.objectContaining({ externalKey: 'pf1/3plb67e51webutdz' }),
+  );
+  expect(gate.held).toContainEqual(
+    expect.objectContaining({
+      externalKey: 'pf1/4k32l03rzxgyifkx',
+      reason: expect.stringContaining('Notice holds:'),
+    }),
+  );
+  // Only wave CL2's Mirror Image, wave CL6's 17 admitted Spells and wave
+  // CL7's Shadow Conjuration, Greater are confirmed.
+  expect(
+    reviewedAdmission.assessments
+      .filter(
+        (row) => keys.includes(row.externalKey) && row.status !== 'unresolved',
+      )
+      .map((row) => row.externalKey)
+      .sort(),
+  ).toEqual(
+    [
+      'pf1/4jsss37x0pplib8f',
+      ...waveCl6Admitted.map((row) => row.externalKey),
+      SHADOW_CONJURATION_GREATER,
+    ].sort(),
+  );
+});
+
+it('invalidates checked source-bound description when Magic Missile damage changes', async () => {
+  const work = resolve('.scratch/spells-519-test-work');
+  await mkdir(work, { recursive: true });
+  const root = await mkdtemp(join(work, 'changed-source-'));
+  temporary.push(root);
+  await cp(fixtureRoot, root, { recursive: true });
+  const path = join(
+    root,
+    'pf1/packs/spells/magic-missile.49yc9dpr4kvgki2s.yaml',
+  );
+  const raw = await readFile(path, 'utf8');
+  expect(raw).toContain('1d4+1');
+  await writeFile(path, raw.replaceAll('1d4+1', '1d4+2'));
+  const artifact = await importCatalog({
+    ...inputs,
+    systemPath: join(root, 'pf1'),
+    contentPath: join(root, 'pf1-content'),
+  });
+  expect(artifact.curation.stale).toContainEqual(
+    expect.objectContaining({
+      externalKey: 'pf1/49yc9dpr4kvgki2s',
+      kind: 'description',
+    }),
+  );
+  expect(
+    artifact.curation.applied.some(
+      (row) => row.externalKey === 'pf1/49yc9dpr4kvgki2s',
+    ),
+  ).toBe(false);
+  expect(
+    assessWithUnclearedHolds({ artifact, ...reviewedAdmission }).admitted,
+  ).toEqual([]);
+});
+
+it('retains Greater Hex Glyph’s DC16 Spellcraft rule and keeps its rules JournalEntryPage link as text (#738)', async () => {
+  const artifact = await importCatalog(inputs);
+  const hex = artifact.catalog.entries.find(
+    (entry) => entry.externalKey === 'pf1/4fm4md4eux7sw6o0',
+  );
+  if (!hex) throw new Error('Missing Greater Hex Glyph');
+  expect(hex.sources).toEqual([{ book: 'PZO1129', pages: '184' }]);
+  expect(hex.description).toContain('DC 16');
+  expect(hex.description).toContain('Spellcraft');
+  // #738: the Spellcraft journal page link is no broken reference; the
+  // bounded import still strips its links to Spells outside the selection.
+  expect(hex.unsupported).not.toContainEqual(
+    expect.objectContaining({
+      value:
+        'Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.VRD7jxiIAxKPt6EF',
+    }),
+  );
+  expect(
+    assessWithUnclearedHolds({ artifact, ...reviewedAdmission }).failures,
+  ).toContainEqual({
+    externalKey: hex.externalKey,
+    reason: 'Broken structure or reference: unresolved imported reference.',
+  });
+  expect(
+    review.candidates.find((entry) => entry.externalKey === hex.externalKey),
+  ).toMatchObject({
+    disposition: 'held',
+    referenceReview: {
+      status: 'unresolved-importer-reference',
+      independentOfLegalDisposition: true,
+    },
+  });
+});
+
+it('re-assesses Mirror Image, which Shocking Image reaches, in place against the literal pinned PCGen rows (wave CL2)', async () => {
+  const row = review.candidates.find((item) => item.name === 'Mirror Image');
+  // The folder record has no citations; Mirror Image is a Spell.
+  if (row?.citedSources === undefined) throw new Error('Missing Mirror Image');
+  // Its Deception subdomain (Advanced Player's Guide) is bounded by pinned
+  // PCGen rows; it stays unmet on the subdomain route (root, 2026-11-08).
+  expect(
+    row.launchReview?.metadata.grantedLevelEvidence.map((entry) => [
+      entry.mapping,
+      entry.book,
+    ]),
+  ).toEqual([['subDomain.Deception 2', 'PZO1115']]);
+  await expectWaveCl2InventoryRow(row, {
+    batch: 519,
+    launch: review.launchReassessment,
+    requiredNotices: ['PZO1110', 'PZO1115', 'PZO1131'],
+  });
+  // Wave CL6 then admits 17 more and replaces 18 whole-content holds; wave
+  // CL7 admits Shadow Conjuration, Greater.
+  expect(review.summary).toMatchObject({
+    admitted: 19,
+    held: 80,
+    wholeContentHolds: 79,
+  });
+});
+
+// Wave CL6 (#517, #519 and #520): the batch's 18 class-list-only Spells, each
+// with its exact required notices.
+const WAVE_CL6_ROWS = [
+  ['Accelerate Poison', ['PZO1115', 'PZO1110', 'PZO1131']],
+  ['Transmute Metal to Wood', ['PZO1110', 'PZO1131']],
+  ['Telekinesis', ['PZO1110', 'PZO1131']],
+  ['Spider Climb', ['PZO1110', 'PZO1131']],
+  ['Stone Shield', ['PZO1110', 'PZO1117', 'PZO1121', 'PZO1131']],
+  ['Chill Metal', ['PZO1110', 'PZO1131']],
+  ['Expeditious Excavation', ['PZO1115', 'PZO1110', 'PZO1112', 'PZO1131']],
+  ['Reincarnate', ['PZO1110', 'PZO1112', 'PZO1131']],
+  ['Contagious Zeal', ['PZO1132', 'PZO1110', 'PZO1131']],
+  ['Ablative Barrier', ['PZO1118', 'PZO1110', 'PZO1131']],
+  ['Hydraulic Torrent', ['PZO1110', 'PZO1115', 'PZO1131']],
+  ['Ride The Waves', ['PZO1117', 'PZO1110', 'PZO1131']],
+  ['Magic Missile', ['PZO1110', 'PZO1131']],
+  ['Contingency', ['PZO1110', 'PZO1131']],
+  ["Hunter's Howl", ['PZO1115', 'PZO1110', 'PZO1131']],
+  ['Winter Feathers', ['PZO1121', 'PZO1110', 'PZO1131']],
+  ['River of Wind', ['PZO1115', 'PZO1110', 'PZO1112', 'PZO1131']],
+  ['Shared Wrath', ['PZO1115', 'PZO1110', 'PZO1131']],
+] as const;
+
+it.each(WAVE_CL6_ROWS)(
+  're-assesses %s in place against the literal pinned PCGen rows (wave CL6)',
+  async (name, requiredNotices) => {
+    const row = review.candidates.find((item) => item.name === name);
+    if (row?.citedSources === undefined) throw new Error(`Missing ${name}`);
+    await expectWaveCl6InventoryRow(row, {
+      batch: 519,
+      launch: review.launchReassessment,
+      requiredNotices: [...requiredNotices],
+    });
+  },
+);
+
+it('records wave CL6 in place: 17 admitted and Stone Shield on its named content hold', () => {
+  expect(waveCl6.map((row) => row.name)).toEqual(
+    WAVE_CL6_ROWS.map(([name]) => name),
+  );
+  // Wave CL6's admissions follow wave CL2's Mirror Image; wave CL7's Shadow
+  // Conjuration, Greater follows them.
+  expect(review.launchReassessment).toMatchObject({
+    admittedKeys: [
+      'pf1/4jsss37x0pplib8f',
+      ...waveCl6Admitted.map((row) => row.externalKey),
+      SHADOW_CONJURATION_GREATER,
+    ],
+    dependentlyOmittedKeys: [],
+    namedHolds: { 'pf1/3nxf2nap088jjzbi': STONE_SHIELD_HOLD },
+  });
+  const stone = waveCl6.find((row) => row.name === 'Stone Shield');
+  expect(stone).toMatchObject({
+    disposition: 'held',
+    assessmentStatus: 'unresolved',
+    holdIds: [STONE_SHIELD_HOLD],
+  });
+  // PCGen's full row bounds all but Foundry's closing qinggong sentence; the
+  // ARG ki-power row bounds the ki power at Monk 4 but states no ki cost.
+  expect(stone?.launchReview?.pcgen.wordDifferences).toHaveLength(1);
+  expect(stone?.launchReview?.outstanding).toEqual([
+    expect.stringContaining('costing 1 ki point to activate'),
+  ]);
+  expect(
+    stone?.launchReview?.additionalPcgen?.map((row) => [row.path, row.line]),
+  ).toEqual([
+    [
+      'data/pathfinder/paizo/roleplaying_game/advanced_race_guide/arg_abilities_class.lst',
+      1009,
+    ],
+  ]);
+  const readings = (name: string) =>
+    waveCl6.find((row) => row.name === name)?.launchReview?.metadata.readings ??
+    '';
+  // Contingency's casting time, duration and target, and Shared Wrath's
+  // fields PCGen's base row leaves unspecified, are named rather than read as
+  // notation.
+  expect(readings('Contingency')).toContain('at least 10 minutes');
+  expect(readings('Contingency')).toContain('Dismissal: PCGen');
+  expect(readings('Shared Wrath')).toContain('has no CASTTIME or DURATION tag');
+  expect(readings('Shared Wrath')).not.toContain(':None');
+  expect(readings('Telekinesis')).toContain('Violet Thrust');
+});
+
+it('re-assesses Shadow Conjuration, Greater, a Harrow key, in place against the literal pinned PCGen rows (wave CL7)', async () => {
+  expect(
+    review.candidates
+      .filter((item) => isWaveCl7Row(item))
+      .map((item) => item.externalKey),
+  ).toEqual([SHADOW_CONJURATION_GREATER]);
+  const row = review.candidates.find(
+    (item) => item.externalKey === SHADOW_CONJURATION_GREATER,
+  );
+  if (row?.citedSources === undefined)
+    throw new Error('Missing Shadow Conjuration, Greater');
+  await expectWaveCl7InventoryRow(row, {
+    batch: 519,
+    launch: review.launchReassessment,
+    requiredNotices: ['PZO1110', 'PZO1131'],
+  });
+  // It functions like shadow conjuration (#528, admitted by wave CL7), whose
+  // granted-level books do not propagate; its shadow descriptor is PCGen's
+  // Ultimate Magic row, recorded beside the comparison.
+  expect(row.launchReview?.pcgen.wordDifferences).toEqual([]);
+  expect(
+    row.launchReview?.additionalPcgen?.map((item) => [item.path, item.line]),
+  ).toEqual([
+    [
+      'data/pathfinder/paizo/roleplaying_game/ultimate_magic/um_spells.lst',
+      550,
+    ],
+  ]);
+  expect(row.launchReview?.metadata.readings).toContain('um_spells.lst:550');
+  expect(row.launchReview?.metadata.grantedLevelEvidence).toEqual([]);
+});

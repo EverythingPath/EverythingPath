@@ -1,0 +1,27 @@
+_id: ClOy4KHJFDdt0ALh
+_key: '!items!ClOy4KHJFDdt0ALh'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp
+name: Bull's Strength
+system:
+  changes:
+    - _id: td5zd1xv
+      formula: '4'
+      target: str
+      type: enh
+  description:
+    value: >-
+      <p>The subject has a +4 enhancement bonus to Strength as per
+      @UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: '251'
+  subType: spell
+type: buff

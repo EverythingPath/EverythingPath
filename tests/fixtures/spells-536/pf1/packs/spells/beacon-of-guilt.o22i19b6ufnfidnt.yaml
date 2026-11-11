@@ -1,0 +1,58 @@
+_id: o22i19b6ufnfidnt
+_key: '!items!o22i19b6ufnfidnt'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Beacon of Guilt
+system:
+  actions:
+    - _id: ay32f0fu21ecqdzc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 24 hours or until discharged, then instantaneous
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object); see text
+        type: will
+      target:
+        value: one object
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You place an invisible ward upon an object that is triggered the first
+      time a creature tries to move the object from its current location. The
+      next creature to touch the object is cursed to become obvious to everyone
+      around it. The creature must succeed at a Will save or be surrounded in an
+      aura of twinkling red light that functions as
+      @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire} (spell
+      resistance applies). The curse bestowed by this spell cannot be dispelled,
+      but a <em>break enchantment</em>, <em>limited wish</em>, <em>miracle</em>,
+      <em>remove curse</em>, or <em>wish</em> spell can remove it.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      occultist: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1136
+      pages: '44'
+type: spell

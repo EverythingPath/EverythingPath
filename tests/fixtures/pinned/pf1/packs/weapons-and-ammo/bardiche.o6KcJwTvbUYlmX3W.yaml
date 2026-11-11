@@ -1,0 +1,66 @@
+_id: o6KcJwTvbUYlmX3W
+_key: '!items!o6KcJwTvbUYlmX3W'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/bardiche.PNG
+name: Bardiche
+system:
+  actions:
+    - _id: 3jb9cx2d8np2f8kp
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Bardiche
+  description:
+    unidentified: >-
+      <p>The crescent axe-blade of this polearm is attached to the haft at two
+      points: the center of the blade attaches to a socket at the top of the
+      haft, and the lower point of the blade attaches to a secondary mount
+      point. The blade is often very long, sometimes almost as long as the haft.
+      You gain a +2 bonus to your CMD to resist sunder attempts made against a
+      bardiche.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 13
+  properties:
+    brc: true
+    rch: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - axes
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 14
+type: weapon
