@@ -1,0 +1,67 @@
+_id: pkm8um5t1cxsn6jh
+_key: '!items!pkm8um5t1cxsn6jh'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/water/projectiles-ice-explosion.webp
+name: Cone of Cold
+system:
+  actions:
+    - _id: 757xeokjecpvvyhz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      damage:
+        parts:
+          - formula: (min(15, @cl))d6
+            types:
+              - cold
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Cone of cold</i> creates an area of extreme cold, originating at
+      your hand and extending outward in a cone. It drains heat, dealing 1d6
+      points of cold damage per caster level (maximum 15d6).</p>
+  descriptors:
+    - cold
+  learnedAt:
+    bloodline:
+      Boreal: 5
+      Oni: 5
+    class:
+      arcanist: 5
+      magus: 5
+      occultist: 5
+      shaman: 6
+      sorcerer: 5
+      witch: 6
+      wizard: 5
+    domain:
+      Water: 6
+  level: 5
+  materials:
+    value: a small crystal or glass cone
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '258'
+type: spell

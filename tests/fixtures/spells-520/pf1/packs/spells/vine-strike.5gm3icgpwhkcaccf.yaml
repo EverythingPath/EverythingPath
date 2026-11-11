@@ -1,0 +1,65 @@
+_id: 5gm3icgpwhkcaccf
+_key: '!items!5gm3icgpwhkcaccf'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/nature/root-vine-entangled-hand.webp
+name: Vine Strike
+system:
+  actions:
+    - _id: fpxtbykqfmevwp7e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Reflex negates (see text)
+        type: ref
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Bristles burst from your body, lodging in your opponent and blossoming
+      into entangling vines as you pummel your target. While this spell is in
+      effect, one of your natural attacks or unarmed strikes deals an additional
+      1d6 points of damage, and each creature hit with that natural weapon or
+      unarmed strike must succeed at a Reflex save or be entangled for the
+      duration of the spell; on a successful Reflex save, the creature is immune
+      to the entangled effect for 1 round. A creature entangled by this spell
+      can spend a standard action to remove the vines, but can be entangled
+      again by further unarmed strikes.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 2
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      ranger: 2
+      shaman: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1140
+      pages: '237'
+    - id: PZO9455
+      pages: '31'
+  subschool:
+    - creation
+type: spell

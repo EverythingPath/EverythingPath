@@ -1,0 +1,54 @@
+_id: sh0sci8zflhtmaqx
+_key: '!items!sh0sci8zflhtmaqx'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Talismanic Implement
+system:
+  actions:
+    - _id: yjpfyre7pbed4ld7
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 hour/level (D) or until discharged
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.4br9puuneexco5hx]{contingency}, but you
+      invest a spell whose level doesn't exceed one-quarter of your level
+      (rounded down, maximum spell level 3rd) into one of your implements that
+      holds 2 or more points of mental focus. The spell's school must match that
+      of the implement, and the spell must be one that affects only your person.
+      Casting <em>talismanic implement</em> reduces the selected implement's
+      mental focus by 2, including for the purposes of determining the effects
+      of resonant powers. When you refresh your mental focus, <em>talismanic
+      implement</em> ends automatically, even if the duration hasn't elapsed.
+      Unlike <em>contingency</em>, you may have multiple <em>talismanic
+      implement</em>s simultaneously, though a single implement can hold only
+      one <em>talismanic implement</em> spell, and if you have any
+      <em>talismanic implement</em>s, you can't have any other kind of
+      <em>contingency</em> in effect.</p>
+  learnedAt:
+    class:
+      occultist: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1132
+      pages: '188'
+  sr: false
+type: spell

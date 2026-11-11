@@ -1,0 +1,38 @@
+_id: bleCnwZmMAOu4nE4
+_key: '!items!bleCnwZmMAOu4nE4'
+_stats:
+  coreVersion: '12.343'
+folder: g1c5Qbc5VpuXHPcl
+img: icons/tools/laboratory/vial-orange.webp
+name: Mutagen, Dex
+system:
+  changes:
+    - _id: xm326qun
+      formula: '4'
+      target: dex
+      type: alchemical
+    - _id: 4gdkxux3
+      formula: '-2'
+      target: wis
+      type: alchemical
+    - _id: l0cf69i5
+      formula: '2'
+      target: nac
+      type: alchemical
+  description:
+    instructions: <p>Set item level to class level.</p>
+    value: >-
+      <p>+2 natural armor bonus, +4 alchemical bonus to Dexterity, -2 penalty to
+      Wisdom as per
+      @UUID[Compendium.pf1.class-abilities.Item.zrTVb83VhkFnEv6G].</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '@item.level * 10'
+  hideFromToken: true
+  level: 1
+  sources:
+    - id: PZO1115
+      pages: '26'
+  subType: feat
+type: buff
