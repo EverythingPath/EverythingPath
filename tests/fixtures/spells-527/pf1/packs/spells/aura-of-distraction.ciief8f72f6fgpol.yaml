@@ -1,0 +1,60 @@
+_id: ciief8f72f6fgpol
+_key: '!items!ciief8f72f6fgpol'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Aura of Distraction
+system:
+  actions:
+    - _id: nwhz1yxs5qeptmzr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius emanation centered on you
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You emit an aura of subsonic noise and mental imagery that makes
+      concentrating difficult. Any creature within the aura that fails its save
+      takes a -5 penalty on concentration checks. A creature must attempt the
+      Will save upon entering the area of the aura, and the penalty ends as soon
+      as the creature leaves the aura. A creature that succeeds at its save is
+      immune to the effects of the aura for this casting of the spell, even if
+      it leaves and reenters the aura, but must attempt another Will save each
+      additional time this spell is cast. You are immune to your own <i>Aura of
+      Distraction</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      psychic: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '10'
+type: spell

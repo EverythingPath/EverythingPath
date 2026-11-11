@@ -1,0 +1,44 @@
+_id: k4gr2kbnbyeuoql7
+_key: '!items!k4gr2kbnbyeuoql7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Atavism, Mass
+system:
+  actions:
+    - _id: fg05m0zidrn6bk4d
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one animal/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.gygtx59c2tj4ybsb]{atavism}, except it
+      affects multiple creatures.</p>
+  learnedAt:
+    class:
+      druid: 8
+  level: 8
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '207'
+type: spell

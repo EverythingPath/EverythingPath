@@ -1,0 +1,60 @@
+_id: iYQzGc5XdUPoXNqS
+_key: '!items!iYQzGc5XdUPoXNqS'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: systems/pf1/icons/skills/shadow_12.jpg
+name: Glimpse the Hidden
+system:
+  actions:
+    - _id: ZtJYdvwTVpsk755P
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.nokru6mxk9p3r513]{see invisibility}, except as
+      noted here. This spell cannot be made permanent.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      inquisitor: 3
+      investigator: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a pinch of magnesium and platinum
+  school: div
+  sources:
+    - id: PZO9487
+      pages: '17'
+type: spell

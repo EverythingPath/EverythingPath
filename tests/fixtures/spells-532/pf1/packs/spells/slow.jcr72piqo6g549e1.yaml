@@ -1,0 +1,68 @@
+_id: jcr72piqo6g549e1
+_key: '!items!jcr72piqo6g549e1'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/time/hourglass-brown-orange.webp
+name: Slow
+system:
+  actions:
+    - _id: 57te51vria9nnas9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An affected creature moves and attacks at a drastically <i>slowed</i>
+      rate. Creatures affected by this spell are staggered and can take only a
+      single move action or standard action each turn, but not both (nor may it
+      take full-round actions). Additionally, it takes a -1 penalty on attack
+      rolls, AC, and Reflex saves. A <i>slowed</i> creature moves at half its
+      normal speed (round down to the next 5-foot increment), which affects the
+      creature's jumping distance as normal for decreased speed.</p><p>Multiple
+      <i>slow</i> effects don't stack. <i>Slow</i> counters and dispels
+      <i>haste</i>.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      bloodrager: 3
+      magus: 3
+      medium: 2
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 2
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a drop of molasses
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '344'
+type: spell

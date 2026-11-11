@@ -1,0 +1,49 @@
+_id: 2yj0MWXqnC1SD5aU
+_key: '!items!2yj0MWXqnC1SD5aU'
+_stats:
+  coreVersion: '12.331'
+folder: MB4DGP9uns7VLmaa
+img: icons/magic/life/ankh-shadow-green.webp
+name: Stabilizing Touch (Pharasma)
+system:
+  abilityType: sp
+  actions:
+    - _id: xSu6PmYsP9KuTCxm
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      img: icons/environment/settlement/temple-night.webp
+      name: Stabalize
+      range:
+        units: touch
+      save:
+        dc: 10 + @abilities.cha.mod
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  description:
+    value: >-
+      <p><em>You were born with the ability to stop the passage to death’s
+      door.</em></p><p><strong>Requirements</strong>:
+      Pharasma</p><p><strong>Benefits</strong>: Once per day, you can use
+      @UUID[Compendium.pf1.spells.Item.fipqx43u5blpjsvo]{stabilize} as a
+      spell-like ability, but with a range of touch.</p>
+  sources:
+    - id: PZO9267
+      pages: '222'
+  subType: trait
+  tags:
+    - Pharasma
+  traitType: religion
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,81 @@
+_id: vu3N4zCRDTUJ5FW4
+_key: '!items!vu3N4zCRDTUJ5FW4'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/club.PNG
+name: Club
+system:
+  actions:
+    - _id: 6dmu5en9jjonxti9
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: EVonago9SP7q06HQ
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Club
+  description:
+    unidentified: >-
+      <p>This weapon is usually just a shaped piece of wood, sometimes with a
+      few nails or studs embedded in it.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '17'
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+    - tribal
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon
