@@ -1,0 +1,69 @@
+_id: 16ms1wen0vd3iezx
+_key: '!items!16ms1wen0vd3iezx'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Blend with Surroundings
+system:
+  actions:
+    - _id: 3bky4r1aztfd5e5e
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates or Will disbelieves (if interacted with)
+        harmless: true
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell changes the appearance of the affected creature so that it
+      better blends in with its surroundings. As chosen by you, the affected
+      creature takes on the appearance of a statue, furniture, a tree, a bush, a
+      rock, or another object of similar size. As long as the target stays
+      still, it gains a +20 bonus on Stealth checks, and it can use Stealth even
+      if it is being observed. The target's armor blends in perfectly with the
+      illusory shape, and the target's armor check penalty on Stealth checks is
+      negated for the duration of the spell. If the target moves at all while
+      this spell is in effect, the spell ends.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      cleric: 1
+      druid: 1
+      hunter: 1
+      oracle: 1
+      shaman: 1
+      skald: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: a chess piece
+  school: ill
+  sources:
+    - id: PZO9459
+      pages: '30'
+  subschool:
+    - glamer
+type: spell

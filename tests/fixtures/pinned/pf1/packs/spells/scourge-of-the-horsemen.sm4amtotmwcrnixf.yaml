@@ -1,0 +1,61 @@
+_id: sm4amtotmwcrnixf
+_key: '!items!sm4amtotmwcrnixf'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Scourge of the Horsemen
+system:
+  actions:
+    - _id: 5mjglo7u93lnsq2y
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft. burst
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - '[[1d4]] negative levels'
+      range:
+        units: medium
+      save:
+        description: Fortitude half
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell blasts the area with a horrific combination of soul-rending
+      energy and physical corrosion. Creatures in the area of effect gain 1d4
+      negative levels, and take 1d6 points of acid damage per caster level
+      (maximum 20d6).</p>
+  descriptors:
+    - acid
+    - evil
+  learnedAt:
+    class:
+      arcanist: 9
+      cleric: 9
+      oracle: 9
+      sorcerer: 9
+      wizard: 9
+  level: 9
+  school: nec
+  sources:
+    - id: PZO1139
+      pages: '39'
+type: spell

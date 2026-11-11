@@ -1,0 +1,1246 @@
+{
+  "version": 1,
+  "provenance": {
+    "license": "OGL-1.0a",
+    "systemPin": "pf1-system-v11.11",
+    "journal": "pf1/GnZ4SFsgV11ab8Vz",
+    "page": "8HNFlPoMR5NxGMzD",
+    "sourcePath": "packs/rules/spell-tables.GnZ4SFsgV11ab8Vz.yaml",
+    "notes": [
+      "Base class slots exclude domain, school and spirit slots. Null means no table entry; zero means bonus spells only.",
+      "The Bard journal repeats its per-day table in place of spells known. Shared medium spells known use Hunter and Summoner, cross-checked against Pathfinder Unchained Tables 1–4 and 1–5.",
+      "The journal spells the Medium heading Mediuum; its known table supplies the low spontaneous zero-level column. Classes without cantrips ignore that column.",
+      "Occultist has no fixed spells-known count: implement-school choices determine it. Its override deliberately omits spellsKnown.",
+      "Adept has a finite zero-level per-day column and no Cantrips or Orisons class feature (CRB pp. 448–449); its reviewed cantrips=false corrects the Foundry casting summary, while its table retains three zero-level spells per day.",
+      "Adept, extract and Unchained summoner overrides are transcribed from the reviewed pf1-spellcasting-rules corpus (CRB p. 448, APG p. 26, ACG p. 30, PU p. 25).",
+      "Occultist rows explicitly include zero-level knack availability in castableSpellLevels, while omitting a fixed spellsKnown count.",
+      "Book collection types follow the class recording rules: alchemist formula books (APG pp. 26–27), investigator formula books (ACG pp. 30–31), and witch familiars (APG pp. 65–67)."
+    ]
+  },
+  "tables": {
+    "prepared-full": {
+      "includesZeroLevel": false,
+      "type": "prepared",
+      "progression": "full",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "80",
+          "table": "3–16",
+          "class": "Wizard"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [3, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 2, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 3, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 3, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 3, 3, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 3, 3, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 3, 2, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 3, 3, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 3, 2, 1, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 3, 3, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 3, 2, 1, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 3, 3, 2, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 3, 2, 1, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 3, 3, 2, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
+        },
+        {
+          "spellsPerDay": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+        }
+      ]
+    },
+    "prepared-medium": {
+      "includesZeroLevel": false,
+      "type": "prepared",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Ultimate Magic",
+          "pages": "13",
+          "class": "Magus"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [3, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 3, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [4, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 4, 3, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 4, 3, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 4, 4, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 4, 3, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 4, 3, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 4, 4, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 4, 3, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 4, 3, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 4, 4, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 4, 3, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 4, 3, 1, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 4, 4, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 5, 4, 3, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 5, 5, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [5, 5, 5, 5, 5, 5, 5, null, null, null]
+        }
+      ]
+    },
+    "prepared-low": {
+      "includesZeroLevel": false,
+      "type": "prepared",
+      "progression": "low",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "63",
+          "class": "Paladin"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 0, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, 0, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, 0, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 1, 0, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 1, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 2, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 3, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 3, 3, null, null, null, null, null]
+        }
+      ]
+    },
+    "spontaneous-full": {
+      "includesZeroLevel": false,
+      "type": "spontaneous",
+      "progression": "full",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "73",
+          "class": "Sorcerer"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null],
+          "spellsKnown": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 3, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 3, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 4, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 5, 3, null, null, null, null, null, null],
+          "spellsKnown": [7, 4, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 4, null, null, null, null, null, null],
+          "spellsKnown": [7, 5, 3, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 5, 3, null, null, null, null, null],
+          "spellsKnown": [8, 5, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 4, null, null, null, null, null],
+          "spellsKnown": [8, 5, 4, 3, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 5, 3, null, null, null, null],
+          "spellsKnown": [9, 5, 4, 3, 2, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 4, null, null, null, null],
+          "spellsKnown": [9, 5, 5, 4, 3, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 5, 3, null, null, null],
+          "spellsKnown": [9, 5, 5, 4, 3, 2, 1, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 4, null, null, null],
+          "spellsKnown": [9, 5, 5, 4, 4, 3, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 5, 3, null, null],
+          "spellsKnown": [9, 5, 5, 4, 4, 3, 2, 1, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 4, null, null],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 2, null, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 5, 3, null],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 2, 1, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 6, 4, null],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 3, 2, null]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 6, 5, 3],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 3, 2, 1]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 6, 6, 4],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 3, 3, 2]
+        },
+        {
+          "spellsPerDay": [null, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+          "spellsKnown": [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]
+        }
+      ]
+    },
+    "spontaneous-medium": {
+      "includesZeroLevel": false,
+      "type": "spontaneous",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "27",
+          "class": "Hunter"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "spellsKnown": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 1, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 2, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 3, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 4, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 1, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 2, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 3, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 4, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, 1, null, null, null, null, null],
+          "spellsKnown": [6, 5, 5, 4, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 4, 2, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 3, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 4, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, 1, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 5, 4, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 4, 2, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, 3, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, 4, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, 1, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 5, 4, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 4, 2, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 4, 3, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 4, 3, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 4, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 4, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 5, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 5, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 6, 5, 5, null, null, null]
+        }
+      ]
+    },
+    "spontaneous-low": {
+      "includesZeroLevel": false,
+      "type": "spontaneous",
+      "progression": "low",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Occult Adventures",
+          "pages": "31",
+          "class": "Medium"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null],
+          "spellsKnown": [2, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null],
+          "spellsKnown": [3, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, null, null, null, null, null, null, null, null, null],
+          "spellsKnown": [4, null, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "spellsKnown": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 4, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, 1, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 1, 1, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 3, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, 1, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 1, 1, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 3, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, 2, 1, null, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 1, 1, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 1, 1, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 3, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 2, 2, 1, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 3, 2, 1, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 2, 1, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 2, 2, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 3, 2, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 3, 2, null, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, null, null, null, null, null]
+        }
+      ]
+    },
+    "hybrid-full": {
+      "includesZeroLevel": false,
+      "type": "hybrid",
+      "progression": "full",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "9",
+          "class": "Arcanist"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 2, null, null, null, null, null, null, null, null],
+          "preparedPerDay": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null],
+          "preparedPerDay": [5, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, null, null, null, null, null, null, null, null],
+          "preparedPerDay": [5, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 2, null, null, null, null, null, null, null],
+          "preparedPerDay": [6, 3, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, null, null, null, null, null, null, null],
+          "preparedPerDay": [6, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 2, null, null, null, null, null, null],
+          "preparedPerDay": [7, 4, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 3, null, null, null, null, null, null],
+          "preparedPerDay": [7, 5, 3, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 2, null, null, null, null, null],
+          "preparedPerDay": [8, 5, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 3, null, null, null, null, null],
+          "preparedPerDay": [8, 5, 4, 3, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 2, null, null, null, null],
+          "preparedPerDay": [9, 5, 4, 3, 2, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 3, null, null, null, null],
+          "preparedPerDay": [9, 5, 5, 4, 3, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 2, null, null, null],
+          "preparedPerDay": [9, 5, 5, 4, 3, 2, 1, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 3, null, null, null],
+          "preparedPerDay": [9, 5, 5, 4, 4, 3, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 2, null, null],
+          "preparedPerDay": [9, 5, 5, 4, 4, 3, 2, 1, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 3, null, null],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 2, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 4, 2, null],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 2, 1, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 4, 3, null],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 3, 2, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 4, 4, 2],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 3, 2, 1]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 4, 4, 3],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 3, 3, 2]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+          "preparedPerDay": [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]
+        }
+      ]
+    },
+    "adept": {
+      "includesZeroLevel": true,
+      "type": "prepared",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "448",
+          "table": "14–1"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [3, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 2, 0, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 2, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 2, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 2, 0, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 2, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 2, 0, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 2, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 2, 0, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 2, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 2, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 3, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [3, 3, 3, 3, 3, 2, null, null, null, null]
+        }
+      ]
+    },
+    "extracts": {
+      "includesZeroLevel": false,
+      "type": "prepared",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "26",
+          "table": "2–1"
+        },
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30",
+          "table": "1–8"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 1, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 1, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, 1, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 4, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, 1, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 4, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, 1, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 4, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 4, 3, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 5, null, null, null]
+        }
+      ]
+    },
+    "unchained-summoner": {
+      "includesZeroLevel": false,
+      "type": "spontaneous",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Pathfinder Unchained",
+          "pages": "25",
+          "table": "1–4/1–5"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "spellsKnown": [4, 2, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 2, null, null, null, null, null, null, null, null],
+          "spellsKnown": [5, 3, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, null, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 3, 1, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 2, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 2, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 3, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, null, null, null, null, null, null, null],
+          "spellsKnown": [6, 4, 4, null, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 1, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 2, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 2, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 3, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, null, null, null, null, null, null],
+          "spellsKnown": [6, 5, 4, 4, null, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, 1, null, null, null, null, null],
+          "spellsKnown": [6, 5, 5, 4, 2, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 4, 2, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 3, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, null, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 4, 4, null, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, 1, null, null, null, null],
+          "spellsKnown": [6, 6, 5, 5, 4, 2, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 4, 2, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, 3, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, null, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 4, 4, null, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, 1, null, null, null],
+          "spellsKnown": [6, 6, 6, 5, 5, 4, 2, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 4, 2, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 4, 3, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 4, 3, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 4, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 4, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 5, 5, 4, null, null, null]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 5, null, null, null],
+          "spellsKnown": [6, 6, 6, 6, 6, 5, 5, null, null, null]
+        }
+      ]
+    },
+    "occultist": {
+      "includesZeroLevel": false,
+      "type": "spontaneous",
+      "progression": "medium",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Occult Adventures",
+          "pages": "47"
+        }
+      ],
+      "rows": [
+        {
+          "spellsPerDay": [null, 1, null, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1]
+        },
+        {
+          "spellsPerDay": [null, 2, null, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1]
+        },
+        {
+          "spellsPerDay": [null, 3, null, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1]
+        },
+        {
+          "spellsPerDay": [null, 3, 1, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2]
+        },
+        {
+          "spellsPerDay": [null, 4, 2, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, null, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2]
+        },
+        {
+          "spellsPerDay": [null, 4, 3, 1, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3]
+        },
+        {
+          "spellsPerDay": [null, 4, 4, 2, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, null, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 3, 1, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4]
+        },
+        {
+          "spellsPerDay": [null, 5, 4, 4, 2, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, null, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 3, 1, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 4, 4, 2, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, null, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 3, 1, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5, 6]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 4, 4, 2, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5, 6]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 4, 3, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5, 6]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 4, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5, 6]
+        },
+        {
+          "spellsPerDay": [null, 5, 5, 5, 5, 5, 5, null, null, null],
+          "castableSpellLevels": [0, 1, 2, 3, 4, 5, 6]
+        }
+      ]
+    }
+  },
+  "classes": {
+    "adept": {
+      "classTag": "adept",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": false,
+      "casterLevelOffset": 0,
+      "table": "adept",
+      "record": "none"
+    },
+    "alchemist": {
+      "classTag": "alchemist",
+      "type": "prepared",
+      "spellKind": "alchemy",
+      "ability": "intelligence",
+      "cantrips": false,
+      "casterLevelOffset": 0,
+      "table": "extracts",
+      "record": "book",
+      "bookType": "formula"
+    },
+    "antipaladin": {
+      "classTag": "antipaladin",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "charisma",
+      "cantrips": false,
+      "casterLevelOffset": -3,
+      "table": "prepared-low",
+      "record": "none"
+    },
+    "arcanist": {
+      "classTag": "arcanist",
+      "type": "hybrid",
+      "spellKind": "arcane",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "hybrid-full",
+      "record": "book"
+    },
+    "bard": {
+      "classTag": "bard",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "bloodrager": {
+      "classTag": "bloodrager",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": false,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-low",
+      "record": "known"
+    },
+    "cleric": {
+      "classTag": "cleric",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-full",
+      "record": "none"
+    },
+    "druid": {
+      "classTag": "druid",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-full",
+      "record": "none"
+    },
+    "hunter": {
+      "classTag": "hunter",
+      "type": "spontaneous",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "inquisitor": {
+      "classTag": "inquisitor",
+      "type": "spontaneous",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "investigator": {
+      "classTag": "investigator",
+      "type": "prepared",
+      "spellKind": "alchemy",
+      "ability": "intelligence",
+      "cantrips": false,
+      "casterLevelOffset": 0,
+      "table": "extracts",
+      "record": "book",
+      "bookType": "formula"
+    },
+    "magus": {
+      "classTag": "magus",
+      "type": "prepared",
+      "spellKind": "arcane",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-medium",
+      "record": "book"
+    },
+    "medium": {
+      "classTag": "medium",
+      "type": "spontaneous",
+      "spellKind": "psychic",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-low",
+      "record": "known"
+    },
+    "mesmerist": {
+      "classTag": "mesmerist",
+      "type": "spontaneous",
+      "spellKind": "psychic",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "occultist": {
+      "classTag": "occultist",
+      "type": "spontaneous",
+      "spellKind": "psychic",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "occultist",
+      "record": "known"
+    },
+    "oracle": {
+      "classTag": "oracle",
+      "type": "spontaneous",
+      "spellKind": "divine",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-full",
+      "record": "known"
+    },
+    "paladin": {
+      "classTag": "paladin",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "charisma",
+      "cantrips": false,
+      "casterLevelOffset": -3,
+      "table": "prepared-low",
+      "record": "none"
+    },
+    "psychic": {
+      "classTag": "psychic",
+      "type": "spontaneous",
+      "spellKind": "psychic",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-full",
+      "record": "known"
+    },
+    "ranger": {
+      "classTag": "ranger",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": false,
+      "casterLevelOffset": -3,
+      "table": "prepared-low",
+      "record": "none"
+    },
+    "shaman": {
+      "classTag": "shaman",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-full",
+      "record": "none"
+    },
+    "skald": {
+      "classTag": "skald",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "sorcerer": {
+      "classTag": "sorcerer",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-full",
+      "record": "known"
+    },
+    "spiritualist": {
+      "classTag": "spiritualist",
+      "type": "spontaneous",
+      "spellKind": "psychic",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "summonerUnchained": {
+      "classTag": "summonerUnchained",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "unchained-summoner",
+      "record": "known"
+    },
+    "summoner": {
+      "classTag": "summoner",
+      "type": "spontaneous",
+      "spellKind": "arcane",
+      "ability": "charisma",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "spontaneous-medium",
+      "record": "known"
+    },
+    "warpriest": {
+      "classTag": "warpriest",
+      "type": "prepared",
+      "spellKind": "divine",
+      "ability": "wisdom",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-medium",
+      "record": "none"
+    },
+    "witch": {
+      "classTag": "witch",
+      "type": "prepared",
+      "spellKind": "arcane",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-full",
+      "record": "book",
+      "bookType": "familiar"
+    },
+    "wizard": {
+      "classTag": "wizard",
+      "type": "prepared",
+      "spellKind": "arcane",
+      "ability": "intelligence",
+      "cantrips": true,
+      "casterLevelOffset": 0,
+      "table": "prepared-full",
+      "record": "book"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+_id: sOwXPOtI5IlEBKwr
+_key: '!items!sOwXPOtI5IlEBKwr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_27.jpg
+name: Martial Flexibility
+system:
+  abilityType: ex
+  actions:
+    - _id: nh3affxtt0joew0s
+      activation:
+        type: special
+        unchained:
+          type: special
+      name: Use
+  associations:
+    classes:
+      - Brawler
+  description:
+    value: >-
+      <p>A brawler can take a move action to gain the benefit of a combat feat
+      she doesn’t possess. This effect lasts for 1 minute. The brawler must meet
+      all the feat’s prerequisites. She may use this ability a number of times
+      per day equal to 3 + 1/2 her brawler level (minimum 1).<p>The brawler can
+      use this ability again before the duration expires in order to replace the
+      previous combat feat with another choice.<p>If a combat feat has a daily
+      use limitation (such as
+      @UUID[Compendium.pf1.feats.GsjouI6B8X7BA5wN]{Stunning Fist}), any uses of
+      that combat feat while using this ability count toward that feat’s daily
+      limit. At 6th level, a brawler can use this ability to gain the benefit of
+      two combat feats at the same time. She may select one feat as a swift
+      action or two feats as a move action. She may use one of these feats to
+      meet a prerequisite of the second feat; doing so means that she cannot
+      replace a feat currently fulfilling another’s prerequisite without also
+      replacing those feats that require it. Each individual feat selected
+      counts toward her daily uses of this ability.<p>At 10th level, a brawler
+      can use this ability to gain the benefit of three combat feats at the same
+      time. She may select one feat as a free action, two feats as a swift
+      action, or three feats as a move action. She may use one of the feats to
+      meet a prerequisite of the second and third feats, and use the second feat
+      to meet a prerequisite of the third feat. Each individual feat selected
+      counts toward her daily uses of this ability.<p>At 12th level, a brawler
+      can use this ability to gain the benefit of one combat feat as an
+      immediate action or three combat feats as a swift action. Each individual
+      feat selected counts toward her daily uses of this ability.<p>At 20th
+      level, a brawler can use this ability to gain the benefit of any number of
+      combat feats as a swift action. Each feat selected counts toward her daily
+      uses of this ability.</p>
+  subType: classFeat
+  tag: classFeat_martialFlexibility
+  uses:
+    maxFormula: 3 + floor(@class.level / 2)
+    per: day
+type: feat

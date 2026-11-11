@@ -1,0 +1,79 @@
+_id: PnCZEHzxpiz8NRSH
+_key: '!items!PnCZEHzxpiz8NRSH'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Blunderbuss
+system:
+  actions:
+    - _id: jph5llro47mqoq8c
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '10'
+  ammo:
+    capacity: 1
+    explode: 10
+    misfire: 2
+    type: gunBullet
+  baseTypes:
+    - Blunderbuss
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x2; <b>Range</b> special; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2 (10 ft.); <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>This weapon fires pellets or a bullet from its trumpet-shaped barrel,
+      making it an effective fowling weapon or closefighting personal defense
+      weapon. The blunderbuss fires in a 15-foot cone when firing pellets, and
+      has a 10-foot range increment when firing a bullet. A blunderbuss uses a
+      bullet or pellets and a single dose of black powder or a single alchemical
+      cartridge as ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2000
+  properties:
+    sct: true
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 8
+type: weapon

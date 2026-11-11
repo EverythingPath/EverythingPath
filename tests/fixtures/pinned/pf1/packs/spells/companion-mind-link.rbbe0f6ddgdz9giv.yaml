@@ -1,0 +1,51 @@
+_id: rbbe0f6ddgdz9giv
+_key: '!items!rbbe0f6ddgdz9giv'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Companion Mind Link
+system:
+  actions:
+    - _id: tefowlvt1gi0eoom
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: your animal companion
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The link between you and your animal companion becomes stronger. As
+      long as you are within line of sight of your animal companion, you can
+      telepathically communicate with it as if you two shared a language. Also,
+      as long as you are within line of sight of the animal companion, you can
+      push your animal companion a swift action instead of a move action, and
+      you do not need to succeed at Handle Animal checks to handle your animal
+      companion. Such checks automatically succeed.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      ranger: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '226'
+  sr: false
+  subschool:
+    - charm
+type: spell

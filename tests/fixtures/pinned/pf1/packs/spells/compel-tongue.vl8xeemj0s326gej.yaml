@@ -1,0 +1,67 @@
+_id: vl8xeemj0s326gej
+_key: '!items!vl8xeemj0s326gej'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Compel Tongue
+system:
+  actions:
+    - _id: 3niz1hwo3qg5mfny
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.etskn140auk6cjj2]{share language},
+      granting a creature the ability to read, understand, and communicate to
+      the best of its ability in any one language you know. For the spell's
+      entire duration, the target can speak and write only in the language
+      imparted, but its ability to understand other languages is unaffected.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 1
+      cleric: 2
+      druid: 2
+      hunter: 2
+      medium: 2
+      mesmerist: 2
+      oracle: 2
+      skald: 1
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a wooden block carved with a letter
+  school: enc
+  sources:
+    - id: PZO9462
+      pages: '24'
+  subschool:
+    - compulsion
+type: spell

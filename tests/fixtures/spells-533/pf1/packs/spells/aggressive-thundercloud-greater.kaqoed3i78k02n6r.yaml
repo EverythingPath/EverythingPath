@@ -1,0 +1,58 @@
+_id: kaqoed3i78k02n6r
+_key: '!items!kaqoed3i78k02n6r'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/bolt-strike-cloud-gray.webp
+name: Aggressive Thundercloud, Greater
+system:
+  actions:
+    - _id: axefzza77jad5t8v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 5-ft.-diameter sphere
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates and Fortitude negates (see text)
+        type: ref
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.66pt5ntiacbzsuov]{aggressive thundercloud},
+      except it deals 6d6 points of electricity damage to any creature it
+      strikes. The first creature damaged by the cloud is also stunned for 1
+      round (Fortitude negates); this is a sonic effect.</p>
+  descriptors:
+    - electricity
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 4
+      hunter: 4
+      magus: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a piece of a tree struck by lightning
+  school: evo
+  sources:
+    - id: PZO1129
+      pages: '172'
+type: spell

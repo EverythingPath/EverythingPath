@@ -1,0 +1,64 @@
+_id: epb61dugpxg475me
+_key: '!items!epb61dugpxg475me'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Fleshy Facade
+system:
+  actions:
+    - _id: jchjywlzwy4fkhlz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: 'yes'
+        harmless: true
+      target:
+        value: corporeal undead creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's flesh fills out and gains a healthy, natural color. This
+      gives the target the appearance of a living creature of the type it was
+      when it was still alive (if applicable). Creatures casting spells such as
+      <i>detect undead</i> must succeed at a saving throw (with a DC equal to
+      the spell's save DC) to detect the target's presence, and if the target is
+      intelligent, it gains a +10 bonus on Disguise checks to appear alive or
+      recently deceased. If the undead has any features different from those of
+      the type of living creature it most resembles (such as a ghoul's elongated
+      teeth and claws), those features shrink and become less prominent, and the
+      subject deals damage as though it were one size smaller. This spell has no
+      effect on creatures that are skeletal or otherwise lack flesh.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      investigator: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1130
+      pages: '81'
+  subschool:
+    - polymorph
+type: spell

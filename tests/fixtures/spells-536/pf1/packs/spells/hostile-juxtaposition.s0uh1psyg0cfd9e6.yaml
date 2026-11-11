@@ -1,0 +1,63 @@
+_id: s0uh1psyg0cfd9e6
+_key: '!items!s0uh1psyg0cfd9e6'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Hostile Juxtaposition
+system:
+  actions:
+    - _id: o3pqwe9p0y97j7p5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature of your size or smaller
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a dimensional link to the target creature. When attacked or
+      the subject of a spell that deals damage to you, you can spend an
+      immediate action to cause yourself and the target creature to teleport and
+      switch places. The target then becomes the target of the triggering attack
+      or spell instead of you. If you fail to teleport out of the area of an
+      effect, that effect might still affect you. If the target creature cannot
+      fit safely into the new space without squeezing, or you try to teleport
+      the target into an occupied space or a space it could not normally stand
+      within, the juxtaposition fails. Further, if the target is unconscious or
+      dead when you attempt to switch places, the juxtaposition fails. Once you
+      have used it to teleport once, this spell is discharged.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      mesmerist: 4
+      psychic: 5
+      sorcerer: 5
+      summoner: 4
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a coin
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '231'
+  subschool:
+    - teleportation
+type: spell

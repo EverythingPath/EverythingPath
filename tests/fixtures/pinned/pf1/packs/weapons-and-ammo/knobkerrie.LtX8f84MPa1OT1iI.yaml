@@ -1,0 +1,89 @@
+_id: LtX8f84MPa1OT1iI
+_key: '!items!LtX8f84MPa1OT1iI'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/knobkerry.png
+name: Knobkerrie
+system:
+  actions:
+    - _id: 8kkhy9x6f6hkf5k6
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: sLUIVTDAEDzCiHIc
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Knobkerrie
+  description:
+    unidentified: >-
+      <p>A knobkerrie, or iwisa, is carved from a single piece of hardwood with
+      a shaft 2 to 4 feet long surmounted by a bulbous knob. The knobkerrie is a
+      traditional hunting weapon among the Zenj people of the Mwangi, but it's
+      also used as a symbol of authority. Many tribal elders use decorated
+      knobkerries as scepters or canes. A knobkerrie is thrown end-over-end. If
+      you are proficient, you gain a +1 bonus on ranged attack rolls with a
+      knobkerrie against opponents using bucklers, light shields, or heavy
+      shields. If you aren't proficient with a knobkerrie, treat it as a
+      club.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '18'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon
