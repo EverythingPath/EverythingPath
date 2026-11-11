@@ -1,0 +1,63 @@
+_id: pgxpdq6q7783u5oo
+_key: '!items!pgxpdq6q7783u5oo'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Inveigle Person
+system:
+  actions:
+    - _id: mrypdhj4pc9fdvrz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to become extremely amiable. The target treats all
+      other living creatures as if it were friendly toward them. Any overtly
+      hostile or harmful act toward the target by any living creature ends the
+      spell.  An inveigled creature attempts to fulfill multiple requests in the
+      same manner as it would favors for its true friends. If such requests
+      conflict, it usually chooses the more reasonable option-overriding this
+      preference requires succeeding at an opposed Charisma check, as if under
+      multiple forms of mental control (<i>Pathfinder RPG Core Rulebook</i>
+      209).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      mesmerist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a drop of alcohol
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '60'
+  subschool:
+    - charm
+type: spell

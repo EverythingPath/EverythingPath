@@ -1,0 +1,55 @@
+_id: 0y3go94j3gfmkduu
+_key: '!items!0y3go94j3gfmkduu'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Nature's Ravages
+system:
+  actions:
+    - _id: sgs436xkqafdbe3g
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: >-
+          corpse of creature whose total number of HD does not exceed your
+          caster level
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You greatly speed up the decomposition process of a nearby corpse and
+      warp the fibers of time that permeate it, aging the corpse an additional
+      amount of time equal to up to 1 day per 2 caster levels (maximum 10 days
+      at 20th level). This spell prompts all the natural effects of the intended
+      decomposition period, including crumbled clothing, rotted or liquefied
+      flesh, maggot infestations, and the infiltration of any surrounding
+      vegetation.  In addition to hindering mundane autopsies and
+      investigations, this spell may effectively prohibit the use of <i>raise
+      dead</i> on the target, though more powerful magic such as
+      <i>resurrection</i> or true <i>resurrection</i> may still work.</p>
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+      witch: 3
+  level: 4
+  materials:
+    value: dried maggots
+  school: nec
+  sources:
+    - id: PZO9430
+      pages: '31'
+  sr: false
+type: spell

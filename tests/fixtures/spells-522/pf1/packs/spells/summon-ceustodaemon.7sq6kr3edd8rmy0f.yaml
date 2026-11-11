@@ -1,0 +1,55 @@
+_id: 7sq6kr3edd8rmy0f
+_key: '!items!7sq6kr3edd8rmy0f'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Ceustodaemon
+system:
+  actions:
+    - _id: b23s6o56vjorzvdk
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except it summons a
+      single ceustodaemon.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      oracle: 5
+      sorcerer: 5
+      summoner: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: ashes of a dead animal
+  school: con
+  sources:
+    - id: PZO9239
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

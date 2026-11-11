@@ -1,0 +1,51 @@
+_id: fa3oswb6t4drz74g
+_key: '!items!fa3oswb6t4drz74g'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Id Insinuation I
+system:
+  actions:
+    - _id: 6gj4vr2bisokehv8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>By invading the mind of a creature with your psychic presence, you can
+      isolate parts of its mind, preventing the target from functioning in a
+      coherent manner. The target is confused as long as you concentrate on it
+      plus 1 additional round. A successful Will save negates this effect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Psychic: 2
+    class:
+      psychic: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '173'
+  subschool:
+    - compulsion
+type: spell

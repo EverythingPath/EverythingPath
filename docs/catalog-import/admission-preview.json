@@ -1,0 +1,540 @@
+{
+  "observedOn": "2026-10-03",
+  "issue": 257,
+  "purpose": "Observed local preview admission evidence; no Catalog Release or publication.",
+  "reviewStatus": {
+    "acceptedAssessments": 0,
+    "reviewedRegistryRecords": 0,
+    "legalSufficiencyClaim": false
+  },
+  "runs": [
+    {
+      "name": "fixture",
+      "command": "pnpm -s catalog:preview --system tests/fixtures/catalog/pf1 --content tests/fixtures/catalog/pf1-content --allow-unverified-checkouts --out .catalog-preview/fixture",
+      "exitCode": 1,
+      "artifactDirectory": ".catalog-preview/fixture",
+      "inputVerification": {
+        "status": "unverified"
+      },
+      "inputs": [
+        {
+          "repo": "pf1",
+          "tag": "v11.11",
+          "version": "11.11",
+          "contentSha256": "51718ef815603e19091c772c6e448f436e7d41d104c06964a0e6c27b2d1dbc01"
+        },
+        {
+          "repo": "pf1-content",
+          "tag": "11.4.0",
+          "version": "11.4.0",
+          "contentSha256": "df70d754e72250e9d9ceb8b84a2033645e061569ec4fbb31cb87a39367c65a28"
+        }
+      ],
+      "extraction": {
+        "entries": 41,
+        "resources": 20,
+        "upstreamRecords": 75,
+        "excluded": 14,
+        "unassigned": 0,
+        "coverageComplete": true
+      },
+      "admission": {
+        "passed": false,
+        "admitted": 0,
+        "held": 41,
+        "dependentOmissions": 0,
+        "retainedExceptions": 0,
+        "failures": 20
+      },
+      "heldCounts": {
+        "missing Attribution Assessment": 41
+      },
+      "knownNoticeHoldCount": 0,
+      "knownNoticeHoldCounts": {},
+      "failureCounts": {
+        "Broken structure or reference: unresolved imported reference.": 20
+      },
+      "knownNoticeHolds": [],
+      "requiredNotices": [],
+      "outstandingNotices": [],
+      "outstandingResources": [],
+      "fingerprints": {
+        "extractionFingerprint": "f68d91c547fba979a8d87903107afbf9494be3b86930e3539614ef54b88f513b",
+        "reviewedInputsFingerprint": "e3dae698d6941112764634d03e1f5cf8657a1d0a54b5d1093efb39e587c80ab1",
+        "legalResourcesFingerprint": "5ff025c7499a505ec206cc391e5c7a40fb5e190a1262c786f97145208561a97e"
+      },
+      "artifactSha256": {
+        "catalog.json": "c6c4c48708813f4756743ef5ca23fb236a88bb1df89e43c4cbd3fe837b3dce01",
+        "comparison.json": "622d122cd1064565354ece11e357d8d01f72e406363d18bebe017e27a62cbe1d",
+        "unsupported.json": "cbb4c5ffe999c5f13f76085babbd6c17bd2411ce6d5fda68b276df4c47a1f665",
+        "admission.json": "48b76f502d488159d0af308826872791b605daf46e5dc57639aa55c61ab3b5c9"
+      }
+    },
+    {
+      "name": "pinned",
+      "command": "pnpm -s catalog:preview --system \"$PF1_PINNED_CHECKOUT\" --content \"$PF1_CONTENT_PINNED_CHECKOUT\" --out .catalog-preview/pinned",
+      "exitCode": 1,
+      "artifactDirectory": ".catalog-preview/pinned",
+      "inputVerification": {
+        "status": "verified",
+        "repositories": [
+          {
+            "repository": "pf1",
+            "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d"
+          },
+          {
+            "repository": "pf1-content",
+            "commit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d"
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "repo": "pf1",
+          "tag": "v11.11",
+          "version": "11.11",
+          "contentSha256": "ad02ce79c5251e877b9963f5ba2ba2b846bb9975a899a63195c3f57aef8dd771"
+        },
+        {
+          "repo": "pf1-content",
+          "tag": "11.4.0",
+          "version": "11.4.0",
+          "contentSha256": "a2a1f8f994bfbd6788d8e6d0df90ed0542bc650cf2872a7f9d1d7e5cb894d24c"
+        }
+      ],
+      "extraction": {
+        "entries": 23037,
+        "resources": 538,
+        "upstreamRecords": 27592,
+        "excluded": 3302,
+        "unassigned": 715,
+        "coverageComplete": false
+      },
+      "admission": {
+        "passed": false,
+        "admitted": 0,
+        "held": 23183,
+        "dependentOmissions": 0,
+        "retainedExceptions": 0,
+        "failures": 1107
+      },
+      "heldCounts": {
+        "Known notice/evidence hold (#227/#241); unavailable for new release admission.": 32,
+        "missing Attribution Assessment": 23151
+      },
+      "knownNoticeHoldCount": 32,
+      "knownNoticeHoldCounts": {
+        "dynamite-comics": 16,
+        "horror-realms": 7,
+        "refuge-of-time": 1,
+        "shattered-star-4": 7,
+        "thornkeep": 1
+      },
+      "failureCounts": {
+        "Broken structure or reference: unresolved imported reference.": 392,
+        "Unaccounted import inventory record.": 715
+      },
+      "knownNoticeHolds": [
+        {
+          "externalKey": "pf1-content/3BX3LlcsJ91SHSaW",
+          "name": "Fearless (Green Martian)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/3Vm6XVy4LnyZDS1B",
+          "name": "Ocher Rhomboid Ioun Stone",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZOPSS0412"
+          ],
+          "missingNotices": [
+            "PZOPSS0412"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/Eco6bl5RksubMT72",
+          "name": "Blue lily extract",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/Ito5mVORyLU6iU85",
+          "name": "Lashing Aklys",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/LZ8WLQwF8ObuuJpJ",
+          "name": "Multi-Armed (Green Martian)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/OAfZWupd9yLtJyVt",
+          "name": "Weapon Familiarity (Green Martian)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/R2bOGMBDezehJTev",
+          "name": "Osa Painting",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/W2COrPgfDHb0JhWN",
+          "name": "Belt of Trelmarixian",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0046-HC"
+          ],
+          "missingNotices": [
+            "DYN0046-HC"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/XX1oB43o8dFuHHV7",
+          "name": "Crystalline Starknife",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/YXENRUGtna36lnM6",
+          "name": "Ferocity (Green Martian)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/eBmmX2LCRXFf9BlF",
+          "name": "Doomsday Key",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/em8BoW2q3oUV9CHk",
+          "name": "Detect Thoughts",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/gvL7OpilqUedc8UU",
+          "name": "Doomsday Staff",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/ldQBHfoTtnrg4Q2X",
+          "name": "Flaying Halberd",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/lvV61h2tNXC2KqQF",
+          "name": "Skill Training",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/t6E4bJgLrND1XYuC",
+          "name": "Death Bill",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/uqk3dycBBS8M74lp",
+          "name": "Languages (Green Martian)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1-content/zWGhCCnWamkbJSMk",
+          "name": "Arcanolembic",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZOGWK0001"
+          ],
+          "missingNotices": [
+            "PZOGWK0001"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/CadEsVvAN7kdruSH",
+          "name": "Thark Rifle",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [],
+          "missingNotices": [],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/M6rx2faMBFZFzuY9",
+          "name": "Summon Barghest II",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0010-A"
+          ],
+          "missingNotices": [
+            "DYN0010-A"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/SkM63G8HnKo8Fj6l",
+          "name": "Teratoid Caress",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "Pathfinder Comics #10"
+          ],
+          "missingNotices": [
+            "Pathfinder Comics #10"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/TRu1NMreURd0IPpe",
+          "name": "Fiendish Probiscis",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/ViSMOM9zfKVQLvCQ",
+          "name": "Summon Barghest I",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0010-A"
+          ],
+          "missingNotices": [
+            "DYN0010-A"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/WgWbQt0Pp1qLvP44",
+          "name": "Tentacles",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/YmfCfB6ptDAvcJaF",
+          "name": "The Uskbond Domain",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/YxeSVRbG7lfQybfr",
+          "name": "Green Martian",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "DYN0032-E"
+          ],
+          "missingNotices": [
+            "DYN0032-E"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/aLCy6zW8AldME74r",
+          "name": "Radium Pistol",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [],
+          "missingNotices": [],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/hjIKtQMst5tvUUIG",
+          "name": "Shadows out of Light",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/idxobm3m03po416y",
+          "name": "Curse Item",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9064"
+          ],
+          "missingNotices": [
+            "PZO9064"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/o4M6v7BjXzvzrTec",
+          "name": "Demon Dream",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "Pathfinder Comics #10"
+          ],
+          "missingNotices": [
+            "Pathfinder Comics #10"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/pOpdCKHtNCuahRnI",
+          "name": "Pierce the Veil (SHA)",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [
+            "PZO9297"
+          ],
+          "missingNotices": [
+            "PZO9297"
+          ],
+          "evidence": []
+        },
+        {
+          "externalKey": "pf1/xhUw4hzZlljYFCzj",
+          "name": "Radium Rifle",
+          "reason": "Known notice/evidence hold (#227/#241); unavailable for new release admission.",
+          "requiredNotices": [],
+          "missingNotices": [],
+          "evidence": []
+        }
+      ],
+      "requiredNotices": [],
+      "outstandingNotices": [],
+      "outstandingResources": [],
+      "fingerprints": {
+        "extractionFingerprint": "794f44ee15dea8ddc471a7952c740d30629ccf37c2330b4cc0a47fc5b2fed79d",
+        "reviewedInputsFingerprint": "e3dae698d6941112764634d03e1f5cf8657a1d0a54b5d1093efb39e587c80ab1",
+        "legalResourcesFingerprint": "5ff025c7499a505ec206cc391e5c7a40fb5e190a1262c786f97145208561a97e"
+      },
+      "artifactSha256": {
+        "catalog.json": "dfe0d4b29d0195ac408c9b8ffe21d62ea455e1e290435d15586fdb858d03278c",
+        "comparison.json": "a3c767a2f771d4a74b646f56e3474dcc83bff9fc014cb3e1c5f9d22d3ea7140e",
+        "unsupported.json": "13731c72b8e623e2a6ccc1d989d742a505d0ae82541c0639ff563d97d384d9c3",
+        "admission.json": "e7fdb68f018713cac6bde0a5214cca4ccdbd4bdedba7db86c51941cf5ff94e54"
+      }
+    }
+  ],
+  "artifactPaths": "Portable git-ignored output directories; complete admission.json files individually identify all held and failed candidates.",
+  "pinnedCheckouts": {
+    "pf1": {
+      "path": "$PF1_PINNED_CHECKOUT",
+      "tag": "v11.11",
+      "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d"
+    },
+    "pf1-content": {
+      "path": "$PF1_CONTENT_PINNED_CHECKOUT",
+      "tag": "11.4.0",
+      "commit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d"
+    }
+  }
+}
