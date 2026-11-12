@@ -1,0 +1,52 @@
+_id: 55VbucpexWzN4fls
+_key: '!items!55VbucpexWzN4fls'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Varki Landspeaker (Human; Varki)
+system:
+  actions:
+    - _id: fau1l9JhhsAwWYh5
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: query the spirits of the land
+  contextNotes:
+    - target: skill.sur
+      text: +[[1]] Trait bonus in arctic or cold terrain.
+    - target: skill.sur
+      text: >-
+        +[[5]] Trait bonus, once per day on a single check, to follow tracks,
+        forage, or find shelter in arctic or cold terrain.
+  description:
+    value: >-
+      <p><em>You are deeply attuned to the lands your people call home and the
+      spirits that live there.</em></p><p><strong>Requirements</strong>: Varki
+      Human Heritage</p><p><strong>Benefits</strong>: You gain a +1 trait bonus
+      on Survival checks in arctic or cold terrain. In addition, while in such
+      terrain, you may query the spirits of the land once per day to gain a +5
+      trait bonus on a single skill check to follow tracks, forage, or find
+      shelter.</p>
+  scriptCalls:
+    - _id: dClT59JfFMH9Pv2H
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("sur", {bonus:`5[${item.name}]`});
+  sources:
+    - id: PZO9428
+      pages: '15'
+  subType: trait
+  tags:
+    - Human
+    - Varki
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

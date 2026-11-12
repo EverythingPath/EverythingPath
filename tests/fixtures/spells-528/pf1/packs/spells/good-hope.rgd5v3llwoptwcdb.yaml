@@ -1,0 +1,56 @@
+_id: rgd5v3llwoptwcdb
+_key: '!items!rgd5v3llwoptwcdb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/holy/prayer-hands-glowing-yellow-white.webp
+name: Good Hope
+system:
+  actions:
+    - _id: vxl8b7fetjcnggrg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one living creature/level, no two of which may be more than 30 ft.
+          apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell instills powerful hope in the subjects. Each affected
+      creature gains a +2 morale bonus on saving throws, attack rolls, ability
+      checks, skill checks, and weapon damage rolls.</p><p><i>Good hope</i>
+      counters and dispels crushing despair.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 3
+      skald: 3
+    subDomain:
+      Revelry: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '291'
+  subschool:
+    - compulsion
+type: spell

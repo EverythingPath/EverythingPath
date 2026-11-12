@@ -1,0 +1,84 @@
+_id: 4fm4md4eux7sw6o0
+_key: '!items!4fm4md4eux7sw6o0'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: systems/pf1/icons/misc/magic-swirl.png
+name: Hex Glyph, Greater
+system:
+  actions:
+    - _id: ox1b4y3hidr4cdh8
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      name: Object touched
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+    - _id: DZjoYKmb47KDUjtq
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      measureTemplate:
+        size: 5 * @cl
+        type: rect
+      name: Square
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.yuftnxwtc9du93ho]{Hex Glyph}, except you can
+      store a hex or a major hex (but not a grand hex). You trace the glyph with
+      incense, which must first be sprinkled with powdered diamond (as noted in
+      the material line).</p>
+
+      <p>@UUID[Compendium.pf1.spells.j0bc0iii8zp1jiwr]{Read Magic} allows its
+      caster to identify a greater <em>hex glyph</em> with a DC 16
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.VRD7jxiIAxKPt6EF]{Spellcraft}
+      check.</p>
+  learnedAt:
+    class:
+      shaman: 5
+      witch: 5
+  level: 5
+  materials:
+    gpValue: 400
+    value: powdered diamond worth 400 gp
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '184'
+  sr: false
+type: spell

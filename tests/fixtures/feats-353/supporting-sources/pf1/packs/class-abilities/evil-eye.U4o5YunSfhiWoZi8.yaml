@@ -1,0 +1,49 @@
+_id: U4o5YunSfhiWoZi8
+_key: '!items!U4o5YunSfhiWoZi8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Evil Eye
+system:
+  abilityType: su
+  actions:
+    - _id: 4b8hasr2rdvulpvp
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 3 + @class.level
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will reduces duration to 1 round
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can cause doubt to creep into the mind of a foe within 30
+      feet that she can see. The target takes a –2 penalty on one of the
+      following (witch's choice): AC, ability checks, attack rolls, saving
+      throws, or skill checks. This hex lasts for a number of rounds equal to 3
+      + the witch's Intelligence modifier. A Will save reduces this to just 1
+      round. This is a mind-affecting effect.</p>
+
+      <p>At 8th level the penalty increases to –4.</p>
+  sources:
+    - id: PZO1115
+      pages: '66'
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

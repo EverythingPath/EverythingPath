@@ -1,0 +1,123 @@
+_id: 7eaVZeWsDO00mBhA
+_key: '!items!7eaVZeWsDO00mBhA'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Child of the Crusades (Wrath of the Righteous)
+system:
+  actions:
+    - _id: pb5VGZWDQJaUauNr
+      activation:
+        type: free
+        unchained:
+          type: free
+      description: >-
+        <p>Once per day, when you fail a saving throw against an effect created
+        by a demon that would possess or incapacitate you mentally, you may
+        immediately reroll that saving throw as a free action. You must take the
+        second result, even if it is worse.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        Once per day, when you fail a saving throw against an effect created by
+        a demon that would possess or incapacitate you mentally, you may
+        immediately reroll that saving throw as a free action. You must take the
+        second result, even if it is worse.
+  description:
+    value: >-
+      <p><em>Your parents were members of the crusade, as were their parents
+      before them. (If you are an elf, gnome, or other long-lived race, these
+      could be brothers or cousins instead, since it’s possible that the
+      Worldwound simply didn’t exist at a time before you were born.) The
+      righteousness of the crusades sometimes feels as if it runs in your very
+      blood, and it bolsters you against demonic inf luence. Your parents may be
+      alive still, or they may have perished on a mission—that choice is up to
+      you. You grew up knowing them, though, and their zeal and devotion to the
+      crusade is the primary reason you feel the same way. They’ve told you of
+      other family members who have also been involved in the crusade, and it’s
+      not uncommon for you to meet a distant cousin or long-lost aunt, uncle, or
+      other family member while traveling among the border towns of Mendev. This
+      strong family tie bolsters your mind and sense of belonging to the
+      crusade.</em></p><p><strong>Benefits</strong>: Once per day when you fail
+      a saving throw against an effect created by a demon that would possess or
+      incapacitate you mentally, you may immediately reroll that saving throw as
+      a free action. You must take the second result, even if it is
+      worse.</p><p><strong>Associated Mythic
+      Path</strong></p><p>Marshal</p><p><strong>Multiple
+      Characters</strong></p><p>If other characters take this trait, you should
+      all be related—you can be siblings, cousins, or even more distant
+      relations, but you should all be aware of this shared lineage.</p>
+  scriptCalls:
+    - _id: 7xXWzk4fNjziU7lN
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Saving Throw
+      type: script
+      value: >-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Saving Throw:</h3>
+            <p>Please pick a saving throw to reroll from the buttons below.</p>
+          </div>
+        `;
+
+
+        const labels = [game.i18n.localize("PF1.SavingThrowFort"),
+        game.i18n.localize("PF1.SavingThrowRef"),
+        game.i18n.localize("PF1.SavingThrowWill")];
+
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Saving Throw`,
+            content: content,
+            buttons: {
+              fort: {
+                label: labels[0],
+                callback: () => "fort",
+              },
+              ref: {
+                label: labels[1],
+                callback: () => "ref",
+              },
+              will: {
+                label: labels[2],
+                callback: () => "will",
+              }
+            },
+            default: 'fort',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+
+        const answer = await getAnswer();
+
+        if(answer !== null) {
+          actor.rollSavingThrow(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9000-13E
+      pages: '5'
+    - id: PZO9437
+      pages: '31'
+  subType: trait
+  tags:
+    - Wrath of the Righteous
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
