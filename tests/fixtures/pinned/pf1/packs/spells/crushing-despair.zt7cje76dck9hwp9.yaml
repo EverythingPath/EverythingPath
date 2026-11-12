@@ -1,0 +1,64 @@
+_id: zt7cje76dck9hwp9
+_key: '!items!zt7cje76dck9hwp9'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/fear-fright-white.webp
+name: Crushing Despair
+system:
+  actions:
+    - _id: 4e2smak9r3n0unzz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An invisible cone of despair causes great sadness in the subjects. Each
+      affected creature takes a -2 penalty on attack rolls, saving throws,
+      ability checks, skill checks, and weapon damage rolls.</p><p><em>Crushing
+      despair</em> counters and dispels <em>good hope</em>.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      bloodrager: 4
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      spiritualist: 4
+      witch: 4
+      wizard: 4
+    subDomain:
+      Isolation: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '262'
+  subschool:
+    - compulsion
+type: spell

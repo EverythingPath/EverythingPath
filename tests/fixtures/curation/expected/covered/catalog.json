@@ -1,0 +1,326 @@
+{
+  "purpose": "preview",
+  "releaseAdmission": "not-evaluated",
+  "remaps": [],
+  "inputs": [
+    {
+      "repo": "pf1",
+      "tag": "v11.11",
+      "version": "11.11",
+      "contentSha256": "a4f4e89f9f2d5e6b13f6b1e422b7051c612f610a954aa4328a6644504b6208d9"
+    },
+    {
+      "repo": "pf1-content",
+      "tag": "11.4.0",
+      "version": "11.4.0",
+      "contentSha256": "b81f27569262f717561f2891a1b69f1679982c1d86d06bb152eebd6ca4b38963"
+    }
+  ],
+  "summary": {
+    "upstreamRecords": 13,
+    "admitted": 11,
+    "excluded": 2,
+    "unassigned": 0,
+    "byKind": {
+      "itemAbility": 3,
+      "feat": 8
+    }
+  },
+  "entries": [
+    {
+      "externalKey": "pf1-content/Flaming",
+      "upstreamKey": "pf1-content/Flaming",
+      "pack": "pf-special-qualities",
+      "name": "Flaming",
+      "detail": {
+        "kind": "itemAbility",
+        "appliesTo": "weapon",
+        "damageDice": [
+          {
+            "on": "hit",
+            "dice": "1d6",
+            "damageType": "fire"
+          }
+        ],
+        "bonusEquivalent": 1
+      },
+      "description": "<p>A flaming weapon deals an extra 1d6 fire damage on a hit.</p><p>Price +1 bonus</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/Keen",
+      "upstreamKey": "pf1-content/Keen",
+      "pack": "pf-special-qualities",
+      "name": "Keen",
+      "detail": {
+        "kind": "itemAbility",
+        "appliesTo": "melee",
+        "bonusEquivalent": 1,
+        "doublesThreat": true,
+        "weaponDamageTypes": [
+          "piercing",
+          "slashing"
+        ]
+      },
+      "description": "<p>Only piercing or slashing melee weapons can be keen. This ability doubles the threat range of a weapon.</p><p>Price +1 bonus</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/Shadow",
+      "upstreamKey": "pf1-content/Shadow",
+      "pack": "pf-special-qualities",
+      "name": "Shadow",
+      "detail": {
+        "kind": "itemAbility",
+        "appliesTo": "armor",
+        "bonusEquivalent": 0
+      },
+      "description": "<p>This armor grants a +5 competence bonus on Stealth checks.</p><p>Price +3,750 gp</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.ste",
+          "bonusType": "competence",
+          "value": 5
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Action",
+      "upstreamKey": "pf1/Action",
+      "pack": "feats",
+      "name": "Action",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "enhancement",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "Within 30 ft"
+            },
+            "weapon": "$self"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "weaponAction",
+                "conditionals": [
+                  {
+                    "_id": "closeRange",
+                    "name": "Within 30 ft",
+                    "modifiers": [
+                      {
+                        "formula": "1",
+                        "target": "attack",
+                        "subTarget": "allAttack",
+                        "type": "enh"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Compound",
+      "upstreamKey": "pf1/Compound",
+      "pack": "feats",
+      "name": "Compound",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "vs bull rush while on ground"
+            }
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "vs trip while on ground"
+            }
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Covered",
+      "upstreamKey": "pf1/Covered",
+      "pack": "feats",
+      "name": "Covered",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/EmptyTarget",
+      "upstreamKey": "pf1/EmptyTarget",
+      "pack": "feats",
+      "name": "EmptyTarget",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "May reroll critical confirmation once"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Formula",
+      "upstreamKey": "pf1/Formula",
+      "pack": "feats",
+      "name": "Formula",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "save.will",
+          "bonusType": "morale",
+          "value": {
+            "formula": "floor((@classLevel.fighter + 2) / 4)"
+          },
+          "condition": {
+            "situation": {
+              "local": "vs fear"
+            }
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Immunity",
+      "upstreamKey": "pf1/Immunity",
+      "pack": "feats",
+      "name": "Immunity",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "saves",
+          "situation": {
+            "local": "Magic Sleep"
+          },
+          "text": "Immune to Magic Sleep"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Numeric",
+      "upstreamKey": "pf1/Numeric",
+      "pack": "feats",
+      "name": "Numeric",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "vs poison"
+            }
+          }
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Prose",
+      "upstreamKey": "pf1/Prose",
+      "pack": "feats",
+      "name": "Prose",
+      "detail": {
+        "kind": "feat",
+        "featTypes": [],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p>When defending against bull rush, gain a +2 racial bonus to CMD.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against bull rush"
+            }
+          }
+        }
+      ],
+      "unsupported": []
+    }
+  ],
+  "resources": [],
+  "inputVerification": {
+    "status": "unverified"
+  }
+}

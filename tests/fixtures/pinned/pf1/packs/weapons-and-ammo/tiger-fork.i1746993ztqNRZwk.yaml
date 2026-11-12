@@ -1,0 +1,63 @@
+_id: i1746993ztqNRZwk
+_key: '!items!i1746993ztqNRZwk'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/polearms/trident-silver-red.webp
+name: Tiger Fork
+system:
+  actions:
+    - _id: vufyk7b4n6lem5vc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Tiger Fork
+  description:
+    unidentified: >-
+      <p>This long, tridentlike weapon consists of a three-pronged metal fork
+      set upon an 8-foot-long shaft. It is wielded much like a staff, with the
+      wielder grasping the shaft from the center and jabbing with its forked
+      end. A tiger fork can be set to receive a charge.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    brc: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - monk
+    - polearms
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

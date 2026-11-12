@@ -1,0 +1,59 @@
+_id: 0gg4uir1psakz59e
+_key: '!items!0gg4uir1psakz59e'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Sympathetic Vibration
+system:
+  actions:
+    - _id: p6d1tekehaansg53
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      damage:
+        parts:
+          - formula: 2d10
+            types:
+              - untyped
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one freestanding structure
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>By attuning yourself to a freestanding structure, you can create a
+      damaging vibration within it. Once it begins, the vibration deals 2d10
+      points of damage per round to the target structure, bypassing hardness.
+      You can choose at the time of casting to limit the duration of the spell;
+      otherwise it lasts for 1 round per level. If the spell is cast upon a
+      target that is not freestanding, the surrounding stone dissipates the
+      effect and no damage occurs.</p><p><i>Sympathetic vibration</i> cannot
+      affect creatures (including constructs). Since a structure is an
+      unattended object, it gets no saving throw to resist the effect.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 6
+      skald: 6
+  level: 6
+  materials:
+    focus: a tuning fork
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '357'
+type: spell

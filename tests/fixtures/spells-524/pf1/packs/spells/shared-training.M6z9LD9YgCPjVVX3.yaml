@@ -1,0 +1,61 @@
+_id: M6z9LD9YgCPjVVX3
+_key: '!items!M6z9LD9YgCPjVVX3'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/skills/social/diplomacy-handshake-blue.webp
+name: Shared Training
+system:
+  actions:
+    - _id: hC57xoYbupmtS1kr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      target:
+        value: >-
+          you plus one willing creature per 3 levels, no two of which can be
+          more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Select one teamwork feat you have. You can grant this feat to allies
+      within range for the duration of the spell. Allies do not need to meet the
+      prerequisites of this teamwork feat. At caster level 9th, you can grant
+      two teamwork feats you have to your allies. At caster level 13th, you can
+      grant three teamwork feats, and at caster level 17th, you can grant up to
+      four teamwork feats.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      cleric: 3
+      hunter: 2
+      inquisitor: 2
+      magus: 2
+      oracle: 3
+      paladin: 2
+      psychic: 3
+      ranger: 2
+      skald: 2
+      sorcerer: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  school: div
+  sources:
+    - id: PZO9490
+      pages: '13'
+  sr: false
+type: spell

@@ -1,0 +1,96 @@
+_id: sa076xymi52eq3to
+_key: '!items!sa076xymi52eq3to'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/heal-sky-2.jpg
+name: Cure Critical Wounds
+system:
+  actions:
+    - _id: kkb3xqlbn4ogq5r5
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 4d8 + min(20, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Heal Living
+      range:
+        units: touch
+      save:
+        description: Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: living creature touched
+      touch: true
+    - _id: 4iQjBZ42DtBX1PyB
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 4d8 + min(20, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      img: icons/magic/fire/flame-burning-skeleton-explosion.webp
+      name: Harm Undead
+      range:
+        units: touch
+      save:
+        description: Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: undead creature touched
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.xoc3vhg3btmfjauq]{cure light wounds},
+      except that it cures 4d8 points of damage + 1 point per caster level
+      (maximum +20).</p>
+  learnedAt:
+    class:
+      adept: 4
+      alchemist: 4
+      bard: 4
+      cleric: 4
+      druid: 5
+      hunter: 5
+      inquisitor: 4
+      investigator: 4
+      occultist: 4
+      oracle: 4
+      shaman: 4
+      skald: 4
+      spiritualist: 4
+      warpriest: 4
+      witch: 5
+    domain:
+      Healing: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '262'
+  subschool:
+    - healing
+type: spell

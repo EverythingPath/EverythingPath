@@ -1,0 +1,58 @@
+_id: xQegVPdAOD8rq2Rl
+_key: '!items!xQegVPdAOD8rq2Rl'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/travelling-kettle.png
+name: Traveling Kettle
+system:
+  actions:
+    - _id: he3xayj9zs9bbxzh
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+  baseTypes:
+    - Traveling Kettle
+  description:
+    unidentified: >-
+      <p>These small tea kettles are made with clamping lids and heavily
+      reinforced handles, allowing them to be swung like a club. A traveling
+      kettle with boiling water inside deals an additional 1 point of fire
+      damage on a hit. Boiling water cools to a nondamaging temperature after 5
+      minutes.</p>
+  hardness: 5
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+    mnk: true
+    spc: true
+  sources:
+    - id: PZO9493
+      pages: '30'
+  weaponGroups:
+    - monk
+  weight:
+    value: 2
+type: weapon
