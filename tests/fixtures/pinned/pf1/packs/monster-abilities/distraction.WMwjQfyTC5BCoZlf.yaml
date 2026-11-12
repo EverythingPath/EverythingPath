@@ -1,0 +1,45 @@
+_id: WMwjQfyTC5BCoZlf
+_key: '!items!WMwjQfyTC5BCoZlf'
+_stats:
+  coreVersion: '12.343'
+folder: ks1gs7KC2CO3U9hN
+img: systems/pf1/icons/skills/affliction_13.jpg
+name: Distraction
+system:
+  abilityType: ex
+  actions:
+    - _id: DRdZAz8xlCa6bsVl
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Fortitude negates
+        type: fort
+  description:
+    value: >-
+      <p>A creature with this ability can nauseate creatures it damages. Any
+      living creature that takes damage from a creature with the distraction
+      ability is nauseated for 1 round; a Fortitude save (DC = 10 + 1/2
+      creature’s HD + creature’s Constitution modifier) negates the
+      effect.</p><p><em>Format:</em> distraction (DC
+      14)</p><p><em>Location:</em> Special Attacks.</p>
+  showInCombat: true
+  sources:
+    - id: PZO1112
+      pages: '299'
+    - id: PZO1116
+      pages: '296'
+    - id: PZO1120
+      pages: '294'
+    - id: PZO1127
+      pages: '293'
+    - id: PZO1133
+      pages: '292'
+    - id: PZO1137
+      pages: '292'
+  subType: misc
+type: feat

@@ -1,0 +1,55 @@
+_id: Y1Blrx6vP14T5G6G
+_key: '!items!Y1Blrx6vP14T5G6G'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/nature/beam-hand-leaves-green.webp
+name: Antitoxin Touch
+system:
+  actions:
+    - _id: md805i4mo1q20ah1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's skin secretes a small amount of venom-resistant oils for
+      the spell's duration. The target cannot accidentally poison itself while
+      applying poison. Additionally, the target does not risk exposure to a
+      creature's poison when attempting to milk venom (<em>Ultimate
+      Wilderness</em> 142).</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      druid: 1
+      hunter: 1
+      investigator: 1
+      ranger: 1
+      shaman: 1
+      witch: 1
+  materials:
+    value: a small drop of antitoxin
+  school: abj
+  sources:
+    - id: PZO9487
+      pages: '11'
+type: spell

@@ -1,0 +1,46 @@
+_id: h9nHYLxXvIXBTmup
+_key: '!items!h9nHYLxXvIXBTmup'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/combat-reflexes.jpg
+name: Combat Reflexes
+system:
+  actions:
+    - _id: kzof1vn44xdata40
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      img: systems/pf1/icons/feats/combat-reflexes.jpg
+      name: Use
+  contextNotes:
+    - target: attack
+      text: '[[@resources.feat_combatReflexes.value]] AoO available.'
+  description:
+    instructions: <p>Spend 1 charge after use. Charges tracks total AoOs.</p>
+    value: >-
+      <p><em>You can make additional attacks of
+      opportunity.</em></p><p><strong>Benefits</strong>: You may make a number
+      of additional attacks of opportunity per round equal to your Dexterity
+      bonus. With this feat, you may also make attacks of opportunity while
+      flat-footed.</p><p><strong>Normal</strong>: A character without this feat
+      can make only one attack of opportunity per round and can't make attacks
+      of opportunity while flat-footed.</p><p><strong>Special</strong>: The
+      Combat Reflexes feat does not allow a rogue to use her opportunist ability
+      more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an
+      attack of opportunity, you can spend 5 stamina points to make a second
+      attack for the same provoking action. That second attack of opportunity
+      takes a -5 penalty on the attack roll and costs one of your attacks of
+      opportunity for the round.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 119-120
+  tag: feat_combatReflexes
+  tags:
+    - Combat
+    - Combat Trick
+  uses:
+    maxFormula: 1 + max(0, @abilities.dex.mod)
+    per: round
+    value: 0
+type: feat
