@@ -1,0 +1,60 @@
+_id: ZDzIeyL6Zc9M6xq5
+_key: '!items!ZDzIeyL6Zc9M6xq5'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/maulaxe-dwarven.png
+name: Dwarven Maulaxe
+system:
+  actions:
+    - _id: s8q5zoaruakbioe4
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Dwarven Maulaxe
+  description:
+    unidentified: >-
+      <p>This versatile weapon looks like a heavy-headed axe, but a proficient
+      wielder can use the blunt back of the head to deal bludgeoning damage.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 25
+  properties:
+    fin: true
+  sources:
+    - id: PZO9410
+      pages: '3'
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponGroups:
+    - axes
+    - hammers
+  weight:
+    value: 5
+type: weapon

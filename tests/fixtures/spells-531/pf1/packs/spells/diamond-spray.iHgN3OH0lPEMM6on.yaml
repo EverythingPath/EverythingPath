@@ -1,0 +1,67 @@
+_id: iHgN3OH0lPEMM6on
+_key: '!items!iHgN3OH0lPEMM6on'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/projectile-needles-salvo-white.webp
+name: Diamond Spray
+system:
+  actions:
+    - _id: oya4qlo9aorxcvw3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      damage:
+        parts:
+          - formula: (min(10, @cl))d6
+            types:
+              - slashing
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: cone
+      name: Use
+      notes:
+        effect:
+          - Ignore up to [[min(10, floor(@cl / 2))[Caster Level]]] hardness
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A cone of tiny, sparkling slivers as hard and sharp as filed diamonds
+      springs from your outstretched fingers at tremendous speed. Any creature
+      in the area of the torrent takes 1d6 points of slashing damage per caster
+      level (maximum 10d6). These magical slivers are treated as adamantine and
+      cold iron for the purpose of overcoming damage reduction. In addition,
+      this spell bypasses up to 1 point of an object's hardness per 2 caster
+      levels (maximum 10).</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a lump of coal
+  school: evo
+  sources:
+    - id: PZO9024
+      pages: '60'
+  tags:
+    - '3.5'
+type: spell
