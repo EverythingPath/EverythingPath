@@ -1,0 +1,97 @@
+_id: FWXND5fEGFxRMyCT
+_key: '!items!FWXND5fEGFxRMyCT'
+_stats:
+  coreVersion: '12.343'
+folder: kB3UEM2uyAcNWHIc
+img: icons/consumables/potions/potion-bottle-skull-label-poison-teal.webp
+name: Bone Burn
+system:
+  actions:
+    - _id: KnPhFRD4k5wpS8A7
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw on undead
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      save:
+        dc: '15'
+        description: Reflex negates continuous damage
+        type: ref
+      target:
+        value: Undead creature
+      touch: true
+    - _id: EBsqWph0Ic7SbAhY
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw on non-undead
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      target:
+        value: Non-undead creature
+      touch: true
+  baseTypes:
+    - Bone Burn
+  description:
+    value: >-
+      <p>This flask of volatile chemicals contains traces of graveyard dirt and
+      a few drops of blood from a righteous creature. You can throw a bone burn
+      flask as a splash weapon with a range increment of 10 feet. Against
+      non-undead creatures, a bone burn flask functions as a normal flask of
+      acid. Against undead creatures, the bone burn flask deals double damage.
+      On the round following a direct hit, a skeletal undead damaged by a bone
+      burn flask takes 1d6 additional points of damage (Reflex DC 15 negates).
+      Crafting this item requires a successful DC 20 Craft (alchemy)
+      check.</p><h3>Construction</h3><p><strong>Craft (alchemy)</strong> DC
+      20</p>
+  equipped: false
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  proficient: true
+  sources:
+    - id: PZO90139
+      pages: '63'
+  subType: misc
+  uses:
+    per: single
+  weaponSubtype: splash
+  weight:
+    value: 1
+type: weapon

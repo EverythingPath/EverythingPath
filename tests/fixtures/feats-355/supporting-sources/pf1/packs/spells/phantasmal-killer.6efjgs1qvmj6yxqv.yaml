@@ -1,0 +1,75 @@
+_id: 6efjgs1qvmj6yxqv
+_key: '!items!6efjgs1qvmj6yxqv'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/death/skull-energy-light-purple.webp
+name: Phantasmal Killer
+system:
+  actions:
+    - _id: a783d6z7ft9hqy1i
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will disbelief, then Fortitude partial; see text
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a phantasmal image of the most fearsome creature imaginable
+      to the subject simply by forming the fears of the subject's subconscious
+      mind into something that its conscious mind can visualize: this most
+      horrible beast. Only the spell's subject can see the <i>phantasmal
+      killer</i>. You see only a vague shape. The target first gets a Will save
+      to recognize the image as unreal. If that save fails, the phantasm touches
+      the subject, and the subject must succeed on a Fortitude save or die from
+      fear.</p><p>Even if the Fortitude save is successful, the subject takes
+      3d6 points of damage.</p><p>If the subject of a <i>phantasmal killer</i>
+      attack succeeds in disbelieving and possesses telepathy or is wearing a
+      <i>helm of telepathy</i>, the beast can be turned upon you. You must then
+      disbelieve it or become subject to its deadly fear attack.</p>
+  descriptors:
+    - fear
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      magus: 4
+      medium: 3
+      mesmerist: 4
+      psychic: 4
+      sorcerer: 4
+      spiritualist: 4
+      witch: 4
+      wizard: 4
+    domain:
+      Madness: 6
+    subDomain:
+      Nightmare: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '319'
+  subschool:
+    - phantasm
+type: spell

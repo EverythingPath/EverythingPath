@@ -1,0 +1,48 @@
+_id: rg0FL5INDBUt2oSK
+_key: '!items!rg0FL5INDBUt2oSK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_13.jpg
+name: Sneak Attack (UC)
+system:
+  actions:
+    - _id: 3121tfns5ck508lz
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6
+            types:
+              - precision
+      name: Use
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+  associations:
+    classes:
+      - Rogue (Unchained)
+  description:
+    value: >-
+      <p>If a rogue can catch an opponent when he is unable to defend himself
+      effectively from her attack, she can strike a vital spot for extra
+      damage.</p><p>The rogue’s attack deals extra damage anytime her target
+      would be denied a Dexterity bonus to AC (whether the target actually has a
+      Dexterity bonus or not), or when the rogue flanks her target. This extra
+      damage is 1d6 at 1st level, and increases by 1d6 every 2 rogue levels
+      thereafter. Ranged attacks can count as sneak attacks only if the target
+      is within 30 feet. This additional damage is precision damage and is not
+      multiplied on a critical hit.</p><p>With a weapon that deals nonlethal
+      damage (such as a sap, unarmed strike, or whip), a rogue can make a sneak
+      attack that deals nonlethal damage instead of lethal damage. She cannot
+      use a weapon that deals lethal damage to deal nonlethal damage in a sneak
+      attack—not even with the usual –4 penalty.</p><p>The rogue must be able to
+      see the target well enough to pick out a vital spot and must be able to
+      reach such a spot. A rogue cannot sneak attack while striking a creature
+      with total concealment.</p>
+  sources:
+    - id: PZO1131
+      pages: '20'
+  subType: classFeat
+type: feat

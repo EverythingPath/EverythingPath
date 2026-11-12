@@ -1,0 +1,53 @@
+_id: 54x9nw6ni4rpphcn
+_key: '!items!54x9nw6ni4rpphcn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Keen Senses
+system:
+  actions:
+    - _id: 8llqw8kjsi4em362
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject gains a +2 competence bonus on Perception checks and gains
+      low-light vision. Subjects that have low-light vision double the distance
+      they can see under the effects of this spell.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      druid: 1
+      hunter: 1
+      investigator: 1
+      occultist: 1
+      ranger: 1
+  materials:
+    value: a hawk's feather
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '230'
+type: spell

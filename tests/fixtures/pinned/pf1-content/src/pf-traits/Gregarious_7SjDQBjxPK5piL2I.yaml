@@ -1,0 +1,53 @@
+_id: 7SjDQBjxPK5piL2I
+_key: '!items!7SjDQBjxPK5piL2I'
+_stats:
+  coreVersion: '12.331'
+folder: FeKDEoyX2eafWdJl
+img: systems/pf1/icons/feats/persuasive.jpg
+name: Gregarious
+system:
+  actions:
+    - _id: FwR3Ai97B6x5jV3n
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reroll Diplomancy influence check
+  contextNotes:
+    - target: skill.dip
+      text: >-
+        Once per day, when you attempt to improve a creature’s attitude toward
+        you, you may choose to re-roll the check after the first roll is made
+        but before the results are revealed. You must take the second result,
+        even if it is worse.
+  description:
+    value: >-
+      <p><em>At least once in your childhood, your family moved for a reason you
+      didn’t understand and you were forced to leave behind your old friends and
+      make new ones. Ever since, you have always been the first to meet
+      strangers, make new friends, and welcome travelers. You learned that first
+      impressions are the most important, and have a knack for making a good
+      one.</em></p><p><strong>Benefits</strong>: Once per day, when you attempt
+      a Diplomacy check to improve a creature’s attitude toward you, you may
+      choose to reroll the check after the first roll is made but before the
+      results are revealed. You must take the second result, even if it is
+      worse.</p><p><strong>Suggested Characters</strong></p><p>Eagle Knights,
+      Garundi, Pathfinders.</p>
+  scriptCalls:
+    - _id: sdzJ8sxgu8oxFF7c
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll Diplomacy Check
+      type: script
+      value: await actor.rollSkill("dip");
+  sources:
+    - id: PZO9433
+      pages: '21'
+  subType: trait
+  traitType: social
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

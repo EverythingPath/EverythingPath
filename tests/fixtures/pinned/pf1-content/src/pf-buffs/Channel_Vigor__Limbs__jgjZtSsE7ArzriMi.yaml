@@ -1,0 +1,83 @@
+_id: jgjZtSsE7ArzriMi
+_key: '!items!jgjZtSsE7ArzriMi'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/wind-grasp-air-2.jpg
+name: Channel Vigor (Limbs)
+system:
+  changes:
+    - _id: h83ofnq1
+      formula: '1'
+      target: attack
+      type: haste
+    - _id: x7m5xr1d
+      formula: '1'
+      target: ac
+      type: haste
+    - _id: 8rzikc8s
+      formula: '1'
+      target: ref
+      type: haste
+    - _id: 430v9k74
+      formula: min(@attributes.speed.land.base, 30)
+      target: landSpeed
+      type: enh
+    - _id: jkjd1q5a
+      formula: min(@attributes.speed.land.base, 30)
+      target: climbSpeed
+      type: enh
+    - _id: 0mt494w5
+      formula: min(@attributes.speed.land.base, 30)
+      target: swimSpeed
+      type: enh
+    - _id: xp6oli71
+      formula: min(@attributes.speed.land.base, 30)
+      target: burrowSpeed
+      type: enh
+    - _id: 5i2ilg72
+      formula: min(@attributes.speed.land.base, 30)
+      target: flySpeed
+      type: enh
+  description:
+    instructions: >-
+      <p>Deactivate active buff and activate the desired variant upon
+      choice.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.tj3xdnlwtgk5ecln]{Channel
+      Vigor}</p><p>When you cast the spell, choose one of the following portions
+      of your self as your focus target. Thereafter, you may change the focus
+      target as a move action. You can gain the benefit of only one <em>channel
+      vigor</em> spell at a time.</p><ul><li><em>Limbs</em>: You gain the
+      benefits of a haste spell.</li><li><em>Mind</em>: You gain a +4 competence
+      bonus on Knowledge and Perception skill checks and on ranged attack
+      rolls.</li><li><em>Spirit</em>: You gain a +6 competence bonus on Will
+      saving throws and Bluff and Intimidate checks.</li><li><em>Torso</em>: You
+      gain a +6 competence bonus on Fortitude saving throws and concentration
+      checks.</li></ul><p><strong>Haste</strong>: When making a full attack
+      action, you may make one extra attack with one natural or manufactured
+      weapon at your highest base attack bonus. This effect is not cumulative
+      with similar effects, such as that provided by a speed weapon.</p>
+  level: 5
+  scriptCalls:
+    - _id: hgG9kraD14pE0Lti
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Others
+      type: script
+      value: |-
+        if(state) {
+          const otherBuffTags = [
+            "channelVigorLimbs",
+            "channelVigorMind",
+            "channelVigorSpirit",
+            "channelVigorTorso"
+          ];
+
+          const otherBuffs = actor.itemTypes.buff.filter(b => otherBuffTags.includes(b.system.tag) && b.system.tag !== item.system.tag);
+          otherBuffs.forEach(async (buff) => { await buff.setActive(false) });
+        }
+  subType: spell
+  tag: channelVigorLimbs
+type: buff

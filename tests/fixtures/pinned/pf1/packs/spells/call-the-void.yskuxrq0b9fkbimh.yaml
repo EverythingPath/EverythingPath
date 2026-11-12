@@ -1,0 +1,53 @@
+_id: yskuxrq0b9fkbimh
+_key: '!items!yskuxrq0b9fkbimh'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Call the Void
+system:
+  actions:
+    - _id: ksnp0up9n2bn1ny7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Reflex for half; see text
+        type: ref
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell surrounds you with an aura of nothingness that channels the
+      mysterious energies of the Dark Tapestry. Creatures adjacent to you when
+      this spell is cast and at the start of your turn take 2d6 points of
+      damage. In addition, creatures affected by your aura are fatigued, cannot
+      breathe, and cannot speak or cast spells with somatic components.
+      Creatures adjacent to you are allowed a Reflex save to halve the damage
+      and negate the fatigue effect, but cannot breathe or speak regardless of
+      whether their save is successful as long as they are adjacent to you.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO9421
+      pages: '29'
+type: spell
