@@ -1,0 +1,59 @@
+_id: q2r6jrgsbwjgssdg
+_key: '!items!q2r6jrgsbwjgssdg'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/mouth-smile-deception-purple.webp
+name: Charm Monster, Mass
+system:
+  actions:
+    - _id: zwctk9onrbblh0l2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: One or more creatures, no two of which can be more than 30 ft. apart
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.smbkd2yobhshbpqf]{charm monster}, except
+      that mass charm monster affects a number of creatures whose combined HD do
+      not exceed twice your level, or at least one creature regardless of HD. If
+      there are more potential targets than you can affect, you choose them one
+      at a time until you must choose a creature with too many HD to affect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 8
+      bard: 6
+      mesmerist: 6
+      occultist: 6
+      psychic: 8
+      skald: 6
+      sorcerer: 8
+      summoner: 6
+      witch: 8
+      wizard: 8
+  level: 8
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '254'
+  subschool:
+    - charm
+type: spell

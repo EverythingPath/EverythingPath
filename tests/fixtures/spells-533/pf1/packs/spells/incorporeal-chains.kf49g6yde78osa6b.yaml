@@ -1,0 +1,74 @@
+_id: kf49g6yde78osa6b
+_key: '!items!kf49g6yde78osa6b'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Incorporeal Chains
+system:
+  actions:
+    - _id: xe0quxzvemlq5jmo
+      ability:
+        attack: int
+        damage: _key
+        damageMult: 0.5
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: "-@sizeBonus[Caster's Size]"
+      bab: '@cl'
+      damage:
+        parts:
+          - formula: 1d8
+            types:
+              - untyped
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Use
+      range:
+        units: close
+      target:
+        value: >-
+          one incorporeal creature/level, no two of which can be more than 30
+          ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You summon ghostly chains to bind incorporeal creatures. The chains'
+      CMB is equal to your caster level + your Intelligence modifier. Roll only
+      once for the entire spell effect and apply the result to all targeted
+      incorporeal creatures.  If the chains succeed in grappling an incorporeal
+      creature, the creature takes an amount of damage equal to 1d8 + your key
+      spellcasting ability score modifier and gains the grappled condition.
+      Grappled opponents can't move without first breaking the grapple. The
+      spell prohibits all other movement unless the creature breaks the grapple
+      first (although dimensional magic and the like still work as normal). Each
+      round you concentrate, the chains continue grappling their current targets
+      (though they don't seek out targets they aren't currently grappling). The
+      <i>incorporeal chains</i> receive a +5 bonus on grapple combat maneuver
+      checks against opponents the chains are already grappling, but can't move
+      foes or pin foes. Each round the <i>incorporeal chains</i> succeed at a
+      grapple combat maneuver check, they deal an additional amount of damage
+      equal to 1d8 + your key spellcasting ability score modifier. The CMD of
+      <i>incorporeal chains</i>, for the purposes of escaping the grapple, is
+      equal to 10 + its CMB. If you move out of range of any of the grappled
+      creatures, the chains cease grappling those creatures.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      psychic: 6
+      spiritualist: 5
+  level: 6
+  school: evo
+  sources:
+    - id: PZO1132
+      pages: '174'
+type: spell

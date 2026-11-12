@@ -1,0 +1,58 @@
+_id: Vh5O2NapyCHRzosU
+_key: '!items!Vh5O2NapyCHRzosU'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/pick-heavy.png
+name: Heavy Pick
+system:
+  actions:
+    - _id: ilxdvt30dnsa4n07
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Heavy Pick
+  description:
+    unidentified: >-
+      <p>This variant of the light pick has a longer handle and can be used with
+      one or two hands. It is a common, inexpensive weapon for mounted soldiers
+      since it can be used effectively from horseback.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 8
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - axes
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

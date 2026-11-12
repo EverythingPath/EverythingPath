@@ -1,0 +1,52 @@
+_id: rvf2gxyy1d4strae
+_key: '!items!rvf2gxyy1d4strae'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/skills/wounds/injury-eyes-blood-red.webp
+name: Mind Thrust I
+system:
+  actions:
+    - _id: dkvsh1057eeil0oe
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will half
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You divine the most vulnerable portions of your opponent's mind and
+      overload it with a glut of psychic information. This attack deals 1d6
+      points of damage per caster level (maximum 5d6). The target receives a
+      Will save for half damage. This attack has no effect on creatures without
+      an Intelligence score.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Psychic: 1
+    class:
+      psychic: 1
+  school: div
+  sources:
+    - id: PZO1132
+      pages: '177'
+type: spell

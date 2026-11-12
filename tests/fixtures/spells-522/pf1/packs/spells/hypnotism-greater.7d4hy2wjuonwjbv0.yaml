@@ -1,0 +1,62 @@
+_id: 7d4hy2wjuonwjbv0
+_key: '!items!7d4hy2wjuonwjbv0'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/hypnosis-mesmerism-watch.webp
+name: Hypnotism, Greater
+system:
+  actions:
+    - _id: 98wostgq87f6iv03
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: several living creatures, no two of which may be more than 30 ft. apart
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.3ntxp3zun1j9mf0m]{Hypnotism}, except it
+      affects 2 Hit Die of creatures per caster level you have. You can make up
+      to five requests (instead of a single request) to each creature affected
+      by the spell, and the requests can be as long and as complicated as you
+      desire (though they still must be reasonable).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      mesmerist: 4
+      occultist: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9473
+      pages: '19'
+  subschool:
+    - compulsion
+type: spell
