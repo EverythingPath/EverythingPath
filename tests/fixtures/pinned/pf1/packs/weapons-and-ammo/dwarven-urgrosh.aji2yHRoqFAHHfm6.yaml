@@ -1,0 +1,70 @@
+_id: aji2yHRoqFAHHfm6
+_key: '!items!aji2yHRoqFAHHfm6'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dwarven-urgrosh.PNG
+name: Dwarven Urgrosh
+system:
+  actions:
+    - _id: 90nl31kraar7k5bh
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Dwarven Urgrosh
+  description:
+    unidentified: >-
+      <p>A dwarven urgrosh is a double weapon- an axe head and a spear point on
+      opposite ends of a long haft. The urgrosh's axe head is a slashing weapon
+      that deals 1d8 points of damage. Its spear head is a piercing weapon that
+      deals 1d6 points of damage. You can use either head as the primary weapon;
+      the other becomes the off-hand weapon. If you use an urgrosh against a
+      charging character, the spear head is the part of the weapon that deals
+      damage. Dwarves treat dwarven urgroshes as martial weapons.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    brc: true
+    dbl: true
+  sources:
+    - id: PZO1110
+      pages: 143, 149
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponGroups:
+    - double
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

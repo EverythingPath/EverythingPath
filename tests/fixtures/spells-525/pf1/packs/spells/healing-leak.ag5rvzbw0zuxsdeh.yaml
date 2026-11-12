@@ -1,0 +1,61 @@
+_id: ag5rvzbw0zuxsdeh
+_key: '!items!ag5rvzbw0zuxsdeh'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Healing Leak
+system:
+  actions:
+    - _id: dxcxpex7dphwtolo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Whenever the target is affected by a spell or effect that heals hit
+      point damage through the use of positive or negative energy, it regains
+      only half the number of hit points it normally would recover. If the
+      target employs a spell or effect that heals itself or other creatures
+      through the use of positive or negative energy, the target must succeed at
+      a concentration check (DC = this spell's save DC) or the effect restores
+      only half of the normal number of hit points. Other forms of healing (such
+      as from the Heal skill) are not affected by this spell.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      cleric: 3
+      oracle: 3
+      paladin: 2
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a piece of muslin
+  school: nec
+  sources:
+    - id: PZO9492
+      pages: '13'
+type: spell

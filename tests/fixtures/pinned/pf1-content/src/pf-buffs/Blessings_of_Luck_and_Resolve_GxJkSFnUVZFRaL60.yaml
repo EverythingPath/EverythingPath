@@ -1,0 +1,51 @@
+_id: GxJkSFnUVZFRaL60
+_key: '!items!GxJkSFnUVZFRaL60'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/races/halfling.png
+name: Blessings of Luck and Resolve
+system:
+  actions:
+    - _id: gsYuRqmkEcw2g8CW
+      activation:
+        type: immediate
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/races/halfling.png
+      name: Use
+      range:
+        units: personal
+  contextNotes:
+    - target: will
+      text: >-
+        +[[2]] Morale vs Fear effects. Immune to Fear if you have the Fearless
+        racial trait. Can end this spell as an Immediate Action to reroll a save
+        with a +[[4]] Morale bonus, and take the new result, even if worse.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.m8nue3zocbg7c5o1]{Blessing of Luck and
+      Resolve}</p><p>You gain a +2 morale bonus on saving throws against fear
+      effects. If you have the fearless racial trait, you are immune to fear
+      instead. If you fail a saving throw against fear, you can end the spell as
+      an immediate action to reroll the save with a +4 morale bonus, and must
+      take the new result, even if it is worse.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  scriptCalls:
+    - _id: 42C0CufNayY0qynm
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Early
+      type: script
+      value: |-
+        if(item.system.active)
+          await item.setActive(false);
+        else
+          shared.hideChat = true;
+  subType: spell
+type: buff

@@ -1,0 +1,51 @@
+_id: AT8nA8OtDW4fF8Yv
+_key: '!items!AT8nA8OtDW4fF8Yv'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/blue_21.jpg
+name: Stunning Barrier
+system:
+  actions:
+    - _id: azUsOwfTFp33yaDL
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/skills/blue_21.jpg
+      name: Use
+      save:
+        dc: 10[Base] + 1[Spell Level] + 0[Casting Modifier]
+        description: Will Negates
+        type: will
+  changes:
+    - _id: azv2blr6
+      formula: '1'
+      target: ac
+      type: deflection
+    - _id: w5s27v7o
+      formula: '1'
+      target: allSavingThrows
+      type: resist
+  contextNotes:
+    - target: ac
+      text: >-
+        Any creature that strikes you with a melee attack is stunned for 1 round
+        (Will negates). Upon successfully stunning, Stunning Barrier ends.
+  description:
+    instructions: >-
+      <p>Change the <code>4[Casting Modifier]</code> section in the action's
+      saving throw formula to the buff caster's casting modifier.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.7vzu76eg8om0gpf0]{Stunning
+      Barrier}</p><p>This field provides a +1 deflection bonus to AC and a +1
+      resistance bonus on saves. Any creature that strikes you with a melee
+      attack is stunned for 1 round (Will negates). Once the field has stunned
+      an opponent, the spell is discharged.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff
