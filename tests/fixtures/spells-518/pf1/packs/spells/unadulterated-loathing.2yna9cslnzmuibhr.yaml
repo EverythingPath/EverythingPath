@@ -1,0 +1,64 @@
+_id: 2yna9cslnzmuibhr
+_key: '!items!2yna9cslnzmuibhr'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Unadulterated Loathing
+system:
+  actions:
+    - _id: 049e469f5t4s2j7a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill the target with a terrible loathing aimed at a specific
+      creature. At the time of the casting, you designate a single creature as
+      the object of the target's revulsion. Thereafter, the target does all it
+      can to remain at least 60 feet away from the object of its loathing. As
+      soon as the target moves within this range, it becomes nauseated until it
+      can again get away from the object of its revulsion. If traveling beyond
+      60 feet of the object of its loathing would place the target in obvious
+      physical danger, the target can attempt a second save to break the spell's
+      effect.</p><p><i>Unadulterated loathing</i> counters <i>reckless
+      infatuation</i>.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      bard: 2
+      mesmerist: 2
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '244'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,56 @@
+_id: hcalydzd39g8xdov
+_key: '!items!hcalydzd39g8xdov'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/heart-hand-gold-green-light.webp
+name: Remove Radioactivity, Greater
+system:
+  actions:
+    - _id: zahiohmri0rwhevz
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        type: fort
+      target:
+        value: creature or object touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.b5apdmp3s5g78uxw]{remove radioactivity},
+      save that it cures all ability damage and drain due to radioactivity that
+      the target has taken. In addition, you can deplete a radioactive object as
+      well, although because you must touch the object to affect it, you expose
+      yourself to at least 1 round of contact with the object's radiation. You
+      must succeed at a caster level check (DC = 5 + the Fortitude DC associated
+      with the radiation effect) in order to deplete the object. If you are
+      successful, the object no longer emits radiation. In the case of a nuclear
+      reactor or atomic warhead, this permanently renders the reactor or warhead
+      inert and harmless.</p>
+  learnedAt:
+    class:
+      cleric: 8
+      druid: 8
+      oracle: 8
+      witch: 8
+  level: 8
+  school: con
+  sources:
+    - id: PZO9272
+      pages: '11'
+  subschool:
+    - healing
+type: spell

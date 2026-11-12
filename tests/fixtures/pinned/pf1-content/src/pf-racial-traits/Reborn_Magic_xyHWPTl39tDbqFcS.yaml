@@ -1,0 +1,162 @@
+_id: xyHWPTl39tDbqFcS
+_key: '!items!xyHWPTl39tDbqFcS'
+_stats:
+  coreVersion: '12.331'
+folder: 2Ool05yDjjzZueOo
+img: icons/creatures/eyes/humanoid-single-purple-blue.webp
+name: Reborn Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: 5muZxeNxMs0pha0f
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ndvks6ztnxhj6oxh]{Burst of Insight}
+        (1 PE)</p><p>You plumb the depths of your mind for insight, leaving you
+        momentarily frazzled. When you are about to make a d20 roll based on
+        Intelligence, Wisdom, or Charisma, you can cast this spell to gain a +8
+        enhancement bonus to Intelligence, Wisdom, or Charisma for that roll,
+        but you are @Condition[dazed] for 1 round afterward.</p><p></p>
+      duration:
+        units: inst
+      name: Burst of Insight (1 PE)
+      range:
+        units: personal
+      target:
+        value: You
+      uses:
+        autoDeductChargesCost: '1'
+    - _id: IDGaQsOGh5S89E8Q
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40' Radius Burst, Centered on you
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.u48ijoxfw5ddmbit]{Detect Psychic
+        Significance} (0 PE)</p><p>You detect the presence of psychically
+        significant items in your vicinity. Such items are those that might have
+        significant psychic imprints or histories that can be read by the
+        @UUID[Compendium.pf1.rules.JournalEntry.x175kVqUfLGPt8tC]{psychometry
+        occult skill unlock}, or items under the effects of the
+        @UUID[Compendium.pf1.spells.Item.9kqq7i49ujvq8n5z]{charge object} or
+        @UUID[Compendium.pf1.spells.Item.dymdg2azgrfh7fi3]{Implant False
+        Reading} spells. Items within range that contain significant psychic
+        energy spark a recognition in your mind's eye, but no other information
+        is imparted. This spell doesn't automatically detect magic items or
+        strongly aligned items, though such items often have storied histories
+        and might have had previous owners who possessed psychic
+        abilities.</p><p></p>
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Detect Psychic Significance (0 PE)
+      range:
+        units: ft
+        value: '0'
+      target:
+        value: You
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: eHDcsXIg7iu7rTZb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{Object Reading} (2
+        PE)</p><p>You read the psychic impressions left upon an object by
+        emotionally or psychically charged events in the item's history, or the
+        information imprinted by the
+        @UUID[Compendium.pf1.spells.Item.9kqq7i49ujvq8n5z]{Charge Object} or
+        @UUID[Compendium.pf1.spells.Item.dymdg2azgrfh7fi3]{Implant False
+        Reading} spells. This spell returns the same information as the
+        @UUID[Compendium.pf1.rules.JournalEntry.x175kVqUfLGPt8tC]{psychometry
+        occult skill unlock}, but gives 1 piece of information when cast and
+        requires 1 round of concentration per additional piece of information
+        instead of 1 minute. You must still attempt an Appraise check to see how
+        much information you gain. You gain a +10 competence bonus on the
+        check.</p><p></p><p></p>
+      duration:
+        concentration: true
+        units: round
+        value: '@attributes.hd.total'
+      name: Object Reading (2 PE)
+      range:
+        units: touch
+      target:
+        value: one touched object
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: rMJVBEXyrZ6mvI4Y
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ldijs33l5ycavo2g]{Psychic Reading}
+        (1 PE).</p><p>You are able to read a person's surface thoughts and take
+        cues from the person's appearance, body language, and manner of speech
+        to infer a great deal of information about the person, even if that
+        person is in disguise (including polymorph effects). When casting the
+        spell, attempt a DC 20 Sense Motive check with a bonus equal to your
+        caster level. A successful skill check reveals to you one of the
+        following pieces of information of your choice, plus one additional
+        piece of information for every 5 points by which your check result
+        exceeds 20: age, alignment, class†, feats†, gender, native language,
+        place of origin, race or ethnicity, racial traits†, religion, sexual
+        orientation, or training in a Craft, Perform, or Profession
+        skill.</p><p>For items marked with a cross (†), if the target has more
+        than one of these features, each one you discover counts as a piece of
+        information.</p><p>There's a 70% chance that all information you receive
+        is correct. This roll is made secretly. Otherwise, on a roll of 71-80,
+        you receive one false piece of information, on a roll of 81-90 you
+        receive two, and on a roll of 91-100 you receive three. You can't get
+        more false information than the total number of pieces of information
+        you discover.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Psychic Reading (1 PE)
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one humanoid creature
+      uses:
+        autoDeductChargesCost: '1'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Reborn Samsaran</p><hr /><p>A reborn samsaran
+      with a Charisma score of 11 or higher can cast the following spells (as
+      per the
+      @UUID[Compendium.pf-content.pf-universal-monster-rules.Item.R09FovuKfg50mmjM]{Psychic
+      Magic} universal monster rule, using his Charisma modifier to determine
+      the DCs): @UUID[Compendium.pf1.spells.Item.ndvks6ztnxhj6oxh]{Burst of
+      Insight} (1 PE), @UUID[Compendium.pf1.spells.Item.u48ijoxfw5ddmbit]{Detect
+      Psychic Significance} (0 PE),
+      @UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{Object Reading} (2 PE),
+      and @UUID[Compendium.pf1.spells.Item.ldijs33l5ycavo2g]{Psychic Reading}(1
+      PE). The caster level is equal to the reborn samsaran's level. The reborn
+      samsaran has a reservoir of 5 PE per day.</p><p></p><p></p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9284
+      pages: '50'
+  subType: racial
+  tags:
+    - Reborn Samsaran
+  traitCategory: magical
+  uses:
+    maxFormula: 5 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

@@ -1,0 +1,35 @@
+_id: PrthT5jZl4t3znqR
+_key: '!items!PrthT5jZl4t3znqR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/improved-lighting-reflexes.jpg
+name: Improved Lightning Reflexes
+system:
+  description:
+    value: >-
+      <p><em>You have a knack for avoiding danger all around
+      you.</em></p><p><strong>Prerequisites</strong>:
+      @UUID[Compendium.pf1.feats.Item.0bZf3SDkvVOe2ujH]{Lightning
+      Reflexes}.</p><p><strong>Benefits</strong>: Once per day, you may reroll a
+      Reflex save. You must decide to use this ability before the results are
+      revealed. You must take the second roll, even if it is worse.</p>
+  scriptCalls:
+    - _id: GwdUAXxKeFyzfqsO
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll reflex
+      type: script
+      value: actor.rollSavingThrow("ref");
+  sources:
+    - id: PZO1110
+      pages: 115, 127
+  tag: feat_improvedLightningReflexes
+  tags:
+    - General
+    - Saving Throw
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

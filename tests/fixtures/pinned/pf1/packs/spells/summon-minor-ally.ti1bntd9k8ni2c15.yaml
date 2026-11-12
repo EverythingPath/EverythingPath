@@ -1,0 +1,47 @@
+_id: ti1bntd9k8ni2c15
+_key: '!items!ti1bntd9k8ni2c15'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Minor Ally
+system:
+  actions:
+    - _id: mwc05omr8p93ef85
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: 1d3 summoned creatures
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.0jwi6xovzukorxok], except you can summon
+      1d3 Tiny or smaller animals, such as bats, lizards, monkeys, rats, ravens,
+      toads, or weasels. The summoned animals must all be the same type of
+      creature.</p>
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      ranger: 1
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '241'
+  sr: false
+  subschool:
+    - summoning
+type: spell
