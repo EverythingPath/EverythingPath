@@ -1,0 +1,63 @@
+_id: j2y1uga5fwg8deqq
+_key: '!items!j2y1uga5fwg8deqq'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/perception/silhouette-stealth-shadow.webp
+name: Invisibility, Mass
+system:
+  actions:
+    - _id: eh1m4b34m8kboro2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          any number of creatures, no two of which can be more than 180 ft.
+          apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, except
+      that the effect moves with the group and is broken when anyone in the
+      group attacks.</p><p>Individuals in the group cannot see each other. The
+      spell is broken for any individual who moves more than 180 feet from the
+      nearest member of the group. If only two individuals are affected, the one
+      moving away from the other one loses its invisibility. If both are moving
+      away from each other, they both become visible when the distance between
+      them exceeds 180 feet.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      mesmerist: 6
+      psychic: 7
+      sorcerer: 7
+      summoner: 5
+      summonerUnchained: 6
+      wizard: 7
+    domain:
+      Trickery: 8
+  level: 7
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '302'
+  subschool:
+    - glamer
+type: spell

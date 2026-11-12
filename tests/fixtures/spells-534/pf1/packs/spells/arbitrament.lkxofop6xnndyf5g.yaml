@@ -1,0 +1,71 @@
+_id: lkxofop6xnndyf5g
+_key: '!items!lkxofop6xnndyf5g'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Arbitrament
+system:
+  actions:
+    - _id: yhfma9apkrb86kid
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '40'
+      save:
+        description: Will partial, see text
+        type: will
+      target:
+        value: non-neutral creatures in a 40-ft.-radius spread centered on you
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>All chaotic evil, chaotic good, lawful evil, and lawful good creatures
+      within the area of this spell suffer the following conditions, based on
+      their Hit Dice. </p><table border="1"><tbody><tr><th>Hit
+      Dice</th><th>Effect</th></tr><tr><td>Equal to caster
+      level</td><td>Sickened</td></tr><tr><td>Up to caster level -
+      1</td><td>Sickened, staggered</td></tr><tr><td>Up to caster level -
+      5</td><td>Nauseated, sickened, staggered</td></tr><tr><td>Up to caster
+      level - 10</td><td>Killed, nauseated, sickened,
+      staggered</td></tr></tbody></table><p>The effects are concurrent. A
+      creature can attempt a Will save to reduce or negate the effects. If
+      subject to multiple effects, the creature rolls once and applies the
+      result to each effect. <br /><b>Sickened</b>: The creature is sickened for
+      1d4 rounds (Will negates). <br /><b>Staggered</b>: The creature is
+      staggered for 2d4 rounds, or for 1d4 rounds on a successful Will save. <br
+      /><b>Nauseated</b>: The creature is nauseated for 1d10 minutes, or for 1d4
+      rounds on a successful Will save. <br /><b>Killed</b>: Living creatures
+      die, and undead creatures are destroyed. On a successful Will save, the
+      creature instead takes 3d6 points of damage + 1 point per caster level
+      (maximum +25).  Furthermore, if you are on your home plane when you cast
+      this spell, all chaotic evil, chaotic good, lawful evil, and lawful good
+      extraplanar creatures within the area are banished to their home planes
+      (Will negates, at a -4 penalty). Creatures so banished cannot return for
+      at least 24 hours. This effect takes place regardless of whether the
+      creatures hear the <i>arbitrament</i>.  Creatures whose Hit Dice exceed
+      your caster level are unaffected by <i>arbitrament</i>.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      cleric: 7
+      inquisitor: 6
+      oracle: 7
+  level: 7
+  school: evo
+  sources:
+    - id: PZO1141
+      pages: '39'
+    - id: PZO9443
+      pages: '26'
+type: spell

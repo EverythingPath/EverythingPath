@@ -1,0 +1,54 @@
+_id: tdocjgyuereurcno
+_key: '!items!tdocjgyuereurcno'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/materials/plant-branch-brown-green.webp
+name: Tindertwig
+system:
+  actions:
+    - _id: itdAekzZEWqgjiF3
+      activation:
+        type: standard
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: 1d2
+      name: Ignite
+      tag: ignite
+  description:
+    value: >-
+      <p>The alchemical substance on the end of this small, wooden stick ignites
+      when struck against a rough surface (a move action). Creating a flame with
+      a tindertwig is much faster than creating a flame with tinder and a flint
+      and steel or magnifying glass. Lighting a torch with a tindertwig is a
+      standard action rather than a full-round action, and lighting any other
+      fire with one is at least a standard action. A tindertwig burns for 1d2
+      rounds and sheds light as a candle. Tindertwigs are waterproof, but must
+      be dried before you can strike them.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 1
+  scriptCalls:
+    - _id: wLzBdJpm4zse89Wn
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 5 }));
+  sources:
+    - id: PZO1110
+      pages: 158, 160-161
+    - id: PZO1123
+      pages: 103, 105
+  subType: tool
+  uses:
+    per: single
+type: loot

@@ -1,0 +1,66 @@
+_id: 5GqOcC49oDGe7VRH
+_key: '!items!5GqOcC49oDGe7VRH'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/estoc.PNG
+name: Estoc
+system:
+  actions:
+    - _id: d4wheqwbelvqwfau
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Estoc
+  description:
+    unidentified: >-
+      <p>An estoc is a sword about as long as a bastard sword, but designed
+      exclusively for thrusting attacks. Its "blade" is a steel spike with a
+      triangular, square, or hexagonal crosssection. Like the bastard sword, an
+      estoc requires special training to use it one handed, but it can also be
+      wielded as a two-handed martial weapon. When you wield an estoc with one
+      hand, treat it as a one-handed weapon; when you wield an estoc with two
+      hands, treat it as a two-handed weapon. If you can use the estoc
+      proficiently with one hand, you can also use the Weapon Finesse feat to
+      apply your Dexterity modifier instead of your Strength modifier on attack
+      rolls when wielding an estoc sized for you with one or two hands, even
+      though it isn't a light weapon.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    fin: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon

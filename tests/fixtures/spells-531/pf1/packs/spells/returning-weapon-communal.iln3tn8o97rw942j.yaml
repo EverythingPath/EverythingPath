@@ -1,0 +1,62 @@
+_id: iln3tn8o97rw942j
+_key: '!items!iln3tn8o97rw942j'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/movement/pinwheel-turning-blue.webp
+name: Returning Weapon, Communal
+system:
+  actions:
+    - _id: x649tmqtoouuy9o4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: weapons that can be thrown
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ld8vm51vaavu0p2a]{returning weapon},
+      except you divide the duration in 1-minute intervals among the targeted
+      weapons.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      cleric: 3
+      hunter: 2
+      inquisitor: 2
+      magus: 2
+      occultist: 2
+      oracle: 3
+      psychic: 3
+      ranger: 2
+      skald: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '243'
+  subschool:
+    - teleportation
+type: spell

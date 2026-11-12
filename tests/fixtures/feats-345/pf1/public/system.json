@@ -1,0 +1,189 @@
+{
+  "id": "pf1",
+  "title": "Pathfinder 1e",
+  "description": "A comprehensive implementation of the Pathfinder 1e tabletop RPG.",
+  "version": "11.11",
+  "authors": [
+    {
+      "name": "Furyspark",
+      "discord": "Furyspark#7513"
+    },
+    {
+      "name": "Noon",
+      "discord": "Noon#3951"
+    },
+    {
+      "name": "Ethaks",
+      "discord": "Ethaks#2903",
+      "ko-fi": "ethaks",
+      "url": "https://gitlab.com/Ethaks"
+    },
+    {
+      "name": "MKAh",
+      "discord": "Mana#4176",
+      "ko-fi": "mkahvi",
+      "url": "https://gitlab.com/mkahvi"
+    }
+  ],
+  "esmodules": [
+    "pf1.js"
+  ],
+  "styles": [
+    "pf1.css"
+  ],
+  "packFolders": [
+    {
+      "name": "Actors",
+      "packs": [
+        "basic-monsters"
+      ],
+      "color": "#CE5C00"
+    },
+    {
+      "name": "Equipment",
+      "packs": [
+        "weapons-and-ammo",
+        "armors-and-shields",
+        "items",
+        "technology"
+      ],
+      "color": "#777777"
+    },
+    {
+      "name": "Character Building",
+      "packs": [
+        "races",
+        "classes",
+        "companion-features",
+        "racial-hd",
+        "class-abilities",
+        "mythic-paths",
+        "feats",
+        "monster-templates",
+        "template-abilities",
+        "monster-abilities"
+      ],
+      "color": "#996300"
+    },
+    {
+      "name": "Roll Tables",
+      "packs": [
+        "roll-tables",
+        "ultimate-equipment"
+      ],
+      "color": "#005755"
+    },
+    {
+      "name": "Conditions",
+      "packs": [
+        "buffs"
+      ],
+      "color": "#792291"
+    },
+    {
+      "name": "Macros",
+      "packs": [
+        "macros"
+      ],
+      "color": "#60747b"
+    }
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch (German)",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Française (French)",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano (Italian)",
+      "path": "lang/it.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español (Spanish)",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "cn",
+      "name": "Chinese",
+      "path": "lang/cn.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt_BR.json"
+    }
+  ],
+  "socket": true,
+  "initiative": "1d20 + @attributes.init.total + (@attributes.init.total / 100)",
+  "grid": {
+    "distance": 5,
+    "diagonals": 4,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "attributes.hp",
+  "secondaryTokenAttribute": null,
+  "documentTypes": {
+    "ActiveEffect": {
+      "buff": {}
+    },
+    "ChatMessage": {
+      "check": {},
+      "item": {
+        "htmlFields": [
+          "item.description"
+        ]
+      },
+      "action": {
+        "htmlFields": [
+          "item.description",
+          "action.description"
+        ]
+      }
+    }
+  },
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "recommends": [
+      {
+        "id": "pf-content",
+        "type": "module"
+      },
+      {
+        "id": "pf1-statblock-converter",
+        "type": "module"
+      },
+      {
+        "id": "statblock-library",
+        "type": "module"
+      }
+    ]
+  },
+  "media": [
+    {
+      "type": "setup",
+      "thumbnail": "systems/pf1/pf1-logo.webp"
+    }
+  ],
+  "changelog": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/blob/master/CHANGELOG.md",
+  "bugs": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/issues",
+  "url": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1",
+  "manifest": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/releases/permalink/latest/downloads/system.json",
+  "download": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/releases/permalink/latest/downloads/pf1.zip"
+}

@@ -1,0 +1,61 @@
+_id: ny2qxht2aeesoi08
+_key: '!items!ny2qxht2aeesoi08'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/horror-red-2.jpg
+name: Infernal Healing, Greater
+system:
+  actions:
+    - _id: unio0gy2xwcyl99p
+      actionType: heal
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>As @UUID[Compendium.pf1.spells.r6mfw5nrc2ndkacy]{Infernal Healing},
+      except the target gains fast healing 4 and the target detects as an evil
+      cleric.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      magus: 4
+      oracle: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: 1 drop of devil blood or 1 dose of unholy water
+  school: con
+  sources:
+    - id: PZO9000-18E
+      pages: '11'
+  subschool:
+    - healing
+type: spell
