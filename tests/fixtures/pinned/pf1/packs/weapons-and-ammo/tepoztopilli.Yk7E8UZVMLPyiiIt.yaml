@@ -1,0 +1,60 @@
+_id: Yk7E8UZVMLPyiiIt
+_key: '!items!Yk7E8UZVMLPyiiIt'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/polearms/spear-simple-hooked-grey.webp
+name: Tepoztopilli
+system:
+  actions:
+    - _id: p2zrrus3et8lvbt4
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Tepoztopilli
+  description:
+    unidentified: >-
+      <p>The head of this wooden Stone Age polearm is edged with jagged bits of
+      obsidian, glass, teeth, or similar materials. The wide head serves well
+      for both piercing and slashing attacks.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    frg: true
+    rch: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

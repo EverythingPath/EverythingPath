@@ -1,0 +1,59 @@
+_id: n156m0w3nga1tyqn
+_key: '!items!n156m0w3nga1tyqn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Improve Trap
+system:
+  actions:
+    - _id: elqx5df45dvmc253
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one trap
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>When this spell is cast upon a trap, it improves one specific element
+      of the trap chosen at the time of casting. The caster can improve the trap
+      in any of the following ways (each one raises the trap's CR by +1).
+      </p><ul><li> Increase DC of the Perception check required to locate the
+      trap by +5. </li><li> Increase DC of the Disable Device check required to
+      disarm trap by +5. </li><li> Increase the trap's attack bonus or saving
+      throw by +2.  To cast this on a trap, you must know that the trap exists
+      and its precise location. A trap can only have one improvement from this
+      spell at a time. A second casting changes the improvement on the trap, but
+      does not add another improvement.</li></ul>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      druid: 3
+      hunter: 2
+      inquisitor: 3
+      ranger: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+    subDomain:
+      Trap: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '137'
+type: spell

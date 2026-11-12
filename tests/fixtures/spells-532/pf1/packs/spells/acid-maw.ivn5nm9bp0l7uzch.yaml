@@ -1,0 +1,54 @@
+_id: ivn5nm9bp0l7uzch
+_key: '!items!ivn5nm9bp0l7uzch'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/abilities/fang-tooth-poison-green.webp
+name: Acid Maw
+system:
+  actions:
+    - _id: xkg8ohx68bvuml5o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: your animal companion
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your animal companion's bite attack deals an additional 1d4 points of
+      acid damage, and the acid deals another 1d4 points of acid damage to the
+      target on the next round. The acid continues to deal damage for 1
+      additional round per 4 caster levels (to a maximum of 6 total rounds at
+      caster level 20th). This ongoing acid damage doesn't stack from multiple
+      attacks, but the duration resets if a newer bite would cause the ongoing
+      damage to last longer than the duration remaining from a previous one. The
+      acid does not harm the animal companion.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      ranger: 1
+  school: trs
+  sources:
+    - id: PZO9451
+      pages: '30'
+type: spell

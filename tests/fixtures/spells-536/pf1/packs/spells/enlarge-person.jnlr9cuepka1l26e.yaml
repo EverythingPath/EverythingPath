@@ -1,0 +1,86 @@
+_id: jnlr9cuepka1l26e
+_key: '!items!jnlr9cuepka1l26e'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/control/silhouette-grow-shrink-tan.webp
+name: Enlarge Person
+system:
+  actions:
+    - _id: b7wnnac30bhh9ypv
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one humanoid creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes instant growth of a humanoid creature, doubling its
+      height and multiplying its weight by 8. This increase changes the
+      creature's size category to the next larger one. The target gains a +2
+      size bonus to Strength, a -2 size penalty to Dexterity (to a minimum of
+      1), and a -1 penalty on attack rolls and AC due to its increased
+      size.</p><p>A humanoid creature whose size increases to Large has a space
+      of 10 feet and a natural reach of 10 feet. This spell does not change the
+      target's speed.</p><p>If insufficient room is available for the desired
+      growth, the creature attains the maximum possible size and may make a
+      Strength check (using its increased Strength) to burst any enclosures in
+      the process. If it fails, it is constrained without harm by the materials
+      enclosing it-the spell cannot be used to crush a creature by increasing
+      its size.</p><p>All equipment worn or carried by a creature is similarly
+      <i>enlarged</i> by the spell. Melee weapons affected by this spell deal
+      more damage (see page 145). Other magical properties are not affected by
+      this spell. Any <i>enlarged</i> item that leaves an <i>enlarged</i>
+      creature's possession (including a projectile or thrown weapon) instantly
+      returns to its normal size. This means that thrown and projectile weapons
+      deal their normal damage. Magical properties of <i>enlarged</i> items are
+      not increased by this spell.</p><p>Multiple magical effects that increase
+      size do not stack.</p><p><i>Enlarge person</i> counters and dispels
+      <i>reduce person</i>.</p><p><i>Enlarge person</i> can be made permanent
+      with a <i>permanency</i> spell.</p>
+  learnedAt:
+    bloodline:
+      Boreal: 1
+      Efreeti: 1
+    class:
+      alchemist: 1
+      arcanist: 1
+      bloodrager: 1
+      investigator: 1
+      magus: 1
+      medium: 1
+      occultist: 1
+      psychic: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      witch: 1
+      wizard: 1
+    domain:
+      Strength: 1
+    subDomain:
+      Growth: 1
+  materials:
+    value: powdered iron
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: 277, 278
+type: spell

@@ -1,0 +1,66 @@
+_id: ui70binwqvjsgaam
+_key: '!items!ui70binwqvjsgaam'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Spell Immunity
+system:
+  actions:
+    - _id: nittfi23c8tkqth0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The warded creature is immune to the effects of one specified spell for
+      every four levels you have. The spells must be of 4th level or lower. The
+      warded creature effectively has unbeatable spell resistance regarding the
+      specified spell or spells. Naturally, that immunity doesn't protect a
+      creature from spells for which spell resistance doesn't apply. <i>Spell
+      immunity</i> protects against spells, spell-like effects of magic items,
+      and innate spell-like abilities of creatures. It does not protect against
+      supernatural or extraordinary abilities, such as breath weapons or gaze
+      attacks.</p><p>Only a particular spell can be protected against, not a
+      certain domain or school of spells or a group of spells that are similar
+      in effect. A creature can have only one <i>spell immunity</i> or greater
+      <i>spell immunity</i> spell in effect on it at a time.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      cleric: 4
+      inquisitor: 4
+      investigator: 4
+      occultist: 4
+      oracle: 4
+      psychic: 4
+      spiritualist: 4
+      warpriest: 4
+    domain:
+      Protection: 4
+      Strength: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '346'
+type: spell

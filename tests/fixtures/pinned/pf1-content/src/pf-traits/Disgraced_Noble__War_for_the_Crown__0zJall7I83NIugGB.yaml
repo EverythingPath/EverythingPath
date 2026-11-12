@@ -1,0 +1,71 @@
+_id: 0zJall7I83NIugGB
+_key: '!items!0zJall7I83NIugGB'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Disgraced Noble (War for the Crown)
+system:
+  actions:
+    - _id: pM1DD7jivzUFoaVk
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once each day, you can choose a single humanoid you believe to have
+        been involved in the conspiracy to destroy your family; </p><p>you gain
+        a +1 morale bonus on attack and damage rolls against that NPC for a
+        number of rounds equal to your character level. At 10th level, this
+        bonus increases to +2.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: attack
+      text: >-
+        Once each day, you can target a humanoid believe to conspire to destroy
+        your family;you gain a +[[1]] Morale bonus on attack and damage rolls
+        against that NPC for a number of rounds equal to your character level.
+        At 10th level, this bonus increases to +2.
+    - target: skill.blf
+      text: +[[2]] Trait bonus to conceal your identity.
+    - target: skill.lin
+      text: +[[2]] Trait bonus to spot or produce forgeries.
+  description:
+    instructions: >-
+      <p>Select Bluff or Linguistics when you take this trait.</p><p>Update the
+      Class skills section of the details tab of this trait to reflect your
+      choice.</p>
+    value: >-
+      <p><em>Your noble family used to matter, until your father took a stand
+      against Maxillar Pythareus, the commander of Taldor’s military. True or
+      not, the accusations Pythareus leveled against your family in return
+      destroyed your reputation and isolated you from the society you grew up
+      in. Now the only thing that matters to you is clawing your way back up the
+      social ladder, either for your own quality of life or to clear your
+      family’s name.</em></p><p><strong>Benefits</strong>: You’ve had to
+      practice deception as you began working your way back into Taldan social
+      circles; you gain a +2 trait bonus on Bluff checks to conceal your
+      identity and a +2 bonus on Linguistics checks to spot or produce
+      forgeries, and one of these skills is always a class skill for you. Once
+      each day, you can choose a single humanoid you believe to have been
+      involved in the conspiracy to destroy your family; you gain a +1 morale
+      bonus on attack and damage rolls against that NPC for a number of rounds
+      equal to your character level. At 10th level, this bonus increases to
+      +2.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-22E
+      pages: '9'
+  subType: trait
+  tags:
+    - War for the Crown
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

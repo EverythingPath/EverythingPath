@@ -1,0 +1,62 @@
+_id: 2fcl60gfpjewgi2v
+_key: '!items!2fcl60gfpjewgi2v'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Cursed Treasure
+system:
+  actions:
+    - _id: 4ptvh5qamsp0m0xz
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: spec
+        value: permanent until discharged, then permanent (see text)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object), then Will negates (see text)
+        type: fort
+      target:
+        value: unattended object touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You touch a piece of treasure or container filled with treasure and
+      place a terrible curse upon it, choosing from any option available with
+      <i>bestow curse</i>. The next creature to take the treasure or remove
+      items from the container is affected by the curse, unless it succeeds at a
+      Will save (spell resistance applies). If you are the next creature to take
+      the treasure or get objects from the container, though, the spell
+      discharges harmlessly instead.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 4
+      bloodrager: 4
+      cleric: 3
+      oracle: 3
+      shaman: 3
+      sorcerer: 4
+      spiritualist: 3
+      warpriest: 3
+      witch: 3
+      wizard: 4
+  level: 4
+  materials:
+    value: a platinum piece
+  school: nec
+  sources:
+    - id: PZO1136
+      pages: '188'
+type: spell
