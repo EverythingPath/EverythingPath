@@ -1,0 +1,51 @@
+_id: 2AJOaBUtrLSKx6n4
+_key: '!items!2AJOaBUtrLSKx6n4'
+_stats:
+  coreVersion: '12.331'
+folder: fS6BttTRyYNJW2om
+img: icons/equipment/head/mask-wooden-feathered-blue.webp
+name: Intoxicating Aroma
+system:
+  abilityType: su
+  actions:
+    - _id: fWw0XQ5dwGfYY1Ll
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.class-abilities.Item.tWE66WvFjS1o0S4y]{fascinate}</p>
+      duration:
+        units: round
+        value: '[[1d4]]'
+      measureTemplate:
+        color: '#62dd17'
+        size: '30'
+        type: circle
+      name: Intoxicating Aroma
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.cha.mod
+        description: negate
+        type: will
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ghoran<br /><strong>Replaced Trait(s)</strong>:
+      Natural Magic</p><hr /><p>Some ghorans have an incredibly distracting
+      scent. Once per day, as a spell-like ability, a ghoran with this racial
+      trait can emit an intoxicating aroma that causes creatures within
+      @Distance[30 ft;dual] to be fascinated for 1d4 rounds. Each target
+      creature within range can attempt a Will save (DC = 10 + half the ghoran's
+      character level + the ghoran's Charisma modifier) to negate the
+      effect.</p><p>This replaces natural magic.</p>
+  sources:
+    - id: PZO9494
+      pages: '12'
+  subType: racial
+  tags:
+    - Ghoran
+  traitCategory: magical
+type: feat

@@ -1,0 +1,58 @@
+_id: qjpLIatoQIzmcehq
+_key: '!items!qjpLIatoQIzmcehq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Wild Shape (SHI)
+system:
+  abilityType: su
+  actions:
+    - _id: ajij0bn12b4y79c2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p>At 4th level, a shifter gains the ability to turn herself into the
+      major form of one of her aspects and back again. This ability functions as
+      beast shape II, except as noted here. The shifter can turn into the major
+      form of only one of her aspects at a time. Using wild shape to change to a
+      major form or back is a standard action that doesn’t provoke attacks of
+      opportunity. Often a particular aspect’s major form grants abilities
+      beyond the normal effect of beast shape II. Each major form details the
+      abilities the shifter gains with that major form and at what level; she
+      gains these instead of the form abilities from beast shape II, but she
+      still gains beast shape II abilities that are size dependent.<p>A shifter
+      loses her ability to speak while in animal form because she is limited to
+      the sounds that a normal, untrained animal of that form can make, but she
+      can communicate with other animals of the same general grouping as her
+      form. She can also communicate in nonverbal ways with allies.<p>A shifter
+      can use wild shape for a number of hours each day equal to her shifter
+      level + her Wisdom modifier. It need not be consecutive but must be spent
+      in 1 hour increments. For abilities that function based on ‘uses of wild
+      shape,’ each hour of wild shape counts as a use.<p>A shifters can take
+      feats and other abilities that require wild shape; for the purpose of
+      qualifying for prerequisites, her effective druid level is equal to her
+      shifter level.</p>
+  sources:
+    - id: PZO1140
+      pages: '27'
+  subType: classFeat
+  tag: classFeat_wildShapeShi
+  uses:
+    maxFormula: '@class.level + @abilities.wis.mod'
+    per: day
+type: feat

@@ -1,0 +1,61 @@
+_id: DGp5B70pcMEfcnqx
+_key: '!items!DGp5B70pcMEfcnqx'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/blowgun.PNG
+name: Dan Bong
+system:
+  actions:
+    - _id: 275gqs6cmlr44ken
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Dan Bong
+  description:
+    unidentified: >-
+      <p>These short, blunt sticks are held in the hands to enhance unarmed
+      martial techniques and secured by a cord looped over the thumb. They
+      provide the wielder with the ability to lock an opponent and target
+      pressure points, granting you a +2 bonus on combat maneuver checks to
+      grapple.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 0.1
+  properties:
+    blc: true
+    fin: true
+    mnk: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - close
+    - monk
+type: weapon

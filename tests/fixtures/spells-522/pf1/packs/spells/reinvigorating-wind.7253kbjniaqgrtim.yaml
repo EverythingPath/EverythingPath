@@ -1,0 +1,68 @@
+_id: 7253kbjniaqgrtim
+_key: '!items!7253kbjniaqgrtim'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Reinvigorating Wind
+system:
+  actions:
+    - _id: 5oh16dg3frg49lkc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You exhale deeply, creating a gentle magical wind that invigorates any
+      allies in the affected area, as follows. Any sleeping allies immediately
+      wake up. Fascinated allies are shaken free of the fascinate effect.
+      Flat-footed allies no longer count as flat-footed even if they have not
+      acted yet. The duration of effects that cause any allies to be confused,
+      frightened, paralyzed, slowed, or stunned is decreased by 1d4 rounds (roll
+      separately for each target). If the duration of any such effect is reduced
+      to 0 rounds or fewer, the effect ends for that ally. Finally, any allies
+      lying prone may stand up as an immediate action, provoking attacks of
+      opportunity as normal.</p>
+  descriptors:
+    - air
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      druid: 3
+      hunter: 3
+      shaman: 2
+      skald: 2
+      witch: 3
+  level: 3
+  materials:
+    value: a flower petal
+  school: enc
+  sources:
+    - id: PZO1136
+      pages: '177'
+  subschool:
+    - compulsion
+type: spell

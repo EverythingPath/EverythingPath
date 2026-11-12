@@ -1,0 +1,67 @@
+_id: 6cEWqLm3QYhtWNxK
+_key: '!items!6cEWqLm3QYhtWNxK'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/air/wind-tornado-cyclone-white.webp
+name: Rope Tornado
+system:
+  actions:
+    - _id: YKRgmFj8XrhqUjOL
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 120 ft. line
+      duration:
+        units: inst
+      measureTemplate:
+        size: '120'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '120'
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A spiraling twister of tornado-force wind surges forth from your palm,
+      unbalancing those it rushes over. Creatures on the ground within the area
+      are knocked prone. A flying creature within the spell’s area must instead
+      succeed at a DC 25
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.iH69GIwm8BjecrPN]{Fly}
+      check or plummet to the ground, taking the appropriate amount of falling
+      damage. Creatures that are Huge or larger in size gain a +2 bonus on their
+      Reflex saves, while creatures that are Medium or smaller in size take a –2
+      penalty.</p><p>Additionally, the area is subjected to tornado-force winds,
+      extinguishing all nonmagical flames, dispersing clouds, and scattering
+      unattended objects.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 4
+      hunter: 4
+      magus: 4
+      occultist: 4
+      shaman: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a length of twine
+  school: evo
+  sources:
+    - id: PZO9494
+      pages: '27'
+type: spell

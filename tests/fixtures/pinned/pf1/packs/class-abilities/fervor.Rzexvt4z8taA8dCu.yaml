@@ -1,0 +1,67 @@
+_id: Rzexvt4z8taA8dCu
+_key: '!items!Rzexvt4z8taA8dCu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/heal-jade-2.jpg
+name: Fervor
+system:
+  abilityType: su
+  actions:
+    - _id: fh9ra7x0xkoauc1m
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor((@class.level + 1) / 3))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p>At 2nd level, a warpriest can draw upon the power of his faith to heal
+      wounds or harm foes. He can also use this ability to quickly cast spells
+      that aid in his struggles. This ability can be used a number of times per
+      day equal to 1/2 his warpriest level + his Wisdom modifier.<p>By expending
+      one use of this ability, a good warpriest (or one who worships a good
+      deity) can touch a creature to heal it of 1d6 points of damage, plus an
+      additional 1d6 points of damage for every 3 warpriest levels he possesses
+      above 2nd (to a maximum of 7d6 at 20th level). Using this ability is a
+      standard action (unless the warpriest targets himself, in which case it’s
+      a swift action). Alternatively, the warpriest can use this ability to harm
+      an undead creature, dealing the same amount of damage he would otherwise
+      heal with a melee touch attack. Using fervor in this way is a standard
+      action that provokes an attack of opportunity. Undead do not receive a
+      saving throw against this damage. This counts as positive energy.<p>An
+      evil warpriest (or one who worships an evil deity) can use this ability to
+      instead deal damage to living creatures with a melee touch attack and heal
+      undead creatures with a touch. This counts as negative energy.<p>A neutral
+      warpriest who worships a neutral deity (or one who is not devoted to a
+      particular deity) uses this ability as a good warpriest if he chose to
+      spontaneously cast cure spells or as an evil warpriest if he chose to
+      spontaneously cast inflict spells.<p>As a swift action, a warpriest can
+      expend one use of this ability to cast any one warpriest spell he has
+      prepared with a casting time of 1 round or shorter. When cast in this way,
+      the spell can target only the warpriest, even if it could normally affect
+      other or multiple targets. Spells cast in this way ignore somatic
+      components and do not provoke attacks of opportunity. The warpriest does
+      not need to have a free hand to cast a spell in this way.</p>
+  subType: classFeat
+  tag: classFeat_fervor
+  uses:
+    maxFormula: floor(@class.level / 2) + @abilities.wis.mod
+    per: day
+type: feat
