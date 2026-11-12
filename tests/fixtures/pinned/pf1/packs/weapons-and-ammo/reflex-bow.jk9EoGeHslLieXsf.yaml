@@ -1,0 +1,73 @@
+_id: jk9EoGeHslLieXsf
+_key: '!items!jk9EoGeHslLieXsf'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/bows/longbow-leather-green.webp
+name: Reflex Bow
+system:
+  actions:
+    - _id: qxcyr6uhuu5ws8bi
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: arrow
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '100'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Reflex Bow
+    - Longbow
+  description:
+    unidentified: >-
+      <p>These C-shaped bows are most often used in the Hongal tundra by the
+      outriders of Tianjing, and in rare cases by the nobility of Xa Hoi. The
+      unique shape and craft of these bows allows them to shoot with the same
+      velocity and power as a longbow. The shorter size also allows them to be
+      wielded easily while mounted on horseback (or atop any other steed). While
+      mounted, you gain a +1 circumstance bonus on attack rolls with a reflex
+      bow. All reflex bows are composite bows and can be modified to benefit
+      from high Strength scores in the same way as composite bows. Effects that
+      apply to both longbows and shortbows also apply to reflex bows.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 125
+  properties:
+    spc: true
+  sources:
+    - id: PZO9489
+      pages: '11'
+  subType: martial
+  weaponGroups:
+    - bows
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

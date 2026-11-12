@@ -1,0 +1,52 @@
+_id: xmVIIWMr8jcAFnhw
+_key: '!items!xmVIIWMr8jcAFnhw'
+_stats:
+  coreVersion: '12.331'
+folder: M1lkxA7VFDzlRtIB
+img: icons/magic/nature/root-vine-hand-strike.webp
+name: Grapevine
+system:
+  abilityType: sp
+  actions:
+    - _id: 2g0Jb0c0NcJZuxAP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{Goodberry}</p><p>Casting
+        goodberry makes 2d4 freshly picked berries magical. You (as well as any
+        other druid of 3rd or higher level) can immediately discern which
+        berries are affected. Each transmuted berry provides nourishment as if
+        it were a normal meal for a Medium creature.</p><p>The berry also cures
+        1 point of damage when eaten, subject to a maximum of 8 points of such
+        curing in any 24-hour period.</p>
+      duration:
+        units: day
+        value: '@attributes.hd.total'
+      name: Goodberry
+      target:
+        value: '[[2d4]] berries'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Vine Leshy<br /><strong>Replaced
+      Trait(s)</strong>: <em>Pass Without Trace</em></p><hr /><p>A vine leshy
+      made from a grapevine can produce magically infused fruit that can heal
+      her allies. She can cast
+      @UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{Goodberry} once per day
+      as a spell-like ability, with a caster level equal to her character
+      level.</p><p>This replaces pass without trace.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1140
+      pages: '21'
+  subType: racial
+  tags:
+    - Vine Leshy
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

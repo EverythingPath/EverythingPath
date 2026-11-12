@@ -1,0 +1,28 @@
+_id: hgiQpbIXwLsgTvlt
+_key: '!items!hgiQpbIXwLsgTvlt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Fated Bloodrager
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: 37s24fyj
+      formula: floor(@class.level / 4)
+      target: ac
+      type: luck
+    - _id: 7bhdpdxp
+      formula: floor(@class.level / 4)
+      target: allSavingThrows
+      type: luck
+  description:
+    value: >-
+      <p>At 4th level, you gain a +1 luck bonus to AC and on saving throws.</p>
+
+      <p>At 8th level and every 4 levels thereafter, this bonus increases by 1
+      (to a maximum of +5 at 20th level).</p>
+  subType: classFeat
+type: feat
