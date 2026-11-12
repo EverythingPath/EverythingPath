@@ -1,0 +1,53 @@
+_id: 5eg2f7nek9cjmv0n
+_key: '!items!5eg2f7nek9cjmv0n'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Memory Lapse
+system:
+  actions:
+    - _id: uk9letvj5yjj593s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to forget what happened from the casting of the
+      spell back to the beginning of its last turn. This may allow a retry on a
+      Diplomacy, Intimidate, or opposed skill check, though only with respect to
+      the target, not other creatures that may be present.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      occultist: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+    subDomain:
+      Memory: 2
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '232'
+type: spell

@@ -1,0 +1,50 @@
+_id: u3qfd57wvcmhgwca
+_key: '!items!u3qfd57wvcmhgwca'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/mammals/elk-moose-marked-green.webp
+name: Summon Nature's Ally III
+system:
+  actions:
+    - _id: prbb8wrrcufny80y
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.0jwi6xovzukorxok], except that you can
+      summon one 3rd-level creature, 1d3 2nd-level creatures of the same kind,
+      or 1d4+1 1st-level creatures of the same kind.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      ranger: 3
+      shaman: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '354'
+  sr: false
+  subschool:
+    - summoning
+type: spell

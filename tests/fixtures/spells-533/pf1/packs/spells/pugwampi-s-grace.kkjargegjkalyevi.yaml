@@ -1,0 +1,67 @@
+_id: kkjargegjkalyevi
+_key: '!items!kkjargegjkalyevi'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Pugwampi's Grace
+system:
+  actions:
+    - _id: mo4ne9pi5r80z02f
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature (see below)
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Hated by adventurers throughout the Inner Sea region, the gremlins
+      known as pugwampis infect those around them with a malignant form of
+      unluck-an effect that this spell emulates. If the target fails its Will
+      save, it becomes infused with the so-called "grace of the pugwampi." A
+      creature affected by this spell must roll two d20s whenever a situation
+      calls for a d20 roll (such as an attack roll, a skill check, or a saving
+      throw) and must use the lower of the two results generated. As with the
+      aura shed by actual pugwampies, this spell has no effect on animals,
+      gremlins, or gnolls. The effects of this spell are negated as long as a
+      target gains any sort of luck bonus to a d20 roll (such as those granted
+      by a <i>luckstone</i> or <i>divine</i> favor), but the spell's duration is
+      not impacted by these effects. If the luck bonus goes away before the
+      pugwampi's grace effect ends, the unluck returns and remains until the
+      spell's normal duration runs out.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a pugwampi's hair
+  school: enc
+  sources:
+    - id: PZO9237
+      pages: '59'
+  subschool:
+    - compulsion
+type: spell

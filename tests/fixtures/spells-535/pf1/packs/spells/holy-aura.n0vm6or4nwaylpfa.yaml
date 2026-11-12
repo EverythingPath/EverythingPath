@@ -1,0 +1,64 @@
+_id: n0vm6or4nwaylpfa
+_key: '!items!n0vm6or4nwaylpfa'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Holy Aura
+system:
+  actions:
+    - _id: qr2g0lw2mqc2y8om
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: see text
+      target:
+        value: one creature/level in a 20-ft.-radius burst centered on you
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A brilliant divine radiance surrounds the subjects, protecting them
+      from attacks, granting them resistance to spells cast by evil creatures,
+      and causing evil creatures to become blinded when they strike the
+      subjects. This abjuration has four effects.</p><p>First, each warded
+      creature gains a +4 deflection bonus to AC and a +4 resistance bonus on
+      saves. Unlike <i>Protection from Evil</i>, this benefit applies against
+      all attacks, not just against attacks by evil creatures.</p><p>Second,
+      each warded creature gains spell resistance 25 against evil spells and
+      spells cast by evil creatures.</p><p>Third, the abjuration protects the
+      recipient from possession and mental influence, just as <i>Protection from
+      Evil</i> does.</p><p>Finally, if an evil creature succeeds on a melee
+      attack against a creature warded by a <i>holy aura</i>, the offending
+      attacker is blinded (Fortitude save negates, as <i>blindness/deafness,</i>
+      but against <i>holy aura</i>'s save DC).</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 8
+      oracle: 8
+    domain:
+      Glory: 8
+      Good: 8
+  level: 8
+  materials:
+    focus: a tiny reliquary worth 500 gp
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '297'
+type: spell

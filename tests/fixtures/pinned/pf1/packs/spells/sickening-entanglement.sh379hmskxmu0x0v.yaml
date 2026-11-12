@@ -1,0 +1,58 @@
+_id: sh379hmskxmu0x0v
+_key: '!items!sh379hmskxmu0x0v'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Sickening Entanglement
+system:
+  actions:
+    - _id: aea1t0h1vkijafx8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: plants in a 40-ft.-radius spread
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex partial and Fortitude negates (see  text)
+        type: ref
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle}, except the
+      plants are coated with an irritating sap that creates a painful, itching
+      rash on creatures that touch them. Any creature that enters the area or
+      ends its turn there must succeed at a Fortitude save or be sickened as
+      long as it remains in the area and for 1d4 rounds afterward. This is a
+      poison effect.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      ranger: 2
+      shaman: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1129
+      pages: '192'
+  sr: false
+type: spell

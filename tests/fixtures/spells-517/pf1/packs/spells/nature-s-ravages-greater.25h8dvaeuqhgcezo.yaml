@@ -1,0 +1,50 @@
+_id: 25h8dvaeuqhgcezo
+_key: '!items!25h8dvaeuqhgcezo'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Nature's Ravages, Greater
+system:
+  actions:
+    - _id: l3cjy9ny1zf9t68v
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: >-
+          corpse of creature whose total number of HD does not exceed your
+          caster level
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.0y3go94j3gfmkduu]{Nature's Ravages}, except
+      the target corpse ages a number of years equal to up to 1 year per caster
+      level (maximum 20 years at 20th level).</p>
+  learnedAt:
+    class:
+      cleric: 8
+      oracle: 8
+      witch: 7
+  level: 8
+  materials:
+    value: dried maggots
+  school: nec
+  sources:
+    - id: PZO9430
+      pages: '31'
+  sr: false
+type: spell
