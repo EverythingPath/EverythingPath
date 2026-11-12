@@ -1,0 +1,72 @@
+_id: 3plb67e51webutdz
+_key: '!items!3plb67e51webutdz'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/sleep-bubble-purple.webp
+name: Sleep
+system:
+  actions:
+    - _id: 2etzse13ptdz5qbg
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: one or more living creatures within a 10-ft.-radius burst
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A <i>sleep</i> spell causes a magical slumber to come upon 4 HD of
+      creatures. Creatures with the fewest HD are affected first. Among
+      creatures with equal HD, those who are closest to the spell's point of
+      origin are affected first. HD that are not sufficient to affect a creature
+      are wasted. <i>Sleep</i>ing creatures are helpless. Slapping or wounding
+      awakens an affected creature, but normal noise does not. Awakening a
+      creature is a standard action (an application of the aid another action).
+      <i>Sleep</i> does not target unconscious creatures, constructs, or undead
+      creatures.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Dreamspun: 1
+    class:
+      adept: 1
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      shaman: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+    subDomain:
+      Night: 1
+  materials:
+    value: fine sand, rose petals, or a live cricket
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '344'
+  subschool:
+    - compulsion
+type: spell

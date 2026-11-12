@@ -1,0 +1,52 @@
+_id: n0vno5RNBzsHvH33
+_key: '!items!n0vno5RNBzsHvH33'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/bolas.png
+name: Brutal Bola
+system:
+  actions:
+    - _id: miwu7pgbguw8p82a
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Brutal Bola
+  description:
+    unidentified: >-
+      <p>These bolas function as standard <em>bolas</em>, but they deal lethal
+      damage rather than <em>nonlethal damage</em>.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 15
+  subType: exotic
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,350 @@
+Speeds up convex-test without changing what it accepts, refuses or returns.
+See docs/test-suite-health.md (#717) and convex/convexTestHarness.test.ts.
+
+- matchesValidator mirrors validateValidator case by case, so union members
+  are tried without throwing. When upgrading convex-test, carry any change to
+  either function into the other. Unknown validator types fall back to
+  validateValidator.
+- Committed document IDs are kept per table, so a query visits only its table.
+- Each function's validators are exported once.
+- Each stored document's size and JSON form are computed once.
+
+- Declared full string-equality indexes use transaction-scoped buckets.
+  Writes to their table and every transaction transition clear those buckets.
+  Original range validation, comparisons and result handling remain authority.
+
+diff --git a/dist/index.js b/dist/index.js
+index 506f9075971df7b2918954171262f5d6ce06a628..aa003bcc165906999c3560450cdb763b4355e3f5 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -30,6 +30,11 @@ const convexGlobalStorage = new AsyncLocalStorage();
+ class DatabaseFake {
+     _componentPath;
+     _documents = {};
++    // Committed document IDs by table, in commit order, so that a query visits
++    // only its own table instead of every document.
++    _tableIds = new Map();
++    // Declared string-equality indexes for the current transaction view only.
++    _stringIndexBuckets = new Map();
+     _storage = {};
+     _nextQueryId = 1;
+     _nextDocId = 10000;
+@@ -64,6 +69,7 @@ class DatabaseFake {
+     }
+     // Called by TransactionManager.begin.
+     startTransaction() {
++        this._stringIndexBuckets.clear();
+         this._writes.push({});
+     }
+     get(tableName, id) {
+@@ -98,6 +104,7 @@ class DatabaseFake {
+         if (this._writes.length === 0) {
+             throw new Error(`Write outside of transaction ${id}`);
+         }
++        this._stringIndexBuckets.delete(tableNameFromId(id));
+         this._writes[this._writes.length - 1][id] = newValue;
+     }
+     insert(table, value) {
+@@ -196,6 +203,7 @@ class DatabaseFake {
+         }
+     }
+     commit() {
++        this._stringIndexBuckets.clear();
+         const lastWrites = this._writes.pop();
+         if (!lastWrites) {
+             throw new Error("Transaction already committed or rolled back");
+@@ -203,11 +211,19 @@ class DatabaseFake {
+         for (const [id, write] of Object.entries(lastWrites)) {
+             const _id = id;
+             if (this._writes.length === 0) {
++                const tableName = tableNameFromId(_id);
++                let ids = this._tableIds.get(tableName);
++                if (ids === undefined) {
++                    ids = new Set();
++                    this._tableIds.set(tableName, ids);
++                }
+                 if (write === null) {
+                     delete this._documents[_id];
++                    ids.delete(_id);
+                 }
+                 else {
+                     this._documents[_id] = write;
++                    ids.add(_id);
+                 }
+             }
+             else {
+@@ -220,6 +236,7 @@ class DatabaseFake {
+             throw new Error("Transaction already committed or rolled back");
+         }
+         this._writes.pop();
++        this._stringIndexBuckets.clear();
+     }
+     _validate(tableName, doc) {
+         if (this._schema === null || !this._schema.schemaValidation) {
+@@ -384,7 +401,7 @@ class DatabaseFake {
+     }
+     _iterateDocs(tableName, callback) {
+         const isInTable = (id) => tableNameFromId(id) === tableName;
+-        const ids = new Set(Object.keys(this._documents).filter(isInTable));
++        const ids = new Set(this._tableIds.get(tableName));
+         for (let i = 0; i < this._writes.length; i++) {
+             for (const id of Object.keys(this._writes[i]).filter(isInTable)) {
+                 ids.add(id);
+@@ -397,6 +414,45 @@ class DatabaseFake {
+             }
+         }
+     }
++    _iterateIndexRange(tableName, indexName, fields, range, callback) {
++        // System indexes, partial/range queries and non-string keys retain the
++        // scan path. Validation has already run; the original range comparison
++        // still checks every candidate below.
++        if (this._writes.length === 0 || fields === undefined ||
++            range.length !== fields.length ||
++            !range.every((filter) => filter.type === "Eq" && typeof filter.value === "string")) {
++            this._iterateDocs(tableName, callback);
++            return;
++        }
++        let indexes = this._stringIndexBuckets.get(tableName);
++        if (indexes === undefined) {
++            indexes = new Map();
++            this._stringIndexBuckets.set(tableName, indexes);
++        }
++        let buckets = indexes.get(indexName);
++        if (buckets === undefined) {
++            buckets = new Map();
++            this._iterateDocs(tableName, (doc) => {
++                const values = fields.map((field) => evaluateFieldPath(field, doc));
++                if (!values.every((value) => typeof value === "string")) {
++                    return;
++                }
++                // JSON arrays preserve string field boundaries without coercion.
++                const key = JSON.stringify(values);
++                let docs = buckets.get(key);
++                if (docs === undefined) {
++                    docs = [];
++                    buckets.set(key, docs);
++                }
++                docs.push(doc);
++            });
++            indexes.set(indexName, buckets);
++        }
++        const key = JSON.stringify(range.map((filter) => filter.value));
++        for (const doc of buckets.get(key) ?? []) {
++            callback(doc);
++        }
++    }
+     /**
+      * Resolves the query source: loads documents matching the source (table scan,
+      * index range, or search), sorts them, and returns along with the compiled
+@@ -423,6 +479,7 @@ class DatabaseFake {
+                 const [tableName, indexName] = source.indexName.split(".");
+                 order = source.order ?? "asc";
+                 let fields;
++                let declaredFields;
+                 if (indexName === "by_creation_time") {
+                     fields = ["_creationTime", "_id"];
+                 }
+@@ -436,11 +493,12 @@ class DatabaseFake {
+                         throw new Error(`Cannot use index "${indexName}" for table "${tableName}" because ` +
+                             `it is not declared in the schema.`);
+                     }
+-                    fields = index.fields.concat(["_creationTime", "_id"]);
++                    declaredFields = index.fields;
++                    fields = declaredFields.concat(["_creationTime", "_id"]);
+                 }
+                 fieldPathsToSortBy = fields;
+                 validateIndexRangeExpression(source, fields);
+-                this._iterateDocs(tableName, (doc) => {
++                this._iterateIndexRange(tableName, indexName, declaredFields, source.range, (doc) => {
+                     if (source.range.every((filter) => evaluateRangeFilter(doc, filter))) {
+                         results.push(doc);
+                     }
+@@ -763,6 +821,79 @@ function validateFieldNames(validator) {
+ function isValidIdentifier(name) {
+     return /(^_(id|creationTime)$)|^[a-zA-Z][a-zA-Z0-9_]*$/.test(name);
+ }
++// Whether `validateValidator` accepts `value`, without throwing. Union members
++// are tried with this, because an Error per rejected member captures a stack
++// trace, which made validating large union-typed documents slow.
++// It mirrors `validateValidator` case by case: when upgrading convex-test,
++// carry any change to one into the other. A validator type it does not know
++// (such as `record`) falls back to `validateValidator` itself.
++function matchesValidator(validator, value) {
++    switch (validator.type) {
++        case "null":
++            return value === null;
++        case "number":
++            return typeof value === "number";
++        case "bigint":
++            return typeof value === "bigint";
++        case "boolean":
++            return typeof value === "boolean";
++        case "string":
++            return typeof value === "string";
++        case "bytes":
++            return value instanceof ArrayBuffer;
++        case "any":
++            return true;
++        case "literal":
++            return value === validator.value;
++        case "id":
++            return (typeof value === "string" &&
++                tableNameFromId(value) === validator.tableName);
++        case "array": {
++            if (!Array.isArray(value)) {
++                return false;
++            }
++            for (const v of value) {
++                if (!matchesValidator(validator.value, v)) {
++                    return false;
++                }
++            }
++            return true;
++        }
++        case "union":
++            return validator.value.some((v) => matchesValidator(v, value));
++        case "object": {
++            if (typeof value !== "object" ||
++                value === null ||
++                !isSimpleObject(value)) {
++                return false;
++            }
++            for (const [k, { fieldType, optional }] of Object.entries(validator.value)) {
++                if (value[k] === undefined) {
++                    if (!optional) {
++                        return false;
++                    }
++                }
++                else if (!matchesValidator(fieldType, value[k])) {
++                    return false;
++                }
++            }
++            for (const k of Object.keys(value)) {
++                if (validator.value[k] === undefined) {
++                    return false;
++                }
++            }
++            return true;
++        }
++        default:
++            try {
++                validateValidator(validator, value);
++                return true;
++            }
++            catch {
++                return false;
++            }
++    }
++}
+ function validateValidator(validator, value) {
+     switch (validator.type) {
+         case "null": {
+@@ -829,18 +960,7 @@ function validateValidator(validator, value) {
+             return;
+         }
+         case "union": {
+-            let isValid = false;
+-            for (const v of validator.value) {
+-                try {
+-                    validateValidator(v, value);
+-                    isValid = true;
+-                    break;
+-                }
+-                catch {
+-                    // Ignore
+-                }
+-            }
+-            if (!isValid) {
++            if (!validator.value.some((v) => matchesValidator(v, value))) {
+                 throw new Error(`Validator error: Expected one of ${validator.value.map((v) => v.type).join(", ")}, got \`${JSON.stringify(convexToJson(value))}\``);
+             }
+             return;
+@@ -871,6 +991,26 @@ function validateValidator(validator, value) {
+         }
+     }
+ }
++// Every write stores a new document object and none is changed in place, so
++// each stored document's size and JSON form are computed once, not per read.
++const documentSizes = new WeakMap();
++function documentSize(doc) {
++    let size = documentSizes.get(doc);
++    if (size === undefined) {
++        size = getDocumentSize(doc);
++        documentSizes.set(doc, size);
++    }
++    return size;
++}
++const documentJson = new WeakMap();
++function stringifyDocument(doc) {
++    let json = documentJson.get(doc);
++    if (json === undefined) {
++        json = JSON.stringify(convexToJson(doc));
++        documentJson.set(doc, json);
++    }
++    return json;
++}
+ function syscallImpl() {
+     return (op, jsonArgs) => {
+         const args = JSON.parse(jsonArgs);
+@@ -916,7 +1056,7 @@ function asyncSyscallImpl() {
+         function getAndTrack(table, id) {
+             const doc = db.get(table, id);
+             if (doc !== null) {
+-                tracker?.trackRead(getDocumentSize(doc));
++                tracker?.trackRead(documentSize(doc));
+             }
+             return doc;
+         }
+@@ -925,12 +1065,13 @@ function asyncSyscallImpl() {
+                 const { table, id } = args;
+                 tracker?.trackIndexRange();
+                 const doc = getAndTrack(table, id);
+-                return JSON.stringify(convexToJson(doc));
++                return doc === null ? "null" : stringifyDocument(doc);
+             }
+             case "1.0/queryStreamNext": {
+                 const { value, done } = db.queryNext(args.queryId);
+                 if (!done && value !== null) {
+-                    tracker?.trackRead(getDocumentSize(value));
++                    tracker?.trackRead(documentSize(value));
++                    return `{"value":${stringifyDocument(value)},"done":false}`;
+                 }
+                 return JSON.stringify(convexToJson({ value, done }));
+             }
+@@ -947,7 +1088,7 @@ function asyncSyscallImpl() {
+                 if (tracker) {
+                     tracker.trackIndexRange();
+                     for (const doc of page) {
+-                        tracker.trackRead(getDocumentSize(doc));
++                        tracker.trackRead(documentSize(doc));
+                     }
+                 }
+                 return JSON.stringify(convexToJson({
+@@ -1845,6 +1986,9 @@ function getFunctionPathFromReference(functionReference) {
+ function getHandler(func) {
+     return "_handler" in func ? func["_handler"] : func;
+ }
++// A function's argument and return validators never change, and exporting a
++// large one on every call was slow, so each function exports them once.
++const exportedValidators = new WeakMap();
+ async function resolveFunction(functionPath, type) {
+     // "queries/messages:list" -> ["queries/messages", "list"]
+     const [modulePath, maybeExportName] = functionPath.udfPath.split(":");
+@@ -1880,8 +2024,15 @@ async function resolveFunction(functionPath, type) {
+             // eslint-disable-next-line @typescript-eslint/only-throw-error
+             throw type;
+     }
+-    const args = JSON.parse(func.exportArgs());
+-    const returns = JSON.parse(func.exportReturns());
++    let exported = exportedValidators.get(func);
++    if (exported === undefined) {
++        exported = {
++            args: JSON.parse(func.exportArgs()),
++            returns: JSON.parse(func.exportReturns()),
++        };
++        exportedValidators.set(func, exported);
++    }
++    const { args, returns } = exported;
+     return { func, functionPath, handler, returns, args };
+ }
+ function simpleHash(string) {

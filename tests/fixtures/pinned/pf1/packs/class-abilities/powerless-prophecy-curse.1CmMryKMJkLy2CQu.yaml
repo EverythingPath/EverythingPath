@@ -1,0 +1,35 @@
+_id: 1CmMryKMJkLy2CQu
+_key: '!items!1CmMryKMJkLy2CQu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/horror-eerie-1.jpg
+name: Powerless Prophecy Curse
+system:
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: 1novvvy9
+      formula: if(gte(@class.level, 5), 4)
+      target: init
+      type: insight
+  description:
+    value: >-
+      <p>You are forewarned of danger but can’t act to prevent it. You gain
+      uncanny dodge, as the rogue class feature. However, you can’t take any
+      actions in a surprise round, including free actions, except for flash of
+      insight. In the absence of a surprise round, you are staggered for the
+      entire first round of combat.</p>
+
+      <p>At 5th level, you gain a +4 insight bonus on initiative checks.</p>
+
+      <p>At 10th level, you gain improved uncanny dodge as the rogue ability,
+      using your oracle level as your rogue level.</p>
+
+      <p>At 15th level, you gain a +4 insight bonus on all your saving throws
+      and to your AC during surprise rounds and when you are otherwise unaware
+      of an attack.</p>
+  subType: classFeat
+  tags:
+    - Curse
+type: feat
