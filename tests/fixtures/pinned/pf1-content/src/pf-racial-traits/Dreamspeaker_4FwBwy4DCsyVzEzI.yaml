@@ -1,0 +1,55 @@
+_id: 4FwBwy4DCsyVzEzI
+_key: '!items!4FwBwy4DCsyVzEzI'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Dreamspeaker
+system:
+  actions:
+    - _id: DWfdkMF69zmjNJ19
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      description: >-
+        <p>members of this race with a Charisma of 15 or higher may use
+        @UUID[Compendium.pf1.spells.Item.ifcnx1yyw6e7ousm]{dream} once per day
+        as a spell-like ability (caster level is equal to the user's character
+        level).</p>
+      duration:
+        units: seeText
+      name: Dream SLA
+      notes:
+        effect:
+          - Subject to SR
+      range:
+        units: unlimited
+      target:
+        value: One living creature touched
+  changes:
+    - _id: fSWMn6Tn
+      formula: '1'
+      target: dc.school.div
+      type: racial
+  contextNotes:
+    - target: spellEffect
+      text: +[[1]] to DC for sleep effects.
+  description:
+    value: >-
+      <p>Members of this race gain a +1 bonus to the saving throw DCs of spells
+      of the divination school and spells that produce sleep effects that they
+      cast. In addition, members of this race with a Charisma score of 15 or
+      higher may use
+      <em>@UUID[Compendium.pf1.spells.Item.ifcnx1yyw6e7ousm]{dream} </em>once
+      per day as a spell-like ability (caster level is equal to the user’s
+      character level).</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '227'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+type: feat

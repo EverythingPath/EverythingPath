@@ -1,0 +1,56 @@
+_id: CeMy8lBDh2nY6WLY
+_key: '!items!CeMy8lBDh2nY6WLY'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Violent Misfire, Greater
+system:
+  actions:
+    - _id: J6vGZ18UpN9qWKIx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@cl/2))d6
+            types:
+              - fire
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: >-
+          one early or advanced firearm/level, no two of which can be more than
+          30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.aP3q2vkBQ6PnvHFk]{violent misfire} except as
+      noted above.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: a small piece of flint
+  school: evo
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell

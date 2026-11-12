@@ -1,0 +1,105 @@
+_id: e5kw4dwf9qwty6tl
+_key: '!items!e5kw4dwf9qwty6tl'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/symbols/runes-star-pentagon-orange-purple.webp
+name: Dispel Magic, Greater
+system:
+  actions:
+    - _id: 4u5mti9cxt8rhog1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius burst
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      target:
+        value: one spellcaster, creature, or object
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.gmgwyjfpeuuc4t4o]{dispel magic}, except that
+      it can end more than one spell on a target and it can be used to target
+      multiple creatures.</p>
+
+      <p>You choose to use <em>greater dispel magic</em> in one of three ways: a
+      targeted dispel, area dispel, or a counterspell: <em>Targeted Dispel</em>:
+      This functions as a targeted <em>dispel magic</em>, but it can dispel one
+      spell for every four caster levels you possess, starting with the highest
+      level spells and proceeding to lower level spells.</p>
+
+      <p>Additionally, <em>greater dispel magic</em> has a chance to dispel any
+      effect that <em>remove curse</em> can remove, even if <em>dispel
+      magic</em> can't dispel that effect. The DC of this check is equal to the
+      curse's DC.</p>
+
+      <p><em>Area Dispel</em>: When <em>greater dispel magic</em> is used in
+      this way, the spell affects everything within a 20-foot-radius burst. Roll
+      one dispel check and apply that check to each creature in the area, as if
+      targeted by <em>dispel magic</em>. For each object within the area that is
+      the target of one or more spells, apply the dispel check as with
+      creatures. Magic items are not affected by an area dispel.</p>
+
+      <p>For each ongoing area or effect spell whose point of origin is within
+      the area of the <em>greater dispel magic</em> spell, apply the dispel
+      check to dispel the spell. For each ongoing spell whose area overlaps that
+      of the <em>greater dispel magic</em> spell, apply the dispel check to end
+      the effect, but only within the overlapping area.</p>
+
+      <p>If an object or creature that is the effect of an ongoing spell (such
+      as a monster summoned by <em>summon monster</em>) is in the area, apply
+      the dispel check to end the spell that conjured that object or creature
+      (returning it whence it came) in addition to attempting to dispel one
+      spell targeting the creature or object.</p>
+
+      <p>You may choose to automatically succeed on dispel checks against any
+      spell that you have cast.</p>
+
+      <p><em>Counterspell</em>: This functions as <em>dispel magic</em>, but you
+      receive a +4 bonus on your dispel check to counter the other spellcaster's
+      spell.</p>
+  learnedAt:
+    bloodline:
+      Celestial: 6
+      Oni: 6
+    class:
+      arcanist: 6
+      bard: 5
+      cleric: 6
+      druid: 6
+      hunter: 6
+      inquisitor: 6
+      magus: 6
+      occultist: 5
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      skald: 5
+      sorcerer: 6
+      spiritualist: 6
+      summoner: 5
+      summonerUnchained: 5
+      warpriest: 6
+      witch: 6
+      wizard: 6
+    domain:
+      Liberation: 6
+  level: 6
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '272'
+  sr: false
+type: spell

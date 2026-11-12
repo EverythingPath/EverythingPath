@@ -1,0 +1,62 @@
+_id: 2Az38ZPYwjYBKZd2
+_key: '!items!2Az38ZPYwjYBKZd2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/extra-rage.jpg
+name: Rage (UC)
+system:
+  abilityType: ex
+  actions:
+    - _id: e43a7wykazig6797
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Barbarian (Unchained)
+  description:
+    value: >-
+      <p>A barbarian can call upon inner reserves of strength and ferocity,
+      granting her additional combat prowess. At 1st level, a barbarian can rage
+      for a number of rounds per day equal to 4 + her Constitution modifier. For
+      each level after 1st she possesses, the barbarian can rage for 2
+      additional rounds per day. Temporary increases to Constitution, such as
+      that gained from bear’s endurance, do not increase the total number of
+      rounds that a barbarian can rage per day. A barbarian can enter a rage as
+      a free action. The total number of rounds of rage per day is renewed after
+      resting for 8 hours, although these hours need not be consecutive.<p>While
+      in a rage, a barbarian gains a +2 bonus on melee attack rolls, melee
+      damage rolls, thrown weapon damage rolls, and Will saving throws. In
+      addition, she takes a –2 penalty to Armor Class. She also gains 2
+      temporary hit points per Hit Die. These temporary hit points are lost
+      first when a character takes damage, disappear when the rage ends, and are
+      not replenished if the barbarian enters a rage again within 1 minute of
+      her previous rage. While in a rage, a barbarian cannot use any Charisma-,
+      Dexterity-, or Intelligence-based skill (except Acrobatics, Fly,
+      Intimidate, and Ride) or any ability that requires patience or
+      concentration (such as spellcasting).<p>A barbarian can end her rage as a
+      free action, and is fatigued for 1 minute after a rage ends. A barbarian
+      can’t enter a new rage while fatigued or exhausted, but can otherwise
+      enter a rage multiple times per day. If a barbarian falls unconscious, her
+      rage immediately ends.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.buffs.Item.ciAO4KwMonUzAGY0
+  sources:
+    - id: PZO1131
+      pages: '8'
+  subType: classFeat
+  tag: classFeat_rageUc
+  uses:
+    maxFormula: 4 + @abilities.con.mod + (@class.level - 1)*2
+    per: day
+type: feat

@@ -1,0 +1,60 @@
+_id: lz8bx0tppebhkhc7
+_key: '!items!lz8bx0tppebhkhc7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Film of Filth
+system:
+  actions:
+    - _id: 1pdvlnitz1pj2r3q
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target's flesh to exude a layer of putrescent slime so
+      foul that the target is sickened (Fortitude negates) for the duration of
+      the spell and for 1d4 rounds thereafter. All creatures within 20 feet also
+      become sickened (Fortitude negates), and remain sickened for as long as
+      they remain within 20 feet of the target and for 1d4 rounds thereafter. A
+      creature that strikes the target with a bite attack must succeed at an
+      additional save or become nauseated for 1d4 rounds. Creatures immune to
+      poison are unaffected.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      druid: 4
+      hunter: 3
+      oracle: 4
+      ranger: 3
+      sorcerer: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO9074
+      pages: '74'
+type: spell
