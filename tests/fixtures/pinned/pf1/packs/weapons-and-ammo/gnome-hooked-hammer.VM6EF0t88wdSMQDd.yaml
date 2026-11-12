@@ -1,0 +1,69 @@
+_id: VM6EF0t88wdSMQDd
+_key: '!items!VM6EF0t88wdSMQDd'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/gnome-hooked-hammer.png
+name: Gnome Hooked Hammer
+system:
+  actions:
+    - _id: 8bx7f79sxrl41e7s
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Gnome Hooked Hammer
+  description:
+    unidentified: >-
+      <p>A gnome hooked hammer is a double weapon-an ingenious tool with a
+      hammer head at one end of its haft and a long, curved pick at the other.
+      The hammer's blunt head is a bludgeoning weapon that deals 1d6 points of
+      damage (critical multiplier x3). Its hook is a piercing weapon that deals
+      1d4 points of damage (critical multiplier x4). You can use either head as
+      the primary weapon. Gnomes treat hooked hammers as martial weapons.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    dbl: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 146
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  tags:
+    - Gnomish
+  weaponGroups:
+    - double
+  weaponSubtype: 2h
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,24 @@
+_id: GTSxlSYtfXk5a0Oj
+_key: '!items!GTSxlSYtfXk5a0Oj'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/spell-mastery.jpg
+name: Spell Resistance
+system:
+  changes:
+    - _id: ie8kit4q
+      formula: (12 + @item.level)
+      target: spellResist
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.4k9bh8ny1il2oner]{Spell
+      Resistance}</p><p>You gain spell resistance equal to 12 + of the spell's
+      caster level.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 9
+  subType: spell
+type: buff

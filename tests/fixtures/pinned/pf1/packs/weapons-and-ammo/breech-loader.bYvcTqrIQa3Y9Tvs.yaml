@@ -1,0 +1,75 @@
+_id: bYvcTqrIQa3Y9Tvs
+_key: '!items!bYvcTqrIQa3Y9Tvs'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Breech-Loader
+system:
+  actions:
+    - _id: c5jbyhiu0crlt394
+      ability:
+        attack: dex
+        critMult: 4
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '20'
+  ammo:
+    capacity: 2
+    explode: 5
+    misfire: 1
+    type: gunBullet
+  baseTypes:
+    - Breech-Loader
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d4 (small), 1d6 (medium);
+      <b>Critical</b> x4; <b>Range</b> 20 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1 (5 ft.); <b>Capacity</b> 2</p>
+
+      <h3>Description</h3>
+
+      <p>This double-barreled pistol variant has its barrel attached to its
+      stock by a hinge, enabling ammunition to be loaded quickly and easily.
+      Reloading a breech-loader is a standard action that reloads both barrels;
+      the @UUID[Compendium.pf1.feats.11ClnanF4PdEPd9g]{Rapid Reload} feat
+      reduces this to a move action.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 3000
+  sources:
+    - id: PZO9495
+      pages: '18'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 4
+type: weapon

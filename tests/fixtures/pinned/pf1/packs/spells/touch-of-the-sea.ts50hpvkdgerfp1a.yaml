@@ -1,0 +1,59 @@
+_id: ts50hpvkdgerfp1a
+_key: '!items!ts50hpvkdgerfp1a'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Touch of the Sea
+system:
+  actions:
+    - _id: cusa9wigymg1rb0p
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause webs to grow between the target's fingers and its feet to
+      transform into flippers, granting a swim speed of 30 feet along with the
+      standard +8 bonus on Swim checks and the ability to take 10 even if
+      distracted or endangered. You can also use the run action while swimming,
+      provided you swim in a straight line. This transformation causes any boots
+      or gloves the target is wearing to meld into its form (although magic
+      items with a continuous effect continue to function). This spell does not
+      grant the target any ability to breathe water.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      arcanist: 1
+      bloodrager: 1
+      druid: 1
+      hunter: 1
+      investigator: 1
+      sorcerer: 1
+      wizard: 1
+  materials:
+    value: a fish scale
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '250'
+type: spell
