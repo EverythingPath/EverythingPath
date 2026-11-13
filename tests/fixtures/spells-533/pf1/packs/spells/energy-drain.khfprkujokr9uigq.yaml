@@ -1,0 +1,58 @@
+_id: khfprkujokr9uigq
+_key: '!items!khfprkujokr9uigq'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Energy Drain
+system:
+  actions:
+    - _id: c3y1st9brss18uwd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      effect: ray of negative energy
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial; see text for enervation
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.bc3nc0ri47egssht]{enervation}, except
+      that the creature struck gains 2d4 temporary negative levels. Twenty-four
+      hours after gaining them, the subject must make a Fortitude saving throw
+      (DC = <em>energy drain</em> spell's save DC) for each negative level. If
+      the save succeeds, that negative level is removed. If it fails, that
+      negative level becomes permanent.</p><p>An undead creature struck by the
+      ray gains 2d4x5 temporary hit points for 1 hour.</p>
+  learnedAt:
+    bloodline:
+      Accursed: 9
+      Undead: 9
+    class:
+      arcanist: 9
+      cleric: 9
+      oracle: 9
+      shaman: 9
+      sorcerer: 9
+      wizard: 9
+    subDomain:
+      Loss: 9
+      Undead: 9
+  level: 9
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '277'
+type: spell

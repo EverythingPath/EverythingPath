@@ -1,0 +1,65 @@
+_id: nyafit6oz90jqakn
+_key: '!items!nyafit6oz90jqakn'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Hollow Heroism, Greater
+system:
+  actions:
+    - _id: 58lrifirk4ttwb17
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.z0duc2v2n3ioynta]{Greater Heroism}, except
+      that you can reverse the spell by issuing a special command as a standard
+      action if you are within medium range (100 feet + 10 feet per caster
+      level) of the target. The target loses the bonuses and instead takes a -4
+      penalty on attack rolls, saving throws, and skill checks until the spell's
+      duration ends (no save), increasing to a -8 penalty against fear effects.
+      Additionally, she takes damage equal to your caster level when you reverse
+      the spell. Attempts to identify <em>greater hollow heroism</em> with a
+      skill check incorrectly identify it as <em>greater heroism</em> (see the
+      ruse descriptor on page 192).</p>
+  descriptors:
+    - mindAffecting
+    - ruse
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 6
+      psychic: 7
+      skald: 6
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '216'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,56 @@
+_id: sbdsqekv6fgqkdlm
+_key: '!items!sbdsqekv6fgqkdlm'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Sunder Breaker
+system:
+  actions:
+    - _id: fi8wbvtob0ac39h9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 minute/level (D) or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates and see text
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You place an invisible ward upon the target. The next time a creature
+      succeeds at a sunder combat maneuver against the target, the attacker's
+      weapon takes 1d6 points of damage per caster level (maximum 10d6). If the
+      attacker used a natural weapon for the sunder, the attacker takes half
+      this damage. Spell resistance applies to this damage. The attacker can
+      attempt a Fortitude save to halve this damage.</p><p>The ward on the
+      target counts as a magical trap and can be detected and disabled as
+      such.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 1
+      magus: 1
+      psychic: 1
+      sorcerer: 1
+      wizard: 1
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '195'
+type: spell

@@ -1,0 +1,192 @@
+_id: GXxza7xp8jSXG1kM
+_key: '!items!GXxza7xp8jSXG1kM'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Fey Magic (Gnome - HftF)
+system:
+  actions:
+    - _id: 4taxqdAe0luho0TY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm
+        person},</p><p>This charm makes a humanoid creature regard you as its
+        trusted friend and ally (treat the target's attitude as friendly). If
+        the creature is currently being threatened or attacked by you or your
+        allies, however, it receives a +5 bonus on its saving throw.</p><p>The
+        spell does not enable you to control the charmed person as if it were an
+        automaton, but it perceives your words and actions in the most favorable
+        way. You can try to give the subject orders, but you must win an opposed
+        Charisma check to convince it to do anything it wouldn't ordinarily do.
+        (Retries are not allowed.) An affected creature never obeys suicidal or
+        obviously harmful orders, but it might be convinced that something very
+        dangerous is worth doing. Any act by you or your apparent allies that
+        threatens the charmed person breaks the spell. You must speak the
+        person's language to communicate your commands, or else be good at
+        pantomiming.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm Person
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod + 11'
+        description: Negates
+        type: will
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: rbSjRwAWLHTh3dly
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft (3 m) radius area
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+        lights}</p><p>Depending on the version selected, you create up to four
+        lights that resemble lanterns or torches (and cast that amount of
+        light), or up to four glowing spheres of light (which look like
+        will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The
+        dancing lights must stay within a @Distance[10 ft;dual]-radius area in
+        relation to each other but otherwise move as you desire (no
+        concentration required): forward or back, up or down, straight or
+        turning corners, or the like. The lights can move up to @Distance[100
+        ft;dual] per round. A light winks out if the distance between you and it
+        exceeds the spell's range.</p><p>You can only have one dancing lights
+        spell active at any one time. If you cast this spell while another
+        casting is still in effect, the previous casting is dispelled. If you
+        make this spell permanent, it does not count against this
+        limit.</p><p>Dancing lights can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 +100'
+      target:
+        value: up to 4 lights
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: pp3DBxqqTx2QBWx1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle},</p><p>This
+        spell causes tall grass, weeds, and other plants to wrap around
+        creatures in the area of effect or those that enter the area. Creatures
+        that fail their save gain the entangled condition. Creatures that make
+        their save can move as normal, but those that remain in the area must
+        save again at the end of your turn. Creatures that move into the area
+        must save immediately. Those that fail must end their movement and gain
+        the entangled condition. Entangled creatures can attempt to break free
+        as a move action, making a Strength or Escape Artist check. The DC for
+        this check is equal to the DC of the spell. The entire area of effect is
+        considered difficult terrain while the effect lasts.</p><p>If the plants
+        in the area are covered in thorns, those in the area take 1 point of
+        damage each time they fail a save against the entangle or fail a check
+        made to break free. Other effects, depending on the local plants, might
+        be possible at GM discretion.</p><p></p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Entangle
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      save:
+        dc: '@abilities.cha.mod + 11'
+        description: partial see text
+        type: ref
+      target:
+        value: plants in a 40 ft (12 m) radius spread
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: O0UsUXGWRecDSJML
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  contextNotes:
+    - target: spellEffect
+      text: +[[1]] to DC of spells of the compulsion subschool.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic, Illusion Resistance, Obsessive</p><hr /><p>Gnomes with this
+      racial trait increase the DC of spells of the compulsion subschool they
+      cast by 1. Additionally, if the gnome has a Charisma score of 11 or
+      higher, she also gains the following spell-like abilities: 1/
+      day-@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person},
+      @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+      @UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle}, and
+      @UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}. The
+      caster level for these effects is equal to the gnome's level. The DC for
+      these spells is equal to 10 + the spell's level + the gnome's Charisma
+      modifier.</p><p>This replaces gnome magic, illusion resistance, and
+      obsessive.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9491
+      pages: '16'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

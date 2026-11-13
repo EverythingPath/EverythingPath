@@ -1,0 +1,60 @@
+_id: ncijcs7iaf9apm69
+_key: '!items!ncijcs7iaf9apm69'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Perfect Placement
+system:
+  actions:
+    - _id: kbalzzv82dpx4973
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Affected creatures gain tactical knowledge and maximize their
+      efficiency on the field of battle. Each gains a +1 insight bonus to AC and
+      Reflex saves. Against attacks of opportunity, the insight bonus to AC
+      increases to +3.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      bloodrager: 2
+      magus: 3
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a chess piece
+  school: div
+  sources:
+    - id: PZO9465
+      pages: '24'
+type: spell

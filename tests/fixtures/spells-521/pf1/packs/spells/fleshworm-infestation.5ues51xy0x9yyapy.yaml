@@ -1,0 +1,64 @@
+_id: 5ues51xy0x9yyapy
+_key: '!items!5ues51xy0x9yyapy'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Fleshworm Infestation
+system:
+  actions:
+    - _id: l163vcyzt09pw6x8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a touch, you cause an infestation of ravenous worms to manifest in
+      the target's flesh. The target must make a Fortitude save every round.
+      Failure means it takes 1d6 hit points of damage and 2 points of Dexterity
+      damage, and is staggered for 1 round. If it makes the save, it takes no
+      hit point or Dexterity damage and is only sickened for 1 round rather than
+      staggered. <i>Fleshworm infestation</i> cannot be ended early by <i>remove
+      disease</i> or <i>heal</i>, as the infestation starts anew if the current
+      worms are slain. <i>Protection from Evil</i> negates this spell's effects
+      for as long as the two durations overlap.</p><p><i>Dispel evil</i>
+      automatically ends a <i>fleshworm infestation</i>.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      inquisitor: 4
+      oracle: 4
+      psychic: 4
+      sorcerer: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '220'
+  subschool:
+    - summoning
+type: spell

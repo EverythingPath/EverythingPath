@@ -1,0 +1,63 @@
+_id: krgcstszyvso1zuj
+_key: '!items!krgcstszyvso1zuj'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Intensify Psyche
+system:
+  actions:
+    - _id: 56hnwp8b5mqox23k
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: one creature
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A sense of euphoria suffuses the target, amplifying all sensations,
+      good or bad. The target creature gains a +2 competence bonus on Diplomacy,
+      Handle Animal, Perform, and Sense Motive checks. In addition, the DC for
+      any spells or effects with the emotion or pain descriptors cast or caused
+      by the target increases by 1 while the target is under the effects of the
+      spell. However, increased sensitivity causes the target to take a -2
+      penalty on saving throws against spells and effects with the emotion or
+      pain descriptor.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 1
+      cleric: 2
+      medium: 2
+      mesmerist: 1
+      oracle: 2
+      psychic: 2
+      skald: 1
+      sorcerer: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9479
+      pages: '20'
+type: spell

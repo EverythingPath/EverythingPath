@@ -1,0 +1,77 @@
+_id: 0bazqafq091n96y3
+_key: '!items!0bazqafq091n96y3'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Slave to Sin
+system:
+  actions:
+    - _id: w85n3tm6tcnbq6gf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see below)
+        type: will
+      target:
+        value: one living creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell allows you to reach into an evil creature's mind to expose
+      and exploit its susceptibility to whichever of the seven so-called "deadly
+      sins" it is most susceptible to. The targeted creature must succeed at a
+      Will save or it is overwhelmed with an inability to repress urges to
+      indulge in whatever sin most closely mirrors its personality, and a
+      glowing rune appears upon the creature's body (usually the brow),
+      identifying the sin. (The GM adjudicates which rune manifests on the
+      creature's body, as appropriate.)</p><p>Each round, at the start of its
+      turn, the target must attempt a new Will saving throw against the spell's
+      DC to resist the sin's enslavement. If the target succeeds at this saving
+      throw, it is sickened for that round by the distractions of its sin. If it
+      fails, it is sickened and staggered as it spends part of its action
+      wallowing in its targeted sin (a wrathful victim might waste time spouting
+      threats and profanity, while a slothful victim might merely be slow and
+      hesitant, and a lustful victim could well spend precious moments ogling or
+      fawning over something of beauty).</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      cleric: 3
+      inquisitor: 3
+      mesmerist: 2
+      oracle: 3
+      paladin: 2
+      skald: 2
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a scrap of paper inscribed with the Sihedron rune
+  school: enc
+  sources:
+    - id: PZO1138
+      pages: '61'
+  subschool:
+    - compulsion
+type: spell

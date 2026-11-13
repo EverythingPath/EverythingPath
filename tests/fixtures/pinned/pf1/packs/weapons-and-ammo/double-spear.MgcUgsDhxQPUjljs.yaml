@@ -1,0 +1,59 @@
+_id: MgcUgsDhxQPUjljs
+_key: '!items!MgcUgsDhxQPUjljs'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/double-spear.PNG
+name: Double Spear
+system:
+  actions:
+    - _id: rnqyyjbsp2exdjo9
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Double Spear
+  description:
+    unidentified: >-
+      <p>This long, heavy spear has a point at each end, allowing it to be used
+      as a double weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  properties:
+    dbl: true
+  sources:
+    - id: PZO9493
+      pages: '30'
+  subType: exotic
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

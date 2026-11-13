@@ -1,0 +1,66 @@
+_id: bvojk0ljz9brf9ig
+_key: '!items!bvojk0ljz9brf9ig'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/control/fear-fright-monster-grin-purple-blue.webp
+name: Symbol of Fear
+system:
+  actions:
+    - _id: ltcs1lhzpouf0coj
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that all creatures within 60 feet of the <em>symbol of fear</em>
+      instead become panicked for 1 round per caster level.</p><p><em>Note:</em>
+      Magic traps such as <em>symbol of fear</em> are hard to detect and
+      disable. A rogue (only) can use the Perception skill to find a <em>symbol
+      of fear</em> and Disable Device to thwart it. The DC in each case is 25 +
+      spell level, or 31 for <em>symbol of fear</em>.</p>
+  descriptors:
+    - fear
+    - mindAffecting
+    - emotion
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      occultist: 4
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 1000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      1,000 gp
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '356'
+type: spell

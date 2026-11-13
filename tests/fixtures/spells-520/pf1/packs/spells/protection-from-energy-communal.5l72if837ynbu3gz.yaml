@@ -1,0 +1,61 @@
+_id: 5l72if837ynbu3gz
+_key: '!items!5l72if837ynbu3gz'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-flaming-diamond-teal.webp
+name: Protection from Energy, Communal
+system:
+  actions:
+    - _id: 84xsrhon6mvgn6tc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 min./level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.1vh2ewwvzvxunoxk]{protection from
+      energy}, except you divide the duration in 10-minute intervals among the
+      creatures touched. Once the spell absorbs 12 points of energy damage per
+      caster level (maximum 120 points) for a subject, the spell's effects end
+      for that subject.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      druid: 4
+      hunter: 3
+      inquisitor: 4
+      oracle: 4
+      psychic: 4
+      ranger: 3
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '240'
+type: spell
