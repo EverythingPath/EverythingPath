@@ -1,0 +1,48 @@
+_id: 4x4ozs8ps7tfbgpd
+_key: '!items!4x4ozs8ps7tfbgpd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Severed Fate
+system:
+  actions:
+    - _id: kmwjsbycfpsyklak
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You curse the target, preventing it from drawing upon the powers of
+      destiny. The target is shaken and cannot use hero points for the duration
+      of the spell. This effect can be removed by <i>dispel magic</i>, <i>remove
+      curse</i>, or other similar effects.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+      witch: 2
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '324'
+type: spell

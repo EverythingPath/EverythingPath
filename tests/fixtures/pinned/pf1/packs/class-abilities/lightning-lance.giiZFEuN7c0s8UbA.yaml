@@ -1,0 +1,56 @@
+_id: giiZFEuN7c0s8UbA
+_key: '!items!giiZFEuN7c0s8UbA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Lightning Lance
+system:
+  abilityType: su
+  actions:
+    - _id: v0asp6goofi6bv2o
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6 + @abilities.cha.mod
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates impaired vision
+        type: fort
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can unleash a lance of lightning by expending 1 point from
+      her arcane reservoir and making a ranged touch attack against any one
+      target within 30 feet. If the attack hits, it deals 1d6 points of
+      electricity damage + the arcanist’s Charisma modifier, plus 1d6 points of
+      electricity damage for every 2 levels beyond 1st (to a maximum of 10d6 at
+      19th level). The target’s vision is also impaired, causing the target to
+      treat all creatures as if they had concealment (20%) for 1 round. It can
+      attempt a Fortitude saving throw to negate the impaired vision.</p>
+  sources:
+    - id: PZO1129
+      pages: '11'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat

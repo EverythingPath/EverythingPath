@@ -1,0 +1,62 @@
+_id: v8cj29iz2ok4z694
+_key: '!items!v8cj29iz2ok4z694'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/earth/barrier-stone-explosion-debris.webp
+name: Burrow
+system:
+  actions:
+    - _id: 00z5m1e4pmetsoja
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject can <i>burrow</i> at a speed of 15 feet (or 10 feet if it
+      wears medium or heavy armor, or if it carries a medium or heavy load)
+      through sand, loose soil, or gravel, or at a speed of 5 feet through
+      stone. Using <i>burrow</i> requires only as much concentration as walking,
+      so the subject can attack or cast spells normally. The <i>burrow</i>ing
+      creature cannot charge or run. Loose material collapses behind the target
+      1 round after it leaves the area. This spell does not give the target the
+      ability to breathe underground, so when passing through loose material,
+      the creature must hold its breath and take only short trips, or else it
+      may suffocate.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bloodrager: 3
+      druid: 3
+      hunter: 3
+      investigator: 3
+      ranger: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '210'
+    - id: PZO1126
+      pages: '87'
+type: spell

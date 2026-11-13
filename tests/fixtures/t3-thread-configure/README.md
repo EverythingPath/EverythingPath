@@ -1,0 +1,3 @@
+# T3 caller read (`t3_thread_configure` with no arguments)
+
+`read-own-thread.json` is the result `t3_thread_configure` returned on 2026-11-13 when the t3-helper-compat implementer called it with no arguments (its read form) for its own thread. Only the thread id is replaced, by the placeholder `synthetic:parent`; every other field and value is as returned. It has the same fields as the caller the retired `t3_thread_configuration` returned in the 2026-10-31 promotion rounds (`inputs.json` `caller` in their archived run directories). `tests/catalog/t3-code-mode-fixture.ts` serves it, with the test's caller thread id, as the synthetic tool's `structuredContent`.

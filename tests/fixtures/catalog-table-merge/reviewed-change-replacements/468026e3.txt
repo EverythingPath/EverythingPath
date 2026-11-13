@@ -1,0 +1,280 @@
+// #726: reviewed replacements for upstream changes whose formula the published
+// rule contradicts. The Curation Overlay only appends outputs, so it cannot
+// replace a raw change. Each row names one pinned record and its exact raw
+// change, and the formula it imports as instead; target and bonus type stay the
+// record's own. A record whose change no longer matches imports its raw change
+// unchanged.
+
+import {
+  matchesRawChange,
+  type ReviewedRawChange,
+} from './racial-trait-rules.ts';
+
+type ReviewedChangeReplacement = {
+  externalKey: string;
+  change: ReviewedRawChange & { target: string };
+  /** The replacement, in Foundry's formula syntax like the raw change. */
+  formula: string;
+  evidence: string;
+  reviewedBy: string;
+  reviewedOn: string;
+};
+
+const reviewedChangeReplacements: readonly ReviewedChangeReplacement[] = [
+  {
+    // Intimidating Prowess: Foundry clamps the Strength modifier at 0.
+    externalKey: 'pf1/O0jbkTJcIji9BNiF',
+    change: {
+      target: 'skill.int',
+      formula: 'max(0, @abilities.str.mod)',
+      type: 'untyped',
+    },
+    formula: '@abilities.str.mod',
+    evidence:
+      'CRB p. 128: "Add your Strength modifier to Intimidate skill checks in addition to your Charisma modifier." PCGen cr_feats.lst:112 (BONUS:SKILL|Intimidate|STR) has no floor either, so a Strength penalty applies (owner decision 2026-10-13).',
+    reviewedBy: 'Opus (AI coder) for the owner',
+    reviewedOn: '2026-10-14',
+  },
+  {
+    // Mountain Guide (Five Kings Mountains): Foundry grants the Knowledge
+    // (geography) bonus everywhere; the reviewed description record supplies
+    // it under the mountainous-areas Situation instead.
+    externalKey: 'pf1-content/GMtjhKObcxyyMzjC',
+    change: { target: 'skill.kge', formula: '1', type: 'trait' },
+    formula: '0',
+    evidence:
+      'Inner Sea Primer p. 7 (pinned pf1-content src/pf-traits/Mountain_Guide__Five_Kings_Mountains__GMtjhKObcxyyMzjC.yaml): "You gain a +1 trait bonus on Knowledge (geography) and Survival checks when in mountainous areas", which qualifies both skills; PCGen isp_abilities.lst:89 applies it unconditionally (owner decision, #372 fix round 1, 2026-10-17: condition both).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-17',
+  },
+  {
+    // Soul-Searcher's Strength (Rivethun): Foundry grants the +1 on Fortitude
+    // as if Fortitude were always the chosen save; the reviewed description
+    // record supplies the +1 on each save under its own choice Situation.
+    externalKey: 'pf1-content/k1yuWxuzWIn03iHu',
+    change: { target: 'fort', formula: '1', type: 'trait' },
+    formula: '0',
+    evidence:
+      'Healer\'s Handbook p. 26 (pinned pf1-content src/pf-traits/Soul_Searcher_s_Strength__Rivethun__k1yuWxuzWIn03iHu.yaml): "Choose one saving throw. You gain a +1 trait bonus on saving throws of the chosen kind." PCGen hhb_abilities.lst:37 encodes the choice as an ability pool (BONUS:ABILITYPOOL|Soul-Searcher\'s Save Bonus|1), not a fixed Fortitude bonus (#381).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-18',
+  },
+  {
+    // Local Ties (Iron Gods): Foundry grants the +1 on both Disable Device and
+    // Knowledge (engineering); the body has you choose one. The reviewed
+    // description record supplies the +1 on each skill under its own choice
+    // Situation (with the +3 Technologist Situations).
+    externalKey: 'pf1-content/yyndu1qwOHp2g5y2',
+    change: { target: 'skill.dev', formula: '1', type: 'trait' },
+    formula: '0',
+    evidence:
+      'Iron Gods Player\'s Guide p. 8 (pinned pf1-content src/pf-traits/Local_Ties__Iron_Gods__yyndu1qwOHp2g5y2.yaml): "Choose Disable Device or Knowledge (engineering). You gain a +1 trait bonus on checks with this skill". PCGen ig_abilities.lst:6 and potr_abilities.lst:40 encode the choice (CHOOSE:SKILL|Disable Device|Knowledge (Engineering), BONUS:SKILL|%LIST|1), not both skills (#386).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-19',
+  },
+  {
+    // Local Ties (Iron Gods): the Knowledge (engineering) half of the same
+    // overstated pair.
+    externalKey: 'pf1-content/yyndu1qwOHp2g5y2',
+    change: { target: 'skill.ken', formula: '1', type: 'trait' },
+    formula: '0',
+    evidence:
+      'Iron Gods Player\'s Guide p. 8 (pinned pf1-content src/pf-traits/Local_Ties__Iron_Gods__yyndu1qwOHp2g5y2.yaml): "Choose Disable Device or Knowledge (engineering). You gain a +1 trait bonus on checks with this skill". PCGen ig_abilities.lst:6 and potr_abilities.lst:40 encode the choice (CHOOSE:SKILL|Disable Device|Knowledge (Engineering), BONUS:SKILL|%LIST|1), not both skills (#386).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-19',
+  },
+  {
+    // Dragon Magic (Elf): Foundry grants a +2 racial bonus on Perception that
+    // the body does not state; the trait replaces elven magic, not keen senses.
+    externalKey: 'pf1-content/H1bYc9y68ZKt1auL',
+    change: { target: 'skill.per', formula: '2', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Legacy of Dragons p. 10 (pinned pf1-content src/pf-racial-traits/Dragon_Magic_H1bYc9y68ZKt1auL.yaml): elves with this trait who take a draconic bloodline "treat their Charisma scores as 2 points higher when determining the DC and uses per day of all bloodline abilities and bloodline spells" and add draconic-descriptor spells to their class spell lists, and the record\'s header names Elven Magic as the replaced trait. The body grants no Perception bonus, and PCGen lod_abilities_race.lst:18 has none either (#391).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-19',
+  },
+  {
+    // Seasinger (Merfolk): Foundry grants an untyped +2 on every Perform
+    // skill; the reviewed description record supplies the published +2 racial
+    // bonus on Perform (sing) checks under its own Situation instead.
+    externalKey: 'pf1-content/J65XMmSdfKBUu43b',
+    change: { target: 'skill.prf', formula: '2', type: 'untyped' },
+    formula: '0',
+    evidence:
+      'Advanced Race Guide p. 194 (pinned pf1-content src/pf-racial-traits/Seasinger_J65XMmSdfKBUu43b.yaml): "A seasinger gains a +2 racial bonus on Perform (sing) checks", which limits the bonus to singing and types it racial; PCGen arg_abilities_race.lst:961 has BONUS:SKILL|Perform (Sing)|2|TYPE=Racial (#392).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-19',
+  },
+  {
+    // Aquatic Ancestry (Human): Foundry grants the racial Swim bonus equal to
+    // the full Hit Dice; the body gives half the character level.
+    externalKey: 'pf1-content/Q4FtkHZulWkKEk7v',
+    change: {
+      target: 'skill.swm',
+      formula: '@attributes.hd.total',
+      type: 'racial',
+    },
+    formula: 'floor(@attributes.hd.total / 2)',
+    evidence:
+      'Horror Adventures p. 41 (pinned pf1-content src/pf-racial-traits/Aquatic_Ancestry_Q4FtkHZulWkKEk7v.yaml): "They gain a racial bonus equal to half their character level on Swim checks"; PCGen ha_abilities_race.lst:101 has BONUS:SKILL|Swim|floor(TL/2)|TYPE=Racial (#394).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-20',
+  },
+  {
+    // Veemod (Black): Foundry grants +10 on Perception, the green veemod's
+    // value; the body and PCGen give the black veemod +2.
+    externalKey: 'pf1/G4KDVMpA5nH0r9sF',
+    change: { target: 'skill.per', formula: '10', type: 'competence' },
+    formula: '2',
+    evidence:
+      'Technology Guide p. 53 (pinned pf1 packs/buffs/veemod-black.G4KDVMpA5nH0r9sF.yaml): the body grants "+2 competence bonus on Perception checks"; PCGen tg_equip.lst:263 gives the black veemod "Magnification +2" (the white is +5 and the green +10) (#547).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-20',
+  },
+  {
+    // Veemod (Powered Armor): Foundry grants +5 on Perception; the body and
+    // PCGen give the powered armor's veemods +10.
+    externalKey: 'pf1/WRwcMIspQq9acUQW',
+    change: { target: 'skill.per', formula: '5', type: 'competence' },
+    formula: '10',
+    evidence:
+      'Technology Guide p. 61 (pinned pf1 packs/buffs/veemod-powered-armor.WRwcMIspQq9acUQW.yaml): the body grants "+10 competence bonus on Perception checks"; PCGen tg_equip.lst:280 (Powered Armor) says its custom veemods "grant a +10 bonus on Perception checks" (#547).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-20',
+  },
+  {
+    // Veil of Positive Energy: Foundry grants the +2 sacred bonus to AC
+    // against everything; the reviewed description record supplies it only
+    // against undead creatures.
+    externalKey: 'pf1-content/IfR6nJz0I3Z2NrDm',
+    change: { target: 'ac', formula: '2', type: 'sacred' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 254 (pinned pf1 packs/spells/veil-of-positive-energy.xpmhu8rj7gbjns84.yaml, governing the pinned pf1-content src/pf-buffs/Veil_of_Positive_Energy_IfR6nJz0I3Z2NrDm.yaml): "you gain a +2 sacred bonus to AC and a+2 sacred bonus on saves. Both of these bonuses apply only against attacks or effects created by undead creatures"; PCGen apg_spells.lst:2107 has the same text and :260 "+2 AC, +2 on saves vs. undead". The buff body ties both bonuses to undead creatures too. The reviewed description record supplies them under that Situation (#548).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-20',
+  },
+  {
+    // Veil of Positive Energy: the same for its +2 sacred bonus on saves.
+    externalKey: 'pf1-content/IfR6nJz0I3Z2NrDm',
+    change: { target: 'allSavingThrows', formula: '2', type: 'sacred' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 254 (pinned pf1 packs/spells/veil-of-positive-energy.xpmhu8rj7gbjns84.yaml, governing the pinned pf1-content src/pf-buffs/Veil_of_Positive_Energy_IfR6nJz0I3Z2NrDm.yaml): "you gain a +2 sacred bonus to AC and a+2 sacred bonus on saves. Both of these bonuses apply only against attacks or effects created by undead creatures"; PCGen apg_spells.lst:2107 has the same text and :260 "+2 AC, +2 on saves vs. undead". The buff body ties both bonuses to undead creatures too. The reviewed description record supplies them under that Situation (#548).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-20',
+  },
+  {
+    // Artisan's Tools, masterwork: Foundry grants the +2 circumstance bonus on
+    // every Craft check; the reviewed description record supplies it on Craft
+    // checks made with the tools.
+    externalKey: 'pf1/5WTK5HUkSZVClehk',
+    change: { target: 'skill.crf', formula: '2', type: 'circumstance' },
+    formula: '0',
+    evidence:
+      'Core Rulebook p. 161 (pinned pf1 packs/items/artisan-s-tools-masterwork.5WTK5HUkSZVClehk.yaml): "masterwork artisan\'s tools are the perfect tools for the job, so you get a +2 circumstance bonus on Craft checks made with them", which qualifies the bonus. The reviewed description record supplies the +2 under a "Craft checks made with these tools" Situation (#430).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Musical instrument, masterwork: Foundry grants the +2 circumstance
+    // bonus on every Perform check; the reviewed description record supplies
+    // it on Perform checks made to perform with the instrument.
+    externalKey: 'pf1/74nJBzdY4yvMZcBe',
+    change: { target: 'skill.prf', formula: '2', type: 'circumstance' },
+    formula: '0',
+    evidence:
+      'Core Rulebook p. 161 (pinned pf1 packs/items/musical-instrument-masterwork.74nJBzdY4yvMZcBe.yaml): "This high-quality instrument grants a +2 circumstance bonus on Perform checks made to perform with the instrument", which qualifies the bonus; the same body ties instruments to the Perform skills "associated with a musical instrument (keyboard, percussion, string, or wind)". The reviewed description record supplies the +2 under a "Perform checks made to perform with the instrument" Situation (#430).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Wild Forest Kobold (Kobold): Foundry puts one of the two +2 racial
+    // bonuses on Stealth; the body and PCGen give it on Perception, which the
+    // reviewed description record supplies instead.
+    externalKey: 'pf1-content/hTQmrexaurb1Vu4A',
+    change: { target: 'skill.ste', formula: '2', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Kobolds of Golarion p. 7 (pinned pf1-content src/pf-racial-traits/Wild_Forest_Kobold_hTQmrexaurb1Vu4A.yaml): "You gain a +2 racial bonus on Perception and Survival checks." Stealth appears only as a class skill ("Stealth and Survival are always class skills for you"). PCGen kog_abilities_race.lst:35 has BONUS:SKILL|Perception,Survival|2|TYPE=Racial (#400).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Gift of Tongues (Gnome): Foundry types the +1 on Bluff racial; the body
+    // gives an untyped bonus, which the reviewed description record supplies.
+    externalKey: 'pf1-content/hcagqE7fLh67ZCKZ',
+    change: { target: 'skill.blf', formula: '1', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 15 and Advanced Race Guide p. 32 (pinned pf1-content src/pf-racial-traits/Gift_of_Tongues_hcagqE7fLh67ZCKZ.yaml): "Gnomes with this racial trait gain a +1 bonus on Bluff and Diplomacy checks", an untyped bonus; PCGen apg_abilities_race.lst:47 and arg_abilities_race.lst:127 have BONUS:SKILL|Bluff,Diplomacy|1 with no type. The reviewed description record supplies the untyped +1 instead (#400 fix round 1).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Gift of Tongues (Gnome): the Diplomacy half of the same pair.
+    externalKey: 'pf1-content/hcagqE7fLh67ZCKZ',
+    change: { target: 'skill.dip', formula: '1', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 15 and Advanced Race Guide p. 32 (pinned pf1-content src/pf-racial-traits/Gift_of_Tongues_hcagqE7fLh67ZCKZ.yaml): "Gnomes with this racial trait gain a +1 bonus on Bluff and Diplomacy checks", an untyped bonus; PCGen apg_abilities_race.lst:47 and arg_abilities_race.lst:127 have BONUS:SKILL|Bluff,Diplomacy|1 with no type. The reviewed description record supplies the untyped +1 instead (#400 fix round 1).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Master Tinker (Gnome): Foundry types the +1 on Disable Device racial;
+    // the body gives an untyped bonus, which the reviewed description record
+    // supplies.
+    externalKey: 'pf1-content/iHI1zDebmLg28ZWW',
+    change: { target: 'skill.dev', formula: '1', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 15 and Advanced Race Guide p. 32 (pinned pf1-content src/pf-racial-traits/Master_Tinker_iHI1zDebmLg28ZWW.yaml): "Gnomes with this racial trait gain a +1 bonus on Disable Device and Knowledge (engineering) checks", an untyped bonus; PCGen apg_abilities_race.lst:49 and arg_abilities_race.lst:130 have BONUS:SKILL|Disable Device,Knowledge (Engineering)|1 with no type. The reviewed description record supplies the untyped +1 instead (#400 fix round 1).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Master Tinker (Gnome): the Knowledge (engineering) half of the same pair.
+    externalKey: 'pf1-content/iHI1zDebmLg28ZWW',
+    change: { target: 'skill.ken', formula: '1', type: 'racial' },
+    formula: '0',
+    evidence:
+      'Advanced Player\'s Guide p. 15 and Advanced Race Guide p. 32 (pinned pf1-content src/pf-racial-traits/Master_Tinker_iHI1zDebmLg28ZWW.yaml): "Gnomes with this racial trait gain a +1 bonus on Disable Device and Knowledge (engineering) checks", an untyped bonus; PCGen apg_abilities_race.lst:49 and arg_abilities_race.lst:130 have BONUS:SKILL|Disable Device,Knowledge (Engineering)|1 with no type. The reviewed description record supplies the untyped +1 instead (#400 fix round 1).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Magic Fang: Foundry grants the +1 enhancement bonus on every melee
+    // attack; the reviewed description record supplies it only with the
+    // natural weapon or unarmed strike the spell affects.
+    externalKey: 'pf1-content/hLyR3HQklOuoI86H',
+    change: { target: 'mattack', formula: '1', type: 'enh' },
+    formula: '0',
+    evidence:
+      'Core Rulebook p. 308 (pinned pf1 packs/spells/magic-fang.cfzk3vkv1c7ncaug.yaml, governing the pinned pf1-content src/pf-buffs/Magic_Fang_hLyR3HQklOuoI86H.yaml): "Magic fang gives one natural weapon or unarmed strike of the subject a +1 enhancement bonus on attack and damage rolls"; PCGen cr_spells.lst:1131 has the same text and :717 applies it to a natural weapon only. The buff body says the same. The reviewed description record supplies the bonus under that Situation (#549).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+  {
+    // Magic Fang: the same for its +1 enhancement bonus on damage rolls.
+    externalKey: 'pf1-content/hLyR3HQklOuoI86H',
+    change: { target: 'wdamage', formula: '1', type: 'enh' },
+    formula: '0',
+    evidence:
+      'Core Rulebook p. 308 (pinned pf1 packs/spells/magic-fang.cfzk3vkv1c7ncaug.yaml, governing the pinned pf1-content src/pf-buffs/Magic_Fang_hLyR3HQklOuoI86H.yaml): "Magic fang gives one natural weapon or unarmed strike of the subject a +1 enhancement bonus on attack and damage rolls"; PCGen cr_spells.lst:1131 has the same text and :717 applies it to a natural weapon only. The buff body says the same. The reviewed description record supplies the bonus under that Situation (#549).',
+    reviewedBy: 'Opus (AI curator) for the owner',
+    reviewedOn: '2026-10-21',
+  },
+];
+
+/** The reviewed formula that replaces a record's raw change, if any. */
+export function findReviewedReplacementFormula(
+  externalKey: string,
+  change: Record<string, unknown>,
+) {
+  return reviewedChangeReplacements.find(
+    (row) =>
+      row.externalKey === externalKey && matchesRawChange(change, row.change),
+  )?.formula;
+}

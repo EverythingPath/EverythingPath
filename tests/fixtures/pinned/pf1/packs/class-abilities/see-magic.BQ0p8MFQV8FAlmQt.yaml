@@ -1,0 +1,59 @@
+_id: BQ0p8MFQV8FAlmQt
+_key: '!items!BQ0p8MFQV8FAlmQt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: See Magic
+system:
+  abilityType: su
+  actions:
+    - _id: 1ev99kgbtwj9ffnl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+    - _id: 6DfFK33xzDRr5Dzo
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: inst
+      name: Touch to identify
+      range:
+        units: touch
+      target:
+        value: one object
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can see magical auras. If she expends 1 point from her
+      arcane reservoir, for 1 minute she instantly recognizes magic item auras
+      and spell effects (as @UUID[Compendium.pf1.spells.uqh87jz757r2cb7r]{Detect
+      Magic}). During this time, she is treated as if she had studied each aura
+      for 3 rounds and she treats her Knowledge (arcana) skill check as if she
+      had rolled a 15 on the d20. In addition, if she touches a magic item
+      during this time, she can immediately identify its properties using
+      Spellcraft without needing to spend 3 rounds examining the object. If an
+      enemy possesses the object, the arcanist must first succeed at a melee
+      touch attack to identify the item.</p>
+  sources:
+    - id: PZO1129
+      pages: '12'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat
