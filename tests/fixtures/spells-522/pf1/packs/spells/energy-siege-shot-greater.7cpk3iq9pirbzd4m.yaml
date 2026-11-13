@@ -1,0 +1,55 @@
+_id: 7cpk3iq9pirbzd4m
+_key: '!items!7cpk3iq9pirbzd4m'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Energy Siege Shot, Greater
+system:
+  actions:
+    - _id: xqxxzhzooxcyykv0
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates (object)
+        harmless: true
+        type: fort
+      target:
+        value: one siege engine of any size
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.x2djoiwxmgh23slx]{energy siege shot}, except
+      it can target siege engines of any size, not just Large siege engines.</p>
+  descriptors:
+    - variable
+  learnedAt:
+    class:
+      arcanist: 6
+      occultist: 6
+      sorcerer: 6
+      summoner: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: a ball of pitch
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '229'
+type: spell

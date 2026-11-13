@@ -1,0 +1,104 @@
+_id: vmamex3k9tpm5jex
+_key: '!items!vmamex3k9tpm5jex'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/beam-strike-whip-red.webp
+name: Ghost Whip
+system:
+  actions:
+    - _id: bl8uumr56shts6s5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: whip of flexible ectoplasm
+      name: Use
+      range:
+        units: ft
+        value: '0'
+    - _id: 4Rp55L1pbQ7cQ3A2
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Ghost touch attack
+      range:
+        units: reach
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: wrIgu1Lyhz64OlSZ
+      ability:
+        attack: str
+      actionType: mcman
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: inst
+      name: Combat Maneuver
+      range:
+        units: reach
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A white, 15-foot-long lash of ghostly evanescence appears from your
+      hand. This weapon is treated as a <i>ghost touch whip</i> with no
+      enhancement bonus. You can wield it as a whip as if you were proficient.
+      Attacks with a <i>ghost whip</i> are resolved as incorporeal touch
+      attacks. The whip affects only creatures you attack with it, passing
+      through objects and other creatures in its path and thereby allowing you
+      to ignore cover between you and your target. When a <i>ghost whip</i>
+      attack passes through total cover, the target is treated as having total
+      concealment (50% miss chance). Against incorporeal and undead creatures, 
+      a <i>ghost whip</i> deals lethal damage and can be used to perform drag or
+      reposition combat maneuvers (in addition to a whip's normal disarm and
+      trip maneuvers). A <i>ghost whip</i> cannot be disarmed or sundered.</p>
+  learnedAt:
+    bloodline:
+      Ectoplasm: 2
+    class:
+      arcanist: 2
+      cleric: 2
+      inquisitor: 2
+      magus: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      sorcerer: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1132
+      pages: '172'
+type: spell

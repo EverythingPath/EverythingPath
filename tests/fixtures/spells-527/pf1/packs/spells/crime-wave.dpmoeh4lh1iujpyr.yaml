@@ -1,0 +1,90 @@
+_id: dpmoeh4lh1iujpyr
+_key: '!items!dpmoeh4lh1iujpyr'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Crime Wave
+system:
+  actions:
+    - _id: qe950x1gcuiv8ddc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instill overwhelming avarice in the targets and impel them toward a
+      wild spree of larceny. Creatures affected by a crime wave must roll
+      percentile dice each round to determine what action they
+      take.</p><table><thead><tr><th
+      style="width:5em"><p>d%</p></th><th><p>Behaviour</p></th></tr></thead><tbody><tr><td><p>1
+      – 25</p></td><td><p>Act normally, but with suspicion toward others. The
+      target doesn’t benefit from or provide benefits with teamwork feats and
+      the aid another action. If a creature attempts to use a harmless spell or
+      effect on the target, there is a 50% chance the target tries to avoid that
+      effect as best as possible (taking an attack of opportunity against a
+      spellcaster, requiring a successful attack roll on a touch spell, or
+      attempting a saving throw).</p></td></tr><tr><td><p>26 –
+      50</p></td><td><p>Attempt a steal combat maneuver or Sleight of Hand check
+      to steal a random valuable object from the nearest creature (or a nearby
+      unattended object, if obviously of great value), moving adjacent to that
+      creature or object as needed. Once an affected creature has stolen an
+      item, further results of 26–50 cause the affected creature to flee,
+      focusing all of its efforts on escaping with its loot and fighting to
+      prevent the stolen object from being taken.</p></td></tr><tr><td><p>51 –
+      75</p></td><td><p>Attempt to break, destroy, or deface the nearest
+      unattended manufactured object or structure. If the object or structure is
+      too difficult to damage, the affected creature instead vandalizes or
+      otherwise defaces its appearance.</p></td></tr><tr><td><p>76 –
+      100</p></td><td><p>Attack the nearest creature (for this purpose, a
+      familiar counts as part of the affected creature’s
+      self).</p></td></tr></tbody></table><p>A character affected by a crime
+      wave who is unable to carry out the indicated action moves toward the
+      nearest source of cover or concealment and attempts a Stealth check to
+      hide. Affected creatures with the ability to turn invisible (including
+      through the use of magic items or spells) do so instead of attempting a
+      Stealth check.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 7
+      bard: 5
+      mesmerist: 5
+      psychic: 7
+      skald: 5
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a tarnished coin
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '208'
+  subschool:
+    - compulsion
+type: spell
