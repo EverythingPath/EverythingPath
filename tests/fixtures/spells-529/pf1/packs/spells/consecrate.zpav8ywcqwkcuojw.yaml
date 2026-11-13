@@ -1,0 +1,65 @@
+_id: zpav8ywcqwkcuojw
+_key: '!items!zpav8ywcqwkcuojw'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Consecrate
+system:
+  actions:
+    - _id: b436zf07mf47t7li
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius emanation
+      duration:
+        units: hour
+        value: 2 * @cl
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell blesses an area with positive energy. The DC to resist
+      positive channeled energy within this area gains a +3 sacred bonus. Every
+      undead creature entering a <i>consecrate</i>d area suffers minor
+      disruption, suffering a -1 penalty on attack rolls, damage rolls, and
+      saves. Undead cannot be created within or summoned into a
+      <i>consecrate</i>d area. If the <i>consecrate</i>d area contains an altar,
+      shrine, or other permanent fixture dedicated to your deity, pantheon, or
+      aligned higher power, the modifiers given above are doubled (+6 sacred
+      bonus to positive channeled energy DCs, -2 penalties for undead in the
+      area).</p><p>You cannot <i>consecrate</i> an area with a similar fixture
+      of a deity other than your own patron. Instead, the <i>consecrate</i>
+      spell curses the area, cutting off its connection with the associated
+      deity or power.</p><p>This secondary function, if used, does not also
+      grant the bonuses and penalties relating to undead, as given
+      above.</p><p><i>Consecrate</i> counters and dispels <i>desecrate</i>.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  materials:
+    gpValue: 50
+    value: a vial of holy water and 25 gp worth of silver dust
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '258'
+  sr: false
+type: spell

@@ -1,0 +1,56 @@
+_id: 6eh8zc5ohjqt2n8y
+_key: '!items!6eh8zc5ohjqt2n8y'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Utter Contempt
+system:
+  actions:
+    - _id: pnvztetodikgi8rv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill the target's heart with malice for all other
+      creatures.</p><p>The target's attitude toward all creatures other than
+      itself worsens by two steps.</p>
+  descriptors:
+    - emotion
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 6
+      bard: 4
+      mesmerist: 4
+      psychic: 5
+      skald: 4
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: spittle
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '246'
+type: spell

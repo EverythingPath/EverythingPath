@@ -1,0 +1,67 @@
+_id: bLOXAvcgrCd2cIty
+_key: '!items!bLOXAvcgrCd2cIty'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/invertebrates/dragonfly-teal.webp
+name: Curse of Dragonflies
+system:
+  actions:
+    - _id: 5objqdlcl1tumf8g
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: perm
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You invest a target with cursed elemental energy, making the open skies
+      anathema to it. If the affected creature ever tries to fly more than 5
+      feet above the ground, paper insects erupt from the air around the
+      creature to interfere with its movement. The affected creature's flight
+      maneuverability decreases by one step for every 3 caster levels you have.
+      A creature whose maneuverability would be brought below clumsy must land
+      at the end of its turn each round or fall.</p>
+
+      <p>This spell does not affect incorporeal creatures or creatures that are
+      otherwise intangible (such as a wizard using
+      @UUID[Compendium.pf1.spells.mqdoexj35atgqafn]{Gaseous Form} to fly).</p>
+  descriptors:
+    - air
+    - curse
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 3
+      hunter: 3
+      magus: 3
+      shaman: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      witch: 3
+      wizard: 4
+  level: 4
+  materials:
+    value: a paper insect
+  school: con
+  sources:
+    - id: PZO9485
+      pages: '21'
+type: spell

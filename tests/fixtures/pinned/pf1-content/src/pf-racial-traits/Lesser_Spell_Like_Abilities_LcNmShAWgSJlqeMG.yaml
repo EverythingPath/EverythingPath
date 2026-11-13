@@ -1,0 +1,137 @@
+_id: LcNmShAWgSJlqeMG
+_key: '!items!LcNmShAWgSJlqeMG'
+_stats:
+  coreVersion: '12.331'
+folder: d4bGSdKKLFXKTGuf
+img: systems/pf1/icons/races/half-elf.png
+name: Lesser Spell-Like Abilities
+system:
+  actions:
+    - _id: 4aUYJjATrGyYk13D
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p> @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+        </p><p>Depending on the version selected, you create up to four lights
+        that resemble lanterns or torches (and cast that amount of light), or up
+        to four glowing spheres of light (which look like will-o'-wisps), or one
+        faintly glowing, vaguely humanoid shape. The dancing lights must stay
+        within a @Distance[10 ft;dual]-radius area in relation to each other but
+        otherwise move as you desire (no concentration required): forward or
+        back, up or down, straight or turning corners, or the like. The lights
+        can move up to @Distance[100 ft;dual] per round. A light winks out if
+        the distance between you and it exceeds the spell's range.</p><p>You can
+        only have one dancing lights spell active at any one time. If you cast
+        this spell while another casting is still in effect, the previous
+        casting is dispelled. If you make this spell permanent, it does not
+        count against this limit.</p><p>Dancing lights can be made permanent
+        with a permanency spell.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: Up to four lights, all within a 10-ft. (3 m)-radius area
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: BDW8WqPgFCcuDpZ2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft (6 m) radius
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}</p><p>This
+        spell causes an object to radiate darkness out to a @Distance[20
+        ft;dual] radius. This darkness causes the illumination level in the area
+        to drop one step, from bright light to normal light, from normal light
+        to dim light, or from dim light to darkness. This spell has no effect in
+        an area that is already dark. Creatures with light vulnerability or
+        sensitivity take no penalties in normal light. All creatures gain
+        concealment (20% miss chance) in dim light. All creatures gain total
+        concealment (50% miss chance) in darkness.</p><p>Creatures with
+        darkvision can see in an area of dim light or darkness without penalty.
+        Nonmagical sources of light, such as torches and lanterns, do not
+        increase the light level in an area of darkness. Magical light sources
+        only increase the light level in an area if they are of a higher spell
+        level than darkness.</p><p>If darkness is cast on a small object that is
+        then placed inside or under a lightproof covering, the spell's effect is
+        blocked until the covering is removed.</p><p>This spell does not stack
+        with itself. Darkness can be used to counter or dispel any light spell
+        of equal or lower spell level.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Darkness
+      target:
+        value: object touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: FTWf5Y8e5UBOCNua
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5-ft (1.5 m) radius burst
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire}
+        </p><p>A pale glow surrounds and outlines the subjects. Outlined
+        subjects shed light as candles. Creatures outlined by faerie fire take a
+        -20 penalty on all Stealth checks. Outlined creatures do not benefit
+        from the concealment normally provided by darkness (though a 2nd-level
+        or higher magical darkness effect functions normally), blur,
+        displacement, invisibility, or similar effects. The light is too dim to
+        have any special effect on undead or dark-dwelling creatures vulnerable
+        to light. The faerie fire can be blue, green, or violet, according to
+        your choice at the time of casting. The faerie fire does not cause any
+        harm to the objects or creatures thus outlined.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Faerie Fire
+      range:
+        units: long
+        value: '@attributes.hd.total *40 +400'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Half-Elf<br /><strong>Replaced
+      Trait(s)</strong>: Adaptability, Multitalented</p><hr /><p>Half-elves with
+      this trait can cast
+      @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+      @UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}, and
+      @UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire} each once
+      per day. The caster level for these effects is equal to the user's
+      character level. This racial trait replaces adaptability and
+      multitalented.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9466
+      pages: '14'
+  subType: racial
+  tags:
+    - Half-Elf
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+type: feat
