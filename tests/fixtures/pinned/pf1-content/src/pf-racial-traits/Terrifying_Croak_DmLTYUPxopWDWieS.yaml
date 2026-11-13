@@ -1,0 +1,62 @@
+_id: DmLTYUPxopWDWieS
+_key: '!items!DmLTYUPxopWDWieS'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Terrifying Croak
+system:
+  abilityType: su
+  actions:
+    - _id: QvyCAo8jMa93Hm2G
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1d4
+      name: Croak
+      notes:
+        effect:
+          - >-
+            those that fail save are @Condition[shaken] for [[1d4]] rounds or
+            @Condition[frightened] if already shaken
+          - sonic, mind- affecting effect.
+          - >-
+            target that successfully saves cannot be affected again for 24
+            hours.
+      range:
+        units: seeText
+        value: '30'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: creatures that are not a match to your subtype/type
+  description:
+    value: >-
+      <p>Members of this race gain the following supernatural ability: Once per
+      hour as a standard action, a member of this race can emit a thunderous
+      croak. Any creature not of its subtype (if humanoid) or type (if another
+      race type) must make a successful Will saving throw (DC 10 + 1/2 the
+      user’s character level + the user’s Charisma modifier) or become shaken
+      for 1d4 rounds. A target that successfully saves cannot be affected by the
+      user’s terrifying croak for 24 hours. Creatures that are already shaken
+      become frightened for 1d4 rounds instead. This is a sonic, mindaffecting
+      effect.</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '235'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: hour
+    value: 1
+type: feat

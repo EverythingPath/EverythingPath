@@ -1,0 +1,70 @@
+_id: 42M7kFLkyccrj1uf
+_key: '!items!42M7kFLkyccrj1uf'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/shuriken.png
+name: Shuriken
+system:
+  actions:
+    - _id: p1v3vt1963f6yxru
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 2, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Shuriken
+  cl: null
+  description:
+    unidentified: >-
+      <p>A shuriken is a small piece of metal with sharpened edges, designed for
+      throwing. A shuriken can't be used as a melee weapon. Although they are
+      thrown weapons, shuriken are treated as ammunition for the purposes of
+      drawing them and crafting masterwork or otherwise special versions of
+      them, and of what happens to them after they are thrown.</p>
+  hardness: 10
+  hp:
+    base: 1
+  material:
+    base:
+      value: steel
+  price: 0.2
+  properties:
+    mnk: true
+  quantity: 5
+  sources:
+    - id: PZO1110
+      pages: 143, 148
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  unidentified:
+    price: 0.2
+  uses:
+    per: single
+  weaponGroups:
+    - monk
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 0.1
+type: weapon

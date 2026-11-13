@@ -1,0 +1,75 @@
+_id: 93KXq6n1wiX0ifEy
+_key: '!items!93KXq6n1wiX0ifEy'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Shackleborn)
+system:
+  abilityType: sp
+  actions:
+    - _id: Z16bpktXlAxiRgRb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft radius spread
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.j9qpy0d585f8lpm4]{Web}</p><p>Web
+        creates a many-layered mass of strong, sticky strands. These strands
+        trap those caught in them. The strands are similar to spiderwebs but far
+        larger and tougher. These masses must be anchored to two or more solid
+        and diametrically opposed points or else the web collapses upon itself
+        and disappears. Creatures caught within a web become grappled by the
+        sticky fibers. Attacking a creature in a web doesn't cause you to become
+        grappled.</p><p>Anyone in the effect's area when the spell is cast must
+        make a Reflex save. If this save succeeds, the creature is inside the
+        web but is otherwise unaffected. If the save fails, the creature gains
+        the grappled condition, but can break free by making a combat maneuver
+        check or Escape Artist check as a standard action against the DC of this
+        spell. The entire area of the web is considered difficult terrain.
+        Anyone moving through the webs must make a combat maneuver check or
+        Escape Artist check as part of their move action, with a DC equal to the
+        spell's DC. Creatures that fail lose their movement and become grappled
+        in the first square of webbing that they enter.</p><p>If you have at
+        least @Distance[5 ft;dual] of web between you and an opponent, it
+        provides cover. If you have at least @Distance[20 ft;dual] of web
+        between you, it provides total cover.</p><p>The strands of a web spell
+        are flammable. A flaming weapon can slash them away as easily as a hand
+        brushes away cobwebs. Any fire can set the webs alight and burn away one
+        @Distance[5 ft;dual] square in 1 round. All creatures within flaming
+        webs take 2d4 points of fire damage from the flames.</p><p>Web can be
+        made permanent with a permanency spell. A permanent web that is damaged
+        (but not destroyed) regrows in 10 minutes.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: Web
+      range:
+        units: ft
+        value: '@attributes.hd.total * 10 + 100'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Shackleborn</p><hr /><p>Shackleborn
+      can use @UUID[Compendium.pf1.spells.Item.j9qpy0d585f8lpm4]{Web} once per
+      day as a spell-like ability (with a caster level equal to their character
+      level).</p><p></p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '22'
+  subType: racial
+  tags:
+    - Tiefling
+    - Shackleborn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

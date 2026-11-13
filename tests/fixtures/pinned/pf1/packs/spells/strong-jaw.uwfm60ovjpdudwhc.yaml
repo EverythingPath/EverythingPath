@@ -1,0 +1,53 @@
+_id: uwfm60ovjpdudwhc
+_key: '!items!uwfm60ovjpdudwhc'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/abilities/mouth-teeth-long-red.webp
+name: Strong Jaw
+system:
+  actions:
+    - _id: uamqn2kqvvd8zkhn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Laying a hand upon an allied creature's jaw, claws, tentacles, or other
+      natural weapons, you enhance the power of that creature's natural attacks.
+      Each natural attack that creature makes deals damage as if the creature
+      were two sizes larger than it actually is (see page 302 of the
+      <i>Pathfinder Bestiary</i> for more information). If the creature is
+      already Gargantuan or Colossal-sized, double the amount of damage dealt by
+      each of its natural attacks instead. This spell does not actually change
+      the creature's size; all of its statistics except the amount of damage
+      dealt by its natural attacks remain unchanged.</p>
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 3
+      ranger: 3
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '247'
+type: spell

@@ -1,0 +1,69 @@
+_id: gdtr2WxIRgDdNMlg
+_key: '!items!gdtr2WxIRgDdNMlg'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/elven-branched-spear.png
+name: Elven Branched Spear
+system:
+  actions:
+    - _id: gjd8h2q62oqiz8lp
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Elven Branched Spear
+  description:
+    unidentified: >-
+      <p>Behind this long pole weapon's spearhead, several short branches
+      project from the shaft at irregular intervals, each angled forward and
+      tipped with a smaller leaf like blade. When you make attacks of
+      opportunity provoked by movement, you gain a +2 bonus on attack rolls. You
+      can use the Weapon Finesse feat to apply your Dexterity modifier instead
+      of your Strength modifier on attack rolls with an elven branched spear
+      sized for you, even though it isn't a light weapon. Elves treat elven
+      branched spears as martial weapons.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    brc: true
+    fin: true
+    rch: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  tags:
+    - Elf
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

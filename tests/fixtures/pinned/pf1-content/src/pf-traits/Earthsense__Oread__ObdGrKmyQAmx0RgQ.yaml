@@ -1,0 +1,44 @@
+_id: ObdGrKmyQAmx0RgQ
+_key: '!items!ObdGrKmyQAmx0RgQ'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Earthsense (Oread)
+system:
+  actions:
+    - _id: oXON2LUyU78DughI
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Gain Tremorsense
+      target:
+        value: Self
+  description:
+    value: >-
+      <p><em>You were inexplicably transformed in the womb by elemental forces,
+      making your connection to the earth exceptionally
+      strong.</em></p><p><strong>Requirements</strong>:
+      Oread</p><p><strong>Benefits</strong>: As a swift action, you can gain
+      @UUID[Compendium.pf-content.pf-buffs.Item.WVs1d1l2G45GRlQc]{tremorsense
+      }to a range of 60 feet until the beginning of your next turn. You can use
+      this ability once per day at 1st level, plus one additional time per day
+      at 5th level and every 5 levels thereafter, to a maximum of five times per
+      day at 20th level.</p>
+  sources:
+    - id: PZO9447
+      pages: '9'
+  subType: trait
+  tags:
+    - Oread
+  traitType: race
+  uses:
+    maxFormula: (min(floor(@attributes.hd.total / 5) +1, 5))
+    per: day
+    value: 1
+type: feat

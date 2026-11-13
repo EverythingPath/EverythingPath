@@ -1,0 +1,50 @@
+_id: n2lCTokOhbEJ35Nu
+_key: '!items!n2lCTokOhbEJ35Nu'
+_stats:
+  coreVersion: '12.331'
+folder: f0Uw5byWu52oGfPu
+img: systems/pf1/icons/skills/red_26.jpg
+name: Oppressive
+system:
+  actions:
+    - _id: NAl8dRutCigoErL2
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>As a swift action, a syrinx can attempt a Sense Motive check against
+        a DC of 10 + a creature's Hit Dice + its Charisma modifier or a DC of 10
+        + the creature's Bluff modifier, whichever is higher.</p><p>On a
+        success, syrinx gains a +4 racial bonus on Intimidate checks against
+        that target and a +1 racial bonus to the DC of any fear effects she uses
+        against that target.</p>
+      duration:
+        units: perm
+      name: Oppressive
+  description:
+    value: >-
+      <p><strong>Race</strong>: Syrinx<br /><strong>Replaced Trait(s)</strong>:
+      Nocturnal, Pride</p><hr /><p>Syrinxes often have a natural talent for
+      sensing how to unsettle and oppress other creatures. As a swift action, a
+      syrinx can attempt a Sense Motive check against a DC of 10 + a creature's
+      Hit Dice + its Charisma modifier or a DC of 10 + the creature's Bluff
+      modifier, whichever is higher. On a success, syrinx gains a +4 racial
+      bonus on Intimidate checks against that target and a +1 racial bonus to
+      the DC of any fear effects she uses against that target. This racial trait
+      replaces nocturnal and pride.</p>
+  scriptCalls:
+    - _id: swnkjSGp
+      category: use
+      hidden: false
+      img: null
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("sen");
+  sources:
+    - id: PZO9280
+      pages: '216'
+  subType: racial
+  tags:
+    - Syrinx
+type: feat
