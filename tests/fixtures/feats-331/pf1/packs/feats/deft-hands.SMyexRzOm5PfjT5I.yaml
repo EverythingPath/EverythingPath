@@ -1,0 +1,29 @@
+_id: SMyexRzOm5PfjT5I
+_key: '!items!SMyexRzOm5PfjT5I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/deft-hands.PNG
+name: Deft Hands
+system:
+  changes:
+    - _id: znpaklyl
+      formula: 2 + if(gte(@skills.dev.rank, 10), 2)
+      target: skill.dev
+      type: untyped
+    - _id: mst1c6vi
+      formula: 2 + if(gte(@skills.slt.rank, 10), 2)
+      target: skill.slt
+      type: untyped
+  description:
+    value: >-
+      <i>You have exceptional manual dexterity.</i><p><strong>Benefits</strong>:
+      You get a +2 bonus on Disable Device and Sleight of Hand skill checks. If
+      you have 10 or more ranks in one of these skills, the bonus increases to
+      +4 for that skill.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 121
+  tags:
+    - General
+    - Skill
+type: feat

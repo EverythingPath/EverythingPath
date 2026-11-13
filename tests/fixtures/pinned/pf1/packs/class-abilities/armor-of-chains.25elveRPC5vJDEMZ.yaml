@@ -1,0 +1,26 @@
+_id: 25elveRPC5vJDEMZ
+_key: '!items!25elveRPC5vJDEMZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Armor of Chains
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: 8li97yz7
+      formula: 4 + if(gte(@class.level, 16), 4)
+      target: aac
+      type: untyped
+  description:
+    value: >-
+      <p>At 8th level, you gain resistance 5 to cold and the chains covering
+      your body provide a +4 armor bonus to AC with no armor check penalty,
+      maximum Dexterity bonus, or additional weight.</p>
+
+      <p>At 16th level, the resistance increases to 10 and the armor bonus
+      increases to +8.</p>
+  subType: classFeat
+type: feat

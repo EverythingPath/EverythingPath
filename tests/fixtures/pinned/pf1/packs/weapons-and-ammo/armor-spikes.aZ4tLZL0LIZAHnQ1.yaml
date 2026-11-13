@@ -1,0 +1,66 @@
+_id: aZ4tLZL0LIZAHnQ1
+_key: '!items!aZ4tLZL0LIZAHnQ1'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/spiked-armor.png
+name: Armor Spikes
+system:
+  actions:
+    - _id: ys3erpgs4lt5iszd
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+  baseTypes:
+    - Armor Spikes
+  description:
+    unidentified: >-
+      <p>You can have spikes added to your <em>armor</em>, which allow you to
+      deal extra piercing damage on a successful grapple attack. If you are not
+      proficient with martial weapons, you take a –4 penalty on grapple checks
+      when you try to use armor spikes.</p>
+
+      <p>You can also make a regular melee attack (or off-hand attack) with the
+      spikes, and they count as a light weapon in this case. You can’t also make
+      an attack with armor spikes if you have already made an attack with
+      another off-hand weapon, and vice versa.</p>
+
+      <p>An enhancement bonus to a suit of armor does not improve the spikes’
+      effectiveness, but the spikes can be made into magic weapons in their own
+      right.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 148, 150, 151
+  subType: martial
+  weaponGroups:
+    - close
+  weight:
+    value: 10
+type: weapon

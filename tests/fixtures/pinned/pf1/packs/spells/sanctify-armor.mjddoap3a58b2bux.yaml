@@ -1,0 +1,50 @@
+_id: mjddoap3a58b2bux
+_key: '!items!mjddoap3a58b2bux'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Sanctify Armor
+system:
+  actions:
+    - _id: 6gdebhy1tupuphd1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: armor touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You imbue your armor with a righteous aura. It gains a +1 enhancement
+      bonus per four caster levels (maximum +5 at 20th level). When using your
+      judgment or smite ability, you gain DR 5/evil.</p><p>An outfit of regular
+      clothing counts as armor that grants no AC bonus for the purpose of this
+      spell.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      inquisitor: 4
+      paladin: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '240'
+type: spell

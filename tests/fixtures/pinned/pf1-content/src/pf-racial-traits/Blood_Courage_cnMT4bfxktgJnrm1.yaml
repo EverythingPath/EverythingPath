@@ -1,0 +1,42 @@
+_id: cnMT4bfxktgJnrm1
+_key: '!items!cnMT4bfxktgJnrm1'
+_stats:
+  coreVersion: '12.331'
+folder: tZ4EEd0jswUu5s8l
+img: systems/pf1/icons/skills/blood_07.jpg
+name: Blood Courage
+system:
+  actions:
+    - _id: 6oAeMWjeXGZKjG7I
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Roll twice vs fear, take highest
+  description:
+    value: >-
+      <p><strong>Race</strong>: Kuru</p><hr /><p>Once per day when a kuru makes
+      a saving throw against a fear effect, he can roll the saving throw twice
+      and take the better result. He must decide to use this ability before the
+      saving throw is attempted.</p>
+  scriptCalls:
+    - _id: 8cZmLQXS
+      category: use
+      hidden: false
+      img: null
+      name: roll twice vs fear
+      type: script
+      value: |
+        actor.rollSavingThrow("will", { dice: "2d20kh" });
+  showInQuickbar: true
+  sources:
+    - id: PZO9244
+      pages: '51'
+  subType: racial
+  tags:
+    - Kuru
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

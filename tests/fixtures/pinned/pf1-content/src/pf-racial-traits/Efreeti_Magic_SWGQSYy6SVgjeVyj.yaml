@@ -1,0 +1,137 @@
+_id: SWGQSYy6SVgjeVyj
+_key: '!items!SWGQSYy6SVgjeVyj'
+_stats:
+  coreVersion: '12.331'
+folder: STxquJXw503JM504
+img: systems/pf1/icons/races/ifrit.png
+name: Efreeti Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: jyjmUKzniVAmjpyc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.jnlr9cuepka1l26e]{Enlarge
+        Person}</p><p>This spell causes instant growth of a humanoid creature,
+        doubling its height and multiplying its weight by 8. This increase
+        changes the creature's size category to the next larger one. The target
+        gains a +2 size bonus to Strength, a -2 size penalty to Dexterity (to a
+        minimum of 1), and a -1 penalty on attack rolls and AC due to its
+        increased size.</p><p>A humanoid creature whose size increases to Large
+        has a space of @Distance[10 ft;dual] and a natural reach of @Distance[10
+        ft;dual]. This spell does not change the target's speed.</p><p>If
+        insufficient room is available for the desired growth, the creature
+        attains the maximum possible size and may make a Strength check (using
+        its increased Strength) to burst any enclosures in the process. If it
+        fails, it is constrained without harm by the materials enclosing it-the
+        spell cannot be used to crush a creature by increasing its
+        size.</p><p>All equipment worn or carried by a creature is similarly
+        enlarged by the spell. Melee weapons affected by this spell deal more
+        damage (see page 145). Other magical properties are not affected by this
+        spell. Any enlarged item that leaves an enlarged creature's possession
+        (including a projectile or thrown weapon) instantly returns to its
+        normal size. This means that thrown and projectile weapons deal their
+        normal damage. Magical properties of enlarged items are not increased by
+        this spell.</p><p>Multiple magical effects that increase size do not
+        stack.</p><p>Enlarge person counters and dispels reduce
+        person.</p><p>Enlarge person can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Enlarge Person
+      notes:
+        effect:
+          - '@Apply[Enlarge Person]'
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Negates
+        type: fort
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+    - _id: tei8lGoMXTu2MtmG
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2y9e1l6zso9tdg0a]{Reduce
+        Person}</p><p>This spell causes instant diminution of a humanoid
+        creature, halving its height, length, and width and dividing its weight
+        by 8. This decrease changes the creature's size category to the next
+        smaller one. The target gains a +2 size bonus to Dexterity, a -2 size
+        penalty to Strength (to a minimum of 1), and a +1 bonus on attack rolls
+        and AC due to its reduced size.</p><p>A Small humanoid creature whose
+        size decreases to Tiny has a space of 2-1/2 feet and a natural reach of
+        0 feet (meaning that it must enter an opponent's square to attack). A
+        Large humanoid creature whose size decreases to Medium has a space of
+        @Distance[5 ft;dual] and a natural reach of @Distance[5 ft;dual]. This
+        spell doesn't change the target's speed.</p><p>All equipment worn or
+        carried by a creature is similarly reduced by the spell.</p><p>Melee and
+        projectile weapons deal less damage. Other magical properties are not
+        affected by this spell. Any reduced item that leaves the reduced
+        creature's possession (including a projectile or thrown weapon)
+        instantly returns to its normal size. This means that thrown weapons
+        deal their normal damage (projectiles deal damage based on the size of
+        the weapon that fired them).</p><p>Multiple magical effects that reduce
+        size do not stack. Reduce person counters and dispels enlarge
+        person.</p><p>Reduce person can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Reduce Person
+      notes:
+        effect:
+          - '@Apply[Reduce Person]'
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        type: fort
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ifrit<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><p></p><hr /><p>Some ifrits inherit an efreeti
+      ancestor's ability to magically change a creature's size. They can cast
+      either @UUID[Compendium.pf1.spells.Item.jnlr9cuepka1l26e]{Enlarge
+      Person}<em> </em>or
+      <em>@UUID[Compendium.pf1.spells.Item.2y9e1l6zso9tdg0a]{Reduce Person}
+      </em>(the ifrit chooses when using this ability) once per day as a
+      spell-like ability (caster level equals the ifrit's level). The ifrit can
+      use this ability to affect other ifrits as though they were humanoid
+      creatures. This racial trait replaces the spell-like ability racial
+      trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '126'
+  subType: racial
+  tags:
+    - Ifrit
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
