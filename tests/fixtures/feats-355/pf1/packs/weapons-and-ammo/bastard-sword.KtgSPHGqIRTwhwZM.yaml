@@ -1,0 +1,58 @@
+_id: KtgSPHGqIRTwhwZM
+_key: '!items!KtgSPHGqIRTwhwZM'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Bastard Sword
+system:
+  actions:
+    - _id: l4iuom4gf9rl7qbq
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Bastard Sword
+  description:
+    unidentified: >-
+      <p>A bastard sword is about 4 feet in length, making it too large to use
+      in one hand without special training; thus, it is an exotic weapon. You
+      can use a bastard sword two-handed as a martial weapon.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 35
+  sources:
+    - id: PZO1110
+      pages: 143, 149
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

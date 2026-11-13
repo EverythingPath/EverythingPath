@@ -1,0 +1,59 @@
+_id: 0my01rrsq3dfw8et
+_key: '!items!0my01rrsq3dfw8et'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Moonrise Arrow
+system:
+  actions:
+    - _id: g66kk3vs29itfokn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        harmless: true
+        type: fort
+      target:
+        value: >-
+          up to 50 pieces of ammunition, all of which must be together at the
+          time of casting
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause ammunition, including shuriken, to glow with faint silvery
+      light. The ammunition counts as magic and silver for the purpose of
+      overcoming damage reduction, in addition to the properties of any other
+      special material the ammunition has. Incorporeal undead and shapechangers
+      take an additional 1d8 points of damage from such ammunition. The targeted
+      ammunition sheds dim light in a 5-foot radius for 1 round after it is
+      fired or thrown.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      magus: 3
+      occultist: 3
+      oracle: 3
+      paladin: 3
+      warpriest: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO90134
+      pages: '72'
+type: spell

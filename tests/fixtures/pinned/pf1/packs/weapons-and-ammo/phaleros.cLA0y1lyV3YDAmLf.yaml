@@ -1,0 +1,62 @@
+_id: cLA0y1lyV3YDAmLf
+_key: '!items!cLA0y1lyV3YDAmLf'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/javelin.PNG
+name: Phaleros
+system:
+  actions:
+    - _id: zujn4vrse49go4s2
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Phaleros
+  description:
+    unidentified: >-
+      <p>A phaleros is a type of metal javelin that stores a splash weapon in a
+      small cage between the haft and the spearhead. When a phaleros strikes its
+      target, the spearhead compresses toward the haft and breaks the payload,
+      showering the target with its contents as though you had struck the
+      target's square with the splash weapon. On a critical hit, you instead
+      treat the target as though it had suffered a direct hit from the splash
+      weapon. A phaleros is reusable, and reloading one with a splash weapon is
+      a process that takes two rounds and provokes attacks of opportunity.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 5
+  sources:
+    - id: PZO9285
+      pages: '12'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

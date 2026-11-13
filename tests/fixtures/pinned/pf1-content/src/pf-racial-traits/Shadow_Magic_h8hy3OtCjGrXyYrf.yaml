@@ -1,0 +1,128 @@
+_id: h8hy3OtCjGrXyYrf
+_key: '!items!h8hy3OtCjGrXyYrf'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Shadow Magic
+system:
+  actions:
+    - _id: ExuUa9ZqxtRF9lS3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost
+        sound}</p><p>Ghost sound allows you to create a volume of sound that
+        rises, recedes, approaches, or remains at a fixed place. You choose what
+        type of sound ghost sound creates when casting it and cannot thereafter
+        change the sound's basic character.</p><p>The volume of sound created
+        depends on your level. You can produce as much noise as four normal
+        humans per caster level (maximum 40 humans). Thus, talking, singing,
+        shouting, walking, marching, or running sounds can be created. The noise
+        a ghost sound spell produces can be virtually any type of sound within
+        the volume limit. A horde of rats running and squeaking is about the
+        same volume as eight humans running and shouting. A roaring lion is
+        equal to the noise from 16 humans, while a roaring dragon is equal to
+        the noise from 32 humans. Anyone who hears a ghost sound receives a Will
+        save to disbelieve.</p><p>Ghost sound can enhance the effectiveness of a
+        silent image spell.</p><p>Ghost sound can be made permanent with a
+        permanency spell.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Ghost sound
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + @abilities.cha.mod
+        description: Disbelief
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: 03vLS2wwIqQKwnIi
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2zyr6klf97jyr5ng]{pass without
+        trace}</p><p>The subject or subjects of this spell do not leave
+        footprints or a scent trail while moving. Tracking the subjects is
+        impossible by nonmagical means.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Pass without trace
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 +1 + @abilities.cha.mod
+        description: Negates
+        type: will
+      target:
+        value: '[[@attributes.hd.total]] creatures touched'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: GSTsbcIP6yI2LUU9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.0onqjy8gfgop1xsi]{Ventriloquism}.</p><p>You
+        can make your voice (or any sound that you can normally make vocally)
+        seem to issue from someplace else. You can speak in any language you
+        know. With respect to such voices and sounds, anyone who hears the sound
+        and rolls a successful save recognizes it as illusory (but still hears
+        it).</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Ventriloquism
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 +1 + @abilities.cha.mod
+        description: Disbelief
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  contextNotes:
+    - target: dc.school.ill
+      text: +[[1]] to the save DCs for spells of the illusion (shadow) subschool.
+  description:
+    value: >-
+      <p>Members of this race add +1 to the DC of any saving throws against
+      spells of the shadow subschool that they cast. Members of this race with a
+      Charisma score of 11 or higher also gain the following spell-like
+      abilities: 1/ day—ghost sound, pass without trace, ventriloquism. The
+      caster level for these spell-like abilities is equal to the user’s
+      character level.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '229'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: 3 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

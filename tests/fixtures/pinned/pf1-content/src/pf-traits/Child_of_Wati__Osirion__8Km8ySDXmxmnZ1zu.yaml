@@ -1,0 +1,43 @@
+_id: 8Km8ySDXmxmnZ1zu
+_key: '!items!8Km8ySDXmxmnZ1zu'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Child of Wati (Osirion)
+system:
+  description:
+    instructions: >-
+      <p>Cleric level affects channel energy in 2 ways, the damage and save dc
+      formulae.</p><p>edit your actor's Channel energy ability, for harming
+      undead, as follows:</p><p>1) the damage formula should
+      be:</p><p>(ceil(min(@attributes.hd.total, @classes.cleric.level +1 )/
+      2))d6</p><p>2) the DC formula should be:</p><p>10 +
+      floor(min(@attributes.hd.total, @classes.cleric.level +1 )/ 2)+
+      @abilities.cha.mod</p><p><em>(replace cleric with the class that grants
+      your actor the channel energy ability if not cleric for both formulae
+      above)</em></p>
+    value: >-
+      <p><em>You were raised near the infamous necropolis of </em><span
+      data-tooltip="Wati, also called the Half-City, is small city located in
+      southern Osirion at the confluence of the Asp and Crook rivers."><span
+      style="text-decoration:underline">Wati</span></span>, and even managed to
+      sneak into these hallowed grounds on occasion. Entering the clergy of the
+      Voices of the Spire in Wati was a natural choice as you grew older, and
+      your past experiences made you a particularly well-informed disciple of
+      the church.</p><p><strong>Requirements</strong>: <span
+      data-tooltip="Nation in northeastern Garund on the Inner Sea"><span
+      style="text-decoration:underline">Osirion</span></span></p><p><strong>Benefits</strong>:
+      Your effective cleric level is 1 higher for the purposes of channeling
+      positive energy to damage undead. Your effective cleric level cannot
+      exceed your character level.</p>
+  sources:
+    - id: PZO9444
+      pages: '15'
+  subType: trait
+  tags:
+    - Osirion
+    - Wati
+    - Garund
+  traitType: region
+type: feat

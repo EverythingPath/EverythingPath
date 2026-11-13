@@ -1,0 +1,41 @@
+_id: wnb7IxOCmhk4SXzR
+_key: '!items!wnb7IxOCmhk4SXzR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Enchanting Smile
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Wizard
+  changes:
+    - _id: m2d5u906
+      formula: 2 + floor(@class.level / 5)
+      target: skill.blf
+      type: untyped
+    - _id: 88fd5nrn
+      formula: 2 + floor(@class.level / 5)
+      target: skill.dip
+      type: untyped
+    - _id: 0szwiif8
+      formula: 2 + floor(@class.level / 5)
+      target: skill.int
+      type: untyped
+  description:
+    value: >-
+      <p>You gain a +2 enhancement bonus on
+      <em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.kRK5XwVBvcMi35w2]{Bluff}</em>,
+      <em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.uB9Fy36RUjibxqvt]{Diplomacy}</em>,
+      and
+      <em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.KNn8uxHu23phKC0y]{Intimidate}</em>
+      skill checks. This bonus increases by +1 for every five wizard levels you
+      possess, up to a maximum of +6 at 20th level. At 20th level, whenever you
+      succeed at a <em>saving throw</em> against a spell of the enchantment
+      school, that spell is reflected back at its caster, as per
+      <em>@UUID[Compendium.pf1.spells.uyn64zazmaydnk7o]{spell turning}</em>.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+type: feat

@@ -1,0 +1,99 @@
+_id: dwb03nzhbwb1b5nr
+_key: '!items!dwb03nzhbwb1b5nr'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/lighting-sky-3.jpg
+name: Call Lightning Storm
+system:
+  actions:
+    - _id: 2oyn057o4rt8r00d
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: one or more 30-ft.-long vertical lines of lightning
+      name: Cast
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+    - _id: dU8uifVmmLJOTo0o
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 5d6
+            types:
+              - electric
+      duration:
+        units: inst
+      effect: One 5-foot-wide, 30-foot-long, vertical bolt of lightning
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Damage
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+    - _id: QeKVLLe17azIKruk
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 5d10
+            types:
+              - electric
+      duration:
+        units: inst
+      effect: One 5-foot-wide, 30-foot-long, vertical bolt of lightning
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Damage (in stormy area)
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.rrheoc0h80mbss7z]{call lightning}, except
+      that each bolt deals 5d6 points of electricity damage (or 5d10 if created
+      outdoors in a stormy area), and you may call a maximum of 15 bolts.</p>
+  descriptors:
+    - electricity
+  learnedAt:
+    bloodline:
+      Starsoul: 4
+    class:
+      druid: 5
+      hunter: 5
+      occultist: 5
+      shaman: 5
+    subDomain:
+      Storms: 5
+  level: 5
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '252'
+type: spell
