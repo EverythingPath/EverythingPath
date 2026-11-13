@@ -1,0 +1,57 @@
+_id: c11olzqztodz5o5x
+_key: '!items!c11olzqztodz5o5x'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/perception/silhouette-stealth-shadow.webp
+name: Vanish
+system:
+  actions:
+    - _id: mvz39xglamk5shum
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (up to 5 rounds)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, except
+      the effect only lasts for 1 round per caster level (maximum of 5 rounds).
+      Like <em>invisibility</em>, the spell immediately ends if the subject
+      attacks any creature.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      magus: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+  school: ill
+  sources:
+    - id: PZO1115
+      pages: '253'
+  subschool:
+    - glamer
+type: spell

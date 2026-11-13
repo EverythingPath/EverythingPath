@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "scopeVersion": "campaign-party-v1",
+  "note": "Rows the party enters as one-off entries until the catalog has them, each as decided. A held row is no exception: only a decision recorded here makes one. An exception whose row the gate now admits, or whose name the builds now match, is stale and fails qualification until it is removed. Characters by number only.",
+  "exceptions": [
+    {
+      "subject": {
+        "kind": "form",
+        "name": "Spell-in-item consumables (wands, potions, scrolls)"
+      },
+      "reason": "The catalog has no form for a spell held in an item; the builds name none, and the characters enter them as one-off entries.",
+      "decidedBy": "orchestrator",
+      "decidedOn": "2026-11-12"
+    },
+    {
+      "subject": {
+        "kind": "unmatched",
+        "name": "Carefully Hidden (Human; Keleshite)"
+      },
+      "reason": "Its upstream record sits in the pf-35-content pack, which the importer does not read; characters 10 and 12 enter it as a one-off entry.",
+      "decidedBy": "orchestrator",
+      "decidedOn": "2026-11-12"
+    },
+    {
+      "subject": { "kind": "unmatched", "name": "Lethal Stance" },
+      "reason": "No upstream record carries this rage power; character 4 enters it as a one-off entry.",
+      "decidedBy": "orchestrator",
+      "decidedOn": "2026-11-12"
+    }
+  ]
+}

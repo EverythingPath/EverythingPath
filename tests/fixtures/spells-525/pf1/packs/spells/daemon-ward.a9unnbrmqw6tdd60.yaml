@@ -1,0 +1,58 @@
+_id: a9unnbrmqw6tdd60
+_key: '!items!a9unnbrmqw6tdd60'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Daemon Ward
+system:
+  actions:
+    - _id: q7fqw3z4lcg89ytd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: living creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.e0rlki4hwu76l5ya]{death ward}, except as
+      noted above and it only protects against these attacks from daemons.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      druid: 5
+      hunter: 5
+      oracle: 4
+      paladin: 4
+      sorcerer: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    gpValue: 50
+    value: 50 gp worth of powdered silver
+  school: nec
+  sources:
+    - id: PZO1139
+      pages: '38'
+type: spell

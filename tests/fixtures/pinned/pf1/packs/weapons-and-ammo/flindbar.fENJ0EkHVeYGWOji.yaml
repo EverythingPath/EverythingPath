@@ -1,0 +1,60 @@
+_id: fENJ0EkHVeYGWOji
+_key: '!items!fENJ0EkHVeYGWOji'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/flindbar.png
+name: Flindbar
+system:
+  actions:
+    - _id: pnsr228xbyahnzrb
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Flindbar
+  description:
+    unidentified: >-
+      <p>This one-handed weapon is similar to a nunchaku in that it consists of
+      a pair of bars linked with heavy chain. However, a flindbar's bars are
+      made of iron and are capped with a ring of spikes or studs. Since it's
+      much heaver than a nunchaku, it is not a light weapon.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 9
+  properties:
+    dis: true
+    trp: true
+  sources:
+    - id: PZO1130
+      pages: '93'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

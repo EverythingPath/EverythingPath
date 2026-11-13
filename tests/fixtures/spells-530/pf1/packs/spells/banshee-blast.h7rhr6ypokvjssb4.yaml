@@ -1,0 +1,58 @@
+_id: h7rhr6ypokvjssb4
+_key: '!items!h7rhr6ypokvjssb4'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Banshee Blast
+system:
+  actions:
+    - _id: zmk1gh86stxgq4za
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: spec
+        value: instantaneous and 1 round/level (see text)
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half and Will negates (see text)
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a cone of spectral energy resembling screaming elven ghosts
+      that deals 1d4 points of damage per caster level (maximum 15d4); a
+      successful Reflex save halves this damage. Any creature that fails its
+      Reflex save must succeed at a Will save or become panicked for 1
+      round/level.</p>
+  descriptors:
+    - death
+    - fear
+    - mindAffecting
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 6
+      sorcerer: 6
+      spiritualist: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '174'
+type: spell

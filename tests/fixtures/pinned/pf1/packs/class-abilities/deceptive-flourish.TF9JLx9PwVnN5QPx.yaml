@@ -1,0 +1,35 @@
+_id: TF9JLx9PwVnN5QPx
+_key: '!items!TF9JLx9PwVnN5QPx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_03.jpg
+name: Deceptive Flourish
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Wizard
+  changes:
+    - _id: ij6c0rgl
+      formula: 2 + (floor(@class.level / 5))
+      target: skill.blf
+      type: enh
+    - _id: h39o8dbh
+      formula: 2 + (floor(@class.level / 5))
+      target: skill.dis
+      type: enh
+  description:
+    value: >-
+      <p>You gain a +2 <em>enhancement bonus</em> on <em>Bluff</em> and
+      <em>Disguise</em> skill checks. This bonus increases by 1 for every 5
+      <em>wizard</em> levels you have, up to a maximum of +6 at 20th level. At
+      20th level, you gain the benefits of
+      @UUID[Compendium.pf1.spells.8nrt26t37v7koqr8]{Misdirection} (<em>Will</em>
+      DC = 20 + your <em>Intelligence</em> modifier) or
+      @UUID[Compendium.pf1.spells.awia42zci8nufpfl]{Nondetection} permanently.
+      At will as a <em>standard action</em>, you can change which of the two
+      spells is active, and each time you <em>activate</em>
+      @UUID[Compendium.pf1.spells.8nrt26t37v7koqr8]{Misdirection}, you can
+      choose a new creature or object as the secondary object.</p>
+  subType: classFeat
+type: feat

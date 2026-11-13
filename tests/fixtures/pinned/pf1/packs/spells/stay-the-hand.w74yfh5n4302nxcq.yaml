@@ -1,0 +1,55 @@
+_id: w74yfh5n4302nxcq
+_key: '!items!w74yfh5n4302nxcq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Stay the Hand
+system:
+  actions:
+    - _id: x84vd945al8csk0m
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: spec
+        value: 1 round/level and special; see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause a creature's arm to waver and prevent it from striking
+      another creature. You can cast this spell when the target is about to make
+      a melee attack against another creature. On a failed saving throw, the
+      target does not follow through with its attack, and its entire action is
+      wasted for the round. On a successful saving throw, the target can make
+      its attack, forcing its strike though the compulsion but losing both
+      accuracy and power, taking a -5 penalty on its attack and damage rolls.
+      Whether or not the target makes its initial save or not, it is subject to
+      a -2 penalty on attack and damage rolls against the creature it originally
+      targeted for the duration of the spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      paladin: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '246'
+  subschool:
+    - compulsion
+type: spell

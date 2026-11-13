@@ -1,0 +1,59 @@
+_id: c14tjrds5emxk417
+_key: '!items!c14tjrds5emxk417'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Create Mindscape, Greater
+system:
+  actions:
+    - _id: a3xmmu2dovmlsdx7
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief; see text
+        type: will
+      target:
+        value: one creature/level
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.nn4gjuby3uovsv78]{create mindscape}, except it
+      can affect more creatures, the mindscape lasts longer, and you can choose
+      the mindscape's magic trait. You can also direct a number of believable
+      creatures at a time equal to your caster level. Greater <em>create
+      mindscape</em> can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{permanency} spell by a
+      caster of 15th level or higher at a cost of 17,500 gp. You and other
+      creatures aware of a permanent mindscape can come and go using the
+      @UUID[Compendium.pf1.spells.90xaelj2ncuzq62n]{mindscape door} spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      mesmerist: 6
+      psychic: 6
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '163'
+  subschool:
+    - phantasm
+type: spell
