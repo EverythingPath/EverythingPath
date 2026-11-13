@@ -1,0 +1,69 @@
+_id: 0324zq42g3fu4kko
+_key: '!items!0324zq42g3fu4kko'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/creatures/mammals/rodent-rat-diseaed-gray.webp
+name: Animal Messenger
+system:
+  actions:
+    - _id: nx7lagpwulsb7vwj
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: none; see text
+      target:
+        value: one Tiny animal
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You compel a Tiny animal to go to a spot you designate. The most common
+      use for this spell is to get an animal to carry a message to your allies.
+      The animal cannot be one tamed or trained by someone else, including such
+      creatures as familiars and animal companions.</p><p>Using some type of
+      food desirable to the animal as a lure, you call the animal to you. It
+      advances and awaits your bidding. You can mentally impress on the animal a
+      certain place well known to you or an obvious landmark. The directions
+      must be simple, because the animal depends on your knowledge and can't
+      find a destination on its own. You can attach a small item or note to the
+      messenger. The animal then goes to the designated location and waits there
+      until the duration of the spell expires, whereupon it resumes its normal
+      activities.</p><p>During this period of waiting, the messenger allows
+      others to approach it and remove any scroll or token it carries. The
+      intended recipient gains no special ability to communicate with the animal
+      or read any attached message (if it's written in a language he doesn't
+      know, for example).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      druid: 2
+      hunter: 1
+      mesmerist: 2
+      psychic: 2
+      ranger: 1
+      shaman: 2
+      skald: 2
+  level: 2
+  materials:
+    value: a morsel of food the animal likes
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '241'
+  subschool:
+    - compulsion
+type: spell

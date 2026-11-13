@@ -1,0 +1,78 @@
+_id: nMElupuNQQ7szZXY
+_key: '!items!nMElupuNQQ7szZXY'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/explosion-star-blue-yellow.webp
+name: Silverlight
+system:
+  actions:
+    - _id: zKikI1HgWlPe2uRr
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: object touched
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>As @UUID[Compendium.pf1.spells.7x2z0i8rcx7s81fk]{daylight}, except the
+      object touched sheds bright silvery light in a 20-foot radius. In addition
+      to providing illumination, the area of bright light is painful to
+      creatures that are susceptible to alchemical silver. A creature with
+      DR/silver that begins its turn within the light of this spell is
+      automatically
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.xHUnCadQ2qYsfvV0]{dazzled}
+      and becomes
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.7LwCMwrX3tchvrjW]{sickened}
+      unless it succeeds on a Fortitude save. These effects disappear 1 round
+      after the target leaves the <em>silverlight</em>. A creature that leaves
+      the area and then returns must make a new saving throw. This spell
+      provides dim light up to 40 feet away, but only creatures within 20 feet
+      are subject to the above e!ects.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      oracle: 3
+      paladin: 3
+      skald: 3
+      sorcerer: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  materials:
+    gpValue: 0.1
+    value: 1 sp
+  school: evo
+  sources:
+    - id: PZO9217E
+      pages: '25'
+  sr: false
+type: spell
