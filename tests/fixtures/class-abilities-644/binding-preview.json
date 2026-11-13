@@ -1,0 +1,1216 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/sJdBOE9lwz5XAkUi",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "class-abilities",
+      "name": "Wild Shape",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 4th level, a druid gains the ability to turn herself into any small or Medium <em>animal</em> and back again once per day. Her options for new forms include all creatures with the <em>animal</em> type. This ability functions like the <a href=\"catalog:pf1/tjdfluulncmqacc3\">beast shape I</a> spell, except as noted here. The effect lasts for 1 hour per druid level, or until she changes back. Changing form (to <em>animal</em> or back) is a standard action and doesn’t provoke an attack of opportunity. The form chosen must be that of an animal the druid is familiar with.</p><p>A druid loses her ability to speak while in <em>animal</em> form because she is limited to the sounds that a normal, untrained animal can make, but she can communicate normally with other animals of the same general grouping as her new form. (The normal sound a wild parrot makes is a squawk, so changing to this form does not permit speech.)</p><p>A druid can use this ability an additional time per day at 6th level and every two levels thereafter, for a total of eight times at 18th level. At 20th level, a druid can use wild shape at will. As a druid gains in levels, this ability allows the druid to take on the form of larger and smaller animals, <em>elementals</em>, and plants. Each form expends one daily usage of this ability, regardless of the form taken.</p><p>At 6th level, a druid can use wild shape to change into a Large or Tiny <em>animal</em> or a Small <em>elemental</em>. When taking the form of an <em>animal</em>, a druid’s wild shape now functions as <a href=\"catalog:pf1/774kmgcb7ygviht0\">beast shape II</a>. When taking the form of an <em>elemental</em>, the druid’s wild shape functions as <a href=\"catalog:pf1/pawbnw1nm4f0b98e\">elemental body I</a>.</p><p>At 8th level, a druid can use wild shape to change into a Huge or Diminutive <em>animal</em>, a Medium <em>elemental</em>, or a Small or Medium plant creature. When taking the form of animals, a druid’s wild shape now functions as <a href=\"catalog:pf1/w88ddxpu89qcr5c0\">beast shape III</a>. When taking the form of an elemental, the druid’s wild shape now functions as <a href=\"catalog:pf1/yldjnorgbx4jsldz\">elemental body II</a>. When taking the form of a plant creature, the druid’s wild shape functions as <a href=\"catalog:pf1/y653mq8kmma3kg3w\">plant shape I</a>.</p><p>At 10th level, a druid can use wild shape to change into a Large <em>elemental</em> or a Large plant creature. When taking the form of an <em>elemental</em>, the druid’s wild shape now functions as <a href=\"catalog:pf1/hd32fuc6e7j4isbn\">elemental body III</a>. When taking the form of a plant, the druid’s wild shape now functions as <a href=\"catalog:pf1/ik4riccm7tozdwox\">plant shape II</a>.</p><p>At 12th level, a druid can use wild shape to change into a Huge <em>elemental</em> or a Huge plant creature. When taking the form of an <em>elemental</em>, the druid’s wild shape now functions as <a href=\"catalog:pf1/v42t5kpxc8mvd615\">elemental body IV</a>. When taking the form of a plant, the druid’s wild shape now functions as <a href=\"catalog:pf1/sheso071mxbywlah\">plant shape III</a>.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "51"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "t1lo0qlokxp4kze3",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "hour",
+                  "value": "@attributes.hd.total"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "Self"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Druid"]
+            },
+            "uses": {
+              "maxFormula": "min(floor((@class.level - 2) / 2), 8)",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/774kmgcb7ygviht0",
+      "upstreamKey": "pf1/774kmgcb7ygviht0",
+      "pack": "spells",
+      "name": "Beast Shape II",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 4,
+          "arcanist": 4,
+          "bloodrager": 4,
+          "investigator": 4,
+          "magus": 4,
+          "sorcerer": 4,
+          "wizard": 4
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/tjdfluulncmqacc3\">beast shape I</a>, except that it also allows you to assume the form of a Tiny or Large creature of the animal type. If the form you assume has any of the following abilities, you gain the listed ability: climb 60 feet, fly 60 feet (good maneuverability), swim 60 feet, darkvision 60 feet, low-light vision, scent, grab, pounce, and trip.</p><p><em>Tiny</em> animal: If the form you take is that of a Tiny animal, you gain a +4 size bonus to your Dexterity, a -2 penalty to your Strength, and a +1 natural armor bonus.</p><p><em>Small animal</em>: If the form you take is that of a Small animal, you gain a +2 size bonus to your Dexterity and a +1 natural armor bonus.</p><p><em>Medium animal</em>: If the form you take is that of a Medium animal, you gain a +2 size bonus to your Strength and a +2 natural armor bonus.</p><p><em>Large animal</em>: If the form you take is that of a Large animal, you gain a +4 size bonus to your Strength, a -2 penalty to your Dexterity, and a +4 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "247"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "1x3z05txb8vtntx9",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Selected-form size ability/natural armor/senses/movement/natural attack effects."
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Beast shape I movement is replaced by this spell list, not stacked."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Assume a Tiny, Small, Medium, or Large animal form. Tiny: +4 size Dexterity, -2 Strength, +1 natural armor. Small: +2 size Dexterity, +1 natural armor. Medium: +2 size Strength, +2 natural armor. Large: +4 size Strength, -2 Dexterity, +4 natural armor. If possessed by the chosen form, gain climb 60 feet, fly 60 feet (good), swim 60 feet, darkvision 60 feet, low-light vision, scent, grab, pounce, and trip. This replaces beast shape I's lower movement list. Duration 1 minute/caster level."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/hd32fuc6e7j4isbn",
+      "upstreamKey": "pf1/hd32fuc6e7j4isbn",
+      "pack": "spells",
+      "name": "Elemental Body III",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 6,
+          "arcanist": 6,
+          "investigator": 6,
+          "magus": 6,
+          "sorcerer": 6,
+          "wizard": 6
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Elemental": 6,
+            "Marid": 6
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/yldjnorgbx4jsldz\">elemental body II</a>, except that it also allows you to assume the form of a Large air, earth, fire, or water elemental. The abilities you gain depend upon the type of elemental into which you change. You are also immune to critical hits and sneak attacks while in elemental form.</p><p><em>Air elemental</em>: As <a href=\"catalog:pf1/pawbnw1nm4f0b98e\">elemental body I</a> except that you gain a +2 size bonus to your Strength, +4 size bonus to your Dexterity, and a +4 natural armor bonus.</p><p><em>Earth elemental</em>: As <em>elemental body I</em> except that you gain a +6 size bonus to your Strength, a -2 penalty on your Dexterity, a +2 size bonus to your Constitution, and a +6 natural armor bonus.</p><p><em>Fire elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Dexterity, a +2 size bonus to your Constitution, and a +4 natural armor bonus.</p><p><em>Water elemental</em>: As <em>elemental body I</em> except that you gain a +2 size bonus to your Strength, a -2 penalty on your Dexterity, a +6 size bonus to your Constitution, and a +6 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "276"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "ty1y107g4rhaxvbk",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ik4riccm7tozdwox",
+      "upstreamKey": "pf1/ik4riccm7tozdwox",
+      "pack": "spells",
+      "name": "Plant Shape II",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 6,
+          "arcanist": 6,
+          "investigator": 6,
+          "sorcerer": 6,
+          "wizard": 6
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/y653mq8kmma3kg3w\">plant shape I</a> except that it also allows you to assume the form of a Large creature of the plant type. If the creature has immunity or resistance to any elements, you gain resistance 20 to those elements. If the creature has vulnerability to an element, you gain that vulnerability.</p><p><em>Large plant</em>: If the form you take is that of a <em>Large plant</em>, you gain a +4 size bonus to your Strength, a +2 size bonus to your Constitution, and a +4 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "323"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "fdr5mfsr01u2wc7p",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/pawbnw1nm4f0b98e",
+      "upstreamKey": "pf1/pawbnw1nm4f0b98e",
+      "pack": "spells",
+      "name": "Elemental Body I",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 4,
+          "arcanist": 4,
+          "bloodrager": 4,
+          "investigator": 4,
+          "magus": 4,
+          "sorcerer": 4,
+          "wizard": 4
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Elemental": 4
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>When you cast this spell, you can assume the form of a Small air, earth, fire, or water elemental. The abilities you gain depend upon the type of elemental into which you change. Elemental abilities based on size, such as burn, vortex, and whirlwind, use the size of the elemental you transform into to determine their effect.</p><p><i>Air elemental</i>: If the form you take is that of a Small air elemental, you gain a +2 size bonus to your Dexterity and a +2 natural armor bonus. You also gain fly 60 feet (perfect), darkvision 60 feet, and the ability to create a whirlwind.</p><p><i>Earth elemental</i>: If the form you take is that of a Small earth elemental, you gain a +2 size bonus to your Strength and a +4 natural armor bonus. You also gain darkvision 60 feet, the push ability, and the ability to earth glide.</p><p><i>Fire elemental</i>: If the form you take is that of a Small fire elemental, you gain a +2 size bonus to your Dexterity and a +2 natural armor bonus. You gain darkvision 60 feet, resist fire 20, vulnerability to cold, and the burn ability.</p><p><i>Water elemental</i>: If the form you take is that of a Small water elemental, you gain a +2 size bonus to your Constitution and a +4 natural armor bonus. You also gain swim 60 feet, darkvision 60 feet, the ability to create a vortex, and the ability to breathe water.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "275"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "zaqarqv23b90ifcu",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/sheso071mxbywlah",
+      "upstreamKey": "pf1/sheso071mxbywlah",
+      "pack": "spells",
+      "name": "Plant Shape III",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 7,
+          "sorcerer": 7,
+          "wizard": 7
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Verdant": 7
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/ik4riccm7tozdwox\">plant shape II</a> except that it also allows you to assume the form of a Huge creature of the plant type. If the form you assume has any of the following abilities, you gain the listed ability: DR, regeneration 5, and trample.</p><p><em>Huge plant</em>: If the form you take is that of a <em>Huge plant</em>, you gain a +8 size bonus to your Strength, a -2 penalty to your Dexterity, a +4 size bonus to your Constitution, and a +6 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "323"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "yx5iam587z3k079b",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/tjdfluulncmqacc3",
+      "upstreamKey": "pf1/tjdfluulncmqacc3",
+      "pack": "spells",
+      "name": "Beast Shape I",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 3,
+          "arcanist": 3,
+          "bloodrager": 3,
+          "investigator": 3,
+          "magus": 3,
+          "sorcerer": 3,
+          "wizard": 3
+        },
+        "grantedLevels": {
+          "subDomain": {
+            "Fur": 3
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>When you cast this spell, you can assume the form of any Small or Medium creature of the animal type. If the form you assume has any of the following abilities, you gain the listed ability: climb 30 feet, fly 30 feet (average maneuverability), swim 30 feet, darkvision 60 feet, low-light vision, and scent.</p><p><i>Small animal</i>: If the form you take is that of a Small animal, you gain a +2 size bonus to your Dexterity and a +1 natural armor bonus.</p><p><i>Medium animal</i>: If the form you take is that of a Medium animal, you gain a +2 size bonus to your Strength and a +2 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "247"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "i61xq05e6nh8fhp5",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/v42t5kpxc8mvd615",
+      "upstreamKey": "pf1/v42t5kpxc8mvd615",
+      "pack": "spells",
+      "name": "Elemental Body IV",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 7,
+          "sorcerer": 7,
+          "wizard": 7
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Elemental": 7
+          },
+          "domain": {
+            "Air": 7,
+            "Earth": 7,
+            "Fire": 7,
+            "Water": 7
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/hd32fuc6e7j4isbn\">elemental body III</a>, except that it also allows you to assume the form of a Huge air, earth, fire, or water elemental. The abilities you gain depend upon the type of elemental into which you change. You are also immune to critical hits and sneak attacks while in elemental form and gain DR 5/-.</p><p><em>Air elemental</em>: As <a href=\"catalog:pf1/pawbnw1nm4f0b98e\">elemental body I</a> except that you gain a +4 size bonus to your Strength, +6 size bonus to your Dexterity, and a +4 natural armor bonus. You also gain fly 120 feet (perfect).</p><p><em>Earth elemental</em>: As <em>elemental body I</em> except that you gain a +8 size bonus to your Strength, a -2 penalty on your Dexterity, a +4 size bonus to your Constitution, and a +6 natural armor bonus.</p><p><em>Fire elemental</em>: As <em>elemental body I</em> except that you gain a +6 size bonus to your Dexterity, a +4 size bonus to your Constitution, and a +4 natural armor bonus.</p><p><em>Water elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Strength, a -2 penalty on your Dexterity, a +8 size bonus to your Constitution, and a +6 natural armor bonus. You also gain swim 120 feet.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "277"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "qr7j172noukgurrg",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/w88ddxpu89qcr5c0",
+      "upstreamKey": "pf1/w88ddxpu89qcr5c0",
+      "pack": "spells",
+      "name": "Beast Shape III",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 5,
+          "arcanist": 5,
+          "investigator": 5,
+          "magus": 5,
+          "sorcerer": 5,
+          "wizard": 5
+        },
+        "grantedLevels": {
+          "domain": {
+            "Animal": 5
+          },
+          "subDomain": {
+            "Saurian": 5
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/774kmgcb7ygviht0\">beast shape II</a>, except that it also allows you to assume the form of a Diminutive or Huge creature of the animal type. This spell also allows you to take on the form of a Small or Medium creature of the magical beast type. If the form you assume has any of the following abilities, you gain the listed ability: burrow 30 feet, climb 90 feet, fly 90 feet (good maneuverability), swim 90 feet, blindsense 30 feet, darkvision 60 feet, low-light vision, scent, constrict, ferocity, grab, jet, poison, pounce, rake, trample, trip, and web.</p><p><em>Diminutive animal</em>: If the form you take is that of a Diminutive animal, you gain a +6 size bonus to your Dexterity, a -4 penalty to your Strength, and a +1 natural armor bonus.</p><p><em>Tiny animal</em>: If the form you take is that of a Tiny animal, you gain a +4 size bonus to your Dexterity, a -2 penalty to your Strength, and a +1 natural armor bonus.</p><p><em>Small animal</em>: If the form you take is that of a Small animal, you gain a +2 size bonus to your Dexterity and a +1 natural armor bonus.</p><p><em>Medium animal</em>: If the form you take is that of a Medium animal, you gain a +2 size bonus to your Strength and a +2 natural armor bonus.</p><p><em>Large animal</em>: If the form you take is that of a Large animal, you gain a +4 size bonus to your Strength, a -2 penalty to your Dexterity, and a +4 natural armor bonus.</p><p><em>Huge animal</em>: If the form you take is that of a Huge animal, you gain a +6 size bonus to your Strength, a -4 penalty to your Dexterity, and a +6 natural armor bonus.</p><p><em>Small magical beast</em>: If the form you take is that of a Small magical beast, you gain a +4 size bonus to your Dexterity, and a +2 natural armor bonus.</p><p><em>Medium magical beast</em>: If the form you take is that of a Medium magical beast, you gain a +4 size bonus to your Strength, and a +4 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "247"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "3qzqeetnpqguft51",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/y653mq8kmma3kg3w",
+      "upstreamKey": "pf1/y653mq8kmma3kg3w",
+      "pack": "spells",
+      "name": "Plant Shape I",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 5,
+          "arcanist": 5,
+          "investigator": 5,
+          "sorcerer": 5,
+          "wizard": 5
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>When you cast this spell you can assume the form of any Small or Medium creature of the plant type (see the <i>Pathfinder RPG Bestiary</i>).</p><p>If the form you assume has any of the following abilities, you gain the listed ability: darkvision 60 feet, low-light vision, constrict, grab, and poison. If the form you assume does not possess the ability to move, your speed is reduced to 5 feet and you lose all other forms of movement. If the creature has vulnerability to an element, you gain that vulnerability.</p><p><i>Small plant</i>: If the form you take is that of a <i>Small plant</i>, you gain a +2 size bonus to your Constitution and a +2 natural armor bonus.</p><p><i>Medium plant</i>: If the form you take is that of a <i>Medium plant</i>, you gain a +2 size bonus to your Strength, a +2 enhancement bonus to your Constitution, and a +2 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "322"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "vxt0q6jb7snthzvo",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yldjnorgbx4jsldz",
+      "upstreamKey": "pf1/yldjnorgbx4jsldz",
+      "pack": "spells",
+      "name": "Elemental Body II",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 5,
+          "arcanist": 5,
+          "investigator": 5,
+          "magus": 5,
+          "sorcerer": 5,
+          "wizard": 5
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Elemental": 5
+          },
+          "subDomain": {
+            "Rivers": 5
+          }
+        },
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions as <a href=\"catalog:pf1/pawbnw1nm4f0b98e\">elemental body I</a>, except that it also allows you to assume the form of a Medium air, earth, fire, or water elemental. The abilities you gain depend upon the elemental.</p><p><em>Air elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Dexterity and a +3 natural armor bonus.</p><p><em>Earth elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Strength and a +5 natural armor bonus.</p><p><em>Fire elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Dexterity and a +3 natural armor bonus.</p><p><em>Water elemental</em>: As <em>elemental body I</em> except that you gain a +4 size bonus to your Constitution and a +5 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "276"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rt1maswuaqqb61iu",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "increments": [
+    {
+      "externalKey": "everythingpath/druid-wild-shape-10",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (4/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "10:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (4/day): the Druid table's 10th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-12",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (5/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "12:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (5/day): the Druid table's 12th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-14",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (6/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "14:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (6/day): the Druid table's 14th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-14",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-14",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-14",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-14",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-14",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-16",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (7/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "16:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (7/day): the Druid table's 16th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-18",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (8/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "18:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (8/day): the Druid table's 18th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-20",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (at will)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "20:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (at will): the Druid table's 20th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-20",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-20",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-20",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-20",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-20",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-6",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (2/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "6:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (2/day): the Druid table's 6th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    },
+    {
+      "externalKey": "everythingpath/druid-wild-shape-8",
+      "upstreamKey": "pf1/sJdBOE9lwz5XAkUi",
+      "pack": "everythingpath-schedules",
+      "name": "Wild Shape (3/day)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/sJdBOE9lwz5XAkUi",
+        "part": "8:pf1/sJdBOE9lwz5XAkUi"
+      },
+      "description": "<p>Wild Shape (3/day): the Druid table's 8th-level row of Wild Shape (Pathfinder RPG Core Rulebook pp. 48–53). The Wild Shape entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "48–53"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/druid-wild-shape-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/sJdBOE9lwz5XAkUi"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+_id: s8bdkzddo4doe6wb
+_key: '!items!s8bdkzddo4doe6wb'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Unwilling Shield
+system:
+  actions:
+    - _id: r1p0a6zfjiws0lrl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Like <i>shield other</i>, <i>unwilling shield</i> creates a mystic
+      connection between you and the target, but unlike <i>shield other</i>, the
+      target shares the wounds that you receive. In addition, the link draws
+      upon the target's life force to supplement your own defenses. You gain a
+      +1 luck bonus to AC and on saving throws. You take only half damage from
+      all wounds and attacks (including those dealt by special abilities) that
+      deal hit point damage. The amount of damage not taken by you is taken by
+      the target. Forms of harm that do not involve hit points, such as
+      <i>charm</i> effects, ability damage, level draining, and death effects
+      are not affected. If you take a reduction in hit points from a lowered
+      Constitution score, the reduction is not split with the target because it
+      is not hit point damage.</p><p>When the spell ends, subsequent damage is
+      no longer divided between you and the subject, but damage already split is
+      not assigned to you.</p><p>If you and the target of the spell move out of
+      range of each other, the spell remains active, but damage is no longer
+      shared until you are once again within range of each other.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 5
+      inquisitor: 5
+      mesmerist: 5
+      occultist: 5
+      psychic: 6
+      skald: 5
+      sorcerer: 6
+      spiritualist: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 250
+    value: ruby dust worth 250 gp
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '253'
+type: spell

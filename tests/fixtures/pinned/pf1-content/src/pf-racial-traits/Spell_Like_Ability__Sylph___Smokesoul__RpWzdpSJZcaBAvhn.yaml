@@ -1,0 +1,52 @@
+_id: RpWzdpSJZcaBAvhn
+_key: '!items!RpWzdpSJZcaBAvhn'
+_stats:
+  coreVersion: '12.331'
+folder: o1nSxKcbPwxbxxD5
+img: systems/pf1/icons/races/sylph.png
+name: Spell-Like Ability (Sylph - Smokesoul)
+system:
+  abilityType: sp
+  actions:
+    - _id: OCQJIZwTOkKslmpN
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.h4hrop7rq2c9phyi]{blurred
+        movement}</em></p><p>This spell functions as
+        @UUID[Compendium.pf1.spells.Item.18kryvj2dfuymk9d]{blur}, except that
+        the blurring occurs only when you move at least @Distance[10 ft;dual] on
+        your turn and ceases at the end of your movement. It is therefore mainly
+        used to thwart attacks on your turn, such as attacks of opportunity. If
+        you move at least twice your speed on your turn, the blurring lasts
+        until the start of your next turn.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Blurred Movement
+      range:
+        units: personal
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sylph - Smokesoul</p><hr /><p>Smokesouls can use
+      @UUID[Compendium.pf1.spells.Item.h4hrop7rq2c9phyi]{blurred movement} 1/day
+      as a spell-like ability (with a caster level equal to the Smokesoul's
+      character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9492
+      pages: '21'
+  subType: racial
+  tags:
+    - Sylph
+    - Smokesoul
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

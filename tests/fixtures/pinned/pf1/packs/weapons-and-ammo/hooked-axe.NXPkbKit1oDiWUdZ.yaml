@@ -1,0 +1,60 @@
+_id: NXPkbKit1oDiWUdZ
+_key: '!items!NXPkbKit1oDiWUdZ'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/axe-hooked.PNG
+name: Hooked Axe
+system:
+  actions:
+    - _id: 384ew5nhj9a8fw7d
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Hooked Axe
+  description:
+    unidentified: >-
+      <p>The hooked end of this axe's blade can be used to disarm foes or pull
+      them off balance. A hooked axe can be used as a martial weapon (in which
+      case it functions like a battleaxe).</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    dis: true
+    prf: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - axes
+  weaponSubtype: 1h
+  weight:
+    value: 7
+type: weapon

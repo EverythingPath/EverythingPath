@@ -1,0 +1,58 @@
+_id: sn3mvplvwktbc9hl
+_key: '!items!sn3mvplvwktbc9hl'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/unholy/strike-beam-blood-red-teal.webp
+name: Inflict Moderate Wounds, Mass
+system:
+  actions:
+    - _id: 9hyeaj5w9njb2bhf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d8 + min(@cl, 30)
+            types:
+              - negative
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will half
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.dhjhfv5hzthy0fgu]{mass cure light
+      wounds}, except that it deals 2d8 points of damage + 1 point per caster
+      level (maximum +30).</p>
+  learnedAt:
+    class:
+      cleric: 6
+      inquisitor: 6
+      occultist: 6
+      oracle: 6
+      shaman: 6
+      warpriest: 6
+      witch: 7
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '300'
+type: spell

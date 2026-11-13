@@ -1,0 +1,64 @@
+_id: vdmsaodgnbo8wjfx
+_key: '!items!vdmsaodgnbo8wjfx'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Gentle Repose
+system:
+  actions:
+    - _id: 9bvroga96m8gpnk0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: corpse touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You preserve the remains of a dead creature so that they do not decay.
+      Doing so effectively extends the time limit on raising that creature from
+      the dead (see <i>raise dead</i>). Days spent under the influence of this
+      spell don't count against the time limit.</p><p>Additionally, this spell
+      makes transporting a slain (and thus decaying) comrade less
+      unpleasant.</p><p>The spell also works on severed body parts and the
+      like.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      cleric: 2
+      medium: 2
+      occultist: 3
+      oracle: 2
+      shaman: 2
+      sorcerer: 3
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+      wizard: 3
+    domain:
+      Repose: 2
+  level: 3
+  materials:
+    value: salt and a copper piece for each of the corpse's eyes
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '289'
+type: spell
