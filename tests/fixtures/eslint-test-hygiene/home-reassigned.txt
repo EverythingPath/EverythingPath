@@ -1,0 +1,22 @@
+// A binding that is ever written from the os module or process.env may be
+// read as it: reads before and after the write are refused. A line ending in
+// "// flagged" must be reported; every other line must pass.
+let os = await import('node:os');
+os.homedir(); // flagged
+const { homedir: before } = os; // flagged
+os = await import('os');
+os['homedir'](); // flagged
+const { homedir: after } = os; // flagged
+let laterOs = { homedir: () => 'fixture-home' };
+laterOs.homedir(); // flagged
+laterOs = require('node:os');
+let laterEnv = { HOME: 'fixture-home' };
+laterEnv.HOME; // flagged
+laterEnv = process.env;
+// A binding never written from either passes.
+let fixtureOs = { homedir: () => 'fixture-home' };
+fixtureOs = { homedir: () => 'other-home' };
+fixtureOs.homedir();
+let fixtureEnv = { HOME: 'fixture-home' };
+fixtureEnv = { HOME: 'other-home' };
+fixtureEnv.HOME;

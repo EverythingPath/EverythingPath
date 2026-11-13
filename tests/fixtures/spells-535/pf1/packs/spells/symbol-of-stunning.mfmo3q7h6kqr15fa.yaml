@@ -1,0 +1,65 @@
+_id: mfmo3q7h6kqr15fa
+_key: '!items!mfmo3q7h6kqr15fa'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Symbol of Stunning
+system:
+  actions:
+    - _id: ddo4g34ixdphbe98
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that all creatures within 60 feet of a <em>symbol of stunning</em>
+      instead become stunned for 1d6 rounds.</p><p><em>Note:</em> Magic traps
+      such as <em>symbol of stunning</em> are hard to detect and disable. A
+      rogue (only) can use the Perception skill to find a <em>symbol of
+      stunning</em> and Disable Device to thwart it. The DC in each case is 25 +
+      spell level, or 32 for <em>symbol of stunning</em>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      occultist: 5
+      oracle: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    gpValue: 5000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      5,000 gp
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '356'
+  subschool:
+    - compulsion
+type: spell

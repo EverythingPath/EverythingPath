@@ -1,0 +1,92 @@
+_id: rhrCD8LSYstvt6pp
+_key: '!items!rhrCD8LSYstvt6pp'
+_stats:
+  coreVersion: '12.331'
+folder: XQyOZECH4JHvQaTE
+img: icons/commodities/treasure/statue-bust-stone-grey.webp
+name: Spell-Like Abilities (Duergar - Invisibility)
+system:
+  abilityType: sp
+  actions:
+    - _id: Jko0gI1ub8LgW8ni
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{Invisibility}
+        self only</p><p>The creature or object touched becomes invisible. If the
+        recipient is a creature carrying gear, that vanishes, too. If you cast
+        the spell on someone else, neither you nor your allies can see the
+        subject, unless you can normally see invisible things or you employ
+        magic to do so.</p><p>Items dropped or put down by an invisible creature
+        become visible; items picked up disappear if tucked into the clothing or
+        pouches worn by the creature. Light, however, never becomes invisible,
+        although a source of light can become so (thus, the effect is that of a
+        light with no visible source). Any part of an item that the subject
+        carries but that extends more than @Distance[10 ft;dual] from it becomes
+        visible.</p><p>Of course, the subject is not magically silenced, and
+        certain other conditions can render the recipient detectable (such as
+        swimming in water or stepping in a puddle). If a check is required, a
+        stationary invisible creature has a +40 bonus on its Stealth checks.
+        This bonus is reduced to +20 if the creature is moving. The spell ends
+        if the subject attacks any creature. For purposes of this spell, an
+        attack includes any spell targeting a foe or whose area or effect
+        includes a foe. Exactly who is a foe depends on the invisible
+        character's perceptions. Actions directed at unattended objects do not
+        break the spell. Causing harm indirectly is not an attack. Thus, an
+        invisible being can open doors, talk, eat, climb stairs, summon monsters
+        and have them attack, cut the ropes holding a rope bridge while enemies
+        are on the bridge, remotely trigger traps, open a portcullis to release
+        attack dogs, and so forth. If the subject attacks directly, however, it
+        immediately becomes visible along with all its gear.</p><p>Spells such
+        as <em>bless</em> that specifically affect allies but not foes are not
+        attacks for this purpose, even when they include foes in their
+        area.</p><p><em>Invisibility</em> can be made permanent (on objects
+        only) with a <em>permanency</em> spell.</p></div>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Invisibility
+      range:
+        units: personal
+      save:
+        dc: 10+2+@abilities.cha.mod
+        description: Will negates or Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: self only
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    instructions: >-
+      <p>This trait only includes the Invisibilty SLA but should be paired with
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.xjUswZbTpNJTr2gy]{Spell-Like
+      Abilities (Duergar - Enlarge Person)} or an alternate that replaces
+      it.</p>
+    value: >-
+      <p><strong>Race</strong>: Duergar</p><hr /><p>A duergar can use
+      <em>enlarge person</em> and <em>invisibility</em> each once per day, using
+      her character level as her caster level and affecting itself only.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '241'
+    - id: PZO1112
+      pages: '117'
+    - id: PZO1121
+      pages: '186'
+  subType: racial
+  tags:
+    - Duergar
+  traitCategory: magical
+type: feat

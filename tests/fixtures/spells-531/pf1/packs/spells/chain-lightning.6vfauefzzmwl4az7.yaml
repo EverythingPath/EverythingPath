@@ -1,0 +1,80 @@
+_id: 6vfauefzzmwl4az7
+_key: '!items!6vfauefzzmwl4az7'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/orb-ball-blue.webp
+name: Chain Lightning
+system:
+  actions:
+    - _id: ebbjno6fd1vnqqdg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+      target:
+        value: >-
+          one primary target, plus one secondary target/level (each of which
+          must be within 30 ft. of the primary target)
+  attackNotes:
+    - 'Max arcs: [[@cl]]'
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell creates an electrical discharge that begins as a single
+      stroke commencing from your fingertips. Unlike <i>lightning bolt</i>,
+      <i>chain lightning</i> strikes one object or creature initially, then arcs
+      to other targets.</p><p>The bolt deals 1d6 points of electricity damage
+      per caster level (maximum 20d6) to the primary target. After it strikes,
+      lightning can arc to a number of secondary targets equal to your caster
+      level (maximum 20). The secondary bolts each strike one target and deal as
+      much damage as the primary bolt.</p><p>Each target can attempt a Reflex
+      saving throw for half damage.</p><p>The Reflex DC to halve the damage of
+      the secondary bolts is 2 lower than the DC to halve the damage of the
+      primary bolt. You choose secondary targets as you like, but they must all
+      be within 30 feet of the primary target, and no target can be struck more
+      than once. You can choose to affect fewer secondary targets than the
+      maximum.</p>
+  descriptors:
+    - electricity
+  learnedAt:
+    bloodline:
+      Djinni: 6
+      Stormborn: 6
+    class:
+      arcanist: 6
+      magus: 6
+      occultist: 6
+      sorcerer: 6
+      witch: 7
+      wizard: 6
+    domain:
+      Air: 6
+  level: 6
+  materials:
+    focus: >-
+      a bit of fur; a piece of amber, glass, or a crystal rod; plus one silver
+      pin per caster level
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '253'
+type: spell

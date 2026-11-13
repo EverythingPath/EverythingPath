@@ -1,0 +1,34 @@
+_id: etOoJgoeaBRenCir
+_key: '!items!etOoJgoeaBRenCir'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Charmed Life
+system:
+  abilityType: ex
+  actions:
+    - _id: 2e3q5rrjrtj0w0nb
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Swashbuckler
+  description:
+    value: >-
+      <p>At 2nd level, the swashbuckler gains a knack for getting out of
+      trouble. Three times per day as an immediate action before attempting a
+      saving throw, she can add her Charisma modifier to the result of the save.
+      She must choose to do this before the roll is made.</p>
+
+      <p>At 6th level and every 4 levels thereafter, the number of times she can
+      do this per day increases by one (to a maximum of 7 times per day at 18th
+      level).</p>
+  subType: classFeat
+  tag: classFeat_charmedLife
+  uses:
+    maxFormula: 2 + floor((@class.level + 2) / 4)
+    per: day
+type: feat

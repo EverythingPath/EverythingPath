@@ -1,0 +1,63 @@
+_id: lxxliyxfw9uvbxmt
+_key: '!items!lxxliyxfw9uvbxmt'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/control/buff-luck-fortune-rainbow.webp
+name: Prismatic Sphere
+system:
+  actions:
+    - _id: f5disnyayz7rytoy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      effect: 10-ft.-radius sphere centered on you
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        description: see text
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ijwcwnt3oatnfghq]{prismatic wall}, except
+      you conjure up an immobile, opaque globe of shimmering, multicolored light
+      that surrounds you and protects you from all forms of attack. The sphere
+      flashes in all colors of the visible spectrum.</p><p>The sphere's
+      <em>blindness</em> effect on creatures with less than 8 HD lasts 2d4 x 10
+      minutes.</p><p>You can pass into and out of the <em>prismatic sphere</em>
+      and remain near it without harm. When you're inside it, however, the
+      sphere blocks any attempt to project something through the sphere
+      (including spells). Other creatures that attempt to attack you or pass
+      through suffer the effects of each color, one at a time.</p><p>Typically,
+      only the upper hemisphere of the globe exists, since you are at the center
+      of the sphere, so the lower half is usually occluded by the floor surface
+      you are standing on.</p><p>The colors of the sphere have the same effects
+      as the colors of a <em>prismatic wall</em>.</p><p><em>Prismatic
+      sphere</em> can be made permanent with a <em>permanency</em> spell.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      sorcerer: 9
+      wizard: 9
+    domain:
+      Artifice: 9
+      Protection: 9
+      Sun: 9
+  level: 9
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '325'
+  sr: false
+type: spell

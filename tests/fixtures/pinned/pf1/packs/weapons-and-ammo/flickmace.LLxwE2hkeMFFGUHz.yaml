@@ -1,0 +1,53 @@
+_id: LLxwE2hkeMFFGUHz
+_key: '!items!LLxwE2hkeMFFGUHz'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/flickmace.png
+name: Flickmace
+system:
+  actions:
+    - _id: 3jo44stmodcdo0ks
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+  baseTypes:
+    - Flickmace
+  description:
+    unidentified: >-
+      <p>The innovation behind a flick-mace, which has an ordinary mace head,
+      lies within its spring-loaded haft and protruding handles. When the mace
+      is compressed, removing the handles instantly springs the mace to its full
+      size. While it is extended, a quick flick of the wrist allows the weapon
+      to be compressed.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 1h
+  weight:
+    value: 10
+type: weapon

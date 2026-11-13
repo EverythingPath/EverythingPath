@@ -1,0 +1,69 @@
+_id: 7no45vnykqt1azc8
+_key: '!items!7no45vnykqt1azc8'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mantle of Calm
+system:
+  actions:
+    - _id: s0ts918fb4bi63w4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: none and Will negates (see text)
+        type: will
+      target:
+        value: you
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You surround yourself with a Mantle of Calm serenity. You take a -2
+      penalty on attack rolls, and opponents gain a +2 bonus on saving throws
+      against spells you cast. Any creature affected by a <i>rage</i> effect
+      (barbarian's <i>rage</i>,  blood<i>rage</i>r's blood<i>rage</i>, blood
+      <i>rage</i> monster ability, <i>rage</i> spell, skald's inspired
+      <i>rage</i> raging song, and so on) that strikes you with a melee attack
+      must attempt a Will saving throw, without the <i>rage</i> effect's bonus
+      to Will; failure means the <i>rage</i> effect ends (as if it were
+      dispelled or the creature voluntarily ended it, as appropriate).  If you
+      become affected by a <i>rage</i> effect while this spell is active, this
+      spell immediately ends. If your <i>rage</i> effect comes from a skald's
+      raging song, then it ends only for you, and you cannot regain the effects
+      of the song.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      mesmerist: 2
+      oracle: 3
+      paladin: 3
+      psychic: 3
+      shaman: 3
+      warpriest: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1129
+      pages: '186'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

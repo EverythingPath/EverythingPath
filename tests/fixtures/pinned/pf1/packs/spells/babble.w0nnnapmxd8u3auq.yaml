@@ -1,0 +1,61 @@
+_id: w0nnnapmxd8u3auq
+_key: '!items!w0nnnapmxd8u3auq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Babble
+system:
+  actions:
+    - _id: r17ldn0u2mmn98lj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature; see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes the target to break into a fit of bizarre,
+      uncontrollable babbling. The target also becomes nauseated. If the target
+      succeeds at its save, the effects end. If not, the creature continues
+      babbling and is nauseated for the entire duration.  Creatures within 30
+      feet of the subject that can hear the target's babbling must succeed at a
+      Will save or become fascinated for as long as the babbling persists. Once
+      a creature's fascination ends, it can't become fascinated by the same
+      instance of <i>babble</i> again.  Creatures with an Intelligence score of
+      2 or lower aren't affected by this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      mesmerist: 2
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '158'
+  subschool:
+    - compulsion
+type: spell

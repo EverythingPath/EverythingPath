@@ -1,0 +1,60 @@
+_id: I3TJukhU9F0pHKOV
+_key: '!items!I3TJukhU9F0pHKOV'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/boar-spear.png
+name: Boar Spear
+system:
+  actions:
+    - _id: 0pa2awx87xkdb6z1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Boar Spear
+  description:
+    unidentified: >-
+      <p>This spear has a metal crossbar to protect you against onrushing
+      attackers. If you ready a boar spear against a charge and your attack
+      hits, you gain a +2 shield bonus to your AC against that creature until
+      your next turn.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    brc: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon
