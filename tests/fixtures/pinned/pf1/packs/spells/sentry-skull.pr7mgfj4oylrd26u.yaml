@@ -1,0 +1,75 @@
+_id: pr7mgfj4oylrd26u
+_key: '!items!pr7mgfj4oylrd26u'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Sentry Skull
+system:
+  actions:
+    - _id: f1oy806asjgnwb2f
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent (D); see text
+      name: Use
+      range:
+        units: touch
+      target:
+        value: severed head touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You restore the senses to the severed head of a humanoid or monstrous
+      humanoid killed within the past 24 hours, creating a grisly sentinel. The
+      head must be affixed to a pole, spear, tree branch, or other stable
+      object, and the spell ends if the head or its object is moved. The head
+      has darkvision 60 feet and low-light vision, can swivel in place to look
+      in any direction, and has a +5 bonus on Perception checks.  If you are
+      within 30 feet of the head, as a standard action you can shift your senses
+      to it, seeing and hearing from its location and gaining the benefit of its
+      darkvision and low-light vision, and you may use its Perception skill
+      instead of your own. While your senses are in the severed head, your body
+      is blind and deaf until you spend a free action to shift your senses back
+      to your own body.  When you create the head, you can imprint it with a
+      single triggering condition, similar to <i>magic mouth</i>. Once this
+      triggering condition is set, it can never be changed. If you are within 30
+      feet of the head, you immediately know if it is triggered (if you have
+      multiple active <i>sentry skulls</i>, you also know which one was
+      triggered). This wakens you from normal sleep but does not otherwise
+      disturb your concentration. For example, you could have a <i>sentry
+      skull</i> alert you if any humanoid comes into view, if a particular rival
+      approaches, if your guard animal is killed, and so on, as long as it
+      occurs where the severed head can see it.  This spell does not give the
+      head any ability to speak, think, or take any kind of action other than to
+      turn itself, though it is a suitable target for other spells such as
+      <i>magic mouth</i>.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 2
+      cleric: 2
+      oracle: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    gpValue: 10
+    value: an onyx gem worth at least 10 gp
+  school: nec
+  sources:
+    - id: PZO1121
+      pages: '143'
+  sr: false
+type: spell

@@ -1,0 +1,65 @@
+_id: lh1k6rvgbtfalpe8
+_key: '!items!lh1k6rvgbtfalpe8'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Scale Spikes, Greater
+system:
+  actions:
+    - _id: gtsm0vjvbzpcbu40
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fort negates
+        harmless: true
+        type: fort
+      target:
+        value: >-
+          one living creature/level that is a reptile, has the dragon type, or
+          has the reptilian subtype, and also has a natural armor bonus of at
+          least +1
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.pq9cw2n3i359oj1f]{scale spikes}, except
+      that the spikes growing out of the scales have an enhancement bonus on
+      attack and damage rolls equal to +1 for every 4 caster levels (maximum
+      +5). This bonus does not allow the spikes to bypass damage reduction aside
+      from magic.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      arcanist: 3
+      bloodrager: 4
+      druid: 3
+      hunter: 3
+      investigator: 4
+      ranger: 3
+      shaman: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a bit of thistle
+  school: trs
+  sources:
+    - id: PZO1130
+      pages: '141'
+type: spell

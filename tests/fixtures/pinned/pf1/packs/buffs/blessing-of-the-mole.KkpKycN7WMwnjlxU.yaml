@@ -1,0 +1,33 @@
+_id: KkpKycN7WMwnjlxU
+_key: '!items!KkpKycN7WMwnjlxU'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/perception/silhouette-stealth-shadow.webp
+name: Blessing of the Mole
+system:
+  changes:
+    - _id: 2ZNPQ9QA
+      formula: '30'
+      operator: set
+      target: sensedv
+      type: base
+    - _id: ZRTFGWPS
+      formula: '2'
+      target: skill.ste
+      type: competence
+  description:
+    instructions: <p>Set item level to caster level</p>
+    value: >-
+      <p>Grants darkvision 30 feet and a +2 competence bonus on Stealth as per
+      @UUID[Compendium.pf1.spells.Item.mnsqk035k4hr8vjs] spell.</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO1117
+      pages: '208'
+  subType: spell
+type: buff

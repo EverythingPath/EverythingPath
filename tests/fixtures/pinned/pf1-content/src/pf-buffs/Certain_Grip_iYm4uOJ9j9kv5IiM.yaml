@@ -1,0 +1,33 @@
+_id: iYm4uOJ9j9kv5IiM
+_key: '!items!iYm4uOJ9j9kv5IiM'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp
+name: Certain Grip
+system:
+  changes:
+    - _id: rqnwzaal
+      formula: '4'
+      target: skill.clm
+      type: competence
+  contextNotes:
+    - target: skill.acr
+      text: +[[4]] Competence to Balance.
+    - target: cmd
+      text: >-
+        +[[4]] Competence vs Bull Rush, Drag, Reposition, and Trip. Immune to
+        Disarm.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.lmnwhrqgxf9cm9jq]{Certain
+      Grip}</p><p>You gain a +4 competence bonus on Climb checks, on Acrobatics
+      checks to balance, and to CMD against bull rush, drag, reposition, and
+      trip attempts. While affected by this spell, the target is also immune to
+      the disarm combat maneuver.</p>
+  duration:
+    units: minute
+    value: '@item.level * 10'
+  level: 3
+  subType: spell
+type: buff

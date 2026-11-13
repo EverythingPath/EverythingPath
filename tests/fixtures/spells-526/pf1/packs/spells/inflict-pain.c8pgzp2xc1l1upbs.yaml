@@ -1,0 +1,57 @@
+_id: c8pgzp2xc1l1upbs
+_key: '!items!c8pgzp2xc1l1upbs'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Inflict Pain
+system:
+  actions:
+    - _id: usua8vw5ijg5qetz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial; see text
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You telepathically wrack the target's mind and body with agonizing pain
+      that imposes a -4 penalty on attack rolls, skill checks, and ability
+      checks. A successful Will save reduces the duration to 1 round.</p>
+  descriptors:
+    - mindAffecting
+    - pain
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      inquisitor: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      sorcerer: 3
+      spiritualist: 2
+      witch: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '174'
+type: spell
