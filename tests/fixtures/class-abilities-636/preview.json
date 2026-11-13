@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/h0Brxw6khcjlEf1T",
+      "upstreamKey": "pf1/h0Brxw6khcjlEf1T",
+      "pack": "class-abilities",
+      "name": "Bravery",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 2nd level, a fighter gains a +1 bonus on <em>Will</em> saves against fear. This bonus increases by +1 for every four levels beyond 2nd.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "55"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.will",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "floor((@classLevel.fighter + 2) / 4)"
+          },
+          "condition": {
+            "situation": "fear"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Fighter"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": []
+}

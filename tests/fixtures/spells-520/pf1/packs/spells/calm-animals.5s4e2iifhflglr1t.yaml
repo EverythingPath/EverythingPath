@@ -1,0 +1,59 @@
+_id: 5s4e2iifhflglr1t
+_key: '!items!5s4e2iifhflglr1t'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Calm Animals
+system:
+  actions:
+    - _id: x4lscfyv7wwy6c5v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: animals within 30 ft. of each other
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell soothes and quiets animals, rendering them docile and
+      harmless. Only ordinary animals (those with Intelligence scores of 1 or 2)
+      can be affected by this spell. All the subjects must be of the same kind,
+      and no two may be more than 30 feet apart. The maximum number of HD of
+      animals you can affect is equal to 2d4 + caster level.</p><p>The affected
+      creatures remain where they are and do not attack or flee. They are not
+      helpless and defend themselves normally if attacked. Any threat breaks the
+      spell on the threatened creatures.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      psychic: 1
+      ranger: 1
+      shaman: 1
+    domain:
+      Animal: 1
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '252'
+  subschool:
+    - compulsion
+type: spell

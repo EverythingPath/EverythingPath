@@ -1,0 +1,54 @@
+_id: 835n5zqjvh3dybwq
+_key: '!items!835n5zqjvh3dybwq'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Squeeze
+system:
+  actions:
+    - _id: bmjj2vmeqdg9ytd0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target becomes flexible regardless of its actual size and mass. It
+      can move through areas at least half its size with no penalty for
+      squeezing. It can move through a space at least one-quarter its width
+      using the penalties for squeezing through a space at least half its
+      width.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      investigator: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '209'
+  subschool:
+    - polymorph
+type: spell

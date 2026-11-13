@@ -1,0 +1,63 @@
+_id: j6ndnjrlq5atyom6
+_key: '!items!j6ndnjrlq5atyom6'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Curse of Befouled Fortune
+system:
+  actions:
+    - _id: ycmosesoebcars8j
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You curse the target, making it incredibly unlucky. While affected by
+      <i>Curse of Befouled Fortune</i>, the target can't receive luck bonuses or
+      benefit from effects that grant it the ability to roll multiple times and
+      take the higher result (like the swashbuckler's charmed life ability). The
+      target also can't choose a die result, such as taking 10 or 20 in lieu of
+      rolling (as per the bard's lore master ability). Finally, the first time
+      each turn the target would succeed at an attack, saving throw, or skill
+      check, it must roll twice and use the worse of the two results.  This
+      curse cannot be dispelled, but it can be removed with a <i>break
+      enchantment</i>, <i>limited wish</i>, <i>miracle</i>, <i>remove curse</i>,
+      or <i>wish</i> spell.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 4
+      bloodrager: 4
+      cleric: 3
+      oracle: 3
+      shaman: 3
+      sorcerer: 4
+      spiritualist: 3
+      warpriest: 3
+      witch: 3
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO9473
+      pages: '7'
+type: spell

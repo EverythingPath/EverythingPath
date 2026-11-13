@@ -1,0 +1,53 @@
+_id: lse181k1wvc5k7e9
+_key: '!items!lse181k1wvc5k7e9'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Imbue with Aura
+system:
+  actions:
+    - _id: g477d4lydimkpjcn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You infuse another creature with your divine aura, causing the target
+      to radiate an aura identical to your own clerical aura. The target's
+      actual alignment is not changed, but spells like <i>detect evil</i> or
+      <i>detect good</i> detect only the aura, not the creature's actual
+      alignment. For the duration of this spell, effects influenced by the
+      target's alignment function according to the imposed aura, not the
+      creature's actual aura. When the spell ends, the target's aura returns to
+      normal, and alignmentaffecting magic affects it according to its actual
+      alignment.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '225'
+type: spell

@@ -1,0 +1,53 @@
+_id: jo67xdocgdmk5hhh
+_key: '!items!jo67xdocgdmk5hhh'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-glow-angry-small-teal.webp
+name: Detect Law
+system:
+  actions:
+    - _id: 6077tlsscn70rluw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        units: spec
+        value: concentration, up to 10 min./level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.tr7m97npkbgm4wp7]{detect evil}, except
+      that it detects the auras of lawful creatures, clerics of lawful deities,
+      lawful spells, and lawful magic items, and you are vulnerable to an
+      overwhelming lawful aura if you are chaotic.</p>
+  learnedAt:
+    class:
+      adept: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      shaman: 1
+      spiritualist: 1
+      warpriest: 1
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '267'
+  sr: false
+type: spell

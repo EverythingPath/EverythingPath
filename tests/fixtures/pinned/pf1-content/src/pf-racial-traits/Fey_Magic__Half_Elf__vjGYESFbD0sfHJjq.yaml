@@ -1,0 +1,86 @@
+_id: vjGYESFbD0sfHJjq
+_key: '!items!vjGYESFbD0sfHJjq'
+_stats:
+  coreVersion: '12.331'
+folder: d4bGSdKKLFXKTGuf
+img: systems/pf1/icons/races/half-elf.png
+name: Fey Magic (Half-Elf)
+system:
+  actions:
+    - _id: pikNCcWkZHieUWTw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: l1
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: UF1CWmVsHRLUZVoh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: nlqw6oWNaplZM1v5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: jlQLm3rMXA3M3KWF
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  description:
+    instructions: >-
+      <p>Select one terrain type from the ranger's favored terrain list and
+      select three 0-level druid spells and one 1st-level druid spell when you
+      take this trait.</p><p>update the details tab of this trait
+      accordingly.</p>
+    value: >-
+      <p><strong>Race</strong>: Half-Elf<br /><strong>Replaced
+      Trait(s)</strong>: Keen Senses</p><hr /><p>The character has a mystic
+      connection to one terrain type, selected from the ranger's favored terrain
+      list. The character selects three 0-level druid spells and one 1st-level
+      druid spell. If the character has a Charisma score of 11 or higher, when
+      in the selected terrain, she gains these spells as spell-like abilities
+      that can be cast once per day. The caster level for these effects is equal
+      to the user's character level. The DC for the spell-like abilities is
+      equal to 10 + the spell's level + the user's Charisma modifier. These
+      spells are treated as being from a fey source for the purposes of the
+      druid's resist nature's lure class feature and similar abilities.</p><p>A
+      half-elf can take this trait in place of keen senses.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9456
+      pages: '5'
+  subType: racial
+  tags:
+    - Half-Elf
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

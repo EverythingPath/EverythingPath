@@ -1,0 +1,65 @@
+_id: jz9pCuu5ubrF4wQa
+_key: '!items!jz9pCuu5ubrF4wQa'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/artillery/cannon-simple.webp
+name: Fiend's Mouth Cannon
+system:
+  actions:
+    - _id: f7v4h42f0em5ea4m
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(8, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '150'
+  ammo:
+    type: siege
+  baseTypes:
+    - Fiend's Mouth Cannon
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 8d6;
+      <strong>Critical</strong> x4; <strong>Range</strong> 150 ft.;
+      <strong>Type</strong> B and P</p><p><strong>Crew</strong> 3;
+      <strong>Aim</strong> 1; <strong>Load</strong> 3; <strong>Speed</strong> 0
+      ft.</p><p><strong>Category</strong> Direct-Fire (Huge);
+      <strong>Proficiency</strong> Siege Engine</p><h3>Description</h3><p>These
+      massive cannons are usually crafted in multiple pieces, and sometimes
+      feature the heads of demons, devils, or other fiends at their mouths. Like
+      normal canons, they propel their projectiles with great force. A fiend's
+      mouth cannon has a misfire range of 1 (30 ft.).</p><p>Fiend's mouth cannon
+      balls cost 45 gp and weigh 30 pounds each.</p>
+  hardness: 10
+  hp:
+    base: 140
+  material:
+    base:
+      value: steel
+  price: 9000
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: exotic
+  weaponSubtype: ranged
+type: weapon

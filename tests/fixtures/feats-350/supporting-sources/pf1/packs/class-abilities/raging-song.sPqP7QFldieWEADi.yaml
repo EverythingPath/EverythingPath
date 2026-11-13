@@ -1,0 +1,55 @@
+_id: sPqP7QFldieWEADi
+_key: '!items!sPqP7QFldieWEADi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_24.jpg
+name: Raging Song
+system:
+  abilityType: su
+  actions:
+    - _id: k2ew0jkpm4b7x2tt
+      activation:
+        type: move
+        unchained:
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Skald
+  description:
+    value: >-
+      <p>A skald is trained to use music, oration, and similar performances to
+      inspire his allies to feats of strength and ferocity. At 1st level, a
+      skald can use this ability for a number of rounds per day equal to 3 + his
+      Charisma modifier. For each level thereafter, he can use raging song for 2
+      additional rounds per day.<p>Starting a raging song is a standard action,
+      but it can be maintained each round as a free action. A raging song cannot
+      be disrupted, but it ends immediately if the skald is killed, paralyzed,
+      stunned, knocked unconscious, or otherwise prevented from taking a free
+      action each round to maintain it. A raging song counts as the bard’s
+      bardic performance special ability for any effect that affects bardic
+      performances. A skald may learn bard masterpieces.<p>A raging song has
+      audible components, but not visual components. Affected allies must be
+      able to hear the skald for the song to have any effect. A deaf skald has a
+      20% chance to fail when attempting to use a raging song. If he fails this
+      check, the attempt still counts against his daily limit. Deaf creatures
+      are immune to raging songs.<p>If a raging song affects allies, when the
+      skald begins a raging song and at the start of each ally’s turn in which
+      they can hear the raging song, the skald’s allies must decide whether to
+      accept or refuse its effects. This is not an action. Unconscious allies
+      automatically accept the song. If accepted, the raging song’s effects last
+      for that ally’s turn or until the song ends, whichever comes first.<p>At
+      7th level, a skald can start a raging song as a move action instead of a
+      standard action.</p>
+
+      <p>At 13th level, a skald can start a raging song as a swift action
+      instead.</p>
+  sources:
+    - id: PZO1129
+      pages: '49'
+  subType: classFeat
+  tag: classFeat_ragingSong
+  uses:
+    maxFormula: 3 + @abilities.cha.mod + (floor(@class.level - 1) * 2)
+    per: day
+type: feat
