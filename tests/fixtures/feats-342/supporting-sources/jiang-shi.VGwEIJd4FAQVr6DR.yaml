@@ -1,0 +1,186 @@
+_id: VGwEIJd4FAQVr6DR
+_key: '!items!VGwEIJd4FAQVr6DR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Jiang-Shi
+system:
+  acquired: true
+  changes:
+    - _id: 4rgp503a
+      formula: '2'
+      target: nac
+      type: untyped
+    - _id: 4pmo4e35
+      formula: >-
+        min(@attributes.speed.land.total, max(10, @attributes.speed.land.base -
+        10))
+      operator: set
+      target: landSpeed
+      type: untyped
+    - _id: pnogplep
+      formula: '4'
+      target: str
+      type: untyped
+    - _id: qjmf3epg
+      formula: '6'
+      target: dex
+      type: untyped
+    - _id: sddnbxpc
+      formula: '2'
+      target: int
+      type: untyped
+    - _id: 3mysq0ke
+      formula: '4'
+      target: wis
+      type: untyped
+    - _id: sckwtya3
+      formula: '2'
+      target: cha
+      type: untyped
+    - _id: 4nx4Qnij
+      formula: '5'
+      target: bonusFeats
+      type: untyped
+    - _id: m0v9m9kf
+      formula: '8'
+      target: skill.acr
+      type: racial
+    - _id: 3h1z21r2
+      formula: '8'
+      target: skill.per
+      type: racial
+    - _id: mutayl7n
+      formula: '8'
+      target: skill.ste
+      type: racial
+  crOffset: '2'
+  creatureSubtypes:
+    - augmented
+  creatureTypes:
+    - undead
+  description:
+    instructions: >-
+      <p>Change your alignment in the <strong>Summary tab</strong> to any
+      evil.</p><p>Change all <strong>racial HD</strong> to
+      <strong>D8s</strong>.</p><p>In <strong>Settings tab</strong> change
+      <strong>Ability Score Links</strong> on <strong>Hit Points</strong> to
+      <strong>Charisma</strong>.</p><p>Add <strong>energy resistances</strong>
+      and <strong>damage resistance</strong> in the sheet <strong>Details
+      tab</strong>.</p><p>Set <strong>Fast Healing</strong> in the
+      <strong>Attributes tab</strong>.</p><p>Set <strong>Extra Attacks</strong>
+      on the <strong>Claw</strong> attack to <strong>1</strong>. Add
+      <strong>+2</strong> to the <code>sizeRoll</code> formula like so
+      <code>sizeRoll(1, 4, @size + 2)</code>.</p><p>Mark as checked
+      <strong>Magic</strong> on <strong>Add-on</strong> for both
+      <strong>Bite</strong> and <strong>Claw</strong> attacks.</p><p>Change
+      <strong>Constitution</strong> in the <strong>Attributes tab</strong> and
+      set it to <strong>-</strong>.</p>
+    value: >-
+      <p><strong>Acquired/Inherited Template</strong> Acquired<br
+      /><strong>Simple Template</strong> No<br /><strong>Usable with
+      Summons</strong> No</p><p>Jiang-shis (often known as "hopping vampires")
+      are undead humanoid creatures that feed on the exhaled life energy of the
+      living. A jiang-shi’s appearance is based on the state of the creature’s
+      corpse at the time of its reanimation. Regardless of the state of decay,
+      most jiang-shis wear clothing or armor that is at least one generation out
+      of style. Additionally, each has a short parchment prayer scroll affixed
+      to its brow by stitches; originally intended to protect the body from
+      restless spirits, this scroll grants a jiang-shi immunity to magical
+      effects unleashed by items like scrolls and wands.</p><p>A jiang-shi is
+      created when a restless spirit does not leave its corpse at the time of
+      death, and is instead allowed to fester and putrefy within. At some point
+      during the body’s decomposition, the thing rises in its grotesque form and
+      seeks living creatures to feed upon.</p><p>"Jiang-shi" is an acquired
+      template that can be added to any living creature with 5 or more Hit Dice
+      (referred to hereafter as the base creature). Most jiang-shis were once
+      humans, but any creature that undergoes specific rites can acquire the
+      template. A jiang-shi uses the base creature’s stats and abilities except
+      as noted here.</p><p><strong>CR:</strong> Same as the base creature
+      +2.</p><p><strong>Alignment:</strong> Any
+      evil.</p><p><strong>Type:</strong> The creature’s type changes to undead
+      (augmented). Do not recalculate class Hit Dice, BAB, or
+      saves.</p><p><strong>Senses:</strong> A jiang-shi vampire gains darkvision
+      60 feet. It also gains the ability to sense the breathing of living
+      creatures—a jiang-shi has blindsight to a range of 60 feet against
+      creatures that breathe. A creature may hold its breath to prevent a
+      jiang-shi from noticing it in this manner.</p><p><strong>Armor
+      Class:</strong> Natural armor improves by +2.</p><p><strong>Hit
+      Dice:</strong> Change all racial Hit Dice to d8s. Class Hit Dice are
+      unaffected. As undead, jiang-shis use their Charisma modifier to determine
+      bonus hit points (instead of Constitution).</p><p><strong>Defensive
+      Abilities:</strong> A jiang-shi gains channel resistance +4, DR 10/magic
+      and slashing, and resistance to cold 20, in addition to all of the
+      defensive abilities granted by the undead type. A jiang-shi also gains
+      fast healing 5. In addition, all jiang-shis gain the following defensive
+      ability.</p><ul><li><p>@UUID[Compendium.pf1.template-abilities.Item.NtJrBCMl4UCuuqDW]</p></li></ul><p><strong>Weaknesses:</strong>
+      Jiang-shis recoil from mirrors or the sound of handbells rung within 10
+      feet of them. Cooked rice, which to jiang-shis mocks the fundamental fact
+      that they no longer eat food, shames them into recoiling as well. These
+      things don’t harm a jiang-shi vampire—they merely keep it at bay for a
+      period of time. A recoiling jiang-shi vampire must stay at least 5 feet
+      away from the object of its revulsion, and cannot touch or make melee
+      attacks against a creature brandishing the object during that round.
+      Holding a jiang-shi vampire at bay takes a standard action. After being
+      held at bay for 1 round, a jiang-shi vampire can attempt to overcome its
+      revulsion of the object and function normally each round it makes a
+      @Save[will;dc=20] save at the start of its turn.</p><p><em>Destroying a
+      Jiang-Shi</em>: If reduced to 0 hit points, a jiang-shi vampire crumbles
+      to dust but is not destroyed. It reforms in 1 minute with 1 hit point in
+      the same space, or the nearest unoccupied space. Scattering the dust
+      before the jiang-shi reforms destroys it permanently, as does mixing rice
+      into the dust with a dose of holy water. Jiang-shi vampires are also
+      susceptible to wooden weapons carved from peach trees, as such weapons
+      represent the unity of all elements and life to these creatures. A wooden
+      weapon carved from a peach tree automatically bypasses a jiang-shi
+      vampire’s damage reduction. Additionally, any successful hit from such a
+      weapon that reduces a jiang-shi to 0 hit points immediately destroys the
+      creature. Although they normally retreat from daylight, jiang-shi vampires
+      are not destroyed by sunlight like regular vampires and can move around
+      during the day without harm.</p><p><strong>Speed:</strong> A jiang-shi
+      moves only by hopping. This mode of movement is somewhat less swift than
+      regular movement, and thus a jiang-shi’s base speed is reduced by 10 feet
+      from the base creature’s speed, to a minimum of 10 feet. This unusual mode
+      of movement allows the jiang-shi to ignore the effects of difficult
+      terrain on movement, and makes it impossible to trip. Other speeds (like
+      fly or swim speeds) are not affected by this
+      reduction.</p><p><strong>Melee:</strong> A jiang-shi gains a bite attack
+      and 2 claw attacks if the base creature didn’t have them. Damage for the
+      bite attack depends on the jiang-shi’s size, but its claw attacks do
+      damage as a creature two size categories larger. For a Medium jiang-shi, a
+      bite attack deals 1d6 points of damage and a claw attack deals 1d8 points
+      of damage. A jiang-shi’s claws are even more dangerous than this,
+      though—see the
+      @UUID[Compendium.pf1.template-abilities.Item.FuxJPnq1cUpHoUHn] special
+      attack below. A jiang-shi’s natural weapons are treated as magic weapons
+      for the purpose of overcoming damage reduction.</p><p><strong>Special
+      Attacks:</strong> A jiang-shi gains several special attacks. Save DCs are
+      equal to 10 + 1/2 the jiang-shi’s Hit Dice + the jiang-shi’s Charisma
+      modifier unless otherwise
+      noted.</p><ul><li><p>@UUID[Compendium.pf1.template-abilities.Item.FuxJPnq1cUpHoUHn]</p></li><li><p>@UUID[Compendium.pf1.template-abilities.Item.XCuxIeOyCiCQAvdR]</p></li></ul><p><strong>Ability
+      Scores:</strong> Str +4, Dex +6, Int +2, Wis +4, Cha +2. As an undead
+      creature, a jiang-shi has no Constitution score.<br />Feats: Jiang-shis
+      gain Alertness, Dodge, Mobility, Skill Focus (Acrobatics), and Spring
+      Attack as bonus feats.</p><p><strong>Skills:</strong> Jiang-shis gain a +8
+      racial bonus on Acrobatics, Perception, and Stealth checks.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq
+      - uuid: Compendium.pf1.monster-abilities.Item.aEP8PdxGohVVBkei
+      - uuid: Compendium.pf1.monster-abilities.Item.1e5wGWxYWt0maxmB
+      - uuid: Compendium.pf1.monster-abilities.Item.kcCRPAHsrWouTbij
+      - uuid: Compendium.pf1.template-abilities.Item.NtJrBCMl4UCuuqDW
+      - uuid: Compendium.pf1.monster-abilities.Item.szjeStouwI3F3WdP
+      - uuid: Compendium.pf1.monster-abilities.Item.MZnbCVzqpvPsMvfT
+      - uuid: Compendium.pf1.template-abilities.Item.FuxJPnq1cUpHoUHn
+      - uuid: Compendium.pf1.template-abilities.Item.XCuxIeOyCiCQAvdR
+      - uuid: Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0
+      - uuid: Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb
+      - uuid: Compendium.pf1.feats.Item.R7L4SlGRlnThqFrP
+      - uuid: Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc
+      - uuid: Compendium.pf1.feats.Item.ugQyUpqPBDsqLyra
+  sources:
+    - id: PZO1120
+      pages: 278-279
+  subType: template
+type: feat

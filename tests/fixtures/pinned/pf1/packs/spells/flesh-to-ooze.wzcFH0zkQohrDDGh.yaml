@@ -1,0 +1,64 @@
+_id: wzcFH0zkQohrDDGh
+_key: '!items!wzcFH0zkQohrDDGh'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/acid/dissolve-arm-flesh.webp
+name: Flesh to Ooze
+system:
+  actions:
+    - _id: hfFuePkm0bOzbMXK
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates, Will partial, see text
+        type: fort
+      target:
+        value: 1 creature or see text
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions like
+      @UUID[Compendium.pf1.spells.t8ei2mrmqg7252vw]{baleful polymorph}, except
+      the target becomes an ooze. A creature of 3 HD or less becomes a gray
+      ooze, 4–9 HD becomes a gelatinous cube or ochre jelly, and 10+ HD becomes
+      a black pudding. Alternatively, instead of a creature you may target a
+      quantity of inert flesh (such as that created by the <em>stone to
+      flesh</em> spell) of sufficient mass, which becomes an ooze of your
+      choice.</p><p>Because a target’s gear does not transform with it, any
+      items fall under or within the ooze’s body, which may mean the items are
+      destroyed. If the ooze has the split ability, splitting the ooze creates
+      one ooze that retains the creature’s original identity (for the purpose of
+      memories or restoring the creature) and one normal mindless ooze of that
+      type.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 100
+    value: alchemical reagents worth 100 gp
+  school: trs
+  sources:
+    - id: PZO9210
+      pages: '19'
+  sr: false
+  subschool:
+    - polymorph
+  tags:
+    - '3.5'
+type: spell

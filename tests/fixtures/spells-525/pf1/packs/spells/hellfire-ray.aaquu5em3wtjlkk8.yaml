@@ -1,0 +1,80 @@
+_id: aaquu5em3wtjlkk8
+_key: '!items!aaquu5em3wtjlkk8'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/blast-jet-stream-embers-red.webp
+name: Hellfire Ray
+system:
+  actions:
+    - _id: ytraw6tasacv5pob
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(@cl, 15))d6
+            types:
+              - fire
+              - Unholy
+      duration:
+        units: inst
+      effect: ray
+      extraAttacks:
+        formula:
+          count: max(1, floor(((@cl + 1) / 4) - 3))
+        type: custom
+      name: Use
+      range:
+        units: close
+      save:
+        description: none (see text)
+      touch: true
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A blast of hellfire blazes from your hands. You can fire one ray, plus
+      one additional ray for every 4 caster levels beyond 11th (to a maximum of
+      three rays at 19th level). Each ray requires a ranged touch attack to hit
+      and deals 1d6 points of damage per caster level (maximum 15d6). Half the
+      damage is fire damage, but the other half results directly from unholy
+      power and is therefore not subject to being reduced by fire resistance.
+      The rays can be fired at the same target or at different targets, but all
+      rays must be fired simultaneously and aimed at targets within 30 feet of
+      each other.</p><p>Any creature killed by this spell must attempt a Will
+      saving throw; failure means the creature's soul is damned to Hell as a
+      burst of brimstone appears around its corpse. A nonevil spellcaster
+      attempting to bring the creature back from the dead  must attempt a caster
+      level check (DC = 10 + the slain creature's level) to succeed; failure
+      means the spellcaster cannot try again for 1 day. Evil spellcasters can
+      raise the slain character normally, without requiring a check. A raised
+      character’s soul is no longer automatically consigned to Hell.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      magus: 6
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: any unholy symbol or heretical tome
+  school: evo
+  sources:
+    - id: PZO1139
+      pages: 184, 46
+type: spell

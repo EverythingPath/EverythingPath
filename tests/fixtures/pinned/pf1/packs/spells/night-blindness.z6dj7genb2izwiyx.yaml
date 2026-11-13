@@ -1,0 +1,67 @@
+_id: z6dj7genb2izwiyx
+_key: '!items!z6dj7genb2izwiyx'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Night Blindness
+system:
+  actions:
+    - _id: 40powhwha3ia8u7a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>Your target's vision becomes impaired as if the light level were one
+      step lower, treating bright light as normal light, normal light as dim
+      light, and dim light as darkness. In addition, the subject gains no
+      benefit from darkvision, low-light vision, or the see in darkness ability.
+      The subject gains a +4 bonus on saving throws to resist the blind or
+      dazzled condition caused by bright light (such as flare). <i>Remove
+      blindness/deafness</i> dispels <i>night blindness</i>.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 1
+      bard: 1
+      bloodrager: 1
+      cleric: 2
+      mesmerist: 1
+      oracle: 2
+      psychic: 1
+      shaman: 2
+      skald: 1
+      sorcerer: 1
+      spiritualist: 2
+      warpriest: 2
+      witch: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO9462
+      pages: '19'
+    - id: PZO9208
+      pages: '57'
+  sr: false
+type: spell

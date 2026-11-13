@@ -1,0 +1,1003 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/1sU57tRb1My6XZMC",
+      "upstreamKey": "pf1/1sU57tRb1My6XZMC",
+      "pack": "monster-abilities",
+      "name": "Unarmed Strike",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Unarmed Strike"],
+          "groups": ["close", "monk", "natural", "tribal"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d3",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.</p><p>An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike.</p><p>Unarmed strikes do not count as natural weapons (see Combat in core rulebook).</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "142, 149"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "h1prw1ahiomk0bs5",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "nonlethal": true,
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "unarmedStrike"
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "damage",
+          "text": "The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls."
+        },
+        {
+          "target": "attack",
+          "text": "Unarmed strikes do not count as natural weapons (see Combat in core rulebook)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3xwmfkQBA3R0Cozz",
+      "upstreamKey": "pf1/3xwmfkQBA3R0Cozz",
+      "pack": "monster-abilities",
+      "name": "Gore",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Gore"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["piercing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural weapon with your horn, antlers, or similar appendage.</p><p>It deals piercing damage.</p><p>This is typical bite attack, your particular one may vary from this.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "062rhfvu44k49265",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["piercing"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "gore"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural weapon with your horn, antlers, or similar appendage."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/5gG3V7rB4Q7LoBFT",
+      "upstreamKey": "pf1/5gG3V7rB4Q7LoBFT",
+      "pack": "monster-abilities",
+      "name": "Tentacle",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Tentacle"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A secondary natural attack with your tentacle, pseudopod, or similar appendage.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "f2ubtsgnwupcixhz",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "tentacle"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A secondary natural attack with your tentacle, pseudopod, or similar appendage."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/GrbQIXcmp5VXxYA7",
+      "upstreamKey": "pf1/GrbQIXcmp5VXxYA7",
+      "pack": "monster-abilities",
+      "name": "Slam",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Slam"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural weapon attack where you slam with a part of your body.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "lyysy62a9hqkvo9c",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "slam"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural weapon attack where you slam with a part of your body."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/MZnbCVzqpvPsMvfT",
+      "upstreamKey": "pf1/MZnbCVzqpvPsMvfT",
+      "pack": "monster-abilities",
+      "name": "Claw",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Claw"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning", "slashing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural weapon using your claws on your forelimbs or arms.</p><p>It deals bludgeoning and slashing damage, whichever is most beneficial.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "4lo88d47gxkw8wts",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning", "slashing"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "claw"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural weapon using your claws on your forelimbs or arms."
+        },
+        {
+          "target": "damage",
+          "text": "It deals bludgeoning and slashing damage, whichever is most beneficial."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/PfmCJRQ9qOgwcUxb",
+      "upstreamKey": "pf1/PfmCJRQ9qOgwcUxb",
+      "pack": "monster-abilities",
+      "name": "Talon",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Talon"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["slashing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural attack with talons on your feet.</p><p>It deals slashing damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rd1onybjuhk5taos",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["slashing"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "talon"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural attack with talons on your feet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/cuOCNj2vlx0Q1X3J",
+      "upstreamKey": "pf1/cuOCNj2vlx0Q1X3J",
+      "pack": "monster-abilities",
+      "name": "Sting",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Sting"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["piercing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural weapon attack with a sharp stinger attached to some body part.</p><p>It deals piercing damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "z4v148zqm8otbmnh",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["piercing"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "sting"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural weapon attack with a sharp stinger attached to some body part."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h9ogVoyFP7qMBJhg",
+      "upstreamKey": "pf1/h9ogVoyFP7qMBJhg",
+      "pack": "monster-abilities",
+      "name": "Wing",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Wing"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A secondary natural attack with your wing, slapping or buffeting with it.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "4z61o2ool2te0ork",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "wing"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A secondary natural attack with your wing, slapping or buffeting with it."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/iMix2jm1eh8V6cCN",
+      "upstreamKey": "pf1/iMix2jm1eh8V6cCN",
+      "pack": "monster-abilities",
+      "name": "Pincer",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Pincers"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A secondary natural attack where you crush with a pincer.</p><p>It deals bludgeoning damage.</p><p>This is a <em>typical</em> pincer attack, your particular one may vary from this.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "lyysy62a9hqkvo9c",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "slam"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A secondary natural attack where you crush with a pincer."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ogIJ8XWiWFlJIF6S",
+      "upstreamKey": "pf1/ogIJ8XWiWFlJIF6S",
+      "pack": "monster-abilities",
+      "name": "Tail Slap",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Tail Slap"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A secondary natural attack with your tail.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "54ucgahdjkmgzp2s",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "tailSlap"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A secondary natural attack with your tail."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/pX3qRL8U1wfBcH80",
+      "upstreamKey": "pf1/pX3qRL8U1wfBcH80",
+      "pack": "monster-abilities",
+      "name": "Hoof",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Hoof"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d4",
+          "damageTypes": ["bludgeoning"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A secondary natural weapon attack with your hoof.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "y358eq8sk1vh5ts9",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": ["bludgeoning"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "hoof"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A secondary natural weapon attack with your hoof."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/qP52Vv8OelEql6Oq",
+      "upstreamKey": "pf1/qP52Vv8OelEql6Oq",
+      "pack": "monster-abilities",
+      "name": "Swarm Attack",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": [],
+          "groups": [],
+          "proficiency": "natural",
+          "handedness": "light",
+          "dice": null,
+          "damageTypes": ["untyped"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>Creatures with the swarm subtype don't make standard melee attacks. Instead, they deal automatic damage to any creature whose space they occupy at the end of their move, with no attack roll needed. Swarm attacks are not subject to a miss chance for concealment or cover. A swarm's statistics block has &quot;swarm&quot; in the Melee entries, with no attack bonus given. The amount of damage a swarm deals is based on its Hit Dice, as shown below.</p><table><thead><tr><th>Swarm HD</th><th>Swarm Base Damage</th></tr></thead><tbody><tr><td><p>1-5</p></td><td><p>1d6</p></td></tr><tr><td><p>6-10</p></td><td><p>2d6</p></td></tr><tr><td><p>11-15</p></td><td><p>3d6</p></td></tr><tr><td><p>16-20</p></td><td><p>4d6</p></td></tr><tr><td><p>21 or more</p></td><td><p>5d6</p></td></tr></tbody></table><p>A swarm's attacks are nonmagical, unless the swarm's description states otherwise. Damage reduction sufficient to reduce a swarm attack's damage to 0, being incorporeal, or other special abilities usually give a creature immunity (or at least resistance) to damage from a swarm. Some swarms also have acid, blood drain, poison, or other special attacks in addition to normal damage.</p><p>Swarms do not threaten creatures, and do not make attacks of opportunity with their swarm attack. However, they distract foes whose squares they occupy, as described below.</p><p>Swarms possess the distraction universal monster rule. Spellcasting or concentrating on spells within the area of a swarm requires a caster level check (DC 20 + spell level). Using skills that involve patience and concentration requires a DC 20 Will save.</p>",
+      "sources": [
+        {
+          "book": "PZO1112",
+          "pages": "313"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf"
+        },
+        {
+          "field": "weapon.damage",
+          "reason": "Damage formula needs feature mapping.",
+          "value": "(ceil(@attributes.hd.total / 5))d6"
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "RPbC0gO0bojimD6B",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@attributes.hd.total / 5))d6",
+                      "types": ["untyped"]
+                    }
+                  ]
+                },
+                "name": "Attack"
+              }
+            ],
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf"
+                }
+              ]
+            },
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "Creatures with the swarm subtype don't make standard melee attacks. Instead, they deal automatic damage to any creature whose space they occupy at the end of their move, with no attack roll needed."
+        },
+        {
+          "target": "attack",
+          "text": "Swarm attacks are not subject to a miss chance for concealment or cover."
+        },
+        {
+          "target": "damage",
+          "text": "The amount of damage a swarm deals is based on its Hit Dice: 1d6 at 1-5 HD, 2d6 at 6-10 HD, 3d6 at 11-15 HD, 4d6 at 16-20 HD and 5d6 at 21 or more HD."
+        },
+        {
+          "target": "damage",
+          "text": "A swarm's attacks are nonmagical, unless the swarm's description states otherwise. Damage reduction sufficient to reduce a swarm attack's damage to 0, being incorporeal, or other special abilities usually give a creature immunity (or at least resistance) to damage from a swarm."
+        },
+        {
+          "text": "Swarms do not threaten creatures, and do not make attacks of opportunity with their swarm attack. However, they distract foes whose squares they occupy."
+        },
+        {
+          "text": "Swarms possess the distraction universal monster rule. Spellcasting or concentrating on spells within the area of a swarm requires a caster level check (DC 20 + spell level). Using skills that involve patience and concentration requires a DC 20 Will save."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/szjeStouwI3F3WdP",
+      "upstreamKey": "pf1/szjeStouwI3F3WdP",
+      "pack": "monster-abilities",
+      "name": "Bite",
+      "detail": {
+        "kind": "item",
+        "consumable": false,
+        "price": 0,
+        "weight": 0,
+        "weapon": {
+          "baseTypes": ["Bite"],
+          "groups": ["natural"],
+          "proficiency": "always",
+          "handedness": "light",
+          "dice": "1d6",
+          "damageTypes": ["piercing", "bludgeoning", "slashing"],
+          "threat": 20,
+          "mult": 2,
+          "finesse": false,
+          "thrown": false
+        }
+      },
+      "description": "<p>A primary natural weapon that crushes, punctures and tears with teeth and jaws.</p><p>It deals bludgeoning, slashing or piercing damage, whichever is most beneficial one.</p><hr><p>For general rules on natural attacks, see: Natural Attacks (UMR).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "jxtofrfc2lcw0osl",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": ["piercing", "bludgeoning", "slashing"]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "bite"
+              }
+            ],
+            "held": null
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "attack",
+          "text": "A primary natural weapon that crushes, punctures and tears with teeth and jaws."
+        },
+        {
+          "target": "damage",
+          "text": "It deals bludgeoning, slashing or piercing damage, whichever is most beneficial one."
+        }
+      ]
+    }
+  ],
+  "closure": []
+}

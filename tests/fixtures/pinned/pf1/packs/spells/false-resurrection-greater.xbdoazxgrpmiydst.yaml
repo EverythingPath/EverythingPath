@@ -1,0 +1,59 @@
+_id: xbdoazxgrpmiydst
+_key: '!items!xbdoazxgrpmiydst'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/unholy/demons-horned-glowing-pink.webp
+name: False Resurrection, Greater
+system:
+  actions:
+    - _id: xun545cvnnbvvsvi
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      target:
+        value: dead creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.338vg8knwliacgbi]{false resurrection} except
+      that it calls a belier devil with the young simple template
+      (<em>Pathfinder RPG Bestiary 2</em> 85, 292) to possess the body and all
+      parts of <em>false resurrection</em> that function like
+      <em>resurrection</em> instead function like true <em>resurrection</em>.
+      Attempts to identify greater <em>false resurrection</em> with a skill
+      check incorrectly identify it as
+      @UUID[Compendium.pf1.spells.mxqi375ya2rka7cp]{true resurrection} (see the
+      ruse descriptor on page 192). A fooled viewer mistakes greater <em>false
+      resurrection</em>'s aura as the lingering aura of an instantaneous
+      conjuration effect.</p>
+  descriptors:
+    - evil
+    - lawful
+    - ruse
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+  level: 9
+  materials:
+    gpValue: 25000
+    value: diamond worth 25,000 gp
+  school: con
+  sources:
+    - id: PZO1134
+      pages: '214'
+  subschool:
+    - calling
+type: spell
