@@ -1,0 +1,118 @@
+_id: xhzme0v6tjq95fg6
+_key: '!items!xhzme0v6tjq95fg6'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/projectile-fireball-sparks-orange.webp
+name: Meteor Swarm
+system:
+  actions:
+    - _id: k25n16s92l4jdokm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: four 40-ft.-radius spreads, see text
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: long
+      save:
+        description: none or Reflex half, see text
+        type: ref
+    - _id: dvpQesUEbDNJdk32
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Target one Meteor
+      range:
+        units: long
+      target:
+        value: one creature
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: JgrqZj04oXssbUCY
+      ability:
+        critRange: null
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 40-ft.-radius spreads, see text
+      damage:
+        parts:
+          - formula: 6d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#ff9500'
+        size: '40'
+        type: circle
+      name: Explosion
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Meteor swarm</i> is a very powerful and spectacular spell that is
+      similar to <i>fireball</i> in many aspects. When you cast it, four
+      2-foot-diameter spheres spring from your outstretched hand and streak in
+      straight lines to the spots you select. The meteor spheres leave a fiery
+      trail of sparks.</p><p>If you aim a sphere at a specific creature, you may
+      make a ranged touch attack to strike the target with the meteor. Any
+      creature struck by a sphere takes 2d6 points of bludgeoning damage (no
+      save) and takes a -4 penalty on the saving throw against the sphere's fire
+      damage (see below). If a targeted sphere misses its target, it simply
+      explodes at the nearest corner of the target's space. You may aim more
+      than one sphere at the same target.</p><p>Once a sphere reaches its
+      destination, it explodes in a 40-foot-radius spread, dealing 6d6 points of
+      fire damage to each creature in the area. If a creature is within the area
+      of more than one sphere, it must save separately against each. Despite
+      stemming from separate spheres, all of the fire damage is added together
+      after the saves have been made, and fire resistance is applied only
+      once.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    bloodline:
+      Boreal: 9
+      Infernal: 9
+      Orc: 9
+      Starsoul: 9
+    class:
+      arcanist: 9
+      sorcerer: 9
+      wizard: 9
+    subDomain:
+      Stars: 9
+  level: 9
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '313'
+type: spell

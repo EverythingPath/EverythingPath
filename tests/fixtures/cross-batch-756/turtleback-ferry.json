@@ -1,0 +1,304 @@
+{
+  "source": "Frozen #756 snapshot from feature head 51fe093d: Regional Recluse - Turtleback Ferry (Varisia) and its content closure from tests/fixtures/traits-371/preview.json, after #370 re-bound it, and #370's own Urglin entry from tests/fixtures/traits-370/preview.json.",
+  "traits371": [
+    {
+      "externalKey": "pf1-content/EtUNYMr9ykH2XhZA",
+      "upstreamKey": "pf1-content/EtUNYMr9ykH2XhZA",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Turtleback Ferry (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong>: Varisia</p><p><strong>Benefits</strong>: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Turtleback Ferry</strong></p><p>Gain a +1 bonus to damage on all attacks against creatures of the giant type.</p><p><strong><br>Special Note</strong></p><p>This is one of five versions of this trait. Other versions can be found here:</p><p><a href=\"catalog:pf1-content/QezjzIjvbfIxTLPD\">Regional Recluse - Arsmeril or Crying Leaf (Varisia)</a></p><p><a href=\"catalog:pf1-content/SUxxga9Juql4kY3J\">Regional Recluse - Ilsurian (Varisia)</a></p><p><a href=\"catalog:pf1-content/qDxSXompaz69Ceqj\">Regional Recluse - Sanos Forest or Whistledown (Varisia)</a></p><p><a href=\"catalog:pf1-content/BDByEeeSK08bn8gp\">Regional Recluse - Urglin (Varisia)</a></p>",
+      "prerequisiteText": "Varisia",
+      "prerequisites": [
+        {
+          "unchecked": "Varisia",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        },
+        {
+          "target": "damage",
+          "bonusType": "untyped",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "on attacks against creatures of the giant type"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your home community prides itself on remaining independent from Varisia’s city-states.\nRequirements: Varisia\nBenefits: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.\nTurtleback Ferry\nGain a +1 bonus to damage on all attacks against creatures of the giant type.\nSpecial Note\nThis is one of five versions of this trait. Other versions can be found here:\nRegional Recluse - Arsmeril or Crying Leaf (Varisia)\nRegional Recluse - Ilsurian (Varisia)\nRegional Recluse - Sanos Forest or Whistledown (Varisia)\nRegional Recluse - Urglin (Varisia)"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/qDxSXompaz69Ceqj",
+      "upstreamKey": "pf1-content/qDxSXompaz69Ceqj",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Sanos Forest or Whistledown (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong>: Varisia</p><p><strong>Benefits</strong>: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Sanos Forest or Whistledown</strong></p><p>Gain Gnome as a bonus language. If you already have this language, gain a +1 trait bonus on Stealth checks made in forested areas.</p><hr>",
+      "prerequisiteText": "Varisia",
+      "prerequisites": [
+        {
+          "unchecked": "Varisia",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["gnome"]
+          }
+        },
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "",
+            "text": "+[[1]] Trait bonus on Stealth checks made in forested areas."
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/SUxxga9Juql4kY3J",
+      "upstreamKey": "pf1-content/SUxxga9Juql4kY3J",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Ilsurian (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong></p><p>Varisia</p><p><strong>Benefits</strong></p><p>Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Ilsurian</strong></p><p>Gain proficiency with light shields.</p><p><strong>Special Note</strong></p><p>This is one of five versions of this trait. Other versions can be found here:</p><p><a href=\"catalog:pf1-content/QezjzIjvbfIxTLPD\">Regional Recluse - Arsmeril or Crying Leaf (Varisia)</a></p><p><a href=\"catalog:pf1-content/qDxSXompaz69Ceqj\">Regional Recluse - Sanos Forest or Whistledown (Varisia)</a></p><p><a href=\"catalog:pf1-content/EtUNYMr9ykH2XhZA\">Regional Recluse - Turtleback Ferry (Varisia)</a></p><p><a href=\"catalog:pf1-content/BDByEeeSK08bn8gp\">Regional Recluse - Urglin (Varisia)</a></p>",
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": ["light shields"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/QezjzIjvbfIxTLPD",
+      "upstreamKey": "pf1-content/QezjzIjvbfIxTLPD",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Arsmeril or Crying Leaf (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong>: Varisia</p><p><strong>Benefits</strong>: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Arsmeril or Crying Leaf</strong></p><p>Gain a +1 trait bonus on Perception checks made at night.</p><p><strong>Special Note</strong></p><p>This is one of five versions of this trait. Other versions can be found here:</p><p><a href=\"catalog:pf1-content/SUxxga9Juql4kY3J\">Regional Recluse - Ilsurian (Varisia)</a></p><p><a href=\"catalog:pf1-content/qDxSXompaz69Ceqj\">Regional Recluse - Sanos Forest or Whistledown (Varisia)</a></p><p><a href=\"catalog:pf1-content/EtUNYMr9ykH2XhZA\">Regional Recluse - Turtleback Ferry (Varisia)</a></p><p><a href=\"catalog:pf1-content/BDByEeeSK08bn8gp\">Regional Recluse - Urglin (Varisia)</a></p>",
+      "prerequisiteText": "Varisia",
+      "prerequisites": [
+        {
+          "unchecked": "Varisia",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "skill.per",
+            "text": "+[[1]] Trait bonus on checks made at night."
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/BDByEeeSK08bn8gp",
+      "upstreamKey": "pf1-content/BDByEeeSK08bn8gp",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Urglin (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong>: Varisia</p><p><strong>Benefits</strong>: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Urglin</strong></p><p>Gain Orc as a bonus language. If you already know this language, gain a +1 trait bonus on Intimidate checks.</p>",
+      "prerequisiteText": "Varisia",
+      "prerequisites": [
+        {
+          "unchecked": "Varisia",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        },
+        {
+          "target": "skill.int",
+          "bonusType": "trait",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "if you already know Orc"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["orc"]
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "",
+            "formula": "1",
+            "type": "trait"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Your home community prides itself on remaining independent from Varisia’s city-states.\nRequirements: Varisia\nBenefits: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.\nUrglin\nGain Orc as a bonus language. If you already know this language, gain a +1 trait bonus on Intimidate checks."
+        }
+      ]
+    }
+  ],
+  "traits370": [
+    {
+      "externalKey": "pf1-content/BDByEeeSK08bn8gp",
+      "upstreamKey": "pf1-content/BDByEeeSK08bn8gp",
+      "pack": "pf-traits",
+      "name": "Regional Recluse - Urglin (Varisia)",
+      "detail": {
+        "kind": "trait",
+        "traitType": "region"
+      },
+      "description": "<p><em>Your home community prides itself on remaining independent from Varisia’s city-states.</em></p><p><strong>Requirements</strong>: Varisia</p><p><strong>Benefits</strong>: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.</p><p><strong>Urglin</strong></p><p>Gain Orc as a bonus language. If you already know this language, gain a +1 trait bonus on Intimidate checks.</p>",
+      "prerequisiteText": "Varisia",
+      "prerequisites": [
+        {
+          "unchecked": "Varisia",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9425",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.sur",
+          "bonusType": "trait",
+          "value": 1
+        },
+        {
+          "target": "skill.int",
+          "bonusType": "trait",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "if you already know Orc"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["orc"]
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "",
+            "formula": "1",
+            "type": "trait"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Your home community prides itself on remaining independent from Varisia’s city-states.\nRequirements: Varisia\nBenefits: Choose one of Varisia’s unaffiliated settlements from this list below. You gain a +1 trait bonus on Survival checks and one of the following benefits.\nUrglin\nGain Orc as a bonus language. If you already know this language, gain a +1 trait bonus on Intimidate checks."
+        }
+      ]
+    }
+  ]
+}

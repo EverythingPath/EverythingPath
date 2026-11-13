@@ -1,0 +1,49 @@
+_id: 4SkqICrRfq3BYu2j
+_key: '!items!4SkqICrRfq3BYu2j'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Speak with Waves
+system:
+  actions:
+    - _id: FzaWzTF8QuQ6Scpl
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.wgm8mm1za909pwch]{stone tell} but allows
+      conversations only with a body of standing or flowing fresh water at least
+      as large as you are. Flowing water can generally speak about events
+      happening upstream but not events happening downstream.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      druid: 6
+      hunter: 6
+      shaman: 7
+  level: 6
+  school: div
+  sources:
+    - id: PZO9483
+      pages: '14'
+  sr: false
+type: spell

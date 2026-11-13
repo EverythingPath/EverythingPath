@@ -1,0 +1,48 @@
+_id: pp8bk7vlpgtdv77c
+_key: '!items!pp8bk7vlpgtdv77c'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Thought Worm I
+system:
+  actions:
+    - _id: 9of1i9wwpzfl60dz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You implant a minor suggestion within the target creature's psyche that
+      makes it less inclined to resist mental intrusion. The target creature
+      takes a -2 penalty on Will saves against all mind-affecting spells and
+      effects for the duration of the spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '11'
+  subschool:
+    - compulsion
+type: spell

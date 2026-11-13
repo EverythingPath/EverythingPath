@@ -1,0 +1,57 @@
+_id: xX5Xwkv4hrdbRZV3
+_key: '!items!xX5Xwkv4hrdbRZV3'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Sand Whirlwind
+system:
+  actions:
+    - _id: uWUq52yRcn6jgqbD
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (blinding only)
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A whirling cloud of sand strikes the target, blinding it and hampering
+      its ability to speak. To speak while affected by the spell, the target
+      must make a Concentration check (DC equal to the DC of this spell). If the
+      target tries to cast a spell, the Concentration DC increases by the level
+      of the spell being cast. A successful Will save negates the blindness but
+      not the speechhampering effect.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  materials:
+    value: a handful of sand, dust, or fine powder
+  school: con
+  sources:
+    - id: PZO9405
+      pages: '25'
+  sr: false
+  subschool:
+    - creation
+  tags:
+    - '3.5'
+type: spell

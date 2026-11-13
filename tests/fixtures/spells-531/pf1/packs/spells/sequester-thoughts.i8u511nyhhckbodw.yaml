@@ -1,0 +1,73 @@
+_id: i8u511nyhhckbodw
+_key: '!items!i8u511nyhhckbodw'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Sequester Thoughts
+system:
+  actions:
+    - _id: ok51faw4rfaszlvm
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until discharged (see text)
+      name: Use
+      range:
+        units: personal
+      target:
+        value: one willing creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Sequester thoughts</i> allows you to erase a creature's memory of
+      either an event lasting not more than 1 minute per caster level or all of
+      its knowledge about a single topic (using the GM's discretion as to what
+      constitutes a single topic). For example, you could erase a single battle
+      from a creature's memory, or all knowledge of a plot to assassinate a
+      king.</p><p>The memories you remove are stored within the gem used at the
+      time of casting. If the gem is shattered, the memories return to the
+      creature as long as the two are within 30 feet of each other. Once
+      <i>sequester thoughts</i> has been cast, the spell remains active on the
+      gem and can be dispelled (which shatters it). No portion of the spell
+      remains active on the target creature, and the target does not radiate
+      magic as a consequence of the spell, nor can its memories be returned by
+      dispelling the creature or subjecting it to antimagic. If the gem is
+      shattered or dispelled out of range from the creature, the thoughts
+      sequestered within are forever lost save by the use of <i>wish</i>,
+      <i>miracle</i>, or the like.</p><p><i>Sequester thoughts</i> protects
+      against <i>detect thoughts</i>, <i>zone of truth</i>, <i>discern lies</i>,
+      <i>and similar spells where the memories</i> removed are concerned, though
+      careful questioning may reveal the gaps in the creature's memory, or that
+      it has been affected by the spell. Note that the creature itself does not
+      remember any details of what memories were removed until the gem is
+      broken.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 3
+      skald: 3
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    gpValue: 500
+    value: a gemstone worth at least 500 gp
+  school: enc
+  sources:
+    - id: PZO9235
+      pages: '58'
+  sr: false
+  subschool:
+    - compulsion
+type: spell
