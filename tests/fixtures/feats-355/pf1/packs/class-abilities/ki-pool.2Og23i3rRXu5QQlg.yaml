@@ -1,0 +1,73 @@
+_id: 2Og23i3rRXu5QQlg
+_key: '!items!2Og23i3rRXu5QQlg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_09.jpg
+name: Ki Pool
+system:
+  abilityType: su
+  actions:
+    - _id: v97q09qo7zjo07ob
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Monk
+  description:
+    value: >-
+      <p>At 4th level, a monk gains a pool of ki points, supernatural energy he
+      can use to accomplish amazing feats. The number of points in a monk's ki
+      pool is equal to 1/2 his monk level + his <em>Wisdom</em> modifier. As
+      long as he has at least 1 point in his ki pool, he can make a ki
+      strike.</p>
+
+      <ul>
+
+      <li><b>At 4th level</b>, ki strike allows his unarmed attacks to be
+      treated as magic weapons for the purpose of overcoming <em>damage
+      reduction</em>.</li>
+
+      <li><b>At 7th level</b>, his unarmed attacks are also treated as <em>cold
+      iron</em> and <em>silver</em> for the purpose of overcoming <em>damage
+      reduction</em>.</li>
+
+      <li><b>At 10th level</b>, his unarmed attacks are also treated as lawful
+      weapons for the purpose of overcoming <em>damage reduction</em>.</li>
+
+      <li><b>At 16th level</b>, his unarmed attacks are treated as
+      <em>adamantine</em> weapons for the purpose of overcoming <em>damage
+      reduction</em> and bypassing <em>hardness</em>.</li>
+
+      </ul>
+
+      <p>By spending 1 point from his ki pool, a monk can do one of the
+      following:</p>
+
+      <ul>
+
+      <li>Make one additional attack at his highest <em>attack bonus</em> when
+      making a flurry of blows attack, or</li>
+
+      <li>Increase his speed by 20 feet for 1 round, or</li>
+
+      <li>Give himself a +4 <em>dodge bonus</em> to <em>AC</em> for 1
+      round.</li>
+
+      </ul>
+
+      <p>Each of these powers is activated as a <em>swift action</em>.</p>
+
+      <p>The ki pool is replenished each morning after 8 hours of rest or
+      meditation; these hours do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '59'
+  subType: classFeat
+  tag: classFeat_kiPool
+  uses:
+    maxFormula: floor(@class.level / 2) + @abilities.wis.mod
+    per: day
+type: feat

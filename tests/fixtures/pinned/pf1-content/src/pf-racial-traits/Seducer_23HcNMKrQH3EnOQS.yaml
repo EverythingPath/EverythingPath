@@ -1,0 +1,75 @@
+_id: 23HcNMKrQH3EnOQS
+_key: '!items!23HcNMKrQH3EnOQS'
+_stats:
+  coreVersion: '12.331'
+folder: I5gERPgPEuK7wW5I
+img: icons/magic/control/mouth-smile-deception-purple.webp
+name: Seducer
+system:
+  abilityType: sp
+  actions:
+    - _id: KvOWBZVaihCkB8SP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm
+        person}</p><p>This charm makes a humanoid creature regard you as its
+        trusted friend and ally (treat the target's attitude as friendly). If
+        the creature is currently being threatened or attacked by you or your
+        allies, however, it receives a +5 bonus on its saving throw.</p><p>The
+        spell does not enable you to control the charmed person as if it were an
+        automaton, but it perceives your words and actions in the most favorable
+        way. You can try to give the subject orders, but you must win an opposed
+        Charisma check to convince it to do anything it wouldn't ordinarily do.
+        (Retries are not allowed.) An affected creature never obeys suicidal or
+        obviously harmful orders, but it might be convinced that something very
+        dangerous is worth doing. Any act by you or your apparent allies that
+        threatens the charmed person breaks the spell. You must speak the
+        person's language to communicate your commands, or else be good at
+        pantomiming.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: charm person
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Negates
+        type: will
+      target:
+        value: One humanoid creature
+  changes:
+    - _id: BSEUSKjm
+      formula: '1'
+      target: dc.school.enc
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Drow<br /><strong>Replaced Trait(s)</strong>:
+      Drow Immunities</p><hr /><p>Certain drow possess an innate understanding
+      of the darkest desires that lurk in every heart. Drow with this racial
+      trait add +1 to the saving throw DCs for spells and spell-like abilities
+      of the enchantment school. In addition, drow with a Wisdom score of 15 or
+      higher may use
+      <em>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}
+      </em>once per day as a spell-like ability (caster level equal to the
+      drow's character level). This racial trait replaces drow immunities.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '103'
+  subType: racial
+  tags:
+    - Drow
+  traitCategory: magical
+  uses:
+    maxFormula: gte(@abilities.wis.total, 15)
+    per: day
+    value: 0
+type: feat

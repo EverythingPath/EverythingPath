@@ -1,0 +1,98 @@
+_id: u6q3Zk8XL1AMPxY4
+_key: '!items!u6q3Zk8XL1AMPxY4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_12.jpg
+name: Energy Kinetic Blast
+system:
+  abilityType: sp
+  actions:
+    - _id: vq782ct9fmhew5gz
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: min(@resources.classFeat_burn.value, floor(@class.level / 3))
+      damage:
+        parts:
+          - formula: >-
+              (ceil(@class.level / 2))d6 + min(@resources.classFeat_burn.value,
+              floor(@class.level / 3)) * 2
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      touch: true
+  associations:
+    classes:
+      - Kineticist
+  crOffset: '0'
+  description:
+    value: >-
+      <p>At 1st level, a kineticist gains a kinetic blast wild talent of her
+      choice. This kinetic blast must be a simple blast that matches her
+      element. Simple blasts are listed with their corresponding
+      <em>elements</em>.</p>
+
+      <p>As a <em>standard action</em>, the kineticist can unleash a kinetic
+      blast at a single target up to a range of 30 feet. She must have at least
+      one hand free to aim the blast (or one prehensile appendage, if she
+      doesn’t have hands). All damage from a kinetic blast is treated as magic
+      for the purpose of bypassing <em>damage reduction</em>. Kinetic blasts
+      count as a type of weapon for the purpose of feats such as
+      @UUID[Compendium.pf1.feats.n250dFlbykAIAg5Z]{Weapon Focus}. The kineticist
+      is never considered to be wielding or gripping the kinetic blast
+      (regardless of effects from form infusions; see Infusion), and she can’t
+      use @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike} feats with
+      kinetic blasts. Even the weakest kinetic blast involves a sizable mass of
+      elemental matter or energy, so kinetic blasts always deal full damage to
+      swarms of any size (though only area blasts deal extra damage to swarms).
+      A <em>readied</em> kinetic blast can be used to <em>counterspell</em> any
+      spell of equal or lower level that shares its descriptor. A kinetic blast
+      that deals energy damage of any type (including force) has the
+      corresponding descriptor.</p>
+
+      <p>Each simple blast is either a physical blast or an energy blast.</p>
+
+      <p>Physical blasts are ranged attacks that deal an amount of damage equal
+      to 1d6+1 + the kineticist’s <em>Constitution</em> modifier, increasing by
+      1d6+1 for every 2 kineticist levels beyond 1st. Spell resistance doesn’t
+      apply against physical blasts.</p>
+
+      <p>Energy blasts are ranged touch attacks that deal an amount of damage
+      equal to 1d6 + 1/2 the kineticist’s <em>Constitution</em> modifier,
+      increasing by 1d6 for every 2 kineticist levels beyond 1st.</p>
+
+      <p>Composite blasts combine elements to form a new blast. When a
+      kineticist gains a new element through <em>expanded element</em>, she
+      gains access to all composite blasts for which she qualifies. All
+      composite blasts are listed after the <em>kineticist elements</em>.</p>
+
+      <p>Most composite blasts are either physical or energy blasts, like simple
+      blasts.</p>
+
+      <p>Physical composite blasts deal an amount of damage equal to 2d6+2 + the
+      kineticist’s <em>Constitution</em> modifier, increasing by 2d6+2 for every
+      2 kineticist levels beyond 1st.</p>
+
+      <p>Energy composite blasts deal an amount of damage equal to 2d6 + 1/2 the
+      kineticist’s <em>Constitution</em> modifier, increasing by 2d6 for every 2
+      kineticist levels beyond 1st.</p>
+
+      <ul>
+
+      <li>A complete listing of kinetic blasts and composite blasts can be found
+      within the Kineticist Elements page, here: <em>Kineticist
+      Elements</em></li>
+
+      </ul>
+  subType: classFeat
+type: feat

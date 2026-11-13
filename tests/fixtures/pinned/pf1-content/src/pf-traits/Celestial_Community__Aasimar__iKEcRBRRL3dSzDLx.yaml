@@ -1,0 +1,49 @@
+_id: iKEcRBRRL3dSzDLx
+_key: '!items!iKEcRBRRL3dSzDLx'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Celestial Community (Aasimar)
+system:
+  actions:
+    - _id: obVDlkVTJh4UPl9v
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d8 + min(5, @attributes.hd.total)
+            types:
+              - positive
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Covert Racial SLA to Cure light wounds
+      notes:
+        effect:
+          - take 1/2 of the healing you did as non-lethal damage.
+  description:
+    value: >-
+      <p><em>Having been raised among other aasimars, you have a stronger
+      connection to your planar heritage than most of your kind, and have more
+      thoroughly explored your magical
+      talent.</em></p><p><strong>Requirements</strong>:
+      Aasimar</p><p><strong>Benefits</strong>: You may expend your once per day
+      spell-like ability to spontaneously cast
+      <em>@UUID[Compendium.pf1.spells.Item.xoc3vhg3btmfjauq]{cure light wounds}
+      </em>(CL equal to your character level), but doing so is draining and you
+      take an amount of nonlethal damage equal to half the number of hit points
+      you heal.</p>
+  sources:
+    - id: PZO9285
+      pages: '23'
+  subType: trait
+  tags:
+    - Aasimar
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

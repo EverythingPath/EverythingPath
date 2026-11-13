@@ -1,0 +1,56 @@
+_id: e0k1fubi4uf8darc
+_key: '!items!e0k1fubi4uf8darc'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Aura of Inviolate Ownership
+system:
+  actions:
+    - _id: wmbuaox20bp344a2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell wards the attended items of all creatures it targets (items
+      held, securely fastened to their person, or in containers on their
+      person), enhancing each creature's grip and protecting items from loss or
+      theft. The DC of Sleight of Hand checks to remove items warded by the
+      spell is increased by 20, and affected creatures gain a +20 bonus to their
+      CMDs against disarm and steal combat maneuvers.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      paladin: 3
+      warpriest: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO9455
+      pages: '30'
+type: spell

@@ -1,0 +1,63 @@
+_id: 2ausI8g6SsmbOpgF
+_key: '!items!2ausI8g6SsmbOpgF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_08.jpg
+name: Stunning Fist
+system:
+  abilityType: ex
+  actions:
+    - _id: t964ab1f99gydrqs
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Fortitude negates
+        type: fort
+  associations:
+    classes:
+      - Monk
+      - Monk (Unchained)
+  changes:
+    - _id: QhK37Pp0
+      formula: '1'
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>At 1st level, the monk gains
+      @UUID[Compendium.pf1.feats.Item.GsjouI6B8X7BA5wN]{Stunning Fist} as a
+      bonus feat, even if he does not meet the prerequisites.</p><p>At 4th
+      level, and every 4 levels thereafter, the monk gains the ability to apply
+      a new condition to the target of his Stunning Fist. This condition
+      replaces stunning the target for 1 round, and a successful saving throw
+      still negates the effect.</p><h4>Condition Options</h4><ul><li><p>At 4th
+      level, he can choose to make the target fatigued.</p></li><li><p>At 8th
+      level, he can make the target sickened for 1 minute.</p></li><li><p>At
+      12th level, he can make the target staggered for 1d6+1
+      rounds.</p></li><li><p>At 16th level, he can permanently blind or deafen
+      the target.</p></li><li><p>At 20th level, he can paralyze the target for
+      1d6+1 rounds.</p></li></ul><p>The monk must choose which condition will
+      apply before the attack roll is made. These effects do not stack with
+      themselves (a creature sickened by <em>Stunning Fist</em> cannot become
+      nauseated if hit by <em>Stunning Fist</em> again), but additional hits do
+      increase the duration.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.feats.Item.GsjouI6B8X7BA5wN
+  sources:
+    - id: PZO1110
+      pages: '59'
+    - id: PZO1131
+      pages: '14'
+  subType: classFeat
+  tag: classFeat_stunningFist
+  uses:
+    maxFormula: '@class.level + floor((@attributes.hd.total - @class.level ) / 4)'
+    per: day
+type: feat

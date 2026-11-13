@@ -1,0 +1,62 @@
+_id: a6LXGyA2jkJEDFQK
+_key: '!items!a6LXGyA2jkJEDFQK'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/lantern-staff.png
+name: Lantern Staff
+system:
+  actions:
+    - _id: 7jkctccf9r4m22l0
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Lantern Staff
+  description:
+    unidentified: >-
+      <p>This long metal staff has reservoirs for lamp oil, and a lantern-like
+      structure at its head. The lantern staff is fueled as and provides light
+      as a hooded lantern. While lit, attacks with the lantern staff deal 1
+      point of fire damage in addition to the normal damage. Any effects that
+      apply to a quarterstaff, except those that require it be used as a double
+      weapon, also apply to a lantern staff.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: wood
+  price: 15
+  properties:
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  weaponGroups:
+    - hammers
+  weaponSubtype: 2h
+  weight:
+    value: 9
+type: weapon
