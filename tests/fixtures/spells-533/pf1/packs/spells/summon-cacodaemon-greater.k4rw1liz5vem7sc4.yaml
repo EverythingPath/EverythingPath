@@ -1,0 +1,55 @@
+_id: k4rw1liz5vem7sc4
+_key: '!items!k4rw1liz5vem7sc4'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Cacodaemon, Greater
+system:
+  actions:
+    - _id: m43qxhp6gezapxxu
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.qieqx88wbae5wgpx], except it summons [[/r
+      1d4+1]] cacodaemons.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      oracle: 4
+      sorcerer: 4
+      summoner: 3
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a silver hook
+  school: con
+  sources:
+    - id: PZO9239
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

@@ -1,0 +1,60 @@
+_id: v8Ee5Iagp62xsUQZ
+_key: '!items!v8Ee5Iagp62xsUQZ'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/falchion.PNG
+name: Falchion
+system:
+  actions:
+    - _id: gntaanu0qgah9nhj
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Falchion
+  description:
+    unidentified: >-
+      <p>This sword has one curved, sharp edge like a scimitar, with the back
+      edge unsharpened and either flat or slightly curved. Its weight is greater
+      toward the end, making it better for chopping rather than stabbing.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 75
+  sources:
+    - id: PZO1110
+      pages: '143'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

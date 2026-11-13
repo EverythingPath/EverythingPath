@@ -1,0 +1,70 @@
+_id: BoKaaVK4wgIJW1i9
+_key: '!items!BoKaaVK4wgIJW1i9'
+_stats:
+  coreVersion: '12.331'
+folder: rTRYq1BgxSICSSXP
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling)
+system:
+  abilityType: sp
+  actions:
+    - _id: T62z6pPpndJIGjBT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness}</p><p>This
+        spell causes an object to radiate <em>darkness</em> out to a
+        @Distance[20 ft;dual] radius. This <em>darkness</em> causes the
+        illumination level in the area to drop one step, from bright light to
+        normal light, from normal light to dim light, or from dim light to
+        <em>darkness</em>. This spell has no effect in an area that is already
+        dark. Creatures with light vulnerability or sensitivity take no
+        penalties in normal light. All creatures gain concealment (20% miss
+        chance) in dim light. All creatures gain total concealment (50% miss
+        chance) in <em>darkness</em>.</p><p>Creatures with darkvision can see in
+        an area of dim light or <em>darkness</em> without penalty. Nonmagical
+        sources of light, such as torches and lanterns, do not increase the
+        light level in an area of <em>darkness</em>. Magical light sources only
+        increase the light level in an area if they are of a higher spell level
+        than <em>darkness</em>.</p><p>If <em>darkness</em> is cast on a small
+        object that is then placed inside or under a lightproof covering, the
+        spell's effect is blocked until the covering is removed.</p><p>This
+        spell does not stack with itself. <em>Darkness</em> can be used to
+        counter or dispel any light spell of equal or lower spell level.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Darkness
+      range:
+        units: touch
+      target:
+        value: Object touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling</p><hr /><p>Tieflings can use
+      @UUID[Compendium.pf1.spells.Item.tsndfcfijmgxs37p]{darkness} once per day
+      as a spell-like ability (with a caster level equal to the tiefling's
+      character level). Tieflings of specific bloodlines (see below) gain
+      different spell-like abilities.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '251'
+    - id: PZO1112
+      pages: '264'
+    - id: PZO1121
+      pages: '169'
+  subType: racial
+  tags:
+    - Tiefling
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

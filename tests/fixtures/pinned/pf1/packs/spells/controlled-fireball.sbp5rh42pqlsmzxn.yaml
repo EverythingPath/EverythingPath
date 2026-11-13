@@ -1,0 +1,71 @@
+_id: sbp5rh42pqlsmzxn
+_key: '!items!sbp5rh42pqlsmzxn'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/projectile-fireball-sparks-orange.webp
+name: Controlled Fireball
+system:
+  actions:
+    - _id: tsych5dmp4k9xf9o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-foot-radius spread
+      damage:
+        parts:
+          - formula: (min(10, @cl))d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - '[[min(10, @cl)]] Minimum Damage'
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.6oq1wcryviik9ice]{fireball} except you
+      can cause the bead of fire to originate from anywhere you can see within
+      range. You can choose a number of squares within the area up to your
+      Intelligence bonus (for magi, occultists, or wizards) or Charisma bonus
+      (for bloodragers or sorcerers) to be struck by weaker flames; the
+      controlled <em>fireball</em> deals minimum damage in those squares.
+      Attempts to identify controlled <em>fireball</em> with a skill check
+      incorrectly identify it as <em>fireball</em> (see the ruse descriptor on
+      page 192).</p>
+  descriptors:
+    - fire
+    - ruse
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      magus: 4
+      occultist: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a ball of bat guano and sulfur
+  school: evo
+  sources:
+    - id: PZO1134
+      pages: '208'
+type: spell
