@@ -1,0 +1,69 @@
+_id: 1mi4y3g4n8adtfl3
+_key: '!items!1mi4y3g4n8adtfl3'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Antipathy
+system:
+  actions:
+    - _id: t2qndb7extls0uae
+      actionType: spellsave
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      duration:
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one location (up to a 10-ft. cube/level) or one object
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause an object or location to emanate magical vibrations that
+      repel either a specific kind of intelligent creature or creatures of a
+      particular alignment, as defined by you. The kind of creature to be
+      affected must be named specifically. A creature subtype is not specific
+      enough. Likewise, the specific alignment to be repelled must be
+      named.</p><p>Creatures of the designated kind or alignment feel an urge to
+      leave the area or to avoid the affected item.</p><p>A compulsion forces
+      them to abandon the area or item, shunning it and never willingly
+      returning to it while the spell is in effect. A creature that makes a
+      successful saving throw can stay in the area or touch the item but feels
+      uncomfortable doing so. This distracting discomfort reduces the creature's
+      Dexterity score by 4 points.</p><p><i>Antipathy</i> counters and dispels
+      <i>sympathy</i>.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 8
+      druid: 9
+      occultist: 6
+      psychic: 8
+      sorcerer: 8
+      summoner: 6
+      witch: 8
+      wizard: 8
+  level: 8
+  materials:
+    value: a lump of alum soaked in vinegar
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '243'
+  subschool:
+    - compulsion
+type: spell

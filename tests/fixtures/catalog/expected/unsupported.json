@@ -1,0 +1,2233 @@
+{
+  "purpose": "preview",
+  "summary": {
+    "entries": 50,
+    "issues": 115
+  },
+  "entries": [
+    {
+      "externalKey": "pf1-content/01vYmsu0vnfOmlEN",
+      "pack": "pf-traits",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "attack",
+            "text": "On critical hits vs demons, add damage equal to your weapon's critical hit modifier. This damage is not multiplied by the critical hit multiple."
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/3cimRYgdw7AiOVci",
+      "pack": "pf-buffs",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.spells.Item.f9adpo6szijchpva"
+        },
+        {
+          "field": "duration",
+          "reason": "Duration requires reviewed formula interpretation; permanent eligibility is not established.",
+          "value": {
+            "units": "minute",
+            "value": "@item.level"
+          }
+        },
+        {
+          "field": "spellKey",
+          "reason": "Spell effect needs a reviewed spell association.",
+          "value": "pf1/f9adpo6szijchpva"
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.per",
+            "formula": "(min(30,(10 + (floor(@item.level / 8) * 10))))",
+            "type": "enh"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/CZZ7FCQJBdv4sFpJ",
+      "pack": "pf-companions",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "attributes": {
+              "naturalAC": 4,
+              "speed": {
+                "land": {
+                  "base": 40
+                }
+              }
+            },
+            "traits": {
+              "senses": {
+                "ll": {
+                  "enabled": true
+                },
+                "sc": {
+                  "value": 30
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/HYLK9yCcU73xaVNS",
+      "pack": "pf-companion-features",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Animal Companion"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/KosolVhbo8dNvsSV",
+      "pack": "pf-class-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Occultist"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/UdfkktRJL6fLSGHG",
+      "pack": "pf-eidolon-forms",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "attributes": {
+              "naturalAC": 4,
+              "speed": {
+                "land": {
+                  "base": 20
+                }
+              }
+            },
+            "traits": {
+              "senses": {
+                "dv": {
+                  "value": 60
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/YB38Da80HxcuK3wE",
+      "pack": "pf-eidolon-evolutions",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "4yz80jzwtdbm250i",
+                "ability": {
+                  "attack": "_default",
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "attackName": "Bite",
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size, 4)",
+                      "types": [
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Attack",
+                "tag": "bite"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/bcWTxWA8Yi0V3FGZ",
+      "pack": "pf-special-qualities",
+      "issues": [
+        {
+          "field": "itemAbility",
+          "reason": "Bonus equivalent, dice and conditional mechanics require reviewed curation."
+        },
+        {
+          "field": "itemAbility",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "description",
+            "text": "Aura moderate evocation CL 10th\nSlot weapon quality; Price +1 bonus;\nUpon command, a flaming weapon is sheathed in fire that deals an extra 1d6 points of fire damage on a successful hit. The fire does not harm the wielder. The effect remains until another command is given.\nConstruction\nRequirements Craft Magic Arms and Armor and fireball, flame blade, or flame strike; Price -"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/ilbaNfzWRIhpuE9v",
+      "pack": "pf-feats",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1e-archetypes.pf-class-abilities.PetD6zWBj0yF7uX1"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/ugi2jH8ZLVmDO785",
+      "pack": "pf-familiars",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "attributes": {
+              "cmdNotes": "15 vs. trip",
+              "saveNotes": " -2 vs. witch hexes",
+              "speed": {
+                "burrow": {
+                  "base": 10
+                }
+              }
+            },
+            "traits": {
+              "languages": [
+                null
+              ],
+              "senses": {
+                "custom": "darkvision 60 ft., low-light vision, scent; Perception +4",
+                "dv": {
+                  "value": 60
+                }
+              },
+              "size": "sm"
+            },
+            "skills": {
+              "acr": {
+                "rank": 1
+              },
+              "per": {
+                "rank": 1
+              },
+              "ste": {
+                "rank": 5
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z7y6rAcnrO7TWKJm",
+      "pack": "pf-eidolon-evolutions",
+      "issues": [
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0MmlqFG4XodHOIzn",
+      "pack": "buffs",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.technology.Item.Nnrom1FPNcjBJRK8"
+        },
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "skill.ste",
+            "text": "Hide in Plain Sight as ranger in his favored terrain."
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0c4lYDywj6bQ0i8r",
+      "pack": "classes",
+      "issues": [
+        {
+          "field": "classSkills",
+          "reason": "The sheet has no Artistry or Lore skill; this class skill stays prose.",
+          "value": "art"
+        },
+        {
+          "field": "classSkills",
+          "reason": "The sheet has no Artistry or Lore skill; this class skill stays prose.",
+          "value": "lor"
+        },
+        {
+          "field": "casting",
+          "reason": "Casting tables and class schedules require feature curation."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": [
+              "Club",
+              "Dagger",
+              "Heavy Crossbow",
+              "Light Crossbow",
+              "Quarterstaff"
+            ],
+            "links": {
+              "classAssociations": [
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.pW1PNlDcdGl7KuEa"
+                },
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.20JWTam2dn7jjZFV"
+                },
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.BS9WDbCy2Up3QHw9"
+                },
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.IPy4aqFYbOppaqKC"
+                },
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.4wdsdOkgv4uEkS9K"
+                },
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.LrjNAKP05lZq2tZZ"
+                },
+                {
+                  "level": 5,
+                  "uuid": "Compendium.pf1.class-abilities.Item.2h3lI574tmVjOalQ"
+                }
+              ],
+              "supplements": []
+            },
+            "classSkills": {
+              "apr": true,
+              "art": true,
+              "crf": true,
+              "fly": true,
+              "kar": true,
+              "kdu": true,
+              "ken": true,
+              "kge": true,
+              "khi": true,
+              "klo": true,
+              "kna": true,
+              "kno": true,
+              "kpl": true,
+              "kre": true,
+              "lin": true,
+              "lor": true,
+              "pro": true,
+              "spl": true
+            },
+            "hd": 6,
+            "savingThrows": {
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/pW1PNlDcdGl7KuEa"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/20JWTam2dn7jjZFV"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/IPy4aqFYbOppaqKC"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/BS9WDbCy2Up3QHw9"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/4wdsdOkgv4uEkS9K"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/LrjNAKP05lZq2tZZ"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 5,
+            "externalKey": "pf1/2h3lI574tmVjOalQ"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/0jjH2XJVd6dzlaSm",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                }
+              ]
+            },
+            "classSkills": {
+              "acr": true,
+              "blf": true,
+              "clm": true,
+              "crf": true,
+              "dip": true,
+              "dis": true,
+              "esc": true,
+              "fly": true,
+              "kge": true,
+              "klo": true,
+              "kna": true,
+              "per": true,
+              "prf": true,
+              "sen": true,
+              "slt": true,
+              "ste": true,
+              "swm": true,
+              "umd": true
+            },
+            "hd": 6,
+            "savingThrows": {
+              "ref": {
+                "value": "high"
+              },
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 6
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/1sU57tRb1My6XZMC",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "h1prw1ahiomk0bs5",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 3, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "nonlethal": true,
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "unarmedStrike"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/3xwmfkQBA3R0Cozz",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "062rhfvu44k49265",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": [
+                        "piercing"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "gore"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/5gG3V7rB4Q7LoBFT",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "f2ubtsgnwupcixhz",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "tentacle"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/6Uh8PAjR3BE7dult",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                }
+              ]
+            },
+            "classSkills": {
+              "clm": true,
+              "crf": true,
+              "fly": true,
+              "int": true,
+              "per": true,
+              "rid": true,
+              "ste": true,
+              "sur": true,
+              "swm": true
+            },
+            "hd": 10,
+            "bab": "high",
+            "savingThrows": {
+              "ref": {
+                "value": "high"
+              },
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 4
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/AbOSfjvKMqpNihdM",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.ra81MI6i0wltb32x"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                }
+              ]
+            },
+            "classSkills": {
+              "per": true,
+              "ste": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/AjUleVwKSsSaDI4N",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                }
+              ]
+            },
+            "classSkills": {
+              "acr": true,
+              "clm": true,
+              "fly": true,
+              "per": true,
+              "ste": true,
+              "swm": true
+            },
+            "hd": 10,
+            "bab": "high",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              },
+              "ref": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/CjQ4VmDIRBb3k7Dg",
+      "pack": "buffs",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.class-abilities.Item.042BafLhw5SsMsg6"
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "mattack",
+            "formula": "1 + floor(@classes.barbarianUnchained.level / 4)",
+            "type": "competence"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "tattack",
+            "formula": "1 + floor(@classes.barbarianUnchained.level / 4)",
+            "type": "competence"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/D1vugd9jeyAQrLVX",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qn38rtalurmHx9qq"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.aEP8PdxGohVVBkei"
+                }
+              ]
+            },
+            "bab": "med",
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/GrbQIXcmp5VXxYA7",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "lyysy62a9hqkvo9c",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "slam"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/H8FbMUps5Z0gQdvV",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.tM956KLS078oZF72"
+                }
+              ]
+            },
+            "hd": 10,
+            "bab": "high",
+            "skillsPerLevel": 2
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "mhp",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "type": "untypedPerm"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Iv8lkpAQXwsBqVwt",
+      "pack": "technology",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.feats.Item.0yDBOWqCLugDCUeW"
+        },
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "fort",
+            "text": "+4 competence bonus on saving throws against disease and poison. When the user attempts such a saving throw, she rolls twice and takes the higher result."
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/MZnbCVzqpvPsMvfT",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "4lo88d47gxkw8wts",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "bludgeoning",
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "claw"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/NWImcWGTjCtw1Zf0",
+      "pack": "buffs",
+      "issues": [
+        {
+          "field": "duration",
+          "reason": "Duration requires reviewed formula interpretation; permanent eligibility is not established.",
+          "value": {
+            "units": "round",
+            "value": "@item.level"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "attack",
+            "formula": "1",
+            "type": "haste"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "ac",
+            "formula": "1",
+            "type": "haste"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "ref",
+            "formula": "1",
+            "type": "haste"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "landSpeed",
+            "formula": "min(@attributes.speed.land.base, 30)",
+            "type": "enh"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "climbSpeed",
+            "formula": "min(@attributes.speed.climb.base, 30)",
+            "type": "enh"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "swimSpeed",
+            "formula": "min(@attributes.speed.swim.base, 30)",
+            "type": "enh"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "burrowSpeed",
+            "formula": "min(@attributes.speed.burrow.base, 30)",
+            "type": "enh"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "flySpeed",
+            "formula": "min(@attributes.speed.fly.base, 30)",
+            "type": "enh"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/PfmCJRQ9qOgwcUxb",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rd1onybjuhk5taos",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "talon"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/S38eYYsK7pRhPbwg",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "classSkills": {
+              "clm": true,
+              "crf": true,
+              "han": true,
+              "hea": true,
+              "pro": true,
+              "rid": true,
+              "sur": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "ref": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/V8cRFtOQA6ltklEl",
+      "pack": "buffs",
+      "issues": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "ac",
+            "formula": "if(gte(@skills.acr.rank, 3), 1) + 2",
+            "type": "dodge"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/WJqmmfXscPVpcISH",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                }
+              ]
+            },
+            "classSkills": {
+              "acr": true,
+              "clm": true,
+              "fly": true,
+              "per": true,
+              "ste": true,
+              "swm": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              },
+              "ref": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/WLqBCT5DqmGAx8Wd",
+      "pack": "classes",
+      "issues": [
+        {
+          "field": "classSkills",
+          "reason": "The sheet has no Artistry or Lore skill; this class skill stays prose.",
+          "value": "art"
+        },
+        {
+          "field": "classSkills",
+          "reason": "The sheet has no Artistry or Lore skill; this class skill stays prose.",
+          "value": "lor"
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "armorProf": [
+              "lgt",
+              "med",
+              "hvy",
+              "shl",
+              "twr"
+            ],
+            "weaponProf": [
+              "simple",
+              "martial"
+            ],
+            "links": {
+              "classAssociations": [
+                {
+                  "level": 1,
+                  "uuid": "Compendium.pf1.class-abilities.Item.CV8BsY3ciUb9TA1Y"
+                },
+                {
+                  "level": 2,
+                  "uuid": "Compendium.pf1.class-abilities.Item.h0Brxw6khcjlEf1T"
+                },
+                {
+                  "level": 3,
+                  "uuid": "Compendium.pf1.class-abilities.Item.5JFfSqLMCpbRmERa"
+                },
+                {
+                  "level": 5,
+                  "uuid": "Compendium.pf1.class-abilities.Item.RzEzudurxQFirFoF"
+                },
+                {
+                  "level": 7,
+                  "uuid": "Compendium.pf1.class-abilities.Item.iqeyCQIIVnNt0p3h"
+                },
+                {
+                  "level": 20,
+                  "uuid": "Compendium.pf1.class-abilities.Item.McXAM1BoPHZLO1n4"
+                }
+              ]
+            },
+            "classSkills": {
+              "art": true,
+              "clm": true,
+              "crf": true,
+              "han": true,
+              "int": true,
+              "kdu": true,
+              "ken": true,
+              "lor": true,
+              "pro": true,
+              "rid": true,
+              "sur": true,
+              "swm": true
+            },
+            "hd": 10,
+            "bab": "high",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 1,
+            "externalKey": "pf1/CV8BsY3ciUb9TA1Y"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 3,
+            "externalKey": "pf1/5JFfSqLMCpbRmERa"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 5,
+            "externalKey": "pf1/RzEzudurxQFirFoF"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 19,
+            "externalKey": "pf1/NwTe1Q2utlsmOAqK"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 20,
+            "externalKey": "pf1/McXAM1BoPHZLO1n4"
+          }
+        },
+        {
+          "field": "links.classAssociations",
+          "reason": "Missing or out-of-scope feature reference.",
+          "value": {
+            "level": 7,
+            "externalKey": "pf1/iqeyCQIIVnNt0p3h"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/WiROthmRgcwDncDM",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                }
+              ]
+            },
+            "classSkills": {
+              "acr": true,
+              "clm": true,
+              "esc": true,
+              "fly": true,
+              "int": true,
+              "per": true,
+              "spl": true,
+              "ste": true,
+              "sur": true,
+              "swm": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 4
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/X2WLdbFFedaah6VC",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.qe671ZP4ZsO5cbrt"
+                }
+              ]
+            },
+            "classSkills": {
+              "apr": true,
+              "blf": true,
+              "clm": true,
+              "crf": true,
+              "dip": true,
+              "fly": true,
+              "hea": true,
+              "int": true,
+              "kar": true,
+              "kdu": true,
+              "ken": true,
+              "kge": true,
+              "khi": true,
+              "klo": true,
+              "kna": true,
+              "kno": true,
+              "kpl": true,
+              "kre": true,
+              "lin": true,
+              "per": true,
+              "sen": true,
+              "spl": true,
+              "ste": true,
+              "sur": true,
+              "swm": true,
+              "umd": true
+            },
+            "hd": 12,
+            "bab": "high",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              },
+              "ref": {
+                "value": "high"
+              },
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 6
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/cV7yHt8i5YCV0ZTd",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": [
+              "simple",
+              "martial"
+            ],
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                }
+              ]
+            },
+            "classSkills": {
+              "blf": true,
+              "crf": true,
+              "kpl": true,
+              "per": true,
+              "sen": true,
+              "ste": true
+            },
+            "hd": 10,
+            "bab": "high",
+            "savingThrows": {
+              "ref": {
+                "value": "high"
+              },
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 6
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/cuOCNj2vlx0Q1X3J",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "z4v148zqm8otbmnh",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "piercing"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "sting"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/e6IaBxKgMxy1yKlr",
+      "pack": "races",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "speeds": {
+              "land": 30
+            },
+            "languages": [
+              "common"
+            ],
+            "creatureTypes": [
+              "humanoid"
+            ],
+            "creatureSubtypes": [
+              "human"
+            ]
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "1",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusSkillRanks",
+            "formula": "@attributes.hd.total",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "speeds",
+          "reason": "The sheet has no movement statistic; the land speed stays prose.",
+          "value": {
+            "land": 30
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/fOSuWwRSZLTrROch",
+      "pack": "weapons-and-ammo",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "3d5k15aepyp5sclw",
+                "ability": {
+                  "attack": "_default",
+                  "critRange": 19,
+                  "damage": "str"
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "piercing",
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "extraAttacks": {
+                  "type": "standard"
+                },
+                "name": "Melee",
+                "range": {
+                  "units": "melee",
+                  "value": "10"
+                },
+                "uses": {
+                  "autoDeductChargesCost": "0"
+                }
+              },
+              {
+                "_id": "BKWFiAgRhYnG51Zr",
+                "ability": {
+                  "attack": "_default",
+                  "damage": "str"
+                },
+                "actionType": "twak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "piercing",
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Throw",
+                "range": {
+                  "maxIncrements": 5,
+                  "units": "ft",
+                  "value": "10"
+                }
+              }
+            ],
+            "material": {
+              "base": {
+                "value": "steel"
+              }
+            },
+            "uses": {
+              "per": "single"
+            },
+            "properties": {
+              "fin": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/g3gX00gTvJU478ju",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                }
+              ]
+            },
+            "bab": "med",
+            "savingThrows": {
+              "fort": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 2
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h0Brxw6khcjlEf1T",
+      "pack": "class-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Fighter"
+              ]
+            }
+          }
+        },
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "will",
+            "text": "+[[floor((@class.level + 2) / 4)]] vs fear effects"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h9ogVoyFP7qMBJhg",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "4z61o2ool2te0ork",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "wing"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/hw79kc0v9smvb6mj",
+      "pack": "spells",
+      "issues": [
+        {
+          "field": "sources",
+          "reason": "Upstream custom source requires attribution review; no product code has been inferred.",
+          "value": {
+            "name": "Paizo Blog - Ultimate Cantrips",
+            "date": "2011-05-24",
+            "publisher": "",
+            "url": "https://paizo.com/community/blog/v5748dyo5lc7e&page=2?Ultimate-Cantrips",
+            "pages": ""
+          }
+        },
+        {
+          "field": "levels.arcanist",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 0
+        },
+        {
+          "field": "levels.sorcerer",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 0
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "zjz3ucpn5kt281we",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "hour",
+                  "value": "1"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "one creature or object"
+                }
+              }
+            ],
+            "uses": {
+              "autoDeductChargesCost": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/iMix2jm1eh8V6cCN",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "lyysy62a9hqkvo9c",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "slam"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/iYSmTvVIXZt2uMov",
+      "pack": "companion-features",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0"
+        },
+        {
+          "field": "companion",
+          "reason": "Companion templates, embedded items and progression need feature-owned resources; actor IDs are not playable definitions."
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": [
+                "Familiar"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mp1Zmbx0OAzSW4oW",
+      "pack": "racial-hd",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq"
+                },
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.kcCRPAHsrWouTbij"
+                }
+              ]
+            },
+            "classSkills": {
+              "clm": true,
+              "dis": true,
+              "fly": true,
+              "int": true,
+              "kar": true,
+              "kre": true,
+              "per": true,
+              "sen": true,
+              "spl": true,
+              "ste": true
+            },
+            "bab": "med",
+            "savingThrows": {
+              "will": {
+                "value": "high"
+              }
+            },
+            "skillsPerLevel": 4
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ogIJ8XWiWFlJIF6S",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "54ucgahdjkmgzp2s",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "tailSlap"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/pX3qRL8U1wfBcH80",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "y358eq8sk1vh5ts9",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 4, @size)",
+                      "types": [
+                        "bludgeoning"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "naturalAttack": {
+                  "primary": false
+                },
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "hoof"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/qP52Vv8OelEql6Oq",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "description.link",
+          "reason": "Unresolved catalog link stripped.",
+          "value": "Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf"
+        },
+        {
+          "field": "weapon.damage",
+          "reason": "Damage formula needs feature mapping.",
+          "value": "(ceil(@attributes.hd.total / 5))d6"
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "RPbC0gO0bojimD6B",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@attributes.hd.total / 5))d6",
+                      "types": [
+                        "untyped"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack"
+              }
+            ],
+            "links": {
+              "supplements": [
+                {
+                  "uuid": "Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf"
+                }
+              ]
+            },
+            "held": null
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/s9amdo5398alb5p0",
+      "pack": "spells",
+      "issues": [
+        {
+          "field": "levels.alchemist",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.arcanist",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.bard",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.bloodrager",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.investigator",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.magus",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.medium",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 2
+        },
+        {
+          "field": "levels.occultist",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.psychic",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.skald",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.sorcerer",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.spiritualist",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "levels.summoner",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 2
+        },
+        {
+          "field": "levels.summonerUnchained",
+          "reason": "No class with this tag in the extracted inputs.",
+          "value": 3
+        },
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "8zph2bcu3wkmq8y6",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "measureTemplate": {
+                  "size": "15",
+                  "type": "circle"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Fortitude negates",
+                  "harmless": true,
+                  "type": "fort"
+                },
+                "target": {
+                  "value": "one creature/level, no two of which can be more than 30 ft. apart"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/szjeStouwI3F3WdP",
+      "pack": "monster-abilities",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "jxtofrfc2lcw0osl",
+                "ability": {
+                  "attack": "str",
+                  "damage": "str",
+                  "damageMult": 1
+                },
+                "actionType": "mwak",
+                "activation": {
+                  "type": "attack",
+                  "unchained": {
+                    "type": "attack"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "sizeRoll(1, 6, @size)",
+                      "types": [
+                        "piercing",
+                        "bludgeoning",
+                        "slashing"
+                      ]
+                    }
+                  ]
+                },
+                "name": "Attack",
+                "range": {
+                  "units": "melee"
+                },
+                "tag": "bite"
+              }
+            ],
+            "held": null
+          }
+        }
+      ]
+    }
+  ]
+}

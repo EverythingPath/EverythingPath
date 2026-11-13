@@ -1,0 +1,60 @@
+_id: glt6uk3n6g6l2p6l
+_key: '!items!glt6uk3n6g6l2p6l'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/orb-eye-scrying.webp
+name: Scrying, Greater
+system:
+  actions:
+    - _id: 2w8h9m5e9wlqftq9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      effect: magical sensor
+      name: Use
+      range:
+        units: seeText
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      <em>@UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{scrying},</em> except as
+      noted above.</p><p>Additionally, all of the following spells function
+      reliably through the sensor: <em>detect chaos</em>, <em>detect evil</em>,
+      <em>detect good</em>, <em>detect law</em>, <em>detect magic</em>,
+      <em>message</em>, <em>read magic,</em> and <em>tongues</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 6
+      cleric: 7
+      druid: 7
+      mesmerist: 6
+      occultist: 6
+      oracle: 7
+      psychic: 7
+      shaman: 7
+      skald: 6
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '337'
+  subschool:
+    - scrying
+type: spell

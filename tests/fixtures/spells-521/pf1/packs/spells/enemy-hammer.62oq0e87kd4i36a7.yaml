@@ -1,0 +1,70 @@
+_id: 62oq0e87kd4i36a7
+_key: '!items!62oq0e87kd4i36a7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Enemy Hammer
+system:
+  actions:
+    - _id: b6fvf86xxzgvp83i
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: long
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grab a creature with telekinesis and use it to batter nearby
+      opponents or objects. You must target a specific creature when casting
+      this spell and once you select that creature you cannot switch to another.
+      Each round, as a standard action, you can attempt to hurl the target at
+      any creature or object within 30 feet of it. You must make an attack roll
+      whenever you use the target as a weapon. The attack bonus for this attack
+      is equal to your caster level plus either your Intelligence or Charisma
+      modifier (whichever is higher). If you successfully hit the new target
+      with the creature both it and the creature take damage based on the
+      creature's size.</p> <table border="1"><tbody><tr><th>Creature
+      Size</th><th>Damage
+      Dealt</th></tr><tr><td>Fine</td><td>1d4</td></tr><tr><td>Diminutive</td><td>1d6</td></tr><tr><td>Tiny</td><td>1d8</td></tr><tr><td>Small</td><td>1d10</td></tr><tr><td>Medium</td><td>2d6</td></tr><tr><td>Large</td><td>2d8</td></tr><tr><td>Huge</td><td>2d10</td></tr><tr><td>Gargantuan</td><td>3d6</td></tr><tr><td>Colossal</td><td>3d8</td></tr></tbody></table><p>
+      The target creature can make a Fortitude saving throw each time you
+      attempt to use it as a weapon. If it makes its saving throw it can act
+      normally, but if it fails its save it loses all actions for the round and
+      ends its turn prone in a square adjacent to the target of your attack.
+      However, if the creature chooses to resist your efforts to move it, taking
+      no other actions for the round, it gets a +4 circumstance bonus on its
+      saving throw. The spell ends immediately if the target creature dies or is
+      destroyed.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      spiritualist: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: puppet strings
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '219'
+type: spell

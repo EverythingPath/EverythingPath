@@ -1,0 +1,72 @@
+_id: pzwe3gxjz8gthyaj
+_key: '!items!pzwe3gxjz8gthyaj'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Cloak of Dreams
+system:
+  actions:
+    - _id: ft0b8w4ypfb2jn94
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: 5-ft.-radius emanation centered on you
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '5'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You are surrounded by a soporific aroma that causes living creatures
+      that begin their turn or end their movement within 5 feet of you to fall
+      asleep for 1 minute. Creatures must save each time they begin their turn
+      or end their movement within the <i>cloak of dreams</i>, even if they have
+      previously saved against the effect. Sleeping creatures are helpless but
+      can be awakened with a standard action or after being
+      wounded.</p><p>Creatures with the scent special quality have a -4 penalty
+      on their saves.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 5
+      mesmerist: 5
+      occultist: 6
+      psychic: 6
+      shaman: 7
+      skald: 5
+      sorcerer: 6
+      witch: 6
+      wizard: 6
+    subDomain:
+      Nightmare: 6
+      Whimsy: 6
+  level: 6
+  materials:
+    value: a rose petal and a drop of perfume
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '211'
+  subschool:
+    - compulsion
+type: spell

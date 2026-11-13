@@ -1,0 +1,70 @@
+_id: iu5lc2hdhyq6fqtf
+_key: '!items!iu5lc2hdhyq6fqtf'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: False Alibi
+system:
+  actions:
+    - _id: o39mzstf82akodm8
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: spec
+        value: permanent; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions similarly to <i>modify memory</i>, except you can
+      modify the target's memory only in a specific way. In response to a
+      triggering condition you determine, up to the last 5 minutes of the
+      target's memory are eliminated and replaced with a memory of your choosing
+      (or no memory at all). For example, you could cast this on an assassin,
+      set it to trigger when he completes his kill, and replace his memory of
+      the murder with the memory of him discovering the body and picking up the
+      murder weapon. You can cast this spell multiple times on the same target,
+      even with the same trigger, affecting different memories. A single casting
+      of <i>false alibi</i> affects a creature only until the specified
+      condition has been triggered; once a condition has been triggered and the
+      target's memory altered, that condition no longer triggers this spell
+      unless the victim is subject to another casting of <i>false alibi</i> that
+      specifies the same trigger.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 3
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      skald: 3
+      warpriest: 3
+  level: 3
+  materials:
+    gpValue: 100
+    value: emerald dust worth 100 gp
+  school: enc
+  sources:
+    - id: PZO9267
+      pages: '234'
+    - id: PZO9059
+      pages: '75'
+  subschool:
+    - compulsion
+type: spell

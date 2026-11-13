@@ -1,0 +1,61 @@
+_id: kY1zv3pOlGUfyX29
+_key: '!items!kY1zv3pOlGUfyX29'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/broken-back-seax.png
+name: Broken-Back Seax
+system:
+  actions:
+    - _id: wgdhkz0e8my0zlfd
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - untyped
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Broken-Back Seax
+  description:
+    unidentified: >-
+      <p>Used in Avistan since before Earthfall, seaxes are straight,
+      single-edged blades. The broken-back seax is the size of a short sword,
+      and has a broad blade with a distinctive trapezoidal shape. If your
+      Strength score is less than 15, you take a -2 penalty on attack rolls with
+      a broken-back seax, as you're unable to put enough force into the blows to
+      land them effectively.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 40
+  properties:
+    spc: true
+  sources:
+    - id: PZO9493
+      pages: '30'
+  subType: exotic
+  weaponGroups:
+    - bladesLight
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon
