@@ -1,0 +1,55 @@
+_id: ifjagt7v39crbejg
+_key: '!items!ifjagt7v39crbejg'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Ward Shield
+system:
+  actions:
+    - _id: wkfocsa9osjhtpc7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: shield touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a touch, you enchant a shield and enable it to protect its wielder
+      from hostile spells. The shield grants spell resistance 10 + your caster
+      level against spells so long as the shield can be interposed between the
+      wielder and the spell effect. A <i>spell shield</i> does not provide spell
+      resistance against area effect spells such as <i>fireball</i>, but does
+      provide a +5 bonus on Reflex saving throws against such spells.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      inquisitor: 4
+      magus: 4
+      oracle: 4
+      sorcerer: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO9426
+      pages: '29'
+type: spell

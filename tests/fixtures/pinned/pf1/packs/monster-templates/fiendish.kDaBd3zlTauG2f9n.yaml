@@ -1,0 +1,48 @@
+_id: kDaBd3zlTauG2f9n
+_key: '!items!kDaBd3zlTauG2f9n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Fiendish
+system:
+  acquired: true
+  changes:
+    - _id: RR7rxdHd
+      formula: '@details.cr.total + 5'
+      target: spellResist
+      type: untyped
+  crOffset: if(gte(@attributes.hd.total, 5), 1)
+  description:
+    instructions: >-
+      <p>Set <strong>DR</strong> in the <strong>Attributes tab</strong> as shown
+      by the table.</p>
+    value: >-
+      <p><strong>Acquired/Inherited Template</strong> Acquired<br
+      /><strong>Simple Template</strong> Yes<br /><strong>Usable with
+      Summons</strong> Yes</p><p>Creatures with the fiendish template live in
+      the Lower Planes, such as the Abyss and Hell, but can be summoned using
+      spells such as summon monster and planar ally. A fiendish creature’s CR
+      increases by +1 only if the base creature has 5 or more HD. A fiendish
+      creature’s quick and rebuild rules are the same.</p><p><strong>Rebuild
+      Rules:</strong> <strong>Senses</strong> gains darkvision 60 ft.;
+      <strong>Defensive Abilities</strong> gains DR and energy resistance as
+      noted on the table; <strong>SR</strong> gains SR equal to new CR +5;
+      <strong>Special Attacks</strong>
+      @UUID[Compendium.pf1.template-abilities.Item.3XEQ0B8GADTxGKKD] 1/day as a
+      swift action (adds Cha bonus to attack rolls and damage bonus equal to HD
+      against good foes; smite persists until target is dead or the fiendish
+      creature rests).</p><p><strong>Fiendish Creature Defenses</strong></p><hr
+      /><table><tbody><tr><td><p><strong>Hit
+      Dice</strong></p></td><td><p><strong>Resist Cold and
+      Fire</strong></p></td><td><p><strong>DR</strong></p></td></tr><tr><td><p>1-4</p></td><td><p>5</p></td><td><p>—</p></td></tr><tr><td><p>5-10</p></td><td><p>10</p></td><td><p>5/good</p></td></tr><tr><td><p>11+</p></td><td><p>15</p></td><td><p>10/good</p></td></tr></tbody></table>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.abPQPu23CmkfWudq
+      - uuid: Compendium.pf1.template-abilities.Item.3XEQ0B8GADTxGKKD
+  simple: true
+  sources:
+    - id: PZO1112
+      pages: '294'
+  subType: template
+  summons: true
+type: feat

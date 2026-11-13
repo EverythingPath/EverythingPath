@@ -1,0 +1,403 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/xxD5AbgfJ5OuzVld",
+      "upstreamKey": "pf1/xxD5AbgfJ5OuzVld",
+      "pack": "class-abilities",
+      "name": "Bloodline Feat (BLO)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 6th level and every 3 levels thereafter, a bloodrager receives one bonus feat chosen from a list specific to each bloodline. The bloodrager must meet the prerequisites for these bonus feats.</p>",
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "15"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Bloodrager"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor(@class.level / 3) - 1",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/yotHT522pQoKDhID",
+      "upstreamKey": "pf1/yotHT522pQoKDhID",
+      "pack": "class-abilities",
+      "name": "Slayer's Advance",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 13th level, a slayer can once per day move up to twice his base speed as a move action. He may use Stealth as part of this movement, but takes a –10 penalty to his check for doing so.</p>\n<p>At 17th level, he can do this twice per day.</p>",
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "actgemorp4k431a4",
+                "activation": {
+                  "type": "move",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "name": "Use"
+              }
+            ],
+            "associations": {
+              "classes": ["Slayer"]
+            },
+            "uses": {
+              "maxFormula": "1 + if(gte(@class.level, 17), 1)",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+      "upstreamKey": "pf1/xxD5AbgfJ5OuzVld",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/xxD5AbgfJ5OuzVld",
+        "part": "12:pf1/xxD5AbgfJ5OuzVld"
+      },
+      "description": "<p>Bloodline Feat: the Bloodrager table's 12th-level row of Bloodline Feat (Pathfinder RPG Advanced Class Guide pp. 15–22). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "15–22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/xxD5AbgfJ5OuzVld"
+    },
+    {
+      "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+      "upstreamKey": "pf1/xxD5AbgfJ5OuzVld",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/xxD5AbgfJ5OuzVld",
+        "part": "15:pf1/xxD5AbgfJ5OuzVld"
+      },
+      "description": "<p>Bloodline Feat: the Bloodrager table's 15th-level row of Bloodline Feat (Pathfinder RPG Advanced Class Guide pp. 15–22). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "15–22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/xxD5AbgfJ5OuzVld"
+    },
+    {
+      "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+      "upstreamKey": "pf1/xxD5AbgfJ5OuzVld",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/xxD5AbgfJ5OuzVld",
+        "part": "18:pf1/xxD5AbgfJ5OuzVld"
+      },
+      "description": "<p>Bloodline Feat: the Bloodrager table's 18th-level row of Bloodline Feat (Pathfinder RPG Advanced Class Guide pp. 15–22). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "15–22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/xxD5AbgfJ5OuzVld"
+    },
+    {
+      "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+      "upstreamKey": "pf1/xxD5AbgfJ5OuzVld",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/xxD5AbgfJ5OuzVld",
+        "part": "9:pf1/xxD5AbgfJ5OuzVld"
+      },
+      "description": "<p>Bloodline Feat: the Bloodrager table's 9th-level row of Bloodline Feat (Pathfinder RPG Advanced Class Guide pp. 15–22). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "15–22"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bloodrager-bloodline-feat-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/xxD5AbgfJ5OuzVld"
+    },
+    {
+      "externalKey": "everythingpath/slayer-slayers-advance-17",
+      "upstreamKey": "pf1/yotHT522pQoKDhID",
+      "pack": "everythingpath-schedules",
+      "name": "Slayer’s Advance 2/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/yotHT522pQoKDhID",
+        "part": "17:pf1/yotHT522pQoKDhID"
+      },
+      "description": "<p>Slayer’s Advance 2/day: the Slayer table's 17th-level row of Slayer’s Advance (Pathfinder RPG Advanced Class Guide pp. 53–55). The Slayer’s Advance entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-slayers-advance-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-slayers-advance-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-slayers-advance-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-slayers-advance-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-slayers-advance-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/yotHT522pQoKDhID"
+    }
+  ]
+}

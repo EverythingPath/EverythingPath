@@ -1,0 +1,60 @@
+_id: iHZBsGfMXQj74Wud
+_key: '!items!iHZBsGfMXQj74Wud'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/skills/social/intimidation-impressing.webp
+name: Debilitating Speech
+system:
+  actions:
+    - _id: tfrzzfnlgin52afh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          1 or more living creatures/level, no two of which may be more than 30
+          feet apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>By speaking eloquently on the subject of your opponents’ ineptitude in
+      combat, past failures, personal hygiene, or other faults, you sap their
+      will to fight.</p><p>This spell can be cast as a standard action or as a
+      full-round action. If cast as a standard action, it takes effect in 1d4
+      rounds following the spell’s casting. If cast as a full-round action, it
+      takes effect 1 round after its casting. Enemies with 4 Hit Dice or fewer
+      are
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.nGTsTfpWcJTTU3rk]{panicked},
+      enemies with 5–8 Hit Dice are
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.eNW5geiJqrnAjjNu]{cowering},
+      and enemies with more than 8 Hit Dice are
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.XxLUswkCuXnXmA5T]{shaken}.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9488
+      pages: '10'
+type: spell

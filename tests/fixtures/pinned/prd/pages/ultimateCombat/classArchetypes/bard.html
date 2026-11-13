@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Bard</title>
+	<link rel = "stylesheet" type = "text/css" href = "/pathfinderRPG/prd/include/prd-stylesheet.css" />
+	<link rel = "stylesheet" type = "text/css" href = "http://cdn.paizo.com/chrome/style/jquery.dataTables.min.css" />
+	<link rel = "stylesheet" type = "text/css" href = "http://cdn.paizo.com/chrome/style/jquery-ui.min.css" />
+</head>
+
+<body>
+
+<div class = "header">
+	<!-- Logos -->
+	<div class = "header-content">
+		<div id = "header-full">
+			<a href = "/pathfinderRPG/prd"><img src = "/pathfinderRPG/prd/include/PRD-Logo.png" alt = "Pathfinder Reference Document" style = "margin: 15px 0 0 0;" /></a>
+		</div>
+		<div id = "header-mobile">
+			<a href = "/pathfinderRPG/prd"><img src = "/pathfinderRPG/prd/include/PRD-Logo_Mobile.png" alt = "Pathfinder Reference Document" style = "margin: 5px 0 0 10px;" /></a>
+		</div>
+	</div>
+
+	<!-- Search & Navigation -->
+	<div id = "nav-menu" class = "nav-menu">
+		<a href = "#menu" class = "menu-link has-subnav"><img src = "/pathfinderRPG/prd/include/menu.png"></a>
+		<div id = "menu" class = "menu">
+			<ul>
+				<!-- Search -->
+				<li class = "search">
+					<form action = "/search" method = "get">
+						<input id = "searchBox" maxlength = "256" type = "text" name = "q" placeholder = "Search" />
+						<input type = "hidden" name = "what" value = "prd" />
+					</form>
+				</li>
+				<!-- Core Rulebook -->
+				<li class = "has-subnav">
+					<a href = "#">Core Rulebook</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/gettingStarted.html">Getting Started</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/races.html">Races</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/classes.html">Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/usingSkills.html">Using Skills</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/skillDescriptions.html">Skill Descriptions</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/feats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/equipment.html">Equipment</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/additionalRules.html">Additional Rules</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/combat.html">Combat</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/magic.html">Magic</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/spellLists.html">Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/spellIndex.html">Spell Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/prestigeClasses.html">Prestige Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/gamemastering.html">Gamemastering</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/environment.html">Environment</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/nPCClasses.html">NPC Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/creatingNPCs.html">Creating NPCs</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/magicItems.html">Magic Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/coreRulebook/glossary.html">Glossary</a></li>
+					</ul>
+				</li>
+				<!-- Advanced Class Guide -->
+				<li class = "has-subnav">
+					<a href = "#">Advanced Class Guide</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/classes/index.html">Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/classOptions/index.html">Archetypes and Class Options</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/feats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/spells/index.html">Spells</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/spells/spellLists.html">Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/gear/index.html">Gear and Magic Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedClassGuide/designingClasses.html">Designing Classes</a></li>
+					</ul>
+				</li>
+				<!-- Advanced Player's Guide -->
+				<li class = "has-subnav">
+					<a href = "#">Advanced Player's Guide</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedRaces.html">Races</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedBaseClasses.html">Base Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedCoreClasses.html">Core Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedPrestigeClasses.html">Prestige Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedFeats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedGear.html">Gear</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedSpellLists.html">Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedSpellIndex.html">Spell Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedMagicItems.html">Magic Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedPlayersGuide/advancedNewRules.html">New Rules</a></li>
+					</ul>
+				</li>
+				<!-- Advanced Race Guide -->
+				<li class = "has-subnav">
+					<a href = "#">Advanced Race Guide</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/coreRaces.html">Core Races</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/featuredRaces.html">Featured Races</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/uncommonRaces.html">Uncommon Races</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/raceBuilder.html">Race Builder</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/ageHeightWeight.html">Age, Height & Weight</a></li>
+						<li><a href = "/pathfinderRPG/prd/advancedRaceGuide/spellLists.html">Spell Lists</a></li>
+					</ul>
+				</li>
+				<!-- Bestiaries -->
+				<li class = "has-subnav">
+					<a href = "#">Bestiaries</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/bestiary/introduction.html">Monster Introduction</a></li>
+						<li><a href = "/pathfinderRPG/prd/indices/bestiary.html">Global Bestiary Indices</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterIndex.html"><i>Bestiary</i> Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary2/additionalMonsterIndex.html"><i>Bestiary 2</i> Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary3/monsterIndex.html"><i>Bestiary 3</i> Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary4/monsterIndex.html"><i>Bestiary 4</i> Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary5/index.html"><em>Bestiary 5</em> Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/variantMonsterIndex.html">Variant Monster Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterCohorts.html">Monster Cohorts</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/animalCompanions.html">Animal Companions</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monstersAsPCs.html">Monsters as PCs</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterRoles.html">Monster Roles</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/encounterTables.html"><i>Bestiary</i> Encounter Tables</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterCreation.html">Monster Creation</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterAdvancement.html">Monster Advancement</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/universalMonsterRules.html">Universal Monster Rules</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/creatureTypes.html">Creature Types</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monsterFeats.html">Monster Feats</a></li>
+						<!--<li><a href = "/pathfinderRPG/prd/bestiary/monstersByType.html"><i>Bestiary</i> Monsters by Type</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monstersByCR.html"><i>Bestiary</i> Monsters by CR</a></li>
+						<li><a href = "/pathfinderRPG/prd/bestiary/monstersByTerrain.html"><i>Bestiary</i> Monsters by Terrain</a></li>-->
+					</ul>
+				</li>
+				<!-- Game Mastery Guide -->
+				<li class = "has-subnav">
+					<a href = "#">Game Mastery Guide</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/planarAdventures.html">Planar Adventures</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/settlements.html">Settlements</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/fastPlayShipCombat.html">Fast Play Ship Combat</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/chases.html">Chases</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/disasters.html">Disasters</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/drugsAndAddiction.html">Drugs and Addiction</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/haunts.html">Haunts</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/hazards.html">Hazards</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/sanityAndMadness.html">Sanity and Madness</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/nPCBoons.html">NPC Boons</a></li>
+						<li><a href = "/pathfinderRPG/prd/gameMasteryGuide/nPCGallery.html">NPC Gallery</a></li>
+					</ul>
+				</li>
+				<!-- Monster Codex -->
+				<li class = "has-subnav">
+					<a href = "#">Monster Codex</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/boggards.html">Boggards</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/bugbears.html">Bugbears</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/drow.html">Drow</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/duergar.html">Duergar</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/fireGiants.html">Fire Giants</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/frostGiants.html">Frost Giants</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/ghouls.html">Ghouls</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/gnolls.html">Gnolls</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/goblins.html">Goblins</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/hobgoblins.html">Hobgoblins</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/kobolds.html">Kobolds</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/lizardfolk.html">Lizardfolk</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/ogres.html">Ogres</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/orcs.html">Orcs</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/ratfolk.html">Ratfolk</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/sahuagin.html">Sahuagin</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/serpentfolk.html">Serpentfolk</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/troglodytes.html">Troglodytes</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/trolls.html">Trolls</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/vampires.html">Vampires</a></li>
+						<li><a href = "/pathfinderRPG/prd/monsterCodex/appendix.html">Modifying Monsters</a></li>
+					</ul>
+				</li>
+				<!-- Mythic Adventures -->
+				<li class = "has-subnav">
+					<a href = "#">Mythic Adventures</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/Glossary.html">Glossary</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicHeroes.html">Mythic Heroes</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicFeats.html">Mythic Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicSpells.html">Mythic Spells</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicSpells/spellIndex.html">Mythic Spell Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicSpells/spellLists.html">Mythic Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicGame.html">Running a Mythic Game</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicItems.html">Mythic Magic Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/mythicAdventures/mythicMonsters.html">Mythic Monsters</a></li>
+					</ul>
+				</li>
+				<!-- NPC Codex -->
+				<li class = "has-subnav">
+					<a href = "#">NPC Codex</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/npcCodex/core/index.html">Core Classes</a></li>
+						<li><a  href = "/pathfinderRPG/prd/npcCodex/prestige/index.html">Prestige Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/npcCodex/npc/index.html">NPC Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/npcCodex/appendix.html">Appendix</a></li>
+					</ul>
+				</li>
+				<!-- Pathfinder Unchained -->
+				<li class = "has-subnav">
+					<a href = "#">Pathfinder Unchained</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/unchained/classes/index.html">Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/unchained/skillsAndOptions/index.html">Skills and Options</a></li>
+						<li><a href = "/pathfinderRPG/prd/unchained/gameplay/index.html">Gameplay</a></li>
+						<li><a href = "/pathfinderRPG/prd/unchained/magic/index.html">Magic</a></li>
+						<li><a href = "/pathfinderRPG/prd/unchained/monsters/index.html">Monsters</a></li>
+					</ul>
+				</li>
+				<!-- Occult Adventures -->
+				<li class = "has-subnav">
+					<a href = "#">Occult Adventures</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/classes/index.html">Occult Classes</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/archetypes/index.html">Archetypes</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/feats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/psychicMagic.html">Psychic Magic</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/spellLists.html">Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/spells/index.html">Spells</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/occultRules.html">Occult Rules</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/occultGame.html">Running an Occult Game</a></li>
+						<li><a href = "/pathfinderRPG/prd/occultAdventures/occultRewards.html">Occult Rewards</a></li>
+					</ul>
+				</li>
+				<!-- Ultimate Campaign -->
+				<li class = "has-subnav">
+					<a href = "#">Ultimate Campaign</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/ultimateCampaign/characterBackground.html">Character Background</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCampaign/downtime.html">Downtime</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCampaign/campaignSystems.html">Campaign Systems</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCampaign/kingdomsAndWar.html">Kingdoms and War</a></li>
+					</ul>
+				</li>
+				<!-- Ultimate Combat -->
+				<li class = "has-subnav">
+					<a href = "#">Ultimate Combat</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/classes/gunslinger.html">Gunslinger</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/classes/ninja.html">Ninja</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/classes/samurai.html">Samurai</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/classArchetypes.html">Class Archetypes</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/ultimateCombatFeats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/combat/introduction.html">Mastering Combat</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/ultimateCombatVehicles.html">Vehicles</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/variants/introduction.html">Variant Rules</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/ultimateCombatSpellIndex.html">Spell Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateCombat/ultimateCombatSpellLists.html">Spell Lists</a></li>
+					</ul>
+				</li>
+				<!-- Ultimate Equipment -->
+				<li class = "has-subnav">
+					<a href = "#">Ultimate Equipment</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/armsAndArmor/index.html">Arms and Armor</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/gear/index.html">Gear</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/magicArmsAndArmor/index.html">Magic Arms and Armor</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/ringsRodsStaves/index.html">Rings, Rods, and Staves</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/wondrousItems/index.html">Wondrous Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/artifactsAndOthers/index.html">Artifacts and Other Items</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateEquipment/appendix.html">Appendix</a></li>
+					</ul>
+				</li>
+				<!-- Ultimate Magic -->
+				<li class = "has-subnav">
+					<a href = "#">Ultimate Magic</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/spellcasters/magus.html">Magus</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/spellcastingClassOptions.html">Spellcasting Class Options</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/magic/introduction.html">Mastering Magic</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/ultimateMagicFeats.html">Feats</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/ultimateMagicWordsOfPower.html">Words of Power</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/ultimateMagicSpellIndex.html">Spells</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/ultimateMagicSpellLists.html">Spell Lists</a></li>
+						<li><a href = "/pathfinderRPG/prd/ultimateMagic/ultimateMagicAppendices.html">Updates</a></li>
+					</ul>
+				</li>
+				<!-- Technology Guide -->
+				<li class = "has-subnav">
+					<a href = "#">Technology Guide</a>
+					<ul class = "level-2">
+						<li class = "has-subnav">
+							<a href = "#" style = "padding-left: 20px;">Technology in the World</a>
+							<ul class = "level-3">
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/skills.html">Skills</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/feats.html">Feats</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/spells.html">Spells</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/archetypes.html">Archetypes</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/technomancer.html">Technomancer</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/crafting.html">Crafting</a></li>
+							</ul>
+						</li>
+						<li class = "has-subnav">
+							<a href = "#" style = "padding-left: 20px;">Equipment</a>
+							<ul class = "level-3">
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/equipmentIntroduction.html">Introduction</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/weapons.html">Weapons</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/armor.html">Armor</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/pharmaceuticals.html">Pharmaceuticals</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/cybertech.html">Cybertech</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/gear.html">Gear</a></li>
+							</ul>
+						</li>
+						<li class = "has-subnav">
+							<a href = "#" style = "padding-left: 20px;">Hazards and Artifacts</a>
+							<ul class = "level-3">
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/hazards.html">Hazards</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/ai.html">Artificial Intelligences</a></li>
+								<li><a href = "/pathfinderRPG/prd/technologyGuide/artifacts.html">Artifacts</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- Index -->
+				<li class = "has-subnav">
+					<a href = "#">Index</a>
+					<ul class = "level-2">
+						<li><a href = "/pathfinderRPG/prd/indices/bestiary.html">Bestiary Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/indices/feats.html">Feats Index</a></li>
+						<!--<li><a href = "/pathfinderRPG/prd/indices/spells.html">Spell Index</a></li>-->
+						<li><a href = "/pathfinderRPG/prd/indices/spelllists.html">Spell List Index</a></li>
+						<li><a href = "/pathfinderRPG/prd/indices/templates.html">Template Index</a></li>
+					</ul>
+				</li>
+				<!-- OGL -->
+				<li>
+					<a href = "/pathfinderRPG/prd/openGameLicense.html">Open Game License</a>
+				</li>
+				<!-- Report a Problem -->
+				<li>
+					<a href = "/threads/rzs2soys">Report a Problem</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class = "body-content">
+
+	<div id = "nav-path"></div>
+
+	<div class = "body">
+
+        
+				<h1 id="bard" class="monster-header">B<span class="char-style-override-5">ard</span></h1>
+				
+				
+				<p>The versatility of bards makes them threats in any battle. A combat-focused bard is a bit less of a jack-of-all-trades than others of his kind, but still backs up martial prowess with social skills and a healthy dose of arcane talent. Presented below are variant options for martially inclined bards.</p>
+				<h2 id="archaeologist-(archetype)">Archaeologist (Archetype)</h2>
+				<p>No stodgy researcher, this archaeologist meets his research head-on in the field. Archaeologists sacrifice the bard's inspirational performance for a smattering of rogue talents. This archetype also fits roguelike characters that focus more on learning than on stabbing foes in the back. </p>
+				<p id="bardic-performance"><b>Bardic Performance</b>: Archaeologists do not gain the bardic performance ability or any of its performance types.</p>
+				<p id="archaeologist's-luck"><b>Archaeologist's Luck (Ex)</b>: Fortune favors the archaeologist. As a swift action, an archaeologist can call on fortune's favor, giving him a +1 luck bonus on attack rolls, saving throws, skill checks, and weapon damage rolls. He can use this ability for a number of rounds per day equal to 4 + his Charisma modifier. Maintaining this bonus is a free action, but it ends immediately if the archaeologist is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round. Archaeologist's luck is treated as bardic performance for the purposes of feats, abilities, effects, and the like that affect bardic performance. Like bardic performance, it cannot be maintained at the same time as other performance abilities. This bonus increases to +2 at 5th level, +3 at 11th level, and +4 at 17th level.</p>
+				<p id="clever-explorer"><b>Clever Explorer (Ex)</b>: At 2nd level, an archaeologist gains a bonus equal to half his class level on <a href="/pathfinderRPG/prd/coreRulebook/skills/disableDevice.html#disable-device" >Disable Device</a> and <a href="/pathfinderRPG/prd/coreRulebook/skills/perception.html#perception" >Perception</a> checks. He can disable intricate and complex devices in half the normal amount of time (minimum 1 round) and open a lock as a standard action. At 6th level, an archaeologist can take 10 on <a href="/pathfinderRPG/prd/coreRulebook/skills/disableDevice.html#disable-device" >Disable Device</a> checks, even if distracted or endangered, and can disarm magical traps. This ability replaces the versatile performance ability.</p>
+				<p id="uncanny-dodge"><b>Uncanny Dodge (Ex)</b>: At 2nd level, an archaeologist gains uncanny dodge, as the rogue class feature of the same name. This ability replaces well-versed.</p>
+				<p id="trap-sense"><b>Trap Sense (Ex)</b>: At 3rd level, an archaeologist gains trap sense +1, as the rogue class feature of the same name. This bonus improves by +1 for every three levels gained after 3rd, to a maximum of +6 at 18th level.</p>
+				<p id="rogue-talents"><b>Rogue Talents</b>: At 4th level, an archaeologist gains a rogue talent. He gains an additional rogue talent for every four levels of archaeologist gained after 4th level. Otherwise, this works as the rogue's rogue talent ability.</p>
+				<p id="evasion"><b>Evasion (Ex)</b>: At 6th level, an archaeologist gains evasion, as the rogue ability of the same name.</p>
+				<p id="advanced-talent"><b>Advanced Talent</b>: At 12th level, and every four levels thereafter, an archaeologist can choose an advanced rogue talent in place of a rogue talent.</p>
+				<h2 id="daredevil-(archetype)">Daredevil (Archetype)</h2>
+				<p>As quick at wordplay as at swordplay, daredevils are dashing heroes, inspiring their allies to match their clever repartee and acrobatic feats. Daredevils often lean toward comedy, dance, oratory, and singing.</p>
+				<p id="agile"><b>Agile (Ex)</b>: A daredevil adds half her class level (minimum 1) on <a href="/pathfinderRPG/prd/coreRulebook/skills/acrobatics.html#acrobatics" >Acrobatics</a>, <a href="/pathfinderRPG/prd/coreRulebook/skills/bluff.html#bluff" >Bluff</a>, <a href="/pathfinderRPG/prd/coreRulebook/skills/climb.html#climb" >Climb</a>, and <a href="/pathfinderRPG/prd/coreRulebook/skills/escapeArtist.html#escape-artist" >Escape Artist</a> checks. This ability replaces bardic knowledge.</p>
+				<p id="bardic-performance"><b>Bardic Performance</b>: A daredevil gains the following type of bardic performance.</p>
+				<p id="derring-do" class="stat-block-2"><i>Derring-do (Su)</i>: A daredevil can use her performance to bring out grace in the clumsiest allies. The daredevil and any allies who see her receive a +1 morale bonus on Reflex saving throws and a +2 competence bonus on Dexterity-based skill checks. Allies who move at least 10 feet during their turn gain a +1 dodge bonus to their Armor Class until the start of their next turn. At 5th level, and every six bard levels thereafter, the saving throw and Armor Class bonuses increase by +1, to a maximum of +4 at 17th level, and the skill check bonuses increase by +2, to a maximum of +8 at 17th level. This is a mind-affecting ability that uses visual components. This ability replaces inspire courage.</p>
+				<p id="canny-foe"><b>Canny Foe (Ex)</b>: At 2nd level, a daredevil can choose one type of combat maneuver. She gains a +2 bonus on her combat maneuver checks to attempt the chosen maneuver and to her CMD to resist that maneuver. At 6th level, and every four levels thereafter, the daredevil gains a +2 bonus for an additional type of combat maneuver. She may not choose the same maneuver twice. This ability replaces versatile performance.</p>
+				<p id="dauntless"><b>Dauntless (Ex)</b>: At 2nd level, a daredevil gains a +1 morale bonus on saving throws against mind-affecting effects, including all fear effects. This bonus increases by +1 for every four levels gained after 2nd level, to a maximum of +5 at 18th level. This ability replaces well-versed.</p>
+				<p id="scoundrel's-fortune"><b>Scoundrel's Fortune (Ex)</b>: At 5th level, once per day a daredevil can choose to roll two dice instead of one for any skill check, keeping the best result. She can use this ability one additional time per day for every three levels she possesses beyond 5th, to a maximum of eight times per day at 20th level. This ability replaces lore master.</p>
+				<h2 id="dervish-dancer-(archetype)">Dervish Dancer (Archetype)</h2>
+				<p>Not all bards inspire others with their performances. Dervish dancers enter a near-mystical trance that allows them to push their bodies beyond normal limits. </p>
+				<p id="weapon-and-armor-proficiency"><b>Weapon and Armor Proficiency</b>: Dervish dancers gain weapon proficiency with the scimitar and kukri. This ability replaces their proficiency with the rapier and whip.</p>
+				<p id="battle-dance"><b>Battle Dance</b>: A dervish dancer is trained in the use of the <a href="/pathfinderRPG/prd/coreRulebook/skills/perform.html#perform" >Perform</a> skill, especially dance, to create magical effects on himself. This works like bardic performance, except the dervish dancer only affects himself, and does not need to be able to see or hear his own performance. Battle dancing is treated as bardic performance for the purposes of feats, abilities, effects, and the like that affect bardic performance, except that battle dancing does not benefit from the <a href="/pathfinderRPG/prd/advancedPlayersGuide/advancedFeats.html#lingering-performance" >Lingering Performance</a> feat or any other ability that allows a bardic performance to grant bonuses after it has ended. Battle dancing benefits apply only when the bard is wearing light or no armor. Like bardic performance, it cannot be maintained at the same time as other performance abilities.</p>
+				<p>Starting a battle dance is a move action, but it can be maintained each round as a free action. Changing a battle dance from one effect to another requires the dervish dancer to stop the previous performance and start the new one as a move action. Like a bard, a dervish dancer's performance ends immediately if he is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action each round. A dervish dancer cannot perform more than one battle dance at a time. At 10th level, a dervish dancer can start a battle dance as a swift action instead of a move action.</p>
+				<p>Dervish dancers gain the inspire courage, inspire greatness, and inspire heroics bardic performance types as battle dances, but these only provide benefit to the dervish dancer himself.</p>
+				<p id="rain-of-blows" class="stat-block-2"><i>Rain of Blows (Su)</i>: At 6th level, a dervish dancer can use his battle dance to speed up his attacks. When making a full attack action, he may make one extra attack with any weapon he is holding, as though under the effects of a <i><a href="/pathfinderRPG/prd/coreRulebook/spells/haste.html#haste" >haste</a></i> spell. He also gains a +1 bonus on attack rolls and a +1 dodge bonus to AC and on Reflex saves. At 9th level, and every three bard levels thereafter, these bonuses increase by +1, to a maximum of +5 at 18th level. These bonuses do not stack with the <i><a href="/pathfinderRPG/prd/coreRulebook/spells/haste.html#haste" >haste</a> </i>spell. This ability replaces suggestion and mass suggestion.</p>
+				<br><p id="razor's-kiss" class="stat-block-2"><i>Razor's Kiss (Su)</i>: At 8th level, a dervish dancer can use his battle dance to improve his weapons' critical range. All attacks he makes with manufactured weapons are treated as though he had the <a href="/pathfinderRPG/prd/coreRulebook/feats.html#improved-critical" >Improved Critical</a> feat. Natural weapons and spells are not affected. This ability replaces dirge of doom.</p>
+				<br><p id="leaf-on-the-wind" class="stat-block-2"><i>Leaf on the Wind (Su)</i>: At 14th level, a dervish dancer can use his battle dance to evade attacks with unearthly grace and to shake off the effects of his wounds. Unlike other battle dances, leaf on the wind requires a standard action each round to start or maintain the performance. Each round it is maintained, including the first, the dervish dancer gains a +6 dodge bonus to Armor Class and on Reflex saves. If wounded, he heals 1 hit point of damage per bard level. This ability replaces frightening performance.</p>
+				<p id="fleet"><b>Fleet (Su)</b>: While performing a battle dance, a dervish dancer gains a +10 enhancement bonus to his land speed. This bonus increases by 5 feet for every four bard levels gained after 1st level, to a maximum of +30 feet at 19th level. This ability replaces bardic knowledge and lore master.</p>
+				<p id="versatile-dance"><b>Versatile Dance (Ex)</b>: At 2nd level, a dervish dancer gains a bonus equal to half his level on <a href="/pathfinderRPG/prd/coreRulebook/skills/perform.html#perform" >Perform</a> (dance) checks. He can use his bonus for his <a href="/pathfinderRPG/prd/coreRulebook/skills/perform.html#perform" >Perform</a> (dance) skill in place of his bonus for <a href="/pathfinderRPG/prd/coreRulebook/skills/acrobatics.html#acrobatics" >Acrobatics</a>. This ability replaces versatile performance.</p>
+				<p id="dance-of-fury"><b>Dance of Fury (Su)</b>: At 12th level, a dervish dancer can attack more than once as he moves while performing a battle dance. He can combine a full-attack action with a single move, taking the attacks at any point during his movement, but must move at least 5 feet between each attack. This movement provokes attacks of opportunity as normal. This ability replaces soothing performance.</p>
+				<p id="battle-fury"><b>Battle Fury (Su)</b>: At 20th level, the dervish dancer can unleash a whirlwind of blows while performing a battle dance. As a full-round action, he can take a single move action and unleash a single attack at his highest bonus against each target within his reach during any point of his move, up to a maximum number of attacks equal to the dervish dancer's character level. This movement provokes attacks of opportunity as normal, and replaces deadly performance.</p>
+        	<div class = "footer">
+		<p>
+			<a href = "/threads/rzs2soys">Report a Problem</a><br /><br />
+			&copy;2002-2016 Paizo, Inc.&reg;<br />
+			Paizo Inc., Paizo, Pathfinder, and the Pathfinder logo are registered trademarks of Paizo Inc., and<br />
+			Pathfinder Roleplaying Game and Pathfinder Campaign Setting are trademarks of Paizo Inc.<br />
+			<a href="/pathfinderRPG/prd/openGameLicense.html">Open Game License</a>.
+		</p>
+	</div>
+
+	</div>
+</div>
+
+<script type = "text/javascript" src = "/pathfinderRPG/prd/include/js/jquery-1.10.2.min.js"></script>
+<script type = "text/javascript" src = "/pathfinderRPG/prd/include/js/jquery.cookie.js"></script>
+<script type = "text/javascript" src = "http://cdn.paizo.com/chrome/js/jquery.dataTables.min.js"></script>
+<script type = "text/javascript" src = "/pathfinderRPG/prd/include/js/prd-jquery.js"></script>
+<script type = "text/javascript" src = "/pathfinderRPG/prd/include/js/prd-scripts.js"></script>
+<script type = "text/javascript">var globalTitle="Bard",globalNavPath=[{ href: '/pathfinderRPG/prd/ultimateCombat/classArchetypes.html', name: 'Class Archetypes' }];</script>
+<script type = "text/javascript">
+$(function () {
+	if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			highlightNavLocation(globalNavPath);
+		}
+	});
+</script>
+</body>
+</html>

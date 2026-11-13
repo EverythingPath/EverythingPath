@@ -1,0 +1,109 @@
+_id: 891YnkwG0uH5lYF7
+_key: '!items!891YnkwG0uH5lYF7'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Dagger Pistol
+system:
+  actions:
+    - _id: b3200vuwhkhase6p
+      ability:
+        attack: dex
+        critMult: 3
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack (Dagger)
+      range:
+        maxIncrements: 10
+        units: melee
+        value: '10'
+    - _id: sqCg7RufEGGAlDe8
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack (Firearm)
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '10'
+  ammo:
+    capacity: 1
+    explode: 5
+    misfire: 1
+    type: gunBullet
+  baseTypes:
+    - Dagger Pistol
+    - Dagger
+    - Pistol
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d3 (small), 1d4 (medium);
+      <b>Critical</b> x3; <b>Range</b> 10 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1 (5 ft.); <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>A combination of a coat pistol and a blade, the dagger pistol can be
+      used as both weapons. The awkwardness of the configuration means you do
+      not gain the bonus on Sleight of Hand checks that either of those
+      stand-alone weapons grants. The dagger pistol is considered a double
+      weapon for the purpose of creating masterwork or magical versions of this
+      weapon.</p>
+
+      <p>If this firearm gains the broken condition, both the firearm component
+      and the dagger component are considered broken. A dagger pistol uses
+      either a bullet and 1 dose of black powder or a single alchemical
+      cartridge as ammunition.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 740
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

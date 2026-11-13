@@ -1,0 +1,55 @@
+_id: d3mtqenonzsc8qzp
+_key: '!items!d3mtqenonzsc8qzp'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Siege Scatter
+system:
+  actions:
+    - _id: 2kznpejlu0dlsjt8
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: 50-ft.-radius spread
+      duration:
+        units: inst
+      measureTemplate:
+        size: '50'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex partial (see text)
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A roiling blast of rough rock and dirt scatters along the ground in the
+      area, dealing 1d6 points of slashing damage per 2 caster levels (maximum
+      5d6) to all creatures on the ground in the area, even on a successful
+      saving throw. Creatures in the area that fail the Reflex save fall prone
+      and are knocked to the nearest edge of the area, taking 1d6 points of
+      bludgeoning damage for every 10 feet they travel this way. Creatures that
+      did not move during the past round and those with the stability racial
+      trait gain a +4 bonus on the saving throw.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      druid: 5
+      hunter: 4
+      ranger: 4
+      shaman: 5
+  level: 5
+  school: evo
+  sources:
+    - id: PZO9280
+      pages: '223'
+type: spell
