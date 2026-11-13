@@ -1,0 +1,29 @@
+_id: lxDJhpqwtR3J4UXx
+_key: '!items!lxDJhpqwtR3J4UXx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/agile-maneuvers.jpg
+name: Agile Maneuvers
+system:
+  changes:
+    - _id: t7xzgayi
+      formula: >-
+        if(gt(@abilities.dex.mod, @abilities.str.mod), @abilities.dex.mod -
+        @abilities.str.mod)
+      target: cmb
+      type: untyped
+  description:
+    value: >-
+      <i>You've learned to use your quickness in place of brute force when
+      performing combat maneuvers.</i><p><strong>Benefits</strong>: You add your
+      Dexterity bonus to your base attack bonus and size bonus when determining
+      your Combat Maneuver Bonus (see Combat) instead of your Strength
+      bonus.</p><p><strong>Normal</strong>: You add your Strength bonus to your
+      base attack bonus and size bonus when determining your Combat Maneuver
+      Bonus.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 117
+  tags:
+    - Combat
+type: feat

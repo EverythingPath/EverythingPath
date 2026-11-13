@@ -1,0 +1,76 @@
+_id: 3pMUGj64GvIVpAwS
+_key: '!items!3pMUGj64GvIVpAwS'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dwarven-pelletbow.PNG
+name: Dwarven Heavy Pelletbow
+system:
+  actions:
+    - _id: jmq0yzba8zcd2sdu
+      ability:
+        attack: _default
+        critMult: 3
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: slingBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '60'
+  ammo:
+    type: slingBullet
+  baseTypes:
+    - Dwarven Heavy Pelletbow
+    - Heavy Crossbow
+  description:
+    unidentified: >-
+      <p>The dwarven pelletbow is a crossbowlike weapon that is loaded with and
+      fires sling bullets rather than bolts. A dwarven heavy pelletbow takes the
+      same amount of time and effort to load as a light crossbow (normally a
+      move action), and a dwarven light pelletbow can be reloaded as a free
+      action (allowing characters to attack with it multiple times in a round).
+      Normally a pelletbow takes two hands to operate, but you can shoot (but
+      not load) a pelletbow with one hand by taking a -2 penalty on attack
+      rolls. You can shoot one pelletbow with each hand, but you take a penalty
+      on attack rolls for attacking with two weapons (treating the heavy
+      pelletbow as a one-handed weapon and the light pelletbow as a light
+      weapon).</p><p>Feats and special abilities that don't involve proficiency
+      (that don't depend on dealing piercing damage or firing bolts) that apply
+      to a heavy crossbow also apply to a dwarven heavy pelletbow, and those
+      that apply to a light crossbow also apply to a dwarven light
+      pelletbow.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 75
+  sources:
+    - id: PZO9491
+      pages: '8'
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 8
+type: weapon

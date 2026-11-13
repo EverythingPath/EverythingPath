@@ -1,0 +1,76 @@
+_id: zC6uaQNlhcQzTvPL
+_key: '!items!zC6uaQNlhcQzTvPL'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/artillery/cannon-engraved-gold.webp
+name: Light Bombard
+system:
+  actions:
+    - _id: 5znf05hy4zclk5fv
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(5, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '50'
+        units: ft
+        value: '100'
+  ammo:
+    type: siege
+  baseTypes:
+    - Light Bombard
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 5d6;
+      <strong>Critical</strong> x4; <strong>Range</strong> 100 ft. (50 ft.
+      min.); <strong>Type</strong> B and P</p><p><strong>Crew</strong> 2;
+      <strong>Aim</strong> 1; <strong>Load</strong> 3; <strong>Speed</strong> 10
+      ft.</p><p><strong>Category</strong> Indirect-Fire (Large);
+      <strong>Proficiency</strong> Siege
+      Engine</p><h3>Description</h3><p>Resembling either large cauldrons or more
+      traditional cannons, these firearms lob their ammunition in an arc in
+      order to deliver their deadly payloads over troops or castle walls.
+      Bombards are normally fired indirectly, but can also be fired as
+      direct-fire siege engines. When they are used for direct fire, they take a
+      -4 penalty on attack rolls and have their range increment halved, but do
+      not have a minimum range. Like all firearms, bombards do not suffer
+      mishaps, but instead have a misfire chance.</p><p><em>Light</em>: These
+      bombards resemble cauldrons attached to swivels. Often they are mounted
+      into the ground or into the stone of castle walls because of the mighty
+      power of their recoil. The targeting DC of a light bombard is 15. A light
+      bombard has a base misfire range of 1-2 (10 feet). Light bombards have a
+      hardness of 10 and 70 hit points. Light bombard balls cost 30 gp each and
+      weigh 25 pounds.</p>
+  hardness: 10
+  hp:
+    base: 70
+  material:
+    base:
+      value: steel
+  price: 6000
+  sources:
+    - id: PZO1118
+      pages: '161'
+  subType: exotic
+  weaponSubtype: ranged
+type: weapon

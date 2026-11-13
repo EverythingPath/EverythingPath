@@ -1,0 +1,53 @@
+_id: 76flhjqconhe2ty9
+_key: '!items!76flhjqconhe2ty9'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Teleport Object
+system:
+  actions:
+    - _id: wis0z8gnjmkp5sqs
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one touched object of up to 50 lbs./level and 3 cu. ft./level
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ptqu8gtrujxsvwy1]{teleport}, except that
+      it teleports an object, not you. Creatures and magical forces cannot be
+      teleported.</p><p>If desired, the target object can be sent to a distant
+      location on the Ethereal Plane. In this case, the point from which the
+      object was teleported remains faintly magical until the item is retrieved.
+      A successful targeted <em>dispel magic</em> spell cast on that point
+      brings the vanished item back from the Ethereal Plane.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      psychic: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '359'
+  subschool:
+    - teleportation
+type: spell
