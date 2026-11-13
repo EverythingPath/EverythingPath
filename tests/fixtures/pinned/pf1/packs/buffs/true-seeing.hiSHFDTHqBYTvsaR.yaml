@@ -1,0 +1,29 @@
+_id: hiSHFDTHqBYTvsaR
+_key: '!items!hiSHFDTHqBYTvsaR'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/perception/eye-ringed-glow-angry-large-teal.webp
+name: True Seeing
+system:
+  changes:
+    - _id: I9WS5kKI
+      formula: '120'
+      operator: set
+      target: sensetr
+      type: untyped
+  description:
+    instructions: <p>Set item level to caster level.</p>
+    value: >-
+      <p>Grants true seeing 120 ft. for 1 Minute per item level as per
+      @UUID[Compendium.pf1.spells.Item.jbqo4o2b2tmdz7wv] spell.</p>
+  duration:
+    end: initiative
+    units: minute
+    value: '@item.level'
+  level: 9
+  sources:
+    - id: PZO1110
+      pages: '363'
+  subType: spell
+type: buff

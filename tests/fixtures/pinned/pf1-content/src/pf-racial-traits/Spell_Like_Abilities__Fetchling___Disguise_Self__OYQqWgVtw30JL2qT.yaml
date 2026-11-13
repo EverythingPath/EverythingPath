@@ -1,0 +1,81 @@
+_id: OYQqWgVtw30JL2qT
+_key: '!items!OYQqWgVtw30JL2qT'
+_stats:
+  coreVersion: '12.331'
+folder: h28fV1La84HjFdFv
+img: icons/creatures/eyes/humanoid-single-yellow.webp
+name: Spell-Like Abilities (Fetchling - Disguise Self)
+system:
+  abilityType: sp
+  actions:
+    - _id: ZDxSwJtZ8GyzJ3IN
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise
+        self}</p><p>You make yourself, including clothing, armor, weapons, and
+        equipment, look different. You can seem @Distance[1 ft;dual] shorter or
+        taller, thin, fat, or in between. You cannot change your creature type
+        (although you can appear as another subtype). Otherwise, the extent of
+        the apparent change is up to you. You could add or obscure a minor
+        feature or look like an entirely different person or gender.</p><p>The
+        spell does not provide the abilities or mannerisms of the chosen form,
+        nor does it alter the perceived tactile (touch) or audible (sound)
+        properties of you or your equipment. If you use this spell to create a
+        disguise, you get a +10 bonus on the Disguise check. A creature that
+        interacts with the glamer gets a Will save to recognize it as an
+        illusion.</p>
+      duration:
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Disguise Self
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    instructions: >-
+      <p>This trait has been split into three to make it simpler to use and to
+      swap out for alternate traits that replace only 1 spell of the 3 normally
+      granted by the full racial trait.   the 3 parts, or alternates, should be
+      present on your
+      actor.</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.OYQqWgVtw30JL2qT]{Spell-Like
+      Abilities (Fetchling - Disguise
+      Self)}</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.JRAuStEQiJCdtUwp]{Spell-Like
+      Abilities (Fetchling - Plane
+      Shift)}</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.iulHWSMNp9TABDDU]{Spell-Like
+      Abilities (Fetchling - Shadow Walk)}</p>
+    value: >-
+      <p><strong>Race</strong>: Fetchling</p><hr /><p>A fetchling can use
+      @UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise self} once per
+      day as a spell-like ability. He can assume the form of any humanoid
+      creature using this spell-like ability. When a fetchling reaches character
+      9th level in any combination of classes, he gains
+      @UUID[Compendium.pf1.spells.Item.btoow6tyv39443gh]{shadow walk}(self only)
+      as a spell-like ability usable once per day, and at 13th level, he gains
+      @UUID[Compendium.pf1.spells.Item.q3st18udsalnyz5v]{plane shift} (self
+      only, to the Shadow Plane or the Material Plane only) usable once per day.
+      A fetchling's caster level for these abilities is equal to his character
+      level.</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '242'
+    - id: PZO1116
+      pages: '123'
+    - id: PZO1121
+      pages: '108'
+  subType: racial
+  tags:
+    - Fetchling
+  traitCategory: magical
+  uses:
+    value: 1
+type: feat

@@ -1,0 +1,67 @@
+_id: vpqwav2vexafom8c
+_key: '!items!vpqwav2vexafom8c'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Riding Possession
+system:
+  actions:
+    - _id: fz9c2r8cvgd509qz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 hour/level; see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You stealthily project your soul into the host's body as an observer,
+      with limited ability to influence the target.</p><p>This functions as
+      @UUID[Compendium.pf1.spells.Item.4mw83czf7b62rar3]{possession}, except the
+      host is still in full control of its body and is unaware you are
+      possessing it. You can't communicate with the host directly, but you can
+      cast mind-affecting spells or riding <em>possession</em> on the host as
+      long as you can cast these spells as purely mental actions. Even if the
+      spell you cast would normally affect more than one target or an area, it
+      can affect only the host. If the host succeeds at a saving throw against a
+      spell that you cast in this way, it immediately becomes aware that it is
+      possessed, and if it was already aware, it receives another saving throw
+      against riding <em>possession</em>. <em>Protection from Evil</em> and
+      similar effects don't expel you from the host, but they do prevent you
+      from casting further spells from within your host until their durations
+      expire.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      medium: 2
+      mesmerist: 4
+      occultist: 3
+      psychic: 4
+      sorcerer: 4
+      spiritualist: 3
+      summoner: 4
+      summonerUnchained: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO1132
+      pages: '185'
+type: spell

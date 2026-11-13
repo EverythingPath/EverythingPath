@@ -1,0 +1,60 @@
+_id: abv8SSqPMJW1jrIM
+_key: '!items!abv8SSqPMJW1jrIM'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/axe-knuckle.PNG
+name: Knuckle Axe
+system:
+  actions:
+    - _id: ls5y9q8cwrl525kx
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Knuckle Axe
+  description:
+    unidentified: >-
+      <p>Knuckle axes, usually used in pairs, resemble axe blades mounted on
+      brass knuckles. You may hold, but not wield, a weapon or other object in a
+      hand wearing a knuckle axe. Unlike when wearing brass knuckles, you cannot
+      use a hand wearing a knuckle axe for spellcasting.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 9
+  properties:
+    fin: true
+    mnk: true
+    prf: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - axes
+  weight:
+    value: 2
+type: weapon

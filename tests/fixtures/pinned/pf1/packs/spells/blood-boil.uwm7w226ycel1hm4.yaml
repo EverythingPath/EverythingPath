@@ -1,0 +1,60 @@
+_id: uwm7w226ycel1hm4
+_key: '!items!uwm7w226ycel1hm4'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Blood Boil
+system:
+  actions:
+    - _id: 3fyyqqjnj43pywei
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '3'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The temperature of the target creature's blood (or other similar body
+      fluid) begins to rise over the next 3 rounds during the caster's turn.
+      Each round starting with the first, the target creature attempts a new
+      saving throw at the start of the caster's turn to resist that round's
+      effect. A successful save does not end the spell effect, but does prevent
+      that round's effect. On the round that this spell is cast, the target
+      becomes fatigued. On the next round, as the blood temperature begins to
+      rise, the target's capillaries burst, dealing 1d6 points of Constitution
+      damage to the target. On the third and final round, the target's blood
+      begins to boil; the spell deals 1d6 points of damage per caster level (to
+      a maximum of 15d6), and-if the target is still alive-the target becomes
+      exhausted rather than fatigued.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      magus: 5
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a drop of mercury
+  school: nec
+  sources:
+    - id: PZO9440
+      pages: '24'
+type: spell

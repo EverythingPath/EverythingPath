@@ -1,0 +1,195 @@
+{
+  "purpose": "preview",
+  "summary": {
+    "entries": 10,
+    "issues": 14
+  },
+  "entries": [
+    {
+      "externalKey": "pf1-content/Flaming",
+      "pack": "pf-special-qualities",
+      "issues": [
+        {
+          "field": "itemAbility",
+          "reason": "Bonus equivalent, dice and conditional mechanics require reviewed curation."
+        },
+        {
+          "field": "itemAbility",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "description",
+            "text": "A flaming weapon deals an extra 1d6 fire damage on a hit.\nPrice +1 bonus"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/Keen",
+      "pack": "pf-special-qualities",
+      "issues": [
+        {
+          "field": "itemAbility",
+          "reason": "Bonus equivalent, dice and conditional mechanics require reviewed curation."
+        },
+        {
+          "field": "itemAbility",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "description",
+            "text": "Only piercing or slashing melee weapons can be keen. This ability doubles the threat range of a weapon.\nPrice +1 bonus"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/Shadow",
+      "pack": "pf-special-qualities",
+      "issues": [
+        {
+          "field": "itemAbility",
+          "reason": "Bonus equivalent, dice and conditional mechanics require reviewed curation."
+        },
+        {
+          "field": "itemAbility",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "description",
+            "text": "This armor grants a +5 competence bonus on Stealth checks.\nPrice +3,750 gp"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Action",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "weaponAction",
+                "conditionals": [
+                  {
+                    "_id": "closeRange",
+                    "name": "Within 30 ft",
+                    "modifiers": [
+                      {
+                        "formula": "1",
+                        "target": "attack",
+                        "subTarget": "allAttack",
+                        "type": "enh"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "field": "actions.conditionals",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": [
+            {
+              "name": "Within 30 ft",
+              "modifiers": [
+                {
+                  "formula": "1",
+                  "target": "attack",
+                  "subTarget": "allAttack",
+                  "type": "enh"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Compound",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "cmd",
+            "text": "+[[4]] Racial vs bull rush and trip while on ground"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Covered",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "allSavingThrows",
+            "text": "Already accounted for by the racial trait"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/EmptyTarget",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "",
+            "text": "May reroll critical confirmation once"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Formula",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "will",
+            "text": "+[[floor((@class.level + 2) / 4)]] Morale vs fear"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Immunity",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "allSavingThrows",
+            "text": "Immune to Magic Sleep"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Numeric",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "contextNotes",
+          "reason": "Missing curation record; contributes no structured output.",
+          "value": {
+            "target": "allSavingThrows",
+            "text": "+[[2]] Racial vs poison"
+          }
+        }
+      ]
+    }
+  ]
+}

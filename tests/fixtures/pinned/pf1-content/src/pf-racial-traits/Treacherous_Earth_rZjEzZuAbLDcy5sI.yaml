@@ -1,0 +1,59 @@
+_id: rZjEzZuAbLDcy5sI
+_key: '!items!rZjEzZuAbLDcy5sI'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Treacherous Earth
+system:
+  actions:
+    - _id: PFAqfFSkHIz1iviw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft radius
+      description: >-
+        <p>Once per day, you can will the earth to rumble and shift,
+        transforming a @Distance[10 ft;dual]-radius patch of earth, unworked
+        stone, or sand into an area of difficult terrain, centered on an area
+        you touch. This lasts for a number of minutes equal to your level, after
+        which the ground returns to normal.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      measureTemplate:
+        color: '#f2b54a'
+        size: '10'
+        type: circle
+      name: Treacherous Earth
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Earth or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.nb7WkJkqL3bnhkU5]{Fey}
+      type</p><hr /><p>Members of this race gain the following supernatural
+      ability: Once per day, a member of this race can will the earth to rumble
+      and shift, transforming a @Distance[10 ft;dual]-radius patch of earth,
+      unworked stone, or sand into an area of difficult terrain centered on a
+      square it can touch. This lasts for a number of minutes equal to the
+      user’s level, after which the ground returns to normal.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: 230-231
+  subType: racial
+  tags:
+    - Race Builder
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

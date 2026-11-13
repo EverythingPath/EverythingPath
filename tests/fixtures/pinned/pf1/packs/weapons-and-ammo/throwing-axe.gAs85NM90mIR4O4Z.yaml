@@ -1,0 +1,87 @@
+_id: gAs85NM90mIR4O4Z
+_key: '!items!gAs85NM90mIR4O4Z'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/axe-throwing.png
+name: Throwing Axe
+system:
+  actions:
+    - _id: uts84jcjcqnu1odi
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 8xLXkrIPtWGkqplc
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Throwing Axe
+  description:
+    unidentified: >-
+      <p>This one-handed axe is small and perfectly balanced for throwing, and
+      can be used as a melee weapon. Throwing axes have a variety of alternative
+      names, including franciscas, tomahawks, and more. The axe is normally
+      gripped by the haft and thrown overhand, making one complete rotation in
+      the air before biting into the target with the axe head.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - axes
+    - thrown
+    - tribal
+  weight:
+    value: 2
+type: weapon
