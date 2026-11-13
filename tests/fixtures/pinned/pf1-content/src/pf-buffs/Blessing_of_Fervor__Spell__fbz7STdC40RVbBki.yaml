@@ -1,0 +1,50 @@
+_id: fbz7STdC40RVbBki
+_key: '!items!fbz7STdC40RVbBki'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/improved-great-fortitude.jpg
+name: Blessing of Fervor (Spell)
+system:
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        Cast a single spell of 2nd level or lower as if it were an Enlarged,
+        Extended, Silent, or Still spell.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.scyklgov72pvw884]{Blessing of
+      Fervor}</p><p>With this blessing, you call your allies to move forth and
+      empower them to conquer and become victorious. Each round for the duration
+      of this spell, each of your allies can choose one of the following bonuses
+      for that round at the beginning of its turn (their
+      choice).</p><ul><li>Increase its speed by 30 feet.</li><li>Stand up as a
+      swift action without provoking an attack of opportunity.</li><li>Make one
+      extra attack as part of a full attack action, using its highest base
+      attack bonus.</li><li>Gain a +2 bonus on attack rolls and a +2 dodge bonus
+      to AC and Reflex saves.</li><li>Cast a single spell of 2nd level or lower
+      as if it were an enlarged, extended, silent, or still spell.</li></ul>
+  level: 7
+  scriptCalls:
+    - _id: WymHGrXGRA9FP8De
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Others
+      type: script
+      value: |-
+        if(state) {
+          const otherBuffTags = [
+            "blessingOfFervorAtkAcRef",
+            "blessingOfFervorExtraAtk",
+            "blessingOfFervorSpeed",
+            "blessingOfFervorSpell",
+            "blessingOfFervorStandUp"
+          ];
+
+          const otherBuffs = actor.itemTypes.buff.filter(b => otherBuffTags.includes(b.system.tag) && b.system.tag !== item.system.tag);
+          otherBuffs.forEach(async (buff) => { await buff.setActive(false) });
+        }
+  subType: spell
+  tag: blessingOfFervorSpell
+type: buff

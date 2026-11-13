@@ -1,0 +1,54 @@
+_id: 4lA39zThxcpERkyv
+_key: '!items!4lA39zThxcpERkyv'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/death/skull-energy-light-white.webp
+name: Hide from Undead, Greater
+system:
+  actions:
+    - _id: u39zpdhepiwcxi7r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one touched creature/level
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.rekl0ikgnorz60jc]{Hide from Undead}, except
+      the spell does not immediately end if a warded creature attempts to turn
+      or command undead, channels positive energy, touches an undead creature,
+      or attacks any creature. Instead, when the warded creature takes one of
+      these actions, an intelligent undead creature can attempt another Will
+      saving throw to negate the effects of the spell.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell

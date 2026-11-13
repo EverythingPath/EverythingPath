@@ -1,0 +1,82 @@
+_id: PS0NFxiHHFOPWtMZ
+_key: '!items!PS0NFxiHHFOPWtMZ'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/affliction_08.jpg
+name: Ill Omen
+system:
+  actions:
+    - _id: j43vIXZl2RqciL9r
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/skills/affliction_08.jpg
+      name: Use
+    - _id: O4NLYdJGlNX4xhMg
+      activation:
+        type: move
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/skills/affliction_08.jpg
+      name: Use (negate one use)
+  contextNotes:
+    - target: allChecks
+      text: >-
+        On the next [[floor(@item.level / 5)]] d20 rolls you make, you must roll
+        twice and take the less favorable result.
+    - target: attack
+      text: >-
+        On the next [[floor(@item.level / 5)]] d20 rolls you make, you must roll
+        twice and take the less favorable result.
+    - target: allSavingThrows
+      text: >-
+        On the next [[floor(@item.level / 5)]] d20 rolls you make, you must roll
+        twice and take the less favorable result.
+    - target: skills
+      text: >-
+        On the next [[floor(@item.level / 5)]] d20 rolls you make, you must roll
+        twice and take the less favorable result.
+    - target: cmb
+      text: >-
+        On the next [[floor(@item.level / 5)]] d20 rolls you make, you must roll
+        twice and take the less favorable result.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.wjdhmfdgwrevax3w]{Ill Omen}</p><p>You
+      afflict the target with bad luck. On the next d20 roll the target makes,
+      it must roll twice and take the less favorable result.</p><p>For every
+      five caster levels you have, the target must roll twice on an additional
+      d20 roll (to a maximum of five rolls at 20th level).</p><p>A target who
+      can speak and has at least one free hand and who is aware of the spell and
+      its effects (such as from a Spellcraft check to identify the spell as it
+      is cast) can negate one reroll by spending a move action to utter a brief
+      prayer or good luck charm to appease the spirits of ill fortune.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 1
+  scriptCalls:
+    - _id: 3yp9NicV0inTn92S
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Recharge When On
+      type: script
+      value: 'item.update({ "system.uses.value": state ? item.system.uses.max : 0 });'
+    - _id: 2EQVfd2YIYVZEF0q
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Self
+      type: script
+      value: |-
+        if(item.system.uses.value === 1)
+          await item.setActive(false);
+  subType: spell
+  uses:
+    maxFormula: 1 + floor(@item.level / 5)
+    per: charges
+    value: 1
+type: buff

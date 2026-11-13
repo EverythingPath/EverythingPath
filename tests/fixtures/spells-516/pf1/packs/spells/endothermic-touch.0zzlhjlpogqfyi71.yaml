@@ -1,0 +1,54 @@
+_id: 0zzlhjlpogqfyi71
+_key: '!items!0zzlhjlpogqfyi71'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Endothermic Touch
+system:
+  actions:
+    - _id: fvri3qb1b7rnxj7a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fort negates
+        type: fort
+      target:
+        value: one living creature that has the dragon type or the reptilian subtype
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell slows the metabolism and other bodily functions of a
+      creature for a short amount of time. The target is staggered and moves at
+      half its normal speed (round down to the next 5-foot increment), but it
+      can hold its breath for twice as long as normal.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      druid: 1
+      hunter: 1
+      shaman: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: a small bit of snakeskin
+  school: trs
+  sources:
+    - id: PZO1130
+      pages: '141'
+type: spell

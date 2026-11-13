@@ -1,0 +1,65 @@
+_id: snspotd2cno49ed5
+_key: '!items!snspotd2cno49ed5'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Zone of Truth
+system:
+  actions:
+    - _id: xvalrz0r4zn6lf60
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius emanation
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Creatures within the emanation area (or those who enter it) can't speak
+      any deliberate and intentional lies. Each potentially affected creature is
+      allowed a save to avoid the effects when the spell is cast or when the
+      creature first enters the emanation area. Affected creatures are aware of
+      this enchantment. Therefore, they may avoid answering questions to which
+      they would normally respond with a lie, or they may be evasive as long as
+      they remain within the boundaries of the truth. Creatures who leave the
+      area are free to speak as they choose.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      medium: 2
+      oracle: 2
+      paladin: 2
+      psychic: 2
+      warpriest: 2
+      witch: 2
+    subDomain:
+      Honor: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '371'
+  subschool:
+    - compulsion
+type: spell
