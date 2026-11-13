@@ -1,0 +1,58 @@
+_id: epwme5tw45rzhs3n
+_key: '!items!epwme5tw45rzhs3n'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/melee/shield-damaged-broken-gold.webp
+name: Splinter Spell Resistance
+system:
+  actions:
+    - _id: ko8ofuhfwpg438eq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: melee or thrown weapon or up to 50 pieces of ammunition touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create an aura around the target weapon that weakens a foe's
+      magical defenses. The first time each round the weapon damages a creature
+      with spell resistance, that creature's spell resistance is reduced by 5
+      for 1 round. This reduction is not cumulative for multiple attacks within
+      the same round, even if the target is struck by different weapons, each
+      affected by a different casting of <i>splinter spell resistance</i>.
+      However, the same creature's spell resistance can be reduced on multiple
+      rounds by subsequent hits.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      magus: 2
+      occultist: 2
+      psychic: 2
+      shaman: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO9465
+      pages: '9'
+  sr: false
+type: spell

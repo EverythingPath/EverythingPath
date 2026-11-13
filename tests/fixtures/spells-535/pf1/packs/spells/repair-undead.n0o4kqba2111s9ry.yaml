@@ -1,0 +1,46 @@
+_id: n0o4kqba2111s9ry
+_key: '!items!n0o4kqba2111s9ry'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-fire-green.webp
+name: Repair Undead
+system:
+  actions:
+    - _id: yhwfrzp04emv6o1z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will half
+        harmless: true
+        type: will
+      target:
+        value: one undead creature touched (see text)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>When you touch an undead creature, you channel negative energy that
+      heals 1d8 points of damage + 1 point per caster level (maximum +5). This
+      spell has no effect on living creatures, except those that are healed by
+      negative energy are also healed by the spell.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      sorcerer: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '191'
+type: spell

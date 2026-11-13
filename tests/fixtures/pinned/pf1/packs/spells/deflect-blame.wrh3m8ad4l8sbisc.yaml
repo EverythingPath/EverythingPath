@@ -1,0 +1,58 @@
+_id: wrh3m8ad4l8sbisc
+_key: '!items!wrh3m8ad4l8sbisc'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Deflect Blame
+system:
+  actions:
+    - _id: dgm1p1be237hja7f
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can cast this spell immediately after attacking a creature, causing
+      that creature to believe that a different creature that threatens it was
+      responsible for the attack rather than you. You can instead cast this
+      spell immediately after a failed Bluff, Diplomacy, or Intimidate check,
+      causing the target of that check to believe that a different creature you
+      designate within spell range was responsible for the content of that
+      failed check. Using the spell in these ways doesn't compel the target to
+      undertake a specific action in response to its belief of where the blame
+      lies.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '210'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,56 @@
+_id: leiz2fbqmoktng36
+_key: '!items!leiz2fbqmoktng36'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Life Current
+system:
+  actions:
+    - _id: q1u677vc9z9a822v
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: current or portion of current up to 20 feet wide and 100 feet long
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will half
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You infuse the current with positive energy. At the start of their turn
+      when the current moves them, living creatures in the current's area heal
+      1d6 hit points per 10 feet of the current's speed (maximum 6d6). Undead
+      creatures in the current instead take an equal amount of damage.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      cleric: 3
+      druid: 3
+      hunter: 3
+      oracle: 3
+      paladin: 3
+      ranger: 3
+      shaman: 3
+      warpriest: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO92102
+      pages: '60'
+  subschool:
+    - healing
+type: spell
