@@ -1,0 +1,56 @@
+_id: hv1vqeuh5eji28rz
+_key: '!items!hv1vqeuh5eji28rz'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Contagion, Greater
+system:
+  actions:
+    - _id: sd6nyuqtbdk8szys
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.ppeb97nxg1rmdpme]{contagion}, except the
+      victim cannot overcome the disease without magic-making the required
+      number of saves does not cure it. The DC to remove the disease with magic
+      is equal to the save DC + 5.</p>
+  descriptors:
+    - disease
+    - evil
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 5
+      druid: 5
+      hunter: 5
+      oracle: 5
+      sorcerer: 6
+      warpriest: 5
+      witch: 5
+      wizard: 6
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '211'
+type: spell

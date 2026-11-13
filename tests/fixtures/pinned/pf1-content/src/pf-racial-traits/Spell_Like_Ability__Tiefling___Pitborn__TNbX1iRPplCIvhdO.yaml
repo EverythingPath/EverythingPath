@@ -1,0 +1,81 @@
+_id: TNbX1iRPplCIvhdO
+_key: '!items!TNbX1iRPplCIvhdO'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Pitborn)
+system:
+  abilityType: sp
+  actions:
+    - _id: T62z6pPpndJIGjBT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5 ft radius or single object or crystalline creature
+      damage:
+        parts:
+          - formula: (min(10, @attributes.hd.total))d6
+            types:
+              - sonic
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.q63jn0kbrrb6t3ea]{Shatter}</p><p>Shatter
+        creates a loud, ringing noise that breaks brittle, nonmagical objects;
+        sunders a single solid, nonmagical object; or damages a crystalline
+        creature.</p><p>Used as an area attack, shatter destroys nonmagical
+        objects of crystal, glass, ceramic, or porcelain. All such unattended
+        objects within a @Distance[5 ft;dual] radius of the point of origin are
+        smashed into dozens of pieces by the spell. Objects weighing more than
+        @Weight[1;dual] per your level are not affected, but all other objects
+        of the appropriate composition are shattered.</p><p>Alternatively, you
+        can target shatter against a single solid nonmagical object, regardless
+        of composition, weighing up to @Weight[10;dual] per caster level.
+        Targeted against a crystalline creature (of any weight), shatter deals
+        1d6</p>
+      duration:
+        units: inst
+        value: '@attributes.hd.total'
+      name: Shatter
+      notes:
+        effect:
+          - >-
+            area attack- destroys all unattended nonmagical objects of crystal,
+            glass, ceramic, or porcelain, weighing less than @Weight[1;dual],
+            smashing them into dozens of pieces
+          - >-
+            single object - destroys a single object, weighing up to
+            [[@attributes.hd.total * 10]] pounds,  ( [[@attributes.hd.total *
+            4.5]]  kg) regardless of composition.
+          - crystalline creature (of any weight). sonic damage (up to 10d6)
+      range:
+        units: personal
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: 1/2
+        type: fort
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Pitborn</p><hr /><p>Pitborn can use
+      @UUID[Compendium.pf1.spells.Item.q63jn0kbrrb6t3ea]{Shatter} once per day
+      as a spell-like ability (with a caster level equal to their character
+      level).</p><p></p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '20'
+  subType: racial
+  tags:
+    - Tiefling
+    - Pitborn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

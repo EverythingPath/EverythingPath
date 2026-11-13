@@ -1,0 +1,56 @@
+_id: pmwu6qwvip76coqp
+_key: '!items!pmwu6qwvip76coqp'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Overwhelming Grief
+system:
+  actions:
+    - _id: 0pjlohfy353pio1q
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause a single opponent to become profoundly stricken with intense
+      grief. He can take no actions, takes a -2 penalty to Armor Class, and
+      loses his Dexterity bonus (if any). He can attempt a new save each round
+      to break the spell's effect.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '230'
+  subschool:
+    - compulsion
+type: spell

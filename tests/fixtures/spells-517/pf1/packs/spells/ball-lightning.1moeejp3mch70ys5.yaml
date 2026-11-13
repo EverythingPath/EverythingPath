@@ -1,0 +1,109 @@
+_id: 1moeejp3mch70ys5
+_key: '!items!1moeejp3mch70ys5'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/orb-ball-blue.webp
+name: Ball Lightning
+system:
+  actions:
+    - _id: 12v1htor6kwyzvb7
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: 100[Ignore Attack Roll]
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '@cl'
+      effect: two or more 5-ft.-diameter spheres
+      extraAttacks:
+        formula:
+          count: clamp(floor((@cl - 3) / 4), 1, 4)
+        type: custom
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates
+        type: ref
+    - _id: QUBwmVW9XKhg2HJC
+      activation:
+        type: move
+        unchained:
+          type: action
+      name: Move Globes
+      range:
+        units: ft
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 1UT7OWfYPIuuWTAX
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - electric
+      name: Damage Only
+      save:
+        description: Reflex half
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  attackNotes:
+    - '-4 penalty to the save for creatures wearing metal armor.'
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create two globes of lightning that fly in whichever direction you
+      indicate. For every 4 caster levels above 7th, you create an additional
+      globe of lightning (3 globes at 11th, 4 globes at 15th, to the maximum of
+      5 globes at 19th). These globes fly at a rate of 20 feet per round and
+      have perfect maneuverability. Wind does not affect a flying sphere's
+      course.</p><p>If a globe enters a space with a creature, it stops moving
+      for the round and deals 3d6 points of electricity damage to that creature,
+      though a successful Reflex save negates the damage. Creatures wearing
+      metal armor take a -4 penalty on this saving throw.</p><p>Each globe moves
+      as long as you actively direct it (it's a move action for you to direct
+      all the spheres created by a single casting of this spell); otherwise they
+      stay at rest. These globes have no mass and cannot push aside unwilling
+      creatures or move solid objects. A <i>ball lightning</i> globe winks out
+      if it exceeds the spell's range.</p>
+  descriptors:
+    - air
+    - electricity
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      druid: 4
+      hunter: 4
+      magus: 4
+      occultist: 4
+      shaman: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a small iron ring
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '204'
+type: spell

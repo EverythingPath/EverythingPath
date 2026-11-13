@@ -1,0 +1,91 @@
+_id: 1b6irvf27vdt5c1l
+_key: '!items!1b6irvf27vdt5c1l'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/flame-burning-hand-orange.webp
+name: Produce Flame
+system:
+  actions:
+    - _id: m67221q25eruums8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: flame in your palm
+      name: Use
+      range:
+        units: ft
+        value: '0'
+    - _id: 2TkstciMEkUAQi4u
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + min(5, @cl)
+            types:
+              - fire
+      name: Hurl
+      range:
+        units: ft
+        value: '120'
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: nBZ475gd3ehmtQna
+      ability:
+        attack: dex
+      actionType: msak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + min(5, @cl)
+            types:
+              - fire
+      name: Melee
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Flames as bright as a torch appear in your open hand. The flames harm
+      neither you nor your equipment.</p><p>In addition to providing
+      illumination, the flames can be hurled or used to touch enemies. You can
+      strike an opponent with a melee touch attack, dealing fire damage equal to
+      1d6 + 1 point per caster level (maximum +5). Alternatively, you can hurl
+      the flames up to 120 feet as a thrown weapon. When doing so, you attack
+      with a ranged touch attack (with no range penalty) and deal the same
+      damage as with the melee attack. No sooner do you hurl the flames than a
+      new set appears in your hand. Each attack you make reduces the remaining
+      duration by 1 minute. If an attack reduces the remaining duration to 0
+      minutes or less, the spell ends after the attack resolves.</p><p>This
+      spell does not function underwater.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      shaman: 1
+    domain:
+      Fire: 2
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '326'
+type: spell
