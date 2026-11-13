@@ -1,0 +1,63 @@
+_id: wkmkd6wvqjj15vnd
+_key: '!items!wkmkd6wvqjj15vnd'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/birds/corvid-flying-wings-purple.webp
+name: Eagle's Splendor, Mass
+system:
+  actions:
+    - _id: yphxjz6pplrwpwqz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.d4oubr5bdoo8w1ev]{eagle's splendor},
+      except that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      cleric: 6
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      skald: 6
+      sorcerer: 6
+      summoner: 4
+      summonerUnchained: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: feathers or droppings from an eagle
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '275'
+type: spell

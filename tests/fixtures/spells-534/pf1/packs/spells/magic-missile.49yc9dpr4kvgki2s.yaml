@@ -1,0 +1,69 @@
+_id: 49yc9dpr4kvgki2s
+_key: '!items!49yc9dpr4kvgki2s'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/fire-arrows-sky-1.jpg
+name: Magic Missile
+system:
+  actions:
+    - _id: 9x7u6zogp4pmao3y
+      ability:
+        critRange: null
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: '100'
+      attackName: Missile
+      damage:
+        parts:
+          - formula: 1d4+1
+            types:
+              - force
+      duration:
+        units: inst
+      extraAttacks:
+        formula:
+          count: min(4, ceil(@cl / 2) - 1)
+          label: 'Missile #{0}'
+        type: custom
+      name: Use
+      range:
+        units: medium
+      target:
+        value: up to five creatures, no two of which can be more than 15 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A missile of magical energy darts forth from your fingertip and strikes
+      its target, dealing 1d4+1 points of force damage.</p><p>The missile
+      strikes unerringly, even if the target is in melee combat, so long as it
+      has less than total cover or total concealment.</p><p>Specific parts of a
+      creature can't be singled out. Objects are not damaged by the
+      spell.</p><p>For every two caster levels beyond 1st, you gain an
+      additional missile-two at 3rd level, three at 5th, four at 7th, and the
+      maximum of five missiles at 9th level or higher. If you shoot multiple
+      missiles, you can have them strike a single creature or several
+      creatures.</p><p>A single missile can strike only one creature. You must
+      designate targets before you check for spell resistance or roll
+      damage.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      magus: 1
+      psychic: 1
+      sorcerer: 1
+      wizard: 1
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '309'
+type: spell

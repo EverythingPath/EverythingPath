@@ -1,0 +1,58 @@
+_id: r6ojcwccisqle5v7
+_key: '!items!r6ojcwccisqle5v7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Parchment Swarm
+system:
+  actions:
+    - _id: lk4mo2e3mqh60ya0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex half; see text
+        type: ref
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>When you cast this spell, you quickly tear a <i>parchment</i> into
+      shreds, releasing the flying fragments to swarm around a target creature
+      and deliver thousands of tiny paper cuts. Using normal <i>parchment</i>,
+      the spell deals 1d6 points of magical slashing damage per caster level
+      (maximum 15d6).  If you use a magic scroll as the material component,
+      choose one of the spells stored in the scroll. If the spell is 1st level,
+      you can choose to apply the effect of that spell to the <i>parchment</i>
+      swarm's target on a failed Reflex save (if the spell on the scroll has its
+      own saving throw, the target then attempts that save as normal). If the
+      spell on the scroll is at least 2nd level, you can choose to instead
+      change <i>parchment</i> swarm to affect a 20-foot-radius spread instead of
+      a single target.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      magus: 5
+      occultist: 4
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: blank parchment or magic scroll; see text
+  school: trs
+  sources:
+    - id: PZO1132
+      pages: '180'
+type: spell

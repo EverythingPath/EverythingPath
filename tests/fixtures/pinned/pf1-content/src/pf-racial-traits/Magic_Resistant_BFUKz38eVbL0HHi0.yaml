@@ -1,0 +1,50 @@
+_id: BFUKz38eVbL0HHi0
+_key: '!items!BFUKz38eVbL0HHi0'
+_stats:
+  coreVersion: '12.331'
+folder: KP5QLO1nPv43LcXI
+img: systems/pf1/icons/races/dwarf.png
+name: Magic Resistant
+system:
+  actions:
+    - _id: gFDfiwM2XdWJiIJf
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Lower Magic Resistance
+  changes:
+    - _id: 620gVzyv
+      formula: 5 + @attributes.hd.total
+      target: spellResist
+      type: untyped
+  contextNotes:
+    - target: concentration
+      text: '-2 penalty to cast arcane spells'
+    - target: allSavingThrows
+      text: >-
+        You have SR [[5 + @attributes.hd.total]]. This resistance can be lowered
+        for 1 round as a standard action.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dwarf<br /><strong>Replaced Trait(s)</strong>:
+      Hardy</p><hr /><p>Some of the older dwarven clans are particularly
+      resistant to magic. Dwarves with this racial trait gain spell resistance
+      equal to 5 + their character level. This resistance can be lowered for 1
+      round as a standard action. Dwarves with this racial trait take a -2
+      penalty on all concentration checks made in relation to arcane spells.
+      This racial trait replaces hardy.</p>
+  sources:
+    - id: PZO1121
+      pages: '12'
+    - id: PZO1115
+      pages: '11'
+  subType: racial
+  tags:
+    - Dwarf
+  traitCategory: defense
+type: feat

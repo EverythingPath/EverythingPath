@@ -1,0 +1,58 @@
+_id: gjj3otzeutoykuee
+_key: '!items!gjj3otzeutoykuee'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Death Candle
+system:
+  actions:
+    - _id: g0avto3mwjsv4gzc
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: spec
+        value: instantaneous/10 minutes per HD of subject; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.k0k8gvqyy3rd5gke]{death knell}, except
+      instead of using the slain target's life energy to enhance yourself, you
+      use it to summon a Small fire elemental resembling a burning, howling
+      version of the slain creature. The elemental acts immediately on your turn
+      and otherwise behaves as if you had summoned it with <em>summon monster
+      II</em>. The elemental remains for a number of rounds equal to the Hit
+      Dice of the slain creature.</p>
+  descriptors:
+    - death
+    - evil
+    - fire
+  learnedAt:
+    class:
+      antipaladin: 1
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+      witch: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO1121
+      pages: '131'
+type: spell
