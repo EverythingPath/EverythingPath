@@ -1,0 +1,51 @@
+_id: 10sYHJgoPNRINvIs
+_key: '!items!10sYHJgoPNRINvIs'
+_stats:
+  coreVersion: '12.343'
+folder: VOvPhMVX9rdVJGdy
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Talisman of Life's Breath, Greater
+system:
+  actions:
+    - _id: kFEPiwUJZTSNAtnJ
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 5d8 + @item.cl
+            types:
+              - positive
+      name: Use
+  aura:
+    school: con
+  cl: 9
+  description:
+    unidentified: >-
+      <p>These talismans bear runic symbols of life and vitality, as well as the
+      names of spirits and other figures that are closely associated with
+      life-giving energies.</p>
+    value: >-
+      <p>A greater talisman functions as a lesser talisman of the same type, but
+      has much greater longevity. It can provide its benefits once per
+      day.</p><hr /><p>The first time that the wearer dies, he is automatically
+      affected by @UUID[Compendium.pf1.spells.Item.qiiis9ekgy3syu7j]{breath of
+      life}.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, breath of life; <strong>Cost</strong> 17,500 GP</p>
+  hp:
+    base: 10
+  price: 35000
+  slot: neck
+  sources:
+    - id: PZO1132
+      pages: 263-264
+  subType: wondrous
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 1
+type: equipment

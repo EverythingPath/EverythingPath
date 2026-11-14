@@ -1,0 +1,66 @@
+_id: 2mvlxf6x10ib0ru7
+_key: '!items!2mvlxf6x10ib0ru7'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Bloodbath
+system:
+  actions:
+    - _id: o1mjwx2gr9eigvz4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: >-
+          up to one living creature/level, no two of which can be more than 30
+          feet apart
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cut yourself with the dagger, dealing yourself 1d6 points of bleed
+      damage. So long as you keep taking this bleed damage, your targets each
+      bleed for 1d6 points of damage at the beginning of their turns. The bleed
+      damage on any target ends if that target receives magical healing, or if
+      your bleed damage ends for any reason. This spell has no effect if you're
+      immune to bleed damage or can otherwise reduce or ignore the bleed damage
+      to yourself.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 2
+      bloodrager: 1
+      cleric: 2
+      inquisitor: 2
+      medium: 1
+      oracle: 2
+      psychic: 2
+      sorcerer: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    focus: a ceremonial dagger
+  school: nec
+  sources:
+    - id: PZO1135
+      pages: '110'
+type: spell

@@ -1,0 +1,196 @@
+_id: URpcaP1vfemHJyal
+_key: '!items!URpcaP1vfemHJyal'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Pyromaniac
+system:
+  abilityType: sp
+  actions:
+    - _id: tJ7Mfm3VnwvDWPzQ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft (3 m) radius area
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+        lights}</p><p>Depending on the version selected, you create up to four
+        lights that resemble lanterns or torches (and cast that amount of
+        light), or up to four glowing spheres of light (which look like
+        will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The
+        dancing lights must stay within a @Distance[10 ft;dual]-radius area in
+        relation to each other but otherwise move as you desire (no
+        concentration required): forward or back, up or down, straight or
+        turning corners, or the like. The lights can move up to @Distance[100
+        ft;dual] per round. A light winks out if the distance between you and it
+        exceeds the spell's range.</p><p>You can only have one dancing lights
+        spell active at any one time. If you cast this spell while another
+        casting is still in effect, the previous casting is dispelled. If you
+        make this spell permanent, it does not count against this
+        limit.</p><p>Dancing lights can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 +100'
+      target:
+        value: up to 4 lights
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: MnLqi6lRSHkZbmpn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.eg67vvykmv9c6j7h]{flare}</p><p>This
+        cantrip creates a burst of light. If you cause the light to burst in
+        front of a single creature, that creature is dazzled for 1 minute unless
+        it makes a successful Fortitude save. Sightless creatures, as well as
+        creatures already dazzled, are not affected by flare.</p>
+      duration:
+        units: inst
+      name: Flare
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod + 10'
+        description: Negates
+        type: fort
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: c2Cnfb1UsnRVPwv3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: o7MZfrRUp7Fg5p56
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + min(5, @attributes.hd.total)
+            types:
+              - fire
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.1b6irvf27vdt5c1l]{produce flame}.
+        </p><p>Flames as bright as a torch appear in your open hand. The flames
+        harm neither you nor your equipment.</p><p>In addition to providing
+        illumination, the flames can be hurled or used to touch enemies. You can
+        strike an opponent with a melee touch attack, dealing fire damage equal
+        to 1d6 + 1 point per caster level (maximum +5). Alternatively, you can
+        hurl the flames up to @Distance[120 ft;dual] as a thrown weapon. When
+        doing so, you attack with a ranged touch attack (with no range penalty)
+        and deal the same damage as with the melee attack. No sooner do you hurl
+        the flames than a new set appears in your hand. Each attack you make
+        reduces the remaining duration by 1 minute. If an attack reduces the
+        remaining duration to 0 minutes or less, the spell ends after the attack
+        resolves.</p><p>This spell does not function underwater.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Produce Flame
+      range:
+        units: ft
+        value: '120'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  contextNotes:
+    - target: cl
+      text: >-
+        You are treated as one level higher when casting spells with the fire
+        descriptor.
+    - target: spellEffect
+      text: >-
+        You are treated as one level higher when casting spells with the fire
+        descriptor.
+  description:
+    instructions: >-
+      <p>You must modify to account for the level adjustment to any relevant
+      bloodline, domain power or bombs manually.</p>
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic, Illusion Resistance</p><hr /><p>Gnomes with this racial trait
+      are treated as one level higher when casting spells with the fire
+      descriptor, using granted powers of the Fire domain, using the bloodline
+      powers of the fire elemental bloodline or the revelations of the oracle's
+      flame mystery, and determining the damage of alchemist bombs that deal
+      fire damage (this ability does not give gnomes early access to level-based
+      powers; it only affects the powers they could use without this
+      ability).</p><p>Gnomes with Charisma scores of 11 or higher also gain the
+      following spell-like abilities:
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+      lights}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.eg67vvykmv9c6j7h]{flare}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.1b6irvf27vdt5c1l]{produce
+      flame}</em>. The caster level for these effects is equal to the gnome's
+      level; the DCs are Charisma-based.</p><p>This racial trait replaces gnome
+      magic and illusion resistance.</p>
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '33'
+    - id: PZO1115
+      pages: '15'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

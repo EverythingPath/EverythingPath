@@ -1,0 +1,65 @@
+_id: KSDtlxi2hMPkgaro
+_key: '!items!KSDtlxi2hMPkgaro'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/piston-maul-gnome.png
+name: Gnome Piston Maul
+system:
+  actions:
+    - _id: 6dyl4difvrf48q9c
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Gnome Piston Maul
+  description:
+    unidentified: >-
+      <p>An alchemically fired piston in the head of this two-handed hammer
+      strikes targets with astounding force. Successful sunder attacks made with
+      a piston maul deal an additional 4 points of damage. A piston maul
+      requires a thunderstone to function; otherwise, it functions as a
+      greatclub. Inserting a thunderstone into the weapon's compartment is a
+      standard action, and powers the weapon for 24 hours, after which the
+      thunderstone is consumed.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 70
+  properties:
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  tags:
+    - Gnomish
+  weaponGroups:
+    - hammers
+  weaponSubtype: 2h
+  weight:
+    value: 15
+type: weapon

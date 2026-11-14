@@ -1,0 +1,71 @@
+_id: RJjfMEjDC0K5C6uV
+_key: '!items!RJjfMEjDC0K5C6uV'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/kobold-tail-attachment.png
+name: Kobold Tail Attachment (Sweeper)
+system:
+  actions:
+    - _id: 0t4mr9fkgkqp8z9e
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Kobold Tail Attachment (Sweeper)
+    - Kobold Tail Attachment
+  description:
+    unidentified: >-
+      <p>A kobold with the Tail Terror feat (see below) can slip this device
+      over the tip of his tail to augment his natural attack. Each tail
+      attachment provides just enough weight, balance, and striking power to
+      increase the damage of his tail slap. It takes a full-round action to slip
+      on a kobold tail attachment, and the kobold gains a +4 bonus against
+      disarm attempts made to remove his tail attachment.</p><p>While a kobold
+      is wearing a kobold tail attachment, the attack deals the tail attachment
+      damage, and some attachments gain a special feature. Tail attachments are
+      light weapons and can be improved by feats that can improve weapon attacks
+      (such as Weapon Focus and Weapon Specialization). All kobold tail
+      attachments make up a kobold tail attachment weapon group that can be
+      improved by the fighter's weapon training class ability. Tail attachments
+      can be constructed of special material and made into masterwork or magic
+      items. There are five types of common tail
+      attachments.</p><p><strong>Sweeper</strong>: When properly used, this
+      sharply curved piece of metal can knock opponents off their feet. Unlike
+      most trip weapons, you cannot drop it if you are tripped during your own
+      trip attempt.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 7
+  properties:
+    fin: true
+    trp: true
+  sources:
+    - id: PZO1121
+      pages: '135'
+  subType: exotic
+  weight:
+    value: 3
+type: weapon

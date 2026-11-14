@@ -1,0 +1,72 @@
+_id: 7l7wofgz2iafjsdr
+_key: '!items!7l7wofgz2iafjsdr'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/blood-corruption-vomit-red.webp
+name: Plague Storm
+system:
+  actions:
+    - _id: sun4x02d0vc6d9t7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 minute/level and instantaneous (see text)
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a hideous gray cloud, similar to <i>fog cloud</i>, that
+      occasionally crackles with foul-smelling bolts of sickly green lightning.
+      Creatures in the area must save or contract one of the following diseases:
+      blinding sickness, bubonic plague, cackle fever, demon fever, devil
+      chills, filth fever, leprosy, mindfire, red ache, shakes, or slimy doom
+      (the disease is chosen by you when you cast the spell and applies to all
+      creatures that fail the save). The disease is contracted immediately (the
+      onset period does not apply) and is an instantaneous effect. Use the
+      disease's listed frequency to determine further effects, but the disease's
+      save DC increases by +2. For more information see page 557 of the <i>Core
+      Rulebook</i>.</p><p>Unlike a <i>fog cloud</i>, the <i>plague storm</i>
+      moves away from you at 10 feet per round, rolling along the surface of the
+      ground.</p><p>Figure out the cloud's new spread each round based on its
+      new point of origin, which is 10 feet farther away from the point of
+      origin where you cast the spell.</p><p>Because the vapors are heavier than
+      air, they sink to the lowest level of the terrain, even pouring down den
+      or sinkhole openings. The cloud cannot penetrate liquids, nor can it be
+      cast underwater.</p>
+  descriptors:
+    - disease
+    - evil
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 6
+      druid: 6
+      hunter: 6
+      oracle: 6
+      sorcerer: 7
+      warpriest: 6
+      witch: 6
+      wizard: 7
+    subDomain:
+      Plague: 6
+  level: 7
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '231'
+  sr: false
+type: spell

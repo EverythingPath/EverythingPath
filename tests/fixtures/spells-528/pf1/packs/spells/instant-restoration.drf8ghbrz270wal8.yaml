@@ -1,0 +1,62 @@
+_id: drf8ghbrz270wal8
+_key: '!items!drf8ghbrz270wal8'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Instant Restoration
+system:
+  actions:
+    - _id: ryvbfk9a0vx7906y
+      actionType: heal
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one summoned creature you control
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Instant restoration</i> channels planar energy into a summoned
+      creature. This spell can be cast as an immediate action when a summoned
+      creature you control drops to 0 or fewer hit points. Rather than
+      immediately disappear, the creature is healed for 4d8 hp + 1 hit point per
+      caster level (maximum 4d8+10 hit points). If this healing brings your
+      summoned creature's hit point total to 1 or more hit points, it remains as
+      if its hit points had never dropped to 0 or fewer. Creatures slain by
+      death effects cannot be saved by <i>instant restoration</i>. A summoner
+      can target his eidolon with this spell.</p>
+  learnedAt:
+    class:
+      cleric: 4
+      druid: 4
+      hunter: 4
+      oracle: 4
+      shaman: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  materials:
+    focus: a thimble of water and a seed
+  school: con
+  sources:
+    - id: PZO9458
+      pages: '22'
+  sr: false
+  subschool:
+    - healing
+type: spell

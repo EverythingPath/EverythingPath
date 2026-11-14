@@ -1,0 +1,72 @@
+_id: 2zhilqoeGrOO3yeI
+_key: '!items!2zhilqoeGrOO3yeI'
+_stats:
+  coreVersion: '12.331'
+folder: r1IZStLZfXmVsFqh
+img: systems/pf1/icons/races/ratfolk.png
+name: Lab Rat
+system:
+  actions:
+    - _id: KPYyy5r9v8Ea8V1h
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, you can either increase the caster level of a potion he
+        consumes by 1 or double the duration of an alchemical remedy he consumes
+        or applies to himself (to a maximum of 4 hours).</p>
+      name: increase CL of a potion by 1
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: 1B4izEvHojUxzEyu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, you can either increase the caster level of a potion he
+        consumes by 1 or double the duration of an alchemical remedy he consumes
+        or applies to himself (to a maximum of 4 hours).</p>
+      name: double the duration of an alchemical remedy (max 4 hrs)
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[1]] Racial bonus vs poison, alchemical weapons, and harmful effects
+        from drinking potions or elixirs.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ratfolk<br /><strong>Replaced Trait(s)</strong>:
+      Tinker</p><hr /><p>For every ingenious ratfolk inventor, there is another
+      who must inevitably test the invention. Those who survive enough
+      experiments sometimes develop strange metabolic quirks that grant them
+      heightened resilience and, on occasion, fortunate side effects when
+      consuming alchemical or magical draughts. As a result, they gain a +1
+      racial bonus on saving throws against poison, alchemical weapons, and
+      harmful effects from drinking potions or elixirs. In addition, once per
+      day such a ratfolk can either increase the caster level of a potion he
+      consumes by 1 or double the duration of an alchemical remedy he consumes
+      or applies to himself (to a maximum of 4 hours). This racial trait
+      replaces tinker.</p>
+  sources:
+    - id: PZO1130
+      pages: '176'
+  subType: racial
+  tags:
+    - Ratfolk
+  traitCategory: defense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
