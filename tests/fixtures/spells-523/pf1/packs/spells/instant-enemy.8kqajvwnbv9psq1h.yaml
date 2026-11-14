@@ -1,0 +1,42 @@
+_id: 8kqajvwnbv9psq1h
+_key: '!items!8kqajvwnbv9psq1h'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Instant Enemy
+system:
+  actions:
+    - _id: u0dd6e8icamquuy9
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature that is not your favored enemy.
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this spell you designate the target as your favored enemy for the
+      remainder of its duration. Select one of your favored enemy types. For the
+      duration of the spell, you treat the target as if it were that type of
+      favored enemy for all purposes.</p>
+  learnedAt:
+    class:
+      hunter: 3
+      ranger: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '229'
+  sr: false
+type: spell

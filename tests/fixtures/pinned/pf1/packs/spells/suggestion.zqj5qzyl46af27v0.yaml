@@ -1,0 +1,79 @@
+_id: zqj5qzyl46af27v0
+_key: '!items!zqj5qzyl46af27v0'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Suggestion
+system:
+  actions:
+    - _id: n123vv3al2ozrui4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 hour/level or until completed
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>You influence the actions of the target creature by suggesting a course
+      of activity (limited to a sentence or two). The <i>suggestion</i> must be
+      worded in such a manner as to make the activity sound reasonable. Asking
+      the creature to do some obviously harmful act automatically negates the
+      effect of the spell.</p><p>The suggested course of activity can continue
+      for the entire duration. If the suggested activity can be completed in a
+      shorter time, the spell ends when the subject finishes what it was asked
+      to do. You can instead specify conditions that will trigger a special
+      activity during the duration. If the condition is not met before the spell
+      duration expires, the activity is not performed.</p><p>A very reasonable
+      <i>suggestion</i> causes the save to be made with a penalty (such as -1 or
+      -2).</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Infernal: 3
+      Maestro: 3
+      Rakshasa: 3
+    class:
+      arcanist: 3
+      bard: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 3
+      psychic: 2
+      skald: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+    domain:
+      Charm: 3
+    subDomain:
+      Corruption: 2
+      Devil: 3
+      Innuendo: 3
+  level: 3
+  materials:
+    value: a snake's tongue and a honeycomb
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '350'
+  subschool:
+    - compulsion
+type: spell

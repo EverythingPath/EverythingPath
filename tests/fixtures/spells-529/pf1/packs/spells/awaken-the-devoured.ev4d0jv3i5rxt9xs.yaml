@@ -1,0 +1,61 @@
+_id: ev4d0jv3i5rxt9xs
+_key: '!items!ev4d0jv3i5rxt9xs'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Awaken the Devoured
+system:
+  actions:
+    - _id: ey0l9vmtqgwc4tds
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous and 1 round/level
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial (see text)
+        type: will
+      target:
+        value: one daemon per 4 caster levels
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell is often used by conjurers as a method to torment daemons
+      and force compliance, for it awakens the broken, anguished memories of the
+      countless souls that the target daemons have consumed. All daemons
+      targeted by <i>Awaken the Devoured</i> must be within 30 feet of each
+      other. The fragmented memories haunt and afflict the daemons, dealing 1d8
+      points of damage per caster level (maximum 15d8) and making the daemons
+      confused for 1 round per level. A daemon that succeeds at a Will save
+      halves the damage and negates the confusion effect.</p>
+  descriptors:
+    - pain
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      inquisitor: 4
+      oracle: 5
+      psychic: 5
+      shaman: 5
+      sorcerer: 5
+      spiritualist: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: div
+  sources:
+    - id: PZO1139
+      pages: 183, 38
+type: spell

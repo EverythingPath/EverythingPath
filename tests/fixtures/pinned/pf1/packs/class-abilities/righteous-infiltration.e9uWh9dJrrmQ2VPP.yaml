@@ -1,0 +1,26 @@
+_id: e9uWh9dJrrmQ2VPP
+_key: '!items!e9uWh9dJrrmQ2VPP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Righteous Infiltration
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Inquisitor
+  changes:
+    - _id: hg0esutt
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.blf
+      type: untyped
+    - _id: 5csj2oc2
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.int
+      type: untyped
+  description:
+    value: >-
+      <p>You use your Wisdom modifier instead of your Charisma modifier when
+      making Bluff and Intimidate checks.</p>
+  subType: classFeat
+type: feat

@@ -1,0 +1,36 @@
+_id: U4fOvrvkHJsja5Zk
+_key: '!items!U4fOvrvkHJsja5Zk'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Enduring Heritage (Tiefling)
+system:
+  actions:
+    - _id: 5cw5totXXpVXsr1m
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Detect as an evil outsider
+  description:
+    value: >-
+      <p><em>You can channel your evil ancestry to take advantage of any effects
+      for which such an identity would matter (such as detect evil).</em>
+      </p><p><strong>Requirements</strong>:
+      Tiefling</p><p><strong>Benefits</strong>: You detect as an evil outsider
+      with the same number of HD as you possess. You can begin or end this
+      effect as a swift action. You can maintain this effect for a number of
+      rounds per day equal to your HD.</p>
+  sources:
+    - id: PZO9464
+      pages: '25'
+  subType: trait
+  tags:
+    - Tiefling
+  traitType: race
+  uses:
+    maxFormula: max(@attributes.hd.total, 1)
+    per: day
+    value: 1
+type: feat

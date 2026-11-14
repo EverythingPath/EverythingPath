@@ -1,0 +1,62 @@
+_id: 0wahvj06h5eak2fk
+_key: '!items!0wahvj06h5eak2fk'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Placebo Effect
+system:
+  actions:
+    - _id: 8h5l1r1qzf7jaxiy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will disbelief
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject temporarily ceases to feel the ill effects of a single
+      ongoing affliction or condition from the following list: blinded, cursed,
+      dazed, deafened, diseased, fatigued, frightened, nauseated, panicked,
+      paralyzed, poisoned, shaken, sickened, staggered, or stunned. If that
+      affliction or condition has a duration, it is suspended until this spell
+      expires. If the subject has multiple instances of the same type of
+      affliction (such as multiple diseases), a single casting of this spell can
+      suspend only one of them. <i>Placebo effect</i> doesn't remove or
+      temporarily negate any damage that the affliction may have already caused,
+      nor does it provide protection against receiving such conditions
+      again.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+  level: 2
+  materials:
+    value: a sugar cube
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '180'
+  sr: false
+  subschool:
+    - phantasm
+type: spell

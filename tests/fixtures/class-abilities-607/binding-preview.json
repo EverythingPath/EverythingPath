@@ -1,0 +1,687 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/4zVndIJ8NMWWzl1T",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "class-abilities",
+      "name": "AC Bonus (MNK)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>When unarmored and unencumbered, the monk adds his Wisdom bonus (if any) to his AC and his CMD. In addition, a monk gains a +1 bonus to AC and CMD at 4th level. This bonus increases by 1 for every four monk levels thereafter, up to a maximum of +5 at 20th level. </p><p>These bonuses to AC apply even against touch attacks or when the monk is flat-footed. He loses these bonuses when he is immobilized or helpless, when he wears any armor, when he carries a shield, or when he carries a medium or heavy load.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "57"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "14"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Monk", "Monk (Unchained)"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "ac",
+            "formula": "if(and(and(lt(@shield.type, 1), lt(@armor.type, 1)), lt(@attributes.encumbrance.level, 1)), 1) * (@abilities.wis.mod + floor(@class.level / 4))",
+            "type": "untyped"
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "cmd",
+            "formula": "if(and(and(lt(@shield.type, 1), lt(@armor.type, 1)), lt(@attributes.encumbrance.level, 1)), 1) * (@abilities.wis.mod + floor(@class.level / 4))",
+            "type": "untyped"
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/monk-ac-bonus-12",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "12:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +3: the Monk table's 12th-level row of AC Bonus (Pathfinder RPG Core Rulebook pp. 56–60). The AC Bonus entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/monk-ac-bonus-16",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "16:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +4: the Monk table's 16th-level row of AC Bonus (Pathfinder RPG Core Rulebook pp. 56–60). The AC Bonus entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/monk-ac-bonus-20",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +5",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "20:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +5: the Monk table's 20th-level row of AC Bonus (Pathfinder RPG Core Rulebook pp. 56–60). The AC Bonus entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/monk-ac-bonus-4",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +1",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "4:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +1: the Monk table's 4th-level row of AC Bonus (Pathfinder RPG Core Rulebook pp. 56–60). The AC Bonus entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/monk-ac-bonus-8",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +2",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "8:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +2: the Monk table's 8th-level row of AC Bonus (Pathfinder RPG Core Rulebook pp. 56–60). The AC Bonus entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +3 (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "12:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +3 (UC): the Monk (Unchained) table's 12th-level row of AC Bonus (UC) (Pathfinder Unchained pp. 14–19). The AC Bonus (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +4 (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "16:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +4 (UC): the Monk (Unchained) table's 16th-level row of AC Bonus (UC) (Pathfinder Unchained pp. 14–19). The AC Bonus (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +5 (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "20:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +5 (UC): the Monk (Unchained) table's 20th-level row of AC Bonus (UC) (Pathfinder Unchained pp. 14–19). The AC Bonus (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-20",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +1 (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "4:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +1 (UC): the Monk (Unchained) table's 4th-level row of AC Bonus (UC) (Pathfinder Unchained pp. 14–19). The AC Bonus (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+      "upstreamKey": "pf1/4zVndIJ8NMWWzl1T",
+      "pack": "everythingpath-schedules",
+      "name": "AC Bonus +2 (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/4zVndIJ8NMWWzl1T",
+        "part": "8:pf1/4zVndIJ8NMWWzl1T"
+      },
+      "description": "<p>AC Bonus +2 (UC): the Monk (Unchained) table's 8th-level row of AC Bonus (UC) (Pathfinder Unchained pp. 14–19). The AC Bonus (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ac-bonus-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/4zVndIJ8NMWWzl1T"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+_id: mz9yr5yhr0f3oqtp
+_key: '!items!mz9yr5yhr0f3oqtp'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Darkvision
+system:
+  actions:
+    - _id: 25vl43kkvubjrxpv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject gains the ability to see 60 feet even in total darkness.
+      Darkvision is black and white only but otherwise like normal
+      sight.</p><p><i>Darkvision</i> can be made permanent with a
+      <i>permanency</i> spell.</p>
+  learnedAt:
+    bloodline:
+      Shadow: 2
+    class:
+      alchemist: 2
+      antipaladin: 2
+      arcanist: 2
+      hunter: 3
+      investigator: 2
+      medium: 2
+      occultist: 2
+      psychic: 2
+      ranger: 3
+      sorcerer: 2
+      wizard: 2
+    domain:
+      Vermin: 3
+  level: 2
+  materials:
+    value: either a pinch of dried carrot or an agate
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '264'
+type: spell

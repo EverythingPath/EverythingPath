@@ -1,0 +1,55 @@
+_id: 2s198jpks0pvimjf
+_key: '!items!2s198jpks0pvimjf'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Telempathic Projection
+system:
+  actions:
+    - _id: c7w0ojsu8o84w6kz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You alter the target's mood, adjusting its attitude toward you or
+      another creature you designate by one step either positively or negatively
+      (see the Diplomacy skill on page 94 of the <i>Pathfinder RPG Core</i>
+      Rulebook). You can instead use this spell to assist your own or an ally's
+      Bluff, Diplomacy, Intimidate, Perform, or Sense Motive check, granting
+      that check a +5 insight bonus against the target of your <i>telempathic
+      projection</i> with no save. In this case, the spell's duration expires
+      immediately when the skill check is complete.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 1
+      psychic: 1
+      spiritualist: 1
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '188'
+  subschool:
+    - compulsion
+type: spell
