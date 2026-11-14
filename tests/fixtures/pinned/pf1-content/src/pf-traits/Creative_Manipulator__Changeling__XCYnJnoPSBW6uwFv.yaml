@@ -1,0 +1,48 @@
+_id: XCYnJnoPSBW6uwFv
+_key: '!items!XCYnJnoPSBW6uwFv'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Creative Manipulator (Changeling)
+system:
+  actions:
+    - _id: U7Z2OlzEkEkukVgt
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Charisma check reroll
+  contextNotes:
+    - target: chaChecks
+      text: >-
+        Once per day, you may reroll a Charisma check you just made. You must
+        take the result of the second roll, even if it is
+        worse.([[@resources.creativeManipulatorChangeling.value]] remaining
+        uses)
+  description:
+    value: >-
+      <p><strong>Requirements</strong>:
+      Changeling</p><p><strong>Benefits</strong>: Once per day, you may reroll a
+      Charisma check you just made. You must take the result of the second roll,
+      even if it is worse.</p>
+  scriptCalls:
+    - _id: ffYYJRiD5RN3xrFM
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollAbilityTest("cha");
+  sources:
+    - id: PZO9442
+      pages: '28'
+  subType: trait
+  tags:
+    - Changeling
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
