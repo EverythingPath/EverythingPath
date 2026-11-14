@@ -1,0 +1,89 @@
+_id: fOSuWwRSZLTrROch
+_key: '!items!fOSuWwRSZLTrROch'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Dagger
+system:
+  actions:
+    - _id: 3d5k15aepyp5sclw
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: BKWFiAgRhYnG51Zr
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Dagger
+  description:
+    unidentified: >-
+      <p>A dagger is a fighting knife. Its blade is usually less than 1 foot
+      long, and can be curved or straight, with one edge or two. Dagger designs
+      vary widely, and can have many different names (such as a thrusting dagger
+      being called a "dirk"). You get a +2 bonus on Sleight of Hand skill checks
+      made to conceal a dagger on your body.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 146
+    - id: PZO1123
+      pages: '17'
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

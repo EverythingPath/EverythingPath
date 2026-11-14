@@ -1,0 +1,82 @@
+_id: veyAa4qdI9lqSx6m
+_key: '!items!veyAa4qdI9lqSx6m'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_17.jpg
+name: Channel Negative Energy
+system:
+  abilityType: su
+  actions:
+    - _id: 88fpcie6kdn01ln5
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6
+            types:
+              - negative
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Harm living
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will halves damage
+        type: will
+      target:
+        value: Living creatures
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: LxtNP9UMpEO80Oq3
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6
+            types:
+              - negative
+      duration:
+        units: inst
+      img: icons/magic/death/undead-skeleton-fire-green.webp
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Heal undead
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: Undead
+      uses:
+        autoDeductChargesCost: '2'
+  associations:
+    classes:
+      - Antipaladin
+  description:
+    instructions: >-
+      <p>Link this class feat to
+      @UUID[Compendium.pf1.class-abilities.Item.aabyB4FV9OH7hcYZ]{touch of
+      corruption} charges.</p>
+    value: >-
+      <p>When an antipaladin reaches 4th level, he gains the supernatural
+      ability to
+      @UUID[Compendium.pf1.class-abilities.Item.kXXz1lO4i7CibHJ9]{channel
+      negative energy} like a Cleric. Using this ability consumes two uses of
+      his touch of corruption ability. An antipaladin uses his level as his
+      effective cleric level when channeling negative energy. This is a
+      Charisma-based ability.</p>
+  subType: classFeat
+type: feat

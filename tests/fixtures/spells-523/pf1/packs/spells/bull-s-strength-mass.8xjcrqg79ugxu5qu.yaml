@@ -1,0 +1,66 @@
+_id: 8xjcrqg79ugxu5qu
+_key: '!items!8xjcrqg79ugxu5qu'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp
+name: Bull's Strength, Mass
+system:
+  actions:
+    - _id: 49aks2s6jd181lp5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu]{bull's strength},
+      except that it affects multiple creatures.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      druid: 6
+      hunter: 6
+      magus: 6
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      sorcerer: 6
+      summoner: 4
+      summonerUnchained: 6
+      warpriest: 6
+      wizard: 6
+    subDomain:
+      Ferocity: 6
+  level: 6
+  materials:
+    value: a few hairs, or a pinch of dung, from a bull
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '251'
+type: spell

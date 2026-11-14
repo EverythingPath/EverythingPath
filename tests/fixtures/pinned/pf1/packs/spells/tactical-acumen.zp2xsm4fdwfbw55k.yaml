@@ -1,0 +1,71 @@
+_id: zp2xsm4fdwfbw55k
+_key: '!items!zp2xsm4fdwfbw55k'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Tactical Acumen
+system:
+  actions:
+    - _id: jtll5vrbhki7xrgp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: >-
+        The caster and all allies within a 30-ft.-radius burst, centered on the
+        caster
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Tactical acumen</i> grants you and your allies a mastery of
+      battlefield tactics. Whenever you would gain a bonus on attack rolls or to
+      AC due to battlefield position, such as flanking, higher ground, or cover,
+      you gain an additional +1 insight bonus. This bonus increases by +1 for
+      every five caster levels above 5th you possess (maximum +4).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      magus: 2
+      medium: 2
+      occultist: 2
+      paladin: 1
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a small piece of a map
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '246'
+  subschool:
+    - compulsion
+type: spell

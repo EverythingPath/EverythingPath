@@ -1,0 +1,24 @@
+_id: ZdWzYw9c7zJJPwvz
+_key: '!items!ZdWzYw9c7zJJPwvz'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Low-Light Vision
+system:
+  description:
+    value: >-
+      <p>A creature with low-light vision can see twice as far as a human in
+      starlight, moonlight, torchlight, and similar conditions of dim light. It
+      retains the ability to distinguish color and detail under these
+      conditions.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: lowlight-toggle
+      type: script
+      value: 'actor.update({ "system.traits.senses.ll.enabled": state});'
+type: buff

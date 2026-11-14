@@ -1,0 +1,84 @@
+_id: w88ddxpu89qcr5c0
+_key: '!items!w88ddxpu89qcr5c0'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp
+name: Beast Shape III
+system:
+  actions:
+    - _id: 3qzqeetnpqguft51
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    instructions: >-
+      <p>Create a <strong>Buff</strong> with corresponding modifiers depending
+      on the size of the animal.</p>
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.774kmgcb7ygviht0]{beast shape II}, except
+      that it also allows you to assume the form of a Diminutive or Huge
+      creature of the animal type. This spell also allows you to take on the
+      form of a Small or Medium creature of the magical beast type. If the form
+      you assume has any of the following abilities, you gain the listed
+      ability: burrow 30 feet, climb 90 feet, fly 90 feet (good
+      maneuverability), swim 90 feet, blindsense 30 feet, darkvision 60 feet,
+      low-light vision, scent, constrict, ferocity, grab, jet, poison, pounce,
+      rake, trample, trip, and web.</p><p><em>Diminutive animal</em>: If the
+      form you take is that of a Diminutive animal, you gain a +6 size bonus to
+      your Dexterity, a -4 penalty to your Strength, and a +1 natural armor
+      bonus.</p><p><em>Tiny animal</em>: If the form you take is that of a Tiny
+      animal, you gain a +4 size bonus to your Dexterity, a -2 penalty to your
+      Strength, and a +1 natural armor bonus.</p><p><em>Small animal</em>: If
+      the form you take is that of a Small animal, you gain a +2 size bonus to
+      your Dexterity and a +1 natural armor bonus.</p><p><em>Medium animal</em>:
+      If the form you take is that of a Medium animal, you gain a +2 size bonus
+      to your Strength and a +2 natural armor bonus.</p><p><em>Large
+      animal</em>: If the form you take is that of a Large animal, you gain a +4
+      size bonus to your Strength, a -2 penalty to your Dexterity, and a +4
+      natural armor bonus.</p><p><em>Huge animal</em>: If the form you take is
+      that of a Huge animal, you gain a +6 size bonus to your Strength, a -4
+      penalty to your Dexterity, and a +6 natural armor bonus.</p><p><em>Small
+      magical beast</em>: If the form you take is that of a Small magical beast,
+      you gain a +4 size bonus to your Dexterity, and a +2 natural armor
+      bonus.</p><p><em>Medium magical beast</em>: If the form you take is that
+      of a Medium magical beast, you gain a +4 size bonus to your Strength, and
+      a +4 natural armor bonus.</p>
+  learnedAt:
+    class:
+      alchemist: 5
+      arcanist: 5
+      investigator: 5
+      magus: 5
+      sorcerer: 5
+      wizard: 5
+    domain:
+      Animal: 5
+    subDomain:
+      Saurian: 5
+  level: 5
+  materials:
+    value: a piece of the creature whose form you plan to assume
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '247'
+  sr: false
+  subschool:
+    - polymorph
+type: spell

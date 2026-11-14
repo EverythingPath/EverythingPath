@@ -1,0 +1,62 @@
+_id: wueg9fxln3z761m1
+_key: '!items!wueg9fxln3z761m1'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Epidemic
+system:
+  actions:
+    - _id: a7qckywnzqoxound
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target contracts one of the following diseases: blinding sickness,
+      bubonic plague, cackle fever, filth fever, leprosy, mindfire, red ache,
+      shakes, or slimy doom (<i>Core Rulebook</i> 557), as the spell
+      <i>contagion</i>. However, the disease is highly contagious, and any
+      creature that touches the infected target, is touched by the target, or
+      spends more than an hour in a confined space with the target must make a
+      save against the disease's normal DC (not the spell DC) or contract the
+      disease. If the initial target overcomes the disease by making the
+      required number of saving throws, it remains a carrier of the disease for
+      a length of time equal to the disease's frequency, and can continue to
+      infect others during this time.</p>
+  descriptors:
+    - disease
+    - evil
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 6
+      druid: 6
+      hunter: 6
+      oracle: 6
+      sorcerer: 7
+      warpriest: 6
+      witch: 6
+      wizard: 7
+  level: 7
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '218'
+type: spell

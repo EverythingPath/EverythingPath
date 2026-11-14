@@ -1,0 +1,72 @@
+_id: uMKYQeN9RWCuuucG
+_key: '!items!uMKYQeN9RWCuuucG'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Fire Lance
+system:
+  actions:
+    - _id: c6x5sphxnmrhy435
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '10'
+  baseTypes:
+    - Fire Lance
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d4 (small), 1d6 (medium);
+      <b>Critical</b> x4; <b>Range</b> 10 ft.; <b>Type</b> P</p>
+
+      <p><b>Misfire</b> 1-4 (5 ft.); <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>This primitive firearm is merely a long tube that, when ignited,
+      propels forth a short gout of flame and a javelin. Unlike other firearms,
+      the fire lance is wildly imprecise, and targets AC rather than touch AC. A
+      fire lance is always treated as having the broken condition for the
+      purpose of determining the effects of a misfire. A fire lance uses a
+      javelin and 2 doses of black powder as ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 4
+type: weapon

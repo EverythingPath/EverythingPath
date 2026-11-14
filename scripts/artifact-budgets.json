@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "unbudgeted": {
+    "maxNewFileBytes": 1000000,
+    "maxPositiveGrowthBytes": 5000000,
+    "maxAddedLines": 50000
+  },
+  "families": [
+    {
+      "id": "campaign-mvp-inventory",
+      "paths": [
+        "scripts/catalog/scopes/campaign-mvp-v1*",
+        "docs/catalog-import/campaign-mvp*"
+      ],
+      "maxBytes": 100000000,
+      "maxLines": 600000,
+      "reason": "Compact launch inventory and independent validation authorities",
+      "issue": 768
+    },
+    {
+      "id": "catalog-legal-evidence",
+      "paths": [
+        "scripts/catalog/legal/*",
+        "src/lib/catalog/data/attribution-evidence.json"
+      ],
+      "maxBytes": 436000000,
+      "maxLines": 5810000,
+      "reason": "Reviewed legal inventories and attribution evidence, the evidence stored once as hash-named blobs; measured 414,509,069 B / 5,531,018 lines plus 5% headroom, rounded up",
+      "issue": 744
+    }
+  ]
+}
