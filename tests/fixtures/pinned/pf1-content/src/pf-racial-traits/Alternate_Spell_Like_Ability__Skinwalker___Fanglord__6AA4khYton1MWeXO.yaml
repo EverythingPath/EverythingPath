@@ -1,0 +1,59 @@
+_id: 6AA4khYton1MWeXO
+_key: '!items!6AA4khYton1MWeXO'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Alternate Spell-Like Ability (Skinwalker - Fanglord)
+system:
+  abilityType: sp
+  actions:
+    - _id: FKADrhXd6yZteFuY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ns2zo6qgd9co02uf]{Jump}</p><p>The
+        subject gets a +10 enhancement bonus on Acrobatics checks made to
+        attempt high jumps or long jumps. The enhancement bonus increases to +20
+        at caster level 5th, and to +30 (the maximum) at caster level 9th.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Jump
+      notes:
+        effect:
+          - '@Apply[Jump]'
+          - Use Wisdom for concentration checks
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 10 + 100
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Fanglord</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.ZEVsEIPpOyHmpmEe]{Spell-Like
+      Ability (Skinwalker)}</p><hr /><p><strong>Alternate Spell-Like
+      Ability</strong> jump 1/day</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '249'
+    - id: PZO9439
+      pages: '22'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Fanglord
+  traitCategory: magical
+  uses:
+    value: 0
+type: feat

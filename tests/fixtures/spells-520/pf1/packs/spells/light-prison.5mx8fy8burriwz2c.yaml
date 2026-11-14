@@ -1,0 +1,63 @@
+_id: 5mx8fy8burriwz2c
+_key: '!items!5mx8fy8burriwz2c'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Light Prison
+system:
+  actions:
+    - _id: n4ynnktfizrogasj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex negates
+        type: ref
+      target:
+        value: one creature/2 levels
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Rays of light burst forth from your outstretched hand, encircling each
+      target's space with a cage of light. If a target fails its Reflex save, it
+      becomes enclosed in the <i>light prison</i>. A creature enclosed in a
+      <i>light prison</i> can attack, cast spells, and otherwise act normally as
+      long as it stays within the <i>light prison</i>. However, if a creature
+      passes through the walls of a <i>light prison</i> enclosing it, it takes
+      1d6 points of damage and is blinded for 1 round.</p><p>Creatures do not
+      receive saves to negate these effects. Once a creature passes through the
+      walls of a <i>light prison</i> surrounding it, the effect ends for that
+      creature.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      magus: 2
+      oracle: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO9267
+      pages: '236'
+type: spell
