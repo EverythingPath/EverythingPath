@@ -1,0 +1,50 @@
+_id: lguuanLKWDVYPleV
+_key: '!items!lguuanLKWDVYPleV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Spell Tinkerer
+system:
+  abilityType: su
+  actions:
+    - _id: ncnkzt5kpikikov2
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: One creature or self
+      touch: true
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can alter an existing spell effect by expending 1 point
+      from her arcane reservoir. To use this ability, she must be adjacent to
+      the spell effect (or the effect’s target) and be aware of the effect. She
+      can choose to increase or decrease the remaining duration of the spell by
+      50%. This ability can be used on unwilling targets, but the arcanist must
+      succeed at a melee touch attack, and the target may attempt a Will saving
+      throw to negate the effect. This ability cannot be used on a given spell
+      effect more than once. This ability has no effect on spells that are
+      instantaneous or have a duration of permanent.</p>
+  sources:
+    - id: PZO1129
+      pages: '12'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat

@@ -1,0 +1,69 @@
+_id: vyRDu111njgEV8xw
+_key: '!items!vyRDu111njgEV8xw'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-double.PNG
+name: Double Crossbow
+system:
+  actions:
+    - _id: 8kq7brzcxt8v50cb
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Double Crossbow
+  description:
+    unidentified: >-
+      <p>This heavy weapon fires a pair of iron-tipped bolts with a single
+      squeeze of the trigger. Because of its size and weight, you take a -4
+      penalty on your attack roll if you're proficient with it, or -8 if you're
+      not. If the attack hits, the target takes damage from both bolts. Critical
+      hits, sneak attack damage, and other precision-based damage apply to only
+      the first bolt. Reloading one bolt is a standard action; the Rapid Reload
+      feat reduces this to a move action. Crossbow Mastery (<em>Advanced
+      Player's Guide</em>) allows you to reload both bolts as a move action. A
+      double crossbow fires crossbow bolts.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 300
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 18
+type: weapon

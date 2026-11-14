@@ -1,0 +1,64 @@
+_id: pe6x4t8vy4zlfzh9
+_key: '!items!pe6x4t8vy4zlfzh9'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/control/buff-strength-muscle-damage.webp
+name: Ant Haul, Communal
+system:
+  actions:
+    - _id: n4rwhb0v4m8xt2so
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ngcx59msygjom4h2]{ant haul}, except you
+      may divide the duration in 2-hour intervals among the creatures
+      touched.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      ranger: 2
+      sorcerer: 2
+      summoner: 2
+      summonerUnchained: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a small pulley
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '223'
+type: spell

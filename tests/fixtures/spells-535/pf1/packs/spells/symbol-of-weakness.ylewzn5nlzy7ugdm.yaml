@@ -1,0 +1,66 @@
+_id: ylewzn5nlzy7ugdm
+_key: '!items!ylewzn5nlzy7ugdm'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Symbol of Weakness
+system:
+  actions:
+    - _id: 1ya5clmsapzh2i19
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that every creature within 60 feet of a <em>Symbol of Weakness</em>
+      instead suffers crippling weakness that deals [[/r 3d6]] points of
+      Strength damage.</p><p>Unlike <em>symbol of death</em>, <em>Symbol of
+      Weakness</em> has no hit point limit; once triggered, a <em>Symbol of
+      Weakness</em> simply remains active for 10 minutes per caster level. A
+      creature can only be affected by this symbol once.</p><p><em>Note</em>:
+      Magic traps such as <em>Symbol of Weakness</em> are hard to detect and
+      disable. While any character can use Perception to find a symbol, only a
+      character with the trapfinding class feature can use Disable Device to
+      disarm it. The DC in each case is 25 + spell level, or 32 for <em>Symbol
+      of Weakness</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      occultist: 5
+      oracle: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    gpValue: 5000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      5,000 gp
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '357'
+type: spell

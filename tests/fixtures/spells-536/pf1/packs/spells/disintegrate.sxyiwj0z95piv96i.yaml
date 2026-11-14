@@ -1,0 +1,83 @@
+_id: sxyiwj0z95piv96i
+_key: '!items!sxyiwj0z95piv96i'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/unholy/beam-ringed-impact-purple.webp
+name: Disintegrate
+system:
+  actions:
+    - _id: xcw4moqp31i8li0r
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(40, @cl * 2))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      effect: ray
+      name: Use
+      notes:
+        effect:
+          - '[[5d6]] Damage on Successful Save'
+      range:
+        units: medium
+      save:
+        description: Fortitude partial (object)
+        type: fort
+      touch: true
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A thin, green ray springs from your pointing finger. You must make a
+      successful ranged touch attack to hit. Any creature struck by the ray
+      takes 2d6 points of damage per caster level (to a maximum of 40d6). Any
+      creature reduced to 0 or fewer hit points by this spell is entirely
+      disintegrated, leaving behind only a trace of fine dust. A disintegrated
+      creature's equipment is unaffected.</p><p>When used against an object, the
+      ray simply disintegrates as much as a 10-foot cube of nonliving matter.
+      Thus, the spell disintegrates only part of any very large object or
+      structure targeted.</p><p>The ray affects even objects constructed
+      entirely of force, such as <i>forceful hand</i> or a <i>Wall of Force</i>,
+      but not magical effects such as a <i>Globe of Invulnerability</i> or an
+      <i>antimagic field</i>.</p><p>A creature or object that makes a successful
+      Fortitude save is partially affected, taking only 5d6 points of damage. If
+      this damage reduces the creature or object to 0 or fewer hit points, it is
+      entirely disintegrated.</p><p>Only the first creature or object struck can
+      be affected; that is, the ray affects only one target per casting.</p>
+  learnedAt:
+    bloodline:
+      Div: 6
+      Protean: 6
+    class:
+      arcanist: 6
+      magus: 6
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      spiritualist: 6
+      wizard: 6
+    domain:
+      Destruction: 7
+    subDomain:
+      Ash: 7
+  level: 6
+  materials:
+    value: a lodestone and a pinch of dust
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '271'
+type: spell

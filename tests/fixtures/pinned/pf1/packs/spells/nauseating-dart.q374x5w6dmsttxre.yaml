@@ -1,0 +1,50 @@
+_id: q374x5w6dmsttxre
+_key: '!items!q374x5w6dmsttxre'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Nauseating Dart
+system:
+  actions:
+    - _id: 98jr3j8mbnlve7w6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      effect: one poisonous stinger
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+  components:
+    divineFocus: 1
+    somatic: true
+  description:
+    value: >-
+      <p>You spit a poisonous stinger around the size of a quill at a creature
+      within range, as though you had fired a dart from a blowgun. You must
+      succeed at a ranged attack to hit your target. The stinger deals 1d2
+      points of piercing damage and poisons the target, causing it to become
+      nauseated for 1 round unless it succeeds at a Fortitude save.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      witch: 1
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '189'
+  sr: false
+  subschool:
+    - creation
+type: spell

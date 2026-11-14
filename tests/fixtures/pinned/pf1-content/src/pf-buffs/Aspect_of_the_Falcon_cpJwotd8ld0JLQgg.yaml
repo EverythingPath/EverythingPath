@@ -1,0 +1,35 @@
+_id: cpJwotd8ld0JLQgg
+_key: '!items!cpJwotd8ld0JLQgg'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/commodities/claws/claw-bird-yellow.webp
+name: Aspect of the Falcon
+system:
+  changes:
+    - _id: i3fules2
+      formula: '3'
+      target: skill.per
+      type: competence
+    - _id: i8kqne3t
+      formula: '1'
+      target: rattack
+      type: competence
+  contextNotes:
+    - target: ranged
+      text: Critical multiplier for bows and crossbows are 19-20/x3.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.ypi1hhleb25gbw4l]{Aspect of the
+      Falcon}</p><p>You gain a +3 competence bonus on Perception checks, a +1
+      competence bonus on ranged attacks, and the critical multiplier for your
+      bows and crossbows becomes 19-20/x3.</p><p>This effect does not stack with
+      any other effect that expands the threat range of a weapon, such as the
+      Improved Critical feat or a <em>keen</em> weapon.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

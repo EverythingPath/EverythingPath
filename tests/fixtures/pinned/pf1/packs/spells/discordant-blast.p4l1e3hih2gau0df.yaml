@@ -1,0 +1,66 @@
+_id: p4l1e3hih2gau0df
+_key: '!items!p4l1e3hih2gau0df'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Discordant Blast
+system:
+  actions:
+    - _id: a9mrsnfn92c2nymw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Cone
+      range:
+        units: ft
+        value: '10'
+    - _id: PPqz2c7JLKv1tbAV
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: see text
+      duration:
+        units: inst
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Radius
+      range:
+        units: ft
+        value: '10'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a wave of thunder and force, either in a 10-foot-radius
+      burst centered on you or in 30-foot cone-shaped burst.</p><p>Creatures in
+      the area take 3d6 points of sonic damage and are pushed away as if bull
+      rushed. Make a combat maneuver check and apply its results to each
+      creature in the area. Your CMB for this bull rush is equal to your caster
+      level plus your Charisma modifier. This bull rush does not provoke an
+      attack of opportunity. A <i>discordant blast</i> cannot penetrate a
+      <i>silence</i> spell (or any similar magical <i>silence</i> effect).</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 4
+      skald: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '216'
+type: spell

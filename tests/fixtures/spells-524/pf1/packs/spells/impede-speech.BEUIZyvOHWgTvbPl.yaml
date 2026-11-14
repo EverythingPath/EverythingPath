@@ -1,0 +1,66 @@
+_id: BEUIZyvOHWgTvbPl
+_key: '!items!BEUIZyvOHWgTvbPl'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/symbols/question-stone-yellow.webp
+name: Impede Speech
+system:
+  actions:
+    - _id: Rrtog1t3rfzOVQdn
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This minor curse interferes with the target’s ability to speak. On a
+      failed save, the target has difficulty stringing words together. Only with
+      great concentration can he communicate intelligibly. Speaking in combat
+      becomes a move-equivalent action rather than a free action. If the target
+      attempts to cast a spell with a verbal component, he has a 50% chance of
+      making an error and losing the spell. Even if he can successfully cast a
+      spell, doing so takes 1 round if the spell’s normal casting time is less
+      than 1 round. If the spell’s casting time is usually 1 round or longer,
+      its casting time doubles (up until the end of <em>impede speech</em>).
+      <em>Impede speech</em> cannot be dispelled, but
+      @UUID[Compendium.pf1.spells.myg2b9ww43nnlbr2]{break enchantment},
+      @UUID[Compendium.pf1.spells.s2p7a4biy7bl4ks2]{limited wish},
+      @UUID[Compendium.pf1.spells.suel7sgnztenv551]{miracle},
+      @UUID[Compendium.pf1.spells.o87h8gjxevcbztgd]{remove curse}, or
+      @UUID[Compendium.pf1.spells.nnj51dwfkwd15ngj]{wish} can end it
+      prematurely.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      skald: 2
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9401
+      pages: '27'
+  tags:
+    - '3.5'
+type: spell
