@@ -1,0 +1,45 @@
+_id: uydqYbFH4Y5cktKs
+_key: '!items!uydqYbFH4Y5cktKs'
+_stats:
+  coreVersion: '12.331'
+folder: 96UasAu9CBvgf5hT
+img: icons/creatures/abilities/dragon-breath-purple.webp
+name: Spellcaster Sneak
+system:
+  actions:
+    - _id: whFc9NoqbxQDzyMo
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day you can gain the benefit of the
+        @UUID[Compendium.pf1.feats.Item.2YuxcUNFMPNBpekG]{Silent Spell} feat on
+        a spell you cast.</p><p></p>
+      name: Silent spell
+  changes:
+    - _id: BZFMCFad
+      formula: '2'
+      target: skill.ste
+      type: racial
+  description:
+    value: >-
+      <p><strong>Race</strong>: Kobold<br /><strong>Replaced Trait(s)</strong>:
+      Crafty</p><hr /><p>Traversing the tunnels near big, nasty, hungry
+      creatures, you learned to keep quiet-and to keep your spells quiet too.
+      You gain a +2 racial bonus on Stealth checks, and once per day you can
+      gain the benefit of the
+      @UUID[Compendium.pf1.feats.Item.2YuxcUNFMPNBpekG]{Silent Spell} feat on a
+      spell you cast. This racial trait replaces crafty.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9432
+      pages: '7'
+  subType: racial
+  tags:
+    - Kobold
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

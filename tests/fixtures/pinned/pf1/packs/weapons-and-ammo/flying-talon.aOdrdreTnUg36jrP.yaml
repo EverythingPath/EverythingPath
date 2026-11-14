@@ -1,0 +1,62 @@
+_id: aOdrdreTnUg36jrP
+_key: '!items!aOdrdreTnUg36jrP'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/flying-talon.png
+name: Flying Talon
+system:
+  actions:
+    - _id: cc9ud7pjwjt1gh2l
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Flying Talon
+  description:
+    unidentified: >-
+      <p>This weapon consists of a three-pronged, barbed hook attached to a
+      length of chain. Due to the weapon's unwieldiness, you cannot make attacks
+      of opportunity with a flying talon and do not threaten any squares with
+      it.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    dis: true
+    fin: true
+    rch: true
+    spc: true
+    trp: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weight:
+    value: 5
+type: weapon

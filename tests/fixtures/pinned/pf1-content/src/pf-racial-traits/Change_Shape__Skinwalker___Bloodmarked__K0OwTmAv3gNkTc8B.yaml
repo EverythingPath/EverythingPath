@@ -1,0 +1,73 @@
+_id: K0OwTmAv3gNkTc8B
+_key: '!items!K0OwTmAv3gNkTc8B'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Change Shape (Skinwalker - Bloodmarked)
+system:
+  abilityType: su
+  actions:
+    - _id: j7ADsWbJaHfa6bG0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Each time you assumes bestial form,</p><p><strong>Ability
+        Modifiers</strong> +2 Int, -2 Wis (+2 Dex while
+        shapechanged)</p><p><strong>Bestial Features</strong></p><ul><li><p>Bite
+        attack that deals 1d6 points of damage</p></li><li><p>+4 racial bonus on
+        Perception checks</p></li><li><p>Scent to a range of @Distance[30
+        ft;dual]</p></li><li><p>Treat falling damage as @Distance[20 ft;dual]
+        less than it actually is</p></li></ul>
+      duration:
+        units: spec
+        value: until you resume humanoid form
+      name: Change Shape - Bloodmarked
+      range:
+        units: personal
+  description:
+    instructions: >-
+      <p>You must modify your natural attack(s) to match the parameters
+      specified in this trait, including setting damage, reach, etc. manually.
+      These natural attacks may only be used when selected during a shape
+      change.</p><p>This trait works exactly like
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.mLxAldGcZ0UnEfd7]{Change
+      Shape (Skinwalker)} except as detailed above.</p>
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Bloodmarked</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.mLxAldGcZ0UnEfd7]{Change
+      Shape (Skinwalker)}</p><hr /><p><strong>Ability Modifiers</strong> +2 Int,
+      -2 Wis (+2 Dex while shapechanged) @Toggle[Change Shape (Skinwalker,
+      DEX)]</p><p><strong>Bestial Features</strong></p><ul><li><p>Bite attack
+      that deals 1d6 points of damage</p></li><li><p>+4 racial bonus on
+      Perception checks @Toggle[Change Shape (Skinwalker,
+      Perception)]</p></li><li><p>Scent to a range of @Distance[30 ft;dual]
+      @Toggle[Change Shape (Skinwalker, Scent)]</p></li><li><p>Treat falling
+      damage as @Distance[20 ft;dual] less than it actually is @Toggle[Change
+      Shape (Skinwalker, Falling Damage)]</p></li></ul>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.szjeStouwI3F3WdP
+      - name: Change Shape (Skinwalker, Scent)
+        uuid: Compendium.pf-content.pf-buffs.Item.bc0Kmsq85CTudAJv
+      - name: Change Shape (Skinwalker, Perception)
+        uuid: Compendium.pf-content.pf-buffs.Item.pwCruEtbXqpUvnY9
+      - name: Change Shape (Skinwalker, Falling Damage)
+        uuid: Compendium.pf-content.pf-buffs.Item.lSXRD9egM13txyWW
+      - name: Change Shape (Skinwalker, DEX)
+        uuid: Compendium.pf-content.pf-buffs.Item.qmWtLB6tIaNTauHh
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '248'
+    - id: PZO9439
+      pages: '8'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Bloodmarked
+type: feat

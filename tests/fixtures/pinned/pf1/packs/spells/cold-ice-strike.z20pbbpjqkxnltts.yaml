@@ -1,0 +1,58 @@
+_id: z20pbbpjqkxnltts
+_key: '!items!z20pbbpjqkxnltts'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Cold Ice Strike
+system:
+  actions:
+    - _id: dg1dlxk6qkr51dd0
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      area: 30-ft. line
+      damage:
+        parts:
+          - formula: (min(15, @cl))d6
+            types:
+              - cold
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a shredding flurry of ice slivers, which blast from your
+      hand in a line. The line deals 1d6 points of cold damage per caster level
+      (maximum 15d6).</p>
+  descriptors:
+    - cold
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      occultist: 6
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '211'
+type: spell

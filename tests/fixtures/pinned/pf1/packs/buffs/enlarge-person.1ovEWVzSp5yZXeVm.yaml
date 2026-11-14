@@ -1,0 +1,46 @@
+_id: 1ovEWVzSp5yZXeVm
+_key: '!items!1ovEWVzSp5yZXeVm'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/control/silhouette-grow-shrink-tan.webp
+name: Enlarge Person
+system:
+  changes:
+    - _id: xRCU1fzc
+      formula: '2'
+      target: str
+      type: size
+    - _id: 0mV4oumV
+      formula: '-2'
+      target: dex
+      type: size
+    - _id: Arn47LiL
+      formula: '-2'
+      target: carryStr
+      type: untyped
+    - _id: LgrZLyFq
+      formula: '-0.5'
+      target: carryMult
+      type: untyped
+    - _id: MnTVtnTS
+      formula: '1'
+      target: size
+      type: untyped
+  description:
+    value: >-
+      <p>Adjusts:</p><ul><li>+2 Size bonus to Strength</li><li>-2 Size penalty
+      to Dexterity</li><li>+1 Size</li></ul><p>Includes carry capacity
+      adjustments partially accounting for your gear not changing in
+      size.</p><p>See @UUID[Compendium.pf1.spells.jnlr9cuepka1l26e] for more
+      details.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: 277, 278
+  subType: spell
+type: buff
