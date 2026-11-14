@@ -1,0 +1,54 @@
+_id: 93oIrx2wLSx0jMkM
+_key: '!items!93oIrx2wLSx0jMkM'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/light_06.jpg
+name: Blessing of Courage and Life
+system:
+  actions:
+    - _id: 219rgncwnj7EZnd4
+      actionType: heal
+      activation:
+        type: swift
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d8 + (min(10, @item.level))[CL]
+            types:
+              - positive
+      img: systems/pf1/icons/skills/light_06.jpg
+      name: Use
+      range:
+        units: personal
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] Morale vs Fear and Death effects.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.272szq5d556toqgc]{Blessing of Courage
+      and Life}</p><p>You gain a +2 morale bonus on saving throws against fear
+      and death effects. At any time while the spell is in effect, the you can
+      choose to end the spell as a swift action for a burst of healing energy.
+      You then lose the saving throw bonus, but are healed of 1d8 points of
+      damage +1 point per caster level (maximum +10).</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  scriptCalls:
+    - _id: dqxQnVVw8UN8Do8X
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Early
+      type: script
+      value: |-
+        if(item.system.active)
+          await item.setActive(false);
+        else
+          shared.hideChat = true;
+  subType: spell
+type: buff

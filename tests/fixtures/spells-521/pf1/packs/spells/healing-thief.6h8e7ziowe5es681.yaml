@@ -1,0 +1,56 @@
+_id: 6h8e7ziowe5es681
+_key: '!items!6h8e7ziowe5es681'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Healing Thief
+system:
+  actions:
+    - _id: zk1he84knpiqcvdz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this spell you can steal the healing of the target creature. You
+      must succeed at a melee touch attack to strike the target. If you do,
+      until the effect ends, whenever your target is subject to a healing spell
+      or a supernatural effect that heals hit points, the target only receives
+      half the healing (rounded down) and you receive the other half (also
+      rounded down). You must remain within 25 feet (plus 5 feet per two caster
+      levels) of the target to gain this benefit. If you move outside that
+      range, the spell is discharged. Once you steal 5 hit points per your
+      caster level (maximum 50 hit points) of healing from this spell's effect,
+      the spell is discharged.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      mesmerist: 1
+      occultist: 3
+      psychic: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a bit of sponge, damp with tears
+  school: nec
+  sources:
+    - id: PZO1118
+      pages: '231'
+type: spell

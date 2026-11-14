@@ -1,0 +1,59 @@
+_id: fNnwtbOHb1pdqaBb
+_key: '!items!fNnwtbOHb1pdqaBb'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/axes/pickaxe-stone-simple.webp
+name: Mattock
+system:
+  actions:
+    - _id: pn7rs9pcksa356kn
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Mattock
+  description:
+    unidentified: >-
+      <p>A mattock resembles a two-handed pick, but with a chisel-like blade
+      instead of a point.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 12
+  properties:
+    frg: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - axes
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

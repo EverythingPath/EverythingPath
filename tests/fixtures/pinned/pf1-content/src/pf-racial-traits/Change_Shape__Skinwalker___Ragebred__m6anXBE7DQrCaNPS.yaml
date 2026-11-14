@@ -1,0 +1,73 @@
+_id: m6anXBE7DQrCaNPS
+_key: '!items!m6anXBE7DQrCaNPS'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Change Shape (Skinwalker - Ragebred)
+system:
+  abilityType: su
+  actions:
+    - _id: j7ADsWbJaHfa6bG0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Each time you assumes bestial form,</p><p><strong>Ability
+        Modifiers</strong> +2 Strength, –2 Charisma (+2 Constitution while
+        shapechanged)</p><p><strong>Bestial
+        Features</strong></p><ul><li><p>+@Distance[10 ft;dual] racial bonus to
+        base speed</p></li><li><p>Gore attack that deals 1d6 points of
+        damage</p></li><li><p>2 hoof attacks that each deal 1d4 points of
+        damage</p></li><li><p>Scent to a range of @Distance[30
+        ft;dual]</p></li></ul>
+      duration:
+        units: spec
+        value: until you resume humanoid form
+      name: Change Shape - Ragebred
+      range:
+        units: personal
+  description:
+    instructions: >-
+      <p>You must modify your natural attack(s) to match the parameters
+      specified in this trait, including setting damage, reach, etc. manually.
+      These natural attacks may only be used when selected during a shape
+      change.</p><p>This trait works exactly like
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.mLxAldGcZ0UnEfd7]{Change
+      Shape (Skinwalker)} except as detailed above.</p>
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Nightskulk</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.mLxAldGcZ0UnEfd7]{Change
+      Shape (Skinwalker)}</p><hr /><p><strong>Ability Modifiers</strong> +2
+      Strength, –2 Charisma (+2 Constitution while shapechanged) @Toggle[Change
+      Shape (Skinwalker, CON)]</p><p><strong>Bestial
+      Features</strong></p><ul><li><p>+@Distance[10 ft;dual] racial bonus to
+      base speed @Toggle[Change Shape (Skinwalker, Base
+      Speed)]</p></li><li><p>Gore attack that deals 1d6 points of
+      damage</p></li><li><p>2 hoof attacks that each deal 1d4 points of
+      damage</p></li><li><p>Scent to a range of @Distance[30 ft;dual]
+      @Toggle[Change Shape (Skinwalker, Scent)]</p></li></ul>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.3xwmfkQBA3R0Cozz
+      - uuid: Compendium.pf1.monster-abilities.Item.pX3qRL8U1wfBcH80
+      - name: Change Shape (Skinwalker, CON)
+        uuid: Compendium.pf-content.pf-buffs.Item.uQd5gy3SWEAy6yXQ
+      - name: Change Shape (Skinwalker, Scent)
+        uuid: Compendium.pf-content.pf-buffs.Item.bc0Kmsq85CTudAJv
+      - name: Change Shape (Skinwalker, Base Speed)
+        uuid: Compendium.pf-content.pf-buffs.Item.T1kFI9r4quuXzzTo
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '248'
+    - id: PZO9439
+      pages: '12'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Ragebred
+type: feat

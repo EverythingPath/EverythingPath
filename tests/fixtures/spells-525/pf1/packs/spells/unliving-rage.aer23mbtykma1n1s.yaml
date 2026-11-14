@@ -1,0 +1,56 @@
+_id: aer23mbtykma1n1s
+_key: '!items!aer23mbtykma1n1s'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Unliving Rage
+system:
+  actions:
+    - _id: bksu85d7d0p1qguf
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration + 1 round/level
+      name: Use
+      range:
+        units: medium
+      target:
+        value: >-
+          one willing undead creature per 3 levels, no two of which can be more
+          than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.8u1xa5javcxc6szk]{rage}, except it
+      affects only undead creatures and bolsters them with necromantic energy
+      rather than emotion. Each affected creature gains a +2 profane bonus to
+      Strength and Charisma, a +1 profane bonus on Will saves, and a -2 penalty
+      to AC. The effect is otherwise identical to a barbarian's
+      <em>rage</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      cleric: 2
+      mesmerist: 2
+      oracle: 2
+      sorcerer: 3
+      spiritualist: 3
+      warpriest: 2
+      witch: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '198'
+type: spell
