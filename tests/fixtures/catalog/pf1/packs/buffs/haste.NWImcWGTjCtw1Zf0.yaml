@@ -1,0 +1,64 @@
+_id: NWImcWGTjCtw1Zf0
+_key: '!items!NWImcWGTjCtw1Zf0'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/skills/movement/feet-winged-boots-brown.webp
+name: Haste
+system:
+  changes:
+    - _id: kvfxvcqw
+      formula: '1'
+      target: attack
+      type: haste
+    - _id: i5jeb69f
+      formula: '1'
+      target: ac
+      type: haste
+    - _id: uv25ffcw
+      formula: '1'
+      target: ref
+      type: haste
+    - _id: t7kdmcvh
+      formula: min(@attributes.speed.land.base, 30)
+      target: landSpeed
+      type: enh
+    - _id: 8chno7s8
+      formula: min(@attributes.speed.climb.base, 30)
+      target: climbSpeed
+      type: enh
+    - _id: o3i44my7
+      formula: min(@attributes.speed.swim.base, 30)
+      target: swimSpeed
+      type: enh
+    - _id: 4iimhrzg
+      formula: min(@attributes.speed.burrow.base, 30)
+      target: burrowSpeed
+      type: enh
+    - _id: uog1v33r
+      formula: min(@attributes.speed.fly.base, 30)
+      target: flySpeed
+      type: enh
+  description:
+    instructions: <p>Use Haste toggle in attack prompt to trigger additional attack.</p>
+    value: >-
+      <p>When making a full attack action, you may make one extra attack with
+      one natural or manufactured weapon at your highest base attack bonus. This
+      effect is not cumulative with similar effects, such as that provided by a
+      <em>speed</em> weapon.</p><p>You also gain a +1 bonus on attack rolls,
+      dodge AC and Reflex saves.</p><p>All your modes of movement (including
+      land, fly, burrow, climb and swim) increase by 30ft, to a maximum of twice
+      your normal speed using that form of movement. This increase counts as an
+      enhancement bonus, and it affects the creature’s jumping distance as
+      normal for increased speed.</p><p>See
+      @UUID[Compendium.pf1.spells.Item.s9amdo5398alb5p0] for more details.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO1110
+      pages: '293'
+  subType: spell
+type: buff

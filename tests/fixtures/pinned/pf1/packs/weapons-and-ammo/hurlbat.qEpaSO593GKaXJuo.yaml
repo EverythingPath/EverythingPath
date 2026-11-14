@@ -1,0 +1,97 @@
+_id: qEpaSO593GKaXJuo
+_key: '!items!qEpaSO593GKaXJuo'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/hurlbat.png
+name: Hurlbat
+system:
+  actions:
+    - _id: 84n5f2f9gxl67dtq
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+    - _id: f09Zw2wb9NiKgkZQ
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-1'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        formula:
+          bonus: '@formulaicAttack * -5'
+          count: ceil(@attributes.bab.total / 5) - 1
+        type: custom
+      name: Melee
+      range:
+        units: melee
+      save:
+        dc: '15'
+        description: Reflex see text
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  baseTypes:
+    - Hurlbat
+  description:
+    unidentified: >-
+      <p>A hurlbat is a throwing axe made from a single piece of flat metal.
+      Every extremity of the hurlbat is sharpened, including the point of the
+      handle. You can wield the hurlbat as a melee weapon, but it's not designed
+      for such use; you take a -1 penalty on melee attack rolls with the weapon,
+      and you must succeed at a DC 15 Reflex save when making melee attacks to
+      avoid cutting yourself on an edge and taking 1 point of slashing damage.
+      You don't need to attempt this save while wearing heavy armor.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 8
+  sources:
+    - id: PZO9452
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - axes
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

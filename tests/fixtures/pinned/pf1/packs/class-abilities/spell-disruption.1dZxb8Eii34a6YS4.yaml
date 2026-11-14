@@ -1,0 +1,55 @@
+_id: 1dZxb8Eii34a6YS4
+_key: '!items!1dZxb8Eii34a6YS4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Spell Disruption
+system:
+  abilityType: su
+  actions:
+    - _id: 70fm8i8x4xdaqqct
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can temporarily disrupt a spell by expending 1 point from
+      her arcane reservoir and succeeding at a dispel check against the spell,
+      as @UUID[Compendium.pf1.spells.gmgwyjfpeuuc4t4o]{Dispel Magic}. This
+      ability suppresses a spell effect for a number of rounds equal to the
+      arcanist’s Charisma modifier (minimum 1). If the spell affects multiple
+      creatures, this ability only suppresses the spell for one creature. At the
+      end of this duration, the spell resumes and the suppressed rounds do not
+      count against its total duration. This ability can be used on unwilling
+      targets, but the arcanist must succeed at a melee touch attack, and the
+      target may attempt a Will saving throw to negate the effect. This ability
+      has no effect on spells that are instantaneous or have a duration of
+      permanent.</p>
+  sources:
+    - id: PZO1129
+      pages: '12'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat
