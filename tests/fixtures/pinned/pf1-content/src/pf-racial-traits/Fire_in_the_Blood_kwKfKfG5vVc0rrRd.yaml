@@ -1,0 +1,43 @@
+_id: kwKfKfG5vVc0rrRd
+_key: '!items!kwKfKfG5vVc0rrRd'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Fire in the Blood
+system:
+  actions:
+    - _id: KdAAiVlmpj6C72gX
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Fast healing 2 (after fire damage)
+      notes:
+        effect:
+          - '@Heal[2]'
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Fire or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M7iCedGNTrldJq5R]{Dragon}
+      type</p><hr /><p>Members of this race gain fast healing 2 for 1 round
+      anytime they take fire damage (whether or not this fire damage overcomes
+      their fire resistance, if any). Members of this race can heal up to 2 hit
+      points per level per day with this ability, after which it ceases to
+      function.</p>
+  racePoints: 3
+  sources:
+    - id: PZO1121
+      pages: '223'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+  uses:
+    maxFormula: '@attributes.hd.total'
+    per: day
+    value: 0
+type: feat

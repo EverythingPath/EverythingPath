@@ -1,0 +1,28 @@
+_id: 8VZQJOyAXbXghxd7
+_key: '!items!8VZQJOyAXbXghxd7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_32.jpg
+name: Self-Sufficient
+system:
+  changes:
+    - _id: itrf3f4h
+      formula: 2 + if(gte(@skills.hea.ranks, 10), 2)
+      target: skill.hea
+      type: untyped
+    - _id: ph7lqkbj
+      formula: 2 + if(gte(@skills.sur.ranks, 10), 2)
+      target: skill.sur
+      type: untyped
+  description:
+    value: >-
+      <p><em>You know how to get along in the wild and how to effectively treat
+      wounds.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all
+      Heal checks and Survival checks. If you have 10 or more ranks in one of
+      these skills, the bonus increases to +4 for that skill.</p>
+  sources:
+    - id: PZO1110
+      pages: 116, 133
+  tags:
+    - General
+type: feat

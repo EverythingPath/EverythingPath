@@ -1,0 +1,59 @@
+_id: pTRlM5BESZuydrGY
+_key: '!items!pTRlM5BESZuydrGY'
+_stats:
+  coreVersion: '12.331'
+folder: M1lkxA7VFDzlRtIB
+img: icons/magic/nature/root-vine-hand-strike.webp
+name: Poisonous
+system:
+  actions:
+    - _id: 5esBHgH6pGq1afUv
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>Vine Leshy Toxin: Unarmed strike-injury; save Fort DC 10 + half the
+        vine leshy's Hit Dice + the leshy's Constitution modifier; frequency
+        1/round for 6 rounds; effect
+        @UUID[Compendium.pf1.rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.7LwCMwrX3tchvrjW]{Sickened}
+        for 1 round; cure 1 save.</p><p></p>
+      duration:
+        units: round
+        value: '6'
+      name: Vine Leshy Toxin
+      notes:
+        effect:
+          - '@Condition[sickened] for 1 round'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: cure 1 save
+        type: fort
+  description:
+    value: >-
+      <p><strong>Race</strong>: Vine Leshy<br /><strong>Replaced
+      Trait(s)</strong>: Plantspeech; Change Shape</p><hr /><p>Vine leshys made
+      from poison ivy vines carry natural poison in their bodies. As a swift
+      action, the leshy can imbue its vines with this irritating substance. The
+      next time the leshy hits a creature with an unarmed strike, the creature
+      is affected by the following poison.</p><p><i>Vine Leshy Toxin</i>:
+      Unarmed strike-injury; <i>save </i>Fort DC 10 + half the vine leshy's Hit
+      Dice + the leshy's Constitution modifier; <i>frequency </i>1/round for 6
+      rounds; <i>effect </i>sickened for 1 round; cure 1 save.</p><p> The leshy
+      can use this ability a number of times per day equal to its Constitution
+      modifier (minimum 1). A vine leshy is immune to its own poison, but not to
+      those of other vine leshys.</p><p> This replaces plantspeech and change
+      shape.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1140
+      pages: '21'
+  subType: racial
+  tags:
+    - Vine Leshy
+  traitCategory: offense
+  uses:
+    maxFormula: max(1, @abilities.con.mod)
+    per: day
+    value: 1
+type: feat

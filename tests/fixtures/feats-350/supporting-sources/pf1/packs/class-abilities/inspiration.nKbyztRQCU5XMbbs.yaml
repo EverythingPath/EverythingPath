@@ -1,0 +1,70 @@
+_id: nKbyztRQCU5XMbbs
+_key: '!items!nKbyztRQCU5XMbbs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_11.jpg
+name: Inspiration
+system:
+  abilityType: ex
+  actions:
+    - _id: didgk77lyb52bgl9
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use on skill
+    - _id: ceDWnadSRCZzG4Qi
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use on attack
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: 22JN9wo6JryqvLX2
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use on saving throw
+      uses:
+        autoDeductChargesCost: '2'
+  associations:
+    classes:
+      - Investigator
+  description:
+    value: >-
+      <p><em>An investigator is beyond knowledgeable and skilled—he also
+      possesses keen powers of observation and deduction that far surpass the
+      abilities of others. An investigator typically uses these powers to aid in
+      their investigations, but can also use these flashes of inspiration in
+      other situations.</em></p><p>An investigator has the ability to augment
+      skill checks and ability checks through his brilliant inspiration. The
+      investigator has an inspiration pool equal to 1/2 his investigator level +
+      his Intelligence modifier (minimum 1). An investigator’s inspiration pool
+      refreshes each day, typically after he gets a restful night’s sleep. As a
+      free action, he can expend one use of inspiration from his pool to add 1d6
+      to the result of that check, including any on which he takes 10 or 20.
+      This choice is made after the check is rolled and before the results are
+      revealed. An investigator can only use inspiration once per check or roll.
+      The investigator can use inspiration on any Knowledge, Linguistics, or
+      Spellcraft skill checks without expending a use of inspiration, provided
+      he’s trained in the skill.</p><p>Inspiration can also be used on attack
+      rolls and saving throws, at the cost of expending two uses of inspiration
+      each time from the investigator’s pool. In the case of saving throws,
+      using inspiration is an immediate action rather than a free action.</p>
+  sources:
+    - id: PZO1129
+      pages: '31'
+  subType: classFeat
+  tag: classFeat_inspiration
+  uses:
+    maxFormula: '@abilities.int.mod + floor(@class.level / 2)'
+    per: day
+type: feat

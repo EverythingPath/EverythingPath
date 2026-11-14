@@ -1,0 +1,67 @@
+_id: 1mc2b6d2aw6kkna0
+_key: '!items!1mc2b6d2aw6kkna0'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/nature/wolf-paw-glow-orange.webp
+name: Shield Companion (ACG)
+system:
+  actions:
+    - _id: miqp65cy5hmysxfs
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: your companion creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell creates a special mystical connection between you and your
+      companion creature-animal companion, bonded mount, eidolon, or
+      familiar-which allows you to transfer its wounds to you. The creature
+      gains a +1 deflection bonus to AC and a +1 resistance bonus on
+      saves.</p><p>As an immediate action when your companion takes damage, you
+      can take that damage yourself to prevent your companion from being harmed
+      (similar to @UUID[Compendium.pf1.spells.menqakfoa1ftvi3f]{shield other},
+      except the damage is not split between you and the target). Forms of harm
+      that do not involve the loss of hit points, such as charm effects,
+      temporary ability damage, level drain, and death effects, are not
+      affected. If the creature suffers a reduction of hit points from a lowered
+      Constitution score, you cannot take that damage on behalf of your
+      companion creature because it is not hit point damage. When the spell
+      ends, damage directed to you by the spell is not reassigned to the
+      subject.</p><p>If you and your companion move out of range of each other,
+      the spell ends.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      hunter: 2
+      paladin: 2
+      ranger: 2
+      shaman: 2
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '191'
+type: spell

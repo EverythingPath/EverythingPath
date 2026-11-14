@@ -1,0 +1,91 @@
+_id: skgjjub1hng29nwo
+_key: '!items!skgjjub1hng29nwo'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/barrier-shield-dome-deflect-blue.webp
+name: Protection from Evil
+system:
+  actions:
+    - _id: fkrs9cvf1rscuvzo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell wards a creature from attacks by evil creatures, from mental
+      control, and from summoned creatures. It creates a <i>magic</i>al barrier
+      around the subject at a distance of 1 foot. The barrier moves with the
+      subject and has three major effects.</p><p>First, the subject gains a +2
+      deflection bonus to AC and a +2 resistance bonus on saves. Both these
+      bonuses apply against attacks made or effects created by evil
+      creatures.</p><p>Second, the subject immediately receives another saving
+      throw (if one was allowed to begin with) against any spells or effects
+      that possess or exercise mental control over the creature (including
+      enchantment [charm] effects and enchantment [compulsion] effects such as
+      <i>charm person</i>, <i>command</i>, and <i>dominate</i> person). This
+      saving throw is made with a +2 morale bonus, using the same DC as the
+      original effect.</p><p>If successful, such effects are suppressed for the
+      duration of this spell. The effects resume when the duration of this spell
+      expires.</p><p>While under the effects of this spell, the target is immune
+      to any new attempts to possess or exercise mental control over the
+      target.</p><p>This spell does not expel a controlling life force (such as
+      a ghost or spellcaster using <i>magic</i> jar), but it does prevent them
+      from controlling the target. This second effect only functions against
+      spells and effects created by evil creatures or objects, subject to GM
+      discretion.</p><p>Third, the spell prevents bodily contact by evil
+      summoned creatures. This causes the natural weapon attacks of such
+      creatures to fail and the creatures to recoil if such attacks require
+      touching the warded creature. Summoned creatures that are not evil are
+      immune to this effect. The protection against contact by summoned
+      creatures ends if the warded creature makes an attack against or tries to
+      force the barrier against the blocked creature. Spell resistance can allow
+      a creature to overcome this protection and touch the warded creature.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      adept: 1
+      arcanist: 1
+      bloodrager: 1
+      cleric: 1
+      inquisitor: 1
+      medium: 1
+      oracle: 1
+      paladin: 1
+      shaman: 1
+      sorcerer: 1
+      spiritualist: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      wizard: 1
+    domain:
+      Good: 1
+    subDomain:
+      Purity: 1
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '327'
+  sr: false
+type: spell

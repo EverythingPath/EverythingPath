@@ -1,0 +1,50 @@
+_id: o0U6E2WvMBTectrc
+_key: '!items!o0U6E2WvMBTectrc'
+_stats:
+  coreVersion: '12.343'
+folder: GoxdX8voXN2V3OVY
+img: icons/magic/holy/meditation-chi-focus-blue.webp
+name: Calm Stance
+system:
+  changes:
+    - _id: GermLGLP
+      formula: '- (2 + floor((@classes.barbarianUnchained.level - 2) / 9))'
+      target: mattack
+      type: untyped
+    - _id: VMgJfOZR
+      formula: '- (2 + floor((@classes.barbarianUnchained.level - 2) / 9))'
+      target: mwdamage
+      type: untyped
+    - _id: kDQYenzV
+      formula: '- (2 + floor((@classes.barbarianUnchained.level - 2) / 9))'
+      target: twdamage
+      type: untyped
+    - _id: ry2P7xT1
+      formula: '- (2 + floor((@classes.barbarianUnchained.level - 2) / 9))'
+      target: will
+      type: untyped
+    - _id: k34t9iHY
+      formula: '2'
+      target: ac
+      type: untyped
+  contextNotes:
+    - target: skills
+      text: Calm Stance removes action restriction on skills while raging
+    - target: allChecks
+      text: Calm Stance removes action restriction on abilities while raging
+  description:
+    value: >-
+      <p>The barbarian doesn’t gain any benefits from rage other than the
+      temporary hit points, but she doesn’t take any of the penalties from rage
+      (including the penalty to AC and the restriction on actions she can
+      take).</p><p>See
+      @UUID[Compendium.pf1.class-abilities.Item.8nVgKDcPUcJBCYL7] for more
+      details.</p>
+  level: null
+  sources:
+    - id: PZO1131
+      pages: '9'
+  subType: feat
+  tags:
+    - Stance Rage Power
+type: buff
