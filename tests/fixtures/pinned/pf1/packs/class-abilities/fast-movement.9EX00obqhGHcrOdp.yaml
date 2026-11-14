@@ -1,0 +1,33 @@
+_id: 9EX00obqhGHcrOdp
+_key: '!items!9EX00obqhGHcrOdp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/armor_01.jpg
+name: Fast Movement
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Barbarian
+      - Barbarian (Unchained)
+      - Bloodrager
+  changes:
+    - _id: cu5r7fnq
+      formula: if(and(lte(@armor.type, 2), lt(@attributes.encumbrance.level, 2)), 10)
+      target: landSpeed
+      type: base
+  description:
+    value: >-
+      <p>The character’s land speed is faster than the norm for her race by +10
+      feet. This benefit applies only when he is wearing no <em>armor</em>,
+      light <em>armor</em>, or medium <em>armor</em>, and not carrying a heavy
+      load. Apply this bonus before modifying the character’s speed because of
+      any load carried or armor worn. This bonus stacks with any other bonuses
+      to the character’s land speed.</p>
+  sources:
+    - id: PZO1110
+      pages: '31'
+    - id: PZO1129
+      pages: '16'
+  subType: classFeat
+type: feat

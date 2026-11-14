@@ -1,0 +1,71 @@
+_id: rIKb0DtfqJkEdBIz
+_key: '!items!rIKb0DtfqJkEdBIz'
+_stats:
+  coreVersion: '12.331'
+folder: MvyTbqu9jQCwjLwg
+img: icons/creatures/eyes/humanoid-single-yellow.webp
+name: Gloom Shimmer
+system:
+  abilityType: sp
+  actions:
+    - _id: 4Tz9gd8vbOYmvoft
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.r190q9zxmei82lmv]{Displacement}</p><p>The
+        subject of this spell appears to be about @Distance[2 ft;dual] away from
+        its true location. The creature benefits from a 50% miss chance as if it
+        had total concealment. Unlike actual total concealment,
+        <em>displacement</em> does not prevent enemies from targeting the
+        creature normally. <em>True seeing</em> reveals its true location and
+        negates the miss chance.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Displacement
+      range:
+        units: touch
+      save:
+        dc: 10+3+@abilities.cha.mod
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: gte(@attributes.hd.total, 9) * 2
+          per: day
+  description:
+    instructions: >-
+      <p>Replace only the  trait
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.iulHWSMNp9TABDDU]{Spell-Like
+      Abilities (Fetchling - Shadow Walk)}</p>
+    value: >-
+      <p><strong>Race</strong>: Fetchling<br /><strong>Replaced
+      Trait(s)</strong>: Spell-Like Abilities</p><hr /><p>Some fetchlings can
+      manipulate shadowy energy in order to displace their location instead of
+      transporting between shadows. Upon reaching 9th level, instead of gaining
+      <em>shadow walk </em>as a spell-like ability, these fetchlings gain
+      @UUID[Compendium.pf1.spells.Item.r190q9zxmei82lmv]{Displacement} as a
+      spell-like ability usable twice per day. For this ability, a fetchling's
+      caster level is equal to his total Hit Dice. This racial trait modifies
+      the spell-like ability racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '108'
+  subType: racial
+  tags:
+    - Fetchling
+  traitCategory: magical
+  uses:
+    maxFormula: >-
+      1 + clamp(floor((@attributes.hd.total - 5) / 4), 0, 2) +
+      clamp(floor(@attributes.hd.total / 9), 0, 1)
+    value: 1
+type: feat
