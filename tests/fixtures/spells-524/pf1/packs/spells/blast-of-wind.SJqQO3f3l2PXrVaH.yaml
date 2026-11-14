@@ -1,0 +1,60 @@
+_id: SJqQO3f3l2PXrVaH
+_key: '!items!SJqQO3f3l2PXrVaH'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/air/wind-tornado-spiral-blue-gray.webp
+name: Blast of Wind
+system:
+  actions:
+    - _id: 8680jhjva3mw2d7y
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      effect: >-
+        line-shaped blast of hurricane-force wind emanating out from you to the
+        extreme of the range
+      measureTemplate:
+        size: '60'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a spiraling gesture of your hand and a forceful exhalation, you
+      create a brief but fierce (90 mph) blast of wind. This spell functions as
+      @UUID[Compendium.pf1.spells.cnuin981hdq7ryit]{Gust of Wind}, except all
+      creatures within the area are treated as though they were one size
+      category smaller for the purpose of determining how the spell affects
+      them. For every 4 caster levels beyond 7th, creatures in the area are
+      treated as an additional size category smaller (to a maximum of three size
+      categories smaller at 15th level).</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 4
+      hunter: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO9483
+      pages: '17'
+type: spell

@@ -1,0 +1,31 @@
+_id: BoEkMviJrW0PKmhj
+_key: '!items!BoEkMviJrW0PKmhj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/hook-hand.jpg
+name: Trap Sense
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Rogue
+      - Barbarian
+      - Investigator
+      - Slayer
+  contextNotes:
+    - target: ref
+      text: +[[floor(@class.level / 3)]] vs. traps
+    - target: ac
+      text: +[[floor(@class.level / 3)]] dodge vs. traps
+  description:
+    value: >-
+      <p>At 3rd level, this character gains a +1 bonus on <em>Reflex</em> saves
+      made to avoid traps and a +1 <em>dodge bonus</em> to <em>armor class</em>
+      against attacks made by traps. These bonuses increase by +1 every three
+      levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense
+      bonuses gained from multiple classes stack.</p>
+  sources:
+    - id: PZO1110
+      pages: 31, 69
+  subType: classFeat
+type: feat

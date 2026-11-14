@@ -1,0 +1,62 @@
+_id: 31xs1udfguxxy9gl
+_key: '!items!31xs1udfguxxy9gl'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Imbue with Elemental Might
+system:
+  actions:
+    - _id: 8v8h6xdnwzbze7r4
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: spec
+        value: 24 hours or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched; see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.0axqb92kzlesc24q]{imbue with spell
+      ability}, except you transfer the use of your elemental assault ability to
+      the target. The target must have an Intelligence score of at least 5 to
+      use the ability. The imbued elemental assault functions exactly like
+      yours, except the ability's duration is based on the target's level or Hit
+      Dice. Once you cast this spell, you cannot use your elemental assault
+      ability until the duration of the spell is over.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      cleric: 2
+      magus: 2
+      oracle: 2
+      shaman: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1121
+      pages: '203'
+type: spell

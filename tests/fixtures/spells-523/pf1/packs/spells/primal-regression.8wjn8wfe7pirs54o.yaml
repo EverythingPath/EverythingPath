@@ -1,0 +1,62 @@
+_id: 8wjn8wfe7pirs54o
+_key: '!items!8wjn8wfe7pirs54o'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Primal Regression
+system:
+  actions:
+    - _id: rjqe7kcqk24yxo2d
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/2 levels, no two of which can be more than 30 feet apart
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This spell sequesters the targets' ability for higher reasoning,
+      allowing their darker impulses to come to the fore. An affected target
+      becomes a ravening monster-savage, bloodthirsty, and brutish. Until the
+      spell ends, the targets have all of the following benefits and drawbacks.
+      </p><ul><li> Targets' Intelligence and Charisma scores drop to 3 (if the
+      scores were higher), and they are unable to use Intelligence-or
+      Charisma-based skills, cast spells, understand language, or communicate
+      coherently. </li><li> Targets take a -4 penalty on Will saves. </li><li>
+      Targets gain a +6 enhancement bonus to Strength, a +2 natural armor bonus
+      to AC, and 2d8 temporary hit points. These temporary hit points disappear
+      at the end of the spell's duration. </li></ul> When the spell ends, each
+      affected creature must succeed at a Will saving throw or take 1d4 points
+      of Intelligence drain and 1d4 points of Charisma damage.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      druid: 6
+      hunter: 6
+      mesmerist: 5
+      psychic: 6
+      shaman: 6
+      witch: 7
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '181'
+  subschool:
+    - compulsion
+type: spell

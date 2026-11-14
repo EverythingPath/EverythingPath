@@ -1,0 +1,69 @@
+_id: 4ZPiCFQ4y1bXrz3l
+_key: '!items!4ZPiCFQ4y1bXrz3l'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/cannon-engraved-gold.webp
+name: Hotchkiss 6 Pounder
+system:
+  actions:
+    - _id: dlfa3883plfrhgsa
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(8, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '300'
+  ammo:
+    type: siege
+  baseTypes:
+    - Hotchkiss 6 Pounder
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 8d6 ;
+      <strong>Critical</strong> x3; <strong>Range</strong> 300 ft.;
+      <strong>Type</strong> B, P, and S</p><p><strong>Misfire</strong> 1;
+      <strong>Crew</strong> 2; <strong>Aim</strong> 0; <strong>Load</strong>
+      2</p><p><strong>Category</strong> Siege; <strong>Proficiency</strong>
+      Exotic</p><h3>Description</h3><p>The Hotchkiss 6 pounder gun is a
+      shortened version of the Hotchkiss 6 pounder naval gun, designed for use
+      in the sponsons of World War I-era tanks such as the Mark IV. The
+      Hotchkiss 6 pounder is a direct-fire advanced siege firearm that must be
+      mounted in place on a vehicle to be used. It fires high explosive (HE)
+      shells that deal 8d6 points of bludgeoning, piercing, and slashing damage
+      in a 30-foot radius around the point of impact (Reflex DC 20 for half ). A
+      Hotchkiss 6 pounder is a Medium weapon and has hardness 10 and 70 hit
+      points. Hotchkiss HE shells cost 25 gp each and weigh 6 pounds each."</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2000
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: siege
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: direct
+type: weapon
