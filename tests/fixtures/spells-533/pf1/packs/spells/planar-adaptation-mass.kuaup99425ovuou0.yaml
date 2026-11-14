@@ -1,0 +1,58 @@
+_id: kuaup99425ovuou0
+_key: '!items!kuaup99425ovuou0'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Planar Adaptation, Mass
+system:
+  actions:
+    - _id: k21tra4r1fq4dni9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.evoz9r9n186nsjf0]{planar adaptation},
+      except as noted above.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 6
+      occultist: 6
+      oracle: 6
+      psychic: 6
+      sorcerer: 7
+      summoner: 6
+      summonerUnchained: 6
+      warpriest: 6
+      wizard: 7
+  level: 7
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '236'
+type: spell

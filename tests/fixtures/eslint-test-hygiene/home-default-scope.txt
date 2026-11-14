@@ -1,0 +1,27 @@
+// A default sees the parameters and the scopes around its function, never
+// the body: a body declaration of the same name neither hides a source nor
+// makes one. A line ending in "// flagged" must be reported; every other line
+// must pass.
+import * as os from 'node:os';
+function shadowedEnv({ HOME } = process.env) { // flagged
+  const process = { env: { HOME: 'fixture-home' } };
+  return [HOME, process.env.HOME];
+}
+function shadowedOs({ homedir } = os) { // flagged
+  const os = { homedir: () => 'fixture-home' };
+  return [homedir(), os.homedir()];
+}
+function withFixtureOs() {
+  const os = { homedir: () => 'fixture-home' };
+  return async function fixtureDefault({ homedir } = os) {
+    const os = await import('node:os');
+    return [homedir(), os.homedir()]; // flagged
+  };
+}
+function withFixtureProcess() {
+  const process = { env: { HOME: 'fixture-home' } };
+  return function fixtureDefault({ HOME } = process.env) {
+    const process = require('node:process');
+    return [HOME, process.env.HOME]; // flagged
+  };
+}

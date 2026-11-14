@@ -1,0 +1,32 @@
+_id: 57bf3joJk7JEpZCZ
+_key: '!items!57bf3joJk7JEpZCZ'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/mammals/bat-giant-tattered-purple.webp
+name: Blindsense 30'
+system:
+  description:
+    value: >-
+      <p>Blindsense lets a creature notice things it cannot see, but without the
+      precision of blindsight. The creature with blindsense usually does not
+      need to make Perception checks to notice and locate creatures within range
+      of its blindsense ability, provided that it has line of effect to that
+      creature. Any opponent that cannot be seen has total concealment (50% miss
+      chance) against a creature with blindsense, and the blindsensing creature
+      still has the normal miss chance when attacking foes that have
+      concealment. Visibility still affects the movement of a creature with
+      blindsense. A creature with blindsense is still denied its Dexterity bonus
+      to Armor Class against attacks from creatures it cannot see.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: blindsense-30-toggle
+      type: script
+      value: |+
+        actor.update({ "system.traits.senses.bse": state ? 30 : 0});
+
+type: buff

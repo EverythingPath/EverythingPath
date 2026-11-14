@@ -1,0 +1,57 @@
+_id: cqhabnit3b7l5ezm
+_key: '!items!cqhabnit3b7l5ezm'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/sundries/misc/lock-steel-blue.webp
+name: Arcane Lock
+system:
+  actions:
+    - _id: xjv0crms0chtpcfh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      target:
+        value: door, chest, or portal touched, up to 30 sq. ft./level in size
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An <i>arcane lock</i> spell cast upon a door, chest, or portal
+      magically locks it. You can freely pass your own arcane lock without
+      affecting it. If the locked object has a lock, the DC to open that lock
+      increases by 10 while it remains attached to the object. If the object
+      does not have a lock, this spell creates one that can only be opened with
+      a DC 20 Disable Device skill check. A door or object secured with this
+      spell can be opened only by breaking in or with a successful <i>dispel
+      magic</i> or <i>knock</i> spell. Add 10 to the normal DC to break open a
+      door or portal affected by this spell. A <i>knock</i> spell does not
+      remove an <i>arcane lock</i>; it only suppresses the effect for 10
+      minutes.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      occultist: 2
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Wards: 1
+  level: 2
+  materials:
+    gpValue: 25
+    value: gold dust worth 25 gp
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '243'
+  sr: false
+type: spell

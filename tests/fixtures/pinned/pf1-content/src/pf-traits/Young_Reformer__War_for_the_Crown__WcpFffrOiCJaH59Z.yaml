@@ -1,0 +1,69 @@
+_id: WcpFffrOiCJaH59Z
+_key: '!items!WcpFffrOiCJaH59Z'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Young Reformer (War for the Crown)
+system:
+  actions:
+    - _id: IfS37z3oQ4d2LMMi
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: "<p>Once per day, you can call upon your coconspirators to have “made arrangements” on your behalf,  allowing you to attempt a Knowledge (local) check in place of a single Bluff, Disable Device, Intimidate, or Sleight of Hand check. </p><p>The DC of this Knowledge (local) check is equal to the DC of the skill check it replaces. Whatever arrangements you make—for doors left unlocked, guards strong-armed out of your way, stolen keys left for you to find—must be reasonable to have anticipated and achieved beforehand; you could arrange to have a noble convinced you’re a very important diplomat traveling in disguise, for example, but if a fight breaks out you could not rely on your network of contacts to feint for you in combat. You don’t have to use this ability in advance; you can announce its use as you encounter a challenge, implying you foresaw this challenge and made arrangements prior to your arrival.\_</p>"
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  description:
+    instructions: >-
+      <p>Select Disable Device or Knowledge (local)  when you take this
+      trait.</p><p>Update the Class skills section of the details tab of this
+      trait to reflect your choice.</p>
+    value: >-
+      <p><em>Perhaps you were born at the bottom of Taldan society and you’re
+      tired of seeing your friends and family toil endlessly with no hope of a
+      better life, or maybe your privileged outlook was shattered by empathy or
+      tragedy. Either way, you know the system is broken, and you’ve dedicated
+      your life to fixing it. But tradition rules Taldor as much as any Grand
+      Prince, and change requires more influence than you have… so far. You’ve
+      got a few friends and allies, and plenty of determination, but while you
+      work toward the power you need to change the nation, you’ll have to resort
+      to more discrete ways of righting wrongs and curbing the abuses of the
+      upper class.</em></p><p><strong>Benefits</strong>: You gain a +1 trait
+      bonus on Disable Device and Knowledge (local) checks, and one of these
+      skills is always a class skill for you. Once per day, you can call upon
+      your coconspirators to have “made arrangements” on your behalf, allowing
+      you to attempt a Knowledge (local) check in place of a single Bluff,
+      Disable Device, Intimidate, or Sleight of Hand check. The DC of this
+      Knowledge (local) check is equal to the DC of the skill check it replaces.
+      Whatever arrangements you make—for doors left unlocked, guards
+      strong-armed out of your way, stolen keys left for you to find—must be
+      reasonable to have anticipated and achieved beforehand; you could arrange
+      to have a noble convinced you’re a very important diplomat traveling in
+      disguise, for example, but if a fight breaks out you could not rely on
+      your network of contacts to feint for you in combat. You don’t have to use
+      this ability in advance; you can announce its use as you encounter a
+      challenge, implying you foresaw this challenge and made arrangements prior
+      to your arrival.&nbsp;</p>
+  scriptCalls:
+    - _id: 5WwUVpwYbyifcLMB
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("klo");
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-22E
+      pages: '10'
+  subType: trait
+  tags:
+    - War for the Crown
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

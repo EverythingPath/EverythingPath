@@ -1,0 +1,54 @@
+_id: sipkpfq74g8zrg9q
+_key: '!items!sipkpfq74g8zrg9q'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Meladaemon
+system:
+  actions:
+    - _id: hr5vsesi5yuhr0nc
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except it summons a
+      single meladaemon.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 8
+      cleric: 8
+      oracle: 8
+      sorcerer: 8
+      summoner: 6
+      witch: 8
+      wizard: 8
+  level: 8
+  materials:
+    focus: an empty wooden bowl
+  school: con
+  sources:
+    - id: PZO9239
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

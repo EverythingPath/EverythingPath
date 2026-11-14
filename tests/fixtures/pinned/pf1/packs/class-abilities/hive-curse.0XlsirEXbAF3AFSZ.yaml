@@ -1,0 +1,39 @@
+_id: 0XlsirEXbAF3AFSZ
+_key: '!items!0XlsirEXbAF3AFSZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/horror-eerie-1.jpg
+name: Hive Curse
+system:
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: qglb11lf
+      formula: if(gte(@class.level, 10), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>You were exposed at a young age (perhaps even before you were born) to
+      the alien species known as the hive, but this exposure did not result in a
+      full-blown infestation by these otherworldly monsters. Others (including
+      animals) find the unsightly spines and rough growths that periodically
+      emerge from your flesh to be disturbing and distracting, and you take a –4
+      penalty on Bluff, Diplomacy, Handle Animal, and Ride checks. Once per day
+      as a standard action, you can cough up an ovoid, leathery sphere that can
+      be hurled as a flask of acid, though it becomes inert after 24 hours.</p>
+
+      <p>At 5th level, you gain the benefits of
+      @UUID[Compendium.pf1.spells.pau0ejk30fs1eebl]{Endure Elements} in hot
+      environments and are immune to infestations (save for those from the hive
+      itself ).</p>
+
+      <p>At 10th level, your skin deformities grow numerous enough to increase
+      your natural armor bonus by 1.</p>
+
+      <p>At 15th level, you gain acid resistance 20.</p>
+  subType: classFeat
+  tags:
+    - Curse
+type: feat

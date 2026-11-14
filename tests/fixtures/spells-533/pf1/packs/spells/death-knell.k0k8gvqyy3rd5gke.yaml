@@ -1,0 +1,60 @@
+_id: k0k8gvqyy3rd5gke
+_key: '!items!k0k8gvqyy3rd5gke'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Death Knell
+system:
+  actions:
+    - _id: rh5194h96wka2ue6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous/10 minutes per HD of subject; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You draw forth the ebbing life force of a creature and use it to fuel
+      your own power. Upon casting this spell, you touch a living creature that
+      has -1 or fewer hit points. If the subject fails its saving throw, it
+      dies, and you gain 1d8 temporary hit points and a +2 enhancement bonus to
+      Strength. Additionally, your effective caster level goes up by +1,
+      improving spell effects dependent on caster level. This increase in
+      effective caster level does not grant you access to more spells. These
+      effects last for 10 minutes per HD of the subject creature.</p>
+  descriptors:
+    - death
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 1
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      spiritualist: 2
+      warpriest: 2
+      witch: 2
+    domain:
+      Death: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '264'
+type: spell

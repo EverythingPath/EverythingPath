@@ -1,0 +1,88 @@
+export const MILITIA_ACTIVITY_ACTION_IDS = [
+  'activate_black_market',
+  'activate_refuge',
+  'broker_market',
+  'change_officer_role',
+  'covert_action',
+  'dismiss_team',
+  'drill_militia',
+  'earn_gold',
+  'gather_information',
+  'guarantee_event',
+  'knowledge_check',
+  'reduce_danger',
+  'manipulate_events',
+  'recruit_team',
+  'rescue_character',
+  'restore_character',
+  'secure_cache',
+  'special',
+  'special_order',
+  'spread_propaganda',
+  'strike_team',
+  'upgrade_team',
+  'lie_low',
+] as const;
+
+export const TEAM_IDS = [
+  'moles',
+  'propagandists',
+  'saboteurs',
+  'spies',
+  'informants',
+  'conspirators',
+  'scholars',
+  'spellcasters',
+  'defenders',
+  'infiltrators',
+  'guardians',
+  'specialists',
+  'patrons',
+  'merchants',
+  'blackMarketeers',
+  'fixers',
+] as const;
+
+export const EVENT_TYPES = [
+  'all_is_calm',
+  'broke_the_code',
+  'cache_discovered',
+  'calm_before_the_storm',
+  'double_agent',
+  'festival',
+  'found_fire',
+  'hidden_agenda',
+  'high_morale',
+  'invasion',
+  'low_morale',
+  'market_day',
+  'missing_in_action',
+  'night_ops',
+  'raid',
+  'rivalry',
+  'roll_twice',
+  'sickness',
+  'theft',
+  'turn_around',
+  'turncoat',
+  'war_games',
+  'week_of_pain',
+  'week_of_serenity',
+] as const;
+
+export type EventType = (typeof EVENT_TYPES)[number];
+
+export const REPUTATION_LEVELS = [
+  'Hostile',
+  'Unfriendly',
+  'Indifferent',
+  'Friendly',
+  'Helpful',
+] as const;
+
+export const TEAM_STATUSES = [
+  'active',
+  'disabled',
+  'missing',
+  'blocked',
+] as const;

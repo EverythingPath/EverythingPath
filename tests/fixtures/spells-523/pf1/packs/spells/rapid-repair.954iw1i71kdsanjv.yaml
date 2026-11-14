@@ -1,0 +1,52 @@
+_id: 954iw1i71kdsanjv
+_key: '!items!954iw1i71kdsanjv'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Rapid Repair
+system:
+  actions:
+    - _id: q7dsgmcw99quykyb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: construct touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The targeted construct gains fast healing 5. This does not stack with
+      any fast healing the construct already has. Fast healing has no effect on
+      a construct that has been brought to 0 hit points or destroyed.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      occultist: 4
+      oracle: 5
+      sorcerer: 5
+      warpriest: 5
+      wizard: 5
+  level: 5
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '234'
+type: spell

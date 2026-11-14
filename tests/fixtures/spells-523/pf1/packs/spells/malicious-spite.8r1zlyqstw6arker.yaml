@@ -1,0 +1,74 @@
+_id: 8r1zlyqstw6arker
+_key: '!items!8r1zlyqstw6arker'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Malicious Spite
+system:
+  actions:
+    - _id: 9sirgdj0ls7l4jna
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You invoke feelings of a driving malicious intent. The target's malice
+      is directed at a second individual as designated by you at the time of
+      casting. Thereafter, the target attempts to slander, abuse, and even plot
+      murder against the target of its spite. This loathing is not overt, and
+      the target's actions against the object of its spite remain subtle and
+      indirect.</p><p>The enchanted target remains within its financial and
+      ethical means when acting against the second individual, though the malice
+      toward this other person pushes the target to the limit of what it would
+      do to a hated individual.</p><p>Each day, the target takes 2 points of
+      Wisdom damage as the all-encompassing spite dominates its thoughts. The
+      target can only alleviate the ability damage by acting upon the emotion
+      and performing a spiteful act. Examples of spiteful acts are spiking the
+      target's drink to make it an easier target for thugs, damaging the
+      target's property, starting foul rumors about the target, framing the
+      target for a crime, paying lepers or beggars to accost the target,
+      extorting or blackmailing the target, or arranging for others to
+      physically harm the target.</p><p>When the spell ends, the target
+      remembers the spiteful behavior, but not the motivation for it.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    gpValue: 150
+    value: powdered turquoise worth 150 gp
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '228'
+  subschool:
+    - compulsion
+type: spell

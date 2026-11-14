@@ -1,0 +1,50 @@
+_id: lgMKavJ4ePylzlqA
+_key: '!items!lgMKavJ4ePylzlqA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/stunning-critical.jpg
+name: Stunning Critical
+system:
+  actions:
+    - _id: hMSI3uFHzshuGA5D
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Target is @Condition[stunned]. A successful Fortitude save reduces
+        this to @Condition[staggered].</p>
+      duration:
+        units: round
+        value: 1d4
+      name: Use
+      save:
+        dc: 10 + @attributes.bab.total
+        description: Fortitude, staggered
+        type: fort
+  contextNotes:
+    - target: critical
+      text: '@Use[Stunning Critical;speaker]'
+  description:
+    value: >-
+      <p><em>Your critical hits cause opponents to become
+      stunned.</em></p><p><strong>Prerequisites</strong>:
+      @UUID[Compendium.pf1.feats.Item.JNlMhMhcDO8wkXiw]{Critical Focus},
+      @UUID[Compendium.pf1.feats.Item.nVNkWyzh4EVyxouV]{Staggering Critical},
+      base attack bonus +17.</p><p><strong>Benefits</strong>: Whenever you score
+      a critical hit, your opponent becomes stunned for 1d4 rounds. A successful
+      Fortitude save reduces this to staggered for 1d4 rounds. The DC of this
+      Fortitude save is equal to 10 + your base attack bonus. The effects of
+      this feat do not stack. Additional hits instead add to the
+      duration.</p><p><strong>Special</strong>: You can only apply the effects
+      of one critical feat to a given critical hit unless you possess Critical
+      Mastery.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 135
+  tags:
+    - Combat
+    - Critical
+    - Offensive
+type: feat
