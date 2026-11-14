@@ -1,0 +1,58 @@
+_id: 2xuy2pn6tdhm5ssj
+_key: '!items!2xuy2pn6tdhm5ssj'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/barrier-shield-dome-deflect-teal.webp
+name: Protection from Arrows, Communal
+system:
+  actions:
+    - _id: fegs1e0ct19tju0z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 hour/level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creatures touched
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.00wyen2uho8firph]{Protection from
+      Arrows}, except you divide the duration in 1-hour intervals among the
+      creatures touched. Once the spell absorbs 10 points of damage per caster
+      level (maximum 100 points) for a subject, the spell's effects end for that
+      subject.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      investigator: 3
+      psychic: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: a piece of tortoiseshell or turtle shell
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '240'
+type: spell

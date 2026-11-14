@@ -1,0 +1,383 @@
+{
+  "issue": 717,
+  "measured": "2026-10-07; isolated = each test alone, three runs, median of Vitest JSON duration; full suite = pnpm test at default concurrency on 16 CPUs",
+  "tests": [
+    {
+      "file": "convex/catalogReleaseActivationMilitia.integration.test.ts",
+      "name": "Character departure during preparation retains selected militia facts and advances the review once",
+      "isolatedMs": {
+        "before": {
+          "runs": [3301, 3428, 3321],
+          "median": 3321
+        },
+        "firstRound": {
+          "runs": [1043, 1051, 1034],
+          "median": 1043
+        },
+        "fixRound": {
+          "runs": [1020, 1029, 1058],
+          "median": 1029
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 2651,
+        "firstRoundRun2": 2712,
+        "fixRound": 2625
+      }
+    },
+    {
+      "file": "convex/catalogReleaseActivationMilitia.integration.test.ts",
+      "name": "Character departure after activation retains selected militia facts and advances the review once",
+      "isolatedMs": {
+        "before": {
+          "runs": [2663, 2454, 2616],
+          "median": 2616
+        },
+        "firstRound": {
+          "runs": [712, 720, 717],
+          "median": 717
+        },
+        "fixRound": {
+          "runs": [709, 731, 710],
+          "median": 710
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1250,
+        "firstRoundRun2": 1267,
+        "fixRound": 1342
+      }
+    },
+    {
+      "file": "convex/characterMoveSpells.integration.test.ts",
+      "name": "source and global catalogs with more unrelated non-Spell definitions than a Spell scan can read still permit a keyed move",
+      "isolatedMs": {
+        "before": {
+          "runs": [4024, 3977, 3964],
+          "median": 3977
+        },
+        "firstRound": {
+          "runs": [1207, 1201, 1191],
+          "median": 1201
+        },
+        "fixRound": {
+          "runs": [1194, 1191, 1209],
+          "median": 1194
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 2719,
+        "firstRoundRun2": 2481,
+        "fixRound": 2842
+      }
+    },
+    {
+      "file": "convex/characterMoveSpells.integration.test.ts",
+      "name": "deleting a campaign +0 Spell while 'ready' restarts from current members",
+      "isolatedMs": {
+        "before": {
+          "runs": [2733, 2785, 2779],
+          "median": 2779
+        },
+        "firstRound": {
+          "runs": [964, 977, 968],
+          "median": 968
+        },
+        "fixRound": {
+          "runs": [983, 985, 992],
+          "median": 985
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 2386,
+        "firstRoundRun2": 2111,
+        "fixRound": 2136
+      }
+    },
+    {
+      "file": "convex/characterMoveWarnings.integration.test.ts",
+      "name": "a campaign move preserves accepted off-list and known-count warnings for an ID-keyed class list",
+      "isolatedMs": {
+        "before": {
+          "runs": [3985, 3933, 4190],
+          "median": 3985
+        },
+        "firstRound": {
+          "runs": [744, 731, 741],
+          "median": 741
+        },
+        "fixRound": {
+          "runs": [746, 736, 732],
+          "median": 736
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 2038,
+        "firstRoundRun2": 1832,
+        "fixRound": 2075
+      }
+    },
+    {
+      "file": "convex/characterMoveWarnings.integration.test.ts",
+      "name": "public Spell list membership edits prune changed warnings and restart move discovery",
+      "isolatedMs": {
+        "before": {
+          "runs": [4093, 4063, 4050],
+          "median": 4063
+        },
+        "firstRound": {
+          "runs": [907, 906, 892],
+          "median": 906
+        },
+        "fixRound": {
+          "runs": [912, 923, 908],
+          "median": 912
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1945,
+        "firstRoundRun2": 1725,
+        "fixRound": 1637
+      }
+    },
+    {
+      "file": "convex/characterMoves.integration.test.ts",
+      "name": "preparation remains private and completion keeps identity when leaving and joining another campaign",
+      "isolatedMs": {
+        "before": {
+          "runs": [3786, 3664, 3812],
+          "median": 3786
+        },
+        "firstRound": {
+          "runs": [830, 842, 838],
+          "median": 838
+        },
+        "fixRound": {
+          "runs": [846, 830, 837],
+          "median": 837
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1728,
+        "firstRoundRun2": 1579,
+        "fixRound": 1939
+      }
+    },
+    {
+      "file": "convex/characterMoves.integration.test.ts",
+      "name": "a homebrew dependency is copied only at publication and survives a round trip with saved state",
+      "isolatedMs": {
+        "before": {
+          "runs": [3917, 3844, 3753],
+          "median": 3844
+        },
+        "firstRound": {
+          "runs": [817, 830, 835],
+          "median": 830
+        },
+        "fixRound": {
+          "runs": [830, 832, 844],
+          "median": 832
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1596,
+        "firstRoundRun2": 1610,
+        "fixRound": 1773
+      }
+    },
+    {
+      "file": "convex/characterMoves.integration.test.ts",
+      "name": "global future Grants retain the source preference while global definitions stay live",
+      "isolatedMs": {
+        "before": {
+          "runs": [3836, 3899, 3829],
+          "median": 3836
+        },
+        "firstRound": {
+          "runs": [840, 829, 830],
+          "median": 830
+        },
+        "fixRound": {
+          "runs": [842, 850, 846],
+          "median": 846
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1633,
+        "firstRoundRun2": 1655,
+        "fixRound": 1667
+      }
+    },
+    {
+      "file": "convex/characterMoves.integration.test.ts",
+      "name": "saving a carried definition keeps its identity and a later move remaps existing global aliases",
+      "isolatedMs": {
+        "before": {
+          "runs": [4178, 4113, 4135],
+          "median": 4135
+        },
+        "firstRound": {
+          "runs": [821, 843, 829],
+          "median": 829
+        },
+        "fixRound": {
+          "runs": [842, 840, 869],
+          "median": 842
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1425,
+        "firstRoundRun2": 1421,
+        "fixRound": 1609
+      }
+    },
+    {
+      "file": "convex/characterMoves.integration.test.ts",
+      "name": "a familiar keeps its base creature, recorded scores and relationship across a round-trip move",
+      "isolatedMs": {
+        "before": {
+          "runs": [4405, 4179, 4099],
+          "median": 4179
+        },
+        "firstRound": {
+          "runs": [945, 924, 943],
+          "median": 943
+        },
+        "fixRound": {
+          "runs": [949, 952, 971],
+          "median": 952
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 2803,
+        "firstRoundRun2": 1783,
+        "fixRound": 2149
+      }
+    },
+    {
+      "file": "convex/characterSheetFamiliars.integration.test.ts",
+      "name": "witch collection remains unchanged through independently owned familiar replacement and restoration",
+      "isolatedMs": {
+        "before": {
+          "runs": [3368, 3443, 3594],
+          "median": 3443
+        },
+        "firstRound": {
+          "runs": [614, 618, 618],
+          "median": 618
+        },
+        "fixRound": {
+          "runs": [612, 618, 612],
+          "median": 612
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1093,
+        "firstRoundRun2": 1093,
+        "fixRound": 1105
+      }
+    },
+    {
+      "file": "convex/characterSheetUnchainedEidolon.integration.test.ts",
+      "name": "a demon at summoner levels 4, 8 and 12 gains its pool points, subtype choice and damage reduction",
+      "isolatedMs": {
+        "before": {
+          "runs": [3174, 3365, 3322],
+          "median": 3322
+        },
+        "firstRound": {
+          "runs": [585, 593, 590],
+          "median": 590
+        },
+        "fixRound": {
+          "runs": [592, 584, 590],
+          "median": 590
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1189,
+        "firstRoundRun2": 1277,
+        "fixRound": 1223
+      }
+    },
+    {
+      "file": "convex/privateCharacters.integration.test.ts",
+      "name": "only the owner can delete a private sheet and its owned definitions and Accepted Warnings, with campaign deletion refused",
+      "isolatedMs": {
+        "before": {
+          "runs": [3566, 3680, 3553],
+          "median": 3566
+        },
+        "firstRound": {
+          "runs": [539, 546, 552],
+          "median": 546
+        },
+        "fixRound": {
+          "runs": [537, 536, 543],
+          "median": 537
+        }
+      },
+      "fullSuiteMs": {
+        "head": "timed out at 5000",
+        "firstRoundRun1": 1104,
+        "firstRoundRun2": 966,
+        "fixRound": 989
+      }
+    }
+  ],
+  "fullSuite": [
+    {
+      "run": "head (#583 landing, ep-orch/logs/ep-impl-583-full.log)",
+      "files": 483,
+      "tests": 6137,
+      "failed": 14,
+      "timeouts": 14,
+      "wallSeconds": 260.06,
+      "testSeconds": 3141.79
+    },
+    {
+      "run": "first round, run 1",
+      "files": 485,
+      "tests": 6144,
+      "failed": 0,
+      "timeouts": 0,
+      "wallSeconds": 149.14,
+      "testSeconds": 1596.81,
+      "overHalfTimeout": 25
+    },
+    {
+      "run": "first round, run 2",
+      "files": 485,
+      "tests": 6144,
+      "failed": 0,
+      "timeouts": 0,
+      "wallSeconds": 149.57,
+      "testSeconds": 1599.61,
+      "overHalfTimeout": 22
+    },
+    {
+      "run": "fix round",
+      "files": 486,
+      "tests": 6152,
+      "failed": 0,
+      "timeouts": 0,
+      "wallSeconds": 149,
+      "testSeconds": 1590.01,
+      "overHalfTimeout": 22
+    }
+  ]
+}

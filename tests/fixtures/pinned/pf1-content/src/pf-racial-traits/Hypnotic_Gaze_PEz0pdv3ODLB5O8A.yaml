@@ -1,0 +1,80 @@
+_id: PEz0pdv3ODLB5O8A
+_key: '!items!PEz0pdv3ODLB5O8A'
+_stats:
+  coreVersion: '12.331'
+folder: WjizXs1zxKATqDaG
+img: icons/creatures/reptiles/serpent-horned-green.webp
+name: Hypnotic Gaze
+system:
+  abilityType: su
+  actions:
+    - _id: oyHh2K2zYvGya8tT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.3ntxp3zun1j9mf0m]{Hypnotism}
+        (limited to a single creature)</p><p><em>Your gestures and droning
+        incantation fascinate nearby creatures, causing them to stop and stare
+        blankly at you.</em></p><p><em>In addition, you can use their rapt
+        attention to make your suggestions and requests seem more plausible.
+        Roll 2d4 to see how many total HD of creatures you affect. Creatures
+        with fewer HD are affected before creatures with more HD. Only creatures
+        that can see or hear you are affected, but they do not need to
+        understand you to be fascinated.</em></p><p><em>If you use this spell in
+        combat, each target gains a +2 bonus on its saving throw. If the spell
+        affects only a single creature not in combat at the time, the saving
+        throw has a penalty of -2.</em></p><p><em>While the subject is
+        fascinated by this spell, it reacts as though it were two steps more
+        friendly in attitude. This allows you to make a single request of the
+        affected creature (provided you can communicate with it). The request
+        must be brief and reasonable. Even after the spell ends, the creature
+        retains its new attitude toward you, but only with respect to that
+        particular request.</em></p><p><em>A creature that fails its saving
+        throw does not remember that you enspelled it.</em></p>
+      duration:
+        units: round
+        value: '1'
+      name: Hypnotic Gaze
+      notes:
+        effect:
+          - >-
+            If you use this spell in combat, each target gains a +2 bonus on its
+            saving throw. If the spell affects only a single creature not in
+            combat at the time, the saving throw has a penalty of -2.
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 11 + @abilities.cha.mod
+        description: Negates
+        type: will
+      target:
+        value: One Living Creature
+  description:
+    value: >-
+      <p><strong>Race</strong>: Nagaji<br /><strong>Replaced Trait(s)</strong>:
+      Serpent's Sense</p><hr /><p>The nagaji's gaze is so intense it stops
+      others in their tracks. Once per day, it can attempt to hypnotize a single
+      target, as per the spell
+      <em>@UUID[Compendium.pf1.spells.Item.3ntxp3zun1j9mf0m]{Hypnotism}
+      </em>(caster level equal to the nagaji's Hit Dice). The DC of this effect
+      is equal to 11 + the nagaji's Charisma modifier. The effects of the
+      hypnotic gaze only last a single round. This racial trait replaces
+      serpent's sense.</p>
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '196'
+  subType: racial
+  tags:
+    - Nagaji
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
