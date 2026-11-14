@@ -1,0 +1,51 @@
+_id: 8pwm7uieunccsc3s
+_key: '!items!8pwm7uieunccsc3s'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Spellcasting Contract, Greater
+system:
+  actions:
+    - _id: 3vatx47a05qvr53d
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until contractually terminated
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: willing creature touched
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.btbj09zllnb14kyx]{lesser spellcasting
+      contract}, except if the target has 13 HD or more you can imbue him with
+      one or two 4th level spells and one 5th-level spell.</p>
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+  level: 9
+  materials:
+    focus: a written contract
+  school: evo
+  sources:
+    - id: PZO9029
+      pages: '68'
+type: spell

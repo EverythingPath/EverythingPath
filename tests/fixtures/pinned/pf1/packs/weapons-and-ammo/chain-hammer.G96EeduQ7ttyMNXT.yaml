@@ -1,0 +1,95 @@
+_id: G96EeduQ7ttyMNXT
+_key: '!items!G96EeduQ7ttyMNXT'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/chain-hammer.png
+name: Chain-Hammer
+system:
+  actions:
+    - _id: t0dyx8rxyvcuv5h4
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+    - _id: 6V5aCrATH1fZYtUy
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+    - _id: ILgMZCWkp6IRzdpc
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Retrieve one Hammer
+  baseTypes:
+    - Chain-Hammer
+  description:
+    unidentified: >-
+      <p>This pair of hammers is linked by a loose chain. While the two hammers
+      are balanced to wield in melee together, the chain is long enough that you
+      can throw one hammer a short distance and then pull it back; pulling the
+      chain to retrieve the thrown hammer is a move action. The chain-hammer's
+      maximum throwing range is 10 feet. Dwarf rangers are fond of using
+      chain-hammers, often using a locked gauntlet to make sure one of the
+      hammers remains secure.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 34
+  properties:
+    dbl: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  weaponGroups:
+    - double
+    - hammers
+    - thrown
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon
