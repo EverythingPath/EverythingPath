@@ -1,0 +1,70 @@
+_id: v1wf3isybpq3trvz
+_key: '!items!v1wf3isybpq3trvz'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Locate Gate
+system:
+  actions:
+    - _id: st4euom2i59kldhv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: circle centered on you with a radius of 400 ft. + 40 ft./level
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: 400  + (40 * @cl)
+        type: circle
+      name: Use
+      range:
+        units: long
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You sense the direction of the nearest <i>teleportation circle</i>
+      (permanent or with a remaining duration), <i>gate</i> spell, or other
+      effect which magically connects two different locations (for example, an
+      active magic item, a creature's special ability, or unique adventure
+      location). <i>Locate gate</i> detects only spells or effects with a
+      permanent or ongoing duration, not instantaneous effects like <i>dimension
+      door</i> or <i>teleport</i>.  <i>Locate gate</i> can be blocked by spells
+      like <i>nondetection</i>, if the effect originates from a specific object
+      or creature. However, spell effects can't likewise be warded. For example,
+      ring <i>gate</i>s are a specific object, but a permanent <i>teleportation
+      circle</i> is not (the surface in which it's inscribed doesn't count).
+      <i>Locate gate</i> isn't blocked by lead, water, or other physical
+      environmental conditions, but it is blocked by any intervening area that
+      is dimensionally warded (such as by <i>dimensional lock</i> or
+      forbiddance).</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      cleric: 5
+      occultist: 5
+      oracle: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      summoner: 5
+      summonerUnchained: 5
+      warpriest: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: a small lodestone sphere
+  school: div
+  sources:
+    - id: PZO1135
+      pages: '121'
+  sr: false
+type: spell

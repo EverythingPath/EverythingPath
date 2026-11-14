@@ -1,0 +1,294 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/JKJoHy5NveXGaZqv",
+      "upstreamKey": "pf1/JKJoHy5NveXGaZqv",
+      "pack": "class-abilities",
+      "name": "Flurry of Blows",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 1st level, a monk can make a flurry of blows as a full-attack action.</p>\n<p>When doing so, he may make one additional attack, taking a –2 penalty on all of his <em>attack rolls</em>, as if using the <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a> feat. These attacks can be any combination of unarmed strikes and attacks with a <em>monk</em> special weapon (he does not need to use two weapons to utilize this ability).</p>\n<p>For the purpose of these attacks, the monk’s <em>base attack bonus</em> from his monk class levels is equal to his monk level. For all other purposes, such as qualifying for a feat or a prestige class, the monk uses his normal <em>base attack bonus</em>.</p>\n<p>At 8th level, the monk can make two additional attacks when he uses flurry of blows, as if using <a href=\"catalog:pf1/3fNdl7eIUJ5d5fwg\">Improved Two-Weapon Fighting</a> (even if the monk does not meet the prerequisites for the feat).</p>\n<p>At 15th level, the monk can make three additional attacks using flurry of blows, as if using <a href=\"catalog:pf1/ieltigobtFrlTXIt\">Greater Two-Weapon Fighting</a> (even if the monk does not meet the prerequisites for the feat).</p>\n<p>A monk applies his full <em>Strength</em> bonus to his damage rolls for all successful attacks made with flurry of blows, whether the attacks are made with an off-hand or with a weapon wielded in both hands. A monk may substitute <em>disarm</em>, <em>sunder</em>, and <em>trip combat maneuvers</em> for unarmed attacks as part of a flurry of blows. A monk cannot use any weapon other than an <em>unarmed strike</em> or a special monk weapon as part of a flurry of blows. A monk with <em>natural weapons</em> cannot use such weapons as part of a flurry of blows, nor can he make <em>natural attacks</em> in addition to his flurry of blows attacks.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "57-58"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Monk"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/IMhG1JjaWP6p9ORe",
+      "upstreamKey": "pf1/IMhG1JjaWP6p9ORe",
+      "pack": "class-abilities",
+      "name": "Grand Hex",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 18th level, and every two levels thereafter, a witch can choose one of the following grand hexes whenever she could select a new hex.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Witch"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/3fNdl7eIUJ5d5fwg",
+      "upstreamKey": "pf1/3fNdl7eIUJ5d5fwg",
+      "pack": "feats",
+      "name": "Improved Two-Weapon Fighting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Weapon", "Two Weapons", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at fighting with two weapons.</em></p><p><strong>Prerequisites</strong>: Dex 17, <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a>, base attack bonus +6.</p><p><strong>Benefits</strong>: In addition to the standard single extra attack you get with an off-hand weapon, you get a second attack with it, albeit at a -5 penalty.</p><p><strong>Normal</strong>: Without this feat, you can only get a single extra attack with an off-hand weapon.</p>",
+      "prerequisiteText": "Dex 17, Two-Weapon Fighting, base attack bonus +6",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 17,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/Ee7JHADKEK37tTHs",
+      "upstreamKey": "pf1/Ee7JHADKEK37tTHs",
+      "pack": "feats",
+      "name": "Two-Weapon Fighting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Weapon", "Two Weapons", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can fight with a weapon wielded in each of your hands. You can make one extra attack each round with the secondary weapon.</i><p><strong>Prerequisites</strong>: Dex 15.</p><p><strong>Benefits</strong>: Your penalties on attack rolls for fighting with two weapons are reduced. The penalty for your primary hand lessens by 2 and the one for your off hand lessens by 6. See Two-Weapon Fighting in Combat.</p><p><strong>Normal</strong>: If you wield a second weapon in your off hand, you can get one extra attack per round with that weapon. When fighting in this way you suffer a -6 penalty with your regular attack or attacks with your primary hand and a -10 penalty to the attack with your off hand. If your off-hand weapon is light, the penalties are reduced by 2 each. An unarmed strike is always considered light.</p>",
+      "prerequisiteText": "Dex 15",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 136"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Two-weapon fighting attack penalties decrease by 2 for your primary hand and by 6 for your off hand. A light off-hand weapon reduces both penalties by a further 2."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ieltigobtFrlTXIt",
+      "upstreamKey": "pf1/ieltigobtFrlTXIt",
+      "pack": "feats",
+      "name": "Greater Two-Weapon Fighting",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Two Weapons", "Weapon", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are incredibly skilled at fighting with two weapons at the same time.</em></p><p><strong>Prerequisites</strong>: Dex 19, <a href=\"catalog:pf1/3fNdl7eIUJ5d5fwg\">Improved Two-Weapon Fighting</a>, <a href=\"catalog:pf1/Ee7JHADKEK37tTHs\">Two-Weapon Fighting</a>, base attack bonus +11.</p><p><strong>Benefits</strong>: You get a third attack with your off-hand weapon, albeit at a -10 penalty.</p>",
+      "prerequisiteText": "Dex 19, Improved Two-Weapon Fighting, Two-Weapon Fighting, base attack bonus +11",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 19,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/3fNdl7eIUJ5d5fwg",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        },
+        {
+          "bab": 11,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 126"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    }
+  ],
+  "increments": [
+    {
+      "externalKey": "everythingpath/monk-flurry-15",
+      "upstreamKey": "pf1/JKJoHy5NveXGaZqv",
+      "pack": "everythingpath-schedules",
+      "name": "Flurry of Blows (Greater Two-Weapon Fighting)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/JKJoHy5NveXGaZqv",
+        "part": "15:pf1/JKJoHy5NveXGaZqv"
+      },
+      "description": "<p>Flurry of Blows (Greater Two-Weapon Fighting): the Monk table's 15th-level row of Flurry of Blows (Pathfinder RPG Core Rulebook pp. 56–60). The Flurry of Blows entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/JKJoHy5NveXGaZqv"
+    },
+    {
+      "externalKey": "everythingpath/monk-flurry-8",
+      "upstreamKey": "pf1/JKJoHy5NveXGaZqv",
+      "pack": "everythingpath-schedules",
+      "name": "Flurry of Blows (Improved Two-Weapon Fighting)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/JKJoHy5NveXGaZqv",
+        "part": "8:pf1/JKJoHy5NveXGaZqv"
+      },
+      "description": "<p>Flurry of Blows (Improved Two-Weapon Fighting): the Monk table's 8th-level row of Flurry of Blows (Pathfinder RPG Core Rulebook pp. 56–60). The Flurry of Blows entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-8",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-8",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-8",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-8",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-flurry-8",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/JKJoHy5NveXGaZqv"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+_id: xrh33cwr9hrvda6l
+_key: '!items!xrh33cwr9hrvda6l'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/consumables/potions/potion-jar-corked-labeled-poison-skull-green.webp
+name: Transmute Potion to Poison
+system:
+  actions:
+    - _id: iferk7lnppj7mavt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round then 1 minute/level; see text
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This extract causes you to take on a pale, sickly pallor for 1 round.
+      During this time, if you consume a potion, it has no effect. Instead, your
+      mouth fills with a vile poison that you can spit onto a weapon as a free
+      action. If you do not spit out the poison in 1 round, it affects you
+      instead. The effect of the poison depends on the level of spell contained
+      in the potion consumed (see sidebar). If the poison is not used within 1
+      minute per caster level it becomes inert. You can only create one dose of
+      poison in this way per casting of this spell.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      alchemist: 2
+      investigator: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '250'
+  sr: false
+type: spell

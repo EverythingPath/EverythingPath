@@ -1,0 +1,48 @@
+_id: it1fbobapvnp5swg
+_key: '!items!it1fbobapvnp5swg'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/skills/wounds/injury-eyes-blood-red.webp
+name: Mind Thrust II
+system:
+  actions:
+    - _id: s4ckll06r3o8x16r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, @cl))d8
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will half
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as
+      <em>@UUID[Compendium.pf1.spells.Item.rvf2gxyy1d4strae]{mind thrust
+      I}</em>, but the target takes 1d8 points of damage per caster level
+      (maximum 5d8). This spell can be undercast.</p>
+  learnedAt:
+    class:
+      psychic: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1132
+      pages: '177'
+type: spell

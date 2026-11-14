@@ -1,0 +1,64 @@
+_id: IxZC7La61pQSiK1r
+_key: '!items!IxZC7La61pQSiK1r'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/flying-blade.png
+name: Flying Blade
+system:
+  actions:
+    - _id: dupuie4anyxubics
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 12, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Flying Blade
+  description:
+    unidentified: >-
+      <p>A flying blade is a large, crescent-shaped blade anchored to a 10-foot
+      chain. You fight with a flying blade by spinning it about your head or by
+      snapping it toward an opponent. Because the flying blade is a clumsy
+      weapon, you receive a -2 penalty on attack rolls with it, but when you
+      make attacks of opportunity provoked by movement, you receive a +2 bonus
+      on attack rolls instead of the penalty.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 40
+  properties:
+    prf: true
+    rch: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

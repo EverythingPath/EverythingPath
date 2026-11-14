@@ -1,0 +1,154 @@
+_id: Ktda1hno3geFi4j8
+_key: '!items!Ktda1hno3geFi4j8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/alignment-channel.jpg
+name: Channel Energy (WAR)
+system:
+  abilityType: su
+  actions:
+    - _id: 3of44xvqzv5wycg8
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor((@class.level + 1) / 3))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Positive - Heal living
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self; affects living
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: nH9Ayb4TpXhHbTbX
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor((@class.level + 1) / 3))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      img: icons/magic/death/projectile-skull-fire-orange.webp
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Positive - Harm undead
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will halves damage
+        type: will
+      target:
+        value: Undead
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: TYB35i85zyq8Jpdz
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor((@class.level + 1) / 3))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      img: icons/magic/death/undead-skeleton-fire-green.webp
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Negative - Heal undead
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self; affects living
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: Bf0ru9RH4a5EVnqU
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor((@class.level + 1) / 3))d6
+            types:
+              - negative
+      duration:
+        units: inst
+      img: icons/magic/unholy/strike-body-explode-disintegrate.webp
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Negative - Harm living
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will halves damage
+        type: will
+      target:
+        value: Living Creatures
+      uses:
+        autoDeductChargesCost: '2'
+  associations:
+    classes:
+      - Warpriest
+  description:
+    instructions: >-
+      <p>Link this class feat to
+      @UUID[Compendium.pf1.class-abilities.Item.Rzexvt4z8taA8dCu]{fervor}
+      charges.</p>
+    value: >-
+      <p>Starting at 4th level, a warpriest can release a wave of energy by
+      channeling the power of his faith through his holy (or unholy) symbol.
+      This energy can be used to deal or heal damage, depending on the type of
+      energy channeled and the creatures targeted. Using this ability is a
+      standard action that expends two uses of his fervor ability and doesn’t
+      provoke an attack of opportunity. The warpriest must present a holy (or
+      unholy) symbol to use this ability.</p><p>A good warpriest (or one who
+      worships a good deity) channels positive energy and can choose to heal
+      living creatures or to deal damage to undead creatures. An evil cleric (or
+      one who worships an evil deity) channels negative energy and can choose to
+      deal damage to living creatures or heal undead creatures. A neutral cleric
+      who worships a neutral deity (or one who is not devoted to a particular
+      deity) channels positive energy if he chose to spontaneously cast cure
+      spells or negative energy if he chose to spontaneously cast inflict
+      spells.</p><p>Channeling energy causes a burst that affects all creatures
+      of one type (either undead or living) in a 30-foot radius centered on the
+      warpriest. The amount of damage dealt or healed is equal to the amount
+      listed in the fervor ability. Creatures that take damage from channeled
+      energy must succeed at a Will saving throw to halve the damage. The save
+      DC is 10 + 1/2 the warpriest’s level + the warpriest’s Wisdom modifier.
+      Creatures healed by channeled energy cannot exceed their maximum hit point
+      total—all excess healing is lost. A warpriest can choose whether or not to
+      include himself in this effect.</p>
+  subType: classFeat
+type: feat

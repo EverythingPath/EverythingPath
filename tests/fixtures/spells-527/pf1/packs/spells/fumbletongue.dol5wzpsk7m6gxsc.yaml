@@ -1,0 +1,56 @@
+_id: dol5wzpsk7m6gxsc
+_key: '!items!dol5wzpsk7m6gxsc'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Fumbletongue
+system:
+  actions:
+    - _id: irrgpbesiqivnjzh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1d4 rounds
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This enchantment causes a creature to be unable to speak intelligibly.
+      Any effort the target makes to talk, in any language, comes out as a
+      useless mix of unconnected words and noises. Even magic words are affected
+      to some extent; the target has a 20% spell failure chance for any spell it
+      attempts to cast with verbal components, and a 20% chance to incorrectly
+      use a command word to activate a magic item.</p><p>This spell has no
+      effect on telepathic communication, or the vocalizations of creatures that
+      lack a spoken language.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+      witch: 1
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '221'
+  subschool:
+    - compulsion
+type: spell

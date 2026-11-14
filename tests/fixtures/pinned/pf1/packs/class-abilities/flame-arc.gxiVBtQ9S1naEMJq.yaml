@@ -1,0 +1,57 @@
+_id: gxiVBtQ9S1naEMJq
+_key: '!items!gxiVBtQ9S1naEMJq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Flame Arc
+system:
+  abilityType: su
+  actions:
+    - _id: kk0jltyvq2jiq3xz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-foot line
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6 + @abilities.cha.mod
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#cf7826'
+        size: '30'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: Creatures in the area
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can unleash an arc of flame by expending 1 point from her
+      arcane reservoir. This creates a 30-foot line of flame that deals 1d6
+      points of fire damage + the arcanist’s Charisma modifier, plus an
+      additional 1d6 points of fire damage for every 2 levels beyond 1st (to a
+      maximum of 10d6 at 19th level) to each target in the line. Creatures in
+      the area of effect may attempt a Reflex saving throw to halve the
+      damage.</p>
+  sources:
+    - id: PZO1129
+      pages: '11'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat

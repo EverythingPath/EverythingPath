@@ -1,0 +1,54 @@
+_id: sv9mj8rvqmfogwyu
+_key: '!items!sv9mj8rvqmfogwyu'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Eidolon
+system:
+  actions:
+    - _id: cccz4i1pbt70tda6
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one eidolon
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You open a rift between dimensions that summons your
+      eidolon.</p><p>Treat this as if you had summoned your eidolon normally,
+      except that it only remains with you for the duration of this spell. While
+      summoned in this way, your eidolon cannot touch any creature warded by
+      <i>Protection from Evil</i> or a similar effect and your eidolon can be
+      sent back to its home plane by <i>dispel magic</i>.</p><p>If you cast this
+      spell while your eidolon is already on your plane, this spell has no
+      effect. This spell allows you to summon your eidolon even if it has been
+      returned to its home plane due to damage.</p>
+  learnedAt:
+    class:
+      summoner: 2
+      summonerUnchained: 2
+  level: 2
+  materials:
+    value: a silver coin
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '248'
+  sr: false
+  subschool:
+    - summoning
+type: spell

@@ -1,0 +1,69 @@
+_id: MyKlcMHNiCixXl6K
+_key: '!items!MyKlcMHNiCixXl6K'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Scar Hex
+system:
+  abilityType: su
+  actions:
+    - _id: lgumadlcailsn5zq
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Apply
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+      uses:
+        autoDeductChargesCost: '1'
+    - _id: pj8bx4ucZPgywv3F
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Remove
+      range:
+        units: unlimited
+      uses:
+        autoDeductChargesCost: '-1'
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>This hex curses a single target touched with horrible scars of the
+      witch's choosing, whether something as simple as a single letter on the
+      target's forehead or blotchy, burnlike scars on his body. The target may
+      make a Will save to resist this hex. These scars do not interfere with the
+      target's senses or prevent it from using abilities, but may affect social
+      interactions. They persist through disguises and shapechanging.</p><p>The
+      witch can use her hexes on the scarred target at a range of up to 1 mile,
+      and she is considered to have a body part from the target for the purpose
+      of scrying and similar divination spells. The witch can withdraw this hex
+      from a target as a move action at any range.</p><p>The number of
+      supernatural scars the witch can maintain at once is equal to her
+      Intelligence bonus ([[@abilities.int.mod]]); once she reaches this limit,
+      she must remove the scar from a current victim in order to mark another.
+      Effects that remove curses can remove the scar.</p>
+  subType: classFeat
+  tag: classFeat_scarHex
+  tags:
+    - Hex
+  uses:
+    maxFormula: '@abilities.int.mod'
+    per: charges
+type: feat

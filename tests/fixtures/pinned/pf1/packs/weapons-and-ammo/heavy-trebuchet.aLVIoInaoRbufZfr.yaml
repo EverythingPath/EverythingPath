@@ -1,0 +1,89 @@
+_id: aLVIoInaoRbufZfr
+_key: '!items!aLVIoInaoRbufZfr'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/trebuchet-simple.webp
+name: Heavy Trebuchet
+system:
+  actions:
+    - _id: 9qqew8zd9werv7yr
+      ability:
+        attack: _default
+        critRange: null
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(8, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '200'
+        units: ft
+        value: '400'
+  ammo:
+    type: siege
+  baseTypes:
+    - Heavy Trebuchet
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 8d6; <b>Critical</b> x2; <b>Range</b>
+      400 ft. (200 ft. min.); <b>Type</b> B</p><p><b>Crew</b> 4; <b>Aim</b> 3;
+      <b>Load</b> 3; <b>Speed</b> 0 ft.</p><p><b>Category</b> Indirect-Fire
+      (Gargantuan); <b>Proficiency</b> Siege
+      Engine</p><h3>Description</h3><p>Trebuchets are similar in form to
+      catapults, with the payload placed into a basket, cup, or sling at the end
+      of a long lever, and a counterweight (often with crew or animals pulling
+      attached ropes) close to the fulcrum. The leverage imparted by a trebuchet
+      allows it to hurl massive missiles that scatter to a number of squares
+      around the target square based on the size of the trebuchet. Trebuchets
+      are too bulky to move on wheels or vehicles and must be assembled on the
+      battlefield. Trebuchets have a minimum range of 150
+      feet.</p><p><em>Light</em>: These Large siege engines typically hurl large
+      stones indirectly at a target (targeting DC 15). A light trebuchet's
+      ammunition scatters on contact, dealing full damage to the target square
+      and half its damage to creatures and objects within 5 feet of the target
+      square (creatures can make a DC 15 Reflex save to halve the damage again).
+      Light trebuchets have a hardness of 5 and 50 hit points. One use of light
+      trebuchet stones costs 15 gp and weighs 60
+      pounds.</p><p><em>Standard</em>: These Huge siege engines typically hurl
+      large stones indirectly at a target (targeting DC 20). A standard
+      trebuchet's ammunition scatters on contact, dealing full damage to the
+      target square and half damage to creatures and objects within 15 feet of
+      the target square (creatures can make a DC 20 Reflex save to halve the
+      damage again). Standard trebuchets have a hardness of 5 and 100 hit
+      points. One use of standard trebuchet stones costs 30 gp and weighs 110
+      pounds.</p><p><em>Heavy</em>: These Gargantuan siege engines typically
+      hurl large stones indirectly at a target (targeting DC 25). A heavy
+      trebuchet's ammunition scatters on contact, dealing full damage to the
+      target square and half its damage to creatures and objects within 30 feet
+      of the target square (creatures can make a DC 25 Reflex save to halve the
+      damage again). Heavy trebuchets have a hardness of 5 and 200 hit points.
+      One use of heavy trebuchet stones costs 40 gp and weighs 120 pounds.</p>
+  hardness: 5
+  hp:
+    base: 200
+  material:
+    base:
+      value: steel
+  price: 1500
+  size: grg
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: siege
+  weaponSubtype: indirect
+type: weapon
