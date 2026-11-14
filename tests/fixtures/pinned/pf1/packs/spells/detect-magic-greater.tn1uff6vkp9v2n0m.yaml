@@ -1,0 +1,95 @@
+_id: tn1uff6vkp9v2n0m
+_key: '!items!tn1uff6vkp9v2n0m'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-glow-angry-teal.webp
+name: Detect Magic, Greater
+system:
+  actions:
+    - _id: 7zlc0sy6f4s2hj5u
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration, up to 1 minute/level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.uqh87jz757r2cb7r]{detect magic}, except that
+      you can glean much more information from the magical auras that you find,
+      and those auras can be found after a much greater length of time.</p>
+
+      <p>You can detect a lingering aura for up to 1 day per caster level you
+      have, regardless of the aura's original strength. Additionally, when you
+      use a standard action to concentrate on this spell, you can also study a
+      creature within the spell's area and attempt a
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.VRD7jxiIAxKPt6EF]{Spellcraft}
+      check in order to determine the last spell that the creature cast by
+      identifying lingering traces that the spell left in the caster's aura. The
+      DC to identify the spell is equal to 20 + the creature's caster level.</p>
+
+      <p>Finally, you are able to locate and analyze the signature flourishes in
+      a magical aura that allow you to match a spell to the person who cast it.
+      In order to find these identifiers in a spell's aura, you must spend 1
+      round focusing on that spell in particular, and succeed at an opposed
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.BWeqgXSZvUQl68vt]{Knowledge
+      (arcana)} check against the caster (or a Knowledge [arcana] check with a
+      DC equal to 15 + the spell level if the caster wants her work to be
+      identified and emphasizes these unique elements rather than obscuring
+      them). Once you learn a caster's set of identifiers, you can remember them
+      as easily as a face or a voice. You can recognize this signature if you
+      succeed at a Spellcraft check when later identifying a spell to determine
+      whether or not that spell was cast by the same individual.</p>
+
+      <p>The spell @UUID[Compendium.pf1.spells.3anuql2qioluspuv]{greater magic
+      aura} (see page 219) can obfuscate this information, making it seem that
+      someone else cast the spell. Greater <em>detect magic</em> grants a saving
+      throw against @UUID[Compendium.pf1.spells.l01ajd0m4xgwq3fd]{magic aura}
+      (but not <em>greater <em>magic aura</em></em>).</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      inquisitor: 2
+      magus: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      shaman: 2
+      skald: 2
+      sorcerer: 2
+      spiritualist: 2
+      summoner: 2
+      summonerUnchained: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1134
+      pages: '212'
+  sr: false
+type: spell

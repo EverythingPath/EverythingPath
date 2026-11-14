@@ -1,0 +1,61 @@
+_id: 05m8kfc2u9cg528g
+_key: '!items!05m8kfc2u9cg528g'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Animal Trance
+system:
+  actions:
+    - _id: x1w33ifu2u27p3tf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: animals or magical beasts with Intelligence 1 or 2
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your swaying motions and music (or singing, or chanting) compel animals
+      and magical beasts to do nothing but watch you. Only a creature with an
+      Intelligence score of 1 or 2 can be fascinated by this spell. Roll 2d6 to
+      determine the total number of HD worth of creatures that you fascinate.
+      The closest targets are selected first until no more targets within range
+      can be affected.</p>
+  descriptors:
+    - mindAffecting
+    - sonic
+  learnedAt:
+    class:
+      adept: 2
+      bard: 2
+      druid: 2
+      hunter: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+    domain:
+      Scalykind: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '241'
+  subschool:
+    - compulsion
+type: spell

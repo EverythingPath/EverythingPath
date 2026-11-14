@@ -1,0 +1,59 @@
+_id: dxystpv7yz6xd5z9
+_key: '!items!dxystpv7yz6xd5z9'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Reboot
+system:
+  actions:
+    - _id: b6b2up5tu154pquq
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one destroyed construct of up to 2 HD/level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Whispering in the dense, information-rich machine language of the First
+      Ones, you bring a destroyed construct back to operational status for a
+      short time, restoring it to 1 hit point. The construct can be further
+      healed with spells like <i>make whole</i>, but it returns to its destroyed
+      state as soon as this spell's duration expires or it is brought to 0 hit
+      points, whichever comes first. As long as the construct is active, it
+      obeys your commands to the best of its ability, fighting on your behalf
+      and carrying out tasks that it is capable of performing.</p><p>Constructs
+      with more than twice as many Hit Dice as your caster level cannot be
+      targeted by this spell.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      oracle: 5
+      sorcerer: 5
+      summoner: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: a ruby worth at least 25 gp per HD of the target construct
+  school: trs
+  sources:
+    - id: PZO9449
+      pages: '29'
+  sr: false
+type: spell

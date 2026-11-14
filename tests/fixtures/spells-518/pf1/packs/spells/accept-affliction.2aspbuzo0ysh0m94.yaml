@@ -1,0 +1,65 @@
+_id: 2aspbuzo0ysh0m94
+_key: '!items!2aspbuzo0ysh0m94'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Accept Affliction
+system:
+  actions:
+    - _id: 7y601356jnihp2kr
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The caster can transfer the effects of afflictions such as curses,
+      diseases, and poisons from the target creature to himself. This spell can
+      also transfer the blinded, deafened, fatigued, nauseated, shaken, and
+      sickened conditions. All aspects of the transferred afflictions (save DCs,
+      remaining duration, removal conditions, and so on) remain the same, but
+      affect the caster instead of the original target. After transferring the
+      affliction or condition, the caster is free to cure it in any way he
+      can.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      bard: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      oracle: 3
+      paladin: 3
+      skald: 3
+      warpriest: 3
+      witch: 3
+  level: 3
+  materials:
+    value: dove's heart
+  school: con
+  sources:
+    - id: PZO9431
+      pages: '28'
+  subschool:
+    - healing
+type: spell

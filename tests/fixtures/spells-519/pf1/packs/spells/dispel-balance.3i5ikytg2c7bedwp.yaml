@@ -1,0 +1,66 @@
+_id: 3i5ikytg2c7bedwp
+_key: '!items!3i5ikytg2c7bedwp'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Dispel Balance
+system:
+  actions:
+    - _id: iulcnlc96oj51yf4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged, whichever comes first
+      name: Use
+      range:
+        units: touch
+      save:
+        description: see text
+      target:
+        value: >-
+          you and a touched, neutral creature from another plane, or you and an
+          enchantment on a touched creature or object
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Pulsing bronze energy surrounds you, bestowing three effects.  First,
+      you gain a +3 deflection bonus to AC against attacks by chaotic neutral,
+      lawful neutral, neutral evil, and neutral good creatures. Against attacks
+      by creatures whose alignment is neutral with no other alignment
+      components, this deflection bonus is instead +5.  Second, upon making a
+      successful melee touch attack against a creature from another plane with a
+      neutral component to its alignment, you can banish that creature back to
+      its home plane. The creature's spell resistance applies to this attempt,
+      and the creature can negate this effect with a successful Will save. If
+      the creature's alignment is neutral with no other alignment components,
+      the creature takes a -2 penalty on this saving throw. This use discharges
+      and ends the spell.  Third, with a touch, you can automatically dispel any
+      one enchantment spell cast by a creature with a neutral component to its
+      alignment. Spells that can't be dispelled by <i>dispel magic</i> also
+      can't be dispelled by <i>dispel balance</i>. Saving Throws and spell
+      resistance do not apply to this effect. This use discharges and ends the
+      spell.</p>
+  learnedAt:
+    class:
+      cleric: 5
+      inquisitor: 5
+      oracle: 5
+      warpriest: 5
+  level: 5
+  school: abj
+  sources:
+    - id: PZO1141
+      pages: '40'
+    - id: PZO9443
+      pages: '27'
+  sr: false
+type: spell

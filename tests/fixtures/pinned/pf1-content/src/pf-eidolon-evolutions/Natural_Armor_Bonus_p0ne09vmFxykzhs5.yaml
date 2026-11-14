@@ -1,0 +1,27 @@
+_id: p0ne09vmFxykzhs5
+_key: '!items!p0ne09vmFxykzhs5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Natural Armor Bonus
+system:
+  associations:
+    classes:
+      - Eidolon
+  changes:
+    - _id: 22vrjim6
+      formula: floor((@class.level + 1) / 2.54) * 2
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>The number noted here is the eidolon's base total armor bonus. This
+      bonus may be split between an armor bonus and a natural armor bonus, as
+      decided by the summoner.</p><p>This number is modified by the eidolon's
+      base form and some options available through its evolution pool.</p><p>An
+      eidolon cannot wear armor of any kind, as the armor interferes with the
+      summoner's connection to the eidolon.</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+type: feat
