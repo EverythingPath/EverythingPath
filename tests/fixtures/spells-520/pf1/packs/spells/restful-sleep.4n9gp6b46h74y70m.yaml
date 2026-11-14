@@ -1,0 +1,60 @@
+_id: 4n9gp6b46h74y70m
+_key: '!items!4n9gp6b46h74y70m'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Restful Sleep
+system:
+  actions:
+    - _id: wfvkf99kzdhp4yxa
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: 8 hours or 24 hours; see text
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cast this spell immediately prior to resting. While under the
+      effects of this spell, you and your allies enjoy a restful night's sleep.
+      If a subject completes a full night's rest, it regains hit points as if it
+      had undergone a full day of bed rest (regaining twice its character level
+      in hit points). If a subject completes a full day's rest, it regains three
+      times its character level in hit points. Any significant interruption
+      during the rest (such as being awoken) prevents any healing that night and
+      ends the effect of this spell on the awakened subject. Any healing
+      acquired while under the effects of <i>restful sleep</i> is considered
+      natural healing, and has no affect on effects requiring magical healing to
+      cure.</p>
+  learnedAt:
+    class:
+      bard: 1
+      skald: 1
+  materials:
+    value: a pinch of sand
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '239'
+type: spell

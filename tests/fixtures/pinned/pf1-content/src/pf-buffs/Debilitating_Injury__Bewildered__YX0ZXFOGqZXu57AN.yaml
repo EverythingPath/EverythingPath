@@ -1,0 +1,34 @@
+_id: YX0ZXFOGqZXu57AN
+_key: '!items!YX0ZXFOGqZXu57AN'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/ice_12.jpg
+name: Debilitating Injury (Bewildered)
+system:
+  changes:
+    - _id: qa3vi5t4
+      formula: '-2'
+      target: ac
+      type: untyped
+  contextNotes:
+    - target: ac
+      text: >-
+        Takes an additional -[[floor((@item.level + 2) / 6) * 2]] to AC against
+        attacks made by the rogue.
+  description:
+    instructions: <p>Set buff level to Rogue level.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.nL9Ds9nflmID84vo]{Debilitating
+      Injury (UC)}</p><p><strong>Bewildered</strong>: The target becomes
+      bewildered, taking a –2 penalty to AC. The target takes an additional –2
+      penalty to AC against all attacks made by the rogue.</p><p>At 10th level
+      and 16th level, the penalty to AC against attacks made by the rogue
+      increases by –2 (to a total maximum of –8).</p><hr>
+  duration:
+    end: initiative
+    units: round
+    value: '1'
+  level: null
+  subType: feat
+type: buff

@@ -1,0 +1,280 @@
+{
+  "records": [
+    {
+      "externalKey": "pf1/Action",
+      "kind": "conditional",
+      "target": "attack/allAttack",
+      "text": "{\"_id\":\"closeRange\",\"name\":\"Within 30 ft\",\"modifiers\":[{\"formula\":\"1\",\"target\":\"attack\",\"subTarget\":\"allAttack\",\"type\":\"enh\"}]}",
+      "textSha256": "de5d91baa2544f80f941329c9a5f2b3a0472eacd232df3010476e59f3d019a6b",
+      "actionId": "weaponAction",
+      "conditionalId": "closeRange",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "modifier",
+          "target": "attack",
+          "bonusType": "enhancement",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "Within 30 ft"
+            },
+            "weapon": "$self"
+          }
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Compound",
+      "kind": "note",
+      "target": "cmd",
+      "text": "+[[4]] Racial vs bull rush and trip while on ground",
+      "textSha256": "82e283cbbc754e038f1eefc19fcd0246a245567f3287fe305b93a050dfeded4f",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "modifier",
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "vs bull rush while on ground"
+            }
+          }
+        },
+        {
+          "kind": "modifier",
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "vs trip while on ground"
+            }
+          }
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Covered",
+      "kind": "note",
+      "target": "allSavingThrows",
+      "text": "Already accounted for by the racial trait",
+      "textSha256": "8b6c5252dd53dbefe390b5ced61916e57cbb72a62c008ed59982db9506825de5",
+      "status": "checked",
+      "outputs": [],
+      "rationale": "Synthetic covered/no-output example: the separate Numeric racial trait supplies the demonstrated effect.",
+      "diagnostics": [],
+      "reviewedBy": "Synthetic fixture reviewer",
+      "reviewedOn": "2026-10-03",
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/EmptyTarget",
+      "kind": "note",
+      "target": "",
+      "text": "May reroll critical confirmation once",
+      "textSha256": "5656a5ae4fd61b565aea5a5cadc3dbc420c156c6979d8c89b3937294bbf267f1",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "note",
+          "text": "May reroll critical confirmation once"
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Formula",
+      "kind": "note",
+      "target": "will",
+      "text": "+[[floor((@class.level + 2) / 4)]] Morale vs fear",
+      "textSha256": "aab05d0760a29c21101b72542a01b7a0f7cf426cd81fe3eb9f6bff9b77161e6f",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "modifier",
+          "target": "save.will",
+          "bonusType": "morale",
+          "value": {
+            "formula": "floor((@classLevel.fighter + 2) / 4)"
+          },
+          "condition": {
+            "situation": {
+              "local": "vs fear"
+            }
+          }
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Immunity",
+      "kind": "note",
+      "target": "allSavingThrows",
+      "text": "Immune to Magic Sleep",
+      "textSha256": "b1fa0e2626c7c1c9e211ad60ba1c43d49f0d5d6e551b11449b827dd548a05d20",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "note",
+          "target": "saves",
+          "situation": {
+            "local": "Magic Sleep"
+          },
+          "text": "Immune to Magic Sleep"
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Numeric",
+      "kind": "note",
+      "target": "allSavingThrows",
+      "text": "+[[2]] Racial vs poison",
+      "textSha256": "529718deaf47707079f5c3e4efe5acfafa79b9b0b81965faf12c0840b5e50f9b",
+      "status": "checked",
+      "outputs": [
+        {
+          "kind": "modifier",
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "vs poison"
+            }
+          }
+        }
+      ],
+      "rationale": "Checked against the synthetic imported note and description; this is fixture evidence only.",
+      "diagnostics": [],
+      "reviewedBy": "Synthetic fixture reviewer",
+      "reviewedOn": "2026-10-03",
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1-content/Flaming",
+      "kind": "itemAbility",
+      "target": "description",
+      "text": "<p>A flaming weapon deals an extra 1d6 fire damage on a hit.</p><p>Price +1 bonus</p>",
+      "textSha256": "e37d5a3e8142d0d36466081c1dde2c973f3355763ae16f26a3d013863bfb6d31",
+      "status": "drafted",
+      "outputs": [
+        {
+          "damageDice": [
+            {
+              "on": "hit",
+              "dice": "1d6",
+              "damageType": "fire"
+            }
+          ],
+          "kind": "itemAbility"
+        },
+        {
+          "bonusEquivalent": 1,
+          "kind": "itemAbility"
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": [
+        {
+          "externalKey": "pf1-content/upTvrmZoeKq2LI0F",
+          "kind": "conditional",
+          "target": "damage/allDamage",
+          "text": "{\"_id\":\"82a2c967wtlp9zil\",\"modifiers\":[{\"_id\":\"16n2fja5uqgden3g\",\"critical\":\"nonCrit\",\"damageType\":[\"fire\"],\"formula\":\"1d6\",\"subTarget\":\"allDamage\",\"target\":\"damage\"}],\"name\":\"Flaming\"}",
+          "textSha256": "3a11dc5d337437033b5f42193abc754b9bd8cba4bdca2fbb356ad178fcb10656",
+          "actionId": "3uh04flt1acambht",
+          "conditionalId": "82a2c967wtlp9zil"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/Keen",
+      "kind": "itemAbility",
+      "target": "description",
+      "text": "<p>Only piercing or slashing melee weapons can be keen. This ability doubles the threat range of a weapon.</p><p>Price +1 bonus</p>",
+      "textSha256": "44e72ec510a545a54d309d3cdacbab8a48c4e0f771dda1f28d2bc467792f2eb5",
+      "status": "drafted",
+      "outputs": [
+        {
+          "bonusEquivalent": 1,
+          "kind": "itemAbility"
+        },
+        {
+          "doublesThreat": true,
+          "weaponDamageTypes": [
+            "piercing",
+            "slashing"
+          ],
+          "kind": "itemAbility"
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1-content/Shadow",
+      "kind": "itemAbility",
+      "target": "description",
+      "text": "<p>This armor grants a +5 competence bonus on Stealth checks.</p><p>Price +3,750 gp</p>",
+      "textSha256": "b3bf063ca10538dabd13f60cd1dae333d4bb3758828b428ea5d243e7f1b8b41f",
+      "status": "drafted",
+      "outputs": [
+        {
+          "bonusEquivalent": 0,
+          "kind": "itemAbility"
+        },
+        {
+          "kind": "modifier",
+          "target": "skill.ste",
+          "bonusType": "competence",
+          "value": 5
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    },
+    {
+      "externalKey": "pf1/Prose",
+      "kind": "description",
+      "target": "description",
+      "text": "<p>When defending against bull rush, gain a +2 racial bonus to CMD.</p>",
+      "textSha256": "e0f42eefc5a90a4e8d4a30b6311f2c174ad8dbd5b34474b9f7760eb7c7c5bab5",
+      "status": "drafted",
+      "outputs": [
+        {
+          "kind": "modifier",
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against bull rush"
+            }
+          }
+        }
+      ],
+      "rationale": "Parser draft; check against the imported description before marking checked.",
+      "diagnostics": [],
+      "seedBindings": []
+    }
+  ],
+  "situations": []
+}

@@ -1,0 +1,64 @@
+// The routes to a source that pass through a self-rebinding alias, the
+// default export of an awaited import, an awaited require() or a conditional
+// value. A line ending in "// flagged" must be reported; every other line
+// must pass.
+import * as osNamespace from 'node:os';
+// A binding rebound from itself is followed for each path it is read at.
+let rebound = process;
+rebound = rebound.env;
+rebound.HOME; // flagged
+let reboundBracket = process;
+reboundBracket = reboundBracket['env'];
+const { HOME: reboundHome } = reboundBracket; // flagged
+let reboundFixture = { env: { HOME: 'fixture-home' } };
+reboundFixture = reboundFixture.env;
+reboundFixture.HOME;
+let reboundArgv = process;
+reboundArgv = reboundArgv.argv;
+reboundArgv.HOME;
+// The default export of a module namespace is the module.
+const { default: awaitedDefault } = await import('node:os');
+awaitedDefault.homedir(); // flagged
+const { default: { homedir: nestedDefault } } = await import('os'); // flagged
+(await import('os')).default.homedir(); // flagged
+(await import('node:process')).default.env.HOME; // flagged
+const { default: { env: { HOME: processDefault } } } = await import('process'); // flagged
+osNamespace.default.homedir(); // flagged
+(await import('node:os')).default.tmpdir();
+const fixtureNamespace = { default: { homedir: () => 'fixture-home' } };
+const { default: fixtureDefault } = fixtureNamespace;
+fixtureDefault.homedir();
+// An awaited require() is the module it requires.
+const awaitedRequire = await require('node:os');
+awaitedRequire.homedir(); // flagged
+(await require('os')).homedir(); // flagged
+const { homedir: awaitedHomedir } = await require('node:os'); // flagged
+(await require('node:process')).env.HOME; // flagged
+// A conditional value may be either branch; a && b is b.
+const fixtureOs = { homedir: () => 'fixture-home' };
+const fixtureEnv = { HOME: 'fixture-home' };
+const maybeOs = useHost ? require('node:os') : fixtureOs;
+maybeOs.homedir(); // flagged
+const maybeFixtureOs = useHost ? fixtureOs : require('os');
+maybeFixtureOs.homedir(); // flagged
+const { homedir: chosenHomedir } = useHost ? await import('os') : fixtureOs; // flagged
+(useHost ? process : fixtureProcess).env.HOME; // flagged
+const eitherEnv = fixtureEnv ?? process.env;
+eitherEnv.HOME; // flagged
+const orEnv = fixtureEnv || process.env;
+orEnv['HOME']; // flagged
+const andEnv = useHost && process.env;
+andEnv.HOME; // flagged
+function readChosen({ HOME } = useHost ? process.env : fixtureEnv) { return HOME; } // flagged
+let laterChoice = fixtureOs;
+laterChoice = useHost ? osNamespace : fixtureOs;
+laterChoice.homedir(); // flagged
+const fixtureChoice = useHost ? fixtureOs : { homedir: () => 'other-home' };
+fixtureChoice.homedir();
+const guardedFixture = process.env && fixtureEnv;
+guardedFixture.HOME;
+(useHost ? fixtureEnv : process.env).PATH;
+// Residual: a value kept in an object literal is not followed.
+let reboundOs = { host: require('node:os') };
+reboundOs = reboundOs.host;
+reboundOs.homedir();

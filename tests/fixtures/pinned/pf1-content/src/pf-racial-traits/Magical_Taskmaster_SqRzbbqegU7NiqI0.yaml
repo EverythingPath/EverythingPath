@@ -1,0 +1,73 @@
+_id: SqRzbbqegU7NiqI0
+_key: '!items!SqRzbbqegU7NiqI0'
+_stats:
+  coreVersion: '12.331'
+folder: 3Z2cUyMD0Y57p7YO
+img: icons/commodities/treasure/statue-bust-stone-grey.webp
+name: Magical Taskmaster
+system:
+  actions:
+    - _id: JcpDIowtKk4bPZjv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{Charm
+        Person}</p><p>This charm makes a humanoid creature regard you as its
+        trusted friend and ally (treat the target's attitude as friendly). If
+        the creature is currently being threatened or attacked by you or your
+        allies, however, it receives a +5 bonus on its saving throw.</p><p>The
+        spell does not enable you to control the charmed person as if it were an
+        automaton, but it perceives your words and actions in the most favorable
+        way. You can try to give the subject orders, but you must win an opposed
+        Charisma check to convince it to do anything it wouldn't ordinarily do.
+        (Retries are not allowed.) An affected creature never obeys suicidal or
+        obviously harmful orders, but it might be convinced that something very
+        dangerous is worth doing. Any act by you or your apparent allies that
+        threatens the charmed person breaks the spell. You must speak the
+        person's language to communicate your commands, or else be good at
+        pantomiming.</p></div>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm Person
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @attributes.wis.mod
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    instructions: >-
+      <p>This trait replaces
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.rhrCD8LSYstvt6pp]{Spell-Like
+      Abilities (Duergar - Invisibility)}</p>
+    value: >-
+      <p><strong>Race</strong>: Duergar<br /><strong>Replaced Trait(s)</strong>:
+      <i>Invisibility</i> Spell-Like Ability</p><hr /><p>Some duergar
+      demonstrate magic of a more insidious kind than the rest of their kin, a
+      difference that is often taken to be a sign of Droskar's blessing. They
+      can use charm person once per day as a spell-like ability. The save DC is
+      equal to 10 + 1/2 duergar's Hit Dice + duergar's Wisdom modifier. This
+      racial trait replaces the invisibility spell-like ability racial
+      trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '215'
+  subType: racial
+  tags:
+    - Duergar
+type: feat

@@ -1,0 +1,70 @@
+_id: bvvjjjidh2duqwta
+_key: '!items!bvvjjjidh2duqwta'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Positive Pulse
+system:
+  actions:
+    - _id: 1avclz1un9rnvopp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5-ft.-radius burst
+      damage:
+        parts:
+          - formula: 1d6 + min(5, floor(@cl / 2))
+            types:
+              - positive
+      duration:
+        units: spec
+        value: instantaneous plus 1 round (see text)
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates; see text
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes a wave of positive energy to spread from a point you
+      designate, damaging foes vulnerable to positive energy and bolstering
+      living creatures. Each creature damaged by positive energy in the area
+      (such as undead) must succeed at a Will save or take 1d6 points of damage,
+      plus 1 point for every 2 caster levels (maximum +5). Haunts manifesting in
+      the spell's area also take this damage.  This spell does not heal
+      creatures healed by positive energy; such creatures instead gain a +2
+      bonus on saving throws against death effects, energy drain, negative
+      energy, and effects directly caused by haunts. This bonus lasts for 1
+      round.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      paladin: 1
+      shaman: 1
+      sorcerer: 1
+      spiritualist: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  school: nec
+  sources:
+    - id: PZO1141
+      pages: '43'
+type: spell

@@ -1,0 +1,69 @@
+_id: lzos34s87qsc620l
+_key: '!items!lzos34s87qsc620l'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/fireball-red-1.jpg
+name: Flaming Sphere
+system:
+  actions:
+    - _id: shlc7cf4vfs7gudx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: 5-ft.-diameter sphere
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A burning globe of fire rolls in whichever direction you point and
+      burns those it strikes. It moves 30 feet per round. As part of this
+      movement, it can ascend or jump up to 30 feet to strike a target. If it
+      enters a space with a creature, it stops moving for the round and deals
+      3d6 points of fire damage to that creature, though a successful Reflex
+      save negates that damage. A <i>flaming sphere</i> rolls over barriers less
+      than 4 feet tall. It ignites flammable substances it touches and
+      illuminates the same area as a torch would.</p><p>The sphere moves as long
+      as you actively direct it (a move action for you); otherwise, it merely
+      stays at rest and burns. It can be extinguished by any means that would
+      put out a normal fire of its size. The surface of the sphere has a spongy,
+      yielding consistency and so does not cause damage except by its flame. It
+      cannot push aside unwilling creatures or batter down large obstacles. A
+      <i>flaming sphere</i> winks out if it exceeds the spell's range.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      occultist: 2
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Arson: 2
+  level: 2
+  materials:
+    value: tallow, brimstone, and powdered iron
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '283'
+type: spell

@@ -1,0 +1,56 @@
+_id: KNUcFk2zkPBTh2PQ
+_key: '!items!KNUcFk2zkPBTh2PQ'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/beam-orange-3.jpg
+name: Bestow Insight
+system:
+  actions:
+    - _id: 0HnjDSJEVsgqNM1U
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/beam-orange-3.jpg
+      name: Use
+      range:
+        units: personal
+  changes:
+    - _id: h8jacd6k
+      formula: min(6, 2 + floor(@item.level / 4))
+      target: skill.acr
+      type: insight
+  contextNotes:
+    - target: skill.acr
+      text: >-
+        You are considered trained in this skill. You can roll two checks and
+        take the greater result. Doing so ends the spell.
+  description:
+    instructions: <p>Set the chosen skill in the changes tab.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.ftdyhjze9zqhk7oe]{Bestow
+      Insight}</p><p>You gain a +2 insight bonus on skill checks with this skill
+      and are considered trained in that skill. The insight bonus increases by 1
+      for every four levels of the caster (maximum +6). Furthermore, once before
+      the spell’s duration, you can choose to roll two checks and take the
+      greater result. Doing so ends the spell’s other effects.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  scriptCalls:
+    - _id: dbVcKIMsCdS8dW29
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: End Early
+      type: script
+      value: |-
+        if(item.system.active)
+          await item.setActive(false);
+        else
+          shared.hideChat = true;
+  subType: spell
+type: buff

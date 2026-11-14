@@ -1,0 +1,69 @@
+_id: 6he32yv5sa89ox5y
+_key: '!items!6he32yv5sa89ox5y'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Etheric Shards
+system:
+  actions:
+    - _id: vvclguze3txam7gg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one 10-ft. cube/level
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex partial or Reflex negates (see text)
+        type: ref
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>You harden interpenetrated ethereal substance into deadly
+      transdimensional razors that are invisible to normal sight. Movement
+      through an area of <em>etheric shards</em> is halved, even for incorporeal
+      creatures, and creatures entering a 5-foot cube filled with <em>etheric
+      shards</em> take 1d8 points of piercing and slashing damage and must
+      succeed at a Reflex save or take 1 point of bleed damage. This bleed
+      damage stacks with itself and other sources of bleed damage. A creature
+      standing within an area of <em>etheric shards</em> takes no damage as long
+      as it remains completely motionless, but even the minor movements involved
+      in attacking or defending in combat force a stationary creature to attempt
+      a Reflex save. If a stationary creature succeeds at this save, it avoids
+      damage completely for that round, but if it fails, it takes hit point
+      damage and bleed damage as though it had moved through the square.</p><p>A
+      creature forcibly moved through an area of <em>etheric shards</em>, such
+      as by a bull rush or drag combat maneuver, takes a -4 penalty on its
+      saving throw, but a creature able to see invisible or ethereal objects
+      gains a +4 bonus, and damage to it is completely negated on a successful
+      Reflex save.</p><p><em>Etheric shards</em> are considered a magical trap,
+      and a creature with trapfinding can use Perception to find them. The DC of
+      this check is equal to 25 + the spell's level. <em>Etheric shards</em>
+      can't be disabled with the Disable Device skill.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      occultist: 4
+      psychic: 5
+      spiritualist: 4
+  level: 5
+  materials:
+    value: broken glass
+  school: evo
+  sources:
+    - id: PZO1132
+      pages: '171'
+  sr: false
+type: spell

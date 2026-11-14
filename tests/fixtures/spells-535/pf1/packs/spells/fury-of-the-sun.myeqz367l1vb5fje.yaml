@@ -1,0 +1,54 @@
+_id: myeqz367l1vb5fje
+_key: '!items!myeqz367l1vb5fje'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Fury of the Sun
+system:
+  actions:
+    - _id: qmdqz38ex6zbeja3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You curse the target to suffer unbearable heat. On a failed saving
+      throw, the target is immediately subjected to severe heat (<i>Core
+      Rulebook</i> 444), takes 1d4 points of nonlethal damage, and is suffering
+      from heatstroke (fatigued). The target must save every 10 minutes as
+      normal for severe heat (starting at DC 15 rather than the DC of this
+      spell). Because this heat is internal, the target cannot avoid it using
+      the normal methods for escaping heat dangers such as Survival checks or
+      finding shade.</p>
+  descriptors:
+    - curse
+    - fire
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      witch: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '131'
+type: spell
