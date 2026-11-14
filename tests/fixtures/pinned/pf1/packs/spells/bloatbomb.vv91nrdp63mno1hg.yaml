@@ -1,0 +1,79 @@
+_id: vv91nrdp63mno1hg
+_key: '!items!vv91nrdp63mno1hg'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/acid/orb-bubble-smoke-drip.webp
+name: Bloatbomb
+system:
+  actions:
+    - _id: wrcskh4czskg1s3u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous and 1 minute/level (see text)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates or Reflex half (see text)
+        type: ref
+      target:
+        value: living creature touched
+    - _id: Gfur8i4o0gPFcFdp
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - acid
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        color: '#28cc51'
+        size: '10'
+        type: circle
+      name: Explosion
+      save:
+        description: Reflex halfes
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature dies if it fails a Fortitude saving throw and its
+      Hit Dice are no more than half your caster level.</p><p>If it dies, its
+      corpse rapidly putrefies. The next creature to touch the corpse within 1
+      minute per level of the target's death causes the corpse to explode in a
+      10-foot-radius burst, dealing 3d6 points of acid damage (Reflex half).</p>
+  descriptors:
+    - acid
+    - death
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 4
+      cleric: 4
+      oracle: 4
+      sorcerer: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '175'
+type: spell

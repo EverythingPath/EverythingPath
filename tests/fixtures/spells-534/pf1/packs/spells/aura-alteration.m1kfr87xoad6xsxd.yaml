@@ -1,0 +1,78 @@
+_id: m1kfr87xoad6xsxd
+_key: '!items!m1kfr87xoad6xsxd'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Aura Alteration
+system:
+  actions:
+    - _id: aj23fot8es9911m3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one object or willing creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mask and manipulate the target creature's or object's aura,
+      confounding those who would attempt to discern helpful information from it
+      using the read aura occult skill unlock (see page 197) or the <i>analyze
+      aura</i> spell. You can change each of the following four auras with one
+      casting of <i>aura alteration</i>. <b>Alignment Aura</b>: You can change
+      the target's apparent alignment to thwart spells that detect alignment,
+      such as <i>detect evil</i>. You can alter the alignment by up to one step
+      on each alignment axis, but can't make the creature appear to have a
+      diametrically opposed alignment. For instance, you couldn't make a lawful
+      evil character appear to be chaotic or good. You can also adjust the power
+      of the alignment aura up or down in level by a number of steps equal to
+      1/2 your level or fewer. <b>Emotion Aura</b>: Your manipulations mask the
+      true emotions  of the target, instead depicting any combination of colors
+      on the emotional spectrum that you wish. Creatures attempting Bluff,
+      Diplomacy, Intimidate, or Sense Motive checks against the target receive
+      no bonuses on their checks based on information gleaned from the target's
+      aura. <b>Health Aura</b>: You adulterate the target's aura to mask the
+      condition of its physical body, revealing instead a wounded status, poison
+      or disease status, and conditions of your choice. You likewise mask the
+      target's available ki points or similar resources, manipulating its aura
+      to suggest any number within the range normally available to the target.
+      <b>Magic Aura</b>: You alter a creature or item's magic aura so that it
+      registers to <i>detect magic</i> (and spells with similar capabilities,
+      like <i>analyze aura</i>) as though it were nonmagical, a magic item of a
+      kind you specify, or the subject of a spell you specify. A single casting
+      of <i>aura alteration</i> is sufficient to mask all of the magic auras on
+      the target. If an object bearing <i>aura alteration</i> has
+      <i>identify</i> cast on it or is similarly examined, the examiner
+      recognizes the aura is false and detects the object's actual qualities if
+      he succeeds at a Will save. If a targeted item's own aura is overwhelming,
+      <i>aura alteration</i> can't alter it.</p>
+  learnedAt:
+    class:
+      medium: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 4
+      spiritualist: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '157'
+type: spell

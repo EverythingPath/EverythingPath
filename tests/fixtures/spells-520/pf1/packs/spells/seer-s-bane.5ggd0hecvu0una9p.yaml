@@ -1,0 +1,61 @@
+_id: 5ggd0hecvu0una9p
+_key: '!items!5ggd0hecvu0una9p'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Seer's Bane
+system:
+  actions:
+    - _id: ra7lkgylwmcgy13t
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: creature or object touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}, except
+      that those who cast divination spells targeting the warded creature or
+      item must succeed on a caster level check (DC = 15 + your caster level).
+      If the caster of the divination fails, deadly magical feedback strikes at
+      him, dealing 1d6 points of electricity damage per 2 caster levels you have
+      (maximum 10d6 at 20th level). Alternatively, if you cast <em>bestow
+      curse</em>, <em>chaos hammer</em>, <em>contagion</em>, <em>holy
+      smite</em>, order's wrath, <em>poison</em>, or <em>unholy blight</em> in
+      the round immediately following seer's bane, you can replace the spell's
+      damaging effect with the effects of that second spell (the divination's
+      caster-and potentially those around him-save as normal for the modifying
+      spell).</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      inquisitor: 6
+      oracle: 6
+      sorcerer: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  school: abj
+  sources:
+    - id: PZO90102
+      pages: '75'
+type: spell

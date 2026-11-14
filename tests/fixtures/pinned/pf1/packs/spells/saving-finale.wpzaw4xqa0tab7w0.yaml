@@ -1,0 +1,46 @@
+_id: wpzaw4xqa0tab7w0
+_key: '!items!wpzaw4xqa0tab7w0'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Saving Finale
+system:
+  actions:
+    - _id: qycvhyhqcf43jia4
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You must have a bardic performance in effect to cast this spell. With a
+      flourish, you can immediately end your bardic performance when a creature
+      within range affected by your bardic performance fails a saving throw,
+      allowing the subject to immediately reroll the failed saving throw.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      skald: 1
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '241'
+type: spell

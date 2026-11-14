@@ -1,0 +1,88 @@
+{
+  "kind": "host-audits-v1",
+  "sources": [
+    "~/repos/everythingpath/sources/foundryvtt-pathfinder1",
+    "~/repos/everythingpath/sources/pf1-content",
+    "~/repos/everythingpath/sources/prd-2026-10-20",
+    "~/repos/everythingpath/.ep-cache/pcgen-<pin>",
+    "the main checkout's Git history (historical blobs a tree-only CI commit lacks)"
+  ],
+  "tests": [
+    {
+      "file": "tests/catalog/attribution-evidence-codec.test.ts",
+      "fullName": "decodes the migrated file to the exact bytes of the plain map it replaced"
+    },
+    {
+      "file": "tests/catalog/attribution-evidence-codec.test.ts",
+      "fullName": "keeps float literals, prose, header lines, revocations and conclusions byte for byte"
+    },
+    {
+      "file": "tests/catalog/import-batches-716.test.ts",
+      "fullName": "optional audit: the first slice over the full local PCGen checkout (skips without it) packs Fighter, Rogue, Ranger and Wizard’s 1,168 records into at least 15 sub-batches of at most 100 keys"
+    },
+    {
+      "file": "tests/catalog/journal-targets-738.test.ts",
+      "fullName": "reproduces the entire target index from both pinned Git trees"
+    },
+    {
+      "file": "tests/catalog/launch-modifiers-canonical.test.ts",
+      "fullName": "the plain-Modifiers control against the canonical build gives every Modifier row exactly the entry, outputs and disqualifying issues the build gives it"
+    },
+    {
+      "file": "tests/catalog/pcgen-identities.test.ts",
+      "fullName": "the identity ledger over the whole PCGen tree binds the corpus’s hashes and loses no frozen record"
+    },
+    {
+      "file": "tests/catalog/pcgen-identities.test.ts",
+      "fullName": "the identity ledger over the whole PCGen tree derives no key twice for records of different KEYs"
+    },
+    {
+      "file": "tests/catalog/pcgen-inventory.test.ts",
+      "fullName": "optional audit: the evidence against the full local PCGen checkout (skips without it) names a crosswalked book for every owner of the 92 books"
+    },
+    {
+      "file": "tests/catalog/pcgen-inventory.test.ts",
+      "fullName": "optional audit: the evidence against the full local PCGen checkout (skips without it) regenerates the committed totals and owner rows"
+    },
+    {
+      "file": "tests/catalog/pcgen-prestige.test.ts",
+      "fullName": "optional audit: the prestige evidence against the full local PCGen checkout (skips without it) regenerates the committed evidence"
+    },
+    {
+      "file": "tests/catalog/pinned-sources.test.ts",
+      "fullName": "the PCGen store against the pinned PCGen checkout matches every PCGen store file to its blob at the pinned commit"
+    },
+    {
+      "file": "tests/catalog/pinned-sources.test.ts",
+      "fullName": "the store against the pinned checkouts matches every store file to its blob at the pinned commit"
+    },
+    {
+      "file": "tests/catalog/prd-coverage.test.ts",
+      "fullName": "the PRD capture class coverage, recomputed matches the class coverage recomputed from the full capture"
+    },
+    {
+      "file": "tests/catalog/prd-coverage.test.ts",
+      "fullName": "the PRD capture coverage matches the coverage recomputed from the full capture"
+    },
+    {
+      "file": "tests/catalog/prd-pin.test.ts",
+      "fullName": "the prd pin matches the full capture and the store excerpts it holds"
+    },
+    {
+      "file": "tests/catalog/racial-traits-402.test.ts",
+      "fullName": "matches each recorded body to its pinned pf1-content record"
+    },
+    {
+      "file": "tests/catalog/racial-traits-403.test.ts",
+      "fullName": "matches each recorded body to its pinned pf1-content record"
+    },
+    {
+      "file": "tests/catalog/racial-traits-404.test.ts",
+      "fullName": "matches each recorded body to its pinned pf1-content record"
+    },
+    {
+      "file": "tests/catalog/racial-traits-405.test.ts",
+      "fullName": "matches each recorded body to its pinned pf1-content record"
+    }
+  ]
+}

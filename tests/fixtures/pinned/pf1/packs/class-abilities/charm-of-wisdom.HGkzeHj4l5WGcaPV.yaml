@@ -1,0 +1,30 @@
+_id: HGkzeHj4l5WGcaPV
+_key: '!items!HGkzeHj4l5WGcaPV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Charm of Wisdom
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Inquisitor
+  changes:
+    - _id: d9bhmqq4
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.blf
+      type: untyped
+    - _id: u3k6i3nk
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.dip
+      type: untyped
+    - _id: kr0ejrtm
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.int
+      type: untyped
+  description:
+    value: >-
+      <p>You use your Wisdom modifier instead of your Charisma modifier when
+      making Bluff, Diplomacy, and Intimidate checks.</p>
+  subType: classFeat
+type: feat

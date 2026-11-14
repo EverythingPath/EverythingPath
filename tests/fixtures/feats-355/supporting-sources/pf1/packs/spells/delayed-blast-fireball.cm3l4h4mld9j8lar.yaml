@@ -1,0 +1,73 @@
+_id: cm3l4h4mld9j8lar
+_key: '!items!cm3l4h4mld9j8lar'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Delayed Blast Fireball
+system:
+  actions:
+    - _id: 8i6vg5ivj41iqukr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius spread
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - fire
+      duration:
+        units: spec
+        value: 5 rounds or less; see text
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.6oq1wcryviik9ice]{fireball}, except that
+      it is more powerful and can detonate up to 5 rounds after the spell is
+      cast. The burst of flame deals 1d6 points of fire damage per caster level
+      (maximum 20d6). The glowing bead created by <em>delayed blast
+      fireball</em> can detonate immediately if you desire, or you can choose to
+      delay the burst for as many as 5 rounds. You select the amount of delay
+      upon completing the spell, and that time cannot change once it has been
+      set unless someone touches the bead. If you choose a delay, the glowing
+      bead sits at its destination until it detonates. A creature can pick up
+      and hurl the bead as a thrown weapon (range increment 10 feet). If a
+      creature handles and moves the bead within 1 round of its detonation,
+      there is a 25% chance that the bead detonates while being handled.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    bloodline:
+      Kobold: 7
+      Orc: 7
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+    subDomain:
+      Arson: 7
+  level: 7
+  materials:
+    value: a ball of bat guano and sulfur
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '265'
+type: spell

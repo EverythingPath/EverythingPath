@@ -1,0 +1,45 @@
+_id: sNyXq295yfcoKOrb
+_key: '!items!sNyXq295yfcoKOrb'
+_stats:
+  coreVersion: '12.331'
+folder: NdqSKNr56WP9EuED
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Flesh Chameleon
+system:
+  actions:
+    - _id: UMTJneIt2c7g3sF2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Appear human
+  contextNotes:
+    - target: skill.dis
+      text: +[[4]] Racial bonus to appear human (standard action)
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine<br /><strong>Replaced Trait(s)</strong>:
+      Energy Resistance</p><hr /><p>Some undines can change their coloration to
+      match human skin tones. As a standard action, an undine with this racial
+      trait can change her natural blue hue to match any normal human skin tone,
+      and can revert to normal as a free action. This grants a +4 racial bonus
+      on Disguise checks to appear human. This racial trait replaces energy
+      resistance.</p>
+  scriptCalls:
+    - _id: 3Fkp8993
+      category: use
+      hidden: false
+      img: null
+      name: appear human
+      type: script
+      value: actor.rollSkill("dis", {bonus:`4[${item.name}]`});
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '175'
+  subType: racial
+  tags:
+    - Undine
+  traitCategory: featSkills
+type: feat

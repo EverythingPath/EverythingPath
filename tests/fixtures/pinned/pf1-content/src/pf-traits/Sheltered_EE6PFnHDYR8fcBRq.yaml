@@ -1,0 +1,38 @@
+_id: EE6PFnHDYR8fcBRq
+_key: '!items!EE6PFnHDYR8fcBRq'
+_stats:
+  coreVersion: '12.331'
+folder: n1kBJ9yG8vwL71rY
+img: systems/pf1/icons/feats/shatter-defenses.jpg
+name: Sheltered
+system:
+  changes:
+    - _id: i9V2iIP1
+      formula: if(lt(@attributes.hp.value,(@attributes.hp.max / 2)),-2)
+      target: allSavingThrows
+      type: untyped
+    - _id: AVuA9Paz
+      formula: if(lt(@attributes.hp.value,(@attributes.hp.max / 2)),-2)
+      target: allChecks
+      type: untyped
+    - _id: Z1bwkbm7
+      formula: if(lt(@attributes.hp.value,(@attributes.hp.max / 2)),-2)
+      target: skills
+      type: untyped
+    - _id: rAsm17b7
+      formula: if(lt(@attributes.hp.value,(@attributes.hp.max / 2)),-2)
+      target: attack
+      type: untyped
+  description:
+    value: >-
+      <p><em>Brought up in courtly environments and knowing little of violence,
+      you have trouble getting accustomed to
+      it.</em></p><p><strong>Effects</strong>: Whenever you have less than half
+      your maximum hit points, you are
+      @UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.XxLUswkCuXnXmA5T]{Shaken}.</p>
+  sources:
+    - id: PZO9433
+      pages: '23'
+  subType: trait
+  traitType: drawback
+type: feat

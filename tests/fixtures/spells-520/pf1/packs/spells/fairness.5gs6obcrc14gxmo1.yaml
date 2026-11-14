@@ -1,0 +1,59 @@
+_id: 5gs6obcrc14gxmo1
+_key: '!items!5gs6obcrc14gxmo1'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Fairness
+system:
+  actions:
+    - _id: qput119uvcfhdh02
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature per level
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Humanoid creatures affected by this spell must trade fairly with others
+      to the best of their knowledge. If they know the fair value (or even an
+      estimated fair value) of a good or service, they cannot participate in a
+      trade if it would benefit one side unfairly, and must attempt to stop such
+      trades from occurring, preventing them from cheating another while under
+      the influence of this spell. The symbol of Abadar appears above the heads
+      of those affected by this spell, making those affected and unaffected by
+      the spell immediately apparent.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 1
+      inquisitor: 2
+      oracle: 1
+      paladin: 2
+      warpriest: 1
+  school: enc
+  sources:
+    - id: PZO9267
+      pages: '233'
+    - id: PZO9418
+      pages: '28'
+  subschool:
+    - compulsion
+type: spell
