@@ -1,0 +1,55 @@
+_id: crq6etku9g9o2imx
+_key: '!items!crq6etku9g9o2imx'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Devolution
+system:
+  actions:
+    - _id: b4pfif8kbg9y3n0v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one eidolon
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes an eidolon to lose one evolution plus one additional
+      evolution for every five caster levels. Evolutions with the highest total
+      cost are lost first. If there is a tie, randomly determine which is lost.
+      If this spell causes an eidolon to fail to meet the prerequisites for
+      other evolutions or abilities, those evolutions or abilities are lost as
+      long as this spell persists.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      psychic: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a chameleon scale
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '216'
+type: spell

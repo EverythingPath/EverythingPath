@@ -1,0 +1,45 @@
+_id: YeNdVzgR4OZMezrx
+_key: '!items!YeNdVzgR4OZMezrx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_06.jpg
+name: Speak with Animals
+system:
+  abilityType: sp
+  actions:
+    - _id: 099m3r7zv70rdzc9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can speak with animals, as per the
+      @UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{spell}, for a number of
+      rounds per day equal to 3 + your cleric level.</p>
+  sources:
+    - id: PZO1110
+      pages: '41'
+  subType: classFeat
+  tag: classFeat_speakWithAnimals
+  tags:
+    - Domain Power
+    - Animal Domain
+  uses:
+    maxFormula: 3 + @class.level
+    per: day
+type: feat

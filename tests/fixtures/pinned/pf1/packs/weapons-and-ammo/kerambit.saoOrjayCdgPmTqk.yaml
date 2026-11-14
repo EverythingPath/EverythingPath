@@ -1,0 +1,58 @@
+_id: saoOrjayCdgPmTqk
+_key: '!items!saoOrjayCdgPmTqk'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/thrown/dagger-ringed-guard.webp
+name: Kerambit
+system:
+  actions:
+    - _id: yvaf02mfbndumsil
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Kerambit
+  description:
+    unidentified: >-
+      <p>This small, curved pull dagger has a metal loop at the base of its
+      handle, allowing it to be secured with a pinky or worn on a string tied in
+      the hair. While relatively small, the curved blade can create brutal
+      wounds. Easily concealed (you gain a +2 bonus on Sleight of Hand checks
+      made to conceal a kerambit on your body), it is a favorite weapon of ninja
+      and assassins.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    fin: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+type: weapon
