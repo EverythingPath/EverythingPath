@@ -1,0 +1,35 @@
+_id: oKbTIUKJkGwFDHXu
+_key: '!items!oKbTIUKJkGwFDHXu'
+_stats:
+  coreVersion: '12.331'
+folder: d6EaA469S0yr8dfD
+img: icons/skills/melee/hand-grip-staff-yellow-brown.webp
+name: Ferocity (Orc)
+system:
+  contextNotes:
+    - target: conChecks
+      text: >-
+        If you fall below 0 hp but are not yet dead, you can continue to fight.
+        It you do, you are @Condition[staggered], and lose 1 hit point each
+        round. @Damage[1]  You still die when your hit points
+        [[@attributes.hp.value]] reach a negative amount equal to your
+        Constitution score. [[@abilities.con.total]]
+  description:
+    value: >-
+      <p><strong>Race</strong>: Orc</p><hr /><p>Orcs can remain conscious and
+      continue fighting even if their hit point totals fall below 0. Orcs are
+      still staggered at 0 hit points or lower and lose 1 hit point each round
+      as normal.</p>
+  racePoints: 4
+  sources:
+    - id: PZO9280
+      pages: '246'
+    - id: PZO1112
+      pages: '222'
+    - id: PZO1121
+      pages: '138'
+  subType: racial
+  tags:
+    - Orc
+  traitCategory: offense
+type: feat

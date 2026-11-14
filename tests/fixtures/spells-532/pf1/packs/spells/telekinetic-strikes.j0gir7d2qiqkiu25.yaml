@@ -1,0 +1,52 @@
+_id: j0gir7d2qiqkiu25
+_key: '!items!j0gir7d2qiqkiu25'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Telekinetic Strikes
+system:
+  actions:
+    - _id: lasp2yvjnm8l8xan
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The touched creature's limbs are charged with telekinetic force. For
+      the duration of the spell, the target's unarmed attacks or natural weapons
+      deal an additional 1d4 points of force damage on each successful unarmed
+      melee attack.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 2
+      magus: 2
+      psychic: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO9477
+      pages: '11'
+type: spell

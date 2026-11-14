@@ -1,0 +1,278 @@
+_id: upTvrmZoeKq2LI0F
+_key: '!items!upTvrmZoeKq2LI0F'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/swords/greatsword-evil-green.webp
+name: '*Weapon Enchant Conditional Modifiers'
+system:
+  actions:
+    - _id: 3uh04flt1acambht
+      ability:
+        attack: _default
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      conditionals:
+        - _id: 6g3qrj5ubzdrfsxa
+          modifiers:
+            - _id: nd1g89d20rr1f3xz
+              damageType:
+                - untyped
+              formula: >-
+                (@abilities.dex.mod > @abilities.str.mod ? @abilities.dex.mod -
+                @abilities.str.mod : 0)
+              subTarget: allDamage
+              target: damage
+          name: Agile
+        - _id: c6rdjli26489pvxu
+          modifiers:
+            - _id: x51fozl64waots53
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Anarchic
+        - _id: b0sltwfy82hsfd8a
+          modifiers:
+            - _id: zlx4do5h6dia38ib
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Axiomatic
+        - _id: bnmukmzny3q5kkq8
+          modifiers:
+            - _id: w4kyq0h11gsn5vqs
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+            - _id: cta6ox0hm66los76
+              formula: '2'
+              subTarget: allAttack
+              target: attack
+              type: enh
+          name: Bane
+        - _id: 8jhwj95xk8e9360a
+          modifiers:
+            - _id: qp6ocd38cfa21qd1
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+            - _id: zawg437hao7e2esl
+              formula: '2'
+              subTarget: allAttack
+              target: attack
+              type: enh
+          name: Blood-Hunting
+        - _id: gb9rm4ptoods1b5q
+          modifiers:
+            - _id: 3lwlaniqojnl9y8z
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Breaking
+        - _id: b7x3rs19uxnn23gg
+          modifiers:
+            - _id: b5bud0qfet54y2vv
+              critical: nonCrit
+              damageType:
+                - acid
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+          name: Corrosive
+        - _id: iji8wfp5tsuuklng
+          modifiers:
+            - _id: hqnsz9e1jncawilj
+              critical: nonCrit
+              damageType:
+                - acid
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+            - _id: ml216ktnwwqtt0t8
+              critical: crit
+              damageType:
+                - acid
+              formula: 1d10
+              subTarget: allDamage
+              target: damage
+          name: Corrosive Burst
+        - _id: 82a2c967wtlp9zil
+          modifiers:
+            - _id: 16n2fja5uqgden3g
+              critical: nonCrit
+              damageType:
+                - fire
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+          name: Flaming
+        - _id: 1qrktgjolzygloob
+          modifiers:
+            - _id: axkp8y57q4agf22i
+              critical: nonCrit
+              damageType:
+                - fire
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+            - _id: 39d1zl359k9ucro2
+              critical: crit
+              damageType:
+                - fire
+              formula: 1d10
+              subTarget: allDamage
+              target: damage
+          name: Flaming Burst
+        - _id: kwythz8h663n84oq
+          modifiers:
+            - _id: 8ui6iaor7rq4m3v7
+              critical: nonCrit
+              damageType:
+                - cold
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+          name: Frost
+        - _id: wcjug97p72pceln4
+          modifiers:
+            - _id: 5agfx177yo2qsgjq
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Holy
+        - _id: x9feeoan1jpf9c8o
+          modifiers:
+            - _id: 6evlrtmlfbbxnydn
+              critical: nonCrit
+              damageType:
+                - cold
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+            - _id: 6ghs89wesym6vlca
+              critical: crit
+              damageType:
+                - cold
+              formula: 1d10
+              subTarget: allDamage
+              target: damage
+          name: Icy Burst
+        - _id: nncc68peislp7dsz
+          modifiers:
+            - _id: 359udvnc35d1vlt5
+              critical: nonCrit
+              damageType:
+                - Nonlethal
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+          name: Merciful
+        - _id: ii7sy3m5lswoqury
+          modifiers:
+            - _id: 70bvxrsujxm2wux2
+              critical: nonCrit
+              damageType:
+                - electric
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+          name: Shock
+        - _id: qocvaucrjmm0v83r
+          modifiers:
+            - _id: 262t4y23dxdooajh
+              critical: nonCrit
+              damageType:
+                - electric
+              formula: 1d6
+              subTarget: allDamage
+              target: damage
+            - _id: 27aqulrh92jymm2o
+              critical: crit
+              damageType:
+                - electric
+              formula: 1d10
+              subTarget: allDamage
+              target: damage
+          name: Shocking Burst
+        - _id: d07wxu3m3nk95lw6
+          modifiers:
+            - _id: 156rmeg4by5iabeu
+              formula: '+2'
+              target: dc
+              type: untyped
+          name: Toxic
+        - _id: uksr4th8f8ggx9t7
+          modifiers:
+            - _id: jme4l4z3eu6nb7nt
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Unholy
+        - _id: j6bkmnid92a6kxal
+          modifiers:
+            - _id: iztcktkaduklzfsp
+              critical: crit
+              damageType:
+                - untyped
+              formula: '999'
+              subTarget: allDamage
+              target: damage
+          name: Vorpal
+      damage:
+        critParts:
+          - {}
+        nonCritParts:
+          - {}
+        parts:
+          - {}
+      img: icons/weapons/swords/greatsword-evil-green.webp
+      name: Attack
+      notes:
+        effect:
+          - ''
+        footer:
+          - ''
+      save:
+        dc: '0'
+        type: fort
+  description:
+    instructions: >-
+      <p> Import and then drag and drop the Conditional Modifier from the Attack
+      to the appropriate weapon.</p>
+    value: >-
+      <p>A small collection of some of the easier to implement Weapon Special
+      Qualities, set up as Conditional Modifiers.
+      </p><ul><li><p>Agile</p></li><li><p>Anarchic</p></li><li><p>Axiomatic</p></li><li><p>Bane</p></li><li><p>Blood-Hunting</p></li><li><p>Breaking</p></li><li><p>Corrosive</p></li><li><p>Corrosive
+      Burst</p></li><li><p>Flaming</p></li><li><p>Flaming
+      Burst</p></li><li><p>Frost</p></li><li><p>Holy</p></li><li><p>Icy
+      Burst</p></li><li><p>Merciful</p></li><li><p>Shock</p></li><li><p>Shocking
+      Burst</p></li><li><p>Toxic</p></li><li><p>Unholy</p></li><li><p>Vorpal</p></li></ul><hr>
+  subType: weapon
+  weapon:
+    category: simple
+    type: light
+type: attack

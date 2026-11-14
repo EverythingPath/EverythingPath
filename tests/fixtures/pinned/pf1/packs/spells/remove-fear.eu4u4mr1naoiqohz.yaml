@@ -1,0 +1,62 @@
+_id: eu4u4mr1naoiqohz
+_key: '!items!eu4u4mr1naoiqohz'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Remove Fear
+system:
+  actions:
+    - _id: evp975olxxiuexpk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 minutes; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one creature plus one additional creature per four levels, no two of
+          which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instill courage in the subject, granting it a +4 morale bonus
+      against fear effects for 10 minutes. If the subject is under the influence
+      of a fear effect when receiving the spell, that effect is suppressed for
+      the duration of the spell.</p><p><i>Remove fear</i> counters and dispels
+      cause fear.</p>
+  learnedAt:
+    class:
+      bard: 1
+      cleric: 1
+      inquisitor: 1
+      medium: 1
+      mesmerist: 1
+      oracle: 1
+      psychic: 1
+      shaman: 1
+      skald: 1
+      spiritualist: 1
+      warpriest: 1
+    domain:
+      Liberation: 1
+    subDomain:
+      Loyalty: 1
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '332'
+type: spell

@@ -1,0 +1,74 @@
+_id: 4jsss37x0pplib8f
+_key: '!items!4jsss37x0pplib8f'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Mirror Image
+system:
+  actions:
+    - _id: y767mqou0anwagum
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      notes:
+        effect:
+          - '[[min(8, (1d4 + floor(@cl / 3)))]] Images'
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell creates a number of illusory doubles of you that inhabit
+      your square. These doubles make it difficult for enemies to precisely
+      locate and attack you.</p><p>When <i>mirror image</i> is cast, 1d4 images
+      plus one image per three caster levels (maximum eight images total) are
+      created.</p><p>These images remain in your space and move with you,
+      mimicking your movements, sounds, and actions exactly. Whenever you are
+      attacked or are the target of a spell that requires an attack roll, there
+      is a possibility that the attack targets one of your images instead. If
+      the attack is a hit, roll randomly to see whether the selected target is
+      real or a figment. If it is a figment, the figment is destroyed. If the
+      attack misses by 5 or less, one of your figments is destroyed by the near
+      miss. Area spells affect you normally and do not destroy any of your
+      figments. Spells and effects that do not require an attack roll affect you
+      normally and do not destroy any of your figments. Spells that require a
+      touch attack are harmlessly discharged if used to destroy a
+      figment.</p><p>An attacker must be able to see the figments to be fooled.
+      If you are invisible or the attacker is blind, the spell has no effect
+      (although the normal miss chances still apply).</p>
+  learnedAt:
+    class:
+      adept: 2
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      magus: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Deception: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '314'
+  sr: false
+  subschool:
+    - figment
+type: spell

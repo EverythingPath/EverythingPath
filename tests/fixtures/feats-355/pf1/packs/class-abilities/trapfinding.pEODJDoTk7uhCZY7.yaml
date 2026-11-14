@@ -1,0 +1,38 @@
+_id: pEODJDoTk7uhCZY7
+_key: '!items!pEODJDoTk7uhCZY7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/lockpick.jpg
+name: Trapfinding
+system:
+  associations:
+    classes:
+      - Rogue
+      - Rogue (Unchained)
+      - Investigator
+      - Slayer
+  changes:
+    - _id: vhodw42z
+      formula: max(1, floor(@class.level / 2))
+      target: skill.dev
+      type: untyped
+  contextNotes:
+    - target: skill.per
+      text: +[[max(1, floor(@class.level / 2))]] vs Traps
+  description:
+    value: >-
+      <p>The character adds 1/2 her class level to
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.2h6hz5AkTDxKPFxr]{Perception}
+      skill checks made to locate traps and to
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.cSdUATLHBFfw3v4s]{Disable
+      Device} checks (minimum 1). The character can use Disable Device to disarm
+      magical traps.</p>
+  sources:
+    - id: PZO1110
+      pages: '63'
+    - id: PZO1129
+      pages: '31'
+    - id: PZO1131
+      pages: '20'
+  subType: classFeat
+type: feat

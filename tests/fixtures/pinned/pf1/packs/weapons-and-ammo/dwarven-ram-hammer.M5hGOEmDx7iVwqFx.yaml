@@ -1,0 +1,85 @@
+_id: M5hGOEmDx7iVwqFx
+_key: '!items!M5hGOEmDx7iVwqFx'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/ram-hammer-dwarven.PNG
+name: Dwarven Ram Hammer
+system:
+  actions:
+    - _id: 8mso5cg33zo2axlo
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: u0Hl6UTJR9l2w33S
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Dwarven Ram Hammer
+  description:
+    unidentified: >-
+      <p>The dwarven ram hammer is designed to be thrown or used in melee, with
+      a long leather strap that is wrapped around the wrist when used to deliver
+      blows in close combat but unfurled to aid in swinging the weapon when the
+      hammer is thrown.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 25
+  sources:
+    - id: PZO9491
+      pages: '8'
+  subType: exotic
+  tags:
+    - Dwarf
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weaponSubtype: 1h
+  weight:
+    value: 5
+type: weapon

@@ -1,0 +1,72 @@
+_id: e9tokjwpM4sqNd2I
+_key: '!items!e9tokjwpM4sqNd2I'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: icons/sundries/lights/lantern-bullseye-signal-copper.webp
+name: Bullseye lantern
+system:
+  actions:
+    - _id: frUbQFGErV3v1P2V
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: hour
+        value: '6'
+      name: Ignite
+      tag: ignite
+    - _id: 7mmMvv1937gqih5b
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Extinguish
+      tag: extinguish
+  description:
+    value: >-
+      <p>A bullseye lantern provides normal light in a 60-foot cone and
+      increases the light level by one step in the area beyond that, out to a
+      120-foot cone (darkness becomes dim light and dim light becomes normal
+      light). A bullseye lantern does not increase the light level in normal
+      light or bright light. A lantern burns for 6 hours on 1 pint of oil. You
+      can carry a lantern in one hand. </p>
+  hp:
+    base: 10
+  price: 12
+  scriptCalls:
+    - _id: ouQuauCUPl7MGcDX
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 120, angle: 45 }));
+    - _id: KnRHEbsiXHFLDfcg
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "extinguish") return;
+
+        // Lights off as it comes from Foundry default
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1110
+      pages: 156, 158
+    - id: PZO1123
+      pages: 56, 60
+  subType: adventuring
+  weight:
+    value: 3
+type: loot

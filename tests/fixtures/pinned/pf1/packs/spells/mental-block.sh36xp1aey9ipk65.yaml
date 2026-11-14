@@ -1,0 +1,52 @@
+_id: sh36xp1aey9ipk65
+_key: '!items!sh36xp1aey9ipk65'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Mental Block
+system:
+  actions:
+    - _id: eblk7j990luj5uq2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You lock access to the target's procedural memories, preventing it from
+      drawing upon its experience and expertise. The target loses all skill
+      ranks, spells known, spells prepared, and activated feats, as well as its
+      extraordinary, supernatural, and spell-like abilities. Each round at the
+      end of the target's turn, the target can attempt another Will save to end
+      this effect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      mesmerist: 1
+      psychic: 2
+      skald: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1132
+      pages: '176'
+type: spell

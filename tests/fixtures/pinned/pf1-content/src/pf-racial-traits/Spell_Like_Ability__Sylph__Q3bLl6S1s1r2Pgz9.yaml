@@ -1,0 +1,67 @@
+_id: Q3bLl6S1s1r2Pgz9
+_key: '!items!Q3bLl6S1s1r2Pgz9'
+_stats:
+  coreVersion: '12.331'
+folder: lGtOuDb5QxTmJ4OW
+img: systems/pf1/icons/races/sylph.png
+name: Spell-Like Ability (Sylph)
+system:
+  abilityType: sp
+  actions:
+    - _id: OCQJIZwTOkKslmpN
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather
+        fall}</em></p><p>The affected creatures or objects fall slowly. Feather
+        fall instantly changes the rate at which the targets fall to a mere
+        @Distance[60 ft;dual] per round (equivalent to the end of a fall from a
+        few feet), and the subjects take no damage upon landing while the spell
+        is in effect. When the spell duration expires, a normal rate of falling
+        resumes.</p><p>The spell affects one or more Medium or smaller creatures
+        (including gear and carried objects up to each creature's maximum load)
+        or objects, or the equivalent in larger creatures: a Large creature or
+        object counts as two Medium creatures or objects, a Huge creature or
+        object counts as four Medium creatures or objects, and so
+        forth.</p><p>This spell has no special effect on ranged weapons unless
+        they are falling quite a distance. If the spell is cast on a falling
+        item, the object does half normal damage based on its weight, with no
+        bonus for the height of the drop.</p><p>Feather fall works only upon
+        free-falling objects. It does not affect a sword blow or a charging or
+        flying creature.</p>
+      duration:
+        units: seeText
+      name: Feather fall
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: >-
+          one Medium or smaller freefalling object or creature/level, no two of
+          which may be more than 20 ft. apart
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sylph</p><hr /><p>Sylphs can use
+      <em>@UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather fall}
+      </em>1/day as a spell-like ability (with a caster level equal to the
+      sylph's character level).</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '250'
+    - id: PZO1116
+      pages: '258'
+    - id: PZO1121
+      pages: '157'
+  subType: racial
+  tags:
+    - Sylph
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

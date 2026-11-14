@@ -1,0 +1,74 @@
+_id: nmoqqlcl46w56o88
+_key: '!items!nmoqqlcl46w56o88'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Baphomet's Blessing
+system:
+  actions:
+    - _id: y0mx3g6dtl8sw799
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    divineFocus: 2
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>You change the target's head into that of a bull. The creature's
+      Intelligence becomes 2, and it gains a gore melee attack that it can use
+      as a primary or secondary attack. The gore attack uses the creature's base
+      attack bonus, and the creature gains a +2 bonus on attack and damage rolls
+      with the gore attack.</p><p>The gore attack deals a number of points of
+      damage equal to 1d6 + Strength modifier if the target is Small, 1d8 +
+      Strength modifier if the target is Medium, and 2d6 + Strength modifier if
+      the target is Large or larger.</p><p>The affected creature still retains
+      its type, class, levels, and Hit Dice. The creature's base attack bonus,
+      base save bonuses, and hit points remain unmodified. It retains all of its
+      class features and may still cast spells, though it must do so using its
+      newly modified Intelligence score. Any items equipped in the creature's
+      head slot meld into its body. Affected items that grant passive bonuses
+      continue to do so, though items that require activation become
+      nonfunctional for the duration of the spell.</p><p>If the target fails to
+      resist Baphomet's blessing, it also becomes immune to polymorph spells
+      (except for this one) for the duration of the spell's effect. Undead,
+      incorporeal, or gaseous creatures are immune to Baphomet's blessing.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      cleric: 4
+      druid: 4
+      hunter: 4
+      oracle: 4
+      sorcerer: 4
+      summoner: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: powdered bull's horn
+  school: trs
+  sources:
+    - id: PZO9267
+      pages: '229'
+  subschool:
+    - polymorph
+type: spell

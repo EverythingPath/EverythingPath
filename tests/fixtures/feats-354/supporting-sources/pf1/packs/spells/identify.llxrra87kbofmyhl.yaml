@@ -1,0 +1,65 @@
+_id: llxrra87kbofmyhl
+_key: '!items!llxrra87kbofmyhl'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Identify
+system:
+  actions:
+    - _id: npgcnejc0iwun59m
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        units: round
+        value: 3 * @cl
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect magic}, except
+      that it gives you a +10 enhancement bonus on Spellcraft checks made to
+      identify the properties and command words of magic items in your
+      possession. This spell does not allow you to identify artifacts.</p>
+  learnedAt:
+    bloodline:
+      Arcane: 1
+    class:
+      alchemist: 1
+      arcanist: 1
+      bard: 1
+      investigator: 1
+      medium: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      spiritualist: 1
+      summoner: 1
+      summonerUnchained: 1
+      witch: 1
+      wizard: 1
+    domain:
+      Magic: 1
+  materials:
+    value: wine stirred with an owl's feather
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '299'
+  sr: false
+type: spell

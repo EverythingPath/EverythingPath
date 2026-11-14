@@ -1,0 +1,56 @@
+_id: kQfiQUaq3lp43iND
+_key: '!items!kQfiQUaq3lp43iND'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Undead Servitude
+system:
+  abilityType: su
+  actions:
+    - _id: 9xzhtzpx4o9z76ai
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: 0ZBZ79Qi
+      formula: '1'
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>You gain @UUID[Compendium.pf1.feats.CjLNTqNGz4zU4zpp]{Command Undead}
+      as a bonus feat. You can channel negative energy a number of times per day
+      equal to 3 + your Charisma modifier, but only to use Command Undead. You
+      can take other feats to add to this ability, such as Improved Channeling,
+      but not feats that alter this ability, such as Alignment Channel.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.feats.Item.CjLNTqNGz4zU4zpp
+  sources:
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_undeadServitude
+  tags:
+    - Revelation
+    - Bones Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat
