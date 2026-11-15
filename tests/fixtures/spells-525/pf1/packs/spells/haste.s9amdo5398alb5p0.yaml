@@ -1,0 +1,80 @@
+_id: s9amdo5398alb5p0
+_key: '!items!s9amdo5398alb5p0'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/movement/feet-winged-boots-brown.webp
+name: Haste
+system:
+  actions:
+    - _id: 8zph2bcu3wkmq8y6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The transmuted creatures move and act more quickly than normal. This
+      extra <i>speed</i> has several effects.</p><p>When making a full attack
+      action, a <i>haste</i>d creature may make one extra attack with one
+      natural or manufactured weapon. The attack is made using the creature's
+      full base attack bonus, plus any modifiers appropriate to the situation.
+      (This effect is not cumulative with similar effects, such as that provided
+      by a <i>speed</i> weapon, nor does it actually grant an extra action, so
+      you can't use it to cast a second spell or otherwise take an extra action
+      in the round.) A <i>haste</i>d creature gains a +1 bonus on attack rolls
+      and a +1 dodge bonus to AC and Reflex saves. Any condition that makes you
+      lose your Dexterity bonus to Armor Class (if any) also makes you lose
+      dodge bonuses.</p><p>All of the <i>haste</i>d creature's modes of movement
+      (including land movement, burrow, climb, fly, and swim) increase by 30
+      feet, to a maximum of twice the subject's normal <i>speed</i> using that
+      form of movement. This increase counts as an enhancement bonus, and it
+      affects the creature's jumping distance as normal for increased
+      <i>speed</i>. Multiple <i>haste</i> effects don't stack. <i>Haste</i>
+      dispels and counters <i>slow</i>.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 3
+      bloodrager: 3
+      investigator: 3
+      magus: 3
+      medium: 2
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 2
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a shaving of licorice root
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '293'
+type: spell

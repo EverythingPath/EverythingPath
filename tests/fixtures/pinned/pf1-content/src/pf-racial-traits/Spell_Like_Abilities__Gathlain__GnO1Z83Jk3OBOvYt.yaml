@@ -1,0 +1,112 @@
+_id: GnO1Z83Jk3OBOvYt
+_key: '!items!GnO1Z83Jk3OBOvYt'
+_stats:
+  coreVersion: '12.331'
+folder: aUftnyakUTetdxwJ
+img: icons/commodities/wood/bark-beige.webp
+name: Spell-Like Abilities (Gathlain)
+system:
+  abilityType: sp
+  actions:
+    - _id: s6Io5GtJWSQxS3uY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: plants in a 40' radius spread
+      damage:
+        parts:
+          - formula: '1'
+            types:
+              - thorns
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle}
+        </p><p>This spell causes tall grass, weeds, and other plants to wrap
+        around creatures in the area of effect or those that enter the area.
+        Creatures that fail their save gain the entangled condition. Creatures
+        that make their save can move as normal, but those that remain in the
+        area must save again at the end of your turn. Creatures that move into
+        the area must save immediately. Those that fail must end their movement
+        and gain the entangled condition. Entangled creatures can attempt to
+        break free as a move action, making a Strength or Escape Artist check.
+        The DC for this check is equal to the DC of the spell. The entire area
+        of effect is considered difficult terrain while the effect
+        lasts.</p><p>If the plants in the area are covered in thorns, those in
+        the area take 1 point of damage each time they fail a save against the
+        entangle or fail a check made to break free. Other effects, depending on
+        the local plants, might be possible at GM discretion.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Entangle
+      notes:
+        footer:
+          - '@condition[entangled]'
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Partial See text
+        type: ref
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+    - _id: a49bQx3b2b3QCmt3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.bf2lu50t56iswz18]{feather
+        step}</p><p>For the duration of this spell, the subject ignores the
+        adverse movement effects of difficult terrain, and can even take
+        @Distance[5 ft;dual] steps in difficult terrain.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Feather Step
+      notes:
+        footer:
+          - ''
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Negates
+        type: fort
+      target:
+        value: one creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gathlain</p><hr /><p>Gathlains can cast
+      @UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle} and
+      @UUID[Compendium.pf1.spells.Item.bf2lu50t56iswz18]{feather step} each once
+      per day as spell-like abilities. The caster level for each is equal to the
+      gathlain’s character level.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1140
+      pages: '10'
+    - id: PZO9280
+      pages: '243'
+    - id: PZO1127
+      pages: '122'
+  subType: racial
+  tags:
+    - Gathlain
+  traitCategory: magical
+  uses:
+    maxFormula: '2'
+    value: 2
+type: feat

@@ -1,0 +1,63 @@
+_id: kBfgnl7ccM6QLCcH
+_key: '!items!kBfgnl7ccM6QLCcH'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/thrown/bolas-stone.webp
+name: Bolas
+system:
+  actions:
+    - _id: l07tt3cwyysv44au
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Bolas
+  description:
+    unidentified: >-
+      <p>A bolas is a pair of wooden, stone, or metal weights connected by a
+      thin rope or cord. You can whirl and throw this weapon to make a ranged
+      trip attack against an opponent. You can't be tripped during your own trip
+      attempt when using a bolas.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    nnl: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 145
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

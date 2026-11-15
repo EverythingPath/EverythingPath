@@ -1,0 +1,60 @@
+_id: kRFQLnjgl2cTlTrc
+_key: '!items!kRFQLnjgl2cTlTrc'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/fist/fist-katar-triple-engraved.webp
+name: Tekko-Kagi
+system:
+  actions:
+    - _id: gdr5wh1c56hzo7bq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Tekko-Kagi
+  description:
+    unidentified: >-
+      <p>Also known as an iron claw, this device consists of a fanlike structure
+      of three or more 10-inch blades secured to a sturdy handle strapped to the
+      forearm of the off hand. It can be used as an offensive weapon or
+      defensively like a buckler, or used to disarm an opponent without
+      provoking an attack of opportunity. It provides its owner with a +2
+      circumstance bonus on attempts to disarm or sunder swords or other
+      slender-bladed weapons.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    dis: true
+    fin: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - close
+type: weapon

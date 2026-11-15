@@ -1,0 +1,74 @@
+_id: 7x2z0i8rcx7s81fk
+_key: '!items!7x2z0i8rcx7s81fk'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-yellow.webp
+name: Daylight
+system:
+  actions:
+    - _id: df4t4azbjo8nfk1o
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      target:
+        value: object touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You touch an object when you cast this spell, causing the object to
+      shed bright light in a 60-foot radius. This illumination increases the
+      light level for an additional 60 feet by one step (<i>darkness</i> becomes
+      dim light, dim light becomes normal light, and normal light becomes bright
+      light). Creatures that take penalties in bright light take them while
+      within the 60-foot radius of this magical light. Despite its name, this
+      spell is not the equivalent of <i>daylight</i> for the purposes of
+      creatures that are damaged or destroyed by such light.</p><p>If
+      <i>daylight</i> is cast on a small object that is then placed inside or
+      under a light-proof covering, the spell's effects are blocked until the
+      covering is removed.</p><p><i>Daylight</i> brought into an area of magical
+      <i>darkness</i> (or vice versa) is temporarily negated, so that the
+      otherwise prevailing light conditions exist in the overlapping areas of
+      effect.</p><p><i>Daylight</i> counters or dispels any <i>darkness</i>
+      spell of equal or lower level, such as <i>darkness</i>.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      adept: 3
+      arcanist: 3
+      bard: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      inquisitor: 3
+      magus: 3
+      occultist: 3
+      oracle: 3
+      paladin: 3
+      shaman: 3
+      skald: 3
+      sorcerer: 3
+      warpriest: 3
+      wizard: 3
+    subDomain:
+      Day: 3
+      Light: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '264'
+  sr: false
+type: spell

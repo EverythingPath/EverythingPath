@@ -1,0 +1,54 @@
+_id: hv2ptafk0j3jwqda
+_key: '!items!hv2ptafk0j3jwqda'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Erodaemon
+system:
+  actions:
+    - _id: 2nhsm72qhdbhljns
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except it summons a
+      single erodaemon.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 8
+      cleric: 8
+      oracle: 8
+      sorcerer: 8
+      summoner: 6
+      witch: 8
+      wizard: 8
+  level: 8
+  materials:
+    focus: a bent or tarnished wedding band
+  school: con
+  sources:
+    - id: PZO1139
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

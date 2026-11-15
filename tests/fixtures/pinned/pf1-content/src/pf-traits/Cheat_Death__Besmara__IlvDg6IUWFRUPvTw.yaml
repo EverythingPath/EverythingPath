@@ -1,0 +1,154 @@
+_id: IlvDg6IUWFRUPvTw
+_key: '!items!IlvDg6IUWFRUPvTw'
+_stats:
+  coreVersion: '12.331'
+folder: MB4DGP9uns7VLmaa
+img: icons/magic/life/ankh-shadow-green.webp
+name: Cheat Death (Besmara)
+system:
+  actions:
+    - _id: 0hieiZPmDW5Gn2j9
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reroll Ability Check
+      tag: rerollAbilityCheck
+    - _id: JPTi44QZNTp3le6U
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reroll Skill Check
+      tag: rerollSkillCheck
+    - _id: FhPanNF5IbVfOHQf
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reroll Saving Throw
+      tag: rerollSavingThrow
+  contextNotes:
+    - target: allChecks
+      text: >-
+        Once per day, when you would be reduced to 0 or fewer hit points as a
+        result of a failed check on your part, you may invoke your Cheat Death
+        ability to reroll the failed check. You must take the result of the
+        second roll, even if it is worse.
+    - target: allSavingThrows
+      text: >-
+        Once per day, when you would be reduced to 0 or fewer hit points as a
+        result of a failed check on your part, you may invoke your Cheat Death
+        ability to reroll the failed check. You must take the result of the
+        second roll, even if it is worse.
+    - target: skills
+      text: >-
+        Once per day, when you would be reduced to 0 or fewer hit points as a
+        result of a failed check on your part, you may invoke your Cheat Death
+        ability to reroll the failed check. You must take the result of the
+        second roll, even if it is worse.
+  description:
+    value: >-
+      <p><em>Even Besmara's most faithful worshipers usually call upon her only
+      in times of greatest need. Sometimes Besmara intervenes on behalf of her
+      faithful; other times, she turns her face away as they sink beneath the
+      waves.</em></p><p><strong>Requirements</strong>:
+      Besmara</p><p><strong>Benefits</strong>: Once per day, when you would be
+      reduced to 0 or fewer hit points as a result of a failed ability check,
+      skill check, or saving throw on your part, you may invoke this ability in
+      order to reroll the failed check. You must take the result of the second
+      roll, even if it is worse than the original.</p>
+  scriptCalls:
+    - _id: hPQfThLNl0jlY53k
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll ability check, skill check, or saving throw
+      type: script
+      value: |-
+        async function getAnswer(type) {
+          let buttons = {};
+          const typeLC = type.toLowerCase();
+          let content = `
+          <div class="flexcol">
+            <h3>Rerolling a Check:</h3>
+            <p>Please pick ${typeLC} to reroll from the buttons below.</p>
+          `;
+
+          if (type === "an Ability Check") {
+            // Ability checks
+            for(const [abl, ability] of Object.entries(pf1.config.abilities)) {
+              buttons[abl] = {
+                label: ability,
+                callback: () => abl
+              }
+            }
+          } else if (type === "a Skill Check") {
+            // Skill checks
+            actor.allSkills.forEach( skl => {
+              const skill = actor.getSkillInfo(skl).fullName;
+              buttons[skl] = {
+                label: skill,
+                callback: () => skl
+              }
+            });
+          } else {
+            // Saving throws
+            for(const [save, savingThrow] of Object.entries(pf1.config.savingThrows)) {
+              buttons[save] = {
+                label: savingThrow,
+                callback: () => save
+              }
+            }
+          }
+
+          return Dialog.wait({
+            title: `${item.name} – Reroll ${type}`,
+            content: content,
+            buttons: buttons,
+            default: null,
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        let actionTag = shared.action.tag;
+        let answer = null;
+
+        switch(actionTag) {
+          case "rerollAbilityCheck": {
+            answer = await getAnswer("an Ability Check");
+            if(answer) await actor.rollAbilityTest(answer);
+            break;
+          }
+          case "rerollSkillCheck": {
+            answer = await getAnswer("a Skill Check");
+            if(answer) await actor.rollSkill(answer);
+            break;
+          }
+          case "rerollSavingThrow": {
+            answer = await getAnswer("a Saving Throw");
+            if(answer) await actor.rollSavingThrow(answer);
+            break;
+          }
+        }
+
+        if(answer === null) {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9422
+      pages: '27'
+  subType: trait
+  tags:
+    - Besmara
+  traitType: religion
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

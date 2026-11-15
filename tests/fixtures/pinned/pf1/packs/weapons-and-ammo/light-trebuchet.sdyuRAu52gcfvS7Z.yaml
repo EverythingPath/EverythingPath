@@ -1,0 +1,76 @@
+_id: sdyuRAu52gcfvS7Z
+_key: '!items!sdyuRAu52gcfvS7Z'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/artillery/trebuchet-simple.webp
+name: Light Trebuchet
+system:
+  actions:
+    - _id: ijzxrcroromx4w2r
+      ability:
+        attack: _default
+        critRange: null
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(4, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '100'
+        units: ft
+        value: '200'
+  ammo:
+    type: siege
+  baseTypes:
+    - Light Trebuchet
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 4d6;
+      <strong>Critical</strong> x2; <strong>Range</strong> 200 ft. (100 ft.
+      min.); <strong>Type</strong> B</p><p><strong>Crew</strong> 3;
+      <strong>Aim</strong> 2; <strong>Load</strong> 3; <strong>Speed</strong> 0
+      ft.</p><p><strong>Category</strong> Indirect-Fire (Large);
+      <strong>Proficiency</strong> Siege
+      Engine</p><h3>Description</h3><p>Trebuchets are similar in form to
+      catapults, with the payload placed into a basket, cup, or sling at the end
+      of a long lever, and a counterweight (often with crew or animals pulling
+      attached ropes) close to the fulcrum. The leverage imparted by a trebuchet
+      allows it to hurl massive missiles that scatter to a number of squares
+      around the target square based on the size of the trebuchet. Trebuchets
+      are too bulky to move on wheels or vehicles and must be assembled on the
+      battlefield. Trebuchets have a minimum range of 150
+      feet.</p><p><em>Light</em>: These Large siege engines typically hurl large
+      stones indirectly at a target (targeting DC 15). A light trebuchet's
+      ammunition scatters on contact, dealing full damage to the target square
+      and half its damage to creatures and objects within 5 feet of the target
+      square (creatures can make a DC 15 Reflex save to halve the damage again).
+      Light trebuchets have a hardness of 5 and 50 hit points. One use of light
+      trebuchet stones costs 15 gp and weighs 60 pounds.</p>
+  hardness: 5
+  hp:
+    base: 50
+  material:
+    base:
+      value: steel
+  price: 800
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: exotic
+  weaponSubtype: ranged
+type: weapon

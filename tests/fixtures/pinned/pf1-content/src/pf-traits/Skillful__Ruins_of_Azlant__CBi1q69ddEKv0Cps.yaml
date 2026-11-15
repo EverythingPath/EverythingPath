@@ -1,0 +1,125 @@
+_id: CBi1q69ddEKv0Cps
+_key: '!items!CBi1q69ddEKv0Cps'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Skillful (Ruins of Azlant)
+system:
+  actions:
+    - _id: 0CdUZyyqebssCFta
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Reroll skill check
+  contextNotes:
+    - target: skill.acr
+      text: >-
+        Once per day, when you fail a check, you can immediately reroll that
+        check as a free action. You must take the second result, even if it’s
+        worse. ([[@resources.skillfulRuinsOfAzlant.value]] remaining uses)
+    - target: skill.clm
+      text: >-
+        Once per day, when you fail a check, you can immediately reroll that
+        check as a free action. You must take the second result, even if it’s
+        worse. ([[@resources.skillfulRuinsOfAzlant.value]] remaining uses)
+    - target: skill.spl
+      text: >-
+        Once per day, when you fail a check, you can immediately reroll that
+        check as a free action. You must take the second result, even if it’s
+        worse. ([[@resources.skillfulRuinsOfAzlant.value]] remaining uses)
+    - target: skill.ste
+      text: >-
+        Once per day, when you fail a check, you can immediately reroll that
+        check as a free action. You must take the second result, even if it’s
+        worse. ([[@resources.skillfulRuinsOfAzlant.value]] remaining uses)
+    - target: skill.umd
+      text: >-
+        Once per day, when you fail a check, you can immediately reroll that
+        check as a free action. You must take the second result, even if it’s
+        worse. ([[@resources.skillfulRuinsOfAzlant.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>You’ve always been interested in a wide array of things, and
+      growing up you’ve spent time honing some of these talents, which has
+      helped you in life. Some have attributed your successes to luck, but
+      others have recognized what you truly have— skill. This interest in and
+      practice of a diverse array of skills and abilities has served you well in
+      a number of different jobs, and following in your varied interests you
+      learned of the expedition to the ruins of Azlant. After your application,
+      the Bountiful Venture Company selected you for the expedition because your
+      skillful approach to matters would be helpful for a growing
+      colony.</em></p><p><strong>Benefits</strong>: Once per day when you fail
+      an Acrobatics, Climb, Spellcraft, Stealth, or Use Magic Device check, you
+      can immediately reroll that check as a free action. You must take the
+      second result, even if it’s worse.</p>
+  scriptCalls:
+    - _id: EEBuDwYlhath3Zhu
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Skill Check
+      type: script
+      value: |-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Skill:</h3>
+            <p>Please pick a skill to reroll from the buttons below.</p>
+          </div>
+        `;
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Skill`,
+            content: content,
+            buttons: {
+              acr: {
+                label: pf1.config.skills["acr"],
+                callback: () => "acr",
+              },
+              clm: {
+                label: pf1.config.skills["clm"],
+                callback: () => "clm",
+              },
+              spl: {
+                label: pf1.config.skills["spl"],
+                callback: () => "spl",
+              },
+              ste: {
+                label: pf1.config.skills["ste"],
+                callback: () => "ste",
+              },
+              umd: {
+                label: pf1.config.skills["umd"],
+                callback: () => "umd",
+              }
+            },
+            default: 'acr',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        const answer = await getAnswer();
+        if(answer !== null) {
+          actor.rollSkill(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9000-21E
+      pages: '11'
+  subType: trait
+  tags:
+    - Ruins of Azlant
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

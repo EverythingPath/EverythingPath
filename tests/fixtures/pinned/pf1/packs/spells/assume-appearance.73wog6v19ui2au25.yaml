@@ -1,0 +1,69 @@
+_id: 73wog6v19ui2au25
+_key: '!items!73wog6v19ui2au25'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Assume Appearance
+system:
+  actions:
+    - _id: a53ds31ea1egxjlj
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions similarly to <i>alter self</i>, except for the
+      following differences. You assume the exact form of a deceased Small or
+      Medium creature of the humanoid type. Your voice changes to match that of
+      the form you assume. The creature whose form you assume must be dead and
+      you must have access to its fresh corpse (either dead less than 24 hours,
+      or preserved via <i>gentle repose</i> or similar effect). Any attempt to
+      copy the form of a living creature causes the spell to fail. You do not
+      have access to the assumed form's abilities, memories, mannerisms, or
+      speech patterns. The spell grants a +10 bonus on Disguise checks to appear
+      as the imitated creature.  If the assumed creature is returned to life
+      while this spell is active, <i>assume appearance</i> immediately ends.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 3
+      investigator: 3
+      medium: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      shaman: 3
+      skald: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: corpse of the deceased creature whose form you plan to assume
+  school: trs
+  sources:
+    - id: PZO1135
+      pages: '108'
+  sr: false
+  subschool:
+    - polymorph
+type: spell

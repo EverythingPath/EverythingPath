@@ -1,0 +1,27 @@
+_id: CzEGD1Fv60Sa4UXe
+_key: '!items!CzEGD1Fv60Sa4UXe'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-1.jpg
+name: Stern Gaze
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Inquisitor
+  changes:
+    - _id: 9vo63x5i
+      formula: max(1, floor(@class.level / 2))
+      target: skill.int
+      type: morale
+    - _id: cvwe4abv
+      formula: max(1, floor(@class.level / 2))
+      target: skill.sen
+      type: morale
+  description:
+    value: >-
+      <p>Inquisitors are skilled at sensing deception and intimidating their
+      foes. An inquisitor receives a morale bonus on all Intimidate and Sense
+      Motive checks equal to 1/2 her inquisitor level (minimum +1).</p>
+  subType: classFeat
+type: feat
