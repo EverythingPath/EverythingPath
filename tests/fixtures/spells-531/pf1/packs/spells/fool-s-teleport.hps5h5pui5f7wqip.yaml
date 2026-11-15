@@ -1,0 +1,63 @@
+_id: hps5h5pui5f7wqip
+_key: '!items!hps5h5pui5f7wqip'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Fool's Teleport
+system:
+  actions:
+    - _id: oyxxqkzj2x34d5eb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates; see text
+        harmless: true
+        type: will
+      target:
+        value: you and other touched willing creatures
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell instantly renders you unseen as per
+      @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, but
+      creates a visual and auditory display that makes it appear as if you had
+      <em>teleport</em>ed away. You can affect one additional Medium or smaller
+      creature or its equivalent per 3 caster levels (a Large creature counts as
+      two Medium creatures, a Huge creature counts as four Medium creatures, and
+      so forth). All creatures to be affected must be in contact with one
+      another, and at least one of those creatures must be in contact with you.
+      If a viewer identifies the spell with a successful Spellcraft check, she
+      can attempt an immediate Will saving throw as if interacting with an
+      illusion. With a successful Will save, the observer can correctly identify
+      fool's <em>teleport</em> for what it is; otherwise, she perceives the
+      spell to be <em>dimension door</em>, <em>teleport</em>, or similar
+      conjuration magic. A successful Will save doesn't negate the
+      <em>invisibility</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      mesmerist: 3
+      psychic: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO9461
+      pages: '13'
+  sr: false
+  subschool:
+    - glamer
+type: spell

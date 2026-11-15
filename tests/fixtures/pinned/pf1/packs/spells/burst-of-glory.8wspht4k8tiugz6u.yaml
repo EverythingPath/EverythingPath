@@ -1,0 +1,61 @@
+_id: 8wspht4k8tiugz6u
+_key: '!items!8wspht4k8tiugz6u'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Burst of Glory
+system:
+  actions:
+    - _id: kyecst2y41hiqppi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius burst, centered on you
+      duration:
+        units: spec
+        value: 1 round/level (D; see text)
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Allies in the area of this spell at the time of casting gain a +1
+      sacred bonus on attack rolls and saves against fear effects, plus 1
+      temporary hit point per caster level (maximum 20). You shine with a white
+      or golden radiance equal to a torch for the spell's duration, though you
+      can dismiss the glow effect as a free action.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 5
+      inquisitor: 4
+      oracle: 5
+      paladin: 4
+      warpriest: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO9267
+      pages: '230'
+    - id: PZO9202
+      pages: '21'
+  subschool:
+    - compulsion
+type: spell

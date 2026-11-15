@@ -1,0 +1,52 @@
+_id: 08ido3g78w7belo8
+_key: '!items!08ido3g78w7belo8'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Mark of Obvious Ethics
+system:
+  actions:
+    - _id: 4l77gbx814k5a0au
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mark one creature with a glowing sigil. The target's alignment must
+      be opposite yours on at least one alignment axis-if you are neutral with
+      no other alignment components, the target must have an alignment with no
+      neutral component. Any creature that sees the target can attempt a DC 15
+      Knowledge (religion) check to discern the target's alignment, even if the
+      mark is covered. You are aware of the direction and distance to the target
+      as long as it remains within 100 miles of you and on the same plane.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  school: div
+  sources:
+    - id: PZO1129
+      pages: '187'
+type: spell

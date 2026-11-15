@@ -1,0 +1,71 @@
+_id: 78kwl5t99j9e8tzh
+_key: '!items!78kwl5t99j9e8tzh'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/silhouette-hold-change-green.webp
+name: Hold Person
+system:
+  actions:
+    - _id: zobx902zwnsq3934
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level; see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one humanoid creature
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject becomes paralyzed and freezes in place. It is aware and
+      breathes normally but cannot take any actions, even speech. Each round on
+      its turn, the subject may attempt a new saving throw to end the effect.
+      This is a full-round action that does not provoke attacks of opportunity.
+      A winged creature who is paralyzed cannot flap its wings and falls. A
+      swimmer can't swim and may drown.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 3
+      bard: 2
+      bloodrager: 3
+      cleric: 2
+      inquisitor: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 3
+      oracle: 2
+      psychic: 2
+      shaman: 2
+      skald: 2
+      sorcerer: 3
+      warpriest: 2
+      witch: 2
+      wizard: 3
+  level: 3
+  materials:
+    focus: a small, straight piece of iron
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '294'
+  subschool:
+    - compulsion
+type: spell

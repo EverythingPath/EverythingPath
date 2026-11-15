@@ -1,0 +1,563 @@
+_id: CUhcL6yCE9VW0AXv
+_key: '!items!CUhcL6yCE9VW0AXv'
+_stats:
+  coreVersion: '12.343'
+folder: 1uDzTmqE6tgpIano
+img: icons/containers/chest/chest-reinforced-steel-red.webp
+name: Kit, Oracle's
+system:
+  hp:
+    base: 10
+  items:
+    3CcWVdvs0UK4o0oY:
+      _id: 3CcWVdvs0UK4o0oY
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.habofoapdifirevm
+      img: icons/tools/cooking/cauldron-empty.webp
+      name: Pot, common
+      system:
+        description:
+          value: >-
+            <p>This 8-inch-diameter iron pot is sturdy and has feet, a lid, and
+            a rounded handle. It can hold enough stew to feed one hungry human
+            for one meal.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.8
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        tags:
+          - Cooking
+        weight:
+          value: 4
+      type: loot
+    6HSc546f6DGAJYTq:
+      _id: 6HSc546f6DGAJYTq
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.iegwwsarycqwoezj
+      img: systems/pf1/icons/items/inventory/cloth-blue.jpg
+      name: Bedroll
+      system:
+        description:
+          value: >-
+            <p>This consists of two woolen sheets sewn together along the bottom
+            and one side to create a bag for sleeping in. Some have cloth straps
+            along the open side so the bedroll can be tied closed while you are
+            sleeping. It can be rolled and tied into a tight coil for storage or
+            transport. Most people use a <em>blanket</em> with the bedroll to
+            stay warm or provide a ground cushion.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.1
+        sources:
+          - id: PZO1123
+            pages: '56'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        weight:
+          value: 5
+      type: loot
+    EqqULHKynMzHe1Sa:
+      _id: EqqULHKynMzHe1Sa
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.ygmrcisvftnvjyob
+      img: icons/commodities/stone/rock-chunk-grey.webp
+      name: Flint And Steel
+      system:
+        actions:
+          - _id: nOah5FBBvcEip0El
+            activation:
+              type: full
+              unchained:
+                cost: 3
+                type: action
+            name: Light any fire
+        description:
+          value: >-
+            <p>Lighting a <em>torch</em> with a <em>flint and steel</em> is a
+            full-round action. Lighting any other fire with them takes at least
+            that long.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: 56, 64
+          - id: PZO1110
+            pages: 155, 158
+        subType: adventuring
+      type: loot
+    KcFIZ56kGbgrdkPx:
+      _id: KcFIZ56kGbgrdkPx
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.snfogneawzopfzzl
+      img: systems/pf1/icons/items/inventory/torch.jpg
+      name: Torch
+      system:
+        actions:
+          - _id: 7IkvstJGhp2Kfl21
+            activation:
+              type: full
+              unchained:
+                cost: 3
+                type: action
+            name: Enlight (using flint and steal)
+            tag: ignite
+          - _id: KNOoanyFVJlRjrdg
+            ability:
+              attack: str
+              damage: str
+              damageMult: 1
+            actionType: mwak
+            activation:
+              type: attack
+              unchained:
+                type: attack
+            attackBonus: '-2[Improvised Weapon]'
+            damage:
+              parts:
+                - formula: sizeRoll(1, 3, @size)
+                  types:
+                    - bludgeoning
+                - formula: '1'
+                  types:
+                    - fire
+            extraAttacks:
+              type: standard
+            name: Attack
+            uses:
+              autoDeductChargesCost: '0'
+          - _id: shc8HOmsOaDPbFKX
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Extinguish
+            tag: extinguish
+        description:
+          value: >-
+            <p>A torch burns for 1 hour, shedding normal light in a 20-foot
+            radius and increasing the light level by one step for an additional
+            20 feet beyond that area (darkness becomes dim light and dim light
+            becomes normal light). A torch does not increase the light level in
+            normal light or bright light. If a torch is used in combat, treat it
+            as a one-handed improvised weapon that deals bludgeoning damage
+            equal to that of a gauntlet of its size, plus 1 point of fire
+            damage.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.01
+        quantity: 10
+        scriptCalls:
+          - _id: X6fUtOgays06HuzF
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn on light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "ignite") return;
+
+              fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+                .then(lm => lm.execute({ token, range: 40 }));
+          - _id: B7q2csNBZkQnLMYQ
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn off light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "extinguish") return;
+
+              // Lights off as it comes from Foundry default
+              const light = new foundry.data.LightData().toObject();
+              token.document.update({ light });
+        sources:
+          - id: PZO1123
+            pages: 58, 74
+          - id: PZO1110
+            pages: 157, 158
+        subType: adventuring
+        weight:
+          value: 1
+      type: loot
+    KjAAtWY6e9lY5DwA:
+      _id: KjAAtWY6e9lY5DwA
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.bsztkhkrhgmsbqpt
+      img: systems/pf1/icons/items/inventory/waterskin.jpg
+      name: Waterskin
+      system:
+        description:
+          value: >-
+            <p>A water or wineskin holds 1/2 gallon of liquid and weighs 4 lb
+            when full.</p><p><strong>Empty Weight</strong>: -;
+            <strong>Capacity</strong>: 1/2 gallon/4 lb.<sup>1</sup></p><p
+            class="source"><sup>1</sup> When made for Medium characters. Weighs
+            one-quarter the normal amount when made for Small characters. Weighs
+            twice the normal amount when made for Large characters. Containers
+            carry one-quarter the normal amount when made for Small
+            characters.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '58'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        weight:
+          value: 4
+      type: loot
+    VL1mLRldLFvSyHMl:
+      _id: VL1mLRldLFvSyHMl
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.lSCPUK5Ea6R0t4fz
+      img: systems/pf1/icons/items/inventory/backpack.jpg
+      name: Backpack, common
+      system:
+        description:
+          value: >-
+            <p>This leather knapsack has one large pocket that closes with a
+            buckled strap and holds about 2 cubic feet of material. Some may
+            have one or more smaller pockets on the sides.</p>
+        hp:
+          base: 10
+        price: 2
+        sources:
+          - id: PZO1123
+            pages: '58'
+        weight:
+          value: 2
+      type: container
+    Vb7aX6qXBmCnCRoP:
+      _id: Vb7aX6qXBmCnCRoP
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.yMoclCylbCRKyaZF
+      img: systems/pf1/icons/items/inventory/soap.jpg
+      name: Soap
+      system:
+        actions:
+          - _id: ootoocddr3l2eoat
+            activation:
+              type: special
+              unchained:
+                type: special
+            name: Use
+        description:
+          value: >-
+            <p>You can use this thick block of soap to scrub clothes, pots,
+            linens, or anything else that might be dirty. A bar of soap has
+            approximately 50 uses.</p>
+        hp:
+          base: 10
+        price: 0.01
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO9410
+            pages: '19'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        uses:
+          maxFormula: '50'
+          per: charges
+          value: 50
+        weight:
+          value: 0.5
+      type: loot
+    dqOaoyXA0SrZLu0m:
+      _id: dqOaoyXA0SrZLu0m
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.wjvxmolafiegvesl
+      img: icons/containers/bags/coinpouch-simple-leather-tan.webp
+      name: Belt Pouch
+      system:
+        description:
+          value: >-
+            <p>A typical leather or cloth belt pouch has a leather cord to cinch
+            it shut and another to tie it to your belt. It is large enough to
+            hold 100–200 coins or two apples.</p>
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '56'
+        weight:
+          value: 0.5
+      type: container
+    gexsC0rJ2qeknL4q:
+      _id: gexsC0rJ2qeknL4q
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.manvtbznrwjmnrua
+      img: systems/pf1/icons/items/inventory/meat.jpg
+      name: Trail Rations
+      system:
+        actions:
+          - _id: VdYbDgVtRRoWmGoA
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Use
+        description:
+          value: >-
+            <p>The listed price is for a day's worth of food. This bland food is
+            usually some kind of hard tack, jerky, and dried fruit, though the
+            contents vary from region to region and the race of those creating
+            it. As long as it stays dry, it can go for months without
+            spoiling.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.5
+        quantity: 5
+        sources:
+          - id: PZO1123
+            pages: '95'
+          - id: PZO1110
+            pages: '158'
+        subType: food
+        uses:
+          per: single
+        weight:
+          value: 1
+      type: loot
+    mkMsycklB08AIsQ0:
+      _id: mkMsycklB08AIsQ0
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.qlmtnppwxkubqyhp
+      img: icons/sundries/survival/rope-wrapped-grey.webp
+      name: Rope
+      system:
+        description:
+          value: >-
+            <p>This 50-foot length of hemp rope has 2 hit points and can be
+            burst with a DC 23 Strength check.</p>
+        equipped: false
+        hp:
+          base: 2
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: 58, 70
+          - id: PZO1110
+            pages: 157, 158
+        subType: adventuring
+        weight:
+          value: 10
+      type: loot
+    ucek4SCQcHmUjzyw:
+      _id: ucek4SCQcHmUjzyw
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.Ueae6c2qqJJGpncA
+      img: icons/containers/chest/chest-simple-box-red.webp
+      name: Mess Kit
+      system:
+        description:
+          value: >-
+            <p>This kit includes a plate, bowl, cup, fork, knife, and spoon,
+            made of wood, horn, or tin. Each item has a handle or small hole,
+            and can be tied together using the included leather cord.</p>
+        hp:
+          base: 10
+        items:
+          75V6g53wDWtG50uT:
+            _id: 75V6g53wDWtG50uT
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.jzu5QqK20bW9gkN1
+            img: icons/tools/cooking/fork-steel-tan.webp
+            name: Fork
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+          B5gFNbiUqEKlkI3d:
+            _id: B5gFNbiUqEKlkI3d
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.fASUzJozDXZldwNT
+            img: icons/containers/kitchenware/bowl-clay-brown.webp
+            name: Bowl
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.2
+            type: loot
+          G0t7OoDwQXQgSuli:
+            _id: G0t7OoDwQXQgSuli
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.GZtAdQ7gJlCe9z64
+            img: icons/tools/cooking/knife-chef-steel-brown.webp
+            name: Knife
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+                - Crafting
+                - Survival
+              weight:
+                value: 0.1
+            type: loot
+          HrXDTu0yJArUbpYe:
+            _id: HrXDTu0yJArUbpYe
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.tVkpdPfIJomoFjUl
+            img: icons/consumables/meat/plate-hock-bone-pink.webp
+            name: Plate
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: tradeGoods
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.4
+            type: loot
+          ssTkq1uXfAO6KeFH:
+            _id: ssTkq1uXfAO6KeFH
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.QqdYeaj0M8e5FWWK
+            img: icons/containers/kitchenware/vase-wood-wrapped-brown.webp
+            name: Cup
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: tradeGoods
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+          wPKymHrQQpgJ2oYO:
+            _id: wPKymHrQQpgJ2oYO
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.Asg5Ek4CFqb80P7C
+            img: icons/tools/cooking/soup-ladle.webp
+            name: Spoon
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+        price: 0.2
+        sources:
+          - id: PZO1123
+            pages: '57'
+      type: container
+    vew6Jl2qKET6YIFD:
+      _id: vew6Jl2qKET6YIFD
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.jewqhqesccxrvivd
+      img: systems/pf1/icons/items/inventory/candle.jpg
+      name: Candle
+      system:
+        actions:
+          - _id: su42oeevO8Sw3cKi
+            activation:
+              type: special
+              unchained:
+                type: nonaction
+            duration:
+              units: hour
+              value: '1'
+            name: Ignite
+            tag: ignite
+            uses:
+              autoDeductChargesCost: '1'
+          - _id: jhOeLTBf4RwThzDe
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Extinguish
+            tag: extinguish
+        description:
+          value: >-
+            <p>A candle dimly illuminates a small area, increasing the light
+            level in a 5-foot radius by one step (darkness becomes dim light and
+            dim light becomes normal light). A candle cannot increase the light
+            level above normal light. A candle burns for 1 hour.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.01
+        quantity: 10
+        scriptCalls:
+          - _id: H62XLSB8fS11kyM9
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn on light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "ignite") return;
+
+              fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+                .then(lm => lm.execute({ token, range: 5 }));
+          - _id: 2Ru4FFdAZ4vzHqM2
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn off light
+            type: script
+            value: |
+              if (!token) return;
+              if (action.tag !== "extinguish") return;
+
+              // Lights off as it comes from Foundry default
+              const light = new foundry.data.LightData().toObject();
+              token.document.update({ light });
+        sources:
+          - id: PZO1123
+            pages: 56, 61
+          - id: PZO1110
+            pages: 155, 158
+        subType: adventuring
+      type: loot
+  sources:
+    - id: PZO1123
+      pages: '57'
+type: container

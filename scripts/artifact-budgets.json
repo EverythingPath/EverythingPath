@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "unbudgeted": {
+    "maxNewFileBytes": 1000000,
+    "maxPositiveGrowthBytes": 5000000,
+    "maxAddedLines": 50000
+  },
+  "families": [
+    {
+      "id": "campaign-mvp-inventory",
+      "paths": [
+        "scripts/catalog/scopes/campaign-mvp-v1*",
+        "docs/catalog-import/campaign-mvp*"
+      ],
+      "maxBytes": 100000000,
+      "maxLines": 600000,
+      "reason": "Compact launch inventory and independent validation authorities",
+      "issue": 768
+    },
+    {
+      "id": "catalog-legal-evidence",
+      "paths": [
+        "scripts/catalog/legal/*",
+        "src/lib/catalog/data/attribution-evidence.json"
+      ],
+      "maxBytes": 324000000,
+      "maxLines": 4380000,
+      "reason": "Reviewed legal inventories and attribution evidence, the evidence stored once as hash-named blobs and the seven Spells inventories 530 to 536 with each repeated entry and text once (legal-l2); measured 308,008,122 B / 4,162,220 lines plus 5% headroom, rounded up",
+      "issue": 744
+    }
+  ]
+}

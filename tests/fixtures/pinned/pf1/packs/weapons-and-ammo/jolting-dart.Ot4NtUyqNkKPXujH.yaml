@@ -1,0 +1,63 @@
+_id: Ot4NtUyqNkKPXujH
+_key: '!items!Ot4NtUyqNkKPXujH'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/dart-jolting.png
+name: Jolting Dart
+system:
+  actions:
+    - _id: g8smmzehf5fclmsi
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+          - formula: 1d6
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Jolting Dart
+  description:
+    unidentified: >-
+      <p>This alchemically grown crystal dart builds up an electrical charge
+      when thrown. A creature struck by the dart takes normal piercing damage
+      and 1d6 points of electricity damage. Anyone proficient in darts can use a
+      jolting dart. Once thrown, the dart is destroyed.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 100
+  properties:
+    spc: true
+  sources:
+    - id: PZO1121
+      pages: '205'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 0.5
+type: weapon

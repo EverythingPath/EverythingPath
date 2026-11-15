@@ -1,0 +1,84 @@
+_id: dg3mrasygkm83c3e
+_key: '!items!dg3mrasygkm83c3e'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Slay Living
+system:
+  actions:
+    - _id: g9muv57yfawuyadc
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 12d6 + @cl
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      notes:
+        effect:
+          - '@Action[Damage on Save]'
+      range:
+        units: touch
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: living creature touched
+      touch: true
+    - _id: Ai42aOgoUA4qryag
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 3d6 + @cl
+            types:
+              - untyped
+      name: Damage on Save
+      notes:
+        effect:
+          - '@Action[Damage on Save]'
+      touch: true
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can attempt to slay any one living creature. When you cast this
+      spell, your hand seethes with eerie dark fire. You must succeed on a melee
+      touch attack to touch the target. The target takes 12d6 points of damage +
+      1 point per caster level. If the target's Fortitude saving throw succeeds,
+      it instead takes 3d6 points of damage + 1 point per caster level. The
+      subject might die from damage even if it succeeds on its saving throw.</p>
+  descriptors:
+    - death
+  learnedAt:
+    class:
+      antipaladin: 4
+      cleric: 5
+      oracle: 5
+      shaman: 6
+      spiritualist: 5
+      warpriest: 5
+      witch: 6
+    domain:
+      Death: 5
+      Repose: 5
+  level: 5
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '344'
+type: spell

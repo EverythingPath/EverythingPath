@@ -1,0 +1,64 @@
+_id: b3koss885z9u6ecl
+_key: '!items!b3koss885z9u6ecl'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Shared Sacrifice
+system:
+  actions:
+    - _id: 1v57i1o4wgfugqti
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a link to a target and can direct pain and damage through
+      this link. You take only half damage from effects and attacks that deal
+      hit point damage.</p><p>The target of this spell takes the remainder of
+      the damage.</p><p>Forms of harm that do not involve hit points, such as
+      charm effects, temporary ability damage, level drain, and death effects
+      cannot be shared through this link. If you suffer a reduction in hit
+      points because of a lowered Constitution score, the reduction is not split
+      with the target of this spell because it is not hit point damage. When the
+      spell ends, subsequent damage is no longer divided between the subject and
+      you, but damage already split is not reassigned back to you.</p><p>If you
+      and the target of the spell move out of range of each other, the spell
+      immediately ends.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 3
+      cleric: 2
+      oracle: 2
+      shaman: 2
+      summoner: 3
+      warpriest: 2
+      witch: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO9267
+      pages: '240'
+    - id: PZO9420
+      pages: '28'
+type: spell

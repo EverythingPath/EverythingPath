@@ -1,0 +1,61 @@
+_id: 1btrja5u0cz66cy8
+_key: '!items!1btrja5u0cz66cy8'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Blood Mist
+system:
+  actions:
+    - _id: yxojitac1vczzbte
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 60-ft. radius
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        color: '#b32d00'
+        size: '60'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell summons forth a misty cloud of rust-red toxic algae. Any
+      creature within the mist is coated by it, turning the creature the same
+      reddish color. All targets within the mist gain concealment. Any creature
+      within the mist must save or take 1d4 points of Wisdom damage and become
+      enraged, attacking any creatures it detects nearby (as the "attack nearest
+      creature" result of the confused condition). An enraged creature remains
+      so as long as the spell is in effect. A creature only needs to save once
+      each time it is within the mist (though leaving and returning requires
+      another save).</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      druid: 8
+      shaman: 8
+  level: 8
+  materials:
+    value: a pinch of dried red algae
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '209'
+  subschool:
+    - creation
+type: spell
