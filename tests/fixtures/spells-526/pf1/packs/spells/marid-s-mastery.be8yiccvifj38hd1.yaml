@@ -1,0 +1,56 @@
+_id: be8yiccvifj38hd1
+_key: '!items!be8yiccvifj38hd1'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Marid's Mastery
+system:
+  actions:
+    - _id: xjyc2qq4haqexy0t
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: willing creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains a +1 bonus on attack and damage rolls if it and its
+      opponent are touching water. If the opponent or the target is touching the
+      ground, the target takes a -4 penalty on attack and damage rolls.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      cleric: 1
+      druid: 1
+      hunter: 1
+      oracle: 1
+      ranger: 1
+      sorcerer: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '178'
+type: spell

@@ -1,0 +1,53 @@
+_id: at1jo3acj1rdlmrn
+_key: '!items!at1jo3acj1rdlmrn'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Imbue Army Special Ability
+system:
+  actions:
+    - _id: p1yjb1bc2c95tx1v
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: 1 battle
+      name: Use
+      range:
+        units: spec
+        value: 1 hex
+      save:
+        description: none or Will negates
+        harmless: true
+        type: will
+      target:
+        value: one army
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You imbue the target with an army special ability (see page 242 of
+      <i>Ultimate</i> Campaign) possessed by the army's commander. The army is
+      treated as if it consists of units who all possess the chosen special
+      ability. This special ability is in addition to any special abilities the
+      army inherently possessed prior to the casting of the spell.</p>
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+  level: 9
+  materials:
+    focus: a silver mirror worth 100 gp
+  school: evo
+  sources:
+    - id: PZO9433
+      pages: '29'
+type: spell

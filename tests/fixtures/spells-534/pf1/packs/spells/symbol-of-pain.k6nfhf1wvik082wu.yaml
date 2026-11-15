@@ -1,0 +1,74 @@
+_id: k6nfhf1wvik082wu
+_key: '!items!k6nfhf1wvik082wu'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/symbols/rune-sigil-hook-white-red.webp
+name: Symbol of Pain
+system:
+  actions:
+    - _id: zdiomramsgcpu7fd
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that each creature within the radius of a <em>symbol of pain</em>
+      instead suffers wracking <em>pain</em>s that impose a -4 penalty on attack
+      rolls, skill checks, and ability checks. These effects last for 1 hour
+      after the creature moves farther than 60 feet from the
+      symbol.</p><p>Unlike <em>symbol of death</em>, <em>symbol of pain</em> has
+      no hit point limit; once triggered, a <em>symbol of pain</em> simply
+      remains active for 10 minutes per caster level.</p><p><em>Note:</em> Magic
+      traps such as <em>symbol of pain</em> are hard to detect and disable. A
+      rogue (only) can use the Perception skill to find a <em>symbol of
+      pain</em> and Disable Device to thwart it. The DC in each case is 25 +
+      spell level, or 30 for <em>symbol of pain</em>.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      mesmerist: 5
+      occultist: 4
+      oracle: 5
+      sorcerer: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+    subDomain:
+      Kyton: 5
+      Torture: 5
+  level: 5
+  materials:
+    gpValue: 1000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      1,000 gp
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '356'
+type: spell

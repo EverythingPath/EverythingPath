@@ -1,0 +1,58 @@
+_id: o8rxNsQ7P7Yjlvvu
+_key: '!items!o8rxNsQ7P7Yjlvvu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/lightning-blue-1.jpg
+name: Lightning Arc
+system:
+  abilityType: sp
+  actions:
+    - _id: l1kjk1vjh1clqqp9
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (floor(@class.level / 2))
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: 30 ft.
+      target:
+        value: One creature
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can unleash an arc of electricity targeting
+      any foe within 30 feet as a ranged touch attack. This arc of electricity
+      deals 1d6 points of electricity damage + 1 point for every two cleric
+      levels you possess. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '41'
+  subType: classFeat
+  tag: classFeat_lightningArc
+  tags:
+    - Domain Power
+    - Air Domain
+    - Cloud Subdomain
+    - Lightning Subdomain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

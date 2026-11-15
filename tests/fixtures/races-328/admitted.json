@@ -1,0 +1,1384 @@
+{
+  "entries": [
+    {
+      "externalKey": "local/race-ability-scores/pf1/nEltI9y37rKJTeWo",
+      "upstreamKey": "pf1/nEltI9y37rKJTeWo",
+      "attributionFrom": "pf1/nEltI9y37rKJTeWo",
+      "pack": "races",
+      "name": "Ability Score Modifiers (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Ability Score Modifiers</strong>: Dwarves are both tough and wise, but also a bit gruff. They gain +2 <em>Constitution</em>, +2 <em>Wisdom</em>, and –2 <em>Charisma</em>.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ability.con",
+          "bonusType": "racial",
+          "value": 2
+        },
+        {
+          "target": "ability.wis",
+          "bonusType": "racial",
+          "value": 2
+        },
+        {
+          "target": "ability.cha",
+          "bonusType": "racial",
+          "value": -2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/2F4IRW8AAicQ3VYc",
+      "upstreamKey": "pf1-content/2F4IRW8AAicQ3VYc",
+      "pack": "pf-racial-traits",
+      "name": "Greed (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves receive a +2 racial bonus on Appraise checks made to determine the price of nonmagical goods that contain precious metals or gemstones.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.apr",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "to determine the price of nonmagical goods containing precious metals or gemstones"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves receive a +2 racial bonus on Appraise checks made to determine the price of nonmagical goods that contain precious metals or gemstones."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/6JCG0ei0s0ossrtx",
+      "upstreamKey": "pf1-content/6JCG0ei0s0ossrtx",
+      "pack": "pf-racial-traits",
+      "name": "Stonecunning (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves receive a +2 bonus on Perception checks to potentially notice unusual stonework, such as traps and hidden doors located in stone walls or floors. They receive a check to notice any such features that they pass within @Distance[10 ft;dual] of, whether or not they are actively looking.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.per",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "to notice unusual stonework"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Receive a Perception check to notice unusual stonework whenever passing within 10 feet, even without actively looking."
+        },
+        {
+          "text": "Race: Dwarf\nDwarves receive a +2 bonus on Perception checks to potentially notice unusual stonework, such as traps and hidden doors located in stone walls or floors. They receive a check to notice any such features that they pass within 10 feet of, whether or not they are actively looking."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/ACFSI8aOJAYr89QM",
+      "upstreamKey": "pf1-content/ACFSI8aOJAYr89QM",
+      "pack": "pf-racial-traits",
+      "name": "Darkvision (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves can see in the dark up to @Distance[60 ft;dual].</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Foundry's `set` operator replaces a value; it is not an additive Modifier and contributes nothing.",
+          "value": {
+            "target": "sensedv",
+            "formula": "60",
+            "type": "base",
+            "operator": "set"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves can see in the dark up to 60 feet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/AO5nhhUfI1b4M37H",
+      "upstreamKey": "pf1-content/AO5nhhUfI1b4M37H",
+      "pack": "pf-racial-traits",
+      "name": "Hardy",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": "poison"
+          }
+        },
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": "spells"
+          }
+        },
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": "spellLike"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/BFszTUJLlDS1ZDB8",
+      "upstreamKey": "pf1-content/BFszTUJLlDS1ZDB8",
+      "pack": "pf-racial-traits",
+      "name": "+2 to One Ability Score (Human)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/e6IaBxKgMxy1yKlr"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Human</p><hr><p>Human characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "27"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "70"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ability.$choice",
+          "bonusType": "racial",
+          "value": 2
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Human\nHuman characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/GfQrx1OHTdOIVAWb",
+      "upstreamKey": "pf1-content/GfQrx1OHTdOIVAWb",
+      "pack": "pf-racial-traits",
+      "name": "Weapon Familiarity (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves are proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the word &quot;dwarven&quot; in its name as a martial weapon.</p>",
+      "proficiencies": [
+        {
+          "baseType": "Battle Axe"
+        },
+        {
+          "baseType": "Heavy Pick"
+        },
+        {
+          "baseType": "Warhammer"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": ["Battleaxe", "Heavy Pick", "Warhammer"]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves are proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the word \"dwarven\" in its name as a martial weapon."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/JWzMBJeAQYDav9gw",
+      "upstreamKey": "pf1-content/JWzMBJeAQYDav9gw",
+      "pack": "pf-racial-traits",
+      "name": "Orc Blood",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs count as both humans and orcs for any effect related to race.</p>",
+      "countsAsRaces": ["pf1/JOuAdPAOTat7d5v6", "pf1/e6IaBxKgMxy1yKlr"],
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Half-Orc\nHalf-orcs count as both humans and orcs for any effect related to race."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/JsvoElxHBPdle8s8",
+      "upstreamKey": "pf1-content/JsvoElxHBPdle8s8",
+      "pack": "pf-racial-traits",
+      "name": "Slow and Steady (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves have a base speed of @Distance[20 ft;dual], but their speed is never modified by armor or encumbrance.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "The sheet has no movement statistic; this speed change stays prose.",
+          "value": {
+            "target": "landSpeed",
+            "formula": "20",
+            "type": "base",
+            "operator": "set"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves have a base speed of 20 feet, but their speed is never modified by armor or encumbrance."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/JtJKg8vV58UJ6m1m",
+      "upstreamKey": "pf1-content/JtJKg8vV58UJ6m1m",
+      "pack": "pf-racial-traits",
+      "name": "Hatred (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves receive a +1 bonus on attack rolls against humanoid creatures of the orc and goblinoid subtypes because of their special training against these hated foes.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "racial",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "vs. humanoids of the orc subtype"
+            }
+          }
+        },
+        {
+          "target": "attack",
+          "bonusType": "racial",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "vs. humanoids of the goblinoid subtype"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves receive a +1 bonus on attack rolls against humanoid creatures of the orc and goblinoid subtypes because of their special training against these hated foes."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/LwDcZanOEHqVaYoh",
+      "upstreamKey": "pf1-content/LwDcZanOEHqVaYoh",
+      "pack": "pf-racial-traits",
+      "name": "Skilled (Human)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 1,
+        "raceKeys": ["pf1/e6IaBxKgMxy1yKlr"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Human</p><hr><p>Humans gain 1 additional skill rank at 1st level and 1 additional rank whenever they gain a level.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "70"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Human\nHumans gain 1 additional skill rank at 1st level and 1 additional rank whenever they gain a level."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/OyIvyI3x7V5HIzZL",
+      "upstreamKey": "pf1-content/OyIvyI3x7V5HIzZL",
+      "pack": "pf-racial-traits",
+      "name": "Orc Ferocity",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for 1 more round as if disabled. At the end of his next turn, unless brought to 1 or more hit points, he immediately falls unconscious and begins dying.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "SPaNGzEuZVRYaTmi",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Orc Ferocity",
+                "range": {
+                  "units": "personal"
+                }
+              }
+            ],
+            "uses": {
+              "maxFormula": "1",
+              "per": "day",
+              "value": 1
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Half-Orc\nOnce per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for 1 more round as if disabled. At the end of his next turn, unless brought to 1 or more hit points, he immediately falls unconscious and begins dying."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/T4PaZ33R29gTAFaT",
+      "upstreamKey": "pf1-content/T4PaZ33R29gTAFaT",
+      "pack": "pf-racial-traits",
+      "name": "Stability (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": "bullRushGround"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "racial",
+          "value": 4,
+          "condition": {
+            "situation": "tripGround"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/UawXK40Ix4vmfMkY",
+      "upstreamKey": "pf1-content/UawXK40Ix4vmfMkY",
+      "pack": "pf-racial-traits",
+      "name": "Intimidating",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs receive a +2 racial bonus on Intimidate checks because of their fearsome nature.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "skill.int",
+          "bonusType": "racial",
+          "value": 2
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Half-Orc\nHalf-orcs receive a +2 racial bonus on Intimidate checks because of their fearsome nature."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/VHmuEYXmx81Q5EmC",
+      "upstreamKey": "pf1-content/VHmuEYXmx81Q5EmC",
+      "pack": "pf-racial-traits",
+      "name": "+2 to One Ability Score (Half-Orc)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-Orc characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ability.$choice",
+          "bonusType": "racial",
+          "value": 2
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Half-Orc\nHalf-Orc characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/eNIYJNbM6UL7OdyE",
+      "upstreamKey": "pf1-content/eNIYJNbM6UL7OdyE",
+      "pack": "pf-racial-traits",
+      "name": "Languages (Human)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/e6IaBxKgMxy1yKlr"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Human</p><hr><p>Humans begin play speaking Common and their ethnic language. Humans whose ethnic language is Common (or Taldane, in the case of Chelaxians or Taldans) do not receive an additional ethnic language. Humans with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic).</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "70"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["common"]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Human\nHumans begin play speaking Common and their ethnic language. Humans whose ethnic language is Common (or Taldane, in the case of Chelaxians or Taldans) do not receive an additional ethnic language. Humans with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/iB5aNUyJPWjxx3tx",
+      "upstreamKey": "pf1-content/iB5aNUyJPWjxx3tx",
+      "pack": "pf-racial-traits",
+      "name": "Languages (Half-Orc)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs begin play speaking Common and Orc. Half-orcs with high Intelligence scores can choose from the following languages: Abyssal, Draconic, Giant, Gnoll, and Goblin.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["common", "orc"]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Race: Half-Orc\nHalf-orcs begin play speaking Common and Orc. Half-orcs with high Intelligence scores can choose from the following languages: Abyssal, Draconic, Giant, Gnoll, and Goblin."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/iBCPIWFExt679Zhh",
+      "upstreamKey": "pf1-content/iBCPIWFExt679Zhh",
+      "pack": "pf-racial-traits",
+      "name": "Defensive Training (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves get a +4 dodge bonus to their AC against monsters of the giant subtype.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": 4,
+          "condition": {
+            "situation": "giants"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Race: Dwarf\nDwarves get a +4 dodge bonus to their AC against monsters of the giant subtype."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/rBKJCVwy3X2VjFdU",
+      "upstreamKey": "pf1-content/rBKJCVwy3X2VjFdU",
+      "pack": "pf-racial-traits",
+      "name": "Languages (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves begin play speaking Common and Dwarven. Dwarves with high Intelligence scores can choose from the following languages: Giant, Gnome, Goblin, Orc, Terran, and Undercommon.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["common", "dwarven"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/sFlDW97gf1FHn217",
+      "upstreamKey": "pf1-content/sFlDW97gf1FHn217",
+      "pack": "pf-racial-traits",
+      "name": "Weapon Familiarity (Half-Orc)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs are proficient with greataxes and falchions, and treat any weapon with the word &quot;orc&quot; in its name as a martial weapon.</p>",
+      "proficiencies": [
+        {
+          "baseType": "Falchion"
+        },
+        {
+          "baseType": "Greataxe"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": ["Greataxe", "Falchion"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/uAJ9hLZYdH2JX7J8",
+      "upstreamKey": "pf1-content/uAJ9hLZYdH2JX7J8",
+      "pack": "pf-racial-traits",
+      "name": "Bonus Feat (Human)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/e6IaBxKgMxy1yKlr"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Human</p><hr><p>Humans select one extra feat at 1st level.</p>",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "70"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/xeEmYqR3IUXoby9x",
+      "upstreamKey": "pf1-content/xeEmYqR3IUXoby9x",
+      "pack": "pf-racial-traits",
+      "name": "Darkvision (Half-Orc)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs can see in the dark up to @Distance[60 ft;dual].</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Foundry's `set` operator replaces a value; it is not an additive Modifier and contributes nothing.",
+          "value": {
+            "target": "sensedv",
+            "formula": "60",
+            "type": "base",
+            "operator": "set"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/dCAXgdA6Db1Z3ccz",
+      "upstreamKey": "pf1/dCAXgdA6Db1Z3ccz",
+      "pack": "races",
+      "name": "Half-Orc",
+      "detail": {
+        "kind": "race",
+        "racialHitDice": 0,
+        "size": "medium",
+        "creatureTypes": ["humanoid"],
+        "creatureSubtypes": ["human", "orc"],
+        "racialTraits": [
+          "pf1-content/JWzMBJeAQYDav9gw",
+          "pf1-content/OyIvyI3x7V5HIzZL",
+          "pf1-content/UawXK40Ix4vmfMkY",
+          "pf1-content/VHmuEYXmx81Q5EmC",
+          "pf1-content/iB5aNUyJPWjxx3tx",
+          "pf1-content/sFlDW97gf1FHn217",
+          "pf1-content/xeEmYqR3IUXoby9x"
+        ]
+      },
+      "description": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>14 years</td><td><p>+1d4 years<br>(15 – 18 years)</p></td><td><p>+1d6 years<br>(15 – 20 years)</p></td><td><p>+2d6 years<br>(16 – 26 years)</p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td>Male</td><td>4 ft. 10 in.</td><td><p>+2d12 in.<br>(5 ft – 6 ft. 10 in.)</p></td><td>150 lbs.</td><td><p>+(2d12×7 lbs.)<br>(164 – 318 lbs.)</p></td></tr><tr><td>Female</td><td>4 ft. 5 in.</td><td><p>+2d12 in.<br>(4 ft. 7 in. – 6 ft. 5 in.)</p></td><td>110 lbs.</td><td><p>+(2d12×7 lbs.)<br>(124 – 278 lbs.)</p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Half-orc characters gain a +2 bonus to one ability score of their choice at creation to represent their varied nature.</li><li><strong>Type</strong>: Half-orcs are <em>Humanoid</em> creatures with both the <em>human</em> and <em>orc</em> subtypes.</li><li><strong>Size</strong>: Half-orcs are Medium creatures and thus have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Half-orcs have a base speed of 30 feet.</li><li><strong>Languages</strong>: Half-orcs begin play speaking Common and Orc. Half-orcs with high <em>Intelligence</em> scores can choose from the following: Abyssal, Draconic, Giant, Gnoll, and Goblin.</li></ul><h3>Feat and Skill Racial Traits</h3><ul><li><strong>Intimidating</strong>: Half-orcs receive a +2 <em>racial bonus</em> on Intimidate checks due to their fearsome nature.</li></ul><h3>Offensive Racial Traits</h3><ul><li><strong>Orc Ferocity</strong>: Once per day, when a half-orc is brought below 0 <em>hit points</em> but not killed, he can fight on for 1 more round as if Disabled. At the end of his next turn, unless brought to above 0 <em>hit points</em>, he immediately falls Unconscious and begins Dying.</li><li><strong>Weapon Familiarity</strong>: Half-orcs are proficient with greataxes and falchions and treat any weapon with the word &quot;orc&quot; in its name as a martial weapon.</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Darkvision</strong>: Half-orcs can see in the dark up to 60 feet.</li></ul><h3>Other Racial Traits</h3><ul><li><strong>Orc Blood</strong>: Half-orcs count as both <em>humans</em> and <em>orcs</em> for any effect related to race.</li></ul>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": ["Greataxe", "Falchion"],
+            "speeds": {
+              "land": 30
+            },
+            "languages": ["common", "orc"],
+            "creatureTypes": ["humanoid"],
+            "creatureSubtypes": ["human", "orc"]
+          }
+        },
+        {
+          "field": "speeds",
+          "reason": "The sheet has no movement statistic; the land speed stays prose.",
+          "value": {
+            "land": 30
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Movement is not mapped from the source description. Orc martial classification requires structured proficiency facts."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/e6IaBxKgMxy1yKlr",
+      "upstreamKey": "pf1/e6IaBxKgMxy1yKlr",
+      "pack": "races",
+      "name": "Human",
+      "detail": {
+        "kind": "race",
+        "racialHitDice": 0,
+        "size": "medium",
+        "creatureTypes": ["humanoid"],
+        "creatureSubtypes": ["human"],
+        "racialTraits": [
+          "pf1-content/BFszTUJLlDS1ZDB8",
+          "pf1-content/LwDcZanOEHqVaYoh",
+          "pf1-content/eNIYJNbM6UL7OdyE",
+          "pf1-content/uAJ9hLZYdH2JX7J8"
+        ]
+      },
+      "description": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>15 years</td><td><p>+1d4 years<br>(16 – 19 years)</p></td><td><p>+1d6 years<br>(16 – 21 years)</p></td><td><p>+2d6 years<br>(17 – 27 years)</p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td>Male</td><td>4 ft. 10 in.</td><td><p>+2d10 in.<br>(5 ft – 6 ft. 6 in.)</p></td><td>120 lbs.</td><td><p>+(2d10×5 lbs.)<br>(130 – 220 lbs.)</p></td></tr><tr><td>Female</td><td>4 ft. 5 in.</td><td><p>+2d10 in.<br>(4 ft. 7 in. – 6 ft. 1 in.)</p></td><td>85 lbs.</td><td><p>+(2d10×5 lbs.)<br>(95 – 185 lbs.)</p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Human characters gain a +2 <em>racial bonus</em> to one ability score of their choice at creation to represent their varied nature.</li><li><strong>Type</strong>: Humans are <em>Humanoid</em> creatures with both the <em>human</em> subtypes.</li><li><strong>Size</strong>: Humans are Medium creatures and thus receive no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Humans have a base speed of 30 feet.</li><li><strong>Languages</strong>: Humans begin play speaking Common. Humans with high <em>Intelligence</em> scores can choose any languages they want (except secret languages, such as Druidic).</li></ul><h3>Feat and Skill Racial Traits</h3><ul><li><strong>Bonus Feat</strong>: Humans select one extra feat at 1st level.</li><li><strong>Skilled</strong>: Humans gain an additional skill rank at first level and one additional rank whenever they gain a level.</li></ul>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "27"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "speeds": {
+              "land": 30
+            },
+            "languages": ["common"],
+            "creatureTypes": ["humanoid"],
+            "creatureSubtypes": ["human"]
+          }
+        },
+        {
+          "field": "speeds",
+          "reason": "The sheet has no movement statistic; the land speed stays prose.",
+          "value": {
+            "land": 30
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/nEltI9y37rKJTeWo",
+      "upstreamKey": "pf1/nEltI9y37rKJTeWo",
+      "pack": "races",
+      "name": "Dwarf",
+      "detail": {
+        "kind": "race",
+        "racialHitDice": 0,
+        "size": "medium",
+        "creatureTypes": ["humanoid"],
+        "creatureSubtypes": ["dwarf"],
+        "racialTraits": [
+          "local/race-ability-scores/pf1/nEltI9y37rKJTeWo",
+          "pf1-content/2F4IRW8AAicQ3VYc",
+          "pf1-content/6JCG0ei0s0ossrtx",
+          "pf1-content/ACFSI8aOJAYr89QM",
+          "pf1-content/AO5nhhUfI1b4M37H",
+          "pf1-content/GfQrx1OHTdOIVAWb",
+          "pf1-content/JsvoElxHBPdle8s8",
+          "pf1-content/JtJKg8vV58UJ6m1m",
+          "pf1-content/T4PaZ33R29gTAFaT",
+          "pf1-content/iBCPIWFExt679Zhh",
+          "pf1-content/rBKJCVwy3X2VjFdU"
+        ]
+      },
+      "description": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>40 years</td><td><p>+3d6 years<br>(43 – 58 years)</p></td><td><p>+5d6 years<br>(45 – 70 years)</p></td><td><p>+7d6 years<br>(47 – 82 years)</p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td>Male</td><td>3 ft. 9 in.</td><td><p>+2d4 in.<br>(3 ft. 11 in. – 4 ft. 5 in.)</p></td><td>150 lbs.</td><td><p>+(2d4×7 lbs.)<br>(164 – 206 lbs.)</p></td></tr><tr><td>Female</td><td>3 ft. 7 in.</td><td><p>+2d4 in.<br>(3 ft. 9 in. – 4 ft. 3 in.)</p></td><td>120 lbs.</td><td><p>+(2d4×7 lbs.)<br>(134 – 176 lbs.)</p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Dwarves are both tough and wise, but also a bit gruff. They gain +2 <em>Constitution</em>, +2 <em>Wisdom</em>, and –2 <em>Charisma</em>.</li><li><strong>Type</strong>: Dwarves are <em>humanoids</em> with the <em>dwarf</em> subtype.</li><li><strong>Size</strong>: Dwarves are Medium creatures and thus receive no bonuses or penalties due to their size.</li><li><strong>Base Speed (Slow and Steady)</strong>: Dwarves have a base speed of 20 feet, but their speed is never modified by armor or encumbrance.</li><li><strong>Languages</strong>: Dwarves begin play speaking Common and Dwarven. Dwarves with high <em>Intelligence</em> scores can choose from the following: Giant, Gnome, Goblin, Orc, Terran, and Undercommon.</li></ul><h3>Defense Racial Traits</h3><ul><li><strong>Defensive Training</strong>: Dwarves gain a +4 <em>dodge bonus</em> to AC against monsters of the <em>giant</em> subtype.</li><li><strong>Hardy</strong>: Dwarves gain a +2 <em>racial bonus</em> on saving throws against <em>poison</em>, spells, and <em>spell-like abilities</em>.</li><li><strong>Stability</strong>: Dwarves gain a +4 <em>racial bonus</em> to their <em>Combat Maneuver Defense</em> when resisting a <em>bull rush</em> or <em>trip</em> attempt while standing on the ground.</li></ul><h3>Feat and Skill Racial Traits</h3><ul><li><strong>Greed</strong>: Dwarves gain a +2 <em>racial bonus</em> on Appraise checks made to determine the price of non-magical goods that contain precious metals or gemstones.</li><li><strong>Stonecunning</strong>: Dwarves gain a +2 bonus on Perception checks to notice unusual stonework, such as traps and hidden doors located in stone walls or floors. They receive a check to notice such features whenever they pass within 10 feet of them, whether or not they are actively looking.</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Darkvision</strong>: Dwarves can see perfectly in the dark up to 60 feet.</li></ul><h3>Offensive Racial Traits</h3><ul><li><strong>Hatred</strong>: Dwarves gain a +1 <em>racial bonus</em> on <em>attack rolls</em> against <em>humanoid</em> creatures of the <em>orc</em> and <em>goblinoid</em> subtypes because of their special training against these hated foes.</li><li><strong>Weapon Familiarity</strong>: Dwarves are proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the word &quot;dwarven&quot; in its name as a martial weapon.</li></ul>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "weaponProf": ["Battle Axe", "Heavy Pick", "Warhammer"],
+            "speeds": {
+              "land": 20
+            },
+            "languages": ["common", "dwarven"],
+            "creatureTypes": ["humanoid"],
+            "creatureSubtypes": ["dwarf"]
+          }
+        },
+        {
+          "field": "speeds",
+          "reason": "The sheet has no movement statistic; the land speed stays prose.",
+          "value": {
+            "land": 20
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Movement is not mapped from the source description. Dwarven martial classification requires structured proficiency facts."
+        }
+      ]
+    }
+  ],
+  "comparisonRecords": [
+    {
+      "repo": "pf1",
+      "pack": "races",
+      "path": "packs/races/dwarf.nEltI9y37rKJTeWo.yaml",
+      "externalKey": "pf1/nEltI9y37rKJTeWo",
+      "name": "Dwarf",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1",
+      "pack": "races",
+      "path": "packs/races/half-orc.dCAXgdA6Db1Z3ccz.yaml",
+      "externalKey": "pf1/dCAXgdA6Db1Z3ccz",
+      "name": "Half-Orc",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1",
+      "pack": "races",
+      "path": "packs/races/human.e6IaBxKgMxy1yKlr.yaml",
+      "externalKey": "pf1/e6IaBxKgMxy1yKlr",
+      "name": "Human",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Bonus_Feat__Human__uAJ9hLZYdH2JX7J8.yaml",
+      "externalKey": "pf1-content/uAJ9hLZYdH2JX7J8",
+      "name": "Bonus Feat (Human)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Darkvision__Dwarf__ACFSI8aOJAYr89QM.yaml",
+      "externalKey": "pf1-content/ACFSI8aOJAYr89QM",
+      "name": "Darkvision (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Darkvision__Half_Orc__xeEmYqR3IUXoby9x.yaml",
+      "externalKey": "pf1-content/xeEmYqR3IUXoby9x",
+      "name": "Darkvision (Half-Orc)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Defensive_Training__Dwarf__iBCPIWFExt679Zhh.yaml",
+      "externalKey": "pf1-content/iBCPIWFExt679Zhh",
+      "name": "Defensive Training (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Greed__Dwarf__2F4IRW8AAicQ3VYc.yaml",
+      "externalKey": "pf1-content/2F4IRW8AAicQ3VYc",
+      "name": "Greed (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Hardy_AO5nhhUfI1b4M37H.yaml",
+      "externalKey": "pf1-content/AO5nhhUfI1b4M37H",
+      "name": "Hardy",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Hatred__Dwarf__JtJKg8vV58UJ6m1m.yaml",
+      "externalKey": "pf1-content/JtJKg8vV58UJ6m1m",
+      "name": "Hatred (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Intimidating_UawXK40Ix4vmfMkY.yaml",
+      "externalKey": "pf1-content/UawXK40Ix4vmfMkY",
+      "name": "Intimidating",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Languages__Dwarf__rBKJCVwy3X2VjFdU.yaml",
+      "externalKey": "pf1-content/rBKJCVwy3X2VjFdU",
+      "name": "Languages (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Languages__Half_Orc__iB5aNUyJPWjxx3tx.yaml",
+      "externalKey": "pf1-content/iB5aNUyJPWjxx3tx",
+      "name": "Languages (Half-Orc)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Languages__Human__eNIYJNbM6UL7OdyE.yaml",
+      "externalKey": "pf1-content/eNIYJNbM6UL7OdyE",
+      "name": "Languages (Human)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Orc_Blood_JWzMBJeAQYDav9gw.yaml",
+      "externalKey": "pf1-content/JWzMBJeAQYDav9gw",
+      "name": "Orc Blood",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Orc_Ferocity_OyIvyI3x7V5HIzZL.yaml",
+      "externalKey": "pf1-content/OyIvyI3x7V5HIzZL",
+      "name": "Orc Ferocity",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Skilled__Human__LwDcZanOEHqVaYoh.yaml",
+      "externalKey": "pf1-content/LwDcZanOEHqVaYoh",
+      "name": "Skilled (Human)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Slow_and_Steady__Dwarf__JsvoElxHBPdle8s8.yaml",
+      "externalKey": "pf1-content/JsvoElxHBPdle8s8",
+      "name": "Slow and Steady (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Stability__Dwarf__T4PaZ33R29gTAFaT.yaml",
+      "externalKey": "pf1-content/T4PaZ33R29gTAFaT",
+      "name": "Stability (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Stonecunning__Dwarf__6JCG0ei0s0ossrtx.yaml",
+      "externalKey": "pf1-content/6JCG0ei0s0ossrtx",
+      "name": "Stonecunning (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Weapon_Familiarity__Dwarf__GfQrx1OHTdOIVAWb.yaml",
+      "externalKey": "pf1-content/GfQrx1OHTdOIVAWb",
+      "name": "Weapon Familiarity (Dwarf)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/Weapon_Familiarity__Half_Orc__sFlDW97gf1FHn217.yaml",
+      "externalKey": "pf1-content/sFlDW97gf1FHn217",
+      "name": "Weapon Familiarity (Half-Orc)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/_2_to_One_Ability_Score__Half_Orc__VHmuEYXmx81Q5EmC.yaml",
+      "externalKey": "pf1-content/VHmuEYXmx81Q5EmC",
+      "name": "+2 to One Ability Score (Half-Orc)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    },
+    {
+      "repo": "pf1-content",
+      "pack": "pf-racial-traits",
+      "path": "src/pf-racial-traits/_2_to_One_Ability_Score__Human__BFszTUJLlDS1ZDB8.yaml",
+      "externalKey": "pf1-content/BFszTUJLlDS1ZDB8",
+      "name": "+2 to One Ability Score (Human)",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    }
+  ]
+}

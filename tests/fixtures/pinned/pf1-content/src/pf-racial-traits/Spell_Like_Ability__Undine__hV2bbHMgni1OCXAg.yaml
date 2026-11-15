@@ -1,0 +1,69 @@
+_id: hV2bbHMgni1OCXAg
+_key: '!items!hV2bbHMgni1OCXAg'
+_stats:
+  coreVersion: '12.331'
+folder: w73GxQVQz7wDcHah
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Spell-Like Ability (Undine)
+system:
+  abilityType: sp
+  actions:
+    - _id: V8vXnbhIACgADgh1
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: >-
+        max(@abilities.int.mod, @abilities.wis.mod, @abilities.cha.mod)[Best
+        Ability bonus]
+      attackName: Bull Rush
+      bab: '@attributes.hd.total'
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.ohy0ty2dawfaaqwd]{hydraulic
+        push}</p><p>You call forth a quick blast of water that knocks over and
+        soaks one creature or square. You can use this blast of water to make a
+        bull rush against any one creature or object. Your CMB for this bull
+        rush is equal to your caster level plus your Intelligence, Wisdom, or
+        Charisma modifier, whichever is highest. This bull rush does not provoke
+        an attack of opportunity. Hydraulic push extinguishes any normal fires
+        on a creature, object, or in a single @Distance[5 ft;dual] square which
+        it is targeted against. Magical fires are unaffected.</p></div>
+      duration:
+        units: inst
+      name: Hydraulic Push
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one creature or object
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine</p><hr /><p>Undines can cast
+      <em>@UUID[Compendium.pf1.spells.Item.ohy0ty2dawfaaqwd]{hydraulic
+      push}</em> once per day as a spell-like ability (with a caster level equal
+      to the undine's character level).</p>
+  racePoints: 1
+  sources:
+    - id: PZO9280
+      pages: '253'
+    - id: PZO1121
+      pages: '175'
+    - id: PZO1116
+      pages: '275'
+  subType: racial
+  tags:
+    - Undine
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

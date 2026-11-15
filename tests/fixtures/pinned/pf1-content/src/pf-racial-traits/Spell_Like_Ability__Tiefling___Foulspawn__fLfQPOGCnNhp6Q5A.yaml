@@ -1,0 +1,65 @@
+_id: fLfQPOGCnNhp6Q5A
+_key: '!items!fLfQPOGCnNhp6Q5A'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Foulspawn)
+system:
+  abilityType: sp
+  actions:
+    - _id: T62z6pPpndJIGjBT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.usdv1eqvibmxun6x]{Bear's
+        Endurance}</p><p>The affected creature gains greater vitality and
+        stamina. The spell grants the subject a +4 enhancement bonus to
+        Constitution, which adds the usual benefits to hit points, Fortitude
+        saves, Constitution checks, and so forth. Hit points gained by a
+        temporary increase in Constitution score are not temporary hit points.
+        They go away when the subject's Constitution drops back to normal. They
+        are not lost first as temporary hit points are.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Bear's Endurance
+      notes:
+        effect:
+          - "@Apply[Bear's Endurance]"
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Foulspawn</p><hr /><p>Foulspawn can
+      use @UUID[Compendium.pf1.spells.Item.usdv1eqvibmxun6x]{Bear's
+      Endurance}&nbsp;once per day as a spell-like ability (with a caster level
+      equal to their character level).</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '20'
+  subType: racial
+  tags:
+    - Tiefling
+    - Foulspawn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
