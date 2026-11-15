@@ -1,0 +1,77 @@
+_id: 6orhthk4g27rncuu
+_key: '!items!6orhthk4g27rncuu'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Calm Emotions
+system:
+  actions:
+    - _id: z9266voh79zmd2li
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures in a 20-ft.-radius spread
+      duration:
+        concentration: true
+        units: spec
+        value: concentration, up to 1 round/level
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell calms agitated creatures. You have no control over the
+      affected creatures, but <i>calm emotions</i> can stop raging creatures
+      from fighting or joyous ones from reveling. Creatures so affected cannot
+      take violent actions (although they can defend themselves) or do anything
+      destructive. Any aggressive action against or damage dealt to a calmed
+      creature immediately breaks the spell on all calmed creatures.</p><p>This
+      spell automatically suppresses (but does not dispel) any morale bonuses
+      granted by spells such as <i>bless</i>, <i>good hope</i>, and <i>rage</i>,
+      and also negates a bard's ability to inspire courage or a barbarian's rage
+      ability. It also suppresses any fear effects and removes the confused
+      condition from all targets. While the spell lasts, a suppressed spell,
+      condition, or effect has no effect. When the <i>calm emotions spell</i>
+      ends, the original spell or effect takes hold of the creature again,
+      provided that its duration has not expired in the meantime.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      mesmerist: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      shaman: 2
+      skald: 2
+      warpriest: 2
+    domain:
+      Charm: 2
+    subDomain:
+      Family: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '252'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,67 @@
+_id: vqF4kshibBDN624D
+_key: '!items!vqF4kshibBDN624D'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/crossbow-heavy.PNG
+name: Heavy Crossbow
+system:
+  actions:
+    - _id: of1tefbsu4rw5zgh
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '120'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Heavy Crossbow
+  description:
+    unidentified: >-
+      <p>You draw a heavy crossbow back by turning a small winch. Loading a
+      heavy crossbow is a full-round action that provokes attacks of
+      opportunity. A heavy crossbow fires crossbow bolts.</p><p>Normally,
+      operating a heavy crossbow requires two hands. However, you can shoot, but
+      not load, a heavy crossbow with one hand at a -4 penalty on attack rolls.
+      You can shoot a heavy crossbow with each hand, but you take a penalty on
+      attack rolls as if attacking with two one-handed weapons. This penalty is
+      cumulative with the penalty for one-handed firing.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 50
+  sources:
+    - id: PZO1110
+      pages: 142, 145
+    - id: PZO9452
+      pages: '0'
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 8
+type: weapon

@@ -1,0 +1,63 @@
+_id: ETT1LsO2zXg9J551
+_key: '!items!ETT1LsO2zXg9J551'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/brass-knife.PNG
+name: Brass Knife
+system:
+  actions:
+    - _id: v7d6kwxwjqzexqkg
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Brass Knife
+  description:
+    unidentified: >-
+      <p>Pirates often carry long brass knives for working aboard a ship. Though
+      brass doesn't hold as sharp an edge as steel, it isn't vulnerable to rust
+      like steel is. In a pinch, a pirate can use his brass knife as a weapon.
+      Mostly, though, they are used for cutting ropes, cleaning fish, and other
+      sundry tasks.</p><p>A brass knife has the fragile quality. A fragile
+      weapon gains the broken condition if the wielder rolls a natural 1 on an
+      attack roll with the weapon. If a fragile weapon is already broken,
+      rolling a natural 1 destroys it instead.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    fin: true
+    frg: true
+  sources:
+    - id: PZO9422
+      pages: '19'
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 1
+type: weapon

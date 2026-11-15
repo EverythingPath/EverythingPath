@@ -1,0 +1,68 @@
+_id: l01ajd0m4xgwq3fd
+_key: '!items!l01ajd0m4xgwq3fd'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Magic Aura
+system:
+  actions:
+    - _id: ifk1xah6tvv0lp2x
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none; see text
+      target:
+        value: one touched object weighing up to 5 lbs./level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You alter an item's aura so that it registers to <i>detect</i> spells
+      (and spells with similar capabilities) as though it were nonmagical, or a
+      magic item of a kind you specify, or the subject of a spell you specify.
+      If the object bearing <i>magic aura</i> has <i>identify</i> cast on it or
+      is similarly examined, the examiner recognizes that the aura is false and
+      <i>detect</i>s the object's actual qualities if he succeeds on a Will
+      save. Otherwise, he believes the aura and no amount of testing reveals
+      what the true magic is.</p><p>If the targeted item's own aura is
+      exceptionally powerful (if it is an artifact, for instance), <i>magic
+      aura</i> doesn't work.</p><p><i>Note:</i> A magic weapon, shield, or suit
+      of armor must be a masterwork item, so a sword of average make, for
+      example, looks suspicious if it has a magical aura.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+    subDomain:
+      Arcane: 1
+  materials:
+    focus: >-
+      a small square of silk that must be passed over the object that receives
+      the aura
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '307'
+  sr: false
+  subschool:
+    - glamer
+type: spell

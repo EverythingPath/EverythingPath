@@ -1,0 +1,81 @@
+_id: Y4zuC6CQxCFXcojX
+_key: '!items!Y4zuC6CQxCFXcojX'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/thrown/dart-feathered.webp
+name: Wushu Dart
+system:
+  actions:
+    - _id: nfvpixu66djswoyi
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: T9T1bqm4UIwynzfV
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Wushu Dart
+  description:
+    unidentified: >-
+      <p>This sharpened wooden spike can be used as a punching weapon, but it is
+      also perfectly balanced for throwing.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 0.2
+  properties:
+    fin: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - close
+    - monk
+    - thrown
+type: weapon

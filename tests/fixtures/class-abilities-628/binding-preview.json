@@ -1,0 +1,2573 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "class-abilities",
+      "name": "Challenge (CAV)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Once per day, a cavalier can challenge a foe to combat. As a swift action, the cavalier chooses one target within sight to challenge. The cavalier's melee attacks deal extra damage whenever the attacks are made against the target of his challenge. This extra damage is equal to the cavalier's level.</p>\n<p>The cavalier can use this ability once per day at 1st level, plus one additional time per day for every three levels beyond 1st, to a maximum of seven times per day at 19th level.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "cdai7n8jc3xanvb3",
+                "activation": {
+                  "type": "swift",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "one creature"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Cavalier"]
+            },
+            "uses": {
+              "maxFormula": "1 + floor((@class.level - 1) / 3)",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "class-abilities",
+      "name": "Sneak Attack (SLA)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, if a slayer catches an opponent unable to defend itself effectively from his attack, he can strike a vital spot for extra damage. The slayer’s attack deals extra damage anytime his target would be denied a Dexterity bonus to AC (whether the target actually has a Dexterity bonus or not), or when the slayer flanks his target. This additional damage is 1d6 at 3rd level, and increases by 1d6 every 3 levels thereafter. Should the slayer score a critical hit with a sneak attack, this additional damage is not multiplied. Ranged attacks can count as sneak attacks only if the target is within 30 feet.</p><p>With a weapon that deals nonlethal damage (like a sap, whip, or unarmed strike), a slayer can make a sneak attack that deals nonlethal damage instead of lethal damage. He cannot use a weapon that deals lethal damage to deal nonlethal damage in a sneak attack, not even with the usual –4 penalty.</p><p>The slayer must be able to see the target well enough to pick out a vital spot and must be able to reach such a spot. A slayer cannot use sneak attack while striking a creature with concealment.</p>",
+      "sources": [
+        {
+          "book": "PZO1129",
+          "pages": "54"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "Rge5ZGwhYBkDtwDR",
+                "activation": {
+                  "type": "nonaction",
+                  "unchained": {
+                    "type": "nonaction"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(floor(@class.level / 3))d6",
+                      "types": ["precision"]
+                    }
+                  ]
+                },
+                "name": "Use",
+                "powerAttack": {
+                  "critMultiplier": null,
+                  "damageBonus": null
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Slayer"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/W1KWAZxUNxfCv8rG",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "class-abilities",
+      "name": "Bloodline Feat (SOR)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "71"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Sorcerer"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor((@class.level - 1) / 6)",
+            "type": "untyped"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/VjHjPja5QABBgRvR",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "class-abilities",
+      "name": "Bonus Feat (MNK)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 1st level, 2nd level, and every 4 levels thereafter, a monk may select a bonus feat. These feats must be taken from the following list:</p>\n<p><a href=\"catalog:pf1/bZ1YdzkT8NtRIEJ4\">Catch Off-Guard</a>, <a href=\"catalog:pf1/h9nHYLxXvIXBTmup\">Combat Reflexes</a>, <a href=\"catalog:pf1/ACEQfonKVqh0fwkK\">Deflect Arrows</a>, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/ZmQkRk93nbHxsQSt\">Improved Grapple</a>, <a href=\"catalog:pf1/2AfSIVge3bg8r6wr\">Scorpion Style</a>, and <a href=\"catalog:pf1/gGfXQq0IZrxdcZDx\">Throw Anything</a>.</p>\n<p>At 6th level, the following feats are added to the list:</p>\n<p><a href=\"catalog:pf1/nhUawPP4jfED3CYV\">Gorgon's Fist</a>, <a href=\"catalog:pf1/dn2KgHFQRbuoNRx0\">Improved Bull Rush</a>, <a href=\"catalog:pf1/711B9WNFgpdDKKf2\">Improved Disarm</a>, <a href=\"catalog:pf1/tocde3sKG1O3GKgd\">Improved Feint</a>, <a href=\"catalog:pf1/gTrGPxzN054GfpkM\">Improved Trip</a>, and <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>.</p>\n<p>At 10th level, the following feats are added to the list:</p>\n<p><a href=\"catalog:pf1/TbOPtIL8Fv8obXtP\">Improved Critical</a>, <a href=\"catalog:pf1/sOCyCmNxe2MBbEaI\">Medusa's Wrath</a>, <a href=\"catalog:pf1/bHcqTC4Lf3aVl3VO\">Snatch Arrows</a>, and <a href=\"catalog:pf1/ugQyUpqPBDsqLyra\">Spring Attack</a>.</p>\n<p>A monk need not have any of the prerequisites normally required for these feats to select them.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "58"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "14"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Monk", "Monk (Unchained)"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "1 + floor((@class.level + 2) / 4)",
+            "type": "untyped"
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/2AfSIVge3bg8r6wr",
+      "upstreamKey": "pf1/2AfSIVge3bg8r6wr",
+      "pack": "feats",
+      "name": "Scorpion Style",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Unarmed", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can perform an unarmed strike that greatly hampers your target's movement.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: To use this feat, you must make a single unarmed attack as a standard action. If this unarmed attack hits, you deal damage normally, and the target's base land speed is reduced to 5 feet for a number of rounds equal to your Wisdom modifier unless it makes a Fortitude saving throw (DC 10 + 1/2 your character level + your Wis modifier).</p>",
+      "prerequisiteText": "Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 132"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/711B9WNFgpdDKKf2",
+      "upstreamKey": "pf1/711B9WNFgpdDKKf2",
+      "pack": "feats",
+      "name": "Improved Disarm",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at knocking weapons from a foe's grasp.</em></p><p><strong>Prerequisites</strong>: Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a disarm combat maneuver. In addition, you receive a +2 bonus on checks made to disarm a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to disarm you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a disarm combat maneuver.</p><h3>Combat Trick</h3><p>You can select this feat even if you don't meet the ability score prerequisite (Intelligence 13). You gain the benefit of this feat only as long as you have at least 1 stamina point in your stamina pool. When you are the target of a disarm combat maneuver, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that disarm attempt increases by that number.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "127"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "123"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "disarm"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "vs. disarm"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Performing a disarm combat maneuver does not provoke an attack of opportunity."
+        },
+        {
+          "text": "A disarm maneuver does not provoke. Gain +2 on disarm checks and +2 CMD when a foe attempts to disarm you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ACEQfonKVqh0fwkK",
+      "upstreamKey": "pf1/ACEQfonKVqh0fwkK",
+      "pack": "feats",
+      "name": "Deflect Arrows",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can knock arrows and other projectiles off course, preventing them from hitting you.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: You must have at least one hand free (holding nothing) to use this feat. Once per round when you would normally be hit with an attack from a ranged weapon, you may deflect it so that you take no damage from it. You must be aware of the attack and not flat-footed. Attempting to deflect a ranged attack doesn't count as an action. Unusually massive ranged weapons (such as boulders or ballista bolts) and ranged attacks generated by natural attacks or spell effects can't be deflected.</p><h3>Combat Trick</h3><p>You can spend 5 stamina points to deflect an arrow while you're flat-footed. You must still be aware of the attack.</p>",
+      "prerequisiteText": "Dex 13, Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 121"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "q00cixwhykshnyq6",
+                "activation": {
+                  "type": "free",
+                  "unchained": {
+                    "type": "free"
+                  }
+                },
+                "name": "Use"
+              }
+            ]
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Once per round, with a free hand, awareness of the attack and while not flat-footed, deflect a ranged weapon attack that would hit, taking no damage. This uses no action; massive projectiles, natural attacks and spell effects cannot be deflected."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/JreaiTHdyWFNj3Tb",
+      "upstreamKey": "pf1/JreaiTHdyWFNj3Tb",
+      "pack": "feats",
+      "name": "Dodge",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>",
+      "prerequisiteText": "Dex 13",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 122"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": 1
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/R7L4SlGRlnThqFrP",
+      "upstreamKey": "pf1/R7L4SlGRlnThqFrP",
+      "pack": "feats",
+      "name": "Mobility",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Movement", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can easily move through a dangerous melee.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>.</p><p><strong>Benefits</strong>: You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most types of bonuses.</p>",
+      "prerequisiteText": "Dex 13, Dodge",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 130"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "against attacks of opportunity caused by movement within or out of a threatened area"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Movement-provoked opportunity-attack scope supplied as explicit Situation; no ordinary AC bonus or Dexterity-denial override."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Gain +4 dodge AC only against attacks of opportunity caused by moving within or out of a threatened area. Losing your Dexterity bonus to AC also loses this dodge bonus."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/TbOPtIL8Fv8obXtP",
+      "upstreamKey": "pf1/TbOPtIL8Fv8obXtP",
+      "pack": "feats",
+      "name": "Improved Critical",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Critical", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Attacks made with your chosen weapon are quite deadly.</i><p><strong>Prerequisites</strong>: Proficient with weapon, base attack bonus +8.</p><p><strong>Benefits</strong>: When using the weapon you selected, your threat range is doubled.</p><p><strong>Special</strong>: You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p><p>This effect doesn't stack with any other effect that expands the threat range of a weapon.</p>",
+      "prerequisiteText": "Proficient with weapon, base attack bonus +8",
+      "prerequisites": [
+        {
+          "unchecked": "Proficient with weapon, base attack bonus +8",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 127"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Choice and nonstacking threat expansion must feed the handwritten attack consumer; imported opaque rule identity does not select its canonical rule."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Double the threat range of the chosen weapon. Repeated selections must choose new weapon types; threat-range expansion never stacks."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ZmQkRk93nbHxsQSt",
+      "upstreamKey": "pf1/ZmQkRk93nbHxsQSt",
+      "pack": "feats",
+      "name": "Improved Grapple",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at grappling opponents.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a grapple combat maneuver. In addition, you receive a +2 bonus on checks made to grapple a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to grapple you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a grapple combat maneuver.</p><h3>Combat Trick</h3><p>When you are the target of a grapple combat maneuver to initiate or maintain a grapple, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that grapple attempt increases by that number.</p>",
+      "prerequisiteText": "Dex 13, Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "127"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "123"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "grapple"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against a grapple combat maneuver"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "cmb",
+          "situation": "grapple",
+          "text": "Performing a grapple combat maneuver does not provoke an attack of opportunity."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/bHcqTC4Lf3aVl3VO",
+      "upstreamKey": "pf1/bHcqTC4Lf3aVl3VO",
+      "pack": "feats",
+      "name": "Snatch Arrows",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Ranged", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Instead of knocking an arrow or ranged attack aside, you can catch it in mid-flight.</em></p><p><strong>Prerequisites</strong>: Dex 15, <a href=\"catalog:pf1/ACEQfonKVqh0fwkK\">Deflect Arrows</a>, <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>.</p><p><strong>Benefits</strong>: When using the Deflect Arrows feat you may choose to catch the weapon instead of just deflecting it. Thrown weapons can immediately be thrown back as an attack against the original attacker (even though it isn't your turn) or kept for later use.</p><p>You must have at least one hand free (holding nothing) to use this feat.</p>",
+      "prerequisiteText": "Dex 15, Deflect Arrows, Improved Unarmed Strike",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/ACEQfonKVqh0fwkK",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "When using Deflect Arrows, catch the weapon instead. Immediately throw a caught thrown weapon back at its attacker, or keep it. At least one hand must be empty."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/bZ1YdzkT8NtRIEJ4",
+      "upstreamKey": "pf1/bZ1YdzkT8NtRIEJ4",
+      "pack": "feats",
+      "name": "Catch Off-Guard",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Foes are surprised by your skilled use of unorthodox and improvised weapons.</em></p><p><strong>Benefits</strong>: You do not suffer any penalties for using an improvised melee weapon. Unarmed opponents are flat-footed against any attacks you make with an improvised melee weapon.</p><p><strong>Normal</strong>: You take a -4 penalty on attack rolls made with an improvised weapon.</p><h3>Combat Trick</h3><p>When making an attack with an improvised weapon against an armed opponent, you can spend 5 stamina points. If you do, the target is considered flat-footed during that attack. An opponent who recognizes you and has seen you use Catch Off-Guard in this way is immune to this effect.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 119"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "The improvised-melee −4 attack penalty removal is not mapped into an attack consumer; the readable Note also describes flat-footed unarmed targets without applying a universal attack bonus (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Ignore improvised melee weapon penalties. Unarmed opponents are flat-footed against your improvised melee weapon attacks."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/dn2KgHFQRbuoNRx0",
+      "upstreamKey": "pf1/dn2KgHFQRbuoNRx0",
+      "pack": "feats",
+      "name": "Improved Bull Rush",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at pushing your foes around.</em></p><p><strong>Prerequisites</strong>: Str 13, <a href=\"catalog:pf1/FUW5mIXHNBBIQ1Sq\">Power Attack</a>, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a bull rush combat maneuver.</p>",
+      "prerequisiteText": "Str 13, Power Attack, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "126"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "122"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "bullRush"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against a bull rush combat maneuver"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Current offensive +2 uses shared bullRush. Prior Greater Bull Rush (#331, pf1/XGvS0hHv58XAeQij) uses an entry-local on-bull-rush Situation, so a single shared selection cannot yet calculate the required +4 cross-batch stack. Prior record is preserved; deliberate promotion remains outstanding (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "target": "cmb",
+          "situation": "bullRush",
+          "text": "Performing a bull rush combat maneuver does not provoke an attack of opportunity."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/gGfXQq0IZrxdcZDx",
+      "upstreamKey": "pf1/gGfXQq0IZrxdcZDx",
+      "pack": "feats",
+      "name": "Throw Anything",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Weapon"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are used to throwing things you have on hand.</i><p><strong>Benefits</strong>: You do not suffer any penalties for using an improvised ranged weapon. You receive a +1 circumstance bonus on attack rolls made with thrown splash weapons.</p><p><strong>Normal</strong>: You take a -4 penalty on attack rolls made with an improvised weapon.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "135"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/gTrGPxzN054GfpkM",
+      "upstreamKey": "pf1/gTrGPxzN054GfpkM",
+      "pack": "feats",
+      "name": "Improved Trip",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Combat Maneuver", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at sending your opponents to the ground.</em></p><p><strong>Prerequisites</strong>: Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a trip combat maneuver. In addition, you receive a +2 bonus on checks made to trip a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to trip you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a trip combat maneuver.</p><h3>Combat Trick</h3><p>You can select this feat even if you don't meet the ability score prerequisite (Intelligence 13). You gain the benefits of this feat only as long as you have at least 1 stamina point in your stamina pool. When you are the target of a trip combat maneuver, you can spend a number of stamina points up to your Strength or Dexterity bonus, whichever is greater. Your CMD against that trip attempt increases by that number.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "128"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "124"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": "trip"
+          }
+        },
+        {
+          "target": "cmd",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against a trip combat maneuver"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "target": "cmb",
+          "situation": "trip",
+          "text": "Performing a trip combat maneuver does not provoke an attack of opportunity."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/h9nHYLxXvIXBTmup",
+      "upstreamKey": "pf1/h9nHYLxXvIXBTmup",
+      "pack": "feats",
+      "name": "Combat Reflexes",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can make additional attacks of opportunity.</em></p><p><strong>Benefits</strong>: You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed.</p><p><strong>Normal</strong>: A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed.</p><p><strong>Special</strong>: The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an attack of opportunity, you can spend 5 stamina points to make a second attack for the same provoking action. That second attack of opportunity takes a -5 penalty on the attack roll and costs one of your attacks of opportunity for the round.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 119-120"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "kzof1vn44xdata40",
+                "activation": {
+                  "type": "passive",
+                  "unchained": {
+                    "type": "passive"
+                  }
+                },
+                "name": "Use"
+              }
+            ],
+            "uses": {
+              "maxFormula": "1 + max(0, @abilities.dex.mod)",
+              "per": "round",
+              "value": 0
+            }
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "The normal one attack of opportunity plus additional attacks equal to the Dexterity bonus each round, flat-footed permission, and current resource count are not imported into an attack-of-opportunity consumer. Raw uses.maxFormula is retained only as evidence; its count is never an attack-roll bonus (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "You can make additional attacks of opportunity each round equal to your Dexterity bonus, and may make them while flat-footed. This does not increase opportunist uses."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/nhUawPP4jfED3CYV",
+      "upstreamKey": "pf1/nhUawPP4jfED3CYV",
+      "pack": "feats",
+      "name": "Gorgon's Fist",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Unarmed"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>With one well-placed blow, you leave your target reeling.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>, <a href=\"catalog:pf1/2AfSIVge3bg8r6wr\">Scorpion Style</a>, base attack bonus +6.</p><p><strong>Benefits</strong>: As a standard action, make a single unarmed melee attack against a foe whose speed is reduced (such as from Scorpion Style). If the attack hits, you deal damage normally and the target is staggered until the end of your next turn unless it makes a Fortitude saving throw (DC 10 + 1/2 your character level + your Wis modifier). This feat has no effect on targets that are staggered.</p>",
+      "prerequisiteText": "Improved Unarmed Strike, Scorpion Style, base attack bonus +6",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2AfSIVge3bg8r6wr",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 124"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "As a standard action, make one unarmed attack against a foe whose speed is reduced. On a hit, damage normally and stagger until the end of your next turn unless the target succeeds at a Fortitude save (DC 10 + half your character level + Wisdom modifier). Already staggered targets are unaffected."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/sOCyCmNxe2MBbEaI",
+      "upstreamKey": "pf1/sOCyCmNxe2MBbEaI",
+      "pack": "feats",
+      "name": "Medusa's Wrath",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Unarmed", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can take advantage of your opponent's confusion, delivering multiple blows.</em></p><p><strong>Prerequisites</strong>: <a href=\"catalog:pf1/2aTFNMs3pW6nUBlr\">Improved Unarmed Strike</a>, <a href=\"catalog:pf1/nhUawPP4jfED3CYV\">Gorgon's Fist</a>, <a href=\"catalog:pf1/2AfSIVge3bg8r6wr\">Scorpion Style</a>, base attack bonus +11.</p><p><strong>Benefits</strong>: Whenever you use the full-attack action and make at least one unarmed strike, you can make two additional unarmed strikes at your highest base attack bonus. These bonus attacks must be made against a dazed, flat-footed, paralyzed, staggered, stunned, or unconscious foe.</p>",
+      "prerequisiteText": "Improved Unarmed Strike, Gorgon's Fist, Scorpion Style, base attack bonus +11",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/nhUawPP4jfED3CYV",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2AfSIVge3bg8r6wr",
+          "kind": "feat"
+        },
+        {
+          "bab": 11,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 130"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "The two highest-BAB unarmed attacks on a full attack against the enumerated incapacitated targets are not added to imported Attack Routines. The conditional extra attacks remain readable prose, not an unconditional attack-rate increase (#719/#720)."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "On a full attack with at least one unarmed strike, gain two additional unarmed strikes at highest base attack bonus against a dazed, flat-footed, paralyzed, staggered, stunned or unconscious foe."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/tocde3sKG1O3GKgd",
+      "upstreamKey": "pf1/tocde3sKG1O3GKgd",
+      "pack": "feats",
+      "name": "Improved Feint",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Maneuver", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at fooling your opponents in combat.</em></p><p><strong>Prerequisites</strong>: Int 13, <a href=\"catalog:pf1/NFxHebU1XhEs5WJh\">Combat Expertise</a>.</p><p><strong>Benefits</strong>: You can make a Bluff check to feint in combat as a move action.</p><p><strong>Normal</strong>: Feinting in combat is a standard action.</p>",
+      "prerequisiteText": "Int 13, Combat Expertise",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/NFxHebU1XhEs5WJh",
+          "kind": "feat"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 127"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1/ugQyUpqPBDsqLyra",
+      "upstreamKey": "pf1/ugQyUpqPBDsqLyra",
+      "pack": "feats",
+      "name": "Spring Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive", "Movement"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can deftly move up to a foe, strike, and withdraw before he can react.</em></p><p><strong>Prerequisites</strong>: Dex 13, <a href=\"catalog:pf1/JreaiTHdyWFNj3Tb\">Dodge</a>, <a href=\"catalog:pf1/R7L4SlGRlnThqFrP\">Mobility</a>, base attack bonus +4.</p><p><strong>Benefits</strong>: As a full-round action, you can move up to your speed and make a single melee attack without provoking any attacks of opportunity from the target of your attack. You can move both before and after the attack, but you must move at least 10 feet before the attack and the total distance that you move cannot be greater than your speed. You cannot use this ability to attack a foe that is adjacent to you at the start of your turn.</p><p><strong>Normal</strong>: You cannot move before and after an attack.</p>",
+      "prerequisiteText": "Dex 13, Dodge, Mobility, base attack bonus +4",
+      "prerequisites": [
+        {
+          "ability": "dexterity",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "bab": 4,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "9ilekjpdPWfwe7eo",
+                "activation": {
+                  "type": "full",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "seeText"
+                },
+                "target": {
+                  "value": "One Target"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2aTFNMs3pW6nUBlr",
+      "upstreamKey": "pf1/2aTFNMs3pW6nUBlr",
+      "pack": "feats",
+      "name": "Improved Unarmed Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Unarmed", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You are skilled at fighting while unarmed.</i><p><strong>Benefits</strong>: You are considered to be armed even when unarmed — you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice.</p><p><strong>Normal</strong>: Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "115, 128"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Unarmed attacks count as armed without provoking, and may deal lethal or nonlethal damage. This does not change unarmed damage dice."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/NFxHebU1XhEs5WJh",
+      "upstreamKey": "pf1/NFxHebU1XhEs5WJh",
+      "pack": "feats",
+      "name": "Combat Expertise",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Defensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can increase your defense at the expense of your accuracy.</i><p><strong>Prerequisites</strong>: Int 13.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on melee attack rolls and combat maneuver checks to gain a +1 dodge bonus to your Armor Class. When your base attack bonus reaches +4, and every +4 thereafter, the penalty increases by -1 and the dodge bonus increases by +1. You can only choose to use this feat when you declare that you are making an attack or a full-attack action with a melee weapon. The effects of this feat last until your next turn.</p>",
+      "prerequisiteText": "Int 13",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 13,
+          "kind": "ability"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "114, 119"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "attack.melee",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "-(1 + floor(@bab / 4))"
+          },
+          "condition": {
+            "option": true
+          }
+        },
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "-(1 + floor(@bab / 4))"
+          },
+          "condition": {
+            "option": true
+          }
+        },
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": {
+            "formula": "1 + floor(@bab / 4)"
+          },
+          "condition": {
+            "option": true
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "curation.mechanics",
+          "reason": "Option-scoped melee attack/CMB/AC formulas supplied; choosing a melee attack/full attack and until-next-turn duration remain consumer facts."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Before an attack or full attack with a melee weapon, choose −1 melee attack and combat maneuver checks for +1 dodge AC, increasing each by 1 per 4 BAB from +4. Effects last until your next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "upstreamKey": "pf1/FUW5mIXHNBBIQ1Sq",
+      "pack": "feats",
+      "name": "Power Attack",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Offensive"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>",
+      "prerequisiteText": "Str 13, base attack bonus +1",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "bab": 1,
+          "kind": "bab"
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 131"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "cmb",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "-1 - floor(@bab / 4)"
+          },
+          "condition": {
+            "option": true
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Choose before attacking: take -1 on melee attacks and combat maneuver checks for +2 melee damage, increasing by -1/+2 at BAB +4 and every +4 thereafter. Damage increases 50% for the stated two-handed or Str ×1.5 primary-natural uses and halves for off-hand or secondary-natural uses. Effects last until your next turn and bonus damage does not apply to touch attacks or effects without hit point damage."
+        }
+      ]
+    }
+  ],
+  "increments": [
+    {
+      "externalKey": "everythingpath/cavalier-challenge-10",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 4/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "10:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 4/day: the Cavalier table's 10th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-13",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 5/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "13:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 5/day: the Cavalier table's 13th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-16",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 6/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "16:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 6/day: the Cavalier table's 16th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-19",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 7/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "19:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 7/day: the Cavalier table's 19th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-4",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 2/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "4:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 2/day: the Cavalier table's 4th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/cavalier-challenge-7",
+      "upstreamKey": "pf1/WNi2SBF6Z2zhBMCl",
+      "pack": "everythingpath-schedules",
+      "name": "Challenge 3/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/WNi2SBF6Z2zhBMCl",
+        "part": "7:pf1/WNi2SBF6Z2zhBMCl"
+      },
+      "description": "<p>Challenge 3/day: the Cavalier table's 7th-level row of Challenge (Pathfinder RPG Advanced Player's Guide pp. 32–37). The Challenge entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "32–37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cavalier-challenge-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/WNi2SBF6Z2zhBMCl"
+    },
+    {
+      "externalKey": "everythingpath/monk-bonus-feat-10",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "10:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat: the Monk table's 10th-level row of Bonus Feat (Pathfinder RPG Core Rulebook pp. 56–60). The Bonus Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/monk-bonus-feat-14",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "14:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat: the Monk table's 14th-level row of Bonus Feat (Pathfinder RPG Core Rulebook pp. 56–60). The Bonus Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/monk-bonus-feat-18",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "18:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat: the Monk table's 18th-level row of Bonus Feat (Pathfinder RPG Core Rulebook pp. 56–60). The Bonus Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/monk-bonus-feat-2",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "2:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat: the Monk table's 2nd-level row of Bonus Feat (Pathfinder RPG Core Rulebook pp. 56–60). The Bonus Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/monk-bonus-feat-6",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "6:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat: the Monk table's 6th-level row of Bonus Feat (Pathfinder RPG Core Rulebook pp. 56–60). The Bonus Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-12",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +4d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "12:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +4d6: the Slayer table's 12th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-15",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +5d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "15:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +5d6: the Slayer table's 15th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-18",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +6d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "18:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +6d6: the Slayer table's 18th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-6",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +2d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "6:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +2d6: the Slayer table's 6th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/slayer-sneak-attack-9",
+      "upstreamKey": "pf1/Wl3FUflcmvQP0PaQ",
+      "pack": "everythingpath-schedules",
+      "name": "Sneak Attack +3d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/Wl3FUflcmvQP0PaQ",
+        "part": "9:pf1/Wl3FUflcmvQP0PaQ"
+      },
+      "description": "<p>Sneak Attack +3d6: the Slayer table's 9th-level row of Sneak Attack (Pathfinder RPG Advanced Class Guide pp. 53–55). The Sneak Attack entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "53–55"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/slayer-sneak-attack-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/Wl3FUflcmvQP0PaQ"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/W1KWAZxUNxfCv8rG",
+        "part": "13:pf1/W1KWAZxUNxfCv8rG"
+      },
+      "description": "<p>Bloodline Feat: the Sorcerer table's 13th-level row of Bloodline Feat (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/W1KWAZxUNxfCv8rG"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+      "upstreamKey": "pf1/W1KWAZxUNxfCv8rG",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/W1KWAZxUNxfCv8rG",
+        "part": "19:pf1/W1KWAZxUNxfCv8rG"
+      },
+      "description": "<p>Bloodline Feat: the Sorcerer table's 19th-level row of Bloodline Feat (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-feat-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/W1KWAZxUNxfCv8rG"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "10:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat (UC): the Monk (Unchained) table's 10th-level row of Bonus Feat (UC) (Pathfinder Unchained pp. 14–19). The Bonus Feat (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "14:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat (UC): the Monk (Unchained) table's 14th-level row of Bonus Feat (UC) (Pathfinder Unchained pp. 14–19). The Bonus Feat (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-14",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "18:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat (UC): the Monk (Unchained) table's 18th-level row of Bonus Feat (UC) (Pathfinder Unchained pp. 14–19). The Bonus Feat (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "2:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat (UC): the Monk (Unchained) table's 2nd-level row of Bonus Feat (UC) (Pathfinder Unchained pp. 14–19). The Bonus Feat (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-2",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+      "upstreamKey": "pf1/VjHjPja5QABBgRvR",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/VjHjPja5QABBgRvR",
+        "part": "6:pf1/VjHjPja5QABBgRvR"
+      },
+      "description": "<p>Bonus Feat (UC): the Monk (Unchained) table's 6th-level row of Bonus Feat (UC) (Pathfinder Unchained pp. 14–19). The Bonus Feat (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-bonus-feat-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/VjHjPja5QABBgRvR"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+_id: Mgi0taTxLOPN6y2V
+_key: '!items!Mgi0taTxLOPN6y2V'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/items/inventory/monster-paw-bear.jpg
+name: Animal Focus (Bear)
+system:
+  changes:
+    - _id: jamymq50
+      formula: floor(((@item.level)-1)/7)*2+2
+      target: con
+      type: enh
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains a +2 enhancement bonus to Constitution. This bonus
+      increases to +4 at 8th level and +6 at 15th level.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 7
+  subType: feat
+type: buff

@@ -1,0 +1,87 @@
+_id: 0TcB4dJHX1TDYslC
+_key: '!items!0TcB4dJHX1TDYslC'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/hunga-munga.PNG
+name: Hunga Munga
+system:
+  actions:
+    - _id: xuxdao639omls9zc
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '15'
+    - _id: SwmYBlvEK6I2Wq0X
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        formula:
+          bonus: '@formulaicAttack * -5'
+          count: ceil(@attributes.bab.total / 5) -1
+        type: custom
+      name: Melee
+      range:
+        units: ft
+        value: '15'
+      uses:
+        autoDeductChargesCost: '0'
+  baseTypes:
+    - Hunga Munga
+  description:
+    unidentified: >-
+      <p>Also called a mambele, danisco, goleyo, njiga, or any of many
+      lesser-known names, this three-bladed dagger is intended for throwing but
+      can be used as a melee weapon. Though the basic three-blade design is most
+      common, hunga mungas can take a wide variety of forms.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 4
+  sources:
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon
