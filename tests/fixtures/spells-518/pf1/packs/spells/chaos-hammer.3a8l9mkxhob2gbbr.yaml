@@ -1,0 +1,61 @@
+_id: 3a8l9mkxhob2gbbr
+_key: '!items!3a8l9mkxhob2gbbr'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Chaos Hammer
+system:
+  actions:
+    - _id: cpaelpoqvmhwivz8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius burst
+      duration:
+        units: spec
+        value: instantaneous (1d6 rounds); see text
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial; see text
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You unleash chaotic power to smite your enemies. The power takes the
+      form of a multicolored explosion of leaping, ricocheting energy. Only
+      lawful and neutral (not chaotic) creatures are harmed by the
+      spell.</p><p>The spell deals 1d8 points of damage per two caster levels
+      (maximum 5d8) to lawful creatures (or 1d6 points of damage per caster
+      level, maximum 10d6, to lawful outsiders) and <i>slow</i>s them for 1d6
+      rounds (see the <i>slow</i> spell). A successful Will save reduces the
+      damage by half and negates the <i>slow</i> effect.</p><p>The spell deals
+      only half damage against creatures who are neither lawful nor chaotic, and
+      they are not <i>slow</i>ed. Such a creature can reduce the damage by half
+      again (down to one-quarter) with a successful Will save.</p>
+  descriptors:
+    - chaotic
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 4
+      oracle: 4
+      warpriest: 4
+    domain:
+      Chaos: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '254'
+type: spell

@@ -1,0 +1,61 @@
+_id: 0sssdtv0tkbns2r3
+_key: '!items!0sssdtv0tkbns2r3'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Grove of Respite
+system:
+  actions:
+    - _id: mldqa26awhg9urdu
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      effect: 20-ft.-radius grove
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You conjure a sheltered grove of trees surrounding a shallow spring.
+      The grove appears from nowhere even in the most barren, rocky soil
+      regardless of season, but the spell must be cast outside on open
+      ground.</p><p>The area within the grove is temperate and comfortable, like
+      that of a <i>tiny hut</i>, although the grove provides no illumination and
+      provides no protection from the elements. The water in the grove's spring
+      is clean and drinkable. Additionally, the trees provide a variety of ripe
+      fruit, regardless of season, which acts as a <i>goodberry</i> spell for up
+      to eight people. The grove is warded with an <i>alarm</i> spell that
+      alerts you whenever any creature enters the area. Once the spell expires,
+      the grove vanishes, including all fruit, water, and other materials from
+      it, although any nourishment or healing gained from its effects
+      remains.</p>
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 4
+      ranger: 4
+      shaman: 5
+  level: 4
+  materials:
+    value: a leaf or blade of grass and a drop of water
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '226'
+  sr: false
+  subschool:
+    - creation
+type: spell

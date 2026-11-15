@@ -1,0 +1,67 @@
+_id: u2vipq48algenijz
+_key: '!items!u2vipq48algenijz'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Audiovisual Hallucination
+system:
+  actions:
+    - _id: ytn9eemib4mwyjkc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration + 3 rounds
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.uab18yhecv8djvbg]{auditory hallucination},
+      except that you can include the image of any object, creature, or force
+      you imagine or identify for the targets to imagine. You can move the image
+      while you concentrate. After you cease concentration, you can define
+      simple movements or changes for the phantasm to perform that can be
+      explained in 25 words or fewer.  The image disappears when struck by an
+      opponent unless you cause the illusion to react appropriately or instruct
+      it to do so. Its AC is equal to 10 + the level of this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      magus: 3
+      medium: 2
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '204'
+  subschool:
+    - phantasm
+type: spell

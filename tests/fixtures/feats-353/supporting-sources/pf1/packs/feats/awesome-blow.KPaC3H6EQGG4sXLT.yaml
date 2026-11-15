@@ -1,0 +1,72 @@
+_id: KPaC3H6EQGG4sXLT
+_key: '!items!KPaC3H6EQGG4sXLT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_27.jpg
+name: Awesome Blow
+system:
+  actions:
+    - _id: 1XoNs8HGxM3vlAEk
+      ability:
+        attack: str
+        damage: str
+      actionType: mcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#ffffff'
+        size: '10'
+        type: ray
+      name: Use
+      range:
+        units: melee
+      target:
+        value: corporeal smaller opponent
+    - _id: 3alfhVQ4pXCD6J4s
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - bludgeoning
+      name: Obstacle Damage
+  description:
+    instructions: >-
+      <p>Adjust the damage dice of the blow accordingly to the creature using
+      it.</p>
+    value: >-
+      <p><em>This creature can send opponents
+      flying.</em></p><p><strong>Prerequisites</strong>: Str 25,
+      @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack},
+      @UUID[Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0]{Improved Bull Rush},
+      size Large or larger.</p><p><strong>Benefits</strong>: As a standard
+      action, the creature may perform an awesome blow combat maneuver. If the
+      creature's maneuver succeeds against a corporeal opponent smaller than
+      itself, its opponent takes damage (typically slam damage plus Strength
+      bonus) and is knocked flying 10 feet in a direction of the attacking
+      creature's choice and falls prone. The attacking creature can only push
+      the opponent in a straight line, and the opponent can't move closer to the
+      attacking creature than the square it started in. If an obstacle prevents
+      the completion of the opponent's move, the opponent and the obstacle each
+      take 1d6 points of damage, and the opponent is knocked prone in the space
+      adjacent to the obstacle.</p>
+  sources:
+    - id: PZO1112
+      pages: '314'
+  tags:
+    - Combat
+    - Monster
+type: feat

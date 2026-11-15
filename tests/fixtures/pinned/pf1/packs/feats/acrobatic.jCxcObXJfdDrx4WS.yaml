@@ -1,0 +1,28 @@
+_id: jCxcObXJfdDrx4WS
+_key: '!items!jCxcObXJfdDrx4WS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/acrobatic.jpg
+name: Acrobatic
+system:
+  changes:
+    - _id: 90jgn1dn
+      formula: 2 + if(gte(@skills.acr.rank, 10), 2)
+      target: skill.acr
+      type: untyped
+    - _id: 7c8pfth0
+      formula: 2 + if(gte(@skills.fly.rank, 10), 2)
+      target: skill.fly
+      type: untyped
+  description:
+    value: >-
+      <p><em>You are skilled at leaping, jumping, and
+      flying.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all
+      Acrobatics and Fly skill checks. If you have 10 or more ranks in one of
+      these skills, the bonus increases to +4 for that skill.</p>
+  sources:
+    - id: PZO1110
+      pages: 113, 114
+  tags:
+    - General
+type: feat
