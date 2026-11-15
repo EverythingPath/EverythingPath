@@ -1,0 +1,54 @@
+_id: cl4hqv2rghoj7xm6
+_key: '!items!cl4hqv2rghoj7xm6'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Black Sword of War
+system:
+  actions:
+    - _id: 3b10s11llugy9syi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: piercing or slashing manufactured weapon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target weapon turns a glossy black color and deals bleed damage if
+      it deals hit point damage to a creature. The amount of bleed damage is
+      equal to 1/2 your caster level (maximum bleed 5).</p>
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      cleric: 3
+      hunter: 3
+      oracle: 3
+      ranger: 3
+      sorcerer: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9071
+      pages: '75'
+type: spell

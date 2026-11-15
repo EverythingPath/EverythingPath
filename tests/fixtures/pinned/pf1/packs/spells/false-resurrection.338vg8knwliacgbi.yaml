@@ -1,0 +1,70 @@
+_id: 338vg8knwliacgbi
+_key: '!items!338vg8knwliacgbi'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/unholy/demons-horned-glowing-pink.webp
+name: False Resurrection
+system:
+  actions:
+    - _id: gwvka47yrc884ejk
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: dead creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.thh46ghi51lrl3cl]{resurrection} except
+      that instead of recalling the dead soul to life, the spell calls a shadow
+      demon with the advanced simple template (<em>Pathfinder RPG Bestiary</em>
+      67, 294) to possess the body. If you fail to overcome the subject's spell
+      resistance, the subject's soul can negate the calling and gain the option
+      to return to life (as <em>resurrection</em>) in the restored body. The
+      possession otherwise functions (as
+      @UUID[Compendium.pf1.spells.Item.4mw83czf7b62rar3]{possession}) except
+      that the subject's soul is not present to resist. When <em>false
+      resurrection</em> ends or the demon is removed from the subject, the demon
+      returns to the Abyss, leaving the body alive but soulless (like that
+      created by clone). If the soul hasn't been returned to life already, it
+      has the option to return in the now-empty body if it still lives (as
+      <em>resurrection</em>). If the body was killed, the demon is sent back to
+      the Abyss but the subject remains dead.</p><p>Attempts to identify
+      <em>false resurrection</em> with a skill check incorrectly identify it as
+      <em>resurrection</em> (see the ruse descriptor on page 192). A fooled
+      viewer mistakes <em>false resurrection</em>'s aura as the lingering aura
+      of an instantaneous conjuration effect.</p>
+  descriptors:
+    - chaotic
+    - evil
+    - ruse
+  learnedAt:
+    class:
+      cleric: 7
+      oracle: 7
+      shaman: 8
+      witch: 8
+  level: 7
+  materials:
+    gpValue: 10000
+    value: diamond worth 10,000 gp
+  school: con
+  sources:
+    - id: PZO1134
+      pages: '214'
+  subschool:
+    - calling
+type: spell

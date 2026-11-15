@@ -1,0 +1,65 @@
+_id: ibk7jrc5rwubpia6
+_key: '!items!ibk7jrc5rwubpia6'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: systems/pf1/icons/spells/haste-royal-1.jpg
+name: Aid
+system:
+  actions:
+    - _id: z3mn4crx0k8oqva0
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d8 + min(10, @cl)
+            types:
+              - untyped
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: living creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Aid</i> grants the target a +1 morale bonus on attack rolls and
+      saves against fear effects, plus temporary hit points equal to 1d8 +
+      caster level (to a maximum of 1d8+10 temporary hit points at caster level
+      10th).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      adept: 2
+      alchemist: 2
+      cleric: 2
+      inquisitor: 2
+      investigator: 2
+      medium: 2
+      oracle: 2
+      shaman: 2
+      spiritualist: 2
+      warpriest: 2
+    domain:
+      Luck: 2
+    subDomain:
+      Tactics: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '239'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,72 @@
+_id: 9tww9fc9049h6iqc
+_key: '!items!9tww9fc9049h6iqc'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/creatures/magical/spirit-fear-energy-pink.webp
+name: Cause Fear
+system:
+  actions:
+    - _id: ucbil3spn3e1y1e3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1d4 rounds or 1 round; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one living creature with 5 or fewer HD
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The affected creature becomes frightened. If the subject succeeds on a
+      Will save, it is shaken for 1 round. Creatures with 6 or more HD are
+      immune to this effect. Cause fear counters and dispels remove fear.</p>
+  descriptors:
+    - emotion
+    - fear
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Abyssal: 1
+    class:
+      adept: 1
+      antipaladin: 1
+      arcanist: 1
+      bard: 1
+      bloodrager: 1
+      cleric: 1
+      inquisitor: 1
+      medium: 1
+      mesmerist: 1
+      occultist: 1
+      oracle: 1
+      psychic: 1
+      shaman: 1
+      skald: 1
+      sorcerer: 1
+      spiritualist: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+    domain:
+      Death: 1
+    subDomain:
+      Daemon: 1
+      Fear: 1
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '252'
+type: spell
