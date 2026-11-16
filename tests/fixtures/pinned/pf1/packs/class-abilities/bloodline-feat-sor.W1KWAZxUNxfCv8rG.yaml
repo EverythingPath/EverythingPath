@@ -1,0 +1,25 @@
+_id: W1KWAZxUNxfCv8rG
+_key: '!items!W1KWAZxUNxfCv8rG'
+_stats:
+  coreVersion: '12.343'
+img: icons/skills/melee/blood-slash-foam-red.webp
+name: Bloodline Feat (SOR)
+system:
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: FFqXtrE5
+      formula: floor((@class.level - 1) / 6)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>At 7th level, and every six levels thereafter, a sorcerer receives one
+      bonus feat, chosen from a list specific to each bloodline. The sorcerer
+      must meet the prerequisites for these bonus feats.</p>
+  sources:
+    - id: PZO1110
+      pages: '71'
+  subType: classFeat
+type: feat

@@ -1,0 +1,73 @@
+_id: jgx8sur7w4k93mql
+_key: '!items!jgx8sur7w4k93mql'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Elemental Touch
+system:
+  actions:
+    - _id: s8np9790ruy9ar0n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: see text
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Upon completing the casting of this spell, elemental energy infuses
+      your hands. Choose an energy type: acid, cold, electricity, or fire. You
+      gain a melee touch attack causing 1d6 points of damage of that energy
+      type, along with a special effect described below. You also deal energy
+      damage and the related special effect when you attack with your hands
+      using an unarmed strike, a single claw, or a single slam attack. This
+      bonus damage can never apply to multiple weapons.</p><p><b>Acid:</b> Your
+      touch attack causes 1 point of ongoing acid damage per round for 1 round
+      per three caster levels. The target must make a Fortitude save or be
+      sickened for the duration of the ongoing acid damage.</p><p><b>Cold:</b>
+      The target must make a Fortitude save or be fatigued.</p><p>A creature
+      that is already fatigued suffers no additional
+      effect.</p><p><b>Electricity:</b> The target must make a Fortitude save or
+      be staggered for 1 round.</p><p><b>Fire:</b> Your hands ignite and shed
+      light as a torch. Your touch may cause targets to catch on fire (<i>Core
+      Rulebook</i> 444).</p><p>Subsequent attacks inflict the normal damage, but
+      the additional effects do not stack. This spell grants no special
+      protection to anything held in or worn on your hands. When you cast this
+      spell to deal acid, cold, electricity, or fire damage, it is a spell of
+      that type.</p>
+  descriptors:
+    - acid, cold, electricity, or fire
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      bloodrager: 2
+      investigator: 2
+      magus: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: 'a bit of the chosen element: earth, water, air, or fire'
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '218'
+  sr: false
+type: spell

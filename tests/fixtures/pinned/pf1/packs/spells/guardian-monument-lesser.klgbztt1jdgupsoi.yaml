@@ -1,0 +1,92 @@
+_id: klgbztt1jdgupsoi
+_key: '!items!klgbztt1jdgupsoi'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Guardian Monument, Lesser
+system:
+  actions:
+    - _id: zxcx948toox9e7e2
+      actionType: spellsave
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      area: >-
+        40-ft. radius from touched object or 60-ft. radius from touched object;
+        see text
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: 40-ft. radius
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+    - _id: 4v10aW6pVP86t0q8
+      actionType: spellsave
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      area: >-
+        40-ft. radius from touched object or 60-ft. radius from touched object;
+        see text
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: 60-ft. radius
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You touch an unattended, nonmagical object to create a touchstone for
+      humans defending the area. Such human defenders are protected by a
+      shimmering aura as long as they are in the area. The spell grants each
+      subject damage reduction 2/magic. Humans who leave the area and reenter
+      regain the damage reduction. The spell is suppressed if the object is
+      moved from its place, but resumes if the object is put back. Its duration
+      continues to elapse while it is suppressed this way.  Normally, the area
+      of effect is 40 feet from the touched object. If the touched object is a
+      monument to human achievement, the area increases to a 60-foot radius.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      inquisitor: 3
+      magus: 3
+      occultist: 3
+      paladin: 3
+      psychic: 3
+      shaman: 4
+      skald: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: an unattended, nonmagical object
+  school: abj
+  sources:
+    - id: PZO9465
+      pages: '8'
+type: spell

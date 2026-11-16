@@ -1,0 +1,30 @@
+_id: OrbV3Q6U2BdnL8tR
+_key: '!items!OrbV3Q6U2BdnL8tR'
+_stats:
+  coreVersion: '12.343'
+folder: NY5BdmnNcdiNt1PL
+img: icons/magic/defensive/barrier-shield-dome-deflect-teal.webp
+name: Spell Resistance
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Familiar
+  changes:
+    - _id: 7GpBCMFX
+      formula: 5 + @class.level
+      operator: set
+      target: spellResist
+      type: untyped
+  description:
+    value: >-
+      <p>If the master is 11th level or higher, a familiar gains spell
+      resistance equal to the master’s level + 5. To affect the familiar with a
+      spell, another spellcaster must get a result on a caster level check (1d20
+      + caster level) that equals or exceeds the familiar’s spell
+      resistance.</p>
+  sources:
+    - id: PZO1110
+      pages: '83'
+  subType: classFeat
+type: feat
