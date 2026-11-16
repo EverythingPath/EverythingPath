@@ -1,0 +1,60 @@
+_id: LWPBZON5AHSjxqXi
+_key: '!items!LWPBZON5AHSjxqXi'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/throwing-arrow-cord.PNG
+name: Throwing Arrow Cord
+system:
+  actions:
+    - _id: 43ab0th9k93x5vdc
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '60'
+  baseTypes:
+    - Throwing Arrow Cord
+  description:
+    unidentified: >-
+      <p>This simple fiber or leather cord has a knot at either end. One end is
+      wound once around the notch of a throwing arrow (see New Ammunition,
+      below). The cord runs taut along the shaft to the front of the arrow,
+      where you hold the arrow to throw. The remainder of the cord wraps around
+      your hand. The cord dramatically increases the throwing arrow's range.
+      Attaching the cord to a throwing arrow is a move action that requires two
+      hands and provokes attacks of opportunity. The Rapid Reload feat can be
+      taken for throwing arrow cords, allowing you to load a throwing arrow as a
+      free action.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO9452
+      pages: '19'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+type: weapon

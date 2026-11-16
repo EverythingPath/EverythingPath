@@ -1,0 +1,58 @@
+_id: k7cf5gshkp8xxqux
+_key: '!items!k7cf5gshkp8xxqux'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Blindness/Deafness
+system:
+  actions:
+    - _id: d83225w56iwkzunu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: perm
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You call upon the powers of unlife to render the subject blinded or
+      deafened, as you choose.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      cleric: 3
+      mesmerist: 2
+      oracle: 3
+      psychic: 2
+      shaman: 3
+      skald: 2
+      sorcerer: 2
+      spiritualist: 3
+      warpriest: 3
+      witch: 2
+      wizard: 2
+    domain:
+      Darkness: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '250'
+type: spell

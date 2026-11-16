@@ -1,0 +1,146 @@
+_id: F9EySW6oowVAOWa4
+_key: '!items!F9EySW6oowVAOWa4'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Toxic
+system:
+  actions:
+    - _id: BrxO0KMD2Nt4u2f2
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: '1'
+            types:
+              - Con
+      description: >-
+        <p>envenom a weapon you wield with your toxic saliva or blood (using
+        blood requires that you be injured). Applying venom in this way is a
+        swift action. When you take this trait, choose one of the following
+        venoms.</p><p>Life-Stealing Venom: Injury; save Fort DC 10 + 1/2 the
+        user’s Hit Dice + the user’s Constitution modifier; frequency 1/round
+        for 6 rounds; effect 1 Con; cure 1 save.</p>
+      duration:
+        units: round
+      name: Life-Stealing venom
+      notes:
+        effect:
+          - frequency 1/round for 6 rounds; effect 1 Con; cure 1 save.
+      range:
+        units: touch
+      save:
+        dc: 10 +  floor(@attributes.hd.total / 2)  +@abilities.con.mod
+        description: Negates
+        type: fort
+      target:
+        value: Wielded weapon
+    - _id: pl5W1ZRUW1AdVYk1
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: 1d2
+            types:
+              - Dex
+      description: >-
+        <p>envenom a weapon you wield with your toxic saliva or blood (using
+        blood requires that you be injured). Applying venom in this way is a
+        swift action. When you take this trait, choose one of the following
+        venoms.</p><p>Paralytic Venom: Injury; save Fort DC 10 + 1/2 the user’s
+        Hit Dice + the user’s Constitution modifier; frequency 1/round for 6
+        rounds; effect 1d2 Dex; cure 1 save.</p>
+      duration:
+        units: round
+      name: Paralytic Venom
+      notes:
+        effect:
+          - frequency 1/round for 6 rounds; effect 1d2 Dex; cure 1 save.
+      range:
+        units: touch
+      save:
+        dc: 10 +  floor(@attributes.hd.total / 2)  +@abilities.con.mod
+        description: Negates
+        type: fort
+      target:
+        value: Wielded weapon
+    - _id: zlGzJvWg8326TDYh
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: 1d2
+            types:
+              - Str
+      description: >-
+        <p>envenom a weapon you wield with your toxic saliva or blood (using
+        blood requires that you be injured). Applying venom in this way is a
+        swift action. When you take this trait, choose one of the following
+        venoms.</p><p>Weakening Venom: Injury; save Fort DC 10 + 1/2 the user’s
+        Hit Dice + the user’s Constitution modifier; frequency 1/round for 6
+        rounds; effect 1d2 Str; cure 1 save.</p>
+      duration:
+        units: round
+      name: Weakening Venom
+      notes:
+        effect:
+          - frequency 1/round for 6 rounds; effect 1d2 Str; cure 1 save.
+      range:
+        units: touch
+      save:
+        dc: 10 +  floor(@attributes.hd.total / 2)  +@abilities.con.mod
+        description: Negates
+        type: fort
+      target:
+        value: Wielded weapon
+  description:
+    instructions: >-
+      <p>Delete the two actions representing the options you didn't chose from
+      the details tab of this trait.</p>
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.OGvHcwhmrl2F70Rh]{Aberration},
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M7iCedGNTrldJq5R]{Dragon},
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.6tmkzGAbCFuUIclP]{Plant},
+      or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.VZg9M6DaaZkIA8ql]{Undead}
+      type, or grippli,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.6am3c1HIosN3E6vk]{Half-Undead},
+      reptilian, or vishkanya subtype</p><hr /><p>Members of this race gain the
+      following extraordinary ability: A number of times per day equal to its
+      Constitution modifier (minimum 1/day), a member of this race can envenom a
+      weapon that it wields with its toxic saliva or blood (using blood requires
+      the creature to be injured when it uses this ability). Applying venom in
+      this way is a swift action. When you take this trait, choose one of the
+      following venoms.</p><ul><li><p><strong>Life-Stealing Venom:</strong>
+      Injury; <em>save</em> Fort DC 10 + 1/2 the user’s Hit Dice + the user’s
+      Constitution modifier; <em>frequency</em> 1/round for 6 rounds;
+      <em>effect</em> 1 Con; <em>cure</em> 1
+      save.</p></li><li><p><strong>Paralytic Venom</strong>: Injury;
+      <em>save</em> Fort DC 10 + 1/2 the user’s Hit Dice + the user’s
+      Constitution modifier; <em>frequency</em> 1/round for 6 rounds;
+      <em>effect</em> 1d2 Dex; <em>cure</em> 1
+      save.</p></li><li><p><strong>Weakening Venom</strong>: Injury;
+      <em>save</em> Fort DC 10 + 1/2 the user’s Hit Dice + the user’s
+      Constitution modifier; <em>frequency</em> 1/round for 6 rounds;
+      <em>effect</em> 1d2 Str; <em>cure</em> 1 save.</p></li></ul>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '235'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+type: feat

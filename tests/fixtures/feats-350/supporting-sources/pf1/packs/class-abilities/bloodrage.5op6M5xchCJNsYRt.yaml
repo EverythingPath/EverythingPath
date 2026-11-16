@@ -1,0 +1,62 @@
+_id: 5op6M5xchCJNsYRt
+_key: '!items!5op6M5xchCJNsYRt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_12.jpg
+name: Bloodrage
+system:
+  abilityType: su
+  actions:
+    - _id: 81r2gyv54eqja3ag
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Bloodrager
+  description:
+    value: >-
+      <p>The bloodrager’s source of internal power grants him the ability to
+      bloodrage. At 1st level, a bloodrager can bloodrage for a number of rounds
+      per day equal to 4 + his Constitution modifier. At each level after 1st,
+      he can bloodrage for 2 additional rounds per day. Temporary increases to
+      Constitution (such as those gained from bloodraging or spells like
+      @UUID[Compendium.pf1.spells.usdv1eqvibmxun6x]{Bear's Endurance}) don’t
+      increase the total number of rounds that a bloodrager can bloodrage per
+      day. The total number of rounds of bloodrage per day is renewed after
+      resting for 8 hours, although these hours need not be consecutive.<p>A
+      bloodrager can enter a bloodrage as a free action. While in a bloodrage, a
+      bloodrager gains a +4 morale bonus to his Strength and Constitution, as
+      well as a +2 morale bonus on Will saves. In addition, he takes a –2
+      penalty to Armor Class. The increase to Constitution grants the bloodrager
+      2 hit points per Hit Die, but these disappear when the bloodrage ends and
+      are not lost first like temporary hit points. While bloodraging, a
+      bloodrager cannot use any Charisma-, Dexterity-, or Intelligence-based
+      skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that
+      requires patience or concentration.<p>A bloodrager can end his bloodrage
+      as a free action. When the bloodrage ends, he’s fatigued for a number of
+      rounds equal to twice the number of rounds spent in the bloodrage. A
+      bloodrager cannot enter a new bloodrage while fatigued or exhausted, but
+      can otherwise enter bloodrage multiple times during a single encounter or
+      combat. If a bloodrager falls unconscious, his bloodrage immediately ends,
+      placing him in peril of death.<p>Bloodrage counts as the barbarian’s rage
+      class feature for the purpose of feat prerequisites, feat abilities, magic
+      item abilities, and spell effects.</p>
+  sources:
+    - id: PZO1129
+      pages: '15'
+  subType: classFeat
+  tag: classFeat_bloodrage
+  uses:
+    maxFormula: 4 + @abilities.con.mod + ((@class.level - 1) * 2)
+    per: day
+type: feat

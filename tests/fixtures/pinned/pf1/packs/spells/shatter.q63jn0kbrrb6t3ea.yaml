@@ -1,0 +1,95 @@
+_id: q63jn0kbrrb6t3ea
+_key: '!items!q63jn0kbrrb6t3ea'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Shatter
+system:
+  actions:
+    - _id: 9ukcmtkvdzdhef0j
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5-ft.-radius spread
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: 5-ft. Radius
+      range:
+        units: close
+      save:
+        description: >-
+          Will negates (object); Will negates (object) or Fortitude half; see
+          text
+        type: fort
+    - _id: QZ9zgjERJC2IZUNl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Object / Crystalline Creature
+      range:
+        units: close
+      save:
+        description: >-
+          Will negates (object); Will negates (object) or Fortitude half; see
+          text
+        type: fort
+      target:
+        value: one solid object or one crystalline creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Shatter</i> creates a loud, ringing noise that breaks brittle,
+      nonmagical objects; sunders a single solid, nonmagical object; or damages
+      a crystalline creature.</p><p>Used as an area attack, <i>shatter</i>
+      destroys nonmagical objects of crystal, glass, ceramic, or porcelain. All
+      such unattended objects within a 5-foot radius of the point of origin are
+      smashed into dozens of pieces by the spell. Objects weighing more than 1
+      pound per your level are not affected, but all other objects of the
+      appropriate composition are <i>shatter</i>ed.</p><p>Alternatively, you can
+      target <i>shatter</i> against a single solid nonmagical object, regardless
+      of composition, weighing up to 10 pounds per caster level. Targeted
+      against a crystalline creature (of any weight), <i>shatter</i> deals 1d6
+      points of sonic damage per caster level (maximum 10d6), with a Fortitude
+      save for half damage.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      cleric: 2
+      magus: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+    domain:
+      Destruction: 2
+  level: 2
+  materials:
+    value: a chip of mica
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '341'
+type: spell

@@ -1,0 +1,137 @@
+_id: ZJVdNI7JLIsgnQYz
+_key: '!items!ZJVdNI7JLIsgnQYz'
+_stats:
+  coreVersion: '12.331'
+folder: s3XA0F2kVN0SkumI
+img: systems/pf1/icons/spells/air-burst-magenta-1.jpg
+name: Lashunta Magic
+system:
+  actions:
+    - _id: zeWAoT7Ti6r0ndCO
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>A lashunta possessing an Intelligence score of 11 or higher gains the
+        following spell-like abilities:</p><p>at
+        will-<em>@UUID[Compendium.pf1.spells.Item.hk3xhc08blqzniv0]{daze}</em>,
+        </p><p>This spell clouds the mind of a humanoid creature with 4 or fewer
+        Hit Dice so that it takes no actions. Humanoids of 5 or more HD are not
+        affected. A dazed subject is not stunned, so attackers get no special
+        advantage against it. After a creature has been dazed by this spell, it
+        is immune to the effects of this spell for 1 minute.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Daze
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + @abilities.cha.mod
+        description: Negates
+        type: will
+      target:
+        value: one humanoid creaturee of 4 HD or less
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: round
+    - _id: lBAfoVcQLcKPHLOu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>A lashunta possessing an Intelligence score of 11 or higher gains the
+        following spell-like abilities:</p><p>at
+        will-@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage
+        hand};</p><p>You point your finger at an object and can lift it and move
+        it at will from a distance. As a move action, you can propel the object
+        as far as @Distance[15 ft;dual] in any direction, though the spell ends
+        if the distance between you and the object ever exceeds the spell's
+        range.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Mage Hand
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one nonmagical object weighing up to 5 lbs (2.5 kg)
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: round
+    - _id: 6SMTlvsTWZ02QpZV
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: Cone shaped emanation
+      description: >-
+        <p>A lashunta possessing an Intelligence score of 11 or higher gains the
+        following spell-like abilities:
+        1/day-@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect
+        thoughts}.</p><p>You detect surface thoughts. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of thoughts (from
+        conscious creatures with Intelligence scores of 1 or higher).</p><p>2nd
+        Round: Number of thinking minds and the Intelligence score of each. If
+        the highest Intelligence is 26 or higher (and at least 10 points higher
+        than your own Intelligence score), you are stunned for 1 round and the
+        spell ends. This spell does not let you determine the location of the
+        thinking minds if you can't see the creatures whose thoughts you are
+        detecting.</p><p>3rd Round: Surface thoughts of any mind in the area. A
+        target's Will save prevents you from reading its thoughts, and you must
+        cast detect thoughts again to have another chance. Creatures of animal
+        intelligence (Int 1 or 2) have simple, instinctual thoughts.</p><p>Each
+        round, you can turn to detect thoughts in a new area. The spell can
+        penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of common
+        metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood or dirt
+        blocks it.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: up to [[@attributes.hd.total]] minutes
+      name: Detect Thoughts
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Lashunta</p><hr /><p>A lashunta possessing an
+      Intelligence score of 11 or higher gains the following spell-like
+      abilities: at
+      will-<em>@UUID[Compendium.pf1.spells.Item.hk3xhc08blqzniv0]{daze}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.p8lm7khq3ynyif21]{mage hand}</em>;
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect
+      thoughts}</em>. The caster level for these effects is equal to the
+      lashunta's character level.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '246'
+    - id: PZO9449
+      pages: '10'
+    - id: PZO9251
+      pages: '25'
+  subType: racial
+  tags:
+    - Lashunta
+  traitCategory: magical
+type: feat
