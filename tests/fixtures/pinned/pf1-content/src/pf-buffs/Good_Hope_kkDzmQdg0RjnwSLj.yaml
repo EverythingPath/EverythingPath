@@ -1,0 +1,63 @@
+_id: kkDzmQdg0RjnwSLj
+_key: '!items!kkDzmQdg0RjnwSLj'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/light_06.jpg
+name: Good Hope
+system:
+  changes:
+    - _id: mi8onw50
+      formula: '2'
+      target: allSavingThrows
+      type: morale
+    - _id: 57wpfq2b
+      formula: '2'
+      target: attack
+      type: morale
+    - _id: dtnibgc4
+      formula: '2'
+      target: allChecks
+      type: morale
+    - _id: vzbsjf0u
+      formula: '2'
+      target: skills
+      type: morale
+    - _id: j4o7x9rg
+      formula: '2'
+      target: wdamage
+      type: morale
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.rgd5v3llwoptwcdb]{Good
+      Hope}</p><p>This spell instills powerful hope in the subjects. Each
+      affected creature gains a +2 morale bonus on saving throws, attack rolls,
+      ability checks, skill checks, and weapon damage rolls.</p><p><em>Good
+      hope</em> counters and dispels
+      <em>@UUID[Compendium.pf1.spells.Item.zt7cje76dck9hwp9]{Crushing
+      Despair}</em>.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 7
+  scriptCalls:
+    - _id: 0SGffvPJ7EQ7yZHm
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Cancel Out
+      type: script
+      value: |-
+        if(state) {
+          const cancelTag= "crushingDespair"
+
+          const otherBuff = actor.itemTypes.buff.find(b => (b.system.tag === cancelTag) && b.system.active);
+
+          if(otherBuff) {
+            await otherBuff.setActive(false)
+            await item.setActive(false)
+          }
+        }
+  subType: spell
+  tag: goodHope
+type: buff

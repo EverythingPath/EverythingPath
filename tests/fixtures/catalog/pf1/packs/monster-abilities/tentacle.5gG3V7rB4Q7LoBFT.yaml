@@ -1,0 +1,45 @@
+_id: 5gG3V7rB4Q7LoBFT
+_key: '!items!5gG3V7rB4Q7LoBFT'
+_stats:
+  coreVersion: '12.343'
+folder: xPJd6syoxDiunnzG
+img: icons/commodities/biological/tentacle-purple-white.webp
+name: Tentacle
+system:
+  actions:
+    - _id: f2ubtsgnwupcixhz
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      name: Attack
+      naturalAttack:
+        primary: false
+      range:
+        units: melee
+      tag: tentacle
+  baseTypes:
+    - Tentacle
+  description:
+    value: >-
+      <p>A secondary natural attack with your tentacle, pseudopod, or similar
+      appendage.</p><p>It deals bludgeoning damage.</p><hr><p>For general rules
+      on natural attacks, see:
+      @UUID[Compendium.pf1.pf1e-rules.nBnUY0koBzXqoEft.JournalEntryPage.8zivKFrhTVkbtjm3]{Natural
+      Attacks} (UMR).</p>
+  held: null
+  proficient: true
+  subType: natural
+  weaponGroups:
+    - natural
+type: attack

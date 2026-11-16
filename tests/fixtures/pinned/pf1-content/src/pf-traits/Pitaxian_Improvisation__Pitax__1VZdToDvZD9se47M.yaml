@@ -1,0 +1,63 @@
+_id: 1VZdToDvZD9se47M
+_key: '!items!1VZdToDvZD9se47M'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Pitaxian Improvisation (Pitax)
+system:
+  actions:
+    - _id: s9GGz1DJtEgdREo1
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day after you attempt a Perform check and before the results
+        of the roll are revealed by the GM, you can attempt a Bluff check and
+        use the result of that check in place of your Perform check. You must
+        use the result of that Bluff check, even if it is lower.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: re roll perform with bluff instead
+  contextNotes:
+    - target: skill.prf
+      text: >-
+        Once per day, after you attempt a Perform check, and before the results
+        are revealed, you can attempt a Bluff check and use the result of that
+        check in place of your Perform check. You must use the result of that
+        Bluff check, even if it is lower.
+        ([[@resources.pitaxianImprovisationPitax.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>Your quick hands can salvage even the most botched
+      performance.</em></p><p><strong>Requirements</strong>: <span
+      style="text-decoration:underline" data-tooltip="Pitax (pronounced
+      pih-TAHKS) is a city-state domain of a petty tyrant in a region of the
+      River Kingdoms near Brevoy known as the Stolen Lands."><span
+      style="text-decoration:underline">Pitax</span></span></p><p><strong>Benefits</strong>:
+      Once per day after you attempt a Perform check and before the results of
+      the roll are revealed by the GM, you can attempt a Bluff check and use the
+      result of that check in place of your Perform check. You must use the
+      result of that Bluff check, even if it is lower.</p>
+  scriptCalls:
+    - _id: iMoJAUXATxQMAFUF
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("blf")
+  showInQuickbar: true
+  sources:
+    - id: PZO9448
+      pages: '13'
+  subType: trait
+  tags:
+    - Pitax
+    - River Kingdoms
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
