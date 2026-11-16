@@ -1,0 +1,59 @@
+_id: 62WMCpS2zAVnC5ny
+_key: '!items!62WMCpS2zAVnC5ny'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/thorn-bow.PNG
+name: Thorn Bow
+system:
+  actions:
+    - _id: f0phcyfanf9szgng
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '40'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Shortbow
+  description:
+    unidentified: >-
+      <p>This polished rosewood bow is studded with thorns and tiny flowers;
+      treat it as a shortbow.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 50
+  sources:
+    - id: PZO9410
+      pages: '18'
+  subType: exotic
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

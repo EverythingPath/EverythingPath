@@ -1,0 +1,50 @@
+_id: t5scfttkcnaupqm9
+_key: '!items!t5scfttkcnaupqm9'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Interrogation, Greater
+system:
+  actions:
+    - _id: r4zj3gjfpwizi7au
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.mgliu7tgbwazm3w1]{Interrogation}, except you
+      may ask one question per caster level and the spell deals damage equal to
+      1d8 points plus your Wisdom bonus if the target doesn't answer a
+      question.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      inquisitor: 4
+      psychic: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '225'
+type: spell

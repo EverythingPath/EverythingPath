@@ -1,0 +1,72 @@
+_id: p2swk1h5l88uff3z
+_key: '!items!p2swk1h5l88uff3z'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Infuse Decay
+system:
+  actions:
+    - _id: 11454nos671mv439
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: corporeal undead touched; see text
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as per <i>imbue with spell ability</i>, except it
+      can only target corporeal undead creatures, and can only transfer touch
+      spells. The number and level of spells the subject can be granted depends
+      on the undead creature's Hit Dice; even multiple castings of <i>infuse
+      decay</i> can't exceed this limit. </p><table border="1"><tbody><tr><th>HD
+      of Undead</th><th>Touch Spells Infused</th></tr><tr><td>5 or
+      lower</td><td>One 1st-level spell</td></tr><tr><td>6-10</td><td>One or two
+      1st-level spells</td></tr><tr><td>11 or higher</td><td>One or two
+      1st-level spells and one 2nd-level spell</td></tr></tbody></table><p>Once
+      you cast <i>infuse decay</i>, you can't prepare a new 4th-level spell to
+      replace it (see <i>imbue with spell ability</i> on page 299 of the
+      <i>Pathfinder RPG Core Rulebook</i> for further details). The infused
+      spell is automatically triggered the next time the undead creature makes a
+      successful touch attack or attack with a natural weapon. An intelligent
+      undead can choose not to trigger the spell on a hit. Only one infused
+      spell can be triggered per attack. An intelligent undead can choose which
+      spell to trigger if it has more than one infused spell. A nonintelligent
+      undead triggers a random spell when it hits with a natural weapon. Only
+      one spell can be triggered per round, regardless of the number of attacks
+      the undead makes.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a set of fine mortician's tools worth 100 gp
+  school: nec
+  sources:
+    - id: PZO1021
+      pages: '453'
+type: spell

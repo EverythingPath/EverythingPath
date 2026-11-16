@@ -1,0 +1,63 @@
+_id: ojx2bxS8iepYliML
+_key: '!items!ojx2bxS8iepYliML'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Bleachling
+system:
+  abilityType: sp
+  actions:
+    - _id: mrgr88lmkIowHfGu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+        animals} </p><p>You can ask questions of and receive answers from
+        animals, but the spell doesn't make them any more friendly than normal.
+        Wary and cunning animals are likely to be terse and evasive, while the
+        more stupid ones make inane comments. If an animal is friendly toward
+        you, it may do some favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Speak with Animals
+      range:
+        units: personal
+  changes:
+    - _id: cZQtFqNg
+      formula: '1'
+      target: dc.school.ill
+      type: untyped
+  description:
+    instructions: >-
+      <p>Remove both
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.MiPbhGqPRX7H4C7a]{Gnome
+      Magic} and
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.LcZE7cPw87DMzJYl]{Obsessive}</p>
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic, Obsessive</p><hr /><p>Gnomes who have survived the Bleaching
+      are immune to effects of the Bleaching thereafter. These gnomes gain two
+      favored classes: druid, and their choice of any other class. They lose all
+      spell-like abilities granted by the gnome magic racial trait except
+      <em>speak with animals</em>, but they can use their
+      <em>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+      animals}</em> spell-like ability three times per day. This racial ability
+      replaces obsessive and alters gnome magic.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9480
+      pages: '6'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 3 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

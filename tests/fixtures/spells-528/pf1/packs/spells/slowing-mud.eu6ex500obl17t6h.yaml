@@ -1,0 +1,62 @@
+_id: eu6ex500obl17t6h
+_key: '!items!eu6ex500obl17t6h'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Slowing Mud
+system:
+  actions:
+    - _id: 1ufo7g34ty31b42e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level (see text)
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You coat the targets in thick, sticky mud. The mud acts as a
+      <i>slow</i> spell and also blinds the targets. A creature can use a
+      standard action to remove the mud from its eyes or the eyes of an adjacent
+      creature, ending the blinded condition for that individual. Removing
+      enough mud to end the <i>slow</i> effect is a full-round action. Jumping
+      into a lake or being subject to an effect that creates a lot of water
+      (such as <i>create water</i> or <i>hydraulic</i> pushAPG) removes all the
+      mud in 1 round.</p><p>A <i>haste</i> effect cast on a creature
+      <i>slow</i>ed by the mud allows it to act normally for the duration of the
+      <i>haste</i>. <i>Slow</i> does not stack with the effects of
+      <i>slow</i>ing mud. This spell cannot counter or dispel <i>haste</i>.</p>
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 4
+      shaman: 4
+  level: 4
+  materials:
+    value: earth and water
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '192'
+  subschool:
+    - creation
+type: spell

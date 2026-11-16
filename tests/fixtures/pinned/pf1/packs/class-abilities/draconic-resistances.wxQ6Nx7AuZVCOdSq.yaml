@@ -1,0 +1,30 @@
+_id: wxQ6Nx7AuZVCOdSq
+_key: '!items!wxQ6Nx7AuZVCOdSq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Draconic Resistances
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: amfwsk0c
+      formula: 1 + if(gte(@class.level, 8), 1) + if(gte(@class.level, 16), 2)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 4th level, you gain resistance 5 against your energy type and a +1
+      natural armor bonus to AC.</p>
+
+      <p>At 8th level, your energy resistance increases to 10 and your natural
+      armor bonus increases to +2.</p>
+
+      <p>At 16th level, your natural armor bonus increases to +4.</p>
+  sources:
+    - id: PZO1110
+      pages: '75'
+  subType: classFeat
+type: feat
