@@ -1,0 +1,58 @@
+_id: vhfj5bkt9hmgvh9p
+_key: '!items!vhfj5bkt9hmgvh9p'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Bullet Shield
+system:
+  actions:
+    - _id: kxybspyeu5ufcsqg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The warded creature gains a +4 deflection bonus to AC against firearm
+      and ranged attacks, with an additional +1 to the bonus for every five
+      caster levels you have (to a maximum of +8 at 20th level). Though the
+      spell is called bullet shield, it also grants this protection from attacks
+      made from firearms with the scatter weapon quality.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      bloodrager: 2
+      investigator: 2
+      occultist: 2
+      psychic: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a bullet
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '225'
+type: spell

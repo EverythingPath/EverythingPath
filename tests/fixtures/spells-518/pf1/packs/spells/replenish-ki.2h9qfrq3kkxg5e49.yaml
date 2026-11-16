@@ -1,0 +1,52 @@
+_id: 2h9qfrq3kkxg5e49
+_key: '!items!2h9qfrq3kkxg5e49'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Replenish Ki
+system:
+  actions:
+    - _id: 8gzksawx4rjxkq97
+      actionType: heal
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You attune the target's internal store of supernatural energy to the
+      cosmos, replenishing its ki pool. If you are the target, you regain 2 ki
+      points. If another creature is the target, it regains 1 ki point. This
+      does not allow the target to exceed its ki pool's maximum. This spell has
+      no effect if the target does not have a ki pool.</p>
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO9267
+      pages: '238'
+    - id: PZO9053
+      pages: '73'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,30 @@
+_id: S0CoHzJwn5NlgQU9
+_key: '!items!S0CoHzJwn5NlgQU9'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-acid-2.jpg
+name: Forewarned
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Wizard
+  changes:
+    - _id: xia1jsup
+      formula: max(1, floor(@class.level / 2))
+      target: init
+      type: untyped
+  description:
+    value: >-
+      <p>You can always act in the surprise round even if you fail to make a
+      <em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.2h6hz5AkTDxKPFxr]{Perception}</em>
+      roll to notice a foe, but you are still considered
+      @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.eSvkrrl3US7RJTai]{flat-footed}
+      until you take an action. In addition, you receive a bonus on initiative
+      checks equal to 1/2 your wizard level (minimum +1). At 20th level, anytime
+      you roll initiative, assume the roll resulted in a natural 20.</p>
+  sources:
+    - id: PZO1110
+      pages: 80-81
+  subType: classFeat
+type: feat
