@@ -1,0 +1,59 @@
+_id: cx711jp7ufpt5n77
+_key: '!items!cx711jp7ufpt5n77'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Blaze of Glory
+system:
+  actions:
+    - _id: tpqt2sywl4g58xsu
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius burst centered on you
+      duration:
+        units: spec
+        value: instantaneous and 1 round/level; see text
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will partial
+        type: will
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You fall unconscious but also unleash a spectacular wave of holy energy
+      that heartens and heals your allies while leaving your opponents daunted
+      and damaged. You can cast this spell as either a standard action on your
+      turn, or as an immediate action when brought to below 0 hit points. If
+      cast as a standard action, you are immediately reduced to -1 hit points,
+      but stable, after casting the spell.</p><p>When you cast this spell, any
+      good creature within range is healed for 1d6 points of damage per two
+      caster levels. All evil creatures within range take the same amount as
+      damage instead (a successful Will save halves this damage). In addition,
+      all allies and enemies within range are affected as if by the
+      <i>prayer</i> spell for 1 round per caster level.</p>
+  descriptors:
+    - good
+    - mindAffecting
+  learnedAt:
+    class:
+      paladin: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '205'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,34 @@
+_id: yotHT522pQoKDhID
+_key: '!items!yotHT522pQoKDhID'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/acrobatic-step.png
+name: Slayer's Advance
+system:
+  abilityType: ex
+  actions:
+    - _id: actgemorp4k431a4
+      activation:
+        type: move
+        unchained:
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Slayer
+  description:
+    value: >-
+      <p>At 13th level, a slayer can once per day move up to twice his base
+      speed as a move action. He may use Stealth as part of this movement, but
+      takes a –10 penalty to his check for doing so.</p>
+
+      <p>At 17th level, he can do this twice per day.</p>
+  sources:
+    - id: PZO1129
+      pages: '55'
+  subType: classFeat
+  tag: classFeat_slayersAdvance
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

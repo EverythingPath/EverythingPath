@@ -1,0 +1,57 @@
+_id: 05NnBuNnkMsaNoXf
+_key: '!items!05NnBuNnkMsaNoXf'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/dagger-punching.PNG
+name: Punching Dagger
+system:
+  actions:
+    - _id: 462qfl1buzz5focd
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Punching Dagger
+  description:
+    unidentified: >-
+      <p>A punching dagger's blade is attached to a horizontal handle that
+      projects out from the fist when held.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 2
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 146
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - close
+  weight:
+    value: 1
+type: weapon

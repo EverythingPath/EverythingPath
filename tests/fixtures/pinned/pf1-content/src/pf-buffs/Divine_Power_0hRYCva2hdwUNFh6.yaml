@@ -1,0 +1,41 @@
+_id: 0hRYCva2hdwUNFh6
+_key: '!items!0hRYCva2hdwUNFh6'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/alignment-channel.jpg
+name: Divine Power
+system:
+  changes:
+    - _id: 1mfnjlvk
+      formula: (min(6, floor(@item.level / 3)))
+      target: attack
+      type: luck
+    - _id: z1fukusg
+      formula: (min(6, floor(@item.level / 3)))
+      target: wdamage
+      type: luck
+    - _id: jhpfl3cu
+      formula: (min(6, floor(@item.level / 3)))
+      target: strChecks
+      type: luck
+    - _id: op6rs4sh
+      formula: (min(6, floor(@item.level / 3)))
+      target: strSkills
+      type: luck
+  description:
+    instructions: >-
+      <p>Set this buff's level and temp HP equal to the caster level of Divine
+      Power.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.0yvwyclhkf76veo1]{Divine
+      Power}</p><p>You gain a +1 luck bonus on attack rolls, weapon damage
+      rolls, Strength checks, and Strength-based skill checks for every three
+      caster levels you have (maximum +6). You also gain 1 temporary hit point
+      per caster level.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 7
+  subType: spell
+type: buff

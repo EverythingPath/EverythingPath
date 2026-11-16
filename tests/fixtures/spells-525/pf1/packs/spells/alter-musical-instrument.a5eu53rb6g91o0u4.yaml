@@ -1,0 +1,59 @@
+_id: a5eu53rb6g91o0u4
+_key: '!items!a5eu53rb6g91o0u4'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Alter Musical Instrument
+system:
+  actions:
+    - _id: ndy2gvjdhneupvk5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates (object)
+        type: fort
+      target:
+        value: one musical instrument
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You alter an instrument so it sounds like a different kind of
+      instrument you are familiar with. The change could be minor (such as
+      making a lute sound like a guitar) or major (making a keyboard sound like
+      drums). All other aspects of the instrument-such as volume, pitch, and how
+      it is played- are unchanged. For example, a piccolo made to sound like an
+      organ is no louder than a normal piccolo, can produce only high notes in
+      the piccolo range, and is a wind instrument.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      occultist: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  materials:
+    focus: an instrument
+  school: ill
+  sources:
+    - id: PZO1129
+      pages: '173'
+  subschool:
+    - figment
+type: spell

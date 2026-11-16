@@ -1,0 +1,56 @@
+_id: igmb8lisqcnsxd2d
+_key: '!items!igmb8lisqcnsxd2d'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/heal-jade-3.jpg
+name: Restoration, Greater
+system:
+  actions:
+    - _id: uuumh278vgaqpfku
+      actionType: heal
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.fxz69pwpqt9b6uss]{lesser restoration},
+      except that it dispels all permanent and temporary negative levels
+      afflicting the healed creature. <em>Greater restoration</em> also dispels
+      all magical effects penalizing the creature's abilities, cures all
+      temporary ability damage, and restores all points permanently drained from
+      all ability scores. It also eliminates fatigue and exhaustion, and removes
+      all forms of insanity, confusion, and similar mental effects.</p>
+  learnedAt:
+    class:
+      cleric: 7
+      oracle: 7
+      shaman: 7
+  level: 7
+  materials:
+    gpValue: 5000
+    value: diamond dust 5,000 gp
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '334'
+  subschool:
+    - healing
+type: spell

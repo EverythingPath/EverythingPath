@@ -1,0 +1,54 @@
+_id: pzamn014iakntf6i
+_key: '!items!pzamn014iakntf6i'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Hollow Blades
+system:
+  actions:
+    - _id: t0ez5bp31tw15dfp
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>All melee and natural attacks from the target deal damage as if the
+      target were one size category smaller than it actually is. While the
+      target is under the effects of this spell, weapons dropped by the target
+      function normally for other creatures, while any melee weapons picked up
+      by the target deal damage as if one size smaller. <b>Range</b>d attacks
+      and weapons are unaffected by this spell.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      hunter: 1
+      magus: 2
+      ranger: 1
+      shaman: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO9453
+      pages: '26'
+type: spell

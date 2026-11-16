@@ -1,0 +1,65 @@
+_id: gYFqEtGQkZFiPPmG
+_key: '!items!gYFqEtGQkZFiPPmG'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-red.webp
+name: Dragoon Pistol
+system:
+  actions:
+    - _id: 6h61fx01rxp9koy6
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '30'
+  ammo:
+    type: dragoonBullet
+  baseTypes:
+    - Dragoon Pistol
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x3; <b>Range</b> 30 ft.; <b>Type</b> B and
+      P</p><p><b>Misfire</b> 1 (5 ft.); <b>Capacity</b>
+      3</p><h3>Description</h3><p>Like the dragoon musket, this long-barreled
+      pistol is more precise than a typical pistol but slightly less deadly on a
+      critical hit. It can fire only dragoon cartridges or specially modified
+      <em>mage shot</em>.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 1500
+  sources:
+    - id: PZO1136
+      pages: '57'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 5
+type: weapon

@@ -1,0 +1,63 @@
+_id: 1gm2ngzes1xi3zuu
+_key: '!items!1gm2ngzes1xi3zuu'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Lost Passage
+system:
+  actions:
+    - _id: o1qsuf77y0oggnvc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one 30-ft. cube/level (S)
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will partial
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Creatures in the area of this spell are subject to a subtle enchantment
+      that confounds their senses of direction, interferes with recognizing
+      landmarks, and causes them to misjudge distances and angles. Creatures
+      that enter the area must succeed at a new Survival check to avoid becoming
+      lost immediately, whether or not they succeed at their saving throws.
+      Those that fail the save take a penalty on such Survival checks equal to
+      double your caster level, treat all squares they enter as difficult
+      terrain for as long as they are in the area and for 1 hour per caster
+      level thereafter, lose the benefit of all effects that allow them to
+      ignore difficult terrain, and take a -4 penalty to Dexterity. <i>Lost
+      passage</i> can be made permanent with <i>permanency</i> at a cost of
+      10,000 gp.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      mesmerist: 3
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9280
+      pages: '220'
+  subschool:
+    - compulsion
+type: spell

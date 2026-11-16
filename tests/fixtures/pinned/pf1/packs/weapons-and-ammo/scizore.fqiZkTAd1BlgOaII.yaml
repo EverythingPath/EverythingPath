@@ -1,0 +1,62 @@
+_id: fqiZkTAd1BlgOaII
+_key: '!items!fqiZkTAd1BlgOaII'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/scizore.png
+name: Scizore
+system:
+  actions:
+    - _id: 4zurgoz5jiqg90fr
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Scizore
+  description:
+    unidentified: >-
+      <p>The scizore is a hardened tube that fits over the forearm, ending in a
+      semicircular blade used for devastating bladed punch attacks. The scizore
+      grants a +1 shield bonus to AC, but if you attack with the blade, you lose
+      the AC bonus that round and take a -1 penalty on attack rolls with it.
+      While wearing a scizore, you cannot use that hand for anything else. A
+      scizore provides a +10 bonus to your CMD against being disarmed of your
+      scizore. Donning a scizore is a full-round action.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    prf: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+    - close
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon
