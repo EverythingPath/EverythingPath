@@ -1,0 +1,61 @@
+_id: gccemclhw5t0j16f
+_key: '!items!gccemclhw5t0j16f'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Conjuration Foil
+system:
+  actions:
+    - _id: 1bb3oimoevncfey7
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      area: 20-foot radius spread
+      duration:
+        units: round
+        value: '1'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial (see text)
+        type: will
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>All creatures in the area gain a +4 bonus on saving throws against
+      teleportation effects. If any creature would enter or depart the area via
+      a summoning or teleportation effect, that creature takes 1d6 points of
+      damage per spell level of the triggering effect (or half the HD of the
+      originating creature if the effect has no spell level) and arrives in a
+      random similar location within the triggering effect's range, rather than
+      the intended destination. A successful Will save halves the damage and
+      negates the altered destination.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      magus: 3
+      medium: 4
+      occultist: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      spiritualist: 4
+      summoner: 3
+      summonerUnchained: 3
+      witch: 4
+      wizard: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1134
+      pages: '207'
+type: spell

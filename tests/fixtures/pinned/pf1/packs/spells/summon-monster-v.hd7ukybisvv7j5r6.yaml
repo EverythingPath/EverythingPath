@@ -1,0 +1,64 @@
+_id: hd7ukybisvv7j5r6
+_key: '!items!hd7ukybisvv7j5r6'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/magical/humanoid-silhouette-glowing-pink.webp
+name: Summon Monster V
+system:
+  actions:
+    - _id: oxwf157345hm0zsl
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except that you can
+      summon one creature from the 5th-level list, 1d3 creatures of the same
+      kind from the 4th-level list, or 1d4+1 creatures of the same kind from a
+      lower-level list.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      cleric: 5
+      medium: 4
+      oracle: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      spiritualist: 5
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+    domain:
+      Darkness: 5
+  level: 5
+  materials:
+    focus: a tiny bag and a small candle
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '352'
+  sr: false
+  subschool:
+    - summoning
+type: spell

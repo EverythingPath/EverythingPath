@@ -1,0 +1,111 @@
+_id: rrheoc0h80mbss7z
+_key: '!items!rrheoc0h80mbss7z'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/bolt-forked-blue.webp
+name: Call Lightning
+system:
+  actions:
+    - _id: r1ui6wsdhf8oasxj
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: one or more 30-ft.-long vertical lines of lightning
+      name: Cast
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+    - _id: EDeqKlC2jqXDqj5I
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - electric
+      duration:
+        units: inst
+      effect: One 5-foot-wide, 30-foot-long, vertical bolt of lightning
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Damage
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+    - _id: SBkcTsb35vHR0m45
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 3d10
+            types:
+              - electric
+      duration:
+        units: inst
+      effect: One 5-foot-wide, 30-foot-long, vertical bolt of lightning
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Damage (in stormy area)
+      range:
+        units: medium
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Immediately upon completion of the spell, and once per round
+      thereafter, you may call down a 5-foot-wide, 30-foot-long, vertical bolt
+      of lightning that deals 3d6 points of electricity damage. The bolt of
+      lightning flashes down in a vertical stroke at whatever target point you
+      choose within the spell's range (measured from your position at the time).
+      Any creature in the target square or in the path of the bolt is
+      affected.</p><p>You need not call a bolt of lightning immediately; other
+      actions, even spellcasting, can be performed first. Each round after the
+      first you may use a standard action (concentrating on the spell) to call a
+      bolt. You may call a total number of bolts equal to your caster level
+      (maximum 10 bolts).</p><p>If you are outdoors and in a stormy area-a rain
+      shower, clouds and wind, hot and cloudy conditions, or even a tornado
+      (including a whirlwind formed by a djinni or an air elemental of at least
+      Large size)-each bolt deals 3d10 points of electricity damage instead of
+      3d6.</p><p>This spell functions indoors or underground but not
+      underwater.</p>
+  descriptors:
+    - electricity
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      occultist: 3
+      shaman: 3
+    domain:
+      Weather: 3
+    subDomain:
+      Catastrophe: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: 251
+type: spell

@@ -1,0 +1,46 @@
+_id: YoZiTsd9x0KSCOi7
+_key: '!items!YoZiTsd9x0KSCOi7'
+_stats:
+  coreVersion: '12.331'
+folder: VYojkt9Hjlz5f7Oh
+img: systems/pf1/icons/races/android.png
+name: Repairing Nanites
+system:
+  actions:
+    - _id: 4dUEEZTneFTp6aij
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: inst
+      name: Nanite repair
+      notes:
+        effect:
+          - '@Heal[2 * @attributes.hd.total;dual]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Race</strong>: Android<br /><strong>Replaced Trait(s)</strong>:
+      Nanite Surge</p><hr /><p>Some androids cannot prompt their nanites to aid
+      them in any endeavor, but instead find that their nanites stitch their
+      wounds together. The first time each day that such an android has taken an
+      amount of damage greater than or equal to twice her Hit Dice, the nanites
+      automatically activate, without an action. Her circuitry-tattoos glow with
+      light equivalent to that of a torch for 1 round and she heals a number of
+      hit points equal to twice her Hit Dice.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '214'
+  subType: racial
+  tags:
+    - Android
+  traitCategory: other
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
