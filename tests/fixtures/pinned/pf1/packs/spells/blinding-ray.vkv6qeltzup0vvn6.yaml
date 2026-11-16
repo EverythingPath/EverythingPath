@@ -1,0 +1,60 @@
+_id: vkv6qeltzup0vvn6
+_key: '!items!vkv6qeltzup0vvn6'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-orange-large.webp
+name: Blinding Ray
+system:
+  actions:
+    - _id: 8db07738a12edll1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous (see text)
+      effect: one or more rays of light
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You blast your enemies with blinding rays of sunlight. You may fire one
+      ray, plus one additional ray for every four levels beyond 3rd (to a
+      maximum of three rays at 11th level). Each ray requires a ranged touch
+      attack to hit. If a ray hits, it explodes into powerful motes of light,
+      and the target must save or be blinded for 1 round. If the target has
+      light blindness, light sensitivity, or is otherwise vulnerable to bright
+      light, it instead must save or be blinded for 1d4 rounds and take 1d4
+      points of damage per two caster levels (maximum 5d4). Any creature blinded
+      by a ray sheds light as a sunrod for the duration of its blindness. The
+      rays may be fired at the same or different targets, but all rays must be
+      aimed at targets within 30 feet of each other and fired
+      simultaneously.</p>
+  descriptors:
+    - good
+    - light
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 3
+      oracle: 2
+      paladin: 2
+      warpriest: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1121
+      pages: '101'
+type: spell

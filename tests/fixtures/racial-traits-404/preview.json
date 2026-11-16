@@ -1,0 +1,166 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1-content/xeEmYqR3IUXoby9x",
+      "upstreamKey": "pf1-content/xeEmYqR3IUXoby9x",
+      "pack": "pf-racial-traits",
+      "name": "Darkvision (Half-Orc)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/dCAXgdA6Db1Z3ccz"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Orc</p><hr><p>Half-orcs can see in the dark up to @Distance[60 ft;dual].</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "25"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "50"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Foundry's `set` operator replaces a value; it is not an additive Modifier and contributes nothing.",
+          "value": {
+            "target": "sensedv",
+            "formula": "60",
+            "type": "base",
+            "operator": "set"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/wZZzaSmiF8hTuRo7",
+      "upstreamKey": "pf1-content/wZZzaSmiF8hTuRo7",
+      "pack": "pf-racial-traits",
+      "name": "Adaptability",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/cCepRrfH5SalFfT4"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Elf</p><hr><p>Half-elves receive Skill Focus as a bonus feat at 1st level.</p>",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "feats": ["pf1/7zJTztNW7hdaqjKc"]
+        }
+      ],
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "24"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "40"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "links": {
+              "supplements": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/xwr9DBDmvGMYHcut",
+      "upstreamKey": "pf1-content/xwr9DBDmvGMYHcut",
+      "pack": "pf-racial-traits",
+      "name": "Slow Speed (Halfling)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/Hf31mrYb3uucNyLO"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Halfling</p><hr><p>Halflings have a base speed of @Distance[20 ft;dual].</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "26"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "The sheet has no movement statistic; this speed change stays prose.",
+          "value": {
+            "target": "landSpeed",
+            "formula": "20",
+            "type": "base",
+            "operator": "set"
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/7zJTztNW7hdaqjKc",
+      "upstreamKey": "pf1/7zJTztNW7hdaqjKc",
+      "pack": "feats",
+      "name": "Skill Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Skill"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "116, 134"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": []
+    }
+  ],
+  "closureRecords": [
+    {
+      "repo": "pf1",
+      "pack": "feats",
+      "path": "packs/feats/skill-focus.7zJTztNW7hdaqjKc.yaml",
+      "externalKey": "pf1/7zJTztNW7hdaqjKc",
+      "name": "Skill Focus",
+      "status": "admitted",
+      "reason": "In scope for preview extraction; release admission remains pending."
+    }
+  ]
+}

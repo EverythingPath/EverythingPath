@@ -1,0 +1,47 @@
+_id: mrtqusfmpohlprve
+_key: '!items!mrtqusfmpohlprve'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Thought Worm II
+system:
+  actions:
+    - _id: l7nplejc8y4b5o8v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as per
+      @UUID[Compendium.pf1.spells.Item.pp8bk7vlpgtdv77c]{thought worm I}, but
+      the penalty on Will saves is -4. This spell can be undercast.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '11'
+  subschool:
+    - compulsion
+type: spell

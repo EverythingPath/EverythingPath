@@ -1,0 +1,21 @@
+_id: rSxgmcPwAAmFL4r9
+_key: '!items!rSxgmcPwAAmFL4r9'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Natural Armor Bonus
+system:
+  associations:
+    classes:
+      - Animal Companion
+  changes:
+    - _id: 22vrjim6
+      formula: floor(@class.level / 3) * 2
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>The number noted here is an improvement to the animal companion's
+      existing natural armor bonus.</p>
+  subType: classFeat
+type: feat

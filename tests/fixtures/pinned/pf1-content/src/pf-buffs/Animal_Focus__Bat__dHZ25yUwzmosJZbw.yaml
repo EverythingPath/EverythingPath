@@ -1,0 +1,51 @@
+_id: dHZ25yUwzmosJZbw
+_key: '!items!dHZ25yUwzmosJZbw'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/items/inventory/monster-bat.jpg
+name: Animal Focus (Bat)
+system:
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains darkvision to a range of 60 feet. At 8th level, the
+      range increases by 30 feet. At 15th level, the creature also gains
+      blindsense to a range of 10 feet.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 1
+  scriptCalls:
+    - _id: 4uJeN8Tbn8KDEb1S
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle Senses
+      type: script
+      value: |-
+        const darkvisionRange = item.system.level >= 8 ? 90 : 60;
+        const blindsense = item.system.level >= 15 ? 10 : 0;
+
+        if(state) {
+          await item.setItemDictionaryFlag("dvRange", actor.system.traits.senses.dv);
+          await item.setItemDictionaryFlag("bseRange", actor.system.traits.senses.bse);
+
+          await actor.update({
+            "system.traits.senses.dv": darkvisionRange,
+            "system.traits.senses.bse": blindsense,
+          });
+        } else {
+          await actor.update({
+            "system.traits.senses.dv": item.getItemDictionaryFlag("dvRange") ?? 0,
+            "system.traits.senses.bse": item.getItemDictionaryFlag("bseRange") ?? 0,
+          });
+
+          await item.removeItemDictionaryFlag("dvRange");
+          await item.removeItemDictionaryFlag("bseRange");
+        }
+  subType: feat
+type: buff
