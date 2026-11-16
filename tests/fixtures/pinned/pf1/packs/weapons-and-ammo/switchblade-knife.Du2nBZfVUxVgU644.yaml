@@ -1,0 +1,58 @@
+_id: Du2nBZfVUxVgU644
+_key: '!items!Du2nBZfVUxVgU644'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/knife-switchblade.png
+name: Switchblade Knife
+system:
+  actions:
+    - _id: ygidw49wvm5hhlm8
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Dagger
+  description:
+    unidentified: >-
+      <p>This knife has a springloaded blade hidden inside the handle. It can be
+      designed to look like another type of object (a DC 15 Perception check
+      reveals the deception). If held in your hand, you can activate it as a
+      free action. This weapon is treated as a dagger.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+  sources:
+    - id: PZO9410
+      pages: '5'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 1
+type: weapon

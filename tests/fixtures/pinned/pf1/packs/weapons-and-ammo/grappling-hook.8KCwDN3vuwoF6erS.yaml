@@ -1,0 +1,73 @@
+_id: 8KCwDN3vuwoF6erS
+_key: '!items!8KCwDN3vuwoF6erS'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/grappling-hook.png
+name: Grappling Hook
+system:
+  actions:
+    - _id: fc0gaj7vzr849tbj
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Grappling Hook
+  description:
+    unidentified: >-
+      <p>A grappling hook is usually thought of as a climbing instrument, but is
+      also used to grapple enemy ships and draw them close before a boarding
+      action.</p><p>Grappling hooks bite deeply into the wood of the railing. It
+      takes 1 minute to pry a grappling hook free. The rope attached to a
+      grappling hook can be cut, but pirates often target the rigging and masts
+      to make it difficult to remove the hooks. Tying off the rope of a
+      grappling hook is a move action.</p><p>A grappling hook can also be used
+      as a ranged weapon. If you are proficient in the grappling hook, it is a
+      grappling weapon. On a successful critical hit with a weapon of this type,
+      you can grapple the target of the attack. You can attempt a combat
+      maneuver check to grapple your opponent as a free action. This grapple
+      attempt does not provoke an attack of opportunity from the creature you
+      are attempting to grapple if that creature is not threatening you. While
+      you grapple the target with a grappling weapon, you can only move or
+      damage the creature on your turn. You are still considered grappled,
+      though you do not have to be adjacent to the creature to continue the
+      grapple. If you move far enough away to be out of the weapon's reach, the
+      grapple ends.</p><p>A grappling hook's weight includes the weight of 50
+      feet of hemp rope. It can be reduced by using shorter or lighter rope.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 6
+  properties:
+    grp: true
+  sources:
+    - id: PZO9422
+      pages: '19'
+  subType: exotic
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 14
+type: weapon
