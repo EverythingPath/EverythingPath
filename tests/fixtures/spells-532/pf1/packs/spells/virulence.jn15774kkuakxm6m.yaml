@@ -1,0 +1,52 @@
+_id: jn15774kkuakxm6m
+_key: '!items!jn15774kkuakxm6m'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Virulence
+system:
+  actions:
+    - _id: qgri1gqgrfl9zxpb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: all living creatures within a 40-ft.-radius burst centered on you
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '40'
+      save:
+        description: see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>All living creatures within the area of effect, including yourself,
+      must immediately attempt a saving throw with a -2 penalty against any and
+      all diseases they have contracted, even if the onset time has not yet
+      elapsed. On a failed saving throw, the affliction has its usual effect. A
+      successful save does not count toward curing the affliction.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO9081
+      pages: '73'
+type: spell

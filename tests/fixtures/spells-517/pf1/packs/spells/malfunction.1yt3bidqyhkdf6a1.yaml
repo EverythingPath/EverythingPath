@@ -1,0 +1,50 @@
+_id: 1yt3bidqyhkdf6a1
+_key: '!items!1yt3bidqyhkdf6a1'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/magical/construct-stone-earth-gray.webp
+name: Malfunction
+system:
+  actions:
+    - _id: 1zv55bu2qb3uutqt
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one construct
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.Item.n0bsyxchnigkkuqo]{confusion}, except it
+      only affects constructs, and instead of babbling incoherently, the
+      construct takes no actions on its turn (but may still make attacks of
+      opportunity).</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      occultist: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '228'
+type: spell

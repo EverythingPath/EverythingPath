@@ -1,0 +1,62 @@
+_id: TdVKK47usXLu4zxs
+_key: '!items!TdVKK47usXLu4zxs'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/javelin.PNG
+name: Injection Spear
+system:
+  actions:
+    - _id: 81f59wx6tsqfdoze
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Injection Spear
+  description:
+    unidentified: >-
+      <p>This exotic two-handed weapon allows the user to inject targets with
+      liquid on a hit. The spear's reservoir can hold up to 5 doses of a single
+      fluid-a single dose is automatically injected when the spear hits a
+      target. A non-proficient user can wield an injection spear as a standard
+      spear but cannot trigger the injection. An injection spear is otherwise
+      identical to a normal spear, save that it cannot be thrown, weighs 8
+      pounds, cannot be used to brace, and costs 60 gp.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 60
+  sources:
+    - id: PZO9061
+      pages: '64'
+  subType: exotic
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

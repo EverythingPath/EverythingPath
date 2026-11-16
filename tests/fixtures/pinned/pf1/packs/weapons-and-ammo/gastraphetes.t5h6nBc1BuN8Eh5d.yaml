@@ -1,0 +1,69 @@
+_id: t5h6nBc1BuN8Eh5d
+_key: '!items!t5h6nBc1BuN8Eh5d'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/crossbow-double.PNG
+name: Gastraphetes
+system:
+  actions:
+    - _id: yuqp9hwpzxjtw6j5
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 12, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '120'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Gastraphetes
+  description:
+    unidentified: >-
+      <p>The gastraphetes, sometimes called a "belly bow," is an oversized
+      crossbow reloaded by pressing one end against the ground, the other
+      against one's abdomen, and locking the string in place through ratchet
+      action. Reloading takes a full-round action, uses two hands, and requires
+      that the wielder be standing. Wielding a gastraphetes requires two hands,
+      and due to the weapon's bulk, firing it while standing without support
+      (such as a wall, a window, or a stand) imposes a -4 penalty on attack
+      rolls; you take no penalty for firing a gastraphetes while prone. A Large
+      or larger creature can use a gastraphetes one size smaller than itself
+      without any support, but takes the normal penalty for firing an
+      inappropriately sized weapon.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 65
+  sources:
+    - id: PZO9285
+      pages: '12'
+  subType: martial
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 12
+type: weapon

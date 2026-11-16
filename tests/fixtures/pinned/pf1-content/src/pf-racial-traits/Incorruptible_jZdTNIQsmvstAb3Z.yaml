@@ -1,0 +1,66 @@
+_id: jZdTNIQsmvstAb3Z
+_key: '!items!jZdTNIQsmvstAb3Z'
+_stats:
+  coreVersion: '12.331'
+folder: PZxrk9JzfGnFGo9P
+img: systems/pf1/icons/races/aasimar.png
+name: Incorruptible
+system:
+  actions:
+    - _id: N1uM4nanHbbtZOHm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div class="description-body"><p>You grant the touched creature limited
+        protection from magical effects that inflict damage based on the target
+        creature's alignment, such as <em>holy smite</em>, order's wrath, a
+        paladin's smite evil attack, or an <em>unholy</em> weapon. Choose one
+        alignment type: chaos, evil, good, or law. The subject takes 5 less
+        points of damage from effects that specifically harm creatures of that
+        alignment. The value of the protection increases to 10 points at 7th
+        level and 15 points at 11th level. The spell protects the recipient's
+        equipment as well.</p><p><em>Corruption resistance</em> protects against
+        spells, spell-like abilities, and special abilities, not physical
+        attacks. <em>Corruption resistance</em> only protects against damage.
+        The subject can still suffer side effects from such attacks. When you
+        use this spell to protect an alignment, it gains the descriptor of that
+        alignment.</p></div>
+      duration:
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Corruption Resistance
+      range:
+        units: touch
+      save:
+        dc: 10+2+@attributes.hd.total
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Occasionally, aasimars arise with the
+      ability to further ward away evil. Aasimars with this racial trait can
+      cast <i>corruption resistance </i>against evil once per day as a
+      spell-like ability. If an aasimar uses this ability on herself, the
+      duration increases to 1 hour per level. This racial trait replaces the
+      spell-like ability racial trait.</p>
+  sources:
+    - id: PZO1121
+      pages: '85'
+  subType: racial
+  tags:
+    - Aasimar
+  traitCategory: magical
+type: feat

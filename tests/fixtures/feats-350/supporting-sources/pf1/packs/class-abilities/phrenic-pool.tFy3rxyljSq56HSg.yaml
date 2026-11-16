@@ -1,0 +1,37 @@
+_id: tFy3rxyljSq56HSg
+_key: '!items!tFy3rxyljSq56HSg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/air-burst-jade-3.jpg
+name: Phrenic Pool
+system:
+  abilityType: su
+  actions:
+    - _id: tr7vyevvpam9e0lw
+      activation:
+        type: special
+        unchained:
+          type: special
+      name: Use
+  associations:
+    classes:
+      - Psychic
+  description:
+    value: >-
+      <p>A psychic has a pool of supernatural mental energy that she can draw
+      upon to manipulate psychic spells as she casts them. The maximum number of
+      points in a psychic’s phrenic pool is equal to 1/2 her psychic level + her
+      Wisdom or Charisma modifier, as determined by her psychic discipline.</p>
+
+      <p>The phrenic pool is replenished each morning after 8 hours of rest or
+      meditation; these hours don’t need to be consecutive. The psychic might be
+      able to recharge points in her phrenic pool in additional circumstances
+      dictated by her psychic discipline.</p>
+
+      <p>Points gained in excess of the pool’s maximum are lost.</p>
+  subType: classFeat
+  tag: classFeat_phrenicPool
+  uses:
+    maxFormula: floor(@class.level / 2) + @abilities.cha.mod
+    per: day
+type: feat

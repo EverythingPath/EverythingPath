@@ -1,0 +1,55 @@
+_id: e3l7azfolx92ld2c
+_key: '!items!e3l7azfolx92ld2c'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Imbue with Addiction
+system:
+  actions:
+    - _id: ijibus5qp32js2ef
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target immediately becomes addicted to the drug used as the
+      material component during the casting of the spell. If the target was ever
+      addicted to the drug at any point in the past, it takes a -4 penalty on
+      its saving throw.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 3
+      investigator: 2
+      mesmerist: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a dose of an addictive drug or substance
+  school: trs
+  sources:
+    - id: PZO9462
+      pages: '19'
+    - id: PZO9440
+      pages: '24'
+type: spell

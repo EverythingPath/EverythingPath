@@ -1,0 +1,91 @@
+_id: pmf5luoblkdc4zfk
+_key: '!items!pmf5luoblkdc4zfk'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: systems/pf1/icons/misc/magic-swirl.png
+name: Glyph of Warding, Greater
+system:
+  actions:
+    - _id: s37joihzz8rsv86x
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      name: Object touched
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+    - _id: KQfZDfc7B5FcDLGB
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: object touched or up to 5 sq. ft./level
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      measureTemplate:
+        size: 5 * @cl
+        type: rect
+      name: Square
+      range:
+        units: touch
+      save:
+        description: see text
+        type: ref
+      target:
+        value: object touched or up to 5 sq. ft./level
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.53dyu81yaw4y0nz4]{Glyph of Warding}, except
+      that a <em>greater blast glyph</em> deals up to 10d8 points of damage, and
+      a <em>greater spell glyph</em> can store a spell of 6th level or
+      lower.</p>
+
+      <p>@UUID[Compendium.pf1.spells.j0bc0iii8zp1jiwr]{Read Magic} allows you to
+      identify a greater <em>Glyph of Warding</em> with a DC 16
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.VRD7jxiIAxKPt6EF]{Spellcraft}
+      check.</p>
+
+      <p><em>Material Component</em>: You trace the glyph with incense, which
+      must first be sprinkled with powdered diamond worth at least 400 gp.</p>
+  learnedAt:
+    class:
+      cleric: 6
+      inquisitor: 6
+      oracle: 6
+      warpriest: 6
+    domain:
+      Rune: 6
+  level: 6
+  materials:
+    gpValue: 200
+    value: powdered diamond worth 200 gp
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '291'
+  sr: false
+type: spell

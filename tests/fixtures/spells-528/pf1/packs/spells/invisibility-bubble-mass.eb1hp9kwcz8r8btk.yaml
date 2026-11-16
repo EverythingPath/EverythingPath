@@ -1,0 +1,70 @@
+_id: eb1hp9kwcz8r8btk
+_key: '!items!eb1hp9kwcz8r8btk'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Invisibility Bubble, Mass
+system:
+  actions:
+    - _id: nq6m4p8r7a8x13gv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation centered on the touched creature's space
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '90'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          any number of creatures, no two of which can be more than 180 ft.
+          apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions as per
+      @UUID[Compendium.pf1.spells.Item.r696gayroq1pwaik]{invisibility bubble},
+      but the spell affects the areas of each target creature, regardless of the
+      creature's size. The effect moves with the group and is broken when anyone
+      in the group attacks. Individuals in separate bubbles can't see each
+      other. The spell is broken for any individual who moves more than 180 feet
+      from the nearest member of the group. If only two individuals are
+      affected, the one moving away from the other one loses its invisibility.
+      If both are moving away from each other simultaneously, they both become
+      visible when the distance between them exceeds 180 feet.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      mesmerist: 6
+      psychic: 7
+      sorcerer: 7
+      summoner: 6
+      summonerUnchained: 6
+      wizard: 7
+  level: 7
+  materials:
+    value: a needle from a sea urchin
+  school: ill
+  sources:
+    - id: PZO92102
+      pages: '60'
+  subschool:
+    - glamer
+type: spell

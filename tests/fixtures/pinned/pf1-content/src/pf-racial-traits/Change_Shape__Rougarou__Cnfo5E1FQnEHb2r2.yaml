@@ -1,0 +1,63 @@
+_id: Cnfo5E1FQnEHb2r2
+_key: '!items!Cnfo5E1FQnEHb2r2'
+_stats:
+  coreVersion: '12.331'
+folder: rDogS7oJu3Yt8TWP
+img: systems/pf1/icons/races/creature-types/animal.png
+name: Change Shape (Rougarou)
+system:
+  abilityType: su
+  actions:
+    - _id: BnDx8u1aVJJ5r99T
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{beast shape I}
+        wolf only</p><h2>Wolf CR 1</h2><p>Source Pathfinder RPG Bestiary pg.
+        278<br>XP400<br>N Medium animal<br>Init+2; Senses low-light vision,
+        scent; Perception +8</p><h3>Defense</h3><p>AC14, touch 12, flat-footed
+        12 (+2 Dex, +2 natural)<br>hp 13
+        (2d8+4)<br>Fort+5,Ref+5,Will+1</p><h3>Offense</h3><p>Speed @Distance[50
+        ft;dual].<br>Melee bite +2 (1d6+1 plus
+        trip)</p><h3>Statistics</h3><p>Str13,Dex15,Con15,Int2,Wis12,Cha6<br>Base
+        Atk+1;CMB+2;CMD14 (18 vs. trip)<br>Feats Skill Focus
+        (Perception)<br>Skills Perception +8, Stealth +6, Survival +1 (+5 scent
+        tracking); Racial Modifiers+4 Survival when tracking by scent</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Change into a wolf
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+    - _id: XniPEgnWp7DPQiL8
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: perm
+      name: Revert to true form
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Race</strong>: Rougarou</p><hr /><p>A rougarou can change shape
+      once per day into a wolf as a standard action, as
+      <em>@UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{beast shape
+      I}</em>. A rougarou can revert to its true form as a swift action.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1137
+      pages: '242'
+  subType: racial
+  tags:
+    - Rougarou
+  traitCategory: other
+type: feat
