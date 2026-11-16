@@ -1,0 +1,56 @@
+_id: du82bwyrbovj5wsr
+_key: '!items!du82bwyrbovj5wsr'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Permanent Hallucination
+system:
+  actions:
+    - _id: vksahktalaszxd5z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: perm
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.u2vipq48algenijz]{audiovisual
+      hallucination}, except that the phantasm you create includes visual,
+      auditory, olfactory, tactile, and thermal components, and the phantasm
+      follows a complex script. The phantasm follows that script without your
+      having to concentrate on it and can react to stimuli the target perceives,
+      as appropriate for the script. Unlike most illusions with a save to
+      disbelieve, if the target disbelieves a <em>permanent hallucination</em>,
+      she can choose to end the effect entirely at any time.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      psychic: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '221'
+  subschool:
+    - phantasm
+type: spell

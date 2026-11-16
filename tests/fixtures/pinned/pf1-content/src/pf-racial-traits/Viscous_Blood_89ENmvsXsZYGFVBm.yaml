@@ -1,0 +1,47 @@
+_id: 89ENmvsXsZYGFVBm
+_key: '!items!89ENmvsXsZYGFVBm'
+_stats:
+  coreVersion: '12.331'
+folder: KP5QLO1nPv43LcXI
+img: systems/pf1/icons/races/dwarf.png
+name: Viscous Blood
+system:
+  actions:
+    - _id: 7VAZnpXDc5eKCBpp
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>You can attempt Heal checks to staunch bleeding as a swift action
+        each round.</p>
+      name: Staunch bleeding
+  contextNotes:
+    - target: skill.hea
+      text: >-
+        You take 1 less point of hit point damage, ability damage, or ability
+        drain (minimum 1) from bleed and blood drain. You can staunch your own
+        bleeding as a swift action.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dwarf<br /><strong>Replaced Trait(s)</strong>:
+      Hardy</p><hr /><p>Dwarves with this trait takes 1 less point of hit point
+      damage, ability damage, or ability drain (minimum 1) from bleed and blood
+      drain. They can attempt Heal checks to staunch their own bleeding as a
+      swift action each round. This racial trait replaces hardy.</p>
+  scriptCalls:
+    - _id: olZKhw7G
+      category: use
+      hidden: false
+      img: null
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("hea");
+  showInQuickbar: true
+  sources:
+    - id: PZO1135
+      pages: '38'
+  subType: racial
+  tags:
+    - Dwarf
+type: feat

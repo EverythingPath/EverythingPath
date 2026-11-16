@@ -1,0 +1,60 @@
+_id: ch6iof333ghti2tj
+_key: '!items!ch6iof333ghti2tj'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Negate Aroma
+system:
+  actions:
+    - _id: 1s1m1z2gnky4igu3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature or object/level touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a gesture, this spell allows you to dismiss even the foulest or
+      most distinctive scents. When cast, the targeted creatures or objects lose
+      all natural and unnatural odors. A creature under the effect of <i>negate
+      aroma</i> cannot be tracked, located, or pinpointed by the scent special
+      quality. In addition, this spell prevents the target creature from using
+      the stench special ability and similar odor-based abilities (such as those
+      possessed by troglodytes).</p><p><i>Negate aroma</i> does not prevent the
+      target from acquiring outside smells or odors. Dowsing the creature with a
+      pungent substance effectively negates the benefits of the spell until the
+      substance is neutralized or washed away.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      druid: 1
+      hunter: 1
+      investigator: 1
+      occultist: 1
+      ranger: 1
+  materials:
+    value: a pinch of alum
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '234'
+type: spell

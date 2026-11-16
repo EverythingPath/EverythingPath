@@ -1,0 +1,44 @@
+_id: MZnbCVzqpvPsMvfT
+_key: '!items!MZnbCVzqpvPsMvfT'
+_stats:
+  coreVersion: '12.343'
+folder: xPJd6syoxDiunnzG
+img: icons/commodities/claws/claw-bear-brown-grey.webp
+name: Claw
+system:
+  actions:
+    - _id: 4lo88d47gxkw8wts
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - slashing
+      name: Attack
+      range:
+        units: melee
+      tag: claw
+  baseTypes:
+    - Claw
+  description:
+    value: >-
+      <p>A primary natural weapon using your claws on your forelimbs or
+      arms.</p><p>It deals bludgeoning and slashing damage, whichever is most
+      beneficial.</p><hr><p>For general rules on natural attacks, see:
+      @UUID[Compendium.pf1.pf1e-rules.nBnUY0koBzXqoEft.JournalEntryPage.8zivKFrhTVkbtjm3]{Natural
+      Attacks} (UMR).</p>
+  held: null
+  proficient: true
+  subType: natural
+  weaponGroups:
+    - natural
+type: attack

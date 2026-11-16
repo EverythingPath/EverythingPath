@@ -1,0 +1,61 @@
+_id: 11wik2btna8987g0
+_key: '!items!11wik2btna8987g0'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Illusory Poison
+system:
+  actions:
+    - _id: uneikbj2ektygu6a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 minute/level or until discharged (see text)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will disbelief, then Fortitude (see text)
+        type: fort
+      target:
+        value: weapon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a phantasm of an oily green phantasmal poison on the target
+      weapon. The first creature hit by the poisoned weapon must make a Will
+      save against the illusion spell; success means the spell has no effect and
+      is expended from the weapon. If the creature fails its save, it believes
+      it has been poisoned and must make Fortitude saves at the spell's DC to
+      avoid suffering illusory poison damage.</p><p><i>Delay poison</i> allows
+      the target to ignore the effects of the phantasmal poison until the
+      <i>delay poison</i> spell ends, at which time it may make a Will save to
+      realize the poison is illusory and recover all illusory poison damage.
+      <i>Neutralize poison</i>, <i>lesser restoration</i>, <i>or restoration</i>
+      immediately recovers all damage from the spell. A successful <i>dispel
+      magic</i> spell ends the effect of the illusion, as do spells that
+      penetrate illusions (such as <i>true</i> seeing).</p><p>The target
+      automatically recovers all illusory poison damage after 1 hour.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO9411
+      pages: '27'
+  subschool:
+    - phantasm
+type: spell

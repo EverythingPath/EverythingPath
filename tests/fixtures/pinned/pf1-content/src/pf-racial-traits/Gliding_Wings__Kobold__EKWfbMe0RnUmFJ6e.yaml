@@ -1,0 +1,45 @@
+_id: EKWfbMe0RnUmFJ6e
+_key: '!items!EKWfbMe0RnUmFJ6e'
+_stats:
+  coreVersion: '12.331'
+folder: 96UasAu9CBvgf5hT
+img: icons/creatures/abilities/dragon-breath-purple.webp
+name: Gliding Wings (Kobold)
+system:
+  contextNotes:
+    - target: skill.fly
+      text: >-
+        You can make a DC 15 Fly check to fall safely from any height without
+        taking falling damage, as if using
+        @UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather fall}. When
+        falling safely, you may make an additional DC 15 Fly check to glide,
+        moving 5 ft (1.5 m) laterally for every 20 ft (6 m) you fall.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Kobold<br /><strong>Replaced Trait(s)</strong>:
+      Crafty</p><hr /><p>Some kobolds are born with wings that, while too weak
+      for actual flying, do allow them to fall at a very slow and safe pace. A
+      kobold with wings can use them to glide. It can make a DC 15 Fly check to
+      fall safely from any height without taking falling damage, as if using
+      @UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{feather fall}. When
+      falling safely, it may make an additional DC 15 Fly check to glide, moving
+      @Distance[5 ft;dual] laterally for every @Distance[20 ft;dual] it falls.
+      This racial trait replaces crafty.</p>
+  racePoints: 3
+  scriptCalls:
+    - _id: ignUSJLZ
+      category: use
+      hidden: false
+      img: null
+      name: fly check
+      type: script
+      value: actor.rollSkill("fly");
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '133'
+  subType: racial
+  tags:
+    - Kobold
+  traitCategory: movement
+type: feat
