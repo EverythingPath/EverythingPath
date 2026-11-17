@@ -1,0 +1,34 @@
+_id: K5qGe9bp4lDynT3K
+_key: '!items!K5qGe9bp4lDynT3K'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Physical Enhancement
+system:
+  abilityType: su
+  actions:
+    - _id: 4s256tf8fp25jwc1
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      name: Use
+  changes:
+    - _id: 7ufw57l2
+      formula: 1 + floor(@class.level / 5)
+      target: str
+      type: enh
+  description:
+    value: >-
+      <p>You gain a +1 enhancement bonus to one physical ability score
+      (<em>Strength</em>, <em>Dexterity</em>, or <em>Constitution</em>) (select
+      which ability increases from the "Changes" tab of this window). This bonus
+      increases by +1 for every five wizard levels you possess to a maximum of
+      +5 at 20th level. You can change this bonus to a new ability score when
+      you prepare spells. At 20th level, this bonus applies to two physical
+      ability scores of your choice.</p>
+  sources:
+    - id: PZO1110
+      pages: '82'
+  subType: classFeat
+type: feat

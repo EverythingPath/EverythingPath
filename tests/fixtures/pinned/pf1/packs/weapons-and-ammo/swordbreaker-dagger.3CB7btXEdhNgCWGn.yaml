@@ -1,0 +1,59 @@
+_id: 3CB7btXEdhNgCWGn
+_key: '!items!3CB7btXEdhNgCWGn'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dagger-swordbreaker.PNG
+name: Swordbreaker Dagger
+system:
+  actions:
+    - _id: 2gc4gbkrzh5ij8y1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Swordbreaker Dagger
+  description:
+    unidentified: >-
+      <p>You can use this dagger to disarm or sunder enemy blades by catching
+      them in the grooves on the back of the blade and using your weapon as a
+      lever. If you are proficient with this weapon, add a +4 bonus on combat
+      maneuver checks to disarm or sunder bladed weapons while using it.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    dis: true
+    fin: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 3
+type: weapon

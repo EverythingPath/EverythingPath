@@ -1,0 +1,68 @@
+_id: l7e01shgg8c44zfg
+_key: '!items!l7e01shgg8c44zfg'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-worn-green.webp
+name: Delay Poison
+system:
+  actions:
+    - _id: xbblcxu6xmdb6aix
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The subject becomes temporarily immune to poison. Any poison in its
+      system or any poison to which it is exposed during the spell's duration
+      does not affect the subject until the spell's duration has expired.
+      <i>Delay poison</i> does not cure any damage that poison may have already
+      done.</p>
+  learnedAt:
+    bloodline:
+      Serpentine: 2
+    class:
+      adept: 2
+      alchemist: 2
+      bard: 2
+      cleric: 2
+      druid: 2
+      hunter: 1
+      inquisitor: 2
+      investigator: 2
+      mesmerist: 2
+      occultist: 2
+      oracle: 2
+      paladin: 2
+      ranger: 1
+      shaman: 2
+      skald: 2
+      warpriest: 2
+      witch: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '265'
+  subschool:
+    - healing
+type: spell

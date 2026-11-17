@@ -1,0 +1,84 @@
+_id: sJdBOE9lwz5XAkUi
+_key: '!items!sJdBOE9lwz5XAkUi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_21.jpg
+name: Wild Shape
+system:
+  abilityType: su
+  actions:
+    - _id: t1lo0qlokxp4kze3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Druid
+  description:
+    value: >-
+      <p>At 4th level, a druid gains the ability to turn herself into any small
+      or Medium <em>animal</em> and back again once per day. Her options for new
+      forms include all creatures with the <em>animal</em> type. This ability
+      functions like the
+      @UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{beast shape I} spell,
+      except as noted here. The effect lasts for 1 hour per druid level, or
+      until she changes back. Changing form (to <em>animal</em> or back) is a
+      standard action and doesn’t provoke an attack of opportunity. The form
+      chosen must be that of an animal the druid is familiar with.</p><p>A druid
+      loses her ability to speak while in <em>animal</em> form because she is
+      limited to the sounds that a normal, untrained animal can make, but she
+      can communicate normally with other animals of the same general grouping
+      as her new form. (The normal sound a wild parrot makes is a squawk, so
+      changing to this form does not permit speech.)</p><p>A druid can use this
+      ability an additional time per day at 6th level and every two levels
+      thereafter, for a total of eight times at 18th level. At 20th level, a
+      druid can use wild shape at will. As a druid gains in levels, this ability
+      allows the druid to take on the form of larger and smaller animals,
+      <em>elementals</em>, and plants. Each form expends one daily usage of this
+      ability, regardless of the form taken.</p><p>At 6th level, a druid can use
+      wild shape to change into a Large or Tiny <em>animal</em> or a Small
+      <em>elemental</em>. When taking the form of an <em>animal</em>, a druid’s
+      wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.774kmgcb7ygviht0]{beast shape II}. When
+      taking the form of an <em>elemental</em>, the druid’s wild shape functions
+      as @UUID[Compendium.pf1.spells.Item.pawbnw1nm4f0b98e]{elemental body
+      I}.</p><p>At 8th level, a druid can use wild shape to change into a Huge
+      or Diminutive <em>animal</em>, a Medium <em>elemental</em>, or a Small or
+      Medium plant creature. When taking the form of animals, a druid’s wild
+      shape now functions as
+      @UUID[Compendium.pf1.spells.Item.w88ddxpu89qcr5c0]{beast shape III}. When
+      taking the form of an elemental, the druid’s wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.yldjnorgbx4jsldz]{elemental body II}.
+      When taking the form of a plant creature, the druid’s wild shape functions
+      as @UUID[Compendium.pf1.spells.Item.y653mq8kmma3kg3w]{plant shape
+      I}.</p><p>At 10th level, a druid can use wild shape to change into a Large
+      <em>elemental</em> or a Large plant creature. When taking the form of an
+      <em>elemental</em>, the druid’s wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.hd32fuc6e7j4isbn]{elemental body III}.
+      When taking the form of a plant, the druid’s wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.ik4riccm7tozdwox]{plant shape
+      II}.</p><p>At 12th level, a druid can use wild shape to change into a Huge
+      <em>elemental</em> or a Huge plant creature. When taking the form of an
+      <em>elemental</em>, the druid’s wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.v42t5kpxc8mvd615]{elemental body IV}.
+      When taking the form of a plant, the druid’s wild shape now functions as
+      @UUID[Compendium.pf1.spells.Item.sheso071mxbywlah]{plant shape III}.</p>
+  sources:
+    - id: PZO1110
+      pages: '51'
+  subType: classFeat
+  tag: classFeat_wildShape
+  uses:
+    maxFormula: min(floor((@class.level - 2) / 2), 8)
+    per: day
+type: feat

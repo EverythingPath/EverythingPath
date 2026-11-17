@@ -1,0 +1,62 @@
+_id: F5ZLN44A3QWL8S7k
+_key: '!items!F5ZLN44A3QWL8S7k'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/pilum.PNG
+name: Pilum
+system:
+  actions:
+    - _id: uiml8jeye4dvmi5f
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Pilum
+  description:
+    unidentified: >-
+      <p>The tip of this heavy javelin is designed to break off and embed itself
+      into a shield once it hits. Like ammunition, a thrown pilum that hits its
+      target is destroyed. If you hit a shieldbearing opponent with a pilum, he
+      loses the AC bonuses from that shield until he takes a standard action to
+      pry the remnants of the pilum from his shield.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 4
+type: weapon

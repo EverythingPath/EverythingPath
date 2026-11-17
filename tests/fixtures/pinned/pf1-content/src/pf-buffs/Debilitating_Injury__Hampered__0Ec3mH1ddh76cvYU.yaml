@@ -1,0 +1,43 @@
+_id: 0Ec3mH1ddh76cvYU
+_key: '!items!0Ec3mH1ddh76cvYU'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/weapon_39.jpg
+name: Debilitating Injury (Hampered)
+system:
+  changes:
+    - _id: qa3vi5t4
+      formula: max(5, floor(@attributes.speed.land.total / 2))
+      operator: set
+      target: landSpeed
+      type: untyped
+    - _id: nSsHRUd3
+      formula: max(5, floor(@attributes.speed.climb.total / 2))
+      target: climbSpeed
+      type: untyped
+    - _id: vd8R8oJD
+      formula: max(5, floor(@attributes.speed.swim.total / 2))
+      target: swimSpeed
+      type: untyped
+    - _id: 8J2l9Ezd
+      formula: max(5, floor(@attributes.speed.burrow.total / 2))
+      target: burrowSpeed
+      type: untyped
+    - _id: NreZr9rY
+      formula: max(5, floor(@attributes.speed.fly.total / 2))
+      target: flySpeed
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.nL9Ds9nflmID84vo]{Debilitating
+      Injury (UC)}</p><p><strong>Hampered</strong>: All of the target’s speeds
+      are reduced by half (to a minimum of 5 feet). In addition, the target
+      cannot take a 5-foot step.</p>
+  duration:
+    end: initiative
+    units: round
+    value: '1'
+  level: null
+  subType: feat
+type: buff

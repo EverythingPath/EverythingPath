@@ -1,0 +1,831 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/caNEmbCtoHA7NYtZ",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "class-abilities",
+      "name": "Summon Monster",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 1st level, a summoner can cast <a href=\"catalog:pf1/kyo0kwhw2jhuztju\">Summon Monster I</a> as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing upon this ability uses up the same power as the summoner uses to call his eidolon. As a result, he can only use this ability when his eidolon is not summoned. He can cast this spell as a standard action and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by one spell level, allowing him to summon more powerful creatures (to a maximum of <a href=\"catalog:pf1/mi52crelhwuy6bmp\">Summon Monster IX</a> at 17th level). At 19th level, this ability can be used as <a href=\"catalog:pf1/ursm11405zobemi3\">Gate</a> or <a href=\"catalog:pf1/mi52crelhwuy6bmp\">Summon Monster IX</a>. If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate immediately ends. These summon spells are considered to be part of his spell list for the purposes of spell trigger and spell completion items. In addition, he can expend uses of this ability to fufill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.</p>",
+      "sources": [
+        {
+          "book": "PZO1115",
+          "pages": "54"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "quqa9jhalqi0x83f",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@class.level"
+                },
+                "name": "Use"
+              }
+            ],
+            "associations": {
+              "classes": ["Summoner"]
+            },
+            "uses": {
+              "maxFormula": "3 + @abilities.cha.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [
+    {
+      "externalKey": "pf1/kyo0kwhw2jhuztju",
+      "upstreamKey": "pf1/kyo0kwhw2jhuztju",
+      "pack": "spells",
+      "name": "Summon Monster I",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "antipaladin": 1,
+          "arcanist": 1,
+          "bard": 1,
+          "cleric": 1,
+          "medium": 1,
+          "oracle": 1,
+          "psychic": 1,
+          "skald": 1,
+          "sorcerer": 1,
+          "spiritualist": 1,
+          "summoner": 1,
+          "summonerUnchained": 1,
+          "warpriest": 1,
+          "witch": 1,
+          "wizard": 1
+        },
+        "grantedLevels": {},
+        "school": "con",
+        "subschools": ["summoning"],
+        "descriptors": ["see text"]
+      },
+      "description": "<p>This spell summons an extraplanar creature (typically an outsider, elemental, or magical beast native to another plane). It appears where you designate and acts immediately, on your turn. It attacks your opponents to the best of its ability. If you can communicate with the creature, you can direct it not to attack, to attack particular enemies, or to perform other actions. The spell conjures one of the creatures from the 1st <b>Level</b> list on Table 10-1. You choose which kind of creature to summon, and you can choose a different one each time you cast the spell.</p><p>A summoned monster cannot summon or otherwise conjure another creature, nor can it use any teleportation or planar travel abilities. Creatures cannot be summoned into an environment that cannot support them. Creatures summoned using this spell cannot use spells or spell-like abilities that duplicate spells with expensive material components (such as <i>wish).</i></p><p>When you use a summoning spell to summon a creature with an alignment or elemental subtype, it is a spell of that type. Creatures on Table 10-1 marked with an &quot;*&quot; are summoned with the celestial template, if you are good, and the fiendish template, if you are evil. If you are neutral, you may choose which template to apply to the creature. Creatures marked with an &quot;*&quot; always have an alignment that matches yours, regardless of their usual alignment.</p><p>Summoning these creatures makes the summoning spell's type match your alignment.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "350"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "llqt6oeyp68zbpvr",
+                "activation": {
+                  "type": "round",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "effect": "one summoned creature",
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/mi52crelhwuy6bmp",
+      "upstreamKey": "pf1/mi52crelhwuy6bmp",
+      "pack": "spells",
+      "name": "Summon Monster IX",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 9,
+          "cleric": 9,
+          "oracle": 9,
+          "psychic": 9,
+          "sorcerer": 9,
+          "witch": 9,
+          "wizard": 9
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Abyssal": 9
+          },
+          "domain": {
+            "Chaos": 9,
+            "Evil": 9,
+            "Good": 9,
+            "Law": 9
+          }
+        },
+        "school": "con",
+        "subschools": ["summoning"],
+        "descriptors": []
+      },
+      "description": "<p>This spell functions like <a href=\"catalog:pf1/kyo0kwhw2jhuztju\">Summon Monster I</a>, except that you can summon one creature from the 9th-level list, 1d3 creatures of the same kind from the 8th-level list, or 1d4+1 creatures of the same kind from a lower-level list.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "352"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "q71sv9zuxz8uxoyo",
+                "activation": {
+                  "type": "round",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "round",
+                  "value": "@cl"
+                },
+                "effect": "one summoned creature",
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ursm11405zobemi3",
+      "upstreamKey": "pf1/ursm11405zobemi3",
+      "pack": "spells",
+      "name": "Gate",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "arcanist": 9,
+          "cleric": 9,
+          "oracle": 9,
+          "psychic": 9,
+          "sorcerer": 9,
+          "wizard": 9
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Celestial": 9
+          },
+          "domain": {
+            "Glory": 9
+          },
+          "subDomain": {
+            "Trade": 9
+          }
+        },
+        "school": "con",
+        "subschools": ["creation or calling"],
+        "descriptors": []
+      },
+      "description": "<p>Casting a <i>gate</i> spell has two effects. First, it creates an interdimensional connection between your plane of existence and a plane you specify, allowing travel between those two planes in either direction.</p><p>Second, you may then call a particular individual or kind of being through the <i>gate</i>.</p><p>The <i>gate</i> itself is a circular hoop or disk from 5 to 20 feet in diameter (caster's choice) oriented in the direction you desire when it comes into existence (typically vertical and facing you). It is a two-dimensional window looking into the plane you specified when casting the spell, and anyone or anything that moves through is shunted instantly to the other side.</p><p>A <i>gate</i> has a front and a back. Creatures moving through the <i>gate</i> from the front are transported to the other plane; creatures moving through it from the back are not.</p><p><i>Planar Travel</i>: As a mode of planar travel, a <i>gate</i> spell functions much like a <i>plane shift</i> spell, except that the <i>gate</i> opens precisely at the point you desire (a creation effect). Deities and other beings who rule a planar realm can prevent a <i>gate</i> from opening in their presence or personal demesnes if they so desire. Travelers need not join hands with you-anyone who chooses to step through the portal is transported. A <i>gate</i> cannot be opened to another point on the same plane; the spell works only for interplanar travel.</p><p>You may hold the <i>gate</i> open only for a brief time (no more than 1 round per caster level), and you must concentrate on doing so, or else the interplanar connection is severed.</p><p><i>Calling Creatures</i>: The second effect of the <i>gate</i> spell is to call an extraplanar creature to your aid (a calling effect). By naming a particular being or kind of being as you cast the spell, you cause the <i>gate</i> to open in the immediate vicinity of the desired creature and pull the subject through, willing or unwilling. Deities and unique beings are under no compulsion to come through the <i>gate</i>, although they may choose to do so of their own accord. This use of the spell creates a <i>gate</i> that remains open just long enough to transport the called creatures. This use of the spell has a material cost of 10,000 gp in rare incense and offerings. This cost is in addition to any cost that must be paid to the called creatures.</p><p>If you choose to call a kind of creature instead of a known individual, you may call either a single creature or several creatures.</p><p>In either case, their total HD cannot exceed twice your caster level. In the case of a single creature, you can control it if its HD does not exceed your caster level. A creature with more HD than your caster level can't be controlled. Deities and unique beings cannot be controlled in any event. An uncontrolled being acts as it pleases, making the calling of such creatures rather dangerous. An uncontrolled being may return to its home plane at any time.</p><p>If you choose to exact a longer or more involved form of service from a called creature, you must offer some fair trade in return for that service. The service exacted must be reasonable with respect to the promised favor or reward; see the <i>lesser planar ally</i> spell for appropriate rewards. Some creatures may want their payment in &quot;livestock&quot; rather than in coin, which could involve complications.</p><p>Immediately upon completion of the service, the being is transported to your vicinity, and you must then and there turn over the promised reward. After this is done, the creature is instantly freed to return to its own plane.</p><p>Failure to fulfill the promise to the letter results in your being subjected to service by the creature or by its liege and master, at the very least. At worst, the creature or its kin may attack you.</p><p><i>Note:</i> When you use a calling spell such as <i>gate</i> to call an air, chaotic, earth, evil, fire, good, lawful, or water creature, it becomes a spell of that type.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "287"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "rough7t66lbdx4ic",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "concentration": true,
+                  "units": "spec",
+                  "value": "instantaneous or concentration (up to 1 round/level); see text"
+                },
+                "effect": "see text",
+                "name": "Use",
+                "range": {
+                  "units": "medium"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "increments": [
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-11",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster VI",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "11:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster VI: the Summoner table's 11th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-13",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster VII",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "13:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster VII: the Summoner table's 13th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-15",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster VIII",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "15:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster VIII: the Summoner table's 15th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-17",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster IX",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "17:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster IX: the Summoner table's 17th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-19",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Gate",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "19:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Gate: the Summoner table's 19th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-3",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster II",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "3:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster II: the Summoner table's 3rd-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-3",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-3",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-3",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-3",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-3",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-5",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster III",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "5:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster III: the Summoner table's 5th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-7",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster IV",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "7:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster IV: the Summoner table's 7th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    },
+    {
+      "externalKey": "everythingpath/summoner-summon-monster-9",
+      "upstreamKey": "pf1/caNEmbCtoHA7NYtZ",
+      "pack": "everythingpath-schedules",
+      "name": "Summon Monster V",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/caNEmbCtoHA7NYtZ",
+        "part": "9:pf1/caNEmbCtoHA7NYtZ"
+      },
+      "description": "<p>Summon Monster V: the Summoner table's 9th-level row of Summon Monster (Pathfinder RPG Advanced Player’s Guide pp. 54–64). The Summon Monster entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player’s Guide",
+          "pages": "54–64"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/summoner-summon-monster-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/caNEmbCtoHA7NYtZ"
+    }
+  ]
+}
