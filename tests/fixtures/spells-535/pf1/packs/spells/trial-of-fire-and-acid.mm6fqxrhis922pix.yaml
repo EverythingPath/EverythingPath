@@ -1,0 +1,89 @@
+_id: mm6fqxrhis922pix
+_key: '!items!mm6fqxrhis922pix'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/acid/projectile-glowing-bubbles.webp
+name: Trial of Fire and Acid
+system:
+  actions:
+    - _id: b5mw081lhidjxps6
+      ability:
+        attack: _default
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude half (see text)
+        type: fort
+      target:
+        value: creature touched
+      touch: true
+    - _id: KIWOgyzWpdPAuMZx
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+          - formula: 1d6
+            types:
+              - fire
+      name: Continuous Damage
+      save:
+        description: Fortitude half
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature is covered in burning acid that deals 1d6 points of
+      acid damage and 1d6 points of fire damage each round. The subject can
+      attempt a Fortitude saving throw each round to reduce the damage by half.
+      Dousing the target in water ends the effect (both the acid and the fire),
+      but rolling on the ground does not extinguish the fire or affect the
+      acid.</p>
+  descriptors:
+    - acid
+    - fire
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      cleric: 3
+      magus: 3
+      oracle: 3
+      shaman: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1130
+      pages: '225'
+  sr: false
+type: spell

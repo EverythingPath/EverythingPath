@@ -1,0 +1,57 @@
+_id: tz793eoix5mg2wd8
+_key: '!items!tz793eoix5mg2wd8'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Project Weakness
+system:
+  actions:
+    - _id: fonjpxoe0enu5vru
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You curse the target with the weaknesses of your kind of vampirism. The
+      creature reacts to garlic, mirrors, ringing bells, sunlight, and so on as
+      if it were a vampire of the same type as you. This cannot kill the target;
+      anything that would kill it (such as a lengthy exposure to sunlight if you
+      are a moroi vampire) renders it helpless until the curse or the harmful
+      effect is removed. The target gains none of the benefits of being a
+      vampire (such as fast healing or requiring special ways to be permanently
+      killed), only the penalties.</p>
+  descriptors:
+    - curse
+    - evil
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 3
+      oracle: 3
+      sorcerer: 4
+      warpriest: 3
+      witch: 3
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO9427
+      pages: '30'
+type: spell

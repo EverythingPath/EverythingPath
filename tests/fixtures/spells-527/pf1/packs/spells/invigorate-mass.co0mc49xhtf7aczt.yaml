@@ -1,0 +1,50 @@
+_id: co0mc49xhtf7aczt
+_key: '!items!co0mc49xhtf7aczt'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Invigorate, Mass
+system:
+  actions:
+    - _id: ioj0gk372dpyyw71
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creatures touched, up to one/level
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell works as
+      @UUID[Compendium.pf1.spells.Item.9d9rk0olitnscems]{invigorate}, except it
+      affects multiple creatures.</p>
+  learnedAt:
+    class:
+      bard: 3
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO1115
+      pages: '230'
+  subschool:
+    - figment
+type: spell

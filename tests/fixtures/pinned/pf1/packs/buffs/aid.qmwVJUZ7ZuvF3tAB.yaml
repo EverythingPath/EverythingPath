@@ -1,0 +1,31 @@
+_id: qmwVJUZ7ZuvF3tAB
+_key: '!items!qmwVJUZ7ZuvF3tAB'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/spells/haste-royal-1.jpg
+name: Aid
+system:
+  changes:
+    - _id: 0rwu2c6q
+      formula: '1'
+      target: attack
+      type: morale
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[1]] Morale vs Fear effects
+  description:
+    value: >-
+      <p>You have a +1 morale bonus to attack rolls and saves against fear
+      effects as per @UUID[Compendium.pf1.spells.Item.ibk7jrc5rwubpia6]
+      spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '239'
+  subType: spell
+type: buff

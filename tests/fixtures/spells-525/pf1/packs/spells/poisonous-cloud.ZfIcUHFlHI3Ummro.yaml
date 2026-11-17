@@ -1,0 +1,70 @@
+_id: ZfIcUHFlHI3Ummro
+_key: '!items!ZfIcUHFlHI3Ummro'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/fog-acid-2.jpg
+name: Poisonous Cloud
+system:
+  actions:
+    - _id: Wim8LCVpILVQc9pm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d2
+            types:
+              - Constitution damage
+      duration:
+        units: round
+        value: '@cl'
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates; see text
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><em>Poisonous cloud</em> creates a bank of fog like that created by
+      @UUID[Compendium.pf1.spells.g33euis7yi9pwddy]{fog cloud}, except that the
+      vapors are toxic. The cloud deals 1d2 points of Constitution damage per
+      round to living creatures that fail their Fortitude saves. A creature that
+      succeeds at its save but remains in the cloud must continue to attempt a
+      new saving throw each round on your turn.</p><p><em>Poisonous cloud</em>
+      can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{permanency} spell cast by a
+      caster of 13th level or higher, at a cost of 12,500 gp. A permanent
+      <em>poisonous cloud</em> dispersed by wind re-forms in 10 minutes.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      magus: 4
+      shaman: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: small drop of poison
+  school: con
+  sources:
+    - id: PZO9487
+      pages: '11'
+  subschool:
+    - creation
+type: spell
