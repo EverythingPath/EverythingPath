@@ -1,0 +1,28 @@
+_id: asX1tCPLkhm2UiwQ
+_key: '!items!asX1tCPLkhm2UiwQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_14.jpg
+name: Strength of the Abyss
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: 6wg7svns
+      formula: 2 + if(gt(@class.level, 12), 2) + if(gte(@class.level, 17), 2)
+      target: str
+      type: inherent
+  description:
+    value: >-
+      <p>At 9th level, you gain a +2 inherent bonus to your <em>Strength</em>.
+      This bonus increases to +4 at 13th level, and to +6 at 17th level.</p>
+  sources:
+    - id: PZO1110
+      pages: '73'
+  subType: classFeat
+  tags:
+    - Bloodline Power
+    - Abyssal Bloodline
+type: feat

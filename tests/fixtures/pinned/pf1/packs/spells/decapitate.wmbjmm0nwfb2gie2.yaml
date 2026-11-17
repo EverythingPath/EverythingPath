@@ -1,0 +1,55 @@
+_id: wmbjmm0nwfb2gie2
+_key: '!items!wmbjmm0nwfb2gie2'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Decapitate
+system:
+  actions:
+    - _id: 8lm7tprybc52jmvn
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: one creature (see text)
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can cast this spell only as a response to a confirmed critical hit
+      against the target that would deal slashing damage. If the target fails
+      the saving throw and has a discernible head, the attack deals an extra 4d6
+      points of damage and the critical multiplier of the critical hit increases
+      by 1. If the critical hit then brings the target to 0 hit points or fewer,
+      the target is instantly decapitated and dies unless it can survive
+      decapitation. Even on a successful saving throw, the critical hit deals an
+      extra 4d6 points of damage.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      inquisitor: 5
+      magus: 6
+      psychic: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a sliver from a guillotine blade
+  school: evo
+  sources:
+    - id: PZO1135
+      pages: '115'
+type: spell
