@@ -1,0 +1,58 @@
+_id: fbf5k440pbpp6d8b
+_key: '!items!fbf5k440pbpp6d8b'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Duplicate Familiar
+system:
+  actions:
+    - _id: 8teehpe335ou2lk8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      effect: temporary duplicate of familiar touched
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    focus: true
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a duplicate of a familiar. The familiar's master can use the
+      duplicate as if it were his familiar in all respects, though he doesn't
+      gain the bonus special ability from more  than one familiar at a time.
+      When the spell's duration expires, the familiar duplicate shrivels into
+      nothing, even if petrified or otherwise transformed.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      arcanist: 5
+      investigator: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: familiar
+    value: alchemically preserved mockingfey feathers
+  school: con
+  sources:
+    - id: PZO9454
+      pages: '22'
+  sr: false
+  subschool:
+    - creation
+type: spell

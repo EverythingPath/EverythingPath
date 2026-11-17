@@ -1,0 +1,32 @@
+_id: e6LhyzMnHZc5Vlni
+_key: '!items!e6LhyzMnHZc5Vlni'
+_stats:
+  coreVersion: '12.343'
+folder: pWAnXIA75Y5ZNsCL
+img: icons/magic/defensive/shield-barrier-flaming-diamond-teal-purple.webp
+name: Ward
+system:
+  changes:
+    - _id: yXliK2TX
+      formula: 2 + clamp(floor(@item.level / 8), 0, 2)
+      target: ac
+      type: deflection
+    - _id: ztHP3if0
+      formula: 2 + clamp(floor(@item.level / 8), 0, 2)
+      target: allSavingThrows
+      type: resist
+  description:
+    value: >-
+      <p>Gain +2 deflection bonus to AC and +2 resistance bonus to saving
+      throws.</p><p>This lasts until you are hit or you fail a saving
+      throw.</p><p>See
+      @UUID[Compendium.pf1.class-abilities.Item.etzfM5q6bFFSnRjU] for more
+      details.</p>
+  level: 1
+  sources:
+    - id: PZO1115
+      pages: '67'
+    - id: PZO1129
+      pages: '37'
+  subType: feat
+type: buff

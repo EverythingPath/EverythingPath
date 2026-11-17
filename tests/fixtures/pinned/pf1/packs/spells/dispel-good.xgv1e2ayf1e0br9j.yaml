@@ -1,0 +1,57 @@
+_id: xgv1e2ayf1e0br9j
+_key: '!items!xgv1e2ayf1e0br9j'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/symbols/runes-star-orange.webp
+name: Dispel Good
+system:
+  actions:
+    - _id: vvds8l02sffg6tsj
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged, whichever comes first
+      name: Use
+      range:
+        units: touch
+      save:
+        description: see text
+      target:
+        value: >-
+          you and a touched good creature from another plane, or you and an
+          enchantment or good spell on a touched creature or object
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.sg3eq6xpsum65fgm]{dispel evil}, except
+      that you are surrounded by dark, wavering unholy energy, and the spell
+      affects good creatures and spells rather than evil ones.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 4
+      cleric: 5
+      inquisitor: 5
+      oracle: 5
+      shaman: 5
+      warpriest: 5
+    domain:
+      Evil: 5
+  level: 5
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '272'
+  sr: false
+type: spell

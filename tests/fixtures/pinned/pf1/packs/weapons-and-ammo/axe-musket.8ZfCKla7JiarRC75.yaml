@@ -1,0 +1,81 @@
+_id: 8ZfCKla7JiarRC75
+_key: '!items!8ZfCKla7JiarRC75'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Axe Musket
+system:
+  actions:
+    - _id: gvg32nqo666g1jp9
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '30'
+  ammo:
+    capacity: 1
+    explode: 5
+    misfire: 2
+    type: gunBullet
+  baseTypes:
+    - Axe Musket
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x4; <b>Range</b> 30 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2 (5 ft.); <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>This short musket features an axe blade at the end of its barrel. It
+      can be used as both a musket and a battleaxe. It is considered a double
+      weapon for the purposes of creating masterwork or magical versions of this
+      weapon.</p>
+
+      <p>If this firearm gains the broken condition, both the firearm component
+      and the axe are considered broken. An axe musket uses either a bullet and
+      a single dose of black powder or an alchemical cartridge as
+      ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 1600
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 6
+type: weapon

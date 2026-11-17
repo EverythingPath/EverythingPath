@@ -1,0 +1,74 @@
+_id: vphjuk9z5iofueuu
+_key: '!items!vphjuk9z5iofueuu'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/environment/wilderness/cave-entrance-vulcano.webp
+name: Anywhere but Here
+system:
+  actions:
+    - _id: 9mzx37blrimwc1hv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          you and up to four willing creatures, none of whom can be on their
+          home plane
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions similarly to <i>plane shift</i>, but instead of
+      transporting the targets to a destination near an intended location on a
+      specific plane, <i>Anywhere but Here</i> transports affected creatures to
+      a random plane. A creature can be affected by <i>Anywhere but Here</i>
+      only if it is currently not on its home plane (although targets can, by
+      chance, end up traveling to their home plane as a result of this spell).
+      Subjects always appear in a location that is not inherently harmful, but
+      the exact destination is otherwise random. The specific plane is
+      determined by the table below; the location on the destination plane where
+      the transported creatures arrive is completely subject to the GM's whim.
+      </p><table border="1"><tbody><tr><th>d% [[/r d100]]</th><th>Planar
+      Destination</th></tr><tr><td>1-7</td><td>Abyss</td></tr><tr><td>8-14</td><td>Abaddon</td></tr><tr><td>15-20</td><td>Hell</td></tr><tr><td>21-24</td><td>Shadow
+      Plane</td></tr><tr><td>25-28</td><td>First
+      World</td></tr><tr><td>29-35</td><td>Maelstrom</td></tr><tr><td>36-42</td><td>Boneyard</td></tr><tr><td>43-49</td><td>Axis</td></tr><tr><td>50-56</td><td>Ethereal
+      Plane</td></tr><tr><td>57-63</td><td>Elysium</td></tr><tr><td>64-70</td><td>Nirvana</td></tr><tr><td>71-77</td><td>Heaven</td></tr><tr><td>78-84</td><td>Astral
+      Plane</td></tr><tr><td>85-90</td><td>Random
+      demiplane</td></tr><tr><td>91-95</td><td>Material Plane (random
+      world)</td></tr><tr><td>96-100</td><td>GM's
+      choice</td></tr></tbody></table><p>A creature that is transported by
+      <i>Anywhere but Here</i> cannot be affected by a subsequent casting of
+      <i>Anywhere but Here</i> for 24 hours afterward (but can be affected
+      normally by other forms of planar travel).</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      magus: 4
+      psychic: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: con
+  sources:
+    - id: PZO1141
+      pages: '38'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

@@ -1,0 +1,66 @@
+_id: QIZOnIIzvUKYLekN
+_key: '!items!QIZOnIIzvUKYLekN'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/halfling-hope-shot.PNG
+name: Halfling Rope-Shot
+system:
+  actions:
+    - _id: 1gehl5rdmr8uhnvv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  ammo:
+    type: slingBullet
+  baseTypes:
+    - Halfling Rope-Shot
+  description:
+    unidentified: >-
+      <p>One end of this short rope has a sling bullet wrapped in a monkey's
+      fist knot, and the other end is tied in a small loop. You wrap the loop
+      around your wrist as a full-round action and swing the weighted end like a
+      flail. If the loop is properly attached to your wrist and you drop the
+      rope-shot or are disarmed, you can recover it as a swift action. Removing
+      the weapon's loop is a full-round action. You get a +2 bonus on Sleight of
+      Hand checks made to conceal a rope-shot on your body. Halflings treat
+      rope-shots as martial weapons.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    dis: true
+    fin: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  tags:
+    - Halfling
+  weaponGroups:
+    - flails
+  weight:
+    value: 1
+type: weapon

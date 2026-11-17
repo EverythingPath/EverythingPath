@@ -1,0 +1,69 @@
+_id: u5je1ywif3oxe5xr
+_key: '!items!u5je1ywif3oxe5xr'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Claim Identity, Greater
+system:
+  actions:
+    - _id: 9nrumonzy59g1qll
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: humanoid creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as per
+      @UUID[Compendium.pf1.spells.6rs8aoks1cqkr6o5]{claim identity}, except it
+      transforms its target into a helpless, inanimate porcelain mask for the
+      spell's duration. The target remains aware of everything it can see or
+      hear while transformed. The target can't speak or move, but can still take
+      purely mental actions (such as casting certain spells) or be targeted by
+      spells that affect its mind. Any creature donning this mask is transformed
+      into a flawless imitation of the spell's target, as if affected by
+      <em>claim identity</em>, and reverts to its natural form upon removing the
+      mask. Any damage dealt to the mask immediately ends this spell.</p>
+  learnedAt:
+    class:
+      alchemist: 5
+      antipaladin: 4
+      arcanist: 6
+      bard: 5
+      druid: 6
+      hunter: 6
+      inquisitor: 5
+      investigator: 5
+      shaman: 6
+      skald: 5
+      sorcerer: 6
+      witch: 5
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 100
+    value: a silver needle costing 100 gp
+  school: trs
+  sources:
+    - id: PZO9469
+      pages: '28'
+  subschool:
+    - polymorph
+type: spell

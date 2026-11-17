@@ -1,0 +1,51 @@
+_id: 8nBdNng8y9E3AC5o
+_key: '!items!8nBdNng8y9E3AC5o'
+_stats:
+  coreVersion: '12.331'
+folder: psuYMTF2CZGcl9ZE
+img: systems/pf1/icons/races/creature-types/construct.png
+name: Take to the Water
+system:
+  abilityType: ex
+  changes:
+    - _id: 6aD0sJJv
+      formula: '8'
+      target: skill.swm
+      type: racial
+    - _id: WivC80q8
+      formula: '30'
+      operator: set
+      target: swimSpeed
+      type: base
+  contextNotes:
+    - target: init
+      text: +[[2]] bonus while swimming.
+    - target: ref
+      text: +[[2]] bonus while swimming.
+    - target: skill.swm
+      text: You can hold your breath 10 times longer than a human can.
+    - target: conChecks
+      text: You can hold your breath 10 times longer than a human can.
+  description:
+    instructions: >-
+      <p>Rule for humans: <em>You can hold your breath for a number of rounds
+      equal to twice your Constitution score, but only if you do nothing other
+      than take move actions or free actions. If you take a standard action or a
+      full-round action (such as making an attack), the remainder of the
+      duration for which you can hold your breath is reduced by 1
+      round.</em></p><p>Also note that all creatures with swim speeds receive a
+      +8 to swim checks so this trait may be a duplication of that bonus. </p>
+    value: >-
+      <p><strong>Race</strong>: Deep One Hybrid</p><hr /><p>A deep one hybrid
+      can hold its breath 10 times longer than a human can, and gains a +2 bonus
+      on Initiative checks and Reflex saving throws while swimming. A deep one
+      hybrid has a swim speed of @Distance[30 ft;dual], and gains a +8 racial
+      bonus on all Swim checks.</p>
+  sources:
+    - id: PZO1133
+      pages: '70'
+  subType: racial
+  tags:
+    - Deep One Hybrid
+  traitCategory: movement
+type: feat

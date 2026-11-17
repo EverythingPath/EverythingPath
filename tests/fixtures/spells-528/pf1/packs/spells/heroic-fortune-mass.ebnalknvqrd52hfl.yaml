@@ -1,0 +1,55 @@
+_id: ebnalknvqrd52hfl
+_key: '!items!ebnalknvqrd52hfl'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Heroic Fortune, Mass
+system:
+  actions:
+    - _id: l8os1yldlaloqj2f
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one or more creatures, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.b8h35mj2mzvhbqux]{heroic fortune}, except
+      as noted above.</p>
+  learnedAt:
+    class:
+      bard: 4
+      cleric: 5
+      oracle: 5
+      skald: 4
+      warpriest: 5
+  level: 5
+  materials:
+    gpValue: 1000
+    value: diamond dust worth 1,000 gp
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '324'
+  sr: false
+type: spell

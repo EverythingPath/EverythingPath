@@ -1,0 +1,54 @@
+_id: rsiczoknsnyykpvd
+_key: '!items!rsiczoknsnyykpvd'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Magnifying Chime
+system:
+  actions:
+    - _id: vqsu3xbk6uapk0ek
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude half (see text)
+        type: fort
+      target:
+        value: >-
+          Effect disruptive vibrations   one unattended object or object in your
+          possession
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the touched object to vibrate and release sonic energy once
+      per round as a loud, dangerous chime. The sound grows in strength as time
+      passes. On your turn in the round after you cast the spell, the chime
+      deals 1d6 points of sonic damage to all creatures and objects within 5
+      feet of the target. Each round after that, the damage increases by 1d6 and
+      reaches 5 feet farther in all directions. A successful Fortitude save
+      halves the damage for that round only.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 6
+      skald: 6
+  level: 6
+  school: trs
+  sources:
+    - id: PZO1129
+      pages: '186'
+type: spell
