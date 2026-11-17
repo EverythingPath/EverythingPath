@@ -1,0 +1,74 @@
+_id: NTfhSmNoNuQ5mBNs
+_key: '!items!NTfhSmNoNuQ5mBNs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Flight Hex
+system:
+  abilityType: su
+  actions:
+    - _id: RiXoIrVUA6WlTxch
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>As per @UUID[Compendium.pf1.spells.68m9du7zw2di7ew6]{Feather Fall}
+        spell.</p>
+      name: Feather Fall
+      range:
+        units: personal
+    - _id: cTmoJ8MuNtrIp1BP
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Levitate
+      uses:
+        self:
+          maxFormula: min(1, floor(@class.level / 3))
+          per: day
+    - _id: 1DDufZkGHYbBC9JY
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: minute
+        value: '1'
+      name: Fly
+      uses:
+        self:
+          maxFormula: if(gt(@class.level, 4), @class.level)
+          per: day
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  changes:
+    - _id: 3tAIY0re
+      formula: '4'
+      target: skill.swm
+      type: racial
+  description:
+    value: >-
+      <p>The witch grows lighter as she gains power, eventually gaining the
+      ability to fly.</p>
+
+      <p>At 1st level, the witch can use feather fall at will and gains a +4
+      racial bonus on Swim checks.</p>
+
+      <p>At 3rd level, she can cast levitate once per day.</p>
+
+      <p>At 5th level, she can fly, as per the spell, for a number of minutes
+      per day equal to her level.</p>
+
+      <p>These minutes do not need to be consecutive, but they must be spent in
+      1-minute increments. This hex only affects the witch.</p>
+  sources:
+    - id: PZO1115
+      pages: '66'
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

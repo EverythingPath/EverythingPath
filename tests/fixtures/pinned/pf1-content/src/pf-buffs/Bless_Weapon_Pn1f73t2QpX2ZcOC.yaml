@@ -1,0 +1,48 @@
+_id: Pn1f73t2QpX2ZcOC
+_key: '!items!Pn1f73t2QpX2ZcOC'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/yellow_22.jpg
+name: Bless Weapon
+system:
+  contextNotes:
+    - target: attack
+      text: >-
+        The weapon also becomes good-aligned, which means it can bypass the DR
+        of certain creatures.
+    - target: attack
+      text: >-
+        All critical hit rolls against evil foes are automatically successful,
+        so every threat is a critical hit. This last effect does not apply to
+        any weapon that already has a magical effect related to critical hits,
+        such as a keen weapon or a vorpal sword.
+    - target: attack
+      text: >-
+        The weapon is treated as having a [[+1]] enhancement bonus for the
+        purpose of bypassing the DR of evil creatures or striking evil
+        incorporeal creatures (though the spell doesn't grant an actual
+        enhancement bonus).
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.hl9l92qfalq6c55z]{Bless
+      Weapon}</p><p>This transmutation makes a weapon strike true against evil
+      foes. The weapon is treated as having a +1 enhancement bonus for the
+      purpose of bypassing the DR of evil creatures or striking evil incorporeal
+      creatures (though the spell doesn't grant an actual enhancement
+      bonus).</p><p>The weapon also becomes good-aligned, which means it can
+      bypass the DR of certain creatures. (This effect overrides and suppresses
+      any other alignment the weapon might have.)</p><p>Individual arrows or
+      bolts can be transmuted, but affected projectile weapons (such as bows)
+      don't confer the benefit to the projectiles they shoot.</p><p>In addition,
+      all critical hit rolls against evil foes are automatically successful, so
+      every threat is a critical hit. This last effect does not apply to any
+      weapon that already has a magical effect related to critical hits, such as
+      a <em>keen</em> weapon or a <em>vorpal sword</em>.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

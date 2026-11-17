@@ -1,0 +1,44 @@
+_id: A3KJJHMNlAjUzcx6
+_key: '!items!A3KJJHMNlAjUzcx6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Change Shape
+system:
+  abilityType: sp
+  actions:
+    - _id: 0wpb0jk6uzrh841j
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can change your shape for a number of rounds per day
+      equal to your wizard level. These rounds do not need to be consecutive.
+      This ability otherwise functions like
+      @UUID[Compendium.pf1.spells.774kmgcb7ygviht0]{Beast Shape II} or
+      @UUID[Compendium.pf1.spells.pawbnw1nm4f0b98e]{Elemental Body I}. At 12th
+      level, this ability functions like
+      @UUID[Compendium.pf1.spells.w88ddxpu89qcr5c0]{Beast Shape III} or
+      @UUID[Compendium.pf1.spells.yldjnorgbx4jsldz]{Elemental Body II}.</p>
+  sources:
+    - id: PZO1110
+      pages: '82'
+  subType: classFeat
+  tag: classFeat_changeShape
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,56 @@
+_id: k14bhox27hf8abwy
+_key: '!items!k14bhox27hf8abwy'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Erode Defenses
+system:
+  actions:
+    - _id: jl5vykxj2litsqnl
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates (see below)
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your spell slowly begins to eat away at the defenses of your target. If
+      the target fails its saving throw, it loses 1 point from any damage
+      reduction and natural armor bonus it may have. If the initial save was not
+      successful, the target may attempt a new saving throw each round for the
+      duration of the spell or continue to suffer cumulative losses. If the
+      first save fails but a subsequent save succeeds, the eroding effects stop
+      at that point, though any of the penalties already accrued remain until
+      the spell expires. At the end of the spell's duration, the target's damage
+      reduction and natural armor bonus immediately return to normal.  Only one
+      <i>erode defenses</i> spell can affect a particular target at any one
+      time.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      magus: 2
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO9434
+      pages: '29'
+type: spell

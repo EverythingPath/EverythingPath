@@ -1,0 +1,1676 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/CK5L0YJDENqBxLqv",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "class-abilities",
+      "name": "Fast Movement (MNK)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, a monk gains an <em>enhancement bonus</em> to his land speed, as seen below. A monk in armor or carrying a medium or heavy load loses this extra speed.</p><table><thead><tr><th>Starting Level</th><th>Bonus Speed</th></tr></thead><tbody><tr><td>3</td><td>+10 ft.</td></tr><tr><td>6</td><td>+20 ft.</td></tr><tr><td>9</td><td>+30 ft.</td></tr><tr><td>12</td><td>+40 ft.</td></tr><tr><td>15</td><td>+50 ft.</td></tr><tr><td>18</td><td>+60 ft.</td></tr></tbody></table>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "59"
+        },
+        {
+          "book": "PZO1131",
+          "pages": "15"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Monk", "Monk (Unchained)"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "landSpeed",
+            "formula": "10 * (floor(@class.level / 3))",
+            "type": "enh"
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/BoEkMviJrW0PKmhj",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "class-abilities",
+      "name": "Trap Sense",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, this character gains a +1 bonus on <em>Reflex</em> saves made to avoid traps and a +1 <em>dodge bonus</em> to <em>armor class</em> against attacks made by traps. These bonuses increase by +1 every three levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "31, 69"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "save.ref",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "floor(@classLevel.barbarian / 3) + floor(@classLevel.rogue / 3) + floor(@classLevel.investigator / 3)"
+          },
+          "condition": {
+            "situation": {
+              "local": "vs. traps"
+            }
+          }
+        },
+        {
+          "target": "ac",
+          "bonusType": "dodge",
+          "value": {
+            "formula": "floor(@classLevel.barbarian / 3) + floor(@classLevel.rogue / 3) + floor(@classLevel.investigator / 3)"
+          },
+          "condition": {
+            "situation": {
+              "local": "vs. traps"
+            }
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Rogue", "Barbarian", "Investigator", "Slayer"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/barbarian-trap-sense-12",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "12:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +4: the Barbarian table's 12th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 31–34). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "31–34"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/barbarian-trap-sense-15",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +5",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "15:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +5: the Barbarian table's 15th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 31–34). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "31–34"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/barbarian-trap-sense-18",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "18:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +6: the Barbarian table's 18th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 31–34). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "31–34"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/barbarian-trap-sense-6",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +2",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "6:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +2: the Barbarian table's 6th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 31–34). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "31–34"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/barbarian-trap-sense-9",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "9:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +3: the Barbarian table's 9th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 31–34). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "31–34"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/barbarian-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/investigator-trap-sense-12",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "12:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +4: the Investigator table's 12th-level row of Trap Sense (Pathfinder RPG Advanced Class Guide pp. 30–35). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/investigator-trap-sense-15",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +5",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "15:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +5: the Investigator table's 15th-level row of Trap Sense (Pathfinder RPG Advanced Class Guide pp. 30–35). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/investigator-trap-sense-18",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "18:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +6: the Investigator table's 18th-level row of Trap Sense (Pathfinder RPG Advanced Class Guide pp. 30–35). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/investigator-trap-sense-6",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +2",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "6:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +2: the Investigator table's 6th-level row of Trap Sense (Pathfinder RPG Advanced Class Guide pp. 30–35). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/investigator-trap-sense-9",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "9:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +3: the Investigator table's 9th-level row of Trap Sense (Pathfinder RPG Advanced Class Guide pp. 30–35). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Class Guide",
+          "pages": "30–35"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/investigator-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/monk-fast-movement-12",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +40 ft.",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "12:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +40 ft.: the Monk table's 12th-level row of Fast Movement (Pathfinder RPG Core Rulebook pp. 56–60). The Fast Movement entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/monk-fast-movement-15",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +50 ft.",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "15:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +50 ft.: the Monk table's 15th-level row of Fast Movement (Pathfinder RPG Core Rulebook pp. 56–60). The Fast Movement entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/monk-fast-movement-18",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +60 ft.",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "18:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +60 ft.: the Monk table's 18th-level row of Fast Movement (Pathfinder RPG Core Rulebook pp. 56–60). The Fast Movement entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/monk-fast-movement-6",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +20 ft.",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "6:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +20 ft.: the Monk table's 6th-level row of Fast Movement (Pathfinder RPG Core Rulebook pp. 56–60). The Fast Movement entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/monk-fast-movement-9",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +30 ft.",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "9:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +30 ft.: the Monk table's 9th-level row of Fast Movement (Pathfinder RPG Core Rulebook pp. 56–60). The Fast Movement entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "56–60"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/rogue-trap-sense-12",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "12:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +4: the Rogue table's 12th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 67–70). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "67–70"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/rogue-trap-sense-15",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +5",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "15:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +5: the Rogue table's 15th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 67–70). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "67–70"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/rogue-trap-sense-18",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "18:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +6: the Rogue table's 18th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 67–70). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "67–70"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/rogue-trap-sense-6",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +2",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "6:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +2: the Rogue table's 6th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 67–70). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "67–70"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/rogue-trap-sense-9",
+      "upstreamKey": "pf1/BoEkMviJrW0PKmhj",
+      "pack": "everythingpath-schedules",
+      "name": "Trap Sense +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/BoEkMviJrW0PKmhj",
+        "part": "9:pf1/BoEkMviJrW0PKmhj"
+      },
+      "description": "<p>Trap Sense +3: the Rogue table's 9th-level row of Trap Sense (Pathfinder RPG Core Rulebook pp. 67–70). The Trap Sense entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "67–70"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/rogue-trap-sense-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/BoEkMviJrW0PKmhj"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +40 ft. (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "12:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +40 ft. (UC): the Monk (Unchained) table's 12th-level row of Fast Movement (UC) (Pathfinder Unchained pp. 14–19). The Fast Movement (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +50 ft. (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "15:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +50 ft. (UC): the Monk (Unchained) table's 15th-level row of Fast Movement (UC) (Pathfinder Unchained pp. 14–19). The Fast Movement (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +60 ft. (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "18:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +60 ft. (UC): the Monk (Unchained) table's 18th-level row of Fast Movement (UC) (Pathfinder Unchained pp. 14–19). The Fast Movement (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +20 ft. (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "6:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +20 ft. (UC): the Monk (Unchained) table's 6th-level row of Fast Movement (UC) (Pathfinder Unchained pp. 14–19). The Fast Movement (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+      "upstreamKey": "pf1/CK5L0YJDENqBxLqv",
+      "pack": "everythingpath-schedules",
+      "name": "Fast Movement +30 ft. (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/CK5L0YJDENqBxLqv",
+        "part": "9:pf1/CK5L0YJDENqBxLqv"
+      },
+      "description": "<p>Fast Movement +30 ft. (UC): the Monk (Unchained) table's 9th-level row of Fast Movement (UC) (Pathfinder Unchained pp. 14–19). The Fast Movement (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-fast-movement-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/CK5L0YJDENqBxLqv"
+    }
+  ]
+}

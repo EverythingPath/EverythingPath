@@ -1,0 +1,155 @@
+_id: b8mD388daeaoKidm
+_key: '!items!b8mD388daeaoKidm'
+_stats:
+  coreVersion: '12.331'
+folder: fEstcJ0Ou5ny9rZm
+img: icons/commodities/wood/bark-beige.webp
+name: Natural Bounty
+system:
+  abilityType: sp
+  actions:
+    - _id: c0tlBZUzvzea2NG7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{Goodberry}
+        </p><p>Casting goodberry makes 2d4 freshly picked berries magical. You
+        (as well as any other druid of 3rd or higher level) can immediately
+        discern which berries are affected. Each transmuted berry provides
+        nourishment as if it were a normal meal for a Medium creature.</p><p>The
+        berry also cures 1 point of damage when eaten, subject to a maximum of 8
+        points of such curing in any 24-hour period.</p>
+      duration:
+        units: day
+        value: '@attributes.hd.total'
+      name: Goodberry
+      range:
+        units: touch
+      target:
+        value: '[[2d4]] berries touched'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: WQD77eSyKISuwoaY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: >-
+        At your option, the area can be a 100-foot-radius circle, a
+        150-foot-radius semicircle, or a 200-foot-radius quarter circle.  You
+        may designate places within the area that are not affected.
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tvhm9lzgnjlcucsn]{Plant Growth}
+        (overgrowth only)</p><p>Plant growth has different effects depending on
+        the version chosen.</p><p>Overgrowth: This effect causes normal
+        vegetation (grasses, briars, bushes, creepers, thistles, trees, vines,
+        and so on) within long range (@Distance[400 ft;dual] + @Distance[40
+        ft;dual] per caster level) to become thick and overgrown.</p><p>The
+        plants entwine to form a thicket or jungle that creatures must hack or
+        force a way through. Speed drops to @Distance[5 ft;dual], or
+        @Distance[10 ft;dual] for Large or larger creatures. The area must have
+        brush and trees in it for this spell to take effect. If this spell is
+        cast on an area that is already affected by any spell or effect that
+        enhances plants, such as entangle or Wall of Thorns, any DC involved
+        with these spells is increased by 4.</p><p>This bonus is granted for 1
+        day after the casting of plant growth.</p><p>At your option, the area
+        can be a @Distance[100 ft;dual]-radius circle, a @Distance[150
+        ft;dual]-radius semicircle, or a @Distance[200 ft;dual]-radius quarter
+        circle.</p><p>You may designate places within the area that are not
+        affected.</p><p><s>Enrichment: This effect targets plants within a range
+        of a halfmile, raising their potential productivity over the course of
+        the next year to one-third above normal.</s></p><p>Plant growth counters
+        diminish plants.</p><p>This spell has no effect on plant creatures.</p>
+      duration:
+        units: inst
+        value: '@attributes.hd.total'
+      name: Plant Growth
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      target:
+        value: see text
+      uses:
+        self:
+          maxFormula: gte(@abilities.hd.total, 9)
+          per: day
+    - _id: cklY0SS2a0IXt0sT
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.op40qjf9oohlx5nu]{Heroes' Feast}
+        </p><p>You bring forth a great feast, including a magnificent table,
+        chairs, service, and food and drink. The feast takes 1 hour to consume,
+        and the beneficial effects do not set in until this hour is over. Every
+        creature partaking of the feast is cured of all sickness and nausea,
+        receives the benefits of both neutralize poison and remove disease, and
+        gains 1d8 temporary hit points + 1 point per two caster levels (maximum
+        +10) after imbibing the nectar-like beverage that is part of the feast.
+        The ambrosial food grants each creature that partakes a +1 morale bonus
+        on attack rolls and Will saves and a +4 morale bonus on saving throws
+        against poison and fear effects for 12 hours.</p><p>If the feast is
+        interrupted for any reason, the spell is ruined and all effects of the
+        spell are negated.</p>
+      duration:
+        units: seeText
+        value: '@attributes.hd.total'
+      name: Heroes' Feast
+      notes:
+        effect:
+          - >-
+            Every creature partaking of the feast is cured of all sickness and
+            nausea, receives the benefits of both neutralize poison and remove
+            disease, and gains [[1d8 + floor(@attributes.hd.total / 2) ]]
+            temporary hit points after imbibing the nectar-like beverage that is
+            part of the feast.
+          - >-
+            The ambrosial food grants each creature that partakes a +1 morale
+            bonus on attack rolls and Will saves and a +4 morale bonus on saving
+            throws against poison and fear effects for 12 hours.
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: Feast for [[@attributes.hd.total]] creatures
+      uses:
+        self:
+          maxFormula: gte(@abilities.hd.total, 13)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gathlain<br /><strong>Replaced
+      Trait(s)</strong>: Natural Armor, Spell-Like Ability</p><hr /><p>Some
+      gathlains command natural plants in a different way, with their control
+      increasing as they grow more powerful. Once per day, a gathlain with this
+      racial trait can cast
+      @UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{Goodberry} as a
+      spell-like ability. When the gathlain's character level reaches 9th, he
+      can cast @UUID[Compendium.pf1.spells.Item.tvhm9lzgnjlcucsn]{Plant Growth}
+      (overgrowth only) as a spell-like ability once per day, and at 13th level,
+      he can cast @UUID[Compendium.pf1.spells.Item.op40qjf9oohlx5nu]{Heroes'
+      Feast} as a spell-like ability once per day. The gathlain's caster level
+      for these abilities is equal to his character level.</p><p>This replaces
+      the natural armor and spell-like abilities racial traits.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9494
+      pages: '10'
+  subType: racial
+  tags:
+    - Gathlain
+  traitCategory: magical
+  uses:
+    maxFormula: 1 +gte(@abilities.hd.total, 9) + gte(@abilities.hd.total, 13)
+    value: 1
+type: feat

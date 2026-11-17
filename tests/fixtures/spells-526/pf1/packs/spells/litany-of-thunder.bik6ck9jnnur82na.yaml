@@ -1,0 +1,50 @@
+_id: bik6ck9jnnur82na
+_key: '!items!bik6ck9jnnur82na'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Litany of Thunder
+system:
+  actions:
+    - _id: cway8boc729hg5oc
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call down a thunderous boom upon your enemy. The target becomes
+      deafened until the condition is removed, and is confused for 1 round.
+      While subject to this spell, the target cannot be the target of another
+      spell that has the word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+    - sonic
+  learnedAt:
+    class:
+      antipaladin: 4
+      inquisitor: 5
+      paladin: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1118
+      pages: '235'
+type: spell
