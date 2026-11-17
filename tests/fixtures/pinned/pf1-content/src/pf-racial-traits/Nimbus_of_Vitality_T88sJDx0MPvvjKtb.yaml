@@ -1,0 +1,71 @@
+_id: T88sJDx0MPvvjKtb
+_key: '!items!T88sJDx0MPvvjKtb'
+_stats:
+  coreVersion: '12.331'
+folder: fEstcJ0Ou5ny9rZm
+img: icons/commodities/wood/bark-beige.webp
+name: Nimbus of Vitality
+system:
+  abilityType: sp
+  actions:
+    - _id: tGF1Ab0dR6oNYHeP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>As a standard action once per day, they can surround themselves in an
+        aura that affects them as
+        <em>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire}</em>
+        and grants fast healing 2. The nimbus lasts for 3 rounds plus 1
+        additional round per 2 character levels the gathlain
+        possesses.</p><p>Faerie Fire:</p><p>A pale glow surrounds and outlines
+        the subjects. Outlined subjects shed light as candles. Creatures
+        outlined by faerie fire take a -20 penalty on all Stealth checks.
+        Outlined creatures do not benefit from the concealment normally provided
+        by darkness (though a 2nd-level or higher magical darkness effect
+        functions normally), blur, displacement, invisibility, or similar
+        effects. The light is too dim to have any special effect on undead or
+        dark-dwelling creatures vulnerable to light. The faerie fire can be
+        blue, green, or violet, according to your choice at the time of casting.
+        The faerie fire does not cause any harm to the objects or creatures thus
+        outlined.</p>
+      duration:
+        units: round
+        value: 3 + floor(@attributes.hd.total / 2)
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: fast healing 2
+      notes:
+        effect:
+          - '@Heal[2]'
+          - '@Apply[Faerie Fire]'
+      range:
+        units: personal
+        value: '@attributes.hd.total * 40 + 400'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gathlain<br /><strong>Replaced
+      Trait(s)</strong>: Spell-Like Abilities</p><hr /><p>Gathlains sometimes
+      retain a powerful connection to the First World, which allows them to
+      channel life-giving energy. As a standard action once per day, they can
+      surround themselves in an aura that affects them as
+      <em>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire}</em>
+      and grants fast healing 2. The nimbus lasts for 3 rounds plus 1 additional
+      round per 2 character levels the gathlain possesses. This racial trait
+      replaces the spell-like ability racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '215'
+  subType: racial
+  tags:
+    - Gathlain
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

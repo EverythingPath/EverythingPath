@@ -1,0 +1,57 @@
+_id: fc7glgr01tgej071
+_key: '!items!fc7glgr01tgej071'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Binding Earth
+system:
+  actions:
+    - _id: 5n529r7fh9gyi1gh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature or unattended object (see text)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>If the target of this spell fails its Fortitude save, areas of earth
+      and stone floor act as a snapping quagmire that pulls the target down and
+      damages it if it attempts to move through such terrain.  If the target is
+      a creature, it treats all areas of earth and stone it moves through as
+      difficult terrain. Furthermore, for each 5 feet a creature moves through
+      such areas, it takes 1d6 points of damage. Creatures with a burrow speed
+      or the earth glide ability are unaffected by <i>binding earth</i>.  If
+      cast on an unattended object resting on an area of stone or earth, the
+      stone or earth warps and wraps around it, pulling it firmly to the ground.
+      A DC 15 Strength check is required to pull the object free from snapping
+      earth or stone.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      witch: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '149'
+type: spell

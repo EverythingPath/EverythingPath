@@ -1,0 +1,48 @@
+_id: GJQ0VVH3rishb9X1
+_key: '!items!GJQ0VVH3rishb9X1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_11.jpg
+name: Burn
+system:
+  abilityType: ex
+  actions:
+    - _id: e3jyuvp1r2chxx29
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      name: Use
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Kineticist
+  crOffset: '0'
+  description:
+    value: >-
+      <p>At 1st level, a kineticist can overexert herself to channel more power
+      than normal, pushing past the limit of what is safe for her body by
+      accepting burn. Some of her wild talents allow her to accept burn in
+      exchange for a greater effect, while others require her to accept a
+      certain amount of burn to use that talent at all. For each point of burn
+      she accepts, a kineticist takes 1 point of <em>nonlethal damage</em> per
+      character level. This damage can’t be healed by any means other than
+      getting a full night’s rest, which removes all burn and associated
+      <em>nonlethal damage</em>. Nonlethal damage from burn can’t be reduced or
+      redirected, and a kineticist incapable of taking <em>nonlethal damage</em>
+      can’t accept burn. A kineticist can accept only 1 point of burn per round.
+      This limit rises to 2 points of burn at 6th level, and rises by 1
+      additional point every 3 levels thereafter. A kineticist can’t choose to
+      accept burn if it would put her total number of points of burn higher than
+      3 + her <em>Constitution</em> modifier (though she can be forced to accept
+      more burn from a source outside her control). A kineticist who has
+      accepted burn never benefits from abilities that allow her to ignore or
+      alter the effects she receives from <em>nonlethal damage</em>.</p>
+  subType: classFeat
+  tag: classFeat_burn
+  uses:
+    maxFormula: 3 + @abilities.con.mod
+    per: charges
+    rechargeFormula: '0'
+type: feat

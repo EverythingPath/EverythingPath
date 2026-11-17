@@ -1,0 +1,66 @@
+_id: if867t28tu6zxaei
+_key: '!items!if867t28tu6zxaei'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/symbols/ring-circle-smoke-blue.webp
+name: Teleportation Circle
+system:
+  actions:
+    - _id: jx50g0nvrsrgk25s
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: minute
+        value: 10 * @cl
+      effect: 5-ft.-radius circle that teleports those who activate it
+      name: Use
+      range:
+        units: ft
+        value: '0'
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a circle on the floor or other horizontal surface that
+      teleports, as @UUID[Compendium.pf1.spells.Item.5cdmojmydhwowzy1]{greater
+      teleport}<em>,</em> any creature who stands on it to a designated spot.
+      Once you designate the destination for the circle, you can't change it.
+      The spell fails if you attempt to set the circle to teleport creatures
+      into a solid object, to a place with which you are not familiar and have
+      no clear description, or to another plane.</p><p>The circle itself is
+      subtle and nearly impossible to notice. If you intend to keep creatures
+      from activating it accidentally, you need to mark the circle in some
+      way.</p><p><em>Teleportation circle</em> can be made permanent with a
+      <em>permanency</em> spell. A permanent <em>teleportation circle</em> that
+      is disabled becomes inactive for 10 minutes, then can be triggered again
+      as normal.</p><p>Magic traps such as <em>teleportation circle</em> are
+      hard to detect and disable. A character with the trapfinding class feature
+      can use the Disable Device to disarm magic traps. The DC in each case is
+      25 + spell level, or 34 in the case of <em>teleportation circle</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      summoner: 6
+      witch: 9
+      wizard: 9
+    domain:
+      Rune: 9
+  level: 9
+  materials:
+    gpValue: 1000
+    value: amber dust to cover circle worth 1,000 gp
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '359'
+  subschool:
+    - teleportation
+type: spell

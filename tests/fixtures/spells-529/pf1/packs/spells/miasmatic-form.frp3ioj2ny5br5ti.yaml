@@ -1,0 +1,65 @@
+_id: frp3ioj2ny5br5ti
+_key: '!items!frp3ioj2ny5br5ti'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Miasmatic Form
+system:
+  actions:
+    - _id: s7odw7v86xguvzcy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none; see text
+      target:
+        value: willing corporeal creature touched
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.mqdoexj35atgqafn]{gaseous form}, except
+      the target's vaporous body is dangerous to creatures that touch it. A
+      creature can make a Fortitude save (DC 14 + your Intelligence modifier) on
+      its turn to resist the vapors. When you cast this spell, you select one of
+      the following options. <em>Stinking cloud</em>: The target's body
+      nauseates creatures that fail their saving throws, as <em>stinking
+      cloud</em> (Fortitude negates, see text). This form of the spell does not
+      require a material component. <em>Poisonous cloud</em>: The target's body
+      is deadly poison, dealing 1d2 points of Constitution damage to creatures
+      that fail their saves (Fortitude halves). This form of the spell requires
+      a material component.</p>
+  descriptors:
+    - air
+    - poison
+  learnedAt:
+    bloodline:
+      Nanite: 4
+    class:
+      alchemist: 4
+      arcanist: 4
+      investigator: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    gpValue: 100
+    value: contact or inhaled poison worth 100 gp
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '160'
+  sr: false
+type: spell

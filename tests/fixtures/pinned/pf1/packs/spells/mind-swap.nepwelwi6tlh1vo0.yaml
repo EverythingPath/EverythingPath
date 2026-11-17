@@ -1,0 +1,60 @@
+_id: nepwelwi6tlh1vo0
+_key: '!items!nepwelwi6tlh1vo0'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/energy-stream-link-spiral-blue.webp
+name: Mind Swap
+system:
+  actions:
+    - _id: zryy95a0ywt8s0xw
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell is similar to <i>possession</i>, except you switch minds
+      with the target, so instead of the target's soul sharing its body with
+      yours and being unable to act, the target's mind moves to your body and
+      can control it as if you each had cast <i>possession</i> on the other.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      medium: 3
+      mesmerist: 5
+      occultist: 4
+      psychic: 5
+      sorcerer: 6
+      spiritualist: 4
+      summoner: 5
+      summonerUnchained: 5
+      witch: 6
+      wizard: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '176'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,47 @@
+_id: g47tqk3i9pfznkge
+_key: '!items!g47tqk3i9pfznkge'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Litany of Sloth
+system:
+  actions:
+    - _id: vz5t35rgtpcqktuc
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a litany against the wages of sloth, you slow the target's
+      defenses. The target cannot make attacks of opportunity or cast spells
+      defensively.  While subject to this spell, the target cannot be the target
+      of another spell that has the word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      inquisitor: 1
+      paladin: 1
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '235'
+  subschool:
+    - compulsion
+type: spell

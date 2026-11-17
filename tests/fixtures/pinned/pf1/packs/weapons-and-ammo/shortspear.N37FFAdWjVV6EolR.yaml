@@ -1,0 +1,82 @@
+_id: N37FFAdWjVV6EolR
+_key: '!items!N37FFAdWjVV6EolR'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/shortspear.PNG
+name: Shortspear
+system:
+  actions:
+    - _id: zm0hgspvrs1pzl9h
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: hJ2VecOQMqls0xFH
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Shortspear
+  description:
+    unidentified: >-
+      <p>A shortspear is about 3 feet in length, making it a suitable thrown
+      weapon.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  sources:
+    - id: PZO1110
+      pages: 142, 148
+    - id: PZO1123
+      pages: '17'
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+    - tribal
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

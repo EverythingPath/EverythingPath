@@ -1,0 +1,671 @@
+{
+  "issue": 54,
+  "commit": "4fc7002c5caba9a38da008c1583d9b0e077ac29c",
+  "entries": [
+    {
+      "id": "F01",
+      "baseline": "F01 \u2014 Initial rank 1, training 0, treasury 10 gp, chosen focus; rank may reach 20 subject to PC cap. [R21], [R39], [R44], [R58]; [T16].",
+      "evidence": "**Mismatch/partial:** [Create Militia](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/militia-system.tsx#L35) sends rank 1/training 0 but treasury **0** and fixed Secrecy; [setup defaults](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/militia-state-manager.tsx#L153) also use treasury 0 and allow no focus. Onboarding accepts supplied state via [militia updates](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/militia.ts#L1210).",
+      "remainingCases": "Related setup tests [state harness](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-state-harness.test.ts#L196) and [form workflow](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/militia-state-manager.test.tsx#L150). Missing fresh-creation baseline versus explicit mid-campaign overrides, focus selection and persistence.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F02",
+      "baseline": "F02 \u2014 All 20 training thresholds; rank never decreases; highest-PC cap. [R5], [R21], [R28]; [T3], [T16].",
+      "evidence": "[G1] matches every training threshold. [W407]/[W5255] allow a **manual one-rank increase** based on live training/highest active PC, with no automatic decrease. **Partial:** automatic multi-rank advancement and its ordering are missing (U04).",
+      "remainingCases": "[Progression tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-progression-rules.test.ts#L1) test treasury snapshots, not threshold coverage. Missing all threshold-minus-one/exact/above cases, multiple ranks, PC cap, no active PC, rank 20, rank retention after loss.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F03",
+      "baseline": "F03 \u2014 Table 6-1 focused and secondary organization bonuses, three check types, one focus. [R32], [R39]; [T16].",
+      "evidence": "[G24]/[G47]/[G86] encode all 20 bonus rows correctly. Weekly Draft roll fields ask for **entered totals**, with separate officer helper text ([O203], [A150]); [P188] adds queue/event modifiers to those totals. **Partial/manual:** no single interface composes base rank, focus, officers, manager and contextual modifiers for both browser and server.",
+      "remainingCases": "O tests [officer effects](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L107) cover officer additions, not all rank/focus rows or the full check. Missing 20 ranks \u00d7 3 focuses, invalid/missing focus policy, negative modifiers and exactly-once modifier composition.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F04",
+      "baseline": "F04 \u2014 Actions by rank: 1 at rank 1; 2 at 2\u20136; 3 at 7\u201310; 4 at 11\u201314; 5 at 15\u201318; 6 at 19\u201320; Strategist adds 1. [T16]; [R76].",
+      "evidence": "**Mismatch:** [G142] and [O91] return 2 at rank 1; [W310] uses this for slot count, [C685] renders it. Slots are sliced to cap on save ([W2631]), so shrinking cap can discard choices. Allies/event action modifiers have no general representation.",
+      "remainingCases": "[H2068]/[H2097] cover Strategist, but not Table 6-1's rank-1 boundary. Missing every rank/cap boundary, cap changes during Upkeep, event/ally modifiers, and shrink-with-staged-data behavior. Reproduced rank-1 return value: **2**.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F05",
+      "baseline": "F05 \u2014 Maximum teams 2/3/4/5/6/7/8 by Table 6-1, bonus reward teams excluded; missing teams still count. [R101], [R171]; [T3], [T16].",
+      "evidence": "[L78] matches cap breakpoints. [L96] uses a Set of team type IDs and has no reward exemption. S [team roster](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/schema.ts#L306) and [W3583] likewise identify teams by type. [Recruit options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L33) count roster rows and warn. **Partial/mismatch:** cannot represent multiple independent teams of the same type or exclude bonus teams.",
+      "remainingCases": "[H574] tests failed recruitment; [H475] costs. No full cap/bonus-team coverage located. Missing each cap boundary, missing/disabled counted, rewarded teams excluded, repeated types, and dismiss-then-recruit versus recruit-then-dismiss at cap.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F06",
+      "baseline": "F06 \u2014 Training growth/loss, treasury spending, Notoriety 0\u2013100; minimum treasury rank \u00d7 10. [R44], [R58], [R64], [R69].",
+      "evidence": "[G117] minimum treasury is correct. [P235] consumes manually entered totals. [P854] and [W71] do not clamp Notoriety; P final output can become negative or exceed 100. **Decision:** advisory out-of-rules support should retain a normal baseline and explicit departure; current totals can silently diverge.",
+      "remainingCases": "[V170]/[V203] cover costs; [treasury snapshot tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-progression-rules.test.ts#L8). Missing 0/100 crossings, additive effects at caps, explicit overrides, stale values from deselected actions, and resource order (U06).",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F07",
+      "baseline": "F07 \u2014 Reputation per settlement; secured flag. Hostile: sightings 1d4 days, +5% item price, social DC +5. Unfriendly: social DC +2, event result +5. Indifferent: none. Friendly: social DC \u22122, event result \u22125. Helpful: \u22125% item price and +2 to one Activity organization check. [R51]; [T46].",
+      "evidence": "Settlements persist reputation/isSecured/temporary shift ([S624]; [W1715]). Browser ledger displays them. **Missing baseline composition:** [C791] chance suggestion only uses live Notoriety/carry; [E61] receives an unmodified percentile; no operating-settlement selector/context drives event \u00b15, Helpful one-use bonus or social/price effects in Weekly Resolution. Narrative sightings/social checks are table-facing outcomes.",
+      "remainingCases": "Related settlement CRUD [tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/settlement-manager.test.tsx#L1), not rule outcomes. Missing all five reputation rows, occupied/operating settlement selection, \u00b15 table boundaries, Helpful exactly one eligible check, price composition with Market Day, and refuge/Reduce Danger effective reputation.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F08",
+      "baseline": "F08 \u2014 PC boons only: Skilled at 2/7/12/17; gifts at 3/6/8/11/13/16/18; titles at 4/9/14/19; XP at 5/10/15/20. [T16]; [R106].",
+      "evidence": "[W5285] updates `highestBoonReached` but does not issue PC rewards. No per-PC boon application in Weekly Draft. **Partial/manual:** milestone marker cannot establish that every eligible PC received each crossed boon or exclude NPCs.",
+      "remainingCases": "No direct reward outcome test located. Missing every boon row, multiple crossed milestones, PCs versus officer NPCs/cohorts, and replay/idempotency.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "F09",
+      "baseline": "F09 \u2014 Gift potion/750 gp/armor-or-wand/3,000 gp/wand-or-weapon/8,000 gp/magic item; XP 1,200/3,200/6,400/25,600 split among PCs. Director feats Alertness/Deceitful/Persuasive/Stealthy; Captain Great Fortitude/Iron Will/Lightning Reflexes; Commander Fleet/Improved Initiative/Toughness; Champion any qualified feat. [T16]; [R114].",
+      "evidence": "Same marker-only interface as F08. These details are not calculated or recorded as rewards by the Weekly Draft. **Decision:** reminders/manual acknowledgement versus reward automation must be explicit; full character-builder execution is beyond the map.",
+      "remainingCases": "No direct coverage located. Missing exact packages, XP division/rounding decision, eligibility and acknowledged award record.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O01",
+      "baseline": "O01 \u2014 Multiple holders per role; bonuses do not stack except Commandant. [R121].",
+      "evidence": "**Mismatch:** O `OfficerAssignments` and militia schema store one character ID per role. [O104] applies staged changes to final effective assignments for the entire view, rather than applying each change at its action position. [W3899] writes role assignments at Confirmation.",
+      "remainingCases": "[Officer tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L86) assert final staged assignments. Missing multiple holders, non-stacking selection, summed Commandants, slot-order effects and role removal.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O02",
+      "baseline": "O02 \u2014 Ambassador Con or Cha to Loyalty; Marshal Str or Wis to Security; Spymaster Dex or Int to Secrecy. [R125], [R133], [R145].",
+      "evidence": "[O137] chooses max ability modifier for each holder and includes overseer secondary +1. A helper text asks the player to include it; W/P do not independently verify it. **Aligned helper slice/manual baseline.**",
+      "remainingCases": "[Officer tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L107). Missing each allowed ability choice, tied/negative scores, absent/archived characters, and actual browser/Convex roll parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O03",
+      "baseline": "O03 \u2014 Commandant adds Hit Dice only on successful Drill; Commandants stack. [R129].",
+      "evidence": "[O185] uses the single character's **level** as Hit Dice and [A290] displays guidance. [P245] accepts training gained with no Drill-success check. No distinct HD or multi-Commandant representation.",
+      "remainingCases": "[Officer tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L107), V tests manually supplied gain. Missing failed Drill, natural 1 that still succeeds, multiple Commandants, and NPC HD differing from level.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O04",
+      "baseline": "O04 \u2014 Overseer +1 to both secondary checks; one Event check may receive the appropriate best ability modifier. [R137].",
+      "evidence": "[O137]/[O203] compute helper bonuses; selectable targets are only Sabotage, Cache Discovered, Theft, Sickness Twice. Event selection is stored but P/W compare entered event totals directly. **Partial:** Raid and Turncoat support cannot be selected; no authoritative exactly-once application.",
+      "remainingCases": "[Officer tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L132), [eligible-target test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L165). Missing all check types/targets, one-use across dual events, already-included modifier handling, and no-overseer case.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O05",
+      "baseline": "O05 \u2014 Strategist grants one action with +2 on that action's related checks; same-role bonuses do not stack. [R149].",
+      "evidence": "[W278] includes bonus if base assignment exists or any staged change assigns Strategist; removal does not remove the current-week cap bonus. [O91]/[O185] derive bonus slot from final assignments; A helpers identify bonus by **action ID**, not occurrence. **Mismatch risk:** cap, helper and staged order disagree; repeated same action shares bonus guidance.",
+      "remainingCases": "[H736]/[H2068]/[H2097]/[H2623] cover additions and resizing; [officer test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L107). Missing assign/remove/reassign order, only designated slot's rolls +2, rank 1, multiple holders.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "O06",
+      "baseline": "O06 \u2014 PC/officer NPC manager may manage max(1, Cha modifier) teams; other NPC one; team checks add manager Cha bonus. [R93].",
+      "evidence": "[Manager rules](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/team-manager-rules.ts#L35) implement capacity and nonnegative Cha **bonus**, consistent with the word bonus. [Manager effects](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-manager-effects.ts#L35) are helper text; [W1594] enriches roster. Limits warn, preserving table exceptions. **Aligned capacity slice/manual checks.**",
+      "remainingCases": "[Manager rules tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/team-manager-rules.test.ts#L10) cover capacity, over-limit, missing/archived identities, trimmed names; [mutation tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-manager-harness.test.ts#L225) cover assignment/notes; [UI helpers](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-manager-effects.test.ts#L50). Missing full roll application, mixed managers on repeated actions, assignment changes within week and cross-adapter parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U01",
+      "baseline": "U01 \u2014 Upkeep \u2192 Activity \u2192 Event; first militia week skips Upkeep. [R208].",
+      "evidence": "[W3526] has phase transitions, defaults week 1 to Activity. [C672] permits all Phase Views; this is compatible with local navigation but **does not enforce resolution ordering/readiness**. P accepts Upkeep totals in week 1 and ignores stored `skippedUpkeepThisWeek`. Initial context is editable via onboarding.",
+      "remainingCases": "[H201]/[H241]/[H270] and [V53] cover phase/advance slices. Missing explicit first-use metadata independent of week number, first-week entered attrition rejection/ignore decision, mid-campaign start, and phase dependency recomputation. Reproduced week-1 attrition 4 reducing training 30\u219226.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U02",
+      "baseline": "U02 \u2014 Upkeep step 1: Loyalty DC10; success lose 1d6, nat20 gain 1d6, failure lose 2d4+rank. [R219].",
+      "evidence": "[Upkeep UI](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/upkeep-phase-section.tsx#L78) accepts a signed final attrition value; [P242] subtracts it. No Loyalty die/result branch or natural-roll provenance. **Partial/manual:** user must encode gain as negative attrition; queue multipliers act on that signed total.",
+      "remainingCases": "[V53] demonstrates entered attrition only. Missing DC9/10, nat20 gain, each dice range, officer/queued modifiers, and signed-gain handling under Week of Pain.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U03",
+      "baseline": "U03 \u2014 At Notoriety100 lose 1d20+rank and fail Loyalty DC15 \u2192 nearest settlement one step down, floor Unfriendly. [R226].",
+      "evidence": "[C174] shows fields when live Notoriety\u2265100; [P243] subtracts supplied penalty whether condition holds or not. [P390]/[W4397] apply reputation drop when condition/check/target supplied; [L10] preserves Hostile rather than improving it. **Partial/manual.**",
+      "remainingCases": "[Reputation floor tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/week-board-rules.test.ts#L8) cover all five states. Missing 99/100, die ranges, missing check/settlement, stale penalty after Notoriety change, queued Loyalty penalties, and projected versus live state.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U04",
+      "baseline": "U04 \u2014 Step 3 below rank\u00d710 treasury loses 2d4+rank; step 4 rank increases after losses, possibly multiple ranks, capped at highest PC; boons immediate. [R232], [R237].",
+      "evidence": "[G125] preserves Upkeep-start treasury against later deposits; [C200] prefills shortage with **rank+2**, only the minimum 2d4 outcome. [P244] accepts any shortage total without checking eligibility. [W5255] ranks up live militia before pending attrition is applied; P's output has no rank. **Mismatch:** training30/rank3 can qualify for rank5 before attrition even if post-attrition training is below threshold.",
+      "remainingCases": "[Four treasury snapshot tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-progression-rules.test.ts#L8) pass. Missing rolled shortage rather than silent minimum, recovery payments before shortage, rank-up based on projected post-loss training, multiple ranks, boons and PC cap.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U05",
+      "baseline": "U05 \u2014 Step 5 any officer may deposit/withdraw after prior steps. [R244].",
+      "evidence": "C handlers invoke [W5219] immediately, outside Confirmation; guard checks stored phase `upkeep`. Local Phase View may be Upkeep while stored phase is Activity, causing rejection. No draft revision increment for treasury transaction ([W5245]) or rank-up ([W5285]). **Mismatch with planned Weekly Draft:** changes are not staged/covered by reviewed revision.",
+      "remainingCases": "Snapshot tests prove later deposits do not change shortage reference. No dedicated treasury/rank transaction integration tests located. Missing phase-view/server-phase agreement, action order, authorization by table role policy, Confirmation races and incoming-Theft handling.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "U06",
+      "baseline": "U06 \u2014 Activity resource effects precede Event resource effects; actions can be ordered. [R208], [R248], [R567].",
+      "evidence": "**Mismatch:** [P235] adds earned gold, applies Theft at [P356], then subtracts all action/recovery costs at [P373]. Reproduced treasury100/rank3 + Drill30 + Theft gives **20**; sequential baseline is **35**. Resource team operations also batch recoveries\u2192dismissals\u2192recruits\u2192upgrades, not slot order ([P430]).",
+      "remainingCases": "[V170]/[V203] test individual resource totals; [H1307] tests isolated Theft. Missing cost+Theft, deposits+Theft, two differently ordered actions, mid-week cap changes, and failed operations affecting later availability.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T01",
+      "baseline": "T01 \u2014 Espionage: Moles [T1]/size3/Secrecy15 \u2192 Propagandists250 \u2192 Saboteurs or Spies1000; actions inherited. [R180].",
+      "evidence": "[Team definitions](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/data/teams.ts#L3), [browser options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L16), [L19]/[L48]/[L59] align with the tree, costs and inherited action list.",
+      "remainingCases": "No exhaustive definition parity test located. Missing each edge, both branches, size, recruitment check/DC, all inherited actions, and invalid skip/cross-tree edge warning.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T02",
+      "baseline": "T02 \u2014 Intelligence: Informants [T1]/size6/Loyalty10 \u2192 Conspirators250 \u2192 Scholars or Spellcasters1000; inherited actions. [R187].",
+      "evidence": "[Definitions](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/data/teams.ts#L40), [options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L20), [L19]/[L48]/[L59] align.",
+      "remainingCases": "[H574] proves one failed recruit; [H475] costs. Missing exhaustive same cases as T01.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T03",
+      "baseline": "T03 \u2014 Military: Defenders [T1]/size6/Security15 \u2192 Infiltrators250 \u2192 Guardians or Specialists1000; inherited actions. [R194].",
+      "evidence": "**Definition mismatch:** [team definitions](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/data/teams.ts#L90) list Infiltrators' upgrade cost **250**, while [browser options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L25) and [L59] charge target tier3 **1000**, which matches corpus.",
+      "remainingCases": "No parity test located. Missing both tier3 branches' displayed and charged prices, recruitment and inherited actions.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T04",
+      "baseline": "T04 \u2014 Treasury: Patrons [T1]/size6/Loyalty10 \u2192 Merchants50 \u2192 Black Marketeers or Fixers200; inherited actions. [R201].",
+      "evidence": "[Definitions](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/convex/data/teams.ts#L110), [options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L28), [L19]/[L59] align.",
+      "remainingCases": "[H475] covers Merchants upgrade. Missing all tree edges, size, recruitment and full capability table parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T05",
+      "baseline": "T05 \u2014 New tier1 recruits may act immediately if slots remain; upgraded team cannot act that Activity; each specific team upgrades at most once/week. [R154], [R443].",
+      "evidence": "**Mismatch/partial:** [C799] eligibility sees saved active roster, not earlier successful recruits/recoveries. [P589] upgrades do not mark unavailable for current Activity and can chain tier1\u2192tier2\u2192tier3 through supplied operations. W applies team operations before all assets.",
+      "remainingCases": "[H475]/[V203] cover successful creation/cost, not temporal eligibility. Missing recruit\u2192act, failed recruit\u2192act, upgrade\u2192act, act\u2192upgrade, repeat/chain upgrade and interleaved order.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T06",
+      "baseline": "T06 \u2014 Each team generally one action/Activity; cap and action capability; Lie Low exclusive; Drill once. [R248].",
+      "evidence": "[L159] hard-rejects Lie Low combinations and duplicate Drill, warns on action count versus capable **types**, not per-team reuse. [Assigned-team warning](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/activity-team-context.ts#L1) covers wrong status/capability but no shared per-team budget. [C2034] **moves an existing same-action card** instead of adding a second, despite deck allowing repeats.",
+      "remainingCases": "[Legality tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/week-board-rules.test.ts#L20), [deck repeatability test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-phase-shared.test.ts#L26), [H2275]. Missing actual repeated-card placement, two actions same team, different teams same action, status changes, and explicit Rules Exceptions versus hard blocks.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T07",
+      "baseline": "T07 \u2014 Disabled cannot act; start-Upkeep recovery costs current minimum; narrative alternatives allowed. [R165].",
+      "evidence": "[P502] charges paid recovery and emits active state; [W93] applies it at Confirmation. Browser active team list does not project recovery, and the Upkeep Phase View exposes no team-recovery controls ([view model](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/build-view-models.ts#L30)), despite persisted operation fields. Manual state editor/Table Adjustment can express alternatives, but outcome-order baseline is incomplete.",
+      "remainingCases": "[V203] includes lifecycle costs. Missing active/disabled selection correctness, multiple recovery costs, same-week action eligibility, insufficient treasury as warning/exception, and narrative reason.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "T08",
+      "baseline": "T08 \u2014 Missing cannot act, still counts; DC15 Security at start-Upkeep returns end-week; nat1 permanently lost. [R171].",
+      "evidence": "[P513] uses entered Security total or separate `permanentlyLost` flag; no raw die ties nat1 to loss; no missing-team check controls are exposed by the Upkeep Phase View. [W3759] expires event unavailability at closing week, but patches **do not update the in-memory teamStateById** before later resolution. Paid/roll recovery can override event-specific unavailability because provenance is not typed.",
+      "remainingCases": "Related [V203] and [H3686] team-status interactions. Missing DC14/15, nat1+high modifier, end-week return unavailable during Activity, cap retention, and expired-return\u2192same-week Sickness/Turn Around conflicts.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574293220"
+    },
+    {
+      "id": "A01",
+      "baseline": "A01 \u2014 Activate Black Market: Black Marketeers;50gp;Secrecy20;week-long market with90% availability/55% sale/contraband; failure+1d6 Notoriety. [R254].",
+      "evidence": "[A232] gates failure input using raw total; [P460] charges50; [W4171] uses modified success; [market profile](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/militia-marketplace-rules.ts#L11) matches90/55/contraband and expires via activeUntilWeek. **Partial/manual:** notoriety amount supplied, raw/modified gating can disagree; duration needs boundary proof.",
+      "remainingCases": "[H1019] success/fail market creation; [card UI](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.test.tsx#L224). Missing DC19/20 with queues, cost on failure, exact profile, expiry, missing roll and two markets.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A02",
+      "baseline": "A02 \u2014 Activate Refuge: Conspirators/Scholars/Spellcasters; Hostile/Unfriendly treated one step better; renew1week. [R262].",
+      "evidence": "[W3947] records refuge expiry and requires tracked settlement; does not derive effective reputation. Browser [D21] explains shift; ledger shows active refuge. **Partial:** no composed reputation outcome or eligibility warning tied to Hostile/Unfriendly.",
+      "remainingCases": "[H821] creation, [H2697] unknown settlement rejected. Missing renew/expiry, effective reputation at each state, same-week rescue destination, raid interactions and numeric/social/event effects.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A03",
+      "baseline": "A03 \u2014 Broker Market: Merchants small town; Black Marketeers/Fixers small city;100gp; purchases paid at activation; arrival next Activity. [R268].",
+      "evidence": "[W4171] creates correct profile and [W4237] next-week order; [P461] charges100. Marketplace entry contains purchase **summary**, no purchase price; only activation cost enters treasury baseline. Orders delivered on week advance, before next Activity is viewed.",
+      "remainingCases": "[H942] creation/order, [H1634] delivery, [market card test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.test.tsx#L224). Missing purchase cost, all team profiles, multiple orders, actual next-Activity availability and expiry.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A04",
+      "baseline": "A04 \u2014 Change Officer Role: no team; one PC changes role, not ally/cohort. [R277].",
+      "evidence": "Browser role+character controls accept `pc` and `officer_npc`; [W3899] checks campaign/active identity but **not PC kind**, and assignment to new role does not clear another role held by that PC. **Mismatch/decision:** current operation assigns rather than models one-PC role move.",
+      "remainingCases": "[H663]/[H736] and [officer test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/officer-effects.test.ts#L86). Missing NPC rejection/warning exception, move/unassign semantics, one action per PC change and ordered effects.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A05",
+      "baseline": "A05 \u2014 Covert Action: Spies; immediately following action gets manager Cha on all d20s and no action Notoriety on success; alternative contact/cache at site1week. [R283].",
+      "evidence": "[Card](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.tsx#L1040) provides helper and explicit followup; [P749] accepts arbitrary followup index, records successful suppression in a **Set of action IDs**, and does not add Spies manager itself. [W4255] only persists `place_contact`; dedicated site-cache mode absent. **Partial/mismatch:** non-adjacent target and suppression across repeated occurrences possible.",
+      "remainingCases": "[H1682] contact expiry, [H1753]/[H3618] suppression; [card helper](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.test.tsx#L121). Missing immediate-next rule, all d20 modifier application, natural1-success, failed target, two same-type actions, contact/cache duration and Raid rescue-DC override parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A06",
+      "baseline": "A06 \u2014 Dismiss Team: no team; Loyalty10; removes team, failure+1d6 Notoriety. [R291].",
+      "evidence": "[P541] only removes on **successful** check; [A277] failure helper; P consumes manual Notoriety. **Mismatch:** normalized corpus says removal plus failure Notoriety; [verbatim source](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/docs/ai/ironfang-militia/militia-verbatim.md#L677) confirms removal precedes the check. Existing test explicitly encodes no dismissal on failure; preserving that would require an explicit product exception.",
+      "remainingCases": "[H523] explicitly expects failed dismissal retained. Missing decided failure semantics, DC9/10, notoriety dice, freeing cap before recruit and repeated dismissals.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A07",
+      "baseline": "A07 \u2014 Drill Militia: no team; once;rank\u00d710gp;Loyalty10+rank;success2d6+Commandant;nat1 still may succeed but+1d6 Notoriety; unavailable at maximum rank. [R298].",
+      "evidence": "[A165] gates gain by raw check; [P245] applies supplied gain even without staged Drill or success; [P463] charges cost. **Mismatch:** no max-rank eligibility in deck, no Drill natural1 Notoriety field, no success gate in resolver.",
+      "remainingCases": "[Single-use deck test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-phase-shared.test.ts#L59), [V170] cost. Missing all success/dice/Commandant cases, max-PC-rank block/advisory exception and stale gain after removing/failing Drill. Reproduced unstaged gain12 raises30\u219242.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A08",
+      "baseline": "A08 \u2014 Earn Gold: Treasury teams; Loyalty total\u00d7tier;nat1 still earns,+1d6 Notoriety. [R308].",
+      "evidence": "[A328] requests **separate gold total**; [P248] adds it, without deriving from tier/check or verifying action staged. Persistent Theft halves it. **Partial/manual:** deterministic formula is not prefilled.",
+      "remainingCases": "[V53] resource example, [H614] Lie Low fixture, manager helpers. Missing tiers1/2/3 \u00d7 totals, nat1 success, queued bonuses affecting earned gold, multiple teams, removed action stale totals and negative-result policy.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A09",
+      "baseline": "A09 \u2014 Gather Information: Intelligence teams;Secrecy15 plus2\u00d7tier;success GM intelligence;nat1 not autofail,+1d6 Notoriety. [R315].",
+      "evidence": "[A374] asks total with ambiguous \u201cDC15 + team modifiers\u201d; D states tier bonus. [P749] uses entered check for Covert success but does not calculate2\u00d7tier; no structured rumor result. **Partial/manual.**",
+      "remainingCases": "Manager/roll helper tests only; no direct full outcome test located. Missing all tiers, DC14/15 after bonus, nat1-success and failure, GM result acknowledgement and repeated actions.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A10",
+      "baseline": "A10 \u2014 Guarantee Event: no team;rank\u00d710 cost;+1d6 Notoriety;guaranteed event, roll2 choose1. [R322].",
+      "evidence": "[P251]/[P464] apply manual notoriety and cost; [E90] chooses supplied event, falls back when selection/roll missing; [C721]/[C751] renders choices. **Partial:** guarantee works, completeness does not.",
+      "remainingCases": "[V150] and [H3426], [ET12]. Missing both rolls required, explicit choice, selected Roll Twice, sabotage, duplicate action cost/notoriety, and force-All-Is-Calm precedence.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A11",
+      "baseline": "A11 \u2014 Knowledge Check: Scholars;Secrecy+rank becomes achieved Knowledge DC; identification/evaluation. [R329].",
+      "evidence": "[A436] requests final total; D describes; P has no structured Knowledge result/change. **Manual:** no computed rank addition, requested subject or result acknowledgement.",
+      "remainingCases": "No direct rule test located; A helper tests are related only. Missing rank addition, bonuses, entered result persistence and table-facing outcome.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A12",
+      "baseline": "A12 \u2014 Lie Low: no team;only action;reduce Notoriety by total teams. [R336].",
+      "evidence": "[L175] and deck enforce exclusivity; [P599] uses snapshot roster count. **Aligned core slice**, but includes all rows, lacks repeated-type fidelity and no 0 floor.",
+      "remainingCases": "[H614], [V170], [legality test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/week-board-rules.test.ts#L20). Missing no teams, disabled/missing/bonus teams included, Notoriety smaller than team count and explicit exception policy.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A13",
+      "baseline": "A13 \u2014 Manipulate Events: Guardians;guaranteed event, roll2 choose1 by manager or random PC. [R342].",
+      "evidence": "[P257]/[E90] share Guarantee selection; [manager guidance](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-manager-effects.ts#L95) names chooser. No random-PC selection record; general team/turn rules not enforced authoritatively.",
+      "remainingCases": "[ET12]/[V150] exercise shared choose-one path; [card test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.test.tsx#L161). Missing dedicated Guardians/no-manager path, availability, choose-one versus Roll Twice and interaction with Guarantee Event.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A14",
+      "baseline": "A14 \u2014 Recruit Team: no team;free non-bonus slot;tier1 team-specific check;nat1 no autofail,+1d6 Notoriety;new team may act. [R349], [R154].",
+      "evidence": "[Options](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/team-options.ts#L33) warn on tier/cap/duplicate type; [P563] reads team-definition recruitment DC and adds a type once, with zero tier1 cost. [L96] warnings do not model successful slot order. A stores one recruit check.",
+      "remainingCases": "[H574] fail, [H475]/[V203] succeed/cost. Missing four recruitment checks/DCs, nat1-success, bonus exemption, new recruit action, duplicate type identity and failed preceding dismissal.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A15",
+      "baseline": "A15 \u2014 Reduce Danger: Military teams;Security15;success temporary+1 reputation and open movement in hostile/unfriendly town;failure+1d4 Notoriety. [R356].",
+      "evidence": "[W3973] sets temporaryShift max1 for target; P accepts manual notoriety; next Confirmation clears shifts ([W3929]). Ends persistent Theft based on modified success ([W4468]). **Partial:** temporary reputation is not composed into operating effects; browser uses raw success for failure field.",
+      "remainingCases": "[H3475] shift; [H1345]/[H1414] Theft ending. Missing DC14/15 after queues, secured town behavior, week expiry, open-movement reminder and notoriety dice.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A16",
+      "baseline": "A16 \u2014 Rescue Character: Military upgraded teams;Security10+level;success location/refuge, Notoriety+level;failure half level;GM may require direct rescue. [R363].",
+      "evidence": "[W4284] checks modified total and tracked Raid override, updates person; P accepts manual Notoriety rather than deriving it. Destination can be any selected settlement/refuge without active-refuge eligibility. P Covert success uses10+level and cannot see Raid override.",
+      "remainingCases": "[H1808] successful tracked rescue. Missing fail/odd-level half rounding, absent/invalid/captured status, active destination, direct-rescue exception, Raid DC override and Covert suppression agreement.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A17",
+      "baseline": "A17 \u2014 Restore Character: Spellcasters;party ability/hp/all or one \u22643rd-level restorative effect;single-target costs1125/6125/1700/1650;body at HQ/refuge. [R372].",
+      "evidence": "[Mode controls](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.tsx#L1390), [P605] exact scroll costs. [W4349] sets selected target `recovering`; targetless party restoration skips person writes. **Partial/manual:** no party outcome record/selected low-level effect or presence check; custom cost overrides not necessarily a Table Adjustment with reason.",
+      "remainingCases": "[H1888] tests paid single target. Missing each fixed-cost mode, free party modes, body presence, inactive refuge, captured-target misuse, custom reason and aggregate cost for multiple restorations.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A18",
+      "baseline": "A18 \u2014 Sabotage: available Saboteurs;reactive Event;DC15+rank;always+1d6 Notoriety;success negates event. [R386].",
+      "evidence": "[C740] and [P270] compare entered total; [Event UI](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/event-phase-section.tsx#L343) offers it whenever an event would occur, **without requiring an available Saboteur**. No team choice or use accounting; roll amount optional. Queued secrecy modifiers not added by event resolution.",
+      "remainingCases": "[V76] checks successful negation; [Event UI test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/event-phase-section.test.tsx#L135) helper. Missing absence/disabled/used team, failed sabotage still costs notoriety, boundary DC, queue/manager/overseer composition and dual-event target scope.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A19",
+      "baseline": "A19 \u2014 Secure Cache: place/retrieve;minor5lb/900gp/DC15;intermediate10lb/2500gp/DC20;major20lb or extradimensional/no value cap/DC30;secure+5 and tier3;failed placement returns next Activity. [R393], [R605]; [T91].",
+      "evidence": "[Team context](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/activity-team-context.ts#L1) warns for class/tier/secure mismatch; [W776] DC and [W4062] per-slot cache checks; P queues can block action. **Partial/mismatch:** cache schema has summary, not weight/value/storage capacity; failed placement becomes `pending_return` ([W4128]) with no automatic transition found elsewhere in W. Global `secureCacheCheckTotal` is separate from actual per-cache check.",
+      "remainingCases": "[Cache capability tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/activity-team-context.test.ts#L28), [H821]/[H1126] placement/retrieval, [H3562] blocking. Missing all DC boundaries/class limits, weight/value warnings, secure requirements, failed return at next Activity, unused retrieval and no-double-application modifiers.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A20",
+      "baseline": "A20 \u2014 Special: no team;GM-defined story/event action. [R407].",
+      "evidence": "[A559] provides manual cost; [P489] consumes it. No structured custom outcome beyond typed Table Adjustments. **Manual/decision:** define minimum recorded story/result/reason without introducing new militia rules.",
+      "remainingCases": "[V252] adjustment behavior is related. Missing special description/outcome acknowledgement, zero/cost/result cases and relationship to Rules Exception versus Table Adjustment.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A21",
+      "baseline": "A21 \u2014 Special Order: Fixers;one item/enchantment;5% discount/upfront;2d6 days;expedite+900 for1day;enchantment adds1day/1000gp. [R412].",
+      "evidence": "[Order inputs](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/activity-slot-card.tsx#L920) collect description/cost/days; [P491] charges entered amount; [W4146] creates dueWeek = current+max(1,ceil(days/7)). **Partial/manual:** no list-price/discount/expedite/enchantment calculation or item-count structure; day timing collapsed to weeks.",
+      "remainingCases": "[H821] creation, [H1634] due delivery. Missing deterministic price/time defaults, dice2/12 boundaries, expedite1day, enchant rounding, payment on staging/Confirmation policy, one item and exact day availability.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A22",
+      "baseline": "A22 \u2014 Spread Propaganda: Espionage tier2/3;100gp;Loyalty20 or25 under occupation;one step permanent;once per settlement/Activity;GM may disallow. [R423].",
+      "evidence": "[W4005] deduplicates **successful** settlement changes and clamps Helpful, but always checks20 and ignores `isSecured`/occupation. [P462] charges each staged occurrence. Browser [A537] also says20. **Mismatch:** occupancy DC absent; second attempt after first failure remains eligible in server loop.",
+      "remainingCases": "[H3475] successful +1. Missing20/25 boundaries, per-settlement attempt use even on failure, two settlements, Helpful ceiling, impossible target exception and repeated-action support.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A23",
+      "baseline": "A23 \u2014 Strike Team: Specialists;chosen location;following week once there,+2 competence attacks/damage/saves for half-rank rounds;or stabilization/gentle repose CL12/body extraction. [R432].",
+      "evidence": "[W4040] records next-week typed table note, computes max(1,floor(rank/2)); browser records mode/location. No consumption record or tactical effects (appropriate candidate for narrative handling). **Decision:** rounding/minimum and missing location allowed; do not mistake note for execution.",
+      "remainingCases": "[H3475] checks combat-support note. Missing extraction note details, odd/rank1 rounding decision, location requirement, following-week expiry and once-use acknowledgement.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "A24",
+      "baseline": "A24 \u2014 Upgrade Team: no team;listed cost;multiple different teams if slots/gold;one upgrade per specific team/week. [R443].",
+      "evidence": "[P589] charges target price and changes ID/status; [L96] warns path but no per-team weekly lock; browser options warn affordability. See T03/T05 for wrong definition cost and chains.",
+      "remainingCases": "[H475]/[V203] cost outcomes. Missing same-team twice, valid branches, inherited actions/managers, invalid targets with explicit exception, insufficient funds advisory handling and newly upgraded inactivity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574294663"
+    },
+    {
+      "id": "E01",
+      "baseline": "E01 \u2014 Percentile trigger: event if roll < chance; base Notoriety, bounds10\u201395; operating settlement reputation modifies the chance roll (Friendly -5, Unfriendly +5), never the table roll. [R81], [R452]; [T56].",
+      "evidence": "[C195]/[C791] default chance = clamp(live Notoriety+carry,10,95), not projected post-Activity Notoriety. [Browser trigger](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/event-utils.tsx#L36) permits1\u2013100 with advisory warning. [P718] clamps both to1\u2013100, accepts supplied chance rather than calculating baseline. **Partial/mismatch:** strict `<` matches; normal chance baseline and explicit override are conflated.",
+      "remainingCases": "[V53]/[V150] cover trigger slices. Missing chance9/10/95/96, roll equal/below/above, Activity Notoriety altering chance, \u00b15 operating-settlement result and override reason. Reproduced chance100/roll96 triggers an event although bounded baseline95 would not.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E02",
+      "baseline": "E02 \u2014 Every Table6-3 interval: Serenity1\u20134, War Games5\u201312, Night Ops13\u201316, Broke Code17\u201320, Found Fire21\u201324, High Morale25\u201328, Turn Around29\u201332, Festival33\u201336, Market Day37\u201340, Hidden Agenda41\u201344, All Calm45\u201348, Roll Twice49\u201352, Calm Storm53\u201356, Turncoat57\u201360, Cache61\u201364, Rivalry65\u201368, Missing69\u201372, Theft73\u201376, Raid77\u201380, Invasion81\u201384, Low Morale85\u201388, Sickness89\u201396, Double Agent97\u201399, Pain100. [T56].",
+      "evidence": "**Aligned mapping slice:** [E61] and [browser table](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/data.ts#L246) encode these intervals. Browser rejects out-of-range percentile while [E57] clamps it; both floor fractions.",
+      "remainingCases": "[ET12]\u201379 exercise a subset only. Missing every lower/upper interval endpoint,1/100, invalid numeric input, fractions policy and browser/Convex parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E03",
+      "baseline": "E03 \u2014 If an event cannot occur, reroll. [R460].",
+      "evidence": "No occurrence-eligibility loop or required replacement-roll state in [E116]/[P216]. W often silently does nothing with no target (e.g. Sickness no selected team), while Raid/Cache have no candidate reroll. **Missing:** table can manually re-enter, but no rules-aware acknowledgement.",
+      "remainingCases": "No direct eligibility/reroll test located. Missing empty roster/caches/refuges/towns, inaccessible targets and replacement after nested Roll Twice.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E04",
+      "baseline": "E04 \u2014 Roll Twice resolves two; effect once per Event phase; further Roll Twice rerolled; duplicate second uses Twice clause where present. [R556].",
+      "evidence": "[E116] **drops** nested Roll Twice instead of remaining incomplete until rerolled. Duplicate second is always flagged `isTwiceClause`; [E161] suppresses base for all duplicates, even War Games/Invasion/Turn Around with no Twice clause. Browser [C761] has only two subordinate fields.",
+      "remainingCases": "[ET25] explicitly expects ignored nested result; [ET54] explicitly suppresses no-clause duplicate; [V95] covers duplicate Serenity. These expectations need review, not blind retention. Missing two final valid outcomes, repeated rerolls, no-Twice duplicate base application, guaranteed chosen Roll Twice and independent automatic-event rolls.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E05",
+      "baseline": "E05 \u2014 After uneventful week, next week gains rank bonus; first militia week excluded; All Is Calm Twice and Calm before Storm do not build chain. [R81], [R452], [R468], [R485]; [T85].",
+      "evidence": "[E179] returns `currentCarry+rank`, reset on eventful week; excludes weekNumber\u22641 rather than first-use metadata. [E165] treats a sole ordinary All Is Calm as uneventful. [P311] appends automatic events after normal selection; [E165] returns true immediately if normal event did not occur, even when automatic events exist. **Mismatch:** automatic Calm-before-Storm event can still accumulate carry. **Source discrepancy:** T says add rank to next event-chance **roll**, while structured R says add to **chance**; accumulation over consecutive weeks also needs explicit interpretation.",
+      "remainingCases": "[ET81] explicitly tests accumulated4\u21928 and first-week exclusion; [V53] carry. Missing forced Calm, Calm Storm automatic-only event, duplicate no-event outcomes, changing rank, consecutive weeks and initialization flags.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E06",
+      "baseline": "E06 \u2014 Queued effects apply only due week; preserve future effects, expire used effects. [R88], [R450], event clauses.",
+      "evidence": "[E205] selects exact due week and discards past entries; [W3846]/[W4820] carry remaining plus new. [C735] Event view independently resolves inputs and does not integrate force-All-Is-Calm/automatic queue outcomes. Autosave [C1845] clears subordinate rolls unless normal Roll Twice shown. **Mismatch:** automatic event rolls share normal Roll Twice's two fields ([P311]), with no separate browser path; forced outcome differs from Event view.",
+      "remainingCases": "[ET119] queue selection, [ET132] modifiers, [V119]. Missing multiple automatic plus normal events, separate roll identities, skipped weeks/cutover, source/age preservation, browser/Convex projected parity and retries applying effects exactly once.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "E07",
+      "baseline": "E07 \u2014 Organization modifiers apply to relevant checks, once and in correct phase; team one-check bonuses consumed once. [R137], [R149], event clauses.",
+      "evidence": "[P188] adds queued organization and team modifiers plus same-week Hidden Agenda to **some Activity checks only**. Upkeep/Sabotage/Theft/Cache/Sickness/Turncoat checks compare entered totals without equivalent modifier composition. [E288] defines queued `activity` modifier but [P188] does not call it. [E324] has no consumption mechanism for one-check team boost. **Mismatch/manual split:** browser success gates use raw totals, server uses adjusted totals for select actions.",
+      "remainingCases": "[V119], [H1414]/[H3618] modifier cases. Missing all phase/check combinations, negative and positive queues, one-check usage, queued activity modifier, officer/manager exactly-once additions and stale disabled secondary inputs.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV01",
+      "baseline": "EV01 \u2014 All Is Calm: no event; Twice next week skip chance and directly apply same result, no uneventful chain. [R468].",
+      "evidence": "[E165] ordinary result counts uneventful; [E410] queues force outcome; [P272] forces a Twice-tagged All Is Calm, [E179] resets carry. **Aligned server slice**, browser Event controls still ask for normal rolls and may show another outcome.",
+      "remainingCases": "[ET81] carry only, [ET132] force modifier. Missing full base/Twice two-week outcome and independent automatic Calm-Storm precedence, stale Sabotage/trigger inputs and no carry chain.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV02",
+      "baseline": "EV02 \u2014 Broke the Code: identify one item any CL;+2 Knowledge(local) for week;Twice+5. [R473].",
+      "evidence": "[E436]/[E503] queue table notes next week. Duplicate processing queues **both** +2 and +5 notes; no item/result or effective single-bonus projection. **Partial/manual:** duration and replacement versus additive wording need explicit representation.",
+      "remainingCases": "No direct effect test located. Missing one-item acknowledgement, base/Twice effective bonus, duration and duplicate-note replacement.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV03",
+      "baseline": "EV03 \u2014 Cache Discovered: lose one hidden/planned cache;Secrecy10+rank retrieves it;Twice all caches. [R479].",
+      "evidence": "[W4491] selects oldest **hidden only** cache. On successful mitigation retrieves first, then ordinary branch loses next remaining cache. **Mismatch:** with2 hidden caches, successful mitigation still loses an unrelated cache; planned/pending caches excluded. No target choice.",
+      "remainingCases": "[H1203] loss and [H1255] mitigation each cover limited fixtures. Missing \u22652 caches successful mitigation, planned/pending cases, no-cache reroll, Twice with one mitigation, modifier-adjusted check, selection policy.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV04",
+      "baseline": "EV04 \u2014 Calm before the Storm: no event now;next week automatic table event ignoring Roll Twice then normal Event;Twice2 automatic events;not uneventful. [R485].",
+      "evidence": "[E420]/[E548] queue base1 **plus** Twice2, total requested3, while [P311] can read only2 values. Automatic results appended after normal event, share normal Roll Twice fields, and duplicates are not classified. **Mismatch:** count/state/order/readiness all diverge.",
+      "remainingCases": "No full outcome test located. Missing base/Twice two-week sequence, automatic rerolls, independent normal rolls, order-sensitive event combinations, duplicate automatic outcomes and carry reset. Reproduced queue kinds `[auto_event_roll_once, auto_event_roll_twice]`.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV05",
+      "baseline": "EV05 \u2014 Double Agent: no Secure Cache next Activity;Secrecy\u22122;Twice persistent. [R492].",
+      "evidence": "[E519] queues\u22122 and cache block; [E427] creates persistent event on duplicate; [E242] also subtracts persistent\u22122. **Mismatch:** first persistent week gets\u22124, not\u22122. [E304] blocks cache for every persistent week, extending the explicit next-Activity wording: duration policy needs decision. Browser deck does not account for block; [W4065] silently skips cache operation.",
+      "remainingCases": "[H3562] tests persistent cache suppression. Missing base/Twice first-week penalty, later persistence, exact block duration, end/buyoff recomputation and visible explanation instead of lost staged action.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV06",
+      "baseline": "EV06 \u2014 Festival: chosen recently used town;+2 morale Bluff/Diplomacy/Intimidate for week;Twice+5. [R498].",
+      "evidence": "[E443]/[E539] queue both base/Twice narrative notes; no town target, no record of affected settlement or single effective bonus. **Partial/manual.**",
+      "remainingCases": "No direct effect test located. Missing eligible town selection, correct bonus type, replacement rather than duplicate instructions and expiry.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV07",
+      "baseline": "EV07 \u2014 Found Fire: each PC one non-poison alchemical item\u2264100gp;Security+2 upcoming week;Twice one additional item. [R504].",
+      "evidence": "[E450]/[E546] queue separate base+Twice Security+2 modifiers; [E242] sums to **+4**. Also queues \u201cone item\u201d and \u201ctwo items\u201d notes. **Mismatch:** duplicate should not grant extra Security bonus; per-PC item handling manual.",
+      "remainingCases": "No direct effect test located. Missing PC-only/item-type/value cap acknowledgements, exactly2 items and effective+2 under Twice, duration. Reproduced two +2 modifiers.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV08",
+      "baseline": "EV08 \u2014 Hidden Agenda:+2 all Activity checks this week;Twice+5. [R510].",
+      "evidence": "[E346] takes max2/5 from resolved events; [P188] retroactively applies to checked actions. **Partial:** Drill/Earn Gold/Knowledge manually supplied derived totals are not recomputed, so \u201call Activity checks\u201d is not honored consistently.",
+      "remainingCases": "[H3618] effective success/Covert suppression; [V119] related modifier. Missing all action check types, +5 replacing+2, earned amount/Drill success recomputation, event removal and raw browser gate parity.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV09",
+      "baseline": "EV09 \u2014 High Morale:end1 persistent immediately;Loyalty+2 upcoming week;Twice end2,+5. [R515].",
+      "evidence": "[E461]/[E559] queue base+2 and Twice+5 and count1+2; [W4708] ends oldest3 existing persistent events. **Mismatch:** effective+7 and up to3 endings instead of+5/2. Effects are derived before ending so same-week checks may still include removed persistent penalties.",
+      "remainingCases": "[ET148] supplies a standalone Twice event and expects2; does not pass actual duplicate pair. Missing base+Twice pair, 0/1/2/3 active events, age ties, new same-week persistence interactions and check recomputation. Reproduced+7/count3.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV10",
+      "baseline": "EV10 \u2014 Invasion:GM random encounter CR APL+1. [R521].",
+      "evidence": "Browser D shows rule; no APL/encounter or acknowledgement in P/W. **Manual/decision:** retain table-facing encounter instruction; no tactical simulator implied.",
+      "remainingCases": "No direct effect test located. Missing APL+1 reminder/record, completion acknowledgement and duplicate-no-Twice policy.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV11",
+      "baseline": "EV11 \u2014 Low Morale:Loyalty\u22122;Twice persistent. [R525].",
+      "evidence": "[E571] base queues\u22122; [E427] persists duplicate; [E242] adds persistent\u22122. **Mismatch:** first persistent week totals\u22124; later weeks\u22122.",
+      "remainingCases": "[ET132] persistent modifier infrastructure only. Missing actual base/Twice pair, first/subsequent week, duration, ending and Upkeep/Event Loyalty checks.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV12",
+      "baseline": "EV12 \u2014 Market Day:chosen operated town extra5% all items/services;Twice all operated marketplaces incl Broker Market. [R530].",
+      "evidence": "[W4607] sets5 on selected tracked marketplace or all active marketplaces. Browser permits marketplace and free-text town; `marketDayTownName` does not drive W effect. **Partial/mismatch:** one marketplace is narrower than all purchases/services in selected town; no settlement-market relation or price composition; discount fields retained without a full pricing baseline.",
+      "remainingCases": "[H1484]/[H1567] selected/all markets; [Event UI test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/event-phase-section.test.tsx#L148). Missing town services/untracked market, Broker Market inclusion, reputation discount combination, duration and missing target.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV13",
+      "baseline": "EV13 \u2014 Missing in Action:random team operated this week unavailable next week;Twice returns end following week disabled. [R535].",
+      "evidence": "[W4533] sets selected team missing with unavailableUntilWeek current+1 or+2 and magic note `return_disabled`; [W3759] releases at closing due week. Event UI offers roster teams, not only operated ones. **Partial:** random/table choice not recorded; generic missing recovery can return the team early and loss/expiry precedence isn't typed.",
+      "remainingCases": "[H3686] includes same-week status scenarios. Missing operated-team eligibility, no eligible reroll, base/Twice exact multiweek timeline, no early DC15 return, disabled return cost next Upkeep and state-map freshness.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV14",
+      "baseline": "EV14 \u2014 Night Ops:+2 circumstance Stealth after dark for week;Twice+5. [R540].",
+      "evidence": "[E474]/[E570] queue both base and upgraded narrative notes, no effective bonus/consumption or day/night context. **Manual.**",
+      "remainingCases": "No direct effect test located. Missing darkness/bonus-type reminder, effective5 under duplicate and duration.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV15",
+      "baseline": "EV15 \u2014 Raid:random settlement with refuge(s), all refuges there deactivate; hidden persons may be captured;Security20 per person cuts capture chance50%;next-week rescueDC5+rank. [R545].",
+      "evidence": "**Mismatch:** [W4664] deactivates **all refuges in all settlements**, captures **every** hidden person there; no capture chance, per-person Security check or mitigation inputs. It sets correct rescue override5+rank.",
+      "remainingCases": "[H1954] explicitly expects broad capture; [H1808] rescue. Missing random selected settlement, unaffected other refuges, per-person chance before/after mitigation, modifier-awareDC20, no-refuge reroll and next-week rescue access.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV16",
+      "baseline": "EV16 \u2014 Rivalry:random2 teams cannot act next Activity;Twice persistent until officer Bluff/Diplomacy/Intimidate20. [R551].",
+      "evidence": "[W4629] blocks selected up-to2 teams through current+1 and [E427] inserts persistent flag. **Mismatch:** later week expiry releases teams irrespective of persistent Rivalry; persistent record does not retain targeted teams; no officer skill-check ending interface, only generic buyoff/adjustment.",
+      "remainingCases": "[H3686] status scenarios only. Missing2 distinct eligible teams, random/table-choice record, persistent blocking across weeks,DC19/20 and all3 skills, target retention, end and no-team reroll.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV17",
+      "baseline": "EV17 \u2014 Roll Twice. [R556].",
+      "evidence": "Selection behavior and defects in E04. Requires semantic case per duplicate outcome, not a single boolean branch test.",
+      "remainingCases": "[ET25]/38/54/68; [V95]. Missing each event with/without Twice clause, subsequent rerolls and separate normal/automatic event namespaces.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV18",
+      "baseline": "EV18 \u2014 Sickness:random1 team disabled;Twice lost unless Loyalty20. [R562].",
+      "evidence": "[W4542] disables base, then duplicate retains disabled on successful entered20 or removes roster/state on failure. **Aligned mutation slice**, but natural/table random selection and modifier-aware Loyalty total absent; omitted check is treated failure.",
+      "remainingCases": "[H3686] has explicit Sickness combinations. MissingDC19/20 with queues/officers, missing-input readiness before irreversible loss, selected team provenance, empty-roster reroll and duplicate application after another event modifies team.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV19",
+      "baseline": "EV19 \u2014 Theft:halve treasury;Loyalty20 mitigates to10% loss;Twice persistent, half incoming gains until successful Reduce Danger. [R567].",
+      "evidence": "[P356] applies floor(half or90%) to treasury **before costs**; [E234] halves only entered Earn Gold gains. [W5219] deposits and other direct treasury gains bypass incoming-Theft multiplier. [W4468] ends persistence on modified Reduce Danger success. Persistent weekly mitigation has no repeatable path. **Mismatch:** order, scope of incoming gains, and mitigation cadence incomplete.",
+      "remainingCases": "[H1307] mitigation, [H1345]/[H1414] ending, [ET132] multiplier. Missing all incoming-gain paths, exact fraction rounding, treasury-after-costs, same-week end/gain order, one-week mitigation with persistence surviving and per-event-instance checks.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV20",
+      "baseline": "EV20 \u2014 Turn Around:all disabled recover;otherwise one team+2 on one next-Activity check. [R573].",
+      "evidence": "[W4571] handles current in-memory disabled states; otherwise selected team set **active** and queue+2. **Mismatch risk:** choosing missing/blocked team can recover it although baseline only grants check bonus; no one-check consumption and stale expiry-map issue T08.",
+      "remainingCases": "[H3686] includes Sickness\u2192Turn Around and ordering scenarios. Missing all-disabled/none branches, boost target eligibility, exactly one check, no team, successive events and expiry+Turn Around.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV21",
+      "baseline": "EV21 \u2014 Turncoat:training\u2212(1d6+rank);Twice GM-chosen team defects unless Diplomacy10+rank, still unavailable next Activity on success. [R578].",
+      "evidence": "[P368] subtracts entered loss; [W4639] removes selected team on failed/omitted officer total or blocks on success. **Partial/manual:** no roll formula/provenance or skill identity validation; missing input can cause loss.",
+      "remainingCases": "[H3426] training loss, [H3686] event/status scenarios. Missing dice range,DC boundary, missing selection/check readiness, GM choice, success unavailability timeline and modifier handling.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV22",
+      "baseline": "EV22 \u2014 War Games:training+rank. [R583].",
+      "evidence": "[P354] correctly adds snapshot rank for non-Twice event. [E161] suppresses a duplicate despite no special Twice clause. **Aligned single/mismatch duplicate.**",
+      "remainingCases": "[H3426] related event fixture; V test event result cases. Missing direct rank gain across ranks, actual duplicate twice-gain, current post-Upkeep rank and rank-up timing after event gain.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV23",
+      "baseline": "EV23 \u2014 Week of Pain:next week\u22121 all organization checks;next Upkeep training loss doubled;Twice no extra. [R587].",
+      "evidence": "[E499] creates check penalty+`double_upkeep_attrition`; [E228] doubles **attritionTotal only**, not Notoriety/treasury Upkeep losses; [E242] applies\u22121 through selective Activity composition (E07). **Mismatch:** \u201cnext Upkeep training loss\u201d broader than implemented step1; signed nat20 gain also doubles.",
+      "remainingCases": "[ET148] queued kinds; [V119] modifiers. Missing all Upkeep losses combined, nat20 gain, all check types/phases, exact next-week expiry and duplicate no extra.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "EV24",
+      "baseline": "EV24 \u2014 Week of Serenity:next week+5 all organization checks;next Activity training gain doubled;Twice no extra. [R593].",
+      "evidence": "[E510] queues+5 and training multiplier; [P245] doubles supplied Drill gain; duplicate branch adds nothing. **Partial:** +5 not computed consistently for Upkeep/Event or determining Drill success; other table-valid Activity training gains lack baseline structure.",
+      "remainingCases": "[V95] duplicate no extra, [ET132] multipliers. Missing all phase/check applications, gain includes Commandants once then doubles, success-changing+5, next-week-only and coexistence with Pain.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P01",
+      "baseline": "P01 \u2014 Persistent events continue, oldest first; age/order preserved. [R88], [R460], [R599].",
+      "evidence": "[W3843] sorts by startedWeek; [W4708] ends oldest via High Morale; [W4481] ends oldest Theft. S stores startedWeek/resolved. Persistent checks/targets are not a full replayed event sequence: only type-based penalties/income plus special endings. Same-age order has no explicit domain tie-breaker.",
+      "remainingCases": "[H1345]/[H1414] Theft ending and [ET148] creation. Missing same-age stable order, multiple same-type instances, current-week creation versus carry eligibility, event-specific target retention and full oldest-first processing.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P02",
+      "baseline": "P02 \u2014 Mitigation lasts1week and repeats if persistent; Rivalry skill ending and Theft Reduce Danger are distinct from temporary mitigation. [R599], [R551], [R567].",
+      "evidence": "[Persistent UI](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/persistent-phase-section.tsx#L35) only lists events and buyoff buttons. Event mitigation fields appear for freshly rolled names ([C1621]), not per persistent event instance. **Missing:** weekly mitigation operation, expiration and Rivalry end check.",
+      "remainingCases": "No direct recurring-mitigation test located. Missing week-by-week mitigation/no-mitigation, multiple eligible instances, carry of persistence without carry of mitigation and explicit permanent end.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P03",
+      "baseline": "P03 \u2014 Once per4weeks pay2\u00d7current minimum to end persistent event. [R599].",
+      "evidence": "[W5162] validates ownership/active state, stored phase `persistent`, cooldown and treasury, charges2\u00d7rank\u00d710 immediately. lastBuyoff defaults0 \u2192 first buyoff only week4. **Partial/decision:** cadence start must be explicit; local Phase View does not change stored phase, so browser buyoff can reject while shown. Immediate write bypasses full-week staging although it increments revision.",
+      "remainingCases": "No dedicated buyoff test located. Missing first-use cadence, weeks3/4/7/8, rank change cost, insufficient money advisory-versus-blocking policy, two-player concurrent buyoff and actual phase-view path.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P04",
+      "baseline": "P04 \u2014 Persistent Phase Eligibility fixed from events carried into week; viewing/navigation local. [Projection decision](https://github.com/AndreasUnunger/EverythingPath/issues/37), [Weekly Draft seam](https://github.com/AndreasUnunger/EverythingPath/issues/34).",
+      "evidence": "[C677] recomputes from live active events and [C678] always lists Persistent; no fixed carried-event eligibility. Phase View itself is local [C672]/[C2605]. **Partial:** navigation contract slice exists; eligibility and button mutations still depend on mutable/stored phase.",
+      "remainingCases": "[Controller test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/use-week-board-controller.test.tsx#L222) local navigation; [H201] transition. Missing eligible/not eligible snapshot, midweek end/create stability and navigation while edits pending.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P05",
+      "baseline": "P05 \u2014 Readiness derived from all required inputs; partial preview while incomplete; Confirmation rejects incomplete source. [Projection decision](https://github.com/AndreasUnunger/EverythingPath/issues/37).",
+      "evidence": "**Mismatch:** [P627] only checks adjustment reason. Missing normal event rolls, selected guarantee choice, nested rerolls, action targets/checks, pending team outcomes all leave `ready`. [W3854] does not reject incomplete resolution; many asset loops `continue` on missing input, Sickness/Turncoat missing totals can instead cause loss. Summary [view model](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/build-view-models.ts#L348) displays the incomplete list it is given.",
+      "remainingCases": "[V291] reasonless adjustment; [summary tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/phase-sections/summary-phase-section.test.tsx#L29). Missing each row's required-input matrix, explicit zero versus empty, optional mitigation not attempted versus attempted incomplete, changed upstream choices invalidating downstream inputs and browser/server agreement. Reproduced **empty week-2 draft = ready**.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P06",
+      "baseline": "P06 \u2014 Baseline preview and authoritative change plan include every committed effect; Table Adjustments applied after full baseline. [Rules Projection](https://github.com/AndreasUnunger/EverythingPath/issues/37).",
+      "evidence": "[P386] plan contains militia values, team operations and max-Notoriety settlement drop; **does not include** most [W3947]\u20134726 settlement/cache/order/person/event/queue writes. [W4728] calls partial plan `completeBaselinePlan` and stores it. Browser Summary cannot preview omitted effects even though raw selections appear.",
+      "remainingCases": "[I30] confirms resource preview/commit equality; [H370]/[V252] typed changes; summary presentation tests. Missing full state-diff equality for **every A/EV row**, queue updates, new event identities, all ledgers and no hidden writes.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P07",
+      "baseline": "P07 \u2014 Shared typed Table Adjustment after baseline, required reason; structural validity; intentional choice Rules Exception distinct from outcome adjustment.",
+      "evidence": "[Contract](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/lib/weekly-resolution-contract.ts#L22) covers militia numeric set/delta, settlement reputation, team status, event add/resolve. [P651] composes them; [W176] applies them after hidden baseline effects. [Panel](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/table-adjustments-panel.tsx#L1) exposes numeric militia adjustment UI; manual action totals/custom costs can still diverge without a reason. Event resolution adjustment is by type, not instance.",
+      "remainingCases": "[V252]/[V291], [H370]/[H2032], [panel tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/table-adjustments-panel.test.tsx#L8), [I30] resource parity. Missing all adjustment types via UI/adapter, conflicting adjustments order, invalid/missing referenced entities, finite numeric integrity, instance-specific event end and baseline change recomputation.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P08",
+      "baseline": "P08 \u2014 Confirmation atomic for exact **reviewed** Weekly Draft Revision, reject stale; close draft and create single successor, immutable complete source/history. [Consistency](https://github.com/AndreasUnunger/EverythingPath/issues/38), [lifecycle](https://github.com/AndreasUnunger/EverythingPath/issues/51).",
+      "evidence": "[W3301] `expectedRevision` optional; [W3460] compares if supplied. [Browser mutation](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/use-week-board-mutations.ts#L483) substitutes last/flushed revision for reviewed revision. [W4830] reuses same week-state row and increments week, [W4742] record lacks full draft source. [W5245]/[W5285] direct treasury/rank changes do not bump revision. **Mismatch:** reviewed state not fully protected; draft identity isolation/source history not implemented.",
+      "remainingCases": "[I250] stale rollback, [I350] exactly one concurrent confirm, [I398] atomic failing rollback; [H340] stale; [flush test](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/use-week-board-mutations.test.tsx#L168) currently expects substituted revision. Missing required revision, edits changing outcome during flush, external state writes, exact source persisted, closed identity rejects delayed edits and one successor under races.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P09",
+      "baseline": "P09 \u2014 Shared semantic edits preserve disjoint changes, reject same-target conflicts; immediate feedback; no claim/per-slot confirmation under accepted Action Slot decision. [Action Slot](https://github.com/AndreasUnunger/EverythingPath/issues/36), [consistency](https://github.com/AndreasUnunger/EverythingPath/issues/38).",
+      "evidence": "[W1929] accepts no expected revision/draft identity for save; arrays replace current contents; [W2569] increments revision each patch. C uses optimistic slots and [sync merge](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/week-board-controller-sync.ts#L1). Current behavior is last-write-wins, not target-aware conflict rejection. The repository AGENTS claim-lock wording conflicts with the accepted map decision; retain explicit decision context, do not implement claims during extraction.",
+      "remainingCases": "[H2132] disjoint patch merge/[H2204] same-slot last-write-wins; [sync tests](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/week-board-controller-sync.test.ts#L8), [mutation batching](https://github.com/AndreasUnunger/EverythingPath/blob/4fc7002c5caba9a38da008c1583d9b0e077ac29c/src/components/week-board/use-week-board-mutations.test.tsx#L60). Missing adapter contract scenarios named in [test architecture](https://github.com/AndreasUnunger/EverythingPath/issues/53), delayed closed-draft writes, atomic multi-slot semantic move, independent users and visible rejected edit recovery.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P10",
+      "baseline": "P10 \u2014 Access scoped to campaign/org, all players may stage/confirm; GM-only correction controls hidden from others. AGENTS and accepted shared-collaboration decisions.",
+      "evidence": "[W448] verifies org access and militia campaign organization; helpers used by mutations. This is a useful security slice. No GM identity/role distinction in board correction actions such as [W4903] rollback. No claim status is expected under the newer Action Slot decision.",
+      "remainingCases": "[I310] unauthorized rollback; hand harness mocks authorization and is not proof. Missing actual unauthorized save/confirm/adjust/buyoff/rank/treasury, cross-campaign child references, GM-only controls and two-player browser observations. Detailed GM correction UX is outside map, but authority seam is relevant.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    },
+    {
+      "id": "P11",
+      "baseline": "P11 \u2014 Historical view reads immutable effective records; paused cutover preserves authoritative state/carry but resets unfinished choices/history. [Lifecycle](https://github.com/AndreasUnunger/EverythingPath/issues/51), [cutover](https://github.com/AndreasUnunger/EverythingPath/issues/52).",
+      "evidence": "[W1910] lists records; [W4903] still restores old mutable snapshots when navigating backward. Record source and state outside partial plan missing (P06/P08). **Planned migration gap**, not a new rules defect.",
+      "remainingCases": "I tests repeated rollback/restore/remapping cover legacy behavior, not chosen historical view. Missing cutover rehearsal assertions from test architecture, immutable source, effective supersession selection, restartable empty successor creation and legacy write rejection.",
+      "url": "https://github.com/AndreasUnunger/EverythingPath/issues/54#issuecomment-5574295825"
+    }
+  ]
+}

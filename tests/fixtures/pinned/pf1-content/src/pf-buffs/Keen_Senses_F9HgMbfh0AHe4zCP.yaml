@@ -1,0 +1,51 @@
+_id: F9HgMbfh0AHe4zCP
+_key: '!items!F9HgMbfh0AHe4zCP'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/alertness.jpg
+name: Keen Senses
+system:
+  changes:
+    - _id: 882nvmi7
+      formula: '2'
+      target: skill.per
+      type: competence
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.54x9nw6ni4rpphcn]{Keen
+      Senses}</p><p>You gain a +2 competence bonus on Perception checks and
+      gains low-light vision. Subjects that have low-light vision double the
+      distance they can see under the effects of this spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  scriptCalls:
+    - _id: hSPG1mURAZA9ZENe
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle LLV
+      type: script
+      value: |-
+        if(state) {
+          const llSettings = actor.system.traits.senses.ll;
+
+          if(llSettings.enabled) {
+            await item.setItemDictionaryFlag("lowlight_settings", `${llSettings.multiplier.dim}_${llSettings.multiplier.bright}`);
+            await actor.update({'system.traits.senses.ll.multiplier': { dim: llSettings.multiplier.dim * 2, bright: llSettings.multiplier.bright * 2} });
+          } else
+            await actor.update({'system.traits.senses.ll.enabled': true });
+        } else {
+          const settingsString = await item.getItemDictionaryFlag("lowlight_settings");
+          if(settingsString) {
+            const [dimMult, brightMult] = settingsString.split("_");
+            await actor.update({'system.traits.senses.ll.multiplier': { dim: dimMult, bright: brightMult } });
+            await item.removeItemDictionaryFlag("lowlight_settings");
+          } else
+            await actor.update({'system.traits.senses.ll.enabled': false });
+        }
+  subType: spell
+type: buff
