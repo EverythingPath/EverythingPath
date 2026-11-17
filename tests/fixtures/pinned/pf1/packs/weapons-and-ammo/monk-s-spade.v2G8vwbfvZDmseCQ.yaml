@@ -1,0 +1,67 @@
+_id: v2G8vwbfvZDmseCQ
+_key: '!items!v2G8vwbfvZDmseCQ'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/gnome-pincher.png
+name: Monk's Spade
+system:
+  actions:
+    - _id: 3nbz8pmc63cxloch
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Monk's Spade
+  description:
+    unidentified: >-
+      <p>This polearm is a double weapon. One side is fitted with a broad,
+      shovel-like sharpened blade, while the opposite side is fitted with a
+      crescent blade that juts out like a pair of bull's horns. The monk's spade
+      does many types of damage. The type of damage it deals depends on how it
+      is wielded, with the spade side able to bludgeon and slash and the
+      crescent side able to slash and pierce.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    dbl: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - double
+    - monk
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

@@ -1,0 +1,58 @@
+_id: nntvnla4qnawr0xn
+_key: '!items!nntvnla4qnawr0xn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Darkvision, Greater
+system:
+  actions:
+    - _id: w36ac94rta3g6tmo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.mz9yr5yhr0f3oqtp]{darkvision}, except the
+      target's <em>darkvision</em> has a range of 120 feet.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      antipaladin: 4
+      arcanist: 4
+      hunter: 4
+      investigator: 4
+      medium: 4
+      occultist: 4
+      psychic: 4
+      ranger: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: either a pinch of dried carrot or an agate
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '216'
+type: spell

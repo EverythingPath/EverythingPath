@@ -1,0 +1,35 @@
+_id: 2h3lI574tmVjOalQ
+_key: '!items!2h3lI574tmVjOalQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/book-tan.jpg
+name: Bonus Feats (WIZ)
+system:
+  associations:
+    classes:
+      - Wizard
+  changes:
+    - _id: 6l06zvcu
+      formula: floor(@class.level / 5)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At
+      each such opportunity, he can choose a <em>metamagic feat</em>, an
+      <em>item creation</em>, or
+      @UUID[Compendium.pf1.feats.KlE26ofz7uAkd0IJ]{Spell Mastery}. The wizard
+      must still meet all prerequisites for a bonus feat, including caster level
+      minimums. These bonus feats are in addition to the feats that a character
+      of any class gets from advancing levels. The wizard is not limited to the
+      categories of <em>Item Creation Feats</em>, <em>Metamagic Feats</em>, or
+      @UUID[Compendium.pf1.feats.KlE26ofz7uAkd0IJ]{Spell Mastery} when choosing
+      those feats.</p>
+
+      <p>A wizard may also choose an <em>Arcane Discovery</em> that he qualifies
+      for in place of a bonus feat at these levels.</p>
+  sources:
+    - id: PZO1110
+      pages: '79'
+  subType: classFeat
+type: feat

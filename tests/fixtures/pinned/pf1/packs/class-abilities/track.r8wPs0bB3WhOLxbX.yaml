@@ -1,0 +1,33 @@
+_id: r8wPs0bB3WhOLxbX
+_key: '!items!r8wPs0bB3WhOLxbX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/beast_01.jpg
+name: Track
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Hunter
+      - Inquisitor
+      - Ranger
+      - Shifter
+      - Slayer
+  contextNotes:
+    - target: skill.sur
+      text: +[[max(1, floor(@class.level / 2))]] to follow tracks
+  description:
+    value: >-
+      <p>The character adds half his level (minimum 1) to <em>Survival skill
+      checks</em> made to follow tracks.</p>
+  sources:
+    - id: PZO1110
+      pages: '64'
+    - id: PZO1115
+      pages: '40'
+    - id: PZO1129
+      pages: 28, 53
+    - id: PZO1140
+      pages: '27'
+  subType: classFeat
+type: feat

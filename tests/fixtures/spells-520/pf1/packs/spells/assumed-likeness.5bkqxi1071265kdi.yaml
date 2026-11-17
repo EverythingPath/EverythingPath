@@ -1,0 +1,81 @@
+_id: 5bkqxi1071265kdi
+_key: '!items!5bkqxi1071265kdi'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Assumed Likeness
+system:
+  actions:
+    - _id: 33bqkvqv5hwnsnat
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You draw upon the memories of the targets to create a visual disguise
+      for yourself that only they can see. When you cast the spell, you choose
+      an emotion from the table below. Each target perceives you as a creature
+      it feels that way toward. If it doesn't feel that way toward anyone, it
+      instead perceives you as a stranger with features likely to  evoke that
+      emotion (e.g., if you choose respect, a guard who was taught to respect
+      her elders but who currently knows no elders might see you as an elderly
+      version of yourself). Since you don't know how you will appear to each
+      target, you must match your actions and statements to fit with the
+      illusion as best you can. While the spell grants a +10 bonus on Disguise
+      checks like <i>disguise self</i> does, you also take a -5 penalty on
+      Disguise checks until you can get a sense of who the target thinks you
+      are. Each target who fails to disbelieve the phantasm and is fooled by
+      your Disguise check takes a -2 penalty on Sense Motive checks to notice
+      your lies, and each emotion choice grants you an additional benefit
+      against such targets, as listed in the table below. </p><table
+      border="1"><tbody><tr><th>Emotion</th><th>Effect</th></tr><tr><td>Fear</td><td>+4
+      bonus on Intimidate checks</td></tr><tr><td>Hate</td><td>+2 bonus on
+      attack rolls, -2 penalty to AC</td></tr><tr><td>Lust</td><td>+4 bonus on
+      Sleight of Hand checks</td></tr><tr><td>Respect</td><td>+4 bonus on
+      Diplomacy checks</td></tr><tr><td>Trust</td><td>+4 bonus on Bluff
+      checks</td></tr></tbody></table>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 1
+      magus: 2
+      medium: 1
+      mesmerist: 1
+      occultist: 2
+      psychic: 2
+      skald: 1
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO9292
+      pages: '58'
+  subschool:
+    - phantasm
+type: spell

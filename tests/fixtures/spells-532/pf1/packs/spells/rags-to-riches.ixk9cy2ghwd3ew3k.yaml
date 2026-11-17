@@ -1,0 +1,65 @@
+_id: ixk9cy2ghwd3ew3k
+_key: '!items!ixk9cy2ghwd3ew3k'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Rags to Riches
+system:
+  actions:
+    - _id: rxqbgo5l1drz3zii
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        type: fort
+      target:
+        value: 1 weapon, suit or armor, shield, tool, or skill kit touched/5 levels
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target object is enhanced to function as a masterwork item. In
+      addition to any bonuses for the masterwork quality, the object gains other
+      bonuses. Skill kits and other equipment add an additional +1 insight bonus
+      for every 4 caster levels you possess to skill checks made with them that
+      already receive a bonus from the skill kit. Armor and weapons gain
+      temporary hit points equal to your caster level. If the object already has
+      an enhancement bonus, this bonus increases by 1. If the object of the
+      spell has hardness, that hardness increases by 5.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 4
+      bard: 3
+      cleric: 4
+      investigator: 3
+      medium: 3
+      occultist: 3
+      oracle: 4
+      skald: 3
+      sorcerer: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a bit of burlap wrapped over a copper coin
+  school: trs
+  sources:
+    - id: PZO9465
+      pages: '21'
+  sr: false
+type: spell

@@ -1,0 +1,84 @@
+_id: rm9o0r8qqrf2x2yc
+_key: '!items!rm9o0r8qqrf2x2yc'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Pied Piping
+system:
+  actions:
+    - _id: 3a30u55c7atk0y1n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 90-ft.-radius emanation, centered on you
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      measureTemplate:
+        size: '90'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '90'
+      save:
+        description: Will partial; see text
+        type: will
+  components:
+    focus: true
+  description:
+    value: >-
+      <p>You call forth a melody so compelling and attractive that creatures
+      belonging to a group with a specific, identifiable physical trait (such as
+      type, subtype, age, gender, or hair color) find it almost impossible not
+      to approach and follow you. You choose the nature of the creatures you
+      seek to attract when you cast the spell and, once you make this choice,
+      cannot alter it. You can only use physical traits to determine your
+      audience. You can never use social and other more voluntary criteria (such
+      as alignment, religion, nationality, or class) to select targets for this
+      spell.</p><p>Eligible creatures must make a saving throw each round spent
+      within the area of the spell and, once they fail, approach you at their
+      normal movement speed and stand as close to you as possible without
+      actually entering an occupied square.</p><p>If you move, they do their
+      best to maintain their proximity to you and follow. Affected creatures can
+      take no actions other than listening to your music and following you if
+      you move.</p><p>Those entering the area while the spell is in effect must
+      also successfully save or be compelled to come to you.</p><p>The
+      attractive power of the spell does not cause affected creatures to put
+      themselves in jeopardy and they have enough presence of mind to avoid or
+      negotiate around obstacles and other perilous hazards. If unable to
+      approach or follow you without endangering themselves, they simply wait,
+      swaying to the music, until you pass out of range, at which point they
+      regain their senses after 1 round/ level. If circumstances change once you
+      move out of range, making it possible for affected creatures to resume
+      their attempts to get near you they do so, and, if they manage to return
+      to within the area of the spell before it wears off, the spell continues
+      as normal.</p><p>If attacked, affected creatures can take defensive
+      measures, even going so far as to avoid existing threats by moving out of
+      the area of the spell, but cannot make attacks themselves or take any
+      other actions until the effects of the spell wear off. The effects of the
+      spell persist for 1 round/ level even after you stop concentrating. Once
+      the spell ceases, the affected creatures continue to stay near you until
+      the effects of the spell wear off.</p>
+  descriptors:
+    - mindAffecting
+    - sonic
+  learnedAt:
+    class:
+      bard: 6
+      skald: 6
+  level: 6
+  materials:
+    focus: musical instrument
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '236'
+  subschool:
+    - compulsion
+type: spell
