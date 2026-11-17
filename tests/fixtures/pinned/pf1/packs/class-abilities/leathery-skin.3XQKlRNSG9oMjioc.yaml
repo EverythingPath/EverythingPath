@@ -1,0 +1,24 @@
+_id: 3XQKlRNSG9oMjioc
+_key: '!items!3XQKlRNSG9oMjioc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_24.jpg
+name: Leathery Skin
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: znwko99v
+      formula: 1 + if(gt(@class.level, 8), 1) + if(gte(@class.level, 15), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 3rd level, you gain cold <em>resistance</em> 5 and a +1 <em>natural
+      armor bonus</em> to AC. At 9th level, your cold <em>resistance</em>
+      increases to 10 and <em>natural armor bonus</em> increases to +2. At 15th
+      level, your <em>natural armor bonus</em> increases to +4.</p>
+  subType: classFeat
+type: feat

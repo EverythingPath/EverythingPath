@@ -1,0 +1,61 @@
+_id: rh2v2fq3q6l7u7f1
+_key: '!items!rh2v2fq3q6l7u7f1'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Shadow of Doubt
+system:
+  actions:
+    - _id: wk81b77a3om5cloe
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial (see text)
+        type: will
+      target:
+        value: one creature/3 levels
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a shadowy aura of doubt fueled by a foe's own inner flaws.
+      Targets perceive all illumination as if it were one light level darker, to
+      a minimum light level of darkness (not supernatural darkness), even on a
+      successful saving throw.  Fleeting mental shadows of regrets and anxieties
+      distract the spell's targets; at the start of each of their turns, they
+      must each succeed at a Will save or be staggered for 1 round. A
+      good-aligned target takes a -4 penalty on saving throws against this
+      effect; an evil-aligned target gains a +4 bonus instead.</p>
+  descriptors:
+    - darkness
+    - emotion
+    - evil
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 4
+      bard: 4
+      mesmerist: 4
+      psychic: 6
+      skald: 4
+      spiritualist: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9280
+      pages: '222'
+  subschool:
+    - compulsion
+type: spell

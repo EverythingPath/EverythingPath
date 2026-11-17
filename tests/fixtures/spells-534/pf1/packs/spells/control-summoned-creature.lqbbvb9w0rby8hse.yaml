@@ -1,0 +1,64 @@
+_id: lqbbvb9w0rby8hse
+_key: '!items!lqbbvb9w0rby8hse'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Control Summoned Creature
+system:
+  actions:
+    - _id: 6ezmytx2095azgsd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one summoned creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You seize control of a summoned creature by disrupting the bond between
+      it and the caster who summoned it. If the creature fails its save, you may
+      command it as if you had summoned it. The original caster can attempt to
+      regain control of the creature as a standard action by making an opposed
+      Spellcraft check against you. When your spell ends, control reverts to the
+      original summoner. If the summoning spell ends before this spell ends, the
+      remaining duration of this spell is lost.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      cleric: 4
+      mesmerist: 3
+      occultist: 3
+      oracle: 4
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '212'
+  subschool:
+    - compulsion
+type: spell

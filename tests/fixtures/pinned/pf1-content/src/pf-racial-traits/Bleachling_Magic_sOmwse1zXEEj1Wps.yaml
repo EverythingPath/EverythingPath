@@ -1,0 +1,64 @@
+_id: sOmwse1zXEEj1Wps
+_key: '!items!sOmwse1zXEEj1Wps'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Bleachling Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: iGwa9zxBpKPEU7yf
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p> @UUID[Compendium.pf1.spells.Item.pg7dbmuuaksxhp3v]{charm animal}
+        </p><p>This spell functions like
+        @UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}, except
+        that it affects a creature of the animal type.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm Animal
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) *5 + 25
+      save:
+        dc: '@abilities.cha.mod + 11'
+        description: negates
+        type: will
+      target:
+        value: one animal
+  changes:
+    - _id: BkKWOyZa
+      formula: '1'
+      target: cl.school.div
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic</p><hr /><p>Gnomes with this racial trait treat their caster
+      level as 1 higher for the purposes of divination spells they cast.
+      Additionally, if the gnome has a Wisdom or Charisma score of 11 or higher,
+      she also gains the ability to cast
+      @UUID[Compendium.pf1.spells.Item.pg7dbmuuaksxhp3v]{charm animal} as a
+      spell-like ability three times per day. The caster level for this effect
+      is equal to the gnome's level, and the DC for these spells is equal to 10
+      + the spell's level + the gnome's Charisma modifier.</p><p>This replaces
+      gnome magic.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9491
+      pages: '16'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 3 *  gte(max(@abilities.wis.total, @abilities.cha.total), 11)
+    per: day
+    value: 0
+type: feat

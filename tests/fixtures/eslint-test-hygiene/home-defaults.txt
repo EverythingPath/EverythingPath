@@ -1,0 +1,26 @@
+// A default is a source: a parameter or destructuring default read off
+// process.env or the os module reaches the host when no value is passed. A
+// line ending in "// flagged" must be reported; every other line must pass.
+import * as os from 'node:os';
+function readHome({ HOME } = process.env) { return HOME; } // flagged
+const arrowHome = ({ HOME: home } = process.env) => home; // flagged
+const nestedHome = ({ env: { HOME } } = process) => HOME; // flagged
+const innerDefault = ({ env: { HOME } = process.env }) => HOME; // flagged
+const readHomedir = ({ homedir } = os) => homedir(); // flagged
+function requiredHomedir({ homedir: read } = require('os')) { return read(); } // flagged
+function osParameter(osModule = require('node:os')) { return osModule.homedir(); } // flagged
+const methods = {
+  read({ HOME } = process.env) { return HOME; }, // flagged
+};
+class Reader {
+  read({ homedir } = os) { return homedir(); } // flagged
+}
+try { run(); } catch ({ env: { HOME } = process.env }) { use(HOME); } // flagged
+const { fixture: { HOME: declared } = process.env } = fixtures; // flagged
+const { HOME: withDefault = 'none' } = process.env; // flagged
+// Fixture defaults, and parameters with no default, pass.
+const fixtureHome = ({ HOME } = { HOME: 'fixture-home' }) => HOME;
+const fixtureOs = ({ homedir } = { homedir: () => 'fixture-home' }) => homedir();
+const passedEnv = ({ HOME }) => HOME;
+const passedOs = (osModule) => osModule.homedir();
+const { fixture: { HOME: fixtureDeclared } = { HOME: 'fixture-home' } } = fixtures;
