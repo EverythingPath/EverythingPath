@@ -1,0 +1,76 @@
+_id: mdwmwiy6encq28m4
+_key: '!items!mdwmwiy6encq28m4'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Charnel House
+system:
+  actions:
+    - _id: v407bjxlatcno060
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: 20-ft. cube (S)
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '20'
+        type: rect
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>By sacrificing a living creature, you create the grisly illusion of
+      viscera and gore splattered about the nearby area. When the casting time
+      is complete, the walls drip with blood and the floor is slick with
+      unidentifiable lumps of meat and other signs of a massacre. Anyone
+      entering the area must attempt a Will save or be sickened for 1d6 rounds.
+      This is a mind-affecting effect. If a creature succeeds at its save, it
+      can see the semi-real nature of the illusion.  The room itself is covered
+      in a layer of slippery, semi-real gore. Any creature attempting to walk
+      within or through the area of gore can move at half normal speed with a DC
+      10 Acrobatics check. Failure means it can't move that round, and failure
+      by 5 or more means it falls prone (see the Acrobatics skill for details).
+      Creatures that don't move on their turns don't need to attempt this check
+      and are not considered flat-footed. A creature that succeeded at its Will
+      save gains a +5 bonus on the Acrobatics check.</p>
+  descriptors:
+    - evil
+    - shadow
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 5
+      cleric: 5
+      mesmerist: 5
+      oracle: 5
+      psychic: 5
+      sorcerer: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: one Tiny or larger living creature
+  school: ill
+  sources:
+    - id: PZO1135
+      pages: '111'
+  sr: false
+  subschool:
+    - shadow
+type: spell

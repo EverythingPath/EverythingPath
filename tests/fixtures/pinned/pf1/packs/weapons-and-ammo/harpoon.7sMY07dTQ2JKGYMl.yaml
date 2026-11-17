@@ -1,0 +1,92 @@
+_id: 7sMY07dTQ2JKGYMl
+_key: '!items!7sMY07dTQ2JKGYMl'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/harpoon.PNG
+name: Harpoon
+system:
+  actions:
+    - _id: wtem465dwb9lik33
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: dA307c8BeXLh7I5R
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Harpoon
+  description:
+    unidentified: >-
+      <p>A harpoon is a barbed spear with an attached rope 50 feet or less in
+      length. Most harpoons have metal points, but some use ivory or are made
+      entirely of wood. If you are proficient with the harpoon, it is a
+      grappling weapon. A harpoon's weight includes 10 pounds for the weight of
+      50 feet of hemp rope. The weight can be reduced by using shorter or
+      lighter rope. If you are not proficient with a harpoon, treat it like a
+      spear.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    grp: true
+    spc: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: 2h
+  weight:
+    value: 16
+type: weapon

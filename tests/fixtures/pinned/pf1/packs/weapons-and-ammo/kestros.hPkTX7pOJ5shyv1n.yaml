@@ -1,0 +1,63 @@
+_id: hPkTX7pOJ5shyv1n
+_key: '!items!hPkTX7pOJ5shyv1n'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/arrow-special.PNG
+name: Kestros
+system:
+  actions:
+    - _id: ew3jxlvxvtrbvy7x
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '50'
+  ammo:
+    type: dart
+  baseTypes:
+    - Kestros
+  description:
+    unidentified: >-
+      <p>The kestros is an oddly shaped Bronze Age sling used for launching
+      kestros darts. Your Strength modifier applies on damage rolls when you use
+      a kestros, just as it does for thrown weapons. You can fire-but not load-a
+      kestros with one hand. Loading a kestros is a move action that requires
+      two hands and provokes attacks of opportunity. Halflings treat the kestros
+      as a martial weapon.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

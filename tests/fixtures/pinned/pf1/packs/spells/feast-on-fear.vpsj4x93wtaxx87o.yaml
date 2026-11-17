@@ -1,0 +1,62 @@
+_id: vpsj4x93wtaxx87o
+_key: '!items!vpsj4x93wtaxx87o'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Feast on Fear
+system:
+  actions:
+    - _id: eedqhdyls7apgc6v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one or more living creatures (see text)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Each round, as a standard action, you can target a single living
+      creature of up to 9 HD and strike it with terrifying waves of power. If
+      the target fails its saving throw,  it becomes panicked for 1d4 rounds,
+      and you gain 5 temporary hit points (which disappear after 1 hour). After
+      the panic ends, the creature remains shaken for 10 minutes per caster
+      level, and it automatically becomes panicked again if it comes within
+      sight of you during that time.  These temporary hit points stack if they
+      come from different creatures.</p>
+  descriptors:
+    - emotion
+    - fear
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      mesmerist: 4
+      psychic: 5
+      shaman: 5
+      skald: 4
+      sorcerer: 5
+      spiritualist: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '181'
+type: spell

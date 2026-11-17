@@ -1,0 +1,70 @@
+_id: V1sxwRKkE3x6qoMX
+_key: '!items!V1sxwRKkE3x6qoMX'
+_stats:
+  coreVersion: '12.331'
+folder: rKQpQ1hrf04fhyGJ
+img: systems/pf1/icons/races/ifrit.png
+name: Spell-Like Ability (Ifrit - Lavasoul)
+system:
+  abilityType: sp
+  actions:
+    - _id: 62Zt8OVOOXyQRWCi
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft radius
+      damage:
+        parts:
+          - formula: 1d4
+            types:
+              - fire
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.wltdd4jmqepdy0qj]{burning
+        sands}</p><p>You cause sheets of hot sand to spread over the ground in
+        the area of effect. This layer of sand is @Distance[1 ft;dual] deep and
+        constantly shifts and churns, transforming the ground in the area into
+        difficult terrain. The sand itself burns, and periodic flames rise from
+        the grit. While these flames cannot ignite objects, they deal 1d4 points
+        of fire damage to any creature that ends its turn in contact with the
+        ground within the area of effect. At the end of the duration, the sand
+        vanishes, leaving no aftereffects (other than damage dealt).</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      measureTemplate:
+        color: '#f91010'
+        size: '15'
+        type: cone
+      name: Burning Sands
+      notes:
+        effect:
+          - '@Distance[20 ft;dual] radius'
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ifrit - Lavasoul</p><hr /><p>Lavasouls gain
+      @UUID[Compendium.pf1.spells.Item.wltdd4jmqepdy0qj]{burning sands} as a
+      spell-like ability.</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '245'
+    - id: PZO1116
+      pages: '160'
+    - id: PZO1121
+      pages: '127'
+  subType: racial
+  tags:
+    - Ifrit
+    - 'Lavasoul '
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
