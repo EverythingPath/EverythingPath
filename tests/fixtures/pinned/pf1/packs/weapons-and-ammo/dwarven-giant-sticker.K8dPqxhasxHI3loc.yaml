@@ -1,0 +1,64 @@
+_id: K8dPqxhasxHI3loc
+_key: '!items!K8dPqxhasxHI3loc'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/dwarven-giant-sticker.PNG
+name: Dwarven Giant-Sticker
+system:
+  actions:
+    - _id: 1vtp9fdst6oyk00o
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Dwarven Giant-Sticker
+  description:
+    unidentified: >-
+      <p>This heavy bladed spear is specifically designed for use against
+      giants, who have long reach and the ability to soak up large amounts of
+      damage.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  properties:
+    brc: true
+    rch: true
+  sources:
+    - id: PZO9491
+      pages: '8'
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

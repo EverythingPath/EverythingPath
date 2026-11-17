@@ -1,0 +1,63 @@
+_id: 30zWiZ47MwsViPEE
+_key: '!items!30zWiZ47MwsViPEE'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/commodities/wood/wood-carved-runes.webp
+name: Crushing Wheel
+system:
+  actions:
+    - _id: 0ukbx5m4s1v7f327
+      ability:
+        attack: _default
+        critRange: null
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(4, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Crushing Wheel
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 4d6; <b>Critical</b> -; <b>Range</b>
+      -; <b>Type</b> B</p><p><b>Crew</b> 4; <b>Aim</b> 0; <b>Load</b> 0;
+      <b>Speed</b> 0 ft.</p><p><b>Category</b> Close Assault; <b>Proficiency</b>
+      Siege Engine</p><h3>Description</h3><p>The bulk of this weapon is a steel
+      roller nearly 10 feet wide. Handles or a harness project from the axle,
+      allowing four orcs or one Large beast to push the crushing wheel from
+      behind. As a full-round action, its crew can roll the crushing wheel over
+      creatures in front of it. This functions as the trample monster ability
+      except as noted here. Creatures that are overrun fall prone and take 4d6
+      points of damage. Targets that succeed at a DC 15 Reflex saving throw take
+      only half damage and avoid falling prone. A crushing wheel has a hardness
+      of 10 and 100 hit points.</p><p>A crushing wheel is a Large siege
+      engine.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 500
+  size: lg
+  sources:
+    - id: PZO9276
+      pages: '39'
+  subType: siege
+  weaponSubtype: assault
+type: weapon

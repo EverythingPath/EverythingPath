@@ -1,0 +1,64 @@
+_id: g2obld7y0lpyztes
+_key: '!items!g2obld7y0lpyztes'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/movement/figure-running-gray.webp
+name: Water Walk
+system:
+  actions:
+    - _id: 1aoge3vgx0pzz4xn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one touched creature/level
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The transmuted creatures can tread on any liquid as if it were firm
+      ground. Mud, oil, snow, quicksand, running water, ice, and even lava can
+      be traversed easily, since the subjects' feet hover an inch or two above
+      the surface. Creatures crossing molten lava still take damage from the
+      heat because they are near it. The subjects can walk, run, charge, or
+      otherwise move across the surface as if it were normal ground.</p><p>If
+      the spell is cast underwater (or while the subjects are partially or
+      wholly submerged in whatever liquid they are in), the subjects are borne
+      toward the surface at 60 feet per round until they can stand on it.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      cleric: 3
+      hunter: 3
+      medium: 2
+      oracle: 3
+      psychic: 3
+      ranger: 3
+      shaman: 3
+      warpriest: 3
+      witch: 3
+    subDomain:
+      Oceans: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '368'
+type: spell

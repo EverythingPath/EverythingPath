@@ -1,0 +1,62 @@
+_id: xRAy5aBcjRvvbz8z
+_key: '!items!xRAy5aBcjRvvbz8z'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/thrown/dart-feathered.webp
+name: Rope Dart
+system:
+  actions:
+    - _id: dkrj4a47fwuy3fmv
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Rope Dart
+  description:
+    unidentified: >-
+      <p>This deceptively complex weapon appears to be nothing more than a
+      12-foot rope attached to a 6-inchlong, conical metal spike. Similar to a
+      meteor hammer, it can be whirled at great speeds, then aimed to strike and
+      pierce opponents with great reach. Once it strikes, the wielder can
+      quickly retrieve the weapon with a tug of the rope as a free action.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    blc: true
+    dst: true
+    mnk: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - monk
+    - thrown
+  weaponSubtype: ranged
+type: weapon

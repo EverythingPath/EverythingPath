@@ -1,0 +1,72 @@
+_id: CmjSKOVJuQnV8o3S
+_key: '!items!CmjSKOVJuQnV8o3S'
+_stats:
+  coreVersion: '12.343'
+folder: kB3UEM2uyAcNWHIc
+img: systems/pf1/icons/items/potions/grand-blue.jpg
+name: Holy water
+system:
+  actions:
+    - _id: Fw0IRIgJPiqt3Ozf
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: 2d4
+            types:
+              - untyped
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#00cfeb'
+        size: '5'
+        type: circle
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      splash: true
+      target:
+        value: Undead and evil outsiders
+      touch: true
+  baseTypes:
+    - Holy water
+  description:
+    value: >-
+      <p>Holy water damages undead creatures and evil outsiders almost as if it
+      were acid. A flask of holy water can be thrown as a splash
+      weapon.</p><p>Treat this attack as a ranged touch attack with a range
+      increment of 10 feet. A flask breaks if thrown against the body of a
+      corporeal creature, but to use it against an incorporeal creature, you
+      must open the flask and pour the holy water out onto the target. Thus, you
+      can douse an incorporeal creature with holy water only if you are adjacent
+      to it. Doing so is a ranged touch attack that does not provoke attacks of
+      opportunity.</p><p>A direct hit by a flask of holy water deals 2d4 points
+      of damage to an undead creature or an evil outsider. Each such creature
+      within 5 feet of the point where the flask hits takes 1 point of damage
+      from the splash.</p><p>Temples to good deities sell holy water at cost
+      (making no profit). Holy water is made using the
+      @UUID[Compendium.pf1.spells.Item.cyzbticmitktat5v]{bless water} spell.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 25
+  proficient: true
+  sources:
+    - id: PZO1123
+      pages: '107'
+    - id: PZO1110
+      pages: 158, 160
+  subType: misc
+  uses:
+    per: single
+  weaponSubtype: splash
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,58 @@
+_id: lamfr4u7b2f91stm
+_key: '!items!lamfr4u7b2f91stm'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Reinforce Armaments, Communal
+system:
+  actions:
+    - _id: lxh1v90l18ncc1l4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: armor suits or weapons touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.hmqkmh2d5no4nprp]{reinforce armaments},
+      except you divide the duration in 10-minute intervals among the objects
+      touched.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      magus: 2
+      occultist: 2
+      oracle: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a metal pin
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '241'
+type: spell
