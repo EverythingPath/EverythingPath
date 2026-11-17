@@ -1,0 +1,61 @@
+_id: fygngW2uhIVwedwz
+_key: '!items!fygngW2uhIVwedwz'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/clubs/club-banded-steel.webp
+name: Taiaha
+system:
+  actions:
+    - _id: gto4px1fhl7j18fn
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Taiaha
+  description:
+    unidentified: >-
+      <p>The Stone Age taiaha is a long, heavy stick, club-shaped at one end and
+      tipped with a wooden or metal spear point at the other. You wield it with
+      a combination of solid strikes with the club and fending motions with the
+      spear. A taiaha can be wielded as a martial weapon that deals 1d8 points
+      of bludgeoning damage (1d6 if Small) and has a x2 critical.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    dbl: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - double
+    - hammers
+  weaponSubtype: 1h
+  weight:
+    value: 8
+type: weapon

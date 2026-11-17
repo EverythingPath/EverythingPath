@@ -1,0 +1,57 @@
+_id: zbjimz8u9siobpbp
+_key: '!items!zbjimz8u9siobpbp'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Aquatic Trail
+system:
+  actions:
+    - _id: k485uphr68a03228
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: circle centered on you, with a radius of 100 feet + 10 feet per level
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: 100 + (10 * @cl)
+        type: circle
+      name: Use
+      range:
+        units: medium
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You use divination magic to enhance the underwater trails in the area
+      around you, allowing you to track creatures through the water as if across
+      soft ground as long as they passed through the area less than 1 week ago
+      (this lets you notice trails that are much older than normal underwater
+      trails). The spell's area moves with you, so you can follow the trail
+      through the water over long distances. Other creatures can also follow the
+      trail as long as they move with you. Because of the plethora of sea
+      creatures in the higher zones, it's possible that the trail that most
+      interests you will be covered by the trails of other aquatic creatures,
+      making this spell even more useful than normal in the Abyssal and
+      Abaddonian zones.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 2
+      inquisitor: 3
+      ranger: 2
+      shaman: 3
+  level: 3
+  school: div
+  sources:
+    - id: PZO92102
+      pages: '59'
+  sr: false
+type: spell

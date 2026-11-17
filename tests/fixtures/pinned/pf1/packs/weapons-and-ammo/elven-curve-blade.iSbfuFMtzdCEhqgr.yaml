@@ -1,0 +1,68 @@
+_id: iSbfuFMtzdCEhqgr
+_key: '!items!iSbfuFMtzdCEhqgr'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/elven-curve-blade.PNG
+name: Elven Curve Blade
+system:
+  actions:
+    - _id: 57vgifsz7egiv60a
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Elven Curve Blade
+  description:
+    unidentified: >-
+      <p>Essentially a longer version of a scimitar, but with a thinner blade,
+      the elven curve blade is exceptionally rare. You receive a +2 circumstance
+      bonus to your CMD whenever a foe attempts to sunder your elven curve blade
+      because of its flexible metal.</p><p>You can use the Weapon Finesse feat
+      to apply your Dexterity modifier instead of your Strength modifier on
+      attack rolls with an elven curve blade that is sized for you, even though
+      it isn't a light weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 80
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 143, 145
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  tags:
+    - Elf
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 7
+type: weapon

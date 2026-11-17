@@ -1,0 +1,72 @@
+_id: fppezc2gz2fwb5jw
+_key: '!items!fppezc2gz2fwb5jw'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Glue Seal
+system:
+  actions:
+    - _id: ass2iivmvtzg8pdd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: see text
+      target:
+        value: one object or one 5-ft. square
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cover a solid surface with a layer of sticky glue. Anyone in the
+      area when the spell is cast must attempt a Reflex save. Those who fail
+      become entangled, but can break free by succeeding at a combat maneuver
+      check or an Escape Artist check as a standard action against the DC of
+      this spell. The area of the spell is considered difficult terrain. A
+      creature moving through the glue must succeed at a combat maneuver check
+      or an Escape Artist check as part of its move action (DC = the spell's
+      DC). Creatures that fail lose their movement and become entangled in the
+      first square they enter.</p><p>The spell can also be used to create a
+      sticky coating on an item. A creature holding a targeted item can attempt
+      a Reflex saving throw against the spell's DC. If the initial saving throw
+      succeeds, the item is unaffected. If it fails, the item is stuck in place.
+      If an affected item is connected to another item (such as a sword in a
+      sheath or a cork in a potion bottle), it cannot be separated from the
+      other item unless the creature succeeds at a combat maneuver check or a
+      Strength check as a move action to free it (DC = the spell's DC). A
+      creature must succeed at saving throw each time it attempts to use the
+      sticky item; otherwise, the item becomes stuck to the creature. Sticky
+      armor or clothing imposes a -10 circumstance penalty on Escape Artist
+      checks and combat maneuver checks to escape a grapple attempted by the
+      wearer, as well as to the wearer's CMD to avoid being grappled.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      magus: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      wizard: 1
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '183'
+  sr: false
+  subschool:
+    - creation
+type: spell
