@@ -1,0 +1,46 @@
+_id: r1lmrh4k1ycuowcp
+_key: '!items!r1lmrh4k1ycuowcp'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/weapons/staves/staff-animal-skull-feathers.webp
+name: Hex Ward
+system:
+  actions:
+    - _id: e1w79d3vktl01x0n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You give the target a +4 resistance bonus on saving throws against
+      witch hexes.</p>
+  learnedAt:
+    class:
+      inquisitor: 1
+      occultist: 1
+      shaman: 1
+      witch: 1
+  school: abj
+  sources:
+    - id: PZO1117
+      pages: '223'
+type: spell

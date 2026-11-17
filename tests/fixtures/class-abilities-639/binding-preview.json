@@ -1,0 +1,754 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/kXXz1lO4i7CibHJ9",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "class-abilities",
+      "name": "Channel Energy",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.</p>\n<p>A good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to <em>undead</em> creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal <em>undead</em> creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).</p>\n<p>Channeling energy causes a burst that affects all creatures of one type (either <em>undead</em> or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a <em>Will</em> save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric’s level + the cleric’s <em>Charisma</em> modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her <em>Charisma</em> modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.</p>\n<p>A cleric must be able to present her holy symbol to use this ability.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "40"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "1f2894xiyq8pweq5",
+                "actionType": "heal",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@class.level / 2))d6",
+                      "types": ["positive"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Positive - Heal living",
+                "range": {
+                  "units": "ft",
+                  "value": "30"
+                },
+                "target": {
+                  "value": "self; affects living"
+                }
+              },
+              {
+                "_id": "iPtvZlT6WRM4tLO4",
+                "actionType": "save",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@class.level / 2))d6",
+                      "types": ["positive"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Positive - Harm undead",
+                "range": {
+                  "units": "ft",
+                  "value": "30"
+                },
+                "save": {
+                  "dc": "10 + floor(@class.level / 2) + @abilities.cha.mod",
+                  "description": "Will halves damage",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "Undead"
+                }
+              },
+              {
+                "_id": "eUIoqEbx1rQqZbaG",
+                "actionType": "heal",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@class.level / 2))d6",
+                      "types": ["negative"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Negative - Heal undead",
+                "range": {
+                  "units": "ft",
+                  "value": "30"
+                },
+                "target": {
+                  "value": "Undead"
+                }
+              },
+              {
+                "_id": "3SRwcyD8hdoyiFe4",
+                "actionType": "save",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "(ceil(@class.level / 2))d6",
+                      "types": ["negative"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "measureTemplate": {
+                  "size": "30",
+                  "type": "circle"
+                },
+                "name": "Negative - Harm living",
+                "range": {
+                  "units": "ft",
+                  "value": "30"
+                },
+                "save": {
+                  "dc": "10 + floor(@class.level / 2) + @abilities.cha.mod",
+                  "description": "Will halves damage",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "Undead"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Cleric"]
+            },
+            "uses": {
+              "maxFormula": "3 + @abilities.cha.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-11",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 6d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "11:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 6d6: the Cleric table's 11th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-13",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 7d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "13:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 7d6: the Cleric table's 13th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-15",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 8d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "15:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 8d6: the Cleric table's 15th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-17",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 9d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "17:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 9d6: the Cleric table's 17th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-19",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 10d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "19:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 10d6: the Cleric table's 19th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-3",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 2d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "3:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 2d6: the Cleric table's 3rd-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-3",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-3",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-3",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-3",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-3",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-5",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 3d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "5:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 3d6: the Cleric table's 5th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-7",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 4d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "7:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 4d6: the Cleric table's 7th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    },
+    {
+      "externalKey": "everythingpath/cleric-channel-energy-9",
+      "upstreamKey": "pf1/kXXz1lO4i7CibHJ9",
+      "pack": "everythingpath-schedules",
+      "name": "Channel Energy 5d6",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/kXXz1lO4i7CibHJ9",
+        "part": "9:pf1/kXXz1lO4i7CibHJ9"
+      },
+      "description": "<p>Channel Energy 5d6: the Cleric table's 9th-level row of Channel Energy (Pathfinder RPG Core Rulebook pp. 38–48). The Channel Energy entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "38–48"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/cleric-channel-energy-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/kXXz1lO4i7CibHJ9"
+    }
+  ]
+}

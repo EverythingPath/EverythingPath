@@ -1,0 +1,48 @@
+_id: Wl3FUflcmvQP0PaQ
+_key: '!items!Wl3FUflcmvQP0PaQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/weapon-finesse.jpg
+name: Sneak Attack (SLA)
+system:
+  actions:
+    - _id: Rge5ZGwhYBkDtwDR
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (floor(@class.level / 3))d6
+            types:
+              - precision
+      name: Use
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+  associations:
+    classes:
+      - Slayer
+  description:
+    value: >-
+      <p>At 3rd level, if a slayer catches an opponent unable to defend itself
+      effectively from his attack, he can strike a vital spot for extra damage.
+      The slayer’s attack deals extra damage anytime his target would be denied
+      a Dexterity bonus to AC (whether the target actually has a Dexterity bonus
+      or not), or when the slayer flanks his target. This additional damage is
+      1d6 at 3rd level, and increases by 1d6 every 3 levels thereafter. Should
+      the slayer score a critical hit with a sneak attack, this additional
+      damage is not multiplied. Ranged attacks can count as sneak attacks only
+      if the target is within 30 feet.<p>With a weapon that deals nonlethal
+      damage (like a sap, whip, or unarmed strike), a slayer can make a sneak
+      attack that deals nonlethal damage instead of lethal damage. He cannot use
+      a weapon that deals lethal damage to deal nonlethal damage in a sneak
+      attack, not even with the usual –4 penalty.<p>The slayer must be able to
+      see the target well enough to pick out a vital spot and must be able to
+      reach such a spot. A slayer cannot use sneak attack while striking a
+      creature with concealment.</p>
+  sources:
+    - id: PZO1129
+      pages: '54'
+  subType: classFeat
+type: feat

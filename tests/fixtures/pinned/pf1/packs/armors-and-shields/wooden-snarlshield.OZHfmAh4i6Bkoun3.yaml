@@ -1,0 +1,57 @@
+_id: OZHfmAh4i6Bkoun3
+_key: '!items!OZHfmAh4i6Bkoun3'
+_stats:
+  coreVersion: '12.343'
+folder: DtVJVwL87ELQxk7u
+img: systems/pf1/icons/items/armor/shield-heavy-wood.png
+name: Wooden Snarlshield
+system:
+  actions:
+    - _id: T05SJ7ZCEohKivG5
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Bash
+      range:
+        units: melee
+  armor:
+    acp: 3
+    material:
+      base:
+        value: wood
+    value: 2
+  description:
+    unidentified: >-
+      <p>The snarlshield is a heavy shield that features a dozen rods protruding
+      from its surface. When used as a weapon to bash an opponent, a snarlshield
+      has the disarm quality.</p>
+  equipmentSubtype: heavyShield
+  hardness: 5
+  hp:
+    base: 15
+  price: 50
+  slot: shield
+  sources:
+    - id: PZO9481
+      pages: '6'
+    - id: PZO9411
+      pages: '22'
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 20
+type: equipment
