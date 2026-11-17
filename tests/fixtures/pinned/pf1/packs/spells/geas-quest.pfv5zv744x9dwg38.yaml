@@ -1,0 +1,74 @@
+_id: pfv5zv744x9dwg38
+_key: '!items!pfv5zv744x9dwg38'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/energy-stream-link-large-orange.webp
+name: Geas/Quest
+system:
+  actions:
+    - _id: e0sjk450htrmmm6l
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: 1 day/level or until discharged
+      name: Use
+      range:
+        units: close
+      target:
+        value: one living creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions similarly to
+      @UUID[Compendium.pf1.spells.Item.ofw6gnp6r7t2wcba]{lesser geas}, except
+      that it affects a creature of any HD and allows no saving throw.</p><p>If
+      the subject is prevented from obeying the <em>geas/quest</em> for 24
+      hours, it takes a -3 penalty to each of its ability scores. Each day,
+      another -3 penalty accumulates, up to a total of -12. No ability score can
+      be reduced to less than 1 by this effect. The ability score penalties are
+      removed 24 hours after the subject resumes obeying the
+      <em>geas/quest</em>.</p><p>A remove curse spell ends a <em>geas/quest</em>
+      spell only if its caster level is at least two higher than your caster
+      level. <em>Break enchantment</em> does not end a <em>geas/quest</em>, but
+      limited <em>wish</em>, miracle, and <em>wish</em> do.</p><p>Bards,
+      sorcerers, and wizards usually refer to this spell as <em>geas,</em> while
+      clerics call the same spell quest.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+    - curse
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      cleric: 6
+      inquisitor: 5
+      mesmerist: 6
+      oracle: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      warpriest: 6
+      witch: 6
+      wizard: 6
+    domain:
+      Charm: 6
+      Nobility: 6
+    subDomain:
+      Ancestors: 6
+      Honor: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '288'
+  subschool:
+    - compulsion
+type: spell

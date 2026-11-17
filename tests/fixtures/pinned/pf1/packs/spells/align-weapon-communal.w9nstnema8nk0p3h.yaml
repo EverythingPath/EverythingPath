@@ -1,0 +1,54 @@
+_id: w9nstnema8nk0p3h
+_key: '!items!w9nstnema8nk0p3h'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/weapons/swords/sword-winged-pink.webp
+name: Align Weapon, Communal
+system:
+  actions:
+    - _id: jyztvznlzyboz6mv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: weapons or projectiles touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.zujht80bgjdk9cyb]{align weapon}, except
+      you divide the duration in 1-minute increments between any number of
+      touched weapons. Every group of up to 50 projectiles (which must be
+      together at the time of casting) counts as one weapon for the purpose of
+      dividing the spell's duration.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1129
+      pages: '173'
+type: spell

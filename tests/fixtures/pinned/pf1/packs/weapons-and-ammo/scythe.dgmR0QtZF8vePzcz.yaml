@@ -1,0 +1,66 @@
+_id: dgmR0QtZF8vePzcz
+_key: '!items!dgmR0QtZF8vePzcz'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/scythe.PNG
+name: Scythe
+system:
+  actions:
+    - _id: c067qqd7r9b7lti3
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Scythe
+  description:
+    unidentified: >-
+      <p>This weapon consists of a long wooden shaft with protruding handles and
+      a sharp curved blade set at a right angle. Derived from a farm tool used
+      to mow down crops, a scythe requires two hands to use, and is unwieldy but
+      capable of inflicting grievous wounds. Its connotations as a symbol of
+      death due to its association with reaping also make the scythe a
+      particularly intimidating weapon.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 18
+  properties:
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: '143'
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,48 @@
+_id: 67AX54HYIzwc8xC5
+_key: '!items!67AX54HYIzwc8xC5'
+_stats:
+  coreVersion: '12.331'
+folder: VvjAmbtqRiEyxX0b
+img: icons/svg/book.svg
+name: Emissary
+system:
+  actions:
+    - _id: 3DHiFv460xP2Xh4E
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, you can roll twice when making a Bluff or Diplomacy
+        check and take the better roll.</p>
+      name: Roll twice, take better  Bluff or Diplomacy
+      notes:
+        effect:
+          - '@Skill[blf]'
+          - '@Skill[dip]'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: skill.blf
+      text: >-
+        Once per day, you can roll twice when making a Bluff or Diplomacy check
+        and take the better roll.
+    - target: skill.dip
+      text: Once per day, you can roll twice and take the better roll.
+  description:
+    value: >-
+      <p>Once per day, members of this race can roll twice when making a Bluff
+      or Diplomacy check and take the better roll.</p>
+  racePoints: 1
+  sources:
+    - id: PZO1121
+      pages: '225'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: featSkills
+  traitType: standard
+type: feat

@@ -1,0 +1,54 @@
+_id: arzq5ar5gcteqwtp
+_key: '!items!arzq5ar5gcteqwtp'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Steady Saddle
+system:
+  actions:
+    - _id: sa2gvjnm8x8xyx3e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: saddle touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A saddle affected by this spell becomes more comfortable to sit in, and
+      the magic stabilizes any shaking motion caused by riding at a high speed.
+      For the duration of the spell, the penalty to use ranged weapons while
+      mounted in the target saddle decreases by 2. This stacks with the benefit
+      of the Mounted Archery feat and similar effects. Furthermore, the DC for
+      any concentration check required as a result of the mount's movement
+      decreases by 2.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      druid: 1
+      hunter: 1
+      paladin: 1
+      ranger: 1
+  school: trs
+  sources:
+    - id: PZO1136
+      pages: '177'
+type: spell
