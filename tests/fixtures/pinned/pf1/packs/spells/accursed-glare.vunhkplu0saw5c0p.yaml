@@ -1,0 +1,56 @@
+_id: vunhkplu0saw5c0p
+_key: '!items!vunhkplu0saw5c0p'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Accursed Glare
+system:
+  actions:
+    - _id: c05t1aovc7h9fk6v
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You channel a fell curse through your glare. If the target fails its
+      saving throw, it begins to obsessively second-guess its actions and
+      attract bad luck. Whenever the target attempts an attack roll or saving
+      throw while the curse lasts, it must roll twice and take the lower result.
+      While you cast this spell, an ally within range of the subject can attempt
+      an Intimidate check as a move action (DC = save DC of this spell); on a
+      success, the ally adds its own glare to yours, granting you a +2 bonus on
+      your caster level check to overcome spell resistance (if any). Multiple
+      allies can attempt Intimidate checks; this bonus stacks.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9439
+      pages: '9'
+type: spell

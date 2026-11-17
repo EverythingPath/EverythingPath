@@ -1,0 +1,72 @@
+_id: a111te7xsmnclbjr
+_key: '!items!a111te7xsmnclbjr'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Lissalan Snake Sigil
+system:
+  actions:
+    - _id: ao9byeqsb7977aws
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until discharged; 1 day/level; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Reflex negates
+        type: ref
+      target:
+        value: one touched book or written work
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>There are seven variants of this spell, one for each of the
+      Thassilonian schools of magic. Each functions like
+      @UUID[Compendium.pf1.spells.Item.p8dbns0wei8eayas]{sepia snake sigil} (and
+      counts as that spell for the purpose of combining other spells that hide
+      or garble text), except instead of trapping the subject, the triggered
+      sigil's effect depends on this spell's school. This effect lasts for 1
+      day/level. This is a curse effect that can be removed via <em>remove
+      curse</em>. <em>Abjuration</em>: All beneficial magical effects on the
+      target last half as long as normal. <em>Conjuration</em>: The target is
+      nauseated. This is a poison effect. <em>Enchantment</em>: The target takes
+      a 1d6 penalty to Intelligence, Wisdom, and Charisma. This is a compulsion
+      effect. <em>Evocation</em>: The target gains vulnerability to an energy
+      type, chosen randomly from the following: acid, cold, electricity, or
+      fire. This is an acid, cold, electricity, or fire effect.
+      <em>Illusion</em>: The target's vision is blurred, giving it a -4 penalty
+      on Perception checks relating to vision, and the target treats all other
+      creatures as having <em>displacement</em>. This is a glamer effect.
+      <em>Necromancy</em>: The target is exhausted. This condition cannot be
+      removed with rest. <em>Transmutation</em>: Target is affected by
+      <em>slow</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      cleric: 3
+      oracle: 3
+      sorcerer: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  materials:
+    gpValue: 500
+    value: powdered amber worth 500 gp and a snake scale
+  school: abj
+  sources:
+    - id: PZO9065
+      pages: '75'
+  sr: false
+type: spell

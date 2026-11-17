@@ -1,0 +1,64 @@
+_id: cF6y7ikfa8mSiIcE
+_key: '!items!cF6y7ikfa8mSiIcE'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/orc-skull-ram.png
+name: Orc Skull Ram
+system:
+  actions:
+    - _id: ais88yii3zunvcnb
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Orc Skull Ram
+  description:
+    unidentified: >-
+      <p>This weapon consists of a wooden log with a shoulder strap to carry
+      some of the weight. The name comes from the orc tradition of making the
+      ram's head out of a large skull. On a successful critical hit with a skull
+      ram, you can attempt a combat maneuver check to bull rush your opponent as
+      a free action.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    rch: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  tags:
+    - Orc
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 20
+type: weapon

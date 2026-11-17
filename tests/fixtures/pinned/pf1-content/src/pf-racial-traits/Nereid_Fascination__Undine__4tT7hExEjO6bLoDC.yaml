@@ -1,0 +1,60 @@
+_id: 4tT7hExEjO6bLoDC
+_key: '!items!4tT7hExEjO6bLoDC'
+_stats:
+  coreVersion: '12.331'
+folder: NdqSKNr56WP9EuED
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Nereid Fascination (Undine)
+system:
+  abilityType: su
+  actions:
+    - _id: hlpJtUQnuZvmTODl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft (6 m) Aura
+      description: >-
+        <p>@UUID[Compendium.pf1.class-abilities.Item.tWE66WvFjS1o0S4y]{Fascinate}</p>
+      duration:
+        units: round
+        value: max(1, floor(@attributes.hd.total / 2))
+      name: Aura
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.cha.mod
+        description: Negates
+        type: will
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Some undines can trace their ancestry to
+      nereids as well as to outsiders. Once per day as a standard action, such
+      an undine can create a @Distance[20 ft;dual]-radius aura that causes
+      humanoids within the aura's range to become fascinated with her for a
+      number of rounds equal to 1/2 the undine's character level (minimum 1).
+      Targets may resist with a Will save (DC 10 + 1/2 the undine's level + the
+      undine's Charisma modifier). This is a supernatural ability. This racial
+      trait replaces the spell-like ability racial trait.</p><p><strong>Related
+      buff: </strong>@Toggle[Nereid Fascination]</p>
+  links:
+    supplements:
+      - name: Nereid Fascination
+        uuid: Compendium.pf-content.pf-buffs.Item.jIF1fgTXwk7D94Ra
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '175'
+  subType: racial
+  tags:
+    - Undine
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,49 @@
+_id: 26d575hwkhmftrbw
+_key: '!items!26d575hwkhmftrbw'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Fungal Infestation
+system:
+  actions:
+    - _id: 7cd2w0h5mzsh8ym6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: 1d3
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You coat the target in necrotic fungus that makes its flesh soft and
+      fragile. Toadstools, ringworm, and other disgusting fungal growths sprout
+      from its skin. The target takes 1d3 points of Charisma damage. Any
+      physical attack against the target automatically adds 1d6 points of bleed
+      damage.</p>
+  descriptors:
+    - disease
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '221'
+type: spell
