@@ -1,0 +1,44 @@
+_id: hGk1y2z11CtFqbys
+_key: '!items!hGk1y2z11CtFqbys'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Cat's Luck
+system:
+  abilityType: ex
+  actions:
+    - _id: Je7qR1dicqIrwmbm
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: reflex roll twice
+  description:
+    value: >-
+      <p><strong>Prerequisite</strong>: The race has at least a +2 racial bonus
+      to Dexterity</p><hr /><p>Members of this race gain the following
+      extraordinary ability: Once per day, when a member of this race makes a
+      Reflex saving throw, it can roll the saving throw twice and take the
+      better result. It must decide to use this ability before attempting the
+      saving throw.</p>
+  racePoints: 1
+  scriptCalls:
+    - _id: pBps84AH
+      category: use
+      hidden: false
+      img: null
+      name: Reflex roll2
+      type: script
+      value: |-
+        actor.rollSavingThrow("ref");
+        actor.rollSavingThrow("ref");
+  sources:
+    - id: PZO1121
+      pages: '221'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+type: feat

@@ -1,0 +1,144 @@
+_id: 75BtLXILwFjnYiej
+_key: '!items!75BtLXILwFjnYiej'
+_stats:
+  coreVersion: '12.343'
+folder: VjHMI7ReTbGrx4sB
+img: icons/weapons/staves/staff-ornate-cross.webp
+name: Staff of Healing
+system:
+  actions:
+    - _id: XpZ0ZnWkfmNsq5FP
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d8 + min(15, @cl)
+            types:
+              - positive
+      duration:
+        units: inst
+      img: systems/pf1/icons/spells/heal-sky-2.jpg
+      name: Cure Serious Wounds (1 charge)
+      range:
+        units: touch
+      save:
+        dc: 10 + 3[SL] + 1[Casting Ability]
+        description: Will half; see text
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+    - _id: FoiXx7CAjp8voIZx
+      actionType: heal
+      activation:
+        cost: 3
+        type: round
+        unchained:
+          cost: 9
+          type: action
+      damage:
+        parts:
+          - formula: 1d4
+            types:
+              - untyped
+      duration:
+        units: inst
+      img: systems/pf1/icons/spells/heal-jade-1.jpg
+      name: Lesser Restoration (1 charge)
+      range:
+        units: touch
+      save:
+        dc: 10 + 3[SL] + 1[Casting Ability]
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+    - _id: bpXCBA9Ig19O0naE
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      img: icons/creatures/eyes/human-single-blue.webp
+      name: Remove Blindness/Deafness (2 charges)
+      range:
+        units: touch
+      save:
+        dc: 10 + 3[SL] + 1[Casting Ability]
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+      uses:
+        autoDeductChargesCost: '2'
+    - _id: WoKem5DGGT5YaGTU
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      img: icons/magic/life/cross-explosion-burst-green.webp
+      name: Remove Disease (3 charges)
+      range:
+        units: touch
+      save:
+        dc: 10 + 3[SL] + 1[Casting Ability]
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+      uses:
+        autoDeductChargesCost: '3'
+  aura:
+    school: con
+  cl: 8
+  description:
+    instructions: >-
+      <p>Spells cast via staves can use characters caster level. Adjust saving
+      throws and other caster level dependend variables in that case.</p>
+    unidentified: <p>This white ash staff is decorated with inlaid silver runes.</p>
+    value: >-
+      <p>This white ash staff is decorated with inlaid silver runes. It allows
+      use of the following
+      spells:</p><ul><li>@UUID[Compendium.pf1.spells.Item.norn02g8zdsspf2j]{Cure
+      serious wounds} (1
+      charge)</li><li>@UUID[Compendium.pf1.spells.Item.fxz69pwpqt9b6uss]{Lesser
+      restoration} (1
+      charge)</li><li>@UUID[Compendium.pf1.spells.Item.kundr7ekztiqml5t]{Remove
+      blindness/deafness} (2
+      charges)</li><li>@UUID[Compendium.pf1.spells.Item.ocbjt6z7amc3yn8w]{Remove
+      disease} (3
+      charges)</li></ul><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.lIlQnrRkC3YJ1V6t]{Craft Staff}, cure
+      serious wounds, lesser restoration, remove blindness/deafness, remove
+      disease; <strong>Cost</strong> 14,800 gp</p>
+  hp:
+    base: 10
+  price: 29600
+  sources:
+    - id: PZO1123
+      pages: '197'
+    - id: PZO1110
+      pages: '494'
+  subType: staff
+  unidentified:
+    name: Ashen staff
+  uses:
+    maxFormula: '10'
+    per: charges
+    value: 10
+  weight:
+    value: 5
+type: consumable

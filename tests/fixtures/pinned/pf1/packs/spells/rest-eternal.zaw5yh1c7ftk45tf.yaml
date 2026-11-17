@@ -1,0 +1,57 @@
+_id: zaw5yh1c7ftk45tf
+_key: '!items!zaw5yh1c7ftk45tf'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Rest Eternal
+system:
+  actions:
+    - _id: 7n9p0o5pf0ruimgn
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one dead creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You place a curse upon a dead creature that bars its spirit from
+      returning. Anyone casting a spell that would communicate with the dead
+      creature, return it to life, or turn it into an undead creature must
+      succeed on a caster level check with a DC of 11 plus your caster level.
+      <i>Rest eternal</i> cannot be dispelled, but it can be negated with
+      <i>remove curse</i> or <i>break enchantment</i>.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      cleric: 4
+      druid: 5
+      hunter: 5
+      oracle: 4
+      shaman: 5
+      warpriest: 4
+      witch: 5
+    subDomain:
+      Ancestors: 4
+  level: 4
+  materials:
+    value: ashes and a vial of holy or unholy water
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '238'
+  sr: false
+type: spell

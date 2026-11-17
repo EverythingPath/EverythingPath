@@ -1,0 +1,61 @@
+_id: d1hd50iw75u1my72
+_key: '!items!d1hd50iw75u1my72'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Treacherous Teleport
+system:
+  actions:
+    - _id: jr9xl45sk4tdnlnq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      save:
+        description: none and Will negates (object)
+        type: will
+      target:
+        value: you and touched objects or other touched willing creatures
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.ptqu8gtrujxsvwy1]{teleport} except that
+      you can opt to intentionally cause any number of the creatures traveling
+      with you to suffer a mishap or arrive in a specific different location you
+      visualize simultaneously with the original destination, or both. Attempts
+      to identify treacherous <em>teleport</em> with a skill check incorrectly
+      identify it as <em>teleport</em> ( see t he r use d escriptor o n page
+      192).</p>
+  descriptors:
+    - ruse
+  learnedAt:
+    class:
+      arcanist: 6
+      magus: 6
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      spiritualist: 6
+      summoner: 6
+      summonerUnchained: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  school: con
+  sources:
+    - id: PZO1134
+      pages: '227'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

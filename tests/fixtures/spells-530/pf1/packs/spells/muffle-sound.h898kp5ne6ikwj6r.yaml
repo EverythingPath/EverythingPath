@@ -1,0 +1,57 @@
+_id: h898kp5ne6ikwj6r
+_key: '!items!h898kp5ne6ikwj6r'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Muffle Sound
+system:
+  actions:
+    - _id: 7bzq7u9srdleqk32
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: 1 ally/level
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You suppress sounds made by the targets, granting them a +4 bonus on
+      Stealth checks. The targets have a 20% chance of spell failure when
+      casting spells with verbal components or using abilities that have audible
+      components (such as some bardic performances). This spell does not hamper
+      the targets' ability to hear other sounds and provides no protection
+      against language-dependent or sonic spells and effects.</p>
+  learnedAt:
+    class:
+      bard: 2
+      cleric: 2
+      inquisitor: 2
+      mesmerist: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      warpriest: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1129
+      pages: '188'
+  subschool:
+    - glamer
+type: spell

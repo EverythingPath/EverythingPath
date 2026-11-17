@@ -1,0 +1,74 @@
+_id: IHFIFyvEVyfS68C2
+_key: '!items!IHFIFyvEVyfS68C2'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: systems/pf1/icons/skills/green_29.jpg
+name: Toxic Blood
+system:
+  actions:
+    - _id: sZA7UaNr7X79GpKG
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates; see text
+        type: fort
+      target:
+        value: creature touched
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target creature’s blood becomes poisonous. Anytime the target takes
+      piercing or slashing damage, a spray of acidic blood spurts from its body
+      in the direction of the opponent who inflicted the wound. This blood
+      travels in a 10-foot line, striking the first creature or object it
+      touches. A creature struck by the blood is exposed to black adder venom
+      and must save against the poison as normal, with a DC equal to the spell’s
+      DC.</p><p><em>Toxic blood</em> can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{permanency} spell cast by a
+      caster of 11th level or higher, at a cost of 7,500 gp.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bloodrager: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      investigator: 3
+      magus: 3
+      oracle: 3
+      ranger: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: vial of black adder venom
+  school: trs
+  sources:
+    - id: PZO9487
+      pages: '11'
+  sr: false
+type: spell

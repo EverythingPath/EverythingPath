@@ -1,0 +1,527 @@
+{
+  "rootKeys": [
+    "pf1/wy9knmff355kb7iv",
+    "pf1/x23pz2agjub1eh89",
+    "pf1/xlch97n99ea0pog6",
+    "pf1/xpbgovfguxskvniy",
+    "pf1/xpwa181h8eghfew2",
+    "pf1/xxtxuzcx83mazik7"
+  ],
+  "entries": [
+    {
+      "externalKey": "pf1/24zg8a05hqum3e6j",
+      "upstreamKey": "pf1/24zg8a05hqum3e6j",
+      "pack": "spells",
+      "name": "Mending",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "adept": 0,
+          "arcanist": 0,
+          "bard": 0,
+          "cleric": 0,
+          "druid": 0,
+          "hunter": 0,
+          "occultist": 0,
+          "oracle": 0,
+          "psychic": 0,
+          "shaman": 0,
+          "skald": 0,
+          "sorcerer": 0,
+          "spiritualist": 0,
+          "summoner": 0,
+          "summonerUnchained": 0,
+          "warpriest": 0,
+          "witch": 0,
+          "wizard": 0
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "312"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "5csg4eo8ivrd6t9b",
+                "actionType": "spellsave",
+                "activation": {
+                  "cost": 10,
+                  "type": "minute",
+                  "unchained": {
+                    "cost": 10,
+                    "type": "minute"
+                  }
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "ft",
+                  "value": "10"
+                },
+                "save": {
+                  "description": "Will negates (object)",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "one object of up to 1 lb./level"
+                }
+              }
+            ],
+            "uses": {
+              "autoDeductChargesCost": "0"
+            }
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "When this Spell is cast: Restore 1d4 hit points to a damaged object with all pieces present; remove broken at half original hit points. Repairing magic items requires caster level at least the item’s; destroyed magic items regain no magic. Creatures, including constructs, are unaffected; transmutation/warping is not reversed, though damage can be repaired."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/2y9e1l6zso9tdg0a",
+      "upstreamKey": "pf1/2y9e1l6zso9tdg0a",
+      "pack": "spells",
+      "name": "Reduce Person",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 1,
+          "arcanist": 1,
+          "bloodrager": 1,
+          "investigator": 1,
+          "magus": 1,
+          "medium": 1,
+          "occultist": 1,
+          "psychic": 1,
+          "sorcerer": 1,
+          "summoner": 1,
+          "summonerUnchained": 1,
+          "witch": 1,
+          "wizard": 1
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>This spell causes instant diminution of a humanoid creature, halving its height, length, and width and dividing its weight by 8. This decrease changes the creature's size category to the next smaller one. The target gains a +2 size bonus to Dexterity, a -2 size penalty to Strength (to a minimum of 1), and a +1 bonus on attack rolls and AC due to its <i>reduced</i> size.</p><p>A Small humanoid creature whose size decreases to Tiny has a space of 2-1/2 feet and a natural reach of 0 feet (meaning that it must enter an opponent's square to attack). A Large humanoid creature whose size decreases to Medium has a space of 5 feet and a natural reach of 5 feet. This spell doesn't change the target's speed.</p><p>All equipment worn or carried by a creature is similarly <i>reduced</i> by the spell.</p><p>Melee and projectile weapons deal less damage. Other magical properties are not affected by this spell. Any <i>reduced</i> item that leaves the <i>reduced</i> creature's possession (including a projectile or thrown weapon) instantly returns to its normal size. This means that thrown weapons deal their normal damage (projectiles deal damage based on the size of the weapon that fired them).</p><p>Multiple magical effects that reduce size do not stack. <i>Reduce person</i> counters and dispels <i>enlarge person</i>.</p><p><i>Reduce person</i> can be made permanent with a <i>permanency</i> spell.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "330"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "xsg40i18jctsvrdm",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "round",
+                  "unchained": {
+                    "cost": 3,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "close"
+                },
+                "save": {
+                  "description": "Fortitude negates",
+                  "type": "fort"
+                },
+                "target": {
+                  "value": "one humanoid creature"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "field": "curation.mechanics",
+          "reason": "Separate Reduce Person effect: +2 size Dexterity, −2 size Strength with minimum 1, +1 size attack/AC and dependent size/damage/space/reach changes. Recording the Spell grants no size change."
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "When this Spell is cast: One humanoid shrinks one category: dimensions halve, weight becomes one-eighth, +2 size Dexterity, −2 size Strength (minimum 1), +1 attack and AC for size. Speed unchanged; Small-to-Tiny space is 2½ feet/reach 0, Large-to-Medium space/reach 5 feet. Gear shrinks; melee/projectile damage reduces, other magic is unchanged. Leaving possession restores normal size, so thrown weapons deal normal damage, while projectiles use launcher size. Magical reductions do not stack; it counters/dispels Enlarge Person and supports Permanency."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/m0q7u2z421ja82oz",
+      "upstreamKey": "pf1/m0q7u2z421ja82oz",
+      "pack": "spells",
+      "name": "Monstrous Physique I",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "alchemist": 3,
+          "arcanist": 3,
+          "bloodrager": 3,
+          "investigator": 3,
+          "magus": 3,
+          "sorcerer": 3,
+          "wizard": 3
+        },
+        "grantedLevels": {},
+        "school": "trs",
+        "subschools": ["polymorph"],
+        "descriptors": []
+      },
+      "description": "<p>When you cast this spell, you can assume the form of any Small or Medium creature of the monstrous humanoid type. If the form you assume has any of the following abilities, you gain the listed ability: climb 30 feet, fly 30 feet (average maneuverability), swim 30 feet, darkvision 60 feet, low-light vision, and scent. If the form you assume has the aquatic subtype, you gain the aquatic and amphibious subtypes. <br><i>Small monstrous humanoid</i>: If the form you take is that of a <i>Small monstrous humanoid</i>, you gain a +2 size bonus to your Dexterity and a +1 natural armor bonus. <br><i>Medium monstrous humanoid</i>: If the form you take is that of a <i>Medium monstrous humanoid</i>, you gain a +2 size bonus to your Strength and a +2 natural armor bonus.</p>",
+      "sources": [
+        {
+          "book": "PZO1117",
+          "pages": "229"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "lz86eyc6pokrf92p",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "you"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/ns8jbp0ilbvbvuif",
+      "upstreamKey": "pf1/ns8jbp0ilbvbvuif",
+      "pack": "spells",
+      "name": "Cat's Grace",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "adept": 2,
+          "alchemist": 2,
+          "arcanist": 2,
+          "bard": 2,
+          "bloodrager": 2,
+          "druid": 2,
+          "hunter": 2,
+          "investigator": 2,
+          "magus": 2,
+          "medium": 2,
+          "mesmerist": 2,
+          "psychic": 2,
+          "ranger": 2,
+          "skald": 2,
+          "sorcerer": 2,
+          "summoner": 2,
+          "summonerUnchained": 2,
+          "wizard": 2
+        },
+        "grantedLevels": {
+          "subDomain": {
+            "Flowing": 2
+          }
+        },
+        "school": "trs",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>The transmuted creature becomes more graceful, agile, and coordinated. The spell grants a +4 enhancement bonus to Dexterity, adding the usual benefits to AC, Reflex saves, and other uses of the Dexterity modifier.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "252"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "nychlkiop71r4ikk",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "touch"
+                },
+                "save": {
+                  "description": "Will negates",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "creature touched"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/oylikodnyku2zewu",
+      "upstreamKey": "pf1/oylikodnyku2zewu",
+      "pack": "spells",
+      "name": "Invisibility",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "adept": 2,
+          "alchemist": 2,
+          "antipaladin": 2,
+          "arcanist": 2,
+          "bard": 2,
+          "inquisitor": 2,
+          "investigator": 2,
+          "magus": 2,
+          "medium": 2,
+          "mesmerist": 2,
+          "occultist": 2,
+          "psychic": 2,
+          "skald": 2,
+          "sorcerer": 2,
+          "spiritualist": 2,
+          "summoner": 2,
+          "summonerUnchained": 2,
+          "wizard": 2
+        },
+        "grantedLevels": {
+          "bloodline": {
+            "Arcane": 2,
+            "Djinni": 2,
+            "Oni": 2,
+            "Rakshasa": 2
+          },
+          "domain": {
+            "Trickery": 2
+          }
+        },
+        "school": "ill",
+        "subschools": ["glamer"],
+        "descriptors": []
+      },
+      "description": "<p>The creature or object touched becomes invisible. If the recipient is a creature carrying gear, that vanishes, too. If you cast the spell on someone else, neither you nor your allies can see the subject, unless you can normally see invisible things or you employ magic to do so.</p><p>Items dropped or put down by an invisible creature become visible; items picked up disappear if tucked into the clothing or pouches worn by the creature. Light, however, never becomes invisible, although a source of light can become so (thus, the effect is that of a light with no visible source). Any part of an item that the subject carries but that extends more than 10 feet from it becomes visible.</p><p>Of course, the subject is not magically silenced, and certain other conditions can render the recipient detectable (such as swimming in water or stepping in a puddle). If a check is required, a stationary invisible creature has a +40 bonus on its Stealth checks. This bonus is reduced to +20 if the creature is moving. The spell ends if the subject attacks any creature. For purposes of this spell, an attack includes any spell targeting a foe or whose area or effect includes a foe. Exactly who is a foe depends on the invisible character's perceptions. Actions directed at unattended objects do not break the spell. Causing harm indirectly is not an attack. Thus, an invisible being can open doors, talk, eat, climb stairs, summon monsters and have them attack, cut the ropes holding a rope bridge while enemies are on the bridge, remotely trigger traps, open a portcullis to release attack dogs, and so forth. If the subject attacks directly, however, it immediately becomes visible along with all its gear.</p><p>Spells such as <i>bless</i> that specifically affect allies but not foes are not attacks for this purpose, even when they include foes in their area.</p><p><i>Invisibility</i> can be made permanent (on objects only) with a <i>permanency</i> spell.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "301"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "qp6p99piwq1svpux",
+                "actionType": "spellsave",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "dismiss": true,
+                  "units": "minute",
+                  "value": "@cl"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "touch"
+                },
+                "save": {
+                  "description": "Will negates or Will negates (object)",
+                  "harmless": true,
+                  "type": "will"
+                },
+                "target": {
+                  "value": "you or a creature or object weighing no more than 100 lbs./level"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/qooag8g9dxck4lik",
+      "upstreamKey": "pf1/qooag8g9dxck4lik",
+      "pack": "spells",
+      "name": "Inflict Light Wounds",
+      "detail": {
+        "kind": "spell",
+        "levels": {
+          "antipaladin": 1,
+          "cleric": 1,
+          "inquisitor": 1,
+          "occultist": 1,
+          "oracle": 1,
+          "shaman": 1,
+          "spiritualist": 1,
+          "warpriest": 1,
+          "witch": 1
+        },
+        "grantedLevels": {},
+        "school": "nec",
+        "subschools": [],
+        "descriptors": []
+      },
+      "description": "<p>When laying your hand upon a creature, you channel negative energy that deals 1d8 points of damage + 1 point per caster level (maximum +5).</p><p>Since undead are powered by negative energy, this spell cures such a creature of a like amount of damage, rather than harming it.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "300"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "k0cho4hgenwelfnk",
+                "ability": {
+                  "attack": "str"
+                },
+                "actionType": "msak",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "1d8 + min(@cl, 5)",
+                      "types": ["negative"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Harm Living",
+                "range": {
+                  "units": "touch"
+                },
+                "save": {
+                  "description": "Will half",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "living creature touched"
+                },
+                "touch": true
+              },
+              {
+                "_id": "yhjnzM9XvQmtljKJ",
+                "actionType": "heal",
+                "activation": {
+                  "type": "standard",
+                  "unchained": {
+                    "cost": 2,
+                    "type": "action"
+                  }
+                },
+                "damage": {
+                  "parts": [
+                    {
+                      "formula": "1d8 + min(@cl, 5)",
+                      "types": ["negative"]
+                    }
+                  ]
+                },
+                "duration": {
+                  "units": "inst"
+                },
+                "name": "Heal Undead",
+                "range": {
+                  "units": "touch"
+                },
+                "save": {
+                  "description": "Will half",
+                  "type": "will"
+                },
+                "target": {
+                  "value": "undead creature touched"
+                },
+                "touch": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+_id: aabyB4FV9OH7hcYZ
+_key: '!items!aabyB4FV9OH7hcYZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_15.jpg
+name: Touch of Corruption
+system:
+  abilityType: su
+  actions:
+    - _id: 0dtnw9yjzmhqmp97
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d6
+            types:
+              - negative
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Antipaladin
+  description:
+    value: >-
+      <p>Beginning at 2nd level, an antipaladin surrounds his hand with a
+      fiendish flame, causing terrible wounds to open on those he touches. Each
+      day he can use this ability a number of times equal to 1/2 his antipaladin
+      level + his Charisma modifier. As a touch attack, an antipaladin can cause
+      1d6 points of damage for every two antipaladin levels he possesses. Using
+      this ability is a standard action that does not provoke attacks of
+      opportunity.<p>Alternatively, an antipaladin can use this power to heal
+      undead creatures, restoring 1d6 hit points for every two levels the
+      antipaladin possesses. This ability is modified by any feat, spell, or
+      effect that specifically works with the lay on hands paladin class
+      feature. For example, the Extra Lay On Hands feat grants an antipaladin 2
+      additional uses of the touch of corruption class feature.</p>
+  subType: classFeat
+  tag: classFeat_touchOfCorruption
+  uses:
+    maxFormula: floor(@class.level / 2) + @abilities.cha.mod
+    per: day
+type: feat

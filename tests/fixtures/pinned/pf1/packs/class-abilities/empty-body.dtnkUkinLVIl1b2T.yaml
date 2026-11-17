@@ -1,0 +1,36 @@
+_id: dtnkUkinLVIl1b2T
+_key: '!items!dtnkUkinLVIl1b2T'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/blinding-critical.jpg
+name: Empty Body
+system:
+  abilityType: su
+  actions:
+    - _id: ffoo0lybgs7shykr
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: 'Ki Pool: become ethereal'
+      range:
+        units: personal
+  associations:
+    classes:
+      - Monk
+  description:
+    value: >-
+      <p>At 19th level, a monk gains the ability to assume an ethereal state for
+      1 minute as though using the spell
+      @UUID[Compendium.pf1.spells.gw9bes9othfqm7mi]{Etherealness}. Using this
+      ability is a <em>move action</em> that consumes 3 points from his ki pool.
+      This ability only affects the monk and cannot be used to make other
+      creatures ethereal.</p>
+  sources:
+    - id: PZO1110
+      pages: '60'
+  subType: classFeat
+type: feat

@@ -1,0 +1,61 @@
+_id: uj2DDCSDd1vLgb5q
+_key: '!items!uj2DDCSDd1vLgb5q'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/fauchard.PNG
+name: Fauchard
+system:
+  actions:
+    - _id: glin68d0wed6zqpb
+      ability:
+        attack: _default
+        critRange: 18
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Fauchard
+  description:
+    unidentified: >-
+      <p>Like a glaive, the fauchard is a curved blade at the end of a pole.
+      However, the cutting edge of a fauchard is along the concave side, like
+      that of a sickle or scythe.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 14
+  properties:
+    rch: true
+    trp: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon
