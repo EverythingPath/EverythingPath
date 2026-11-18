@@ -1,0 +1,49 @@
+_id: k1OBZUPyNyodotBI
+_key: '!items!k1OBZUPyNyodotBI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: School Understanding
+system:
+  actions:
+    - _id: gy6ykeuf8xqbi238
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@abilities.cha.mod'
+      name: Use
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can select one <a
+      href="https://www.aonprd.com/WizardSchools.aspx">arcane school</a> from
+      any of the schools available to a character with the arcane school wizard
+      class feature, but does not have to select any opposition schools. The
+      arcanist gains one ability of that arcane school as though she were a
+      1st-level wizard, using her Charisma modifier in place of her Intelligence
+      modifier for this ability. The ability must be one gained at 1st level and
+      is limited in its use per day to 3 + the arcanist’s Charisma modifier. As
+      a swift action, the arcanist can expend 1 point from her arcane reservoir
+      to bolster her understanding, allowing her to treat her arcanist level as
+      her wizard level for the purpose of using this ability for a number of
+      rounds equal to her Charisma modifier (minimum 1). During this time, she
+      also gains use of the other ability gained at 1st level for her selected
+      school. She does not gain any other abilities when using this exploit in
+      this way, such as those gained at 8th level.<p>If the arcanist already has
+      an arcane school (or gains one later), taking this exploit instead allows
+      her arcanist levels to stack with the levels of the class that granted the
+      arcane school when determining the powers and abilities of her arcane
+      school.</p>
+  subType: classFeat
+  tag: classFeat_schoolUnderstanding
+  tags:
+    - Arcanist Exploit
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

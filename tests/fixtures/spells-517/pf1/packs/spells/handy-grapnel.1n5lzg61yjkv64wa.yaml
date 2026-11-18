@@ -1,0 +1,65 @@
+_id: 1n5lzg61yjkv64wa
+_key: '!items!1n5lzg61yjkv64wa'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Handy Grapnel
+system:
+  actions:
+    - _id: om9s68vyd9n111yt
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        type: fort
+      target:
+        value: one ropelike object, length up to 50 ft. + 5 ft./level
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target rope to shrink and reshape itself into an arrow,
+      bolt, or similar piece of ammunition, which you can shoot at any Medium or
+      larger object. With a successful attack roll against an AC equal to 5 plus
+      the hardness of the target object, the <i>handy grapnel</i> strikes and
+      embeds itself in that object with the strength of an iron grappling hook. 
+      As a move action, you can command the rope to extend from the arrow. If
+      you are within a distance equal to the length of the rope and have a hand
+      free, the end of the rope swings directly into your hand. With another
+      move action, you can command the <i>handy grapnel</i> to retract itself up
+      to the grappling hook, pulling up any creature or object supported by the
+      rope at a speed of 50 feet per round.  Once embedded, the rope can be used
+      for climbing or any other purpose a rope could serve, and it can bear up
+      to 200 pounds per level of the caster at a time (maximum 1,000 pounds). If
+      this weight limit is exceeded, the <i>handy grapnel</i> comes loose and
+      any creature or object supported by the rope falls.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      hunter: 1
+      inquisitor: 1
+      ranger: 1
+      sorcerer: 1
+      wizard: 1
+  materials:
+    value: an arrowhead
+  school: trs
+  sources:
+    - id: PZO1134
+      pages: '215'
+  sr: false
+type: spell

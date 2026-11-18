@@ -1,0 +1,100 @@
+_id: Efpl0C8xrS59nCpS
+_key: '!items!Efpl0C8xrS59nCpS'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Cyphermage Backer (Riddleport)
+system:
+  actions:
+    - _id: rgf9U8d0fScRFZEe
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Single Knowledge (arcana) or Knowledge (history) check with a skill
+        bonus of +15 once per day that you spend in Riddleport.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Consult Cyphermage
+  contextNotes:
+    - target: skill.kar
+      text: >-
+        Once per day that you spend in Riddleport you can make a single check
+        with a skill bonus of +15.
+        ([[@resources.cyphermageBackerRiddleport.value]] remaining uses)
+    - target: skill.khi
+      text: >-
+        Once per day that you spend in Riddleport you can make a single check
+        with a skill bonus of +15.
+        ([[@resources.cyphermageBackerRiddleport.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>You’ve sold relics to a Cyphermage in the past, and she’s agreed to
+      assist you with future findings.</em></p><p><strong>Requirements</strong>:
+      <span data-tooltip="Riddleport is the third-largest city in Varisia and
+      its most northern port."><span
+      style="text-decoration:underline">Riddleport</span></span></p><p><strong>Benefits</strong>:
+      When in Riddleport, you can use your contact to gain information about
+      artifacts and history. Treat this ability as a single Knowledge (arcana)
+      or Knowledge (history) check with a skill bonus of +15. You may make this
+      check once per day that you spend in Riddleport. You can make a new check
+      every day. Each time you do so, you can choose whether to use Knowledge
+      (arcana) or Knowledge (history).</p>
+  scriptCalls:
+    - _id: 8ye88Wo2LQB10aYG
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: |-
+        const content = `
+        <div class="flexcol">
+        <label>
+          <input type="radio" name="skillId" value="khi">
+          ${pf1.config.skills.khi}
+        </label>
+        <label>
+          <input type="radio" name="skillId" value="kar">
+          ${pf1.config.skills.kar}
+        </label>
+        </div>
+        <hr>
+        `;
+
+        const skillId = await Dialog.wait({
+          title: `Select Skill for ${item.name}`,
+          content,
+          buttons: {
+            ok: {
+              label: "Select",
+              callback: ([html]) => html.querySelector("input:checked")?.value ?? null,
+            }
+          },
+          close: () => null,
+        },
+        {
+          width: 260,
+          rejectClose: false,
+        });
+
+        if (!skillId) {
+          shared.reject = true;
+          return;
+        }
+
+        actor.rollSkill(skillId, { bonus: `15[${item.name}]` });
+  sources:
+    - id: PZO9422
+      pages: '11'
+  subType: trait
+  tags:
+    - Riddleport
+    - Varisia
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

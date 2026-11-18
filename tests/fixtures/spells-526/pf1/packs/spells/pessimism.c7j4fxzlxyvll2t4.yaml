@@ -1,0 +1,70 @@
+_id: c7j4fxzlxyvll2t4
+_key: '!items!c7j4fxzlxyvll2t4'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Pessimism
+system:
+  actions:
+    - _id: ff995nx8uuuwrjsx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You erode the target's confidence and instill a sense of despair. This
+      fear of failure manifests as a -2 penalty on attack rolls, saving throws,
+      ability checks, skill checks, and weapon damage rolls. Additionally, the
+      target can't gain morale bonuses of any kind while the spell remains in
+      effect. No amount of achievement counters the spell's effects-the target
+      simply explains away positive events with a self-critical perspective.
+      Certain events can solidify the character's belief that it is doomed.
+      Whenever the target rolls a natural 1 on an attack roll or saving throw,
+      fails an ability or skill check by more than 5, or takes additional damage
+      as a result of a foe's confirmed critical hit, the penalty to roll imposed
+      by <i>pessimism</i> becomes -3 for 1 round. This increased penalty doesn't
+      stack, even if multiple catastrophes occur on the same round.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      medium: 4
+      mesmerist: 4
+      psychic: 5
+      skald: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a shard of a broken mirror
+  school: enc
+  sources:
+    - id: PZO1135
+      pages: '123'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,56 @@
+_id: L5jrgNDA43dMH1wm
+_key: '!items!L5jrgNDA43dMH1wm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-acid-1.jpg
+name: Acid Dart
+system:
+  abilityType: sp
+  actions:
+    - _id: bmgmaycmdm4c4irk
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can unleash an acid dart targeting any foe
+      within 30 feet as a ranged touch attack. This acid dart deals 1d6 points
+      of acid damage + 1 point for every two cleric levels you possess. You can
+      use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '43'
+  subType: classFeat
+  tag: classFeat_acidDart
+  tags:
+    - Domain Power
+    - Earth Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat
