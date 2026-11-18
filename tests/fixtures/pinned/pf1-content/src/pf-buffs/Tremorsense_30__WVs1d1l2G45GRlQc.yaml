@@ -1,0 +1,25 @@
+_id: WVs1d1l2G45GRlQc
+_key: '!items!WVs1d1l2G45GRlQc'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/invertebrates/leech-attack-green.webp
+name: Tremorsense 30'
+system:
+  description:
+    value: >-
+      <p>A Creature with tremorsense is sensitive to vibrations in the ground
+      and can automatically pinpoint the location of anything that is in contact
+      with the ground. Aquatic creatures with tremorsense can also sense the
+      location of creatures moving through water. The ability's range is
+      specified in the creature's Descriptive Text.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: tremorsense-30-toggle
+      type: script
+      value: 'actor.update({ "system.traits.senses.ts": state ? 30 : 0});'
+type: buff

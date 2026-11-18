@@ -1,0 +1,67 @@
+_id: mmbO3NscIzMFXyqH
+_key: '!items!mmbO3NscIzMFXyqH'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/sickles/sickle-blue-purple.webp
+name: Double-Chained Kama
+system:
+  actions:
+    - _id: 8ejffdxi0mv3ahoy
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Double-Chained Kama
+  description:
+    unidentified: >-
+      <p>This weapon comprises a pair of kama connected with an 8-foot length of
+      chain. The wielder can attack as if armed with a single kama in each hand
+      or extend the chain to make a single reach attack. By swinging the chain,
+      the wielder can whip the kama about to disarm or trip opponents.
+      Furthermore, if one of the weapons is dropped, the wielder can retrieve it
+      as a free action by pulling on the chain.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    dbl: true
+    mnk: true
+    rch: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - double
+    - flails
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 4
+type: weapon
