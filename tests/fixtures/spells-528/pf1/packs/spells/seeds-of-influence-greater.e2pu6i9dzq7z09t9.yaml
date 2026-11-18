@@ -1,0 +1,67 @@
+_id: e2pu6i9dzq7z09t9
+_key: '!items!e2pu6i9dzq7z09t9'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Seeds of Influence, Greater
+system:
+  actions:
+    - _id: x6ezvuczai68uspn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.5sltdv83psx6wodr]{Seeds of Influence},
+      except that if the target is protected by a spell that grants immunity,
+      spell resistance, or a saving throw bonus against a divination or
+      mind-affecting spell you cast on the target, you can attempt caster level
+      checks to dispel each such effect before applying the effects of those
+      protections against the spell. The DC of the caster level check to dispel
+      each effect is equal to 11 + the effect's caster level. Such spells cast
+      on the target while greater <em>Seeds of Influence</em> is active grant no
+      protection against greater <em>Seeds of Influence</em>.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 5
+      medium: 4
+      mesmerist: 5
+      psychic: 7
+      skald: 5
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a rose
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '62'
+  subschool:
+    - compulsion
+type: spell

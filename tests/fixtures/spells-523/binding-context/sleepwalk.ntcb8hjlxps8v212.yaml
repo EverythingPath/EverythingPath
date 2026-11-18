@@ -1,0 +1,67 @@
+_id: ntcb8hjlxps8v212
+_key: '!items!ntcb8hjlxps8v212'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Sleepwalk
+system:
+  actions:
+    - _id: v2pfbit9qghaweph
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: unconscious creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You compel an unconscious or sleeping creature to rise and move in a
+      half-awake state. The target creature staggers about if led or guided, but
+      remains helpless for all other purposes.</p><p>The subject moves at half
+      speed and is limited to a single move action each round. It is not capable
+      of moving at a higher rate of speed or taking actions other than movement
+      except by magical assistance, and automatically fails any Dexterity- or
+      Strength-based skill checks. If the creature takes any damage while
+      <i>sleepwalking</i> it must make a new saving throw or the spell ends and
+      the creature awakes (if it has more than 0 hit points). When the spell
+      ends or is dismissed, the target remains unconscious and must be awoken
+      normally. While <i>sleepwalk</i> allows an unconscious creature to move,
+      it does not awaken the creature, nor does it stabilize or otherwise heal
+      them. A disabled creature that moves about while under the effects of this
+      spell does not start dying again as a result of this movement.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      inquisitor: 4
+      mesmerist: 4
+      psychic: 4
+      witch: 4
+  level: 4
+  materials:
+    gpValue: 100
+    value: a sprig of belladonna worth 100 gp
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '244'
+  subschool:
+    - compulsion
+type: spell

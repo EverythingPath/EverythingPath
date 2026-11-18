@@ -1,0 +1,403 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/h56K6HEBOItImPPL",
+      "upstreamKey": "pf1/h56K6HEBOItImPPL",
+      "pack": "class-abilities",
+      "name": "Inspire Courage",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>A 1st level bard can use his performance to inspire courage in his allies (including himself), bolstering them against fear and improving their combat abilities. To be affected, an ally must be able to perceive the bard’s performance. An affected ally receives a +1 <em>morale bonus</em> on saving throws against <em>charm</em> and fear effects and a +1 <em>competence bonus</em> on attack and weapon damage rolls. At 5th level, and every six bard levels thereafter, this bonus increases by +1, to a maximum of +4 at 17th level. Inspire courage is a mind-affecting ability. inspire courage can use audible or visual components. The bard must choose which component to use when starting his performance.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "37"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Bard"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/gzBR0qkMdu0KkLV0",
+      "upstreamKey": "pf1/gzBR0qkMdu0KkLV0",
+      "pack": "class-abilities",
+      "name": "Bonus Feats (MAG)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 5th level, and every six levels thereafter, a magus gains a bonus feat in addition to those gained from normal advancement. These bonus feats must be selected from those listed as combat, item creation, or metamagic feats. He must meet the prerequisites for these feats as normal.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Magus"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor((@class.level + 1) / 6)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Combat", "Item Creation", "Metamagic"]
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/bard-inspire-courage-11",
+      "upstreamKey": "pf1/h56K6HEBOItImPPL",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Courage +3",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/h56K6HEBOItImPPL",
+        "part": "11:pf1/h56K6HEBOItImPPL"
+      },
+      "description": "<p>Inspire Courage +3: the Bard table's 11th-level row of Inspire Courage (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Courage entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/h56K6HEBOItImPPL"
+    },
+    {
+      "externalKey": "everythingpath/bard-inspire-courage-17",
+      "upstreamKey": "pf1/h56K6HEBOItImPPL",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Courage +4",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/h56K6HEBOItImPPL",
+        "part": "17:pf1/h56K6HEBOItImPPL"
+      },
+      "description": "<p>Inspire Courage +4: the Bard table's 17th-level row of Inspire Courage (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Courage entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/h56K6HEBOItImPPL"
+    },
+    {
+      "externalKey": "everythingpath/bard-inspire-courage-5",
+      "upstreamKey": "pf1/h56K6HEBOItImPPL",
+      "pack": "everythingpath-schedules",
+      "name": "Inspire Courage +2",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/h56K6HEBOItImPPL",
+        "part": "5:pf1/h56K6HEBOItImPPL"
+      },
+      "description": "<p>Inspire Courage +2: the Bard table's 5th-level row of Inspire Courage (Pathfinder RPG Core Rulebook pp. 34–38). The Inspire Courage entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "34–38"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/bard-inspire-courage-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/h56K6HEBOItImPPL"
+    },
+    {
+      "externalKey": "everythingpath/magus-bonus-feats-11",
+      "upstreamKey": "pf1/gzBR0qkMdu0KkLV0",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/gzBR0qkMdu0KkLV0",
+        "part": "11:pf1/gzBR0qkMdu0KkLV0"
+      },
+      "description": "<p>Bonus Feat: the Magus table's 11th-level row of Bonus Feats (Pathfinder RPG Ultimate Magic pp. 9–13). The Bonus Feats entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Ultimate Magic",
+          "pages": "9–13"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/gzBR0qkMdu0KkLV0",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Combat", "Item Creation", "Metamagic"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/magus-bonus-feats-17",
+      "upstreamKey": "pf1/gzBR0qkMdu0KkLV0",
+      "pack": "everythingpath-schedules",
+      "name": "Bonus Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/gzBR0qkMdu0KkLV0",
+        "part": "17:pf1/gzBR0qkMdu0KkLV0"
+      },
+      "description": "<p>Bonus Feat: the Magus table's 17th-level row of Bonus Feats (Pathfinder RPG Ultimate Magic pp. 9–13). The Bonus Feats entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Ultimate Magic",
+          "pages": "9–13"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/magus-bonus-feats-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/gzBR0qkMdu0KkLV0",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Combat", "Item Creation", "Metamagic"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+_id: 5w68w4yw2oivz7b3
+_key: '!items!5w68w4yw2oivz7b3'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Shadowfade
+system:
+  actions:
+    - _id: 44prnmhuohotl1v7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>In areas of darkness, the target of <i>shadowfade</i> is invisible to
+      creatures using darkvision to see. In areas of dim light, the target gains
+      concealment against creatures using darkvision. This spell has no effect
+      in areas of normal light or brighter, and is automatically dispelled if
+      the target enters an area of bright light or takes a hostile action.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      inquisitor: 1
+      magus: 1
+      mesmerist: 1
+      skald: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      wizard: 1
+  materials:
+    value: a blindfold
+  school: ill
+  sources:
+    - id: PZO9479
+      pages: '9'
+  subschool:
+    - shadow
+type: spell

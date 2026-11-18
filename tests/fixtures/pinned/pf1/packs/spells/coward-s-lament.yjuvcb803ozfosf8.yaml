@@ -1,0 +1,57 @@
+_id: yjuvcb803ozfosf8
+_key: '!items!yjuvcb803ozfosf8'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Coward's Lament
+system:
+  actions:
+    - _id: a0cwybud4edo24y4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one living creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You compel an opponent to face you in combat, or suffer for its
+      cowardice. Each round that the target fails to attack you in melee, it
+      receives a cumulative -1 penalty to its Armor Class, attack rolls, and
+      saving throws (maximum penalty -5). Each round at the end of its turn, the
+      target may attempt a Will saving throw to prevent the penalties from
+      increasing for that round. All penalties reset to zero when the target
+      attacks you in melee, but increase again if it stops attacking. If the
+      target is prevented from attacking you by physical restraint, magic, or
+      impassable terrain, the penalties do not increase. If you move away from
+      the target, the spell ends.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      inquisitor: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '212'
+  subschool:
+    - compulsion
+type: spell

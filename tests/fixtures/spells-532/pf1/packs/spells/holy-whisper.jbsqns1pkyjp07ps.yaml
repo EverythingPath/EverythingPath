@@ -1,0 +1,52 @@
+_id: jbsqns1pkyjp07ps
+_key: '!items!jbsqns1pkyjp07ps'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Holy Whisper
+system:
+  actions:
+    - _id: dk0xh91rfnmqudyh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Fortitude negates; see text
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You whisper a single word in the primordial language of good that is
+      anathema to the minions of evil and strengthens the resolve of good
+      creatures. Evil creatures within the burst must make a Fortitude saving
+      throw or become sickened for 1 round/level. Evil outsiders with the evil
+      subtype, evil-aligned dragons, and undead in the burst also take 2d8
+      points of damage if they fail their saves. Good-aligned creatures in the
+      burst gain a +2 sacred bonus on attack and damage rolls for 1 round.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      paladin: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '228'
+type: spell

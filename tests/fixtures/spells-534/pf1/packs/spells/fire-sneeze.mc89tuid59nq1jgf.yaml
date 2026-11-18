@@ -1,0 +1,63 @@
+_id: mc89tuid59nq1jgf
+_key: '!items!mc89tuid59nq1jgf'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Fire Sneeze
+system:
+  actions:
+    - _id: 5yxp402mqjtxtusu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round + 1 round/2 levels
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Reflex half
+        type: ref
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes you to begin sneezing gouts of fire that can not only
+      set creatures ablaze but also drop them flat on their backs.</p><p>Once
+      you cast this spell, you must sneeze each round as a standard action-you
+      can take no other standard action as long as this spell is in effect, nor
+      can you take full-round actions. Each time you sneeze, you produce a
+      10-foot-long cone of fire and wind. All creatures caught in this cone take
+      2d6 points of fire damage-a successful Reflex save halves this damage. Any
+      creature that fails to resist this spell with a Reflex save must
+      immediately make a DC 12 Fortitude save or be knocked prone by the blast
+      of wind associated with the sneeze.</p>
+  descriptors:
+    - air
+    - fire
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: hot pepper soaked in oil
+  school: evo
+  sources:
+    - id: PZO9419
+      pages: '28'
+type: spell
