@@ -1,0 +1,63 @@
+_id: 4gt8oh1xz0ssux4a
+_key: '!items!4gt8oh1xz0ssux4a'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Storm Step
+system:
+  actions:
+    - _id: jlvv2gmfryoeh7u0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(floor(@cl / 2), 5))d8
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex halves
+        type: ref
+      target:
+        value: you
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You are able to harness the power of the storm to transport yourself a
+      short distance, by taking the form of a furious, sizzling bolt of
+      elemental electricity. You must either have line of sight to your
+      destination or you must specify a direction and distance within range.
+      Creatures and objects in the path of your passage take 1d8 points of
+      electricity damage per 2 caster levels (maximum 5d8). A successful Reflex
+      save halves the damage.</p><p>If your path intersects with a solid object,
+      you damage the barrier accordingly. If the damage is enough to break
+      through the barrier, you continue beyond the barrier as long as the
+      spell's range permits; otherwise, your movement stops in the square
+      adjacent to the barrier and the effect ends.</p>
+  descriptors:
+    - electricity
+  learnedAt:
+    class:
+      arcanist: 3
+      magus: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO9447
+      pages: '13'
+  subschool:
+    - teleportation
+type: spell

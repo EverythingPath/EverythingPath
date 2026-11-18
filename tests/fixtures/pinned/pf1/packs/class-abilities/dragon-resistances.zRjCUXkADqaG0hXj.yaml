@@ -1,0 +1,27 @@
+_id: zRjCUXkADqaG0hXj
+_key: '!items!zRjCUXkADqaG0hXj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_11.jpg
+name: Dragon Resistances
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: wvgstkuo
+      formula: 1 + if(gt(@class.level, 8), 1) + if(gt(@class.level, 14), 2)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 3rd level, you gain resist 5 against your energy type and a +1
+      natural armor bonus. At 9th level, your energy resistance increases to 10
+      and natural armor bonus increases to +2. At 15th level, your natural armor
+      bonus increases to +4.</p>
+  subType: classFeat
+  tags:
+    - Bloodline Power
+    - Draconic Bloodline
+type: feat

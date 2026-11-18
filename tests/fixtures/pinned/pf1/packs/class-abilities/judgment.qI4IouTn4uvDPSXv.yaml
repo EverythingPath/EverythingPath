@@ -1,0 +1,90 @@
+_id: qI4IouTn4uvDPSXv
+_key: '!items!qI4IouTn4uvDPSXv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_38.jpg
+name: Judgment
+system:
+  abilityType: su
+  actions:
+    - _id: 6oekn6mk4g4zy1y6
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>Starting at 1st level, an inquisitor can pronounce judgment upon her
+      foes as a swift action. Starting when the judgment is made, the inquisitor
+      receives a bonus or special ability based on the type of judgment
+      made.<p>At 1st level, an inquisitor can use this ability once per day. At
+      4th level and every three levels thereafter, the inquisitor can use this
+      ability one additional time per day. Once activated, this ability lasts
+      until the combat ends, at which point all of the bonuses immediately end.
+      The inquisitor must participate in the combat to gain these bonuses. If
+      she is frightened, panicked, paralyzed, stunned, unconscious, or otherwise
+      prevented from participating in the combat, the ability does not end, but
+      the bonuses do not resume until she can participate in the combat
+      again.<p>When the inquisitor uses this ability, she must select one type
+      of judgment to make. As a swift action, she can change this judgment to
+      another type. If the inquisitor is evil, she receives profane bonuses
+      instead of sacred, as appropriate. Neutral inquisitors must select profane
+      or sacred bonuses. Once made, this choice cannot be
+      changed.<p><em>Destruction: </em>The inquisitor is filled with divine
+      wrath, gaining a +1 sacred bonus on all weapon damage rolls. This bonus
+      increases by +1 for every three inquisitor levels she
+      possesses.<p><em>Healing:</em> The inquisitor is surrounded by a healing
+      light, gaining fast healing 1. This causes the inquisitor to heal 1 point
+      of damage each round as long as the inquisitor is alive and the judgment
+      lasts. The amount of healing increases by 1 point for every three
+      inquisitor levels she possesses.<p><em>Justice:</em> This judgment spurs
+      the inquisitor to seek justice, granting a +1 sacred bonus on all attack
+      rolls. This bonus increases by +1 for every five inquisitor levels she
+      possesses. At 10th level, this bonus is doubled on all attack rolls made
+      to confirm critical hits.<p><em>Piercing: </em>This judgment gives the
+      inquisitor great focus and makes her spells more potent. This benefit
+      grants a +1 sacred bonus on concentration checks and caster level checks
+      made to overcome a target’s spell resistance. This bonus increases by +1
+      for every three inquisitor levels she possesses.<p><em>Protection:</em>
+      The inquisitor is surrounded by a protective aura, granting a +1 sacred
+      bonus to Armor Class. This bonus increases by +1 for every five inquisitor
+      levels she possesses. At 10th level, this bonus is doubled against attack
+      rolls made to confirm critical hits against the
+      inquisitor.<p><em>Purity:</em> The inquisitor is protected from the vile
+      taint of her foes, gaining a +1 sacred bonus on all saving throws. This
+      bonus increases by +1 for every five inquisitor levels she possesses. At
+      10th level, the bonus is doubled against curses, diseases, and
+      poisons.<p><em>Resiliency:</em> This judgment makes the inquisitor
+      resistant to harm, granting DR 1/magic. This DR increases by 1 for every
+      five levels she possesses. At 10th level, this DR changes from magic to an
+      alignment (chaotic, evil, good, or lawful) that is opposite the
+      inquisitor’s. If she is neutral, the inquisitor does not receive this
+      increase.<p><em>Resistance:</em> The inquisitor is shielded by a
+      flickering aura, gaining 2 points of energy resistance against one energy
+      type (acid, cold, electricity, fire, or sonic) chosen when the judgment is
+      declared. The protection increases by 2 for every three inquisitor levels
+      she possesses.<p><em>Smiting:</em> This judgment bathes the inquisitor’s
+      weapons in a divine light. The inquisitor’s weapons count as magic for the
+      purposes of bypassing damage reduction. At 6th level, the inquisitor’s
+      weapons also count as one alignment type (chaotic, evil, good, or lawful)
+      for the purpose of bypassing damage reduction. The type selected must
+      match one of the inquisitor’s alignments. If the inquisitor is neutral,
+      she does not receive this bonus. At 10th level, the inquisitor’s weapons
+      also count as adamantine for the purpose of overcoming damage reduction
+      (but not for reducing hardness).</p>
+  subType: classFeat
+  tag: classFeat_judgment
+  uses:
+    maxFormula: 1 + floor((@class.level - 1) / 3)
+    per: day
+type: feat

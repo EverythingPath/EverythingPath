@@ -1,0 +1,59 @@
+_id: 5xuHp8QVV7DphtMC
+_key: '!items!5xuHp8QVV7DphtMC'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Numerologist (Osirion)
+system:
+  actions:
+    - _id: ypNiwDDKlEw6eL66
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, you can attempt a Perception check while studying a
+        trap (a standard action). </p><p>The DC of this check is equal to the
+        Disable Device DC of the trap – 5. </p><p>If you succeed, you identify
+        the DC necessary to disable the trap, as well as the DC of the Reflex
+        save (if any) to avoid its effects.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Study Trap
+  description:
+    value: >-
+      <p><em>Having studied the sciences and other formal academics in your
+      formative years, you swiftly became interested in the esoteric
+      numerological practices of the ancient Osirian mathematicians, and know
+      how to apply this science to
+      dungeons.</em></p><p><strong>Requirements</strong>: <span
+      style="text-decoration:underline" data-tooltip="Nation in northeastern
+      Garund on the Inner Sea"><span
+      style="text-decoration:underline">Osirion</span></span></p><p><strong>Benefits</strong>:
+      Once per day, you can attempt a Perception check while studying a trap (a
+      standard action). The DC of this check is equal to the Disable Device DC
+      of the trap – 5. If you succeed, you identify the DC necessary to disable
+      the trap, as well as the DC of the Reflex save (if any) to avoid its
+      effects.</p>
+  scriptCalls:
+    - _id: RfgWCg6YF7sf1mYV
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("per")
+  sources:
+    - id: PZO9441
+      pages: '19'
+  subType: trait
+  tags:
+    - Osirion
+    - Garund
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

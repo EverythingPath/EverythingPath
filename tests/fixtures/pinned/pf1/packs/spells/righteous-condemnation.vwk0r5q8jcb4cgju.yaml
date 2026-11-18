@@ -1,0 +1,57 @@
+_id: vwk0r5q8jcb4cgju
+_key: '!items!vwk0r5q8jcb4cgju'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Righteous Condemnation
+system:
+  actions:
+    - _id: 3411qm7b0e7p1kgk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: you
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Any creature of chaotic, neutral, or evil alignment who targets you
+      with a spell must succeed at a Will save or take a -4 penalty on
+      Intelligence-, Wisdom-, and Charisma-based checks for the spell's
+      duration. Creatures with only neutral alignment components receive a +4
+      bonus on their Will saves against this spell. The penalties for alignment
+      components stack (therefore, a chaotic evil spellcaster would take a -8
+      penalty).</p>
+  descriptors:
+    - good
+    - lawful
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      paladin: 2
+      warpriest: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO9492
+      pages: '13'
+type: spell

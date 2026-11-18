@@ -1,0 +1,56 @@
+_id: p0bhjyhpgn4pfgzi
+_key: '!items!p0bhjyhpgn4pfgzi'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Resilient Sphere
+system:
+  actions:
+    - _id: o1cspwb0ru8kjmxu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: 1-ft.-diameter/level sphere, centered around a creature
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex negates
+        type: ref
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A globe of shimmering force encloses a creature, provided the creature
+      is small enough to fit within the diameter of the sphere.</p><p>The sphere
+      contains its subject for the spell's duration. The sphere functions as a
+      <i>Wall of Force</i>, except that it can be negated by dispel magic. A
+      subject inside the sphere can breathe normally.</p><p>The sphere cannot be
+      physically moved either by people outside it or by the struggles of those
+      within.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 4
+      occultist: 4
+      psychic: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a crystal sphere
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '333'
+type: spell

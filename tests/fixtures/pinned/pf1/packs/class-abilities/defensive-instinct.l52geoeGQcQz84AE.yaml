@@ -1,0 +1,37 @@
+_id: l52geoeGQcQz84AE
+_key: '!items!l52geoeGQcQz84AE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/weapon_13.jpg
+name: Defensive Instinct
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Shifter
+  changes:
+    - _id: 98mux6b3
+      formula: '@abilities.wis.mod + floor(@class.level / 4)'
+      target: ac
+      type: untyped
+    - _id: gt7tjv6l
+      formula: '@abilities.wis.mod + floor(@class.level / 4)'
+      target: cmd
+      type: untyped
+  description:
+    value: >-
+      <p>At 2nd level, when unarmored, not using a shield, unencumbered, and
+      conscious, the shifter adds her Wisdom bonus (if any) to her AC and CMD.
+      If she is wearing nonmetal armor or using a nonmetal shield, she instead
+      adds half her Wisdom bonus to her AC (minimum 0). In addition, the shifter
+      gains a +1 bonus to her AC and CMD at 4th level. This bonus increases by 1
+      for every 4 shifter levels thereafter (up to a maximum of +5 at 20th
+      level).<p>These bonuses to AC apply even against touch attacks and when
+      the shifter is flatfooted. She loses these bonuses when she is immobilized
+      or helpless. These bonuses do not stack with the monk AC bonus class
+      feature.</p>
+  sources:
+    - id: PZO1140
+      pages: '27'
+  subType: classFeat
+type: feat

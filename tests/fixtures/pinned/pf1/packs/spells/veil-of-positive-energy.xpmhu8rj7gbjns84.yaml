@@ -1,0 +1,48 @@
+_id: xpmhu8rj7gbjns84
+_key: '!items!xpmhu8rj7gbjns84'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Veil of Positive Energy
+system:
+  actions:
+    - _id: xb1sqwuu9ue6xv4b
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you or all creatures within 5 ft.; see text
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You surround yourself with a veil of positive energy, making it harder
+      for undead creatures to harm you. When under the effect of this spell, you
+      gain a +2 sacred bonus to AC and a+2 sacred bonus on saves. Both of these
+      bonuses apply only against attacks or effects created by undead creatures.
+      You can dismiss this spell before its normal duration as a swift action on
+      your turn to deal a number of points of positive energy damage equal to
+      your level to all undead creatures within 5 feet of you.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      paladin: 1
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '254'
+  sr: false
+type: spell
