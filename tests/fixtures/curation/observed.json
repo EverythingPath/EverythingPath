@@ -1,0 +1,80 @@
+{
+  "purpose": "bounded fixture workflow evidence, not corpus completion",
+  "inputVerification": "unverified",
+  "commands": [
+    {
+      "command": "catalog:curate",
+      "inputRecords": "committed empty overlay",
+      "output": "expected/draft",
+      "exitCode": 0,
+      "records": 10,
+      "added": 10,
+      "replaced": 0,
+      "missing": 0,
+      "outputs": {
+        "modifier": 6,
+        "note": 3,
+        "itemAbility": 5
+      },
+      "diagnostics": 0
+    },
+    {
+      "command": "catalog:preview",
+      "inputRecords": "committed empty overlay",
+      "output": "expected/missing",
+      "exitCode": 1,
+      "missing": 10,
+      "admissionFailures": 10,
+      "reportsWritten": 5
+    },
+    {
+      "command": "catalog:curate --descriptions",
+      "inputRecords": "expected/draft/records.json",
+      "output": "expected/descriptions",
+      "exitCode": 0,
+      "records": 11,
+      "added": 1,
+      "replaced": 0,
+      "outputs": {
+        "modifier": 7,
+        "note": 3,
+        "itemAbility": 5
+      },
+      "diagnostics": 0
+    },
+    {
+      "command": "catalog:curate",
+      "inputRecords": "expected/reviewed-records.json",
+      "output": "expected/resume",
+      "exitCode": 0,
+      "records": 11,
+      "added": 0,
+      "replaced": 0,
+      "outputs": {
+        "modifier": 7,
+        "note": 2,
+        "itemAbility": 5
+      },
+      "diagnostics": 0
+    },
+    {
+      "command": "catalog:preview",
+      "inputRecords": "expected/reviewed-records.json",
+      "output": "expected/covered",
+      "exitCode": 0,
+      "required": 10,
+      "drafted": 8,
+      "checked": 2,
+      "missing": 0,
+      "attributionHolds": 11,
+      "admitted": 0,
+      "admissionFailures": 0,
+      "reportsWritten": 5,
+      "descriptions": {
+        "candidates": 1,
+        "drafted": 1,
+        "checked": 0
+      }
+    }
+  ]
+}

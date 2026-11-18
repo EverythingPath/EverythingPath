@@ -1,0 +1,59 @@
+_id: 2A5R36zEluwUHG7r
+_key: '!items!2A5R36zEluwUHG7r'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/nature/leaf-rune-glow-green.webp
+name: Woodland Rune
+system:
+  actions:
+    - _id: uEzutsY5vv2mciuz
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: spec
+        value: permanent until discharged
+      effect: one rune
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Created by Ghorus as a safety measure to limit his enemies’ movements,
+      this spell allows you to inscribe a powerful rune on any surface. Woodland
+      rune triggers when any non-plant creature (apart from the caster) moves
+      within 30 feet of the rune. When it’s triggered, roots and branches sprout
+      from the ground, catching all creatures within a 30-foot burst of the rune
+      and hindering their movement as if they were moving through <em>heavy
+      undergrowth</em>, though it does not provide concealment. Plant creatures
+      and creatures under the effect of
+      @UUID[Compendium.pf1.class-abilities.5iXq1igb1Cq0qobT]{woodland stride} or
+      @UUID[Compendium.pf1.spells.lvzq2mwkqmozolpl]{freedom of movement} are not
+      affected by this spell. In all other respects, this spell functions as
+      @UUID[Compendium.pf1.spells.g0x2fnktg1553wv1]{symbol of death}.</p>
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      ranger: 3
+      shaman: 3
+      witch: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO9494
+      pages: '13'
+type: spell

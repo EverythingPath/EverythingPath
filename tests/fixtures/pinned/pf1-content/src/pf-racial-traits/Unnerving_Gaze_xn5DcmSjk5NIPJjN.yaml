@@ -1,0 +1,68 @@
+_id: xn5DcmSjk5NIPJjN
+_key: '!items!xn5DcmSjk5NIPJjN'
+_stats:
+  coreVersion: '12.331'
+folder: MvyTbqu9jQCwjLwg
+img: icons/creatures/eyes/humanoid-single-yellow.webp
+name: Unnerving Gaze
+system:
+  actions:
+    - _id: o0SHmHbH0ARmA03I
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30 ft cone
+      description: >-
+        <p>Some fetchlings gain an upsetting gaze attack that they can activate
+        three times per day as a standard action, affecting all creatures within
+        a @Distance[30 ft;dual] cone that can see. All creatures that meet the
+        fetchling's unnerving gaze are shaken for 1 round (DC = 10 + 1/2 the
+        fetchling's character level + her Charisma modifier; Will negates). When
+        the fetchling reaches 9th level, her gaze instead causes creatures to be
+        staggered. When the fetchling reaches 13th level, her gaze instead
+        causes creatures to be stunned. Unnerving gaze is a mind-affecting fear
+        effect. This racial trait replaces the fetchling's spell-like
+        abilities.</p>
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Unnerving Gaze
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10+floor(@attributes.hd.total/2)+@abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: all creatures in a 30 ft cone that you can see
+      uses:
+        self:
+          maxFormula: '3'
+          per: day
+          value: 3
+  description:
+    value: >-
+      <p><strong>Race</strong>: Fetchling<br /><strong>Replaced
+      Trait(s)</strong>: Spell-Like Abilities</p><hr /><p>Some fetchlings gain
+      an upsetting gaze attack that they can activate three times per day as a
+      standard action, affecting all creatures within a @Distance[30 ft;dual]
+      cone that can see. All creatures that meet the fetchling's unnerving gaze
+      are shaken for 1 round (DC = 10 + 1/2 the fetchling's character level +
+      her Charisma modifier; Will negates). When the fetchling reaches 9th
+      level, her gaze instead causes creatures to be staggered. When the
+      fetchling reaches 13th level, her gaze instead causes creatures to be
+      stunned. Unnerving gaze is a mind-affecting fear effect. This racial trait
+      replaces the fetchling's spell-like abilities.</p>
+  sources:
+    - id: PZO9464
+      pages: '24'
+  subType: racial
+  tags:
+    - Fetchling
+  traitCategory: offense
+type: feat

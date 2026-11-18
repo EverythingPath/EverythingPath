@@ -1,0 +1,68 @@
+_id: qiiis9ekgy3syu7j
+_key: '!items!qiiis9ekgy3syu7j'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-beam-green.webp
+name: Breath of Life
+system:
+  actions:
+    - _id: 47cv8dkaram3gyl3
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 5d8 + min(25, @cl)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates or Will half, see text
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell cures 5d8 points of damage + 1 point per caster level
+      (maximum +25).</p><p>Unlike other spells that heal damage, <i>Breath of
+      Life</i> can bring recently slain creatures back to life. If cast upon a
+      creature that has died within 1 round, apply the healing from this spell
+      to the creature. If the healed creature's hit point total is at a negative
+      amount less than its Constitution score, it comes back to life and
+      stabilizes at its new hit point total. If the creature's hit point total
+      is at a negative amount equal to or greater than its Constitution score,
+      the creature remains dead. Creatures brought back to life through
+      <i>Breath of Life</i> gain a temporary negative level that lasts for 1
+      day.</p><p>Creatures slain by death effects cannot be saved by <i>Breath
+      of Life</i>.</p><p>Like cure spells, <i>Breath of Life</i> deals damage to
+      undead creatures rather than curing them, and cannot bring them back to
+      life.</p>
+  learnedAt:
+    class:
+      cleric: 5
+      oracle: 5
+      shaman: 5
+      spiritualist: 5
+      warpriest: 5
+    domain:
+      Healing: 5
+  level: 5
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '251'
+  subschool:
+    - healing
+type: spell

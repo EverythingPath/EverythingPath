@@ -1,0 +1,61 @@
+_id: 8nbpbvgkggj0wbmd
+_key: '!items!8nbpbvgkggj0wbmd'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Brow Gasher
+system:
+  actions:
+    - _id: oyvwnnt418qp4w87
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one slashing melee weapon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You imbue a slashing melee weapon with the ability to deal a gruesome
+      head wound. When the target weapon hits a living creature, in addition to
+      the normal effects of that hit, the wielder can discharge this spell as a
+      free action to open a gash on the target's forehead that deals bleed
+      damage equal to half your caster level. At the start of each of the
+      target's turns, when it takes bleed damage, it also takes a cumulative -1
+      penalty on all attack rolls. When that penalty reaches -3, the target also
+      treats all targets as having concealment (20% miss chance). When the
+      penalty reaches -5, the target is blinded. Stopping the bleed damage ends
+      the effects this spell imposes on the bleeding creature. A target that is
+      immune to bleed damage is also immune to all this spell's effects.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      hunter: 2
+      inquisitor: 2
+      magus: 2
+      occultist: 2
+      ranger: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO1118
+      pages: '224'
+type: spell

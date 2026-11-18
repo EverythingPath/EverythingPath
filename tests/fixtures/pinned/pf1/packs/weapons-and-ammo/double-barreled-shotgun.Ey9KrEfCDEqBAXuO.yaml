@@ -1,0 +1,88 @@
+_id: Ey9KrEfCDEqBAXuO
+_key: '!items!Ey9KrEfCDEqBAXuO'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-double-barrel.webp
+name: Double-Barreled Shotgun
+system:
+  actions:
+    - _id: 06javsaw0478r4ye
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      conditionals:
+        - _id: Hh7gvXbvZAoO7tL0
+          modifiers:
+            - _id: VkLWp1hmqPmMjPqK
+              formula: '-4'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Both Barrels
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '20'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Double-Barreled Shotgun
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x2; <b>Range</b> 20 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2; <b>Capacity</b> 2</p>
+
+      <h3>Description</h3>
+
+      <p>This twin-barreled shotgun can be shot one barrel at a time, or both
+      together as one attack. A double shot that fires bullets is inaccurate,
+      and takes a -4 penalty on both attacks.</p>
+
+      <p>A double shot that fires bullets targets only a single creature and
+      increases the damage of each barrel to 2d6 points (Small) or 2d8 points
+      (Medium) for a total of 4d6 or 4d8 points of damage. A doublebarreled
+      shotgun uses metal cartridges (loaded with either a bullet or pellets) as
+      ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 7000
+  properties:
+    sct: true
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Advanced Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 15
+type: weapon

@@ -1,0 +1,53 @@
+_id: KbUs4n95TQD782w4
+_key: '!items!KbUs4n95TQD782w4'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Transitional (Triaxian)
+system:
+  actions:
+    - _id: qdF9K75ZT4ByY5XY
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: predict the weather
+  contextNotes:
+    - target: skill.sur
+      text: >-
+        +[[3+floor(@attributes.hd.total /2)]] Trait bonus, once per day, when
+        you attempt to predict the weather.
+    - target: fort
+      text: +[[1]] Trait bonus against the effects of cold and hot weather.
+  description:
+    value: >-
+      <p><em>As a Transitional Triaxian, you are attuned to the weather no
+      matter what world you stand
+      upon.</em></p><p><strong>Requirements</strong>:
+      Triaxian</p><p><strong>Benefits</strong>: Once per day when you attempt a
+      Survival check to predict the weather, you can add a trait bonus equal to
+      3 + 1/2 your character level. In addition, you gain a +1 trait bonus on
+      Fortitude saves against the effects of cold and hot weather.</p>
+  scriptCalls:
+    - _id: 9VGN6kqmekscqowb
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: >
+        actor.rollSkill("sur", {bonus:`(3 +
+        floor(@attributes.hd.total/2))[${item.name}]`});
+  sources:
+    - id: PZO9449
+      pages: '13'
+  subType: trait
+  tags:
+    - Triaxian
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

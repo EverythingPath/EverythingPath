@@ -1,0 +1,65 @@
+_id: rjtyex3082ajepwf
+_key: '!items!rjtyex3082ajepwf'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Alluring Light
+system:
+  actions:
+    - _id: 02go3nlv62r3qr02
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius emanation centered on you
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates (see text)
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You glow with a soft radiance that calls out to all who see it. Each
+      enemy that fails its save is drawn to you and must use its move action to
+      approach you at the beginning of each of its turns for 1 round per caster
+      level. An affected target must move toward you in the most direct path it
+      can, though it can step around obstacles or other creatures. This spell
+      can't force a creature to walk into an area that might obviously harm or
+      kill it (such as into a pit, over a patch of floor studded with caltrops,
+      or through a <i>wall of fire</i>). An affected creature that loses sight
+      of you is not compelled to move toward you, although if it later regains
+      vision of you while still affected by this spell, it must again move
+      toward you. Any hostile action against an affected creature (such an
+      attack of opportunity due to its movement) cancels the spell's effect
+      against that creature. Your initial flash of light also increases the
+      light level within the spell's area by one step, up to normal light
+      (darkness becomes dim light, and dim light becomes normal light) for 1
+      round per caster level.</p>
+  descriptors:
+    - light
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      skald: 1
+      witch: 1
+  school: enc
+  sources:
+    - id: PZO90134
+      pages: '72'
+  subschool:
+    - compulsion
+type: spell
