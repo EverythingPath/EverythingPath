@@ -1,0 +1,67 @@
+_id: CbqPpYdIwqOOSTdR
+_key: '!items!CbqPpYdIwqOOSTdR'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-crank.PNG
+name: Light Crank Crossbow
+system:
+  actions:
+    - _id: zwuuclnrxtf77yc2
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Light Crank Crossbow
+  description:
+    unidentified: >-
+      <p>This weapon functions as a
+      @UUID[Compendium.pf1.weapons-and-ammo.0MFbQaJ3MUWV2fGM]{Heavy Crank
+      Crossbow}, except that its damage, critical, and range values are
+      equivalent to those of a
+      @UUID[Compendium.pf1.weapons-and-ammo.RWbjRwSPsuPAUDhw]{Light Crossbow}.
+      Its lighter construction means it provides only a +1 bonus on
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.ZAwjVOTwsBpZRgw4]{Climb}
+      checks and grapple combat maneuver checks to pull the target toward
+      you.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 250
+  sources:
+    - id: PZO9452
+      pages: '18'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 6
+type: weapon

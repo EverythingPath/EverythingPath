@@ -1,0 +1,58 @@
+_id: JIljkqPWhmvAPYbI
+_key: '!items!JIljkqPWhmvAPYbI'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/battleaxe.PNG
+name: Battle Axe
+system:
+  actions:
+    - _id: 19zgpmrxx14jpf78
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Battle Axe
+  description:
+    unidentified: >-
+      <p>The handle of this axe is long enough that you can wield it one-handed
+      or two-handed. The head may have one blade or two, with blade shapes
+      ranging from half-moons to squared edges like narrower versions of
+      woodcutting axes. The wooden haft may be protected and strengthened with
+      metal bands called langets.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 10
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - axes
+  weaponSubtype: 1h
+  weight:
+    value: 6
+type: weapon

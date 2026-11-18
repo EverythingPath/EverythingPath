@@ -1,0 +1,63 @@
+_id: 7461spd68dipa6m5
+_key: '!items!7461spd68dipa6m5'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Implant Urge
+system:
+  actions:
+    - _id: p5pteabfwvq62j69
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You make the target unconsciously desire a goal you define when you
+      cast this spell. The DC of any Diplomacy check to ask the target to act in
+      a way that it believes will lead it toward that goal decreases by 5. The
+      target takes a -2 penalty on saving throws against mind-affecting effects
+      that compel it to act in a way that it believes will lead it toward that
+      goal. Spells that reveal the target's goals or thoughts reveal the
+      implanted urge as the target's most important goal and the target does not
+      register as thinking of anything else as long as it is presented with the
+      focus of its urge or a way to move toward its goal. Anyone studying the
+      target's thoughts can notice the implanted nature of this urge with a
+      successful caster level check.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      medium: 1
+      mesmerist: 1
+      skald: 1
+      sorcerer: 1
+      spiritualist: 1
+      witch: 1
+      wizard: 1
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '60'
+  subschool:
+    - compulsion
+type: spell

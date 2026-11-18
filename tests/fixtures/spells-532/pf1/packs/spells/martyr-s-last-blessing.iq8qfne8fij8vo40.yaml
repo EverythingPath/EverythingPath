@@ -1,0 +1,59 @@
+_id: iq8qfne8fij8vo40
+_key: '!items!iq8qfne8fij8vo40'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Martyr's Last Blessing
+system:
+  actions:
+    - _id: n5856v8lz6nn5hwd
+      actionType: heal
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: spec
+        value: 1 hour/level or instantaneous (see text)
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will half (see text)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          you and one ally/level, no two of which can be more than 30 ft. apart
+          (see text)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You charge your body with healing energy, which erupts from you if you
+      are dying or are killed before 1 hour per level has passed. If you're
+      brought below 0 hit points or killed (including by effects that kill
+      without dealing damage, such as <i>phantasmal killer</i> and <i>power
+      word</i> kill), the eruption of healing energy acts as <i>mass cure light
+      wounds</i> on allies (other than you). Allies with the fewest Hit Dice are
+      affected first. Among allies with equal HD, those closest to you are
+      affected first. If the duration ends, the stored healing energy dissipates
+      with no effect.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      hunter: 3
+      oracle: 3
+      ranger: 3
+      warpriest: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO9068
+      pages: '69'
+  subschool:
+    - healing
+type: spell

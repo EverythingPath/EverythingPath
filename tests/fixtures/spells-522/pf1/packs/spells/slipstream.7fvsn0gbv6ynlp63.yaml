@@ -1,0 +1,70 @@
+_id: 7fvsn0gbv6ynlp63
+_key: '!items!7fvsn0gbv6ynlp63'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Slipstream
+system:
+  actions:
+    - _id: ehgand8f0xyvymd9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Reflex negates
+        harmless: true
+        type: ref
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a low-cresting wave of water that carries the target along
+      the surface of water or the ground. When moving across level ground, the
+      target's speed increases by 10 feet.</p><p>If going downhill, speed
+      increases by 20 feet instead, but <i>slipstream</i> provides no movement
+      bonus when going uphill.</p><p>While swimming, the <i>slipstream</i>
+      increases the target's swim speed by 20 feet-if the target does not have a
+      swim speed, this spell grants a swim speed of 20 ft.</p>
+  descriptors:
+    - water
+  learnedAt:
+    bloodline:
+      Aquatic: 2
+    class:
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      ranger: 2
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Oceans: 2
+      Rivers: 2
+  level: 2
+  materials:
+    value: a few drops of oil and water
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '244'
+  sr: false
+  subschool:
+    - creation
+type: spell

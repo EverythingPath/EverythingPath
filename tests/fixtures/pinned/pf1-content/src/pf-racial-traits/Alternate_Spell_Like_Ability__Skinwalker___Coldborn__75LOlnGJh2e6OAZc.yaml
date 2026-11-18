@@ -1,0 +1,70 @@
+_id: 75LOlnGJh2e6OAZc
+_key: '!items!75LOlnGJh2e6OAZc'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Alternate Spell-Like Ability (Skinwalker - Coldborn)
+system:
+  abilityType: sp
+  actions:
+    - _id: FKADrhXd6yZteFuY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.5s4e2iifhflglr1t]{Calm
+        Animals}</p><p>This spell soothes and quiets animals, rendering them
+        docile and harmless. Only ordinary animals (those with Intelligence
+        scores of 1 or 2) can be affected by this spell. All the subjects must
+        be of the same kind, and no two may be more than @Distance[30 ft;dual]
+        apart. The maximum number of HD of animals you can affect is equal to
+        2d4 + caster level.</p><p>The affected creatures remain where they are
+        and do not attack or flee. They are not helpless and defend themselves
+        normally if attacked. Any threat breaks the spell on the threatened
+        creatures.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Calm animals
+      notes:
+        effect:
+          - Use Wisdom for concentration checks
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: >-
+          [[2d4 + @attributes.hd.total]] animals within 30 ft (9 m) of each
+          other
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Coldborn</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.ZEVsEIPpOyHmpmEe]{Spell-Like
+      Ability (Skinwalker)}</p><hr /><p><strong>Alternate Spell-Like
+      Ability</strong> calm animals 1/day</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '248'
+    - id: PZO9439
+      pages: '10'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Coldborn
+  traitCategory: magical
+  uses:
+    value: 0
+type: feat
