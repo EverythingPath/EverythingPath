@@ -1,0 +1,53 @@
+_id: QEXbaagG6nc5gIEx
+_key: '!items!QEXbaagG6nc5gIEx'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Frontier Healer (Ironfang Invasion)
+system:
+  changes:
+    - _id: JN4TXhFm
+      formula: '1'
+      target: skill.hea
+      type: trait
+    - _id: Drfny8CJ
+      formula: '1'
+      target: skill.kna
+      type: trait
+  contextNotes:
+    - target: skill.hea
+      text: >-
+        Any time you restore hit points using the Heal skill, (but not with
+        channeled energy, lay on hands, or a magic device such as a potion or
+        wand), you restore additional hit points equal to ([[1 +
+        floor((@attributes.hd.total -1) /2)]])
+    - target: spellEffect
+      text: >-
+        Any time you restore hit points using a cure spell, (but not with
+        channeled energy, lay on hands, or a magic device such as a potion or
+        wand), you restore additional hit points equal to ([[1 +
+        floor((@attributes.hd.total -1) /2)]])
+  description:
+    instructions: >-
+      <p>Select Heal or Knowledge (nature) when you take this
+      trait.</p><p>Update the Class skills section of the details tab of this
+      trait to reflect your choice.</p>
+    value: >-
+      <p><em>You make your way in life by putting people back together after the
+      rigors of the world take their toll—brewing herbal remedies, setting
+      broken bones, and treating diseases.</em></p><p><strong>Benefits</strong>:
+      You gain a +1 trait bonus on all Heal and Knowledge (nature) checks, and
+      one of these skills is always a class skill for you.  Any time you restore
+      hit points using the Heal skill or a cure spell (but not with channeled
+      energy, lay on hands, or a magic device such as a potion or wand), you
+      restore 1 additional hit point, plus 1 for every 2 class levels you have
+      beyond 1st.</p>
+  sources:
+    - id: PZO9000-20E
+      pages: '8'
+  subType: trait
+  tags:
+    - Ironfang Invasion
+  traitType: campaign
+type: feat

@@ -1,0 +1,51 @@
+_id: PqtbErvjsDpSPScU
+_key: '!items!PqtbErvjsDpSPScU'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Prestigious Healer (Cheliax)
+system:
+  actions:
+    - _id: n9dulbJN8KW0sGnI
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>Once per day, as an immediate action, when you cast a spell of the
+        healing subschool, you can attempt a Diplomacy check to improve the
+        attitude of your target or anyone within 30 feet who can see you before
+        the end of your next turn. </p><p>You gain a +2 trait bonus on this
+        check.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Use
+  description:
+    value: >-
+      <p><strong>Requirements</strong>: <span style="text-decoration:underline"
+      data-tooltip="Powerful nation in southwestern Avistan"><span
+      style="text-decoration:underline">Cheliax</span></span></p><p><strong>Benefits</strong>:
+      Once per day as an immediate action when you cast a spell of the healing
+      subschool, you can attempt a Diplomacy check to improve the attitude of
+      your target or anyone within 30 feet who can see you before the end of
+      your next turn. You gain a +2 trait bonus on this check.</p>
+  scriptCalls:
+    - _id: KzgzzITM6Usielgp
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: actor.rollSkill("dip", {bonus:`2[${item.name}]`});
+  sources:
+    - id: PZO9475
+      pages: '2'
+  subType: trait
+  tags:
+    - Cheliax
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

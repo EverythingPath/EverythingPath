@@ -1,0 +1,59 @@
+_id: KzjAfSvpNuqDcnZj
+_key: '!items!KzjAfSvpNuqDcnZj'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Hydrated Vitality
+system:
+  actions:
+    - _id: RVQSkitTHRDSwGiq
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '2'
+            types:
+              - Fast Healing
+      description: >-
+        <p>Gain fast healing 2 for 1 round anytime you submerge completely
+        within a body of natural salt water, fresh water, or brackish water.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Submerge - fast healing
+      notes:
+        effect:
+          - '@Heal[2]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Water,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.nb7WkJkqL3bnhkU5]{Fey}
+      type, or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.6tmkzGAbCFuUIclP]{Plant}
+      type</p><hr /><p>Members of this race gain fast healing 2 for 1 round
+      anytime they submerge completely within a body of natural salt water,
+      fresh water, or brackish water. Stagnant, poisoned, or trapped water (such
+      as water within an artificial pit or a bag of holding) does not activate
+      this ability. Members of this race can heal up to 2 hit points per level
+      per day with this ability, after which it ceases to function.</p>
+  racePoints: 3
+  sources:
+    - id: PZO1121
+      pages: '223'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+  uses:
+    maxFormula: '@attributes.hd.total'
+    per: day
+    value: 0
+type: feat

@@ -1,0 +1,65 @@
+_id: 07adg3f6f6lu8jz5
+_key: '!items!07adg3f6f6lu8jz5'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Tactical Formation
+system:
+  actions:
+    - _id: dk9iq0moten0h2wc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: up to one creature/level, no two of which may be more than 30 ft. apart
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><em>Editor's Note:</em> In order to prepare this spell, the caster must
+      spend an hour performing a ritual in which he beseeches <b>Torag</b>.
+      Further details can be found in <em>Pathfinder Companion: Dwarves of
+      Golarion.</em></p><p>This spell increases the effectiveness of a group's
+      formation in battle. When cast, all creatures under the effect of the
+      spell must be adjacent to one another, forming an unbroken chain of
+      squares (which may include creatures sharing the same square). This chain
+      does not need to be a straight line. Each target in the chain receives a
+      +2 defection bonus to AC as long as the targets stay adjacent to at least
+      one other creature affected by the spell; moving more than 5 feet from
+      another target ends the spell with respect to that creature only. For
+      example, a cleric could cast it on himself and four dwarves blocking a
+      20-foot-wide corridor; the cleric can move freely from the left side of
+      the formation to the right side (whether in front of or behind the other
+      targets) and not break the spell as long as he stays within 5 feet of at
+      least one of them.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      hunter: 4
+      oracle: 3
+      paladin: 3
+      ranger: 4
+      warpriest: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO9408
+      pages: '23'
+type: spell

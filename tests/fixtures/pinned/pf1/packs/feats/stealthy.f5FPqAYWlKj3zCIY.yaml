@@ -1,0 +1,29 @@
+_id: f5FPqAYWlKj3zCIY
+_key: '!items!f5FPqAYWlKj3zCIY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/stealthy.jpg
+name: Stealthy
+system:
+  changes:
+    - _id: sij49210
+      formula: 2 + if(gte(@skills.ste.rank, 10), 2)
+      target: skill.ste
+      type: untyped
+    - _id: r8iwxuq0
+      formula: 2 + if(gte(@skills.esc.rank, 10), 2)
+      target: skill.esc
+      type: untyped
+  description:
+    value: >-
+      <i>You are good at avoiding unwanted attention and slipping out of
+      bonds.</i><p><strong>Benefits</strong>: You get a +2 bonus on all Escape
+      Artist and Stealth skill checks. If you have 10 or more ranks in one of
+      these skills, the bonus increases to +4 for that skill.</p>
+  sources:
+    - id: PZO1110
+      pages: 116, 135
+  tags:
+    - General
+    - Skill
+type: feat

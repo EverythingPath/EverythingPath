@@ -1,0 +1,58 @@
+_id: w337355nk3cvom02
+_key: '!items!w337355nk3cvom02'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Haunting Choir
+system:
+  actions:
+    - _id: e9t8tt3zwfro4uoc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius emanation
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 2 rounds
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a spectral choir and conduct its tortured, ghostly moans,
+      deluding listeners into believing they are suffering the torments of the
+      dead.</p><p>The transparent singers occupy a 10-foot cube, but they are
+      intangible and do not interfere with creatures in any physical way, nor
+      can they be attacked.</p><p>Creatures within 30 feet of the choir
+      experience wracking pain that causes them to take a -2 penalty on attack
+      rolls, skill checks, and ability checks.</p><p>Individuals who exit the
+      area of effect take these penalties for an additional 2 rounds before the
+      delusion wears off.</p>
+  descriptors:
+    - mindAffecting
+    - pain
+  learnedAt:
+    class:
+      bard: 3
+      mesmerist: 3
+      skald: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '222'
+type: spell

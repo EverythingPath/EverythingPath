@@ -1,0 +1,70 @@
+_id: r6mfw5nrc2ndkacy
+_key: '!items!r6mfw5nrc2ndkacy'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: systems/pf1/icons/spells/horror-red-1.jpg
+name: Infernal Healing
+system:
+  actions:
+    - _id: dttncuqj56b9h1cu
+      actionType: heal
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You anoint a wounded creature with devil's blood or unholy water,
+      giving it fast healing 1. This ability cannot repair damage caused by
+      silver weapons, good-aligned weapons, or spells or effects with the good
+      descriptor. The target detects as an evil creature for the duration of the
+      spell and can sense the evil of the magic, though this has no long-term
+      effect on the target's alignment.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      cleric: 1
+      magus: 1
+      oracle: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: 1 drop of devil blood or 1 dose of unholy water
+  school: con
+  sources:
+    - id: PZO9000-18E
+      pages: '11'
+    - id: PZO9029
+      pages: '67'
+    - id: PZO9202
+      pages: '7'
+    - id: PZO9226
+      pages: '295'
+  subschool:
+    - healing
+type: spell
