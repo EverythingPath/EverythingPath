@@ -1,0 +1,34 @@
+_id: YCV9dChTyFT0OI2J
+_key: '!items!YCV9dChTyFT0OI2J'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Misdirection Mastery
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: gqSdVQr3
+      formula: min(ceil(@class.level / 5), 3)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>You gleefully evade attacks and confound foes with your capricious
+      misdirection. You receive Misdirection Tactics as a bonus feat.</p>
+
+      <p>At 10th level, you receive Misdirection Redirection as a bonus
+      feat.</p>
+
+      <p>At 15th level you receive Misdirection Attack as a bonus feat.</p>
+
+      <p>You do not need to meet the prerequisites to receive these feats.</p>
+
+      <p>You must be at least 3rd level to select this revelation.</p>
+  subType: classFeat
+  tags:
+    - Revelation
+    - Whimsy Mystery
+type: feat

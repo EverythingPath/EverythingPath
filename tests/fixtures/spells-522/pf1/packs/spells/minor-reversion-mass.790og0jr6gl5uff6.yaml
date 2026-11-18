@@ -1,0 +1,58 @@
+_id: 790og0jr6gl5uff6
+_key: '!items!790og0jr6gl5uff6'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Minor Reversion, Mass
+system:
+  actions:
+    - _id: 0xzmdpn8yao34r0f
+      actionType: heal
+      activation:
+        cost: 30
+        type: minute
+        unchained:
+          cost: 30
+          type: minute
+      duration:
+        units: hour
+        value: '24'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a replica within the Akashic Record of each target at the
+      time the spell is cast. Each targeted creature must currently have at
+      least half its hit points. If at any time during the duration of the spell
+      a target is brought below half her maximum hit points, that target can end
+      the spell on herself as an immediate action to absorb strength from her
+      replica and immediately regain a number of hit points equal to 1d8 plus 1
+      point per caster level (maximum +25).</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      cleric: 6
+      oracle: 6
+      psychic: 5
+      sorcerer: 6
+      warpriest: 6
+      wizard: 6
+  level: 6
+  school: con
+  sources:
+    - id: PZO9492
+      pages: '28'
+  sr: false
+  subschool:
+    - healing
+type: spell

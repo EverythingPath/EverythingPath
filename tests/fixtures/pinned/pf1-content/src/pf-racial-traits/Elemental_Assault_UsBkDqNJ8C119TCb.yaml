@@ -1,0 +1,72 @@
+_id: UsBkDqNJ8C119TCb
+_key: '!items!UsBkDqNJ8C119TCb'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Elemental Assault
+system:
+  actions:
+    - _id: LTAREZJYnQh6oSxO
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - {}
+      description: >-
+        <p>Once per day as a swift action, a suli can shroud her arms in acid,
+        cold, electricity, or fire. This effect lasts for 1 round per level and
+        can be dismissed as a free action. Unarmed strikes with her arms or
+        hands (or attacks with weapons held in those hands) deal +1d6 points of
+        damage of the appropriate energy type.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Elemental Assault
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M7iCedGNTrldJq5R]{Dragon}
+      type or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to an elemental plane</p><hr /><p>Pick one of the
+      following energy types that corresponds to the plane the race has ties to:
+      acid (earth), cold (water), electricity (air), or fire (fire). Members of
+      this race gain the following supernatural ability: Once per day as a swift
+      action, a member of this race can call on the elemental power lurking in
+      its veins to shroud its arms in the energy type that corresponds to the
+      elemental plane its race has ties to. Unarmed strikes with its elbows or
+      hands (or attacks with weapons held in those hands) deal +1d6 points of
+      damage of the appropriate energy type. This lasts for 1 round per
+      character level. The creature may end the effects of its elemental assault
+      early as a free action.</p><p><strong>Related
+      buffs:</strong></p><p>@Toggle[Elemental Assault (Acid, Race
+      Builder)]</p><p>@Toggle[Elemental Assault (Cold, Race
+      Builder)]</p><p>@Toggle[Elemental Assault (Electricity, Race
+      Builder)]</p><p>@Toggle[Elemental Assault (Fire, Race Builder)]</p>
+  links:
+    supplements:
+      - name: Elemental Assault (Acid, Race Builder)
+        uuid: Compendium.pf-content.pf-buffs.Item.huggyEeQS4qJDHr5
+      - name: Elemental Assault (Cold, Race Builder)
+        uuid: Compendium.pf-content.pf-buffs.Item.3KQEB9qnOqvOKupX
+      - name: Elemental Assault (Electricity, Race Builder)
+        uuid: Compendium.pf-content.pf-buffs.Item.NCnfi1jXsvttOD12
+      - name: Elemental Assault (Fire, Race Builder)
+        uuid: Compendium.pf-content.pf-buffs.Item.Z3lZCD75rnzS883U
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '232'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

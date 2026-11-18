@@ -1,0 +1,58 @@
+_id: io8sg720zjd0tdj2
+_key: '!items!io8sg720zjd0tdj2'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Guardian of Faith
+system:
+  actions:
+    - _id: nibzj4vrvhdwo2xf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one ally
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains the benefit of <i>Shield of Faith</i> and your choice
+      of <i>Protection from Chaos</i>, <i>evil</i>, <i>good</i>, or <i>law</i>.
+      As a move action, the target can transfer this spell to a touched ally,
+      who becomes the new target of the spell.</p><p>The alignment descriptor of
+      this spell matches the alignment descriptor of the protection spell you
+      chose when casting it. For example, granting the target protection from
+      <i>evil</i> gives this spell the <i>good</i> descriptor.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      paladin: 4
+      warpriest: 4
+  level: 4
+  materials:
+    value: parchment with a holy text written on it
+  school: abj
+  sources:
+    - id: PZO1129
+      pages: '183'
+  sr: false
+type: spell

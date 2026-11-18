@@ -1,0 +1,57 @@
+_id: 6k2vdevlvg4cu7gd
+_key: '!items!6k2vdevlvg4cu7gd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Opportunistic Loyalty
+system:
+  actions:
+    - _id: a3qh66vzaachg02q
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Cast this spell when a creature within range casts a spell that
+      provides an effect for its allies (such as <i>bless</i> or prayer). You
+      are considered an ally of the caster for the purposes of that spell.
+      Although you are momentarily considered an ally, the caster need not
+      target you if the spell requires that the caster select one or more allies
+      to be affected by the spell (as does haste). This spell does not allow a
+      target spell to affect more creatures than described in its target entry.
+      If this spell would raise the total number of affected targets above that
+      allowed by the target spell, <i>opportunistic loyalty</i> has no
+      effect.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      cleric: 1
+      inquisitor: 1
+      mesmerist: 1
+      oracle: 1
+      psychic: 1
+      warpriest: 1
+      witch: 1
+  school: enc
+  sources:
+    - id: PZO90115
+      pages: '75'
+  subschool:
+    - compulsion
+type: spell

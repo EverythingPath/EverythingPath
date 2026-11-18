@@ -1,0 +1,61 @@
+_id: uGfh3EEOi61LGdw1
+_key: '!items!uGfh3EEOi61LGdw1'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crook.PNG
+name: Crook
+system:
+  actions:
+    - _id: zy1y41rs1p9l7v51
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Crook
+  description:
+    unidentified: >-
+      <p>This common herder's tool is a wooden pole with a hooked end. When
+      using a crook, you can ignore the penalty for not having two hands free
+      when making a combat maneuver check to initiate a grapple against a
+      creature you threaten.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 1
+  properties:
+    rch: true
+    trp: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 5
+type: weapon
