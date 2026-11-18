@@ -1,0 +1,68 @@
+_id: lNkiFRCBELwKFaTg
+_key: '!items!lNkiFRCBELwKFaTg'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/orc-hornbow.png
+name: Horse Bow
+system:
+  actions:
+    - _id: 1hr6fct5ajo2t2c5
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: arrow
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '110'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Longbow
+  description:
+    unidentified: >-
+      <p>The horse bow functions like a composite longbow, but it is designed to
+      be used on horseback. A rider using a horse bow can make ranged attacks
+      while mounted; furthermore, she does not take a penalty to attack rolls
+      when her mount is taking a double move action, and she takes only a -4
+      penalty on attack rolls when her mount is running. The price of this item
+      is for a default horse bow; each point of Strength bonus granted by the
+      horse bow adds 150 gp to its cost.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 150
+  sources:
+    - id: PZO9489
+      pages: '24'
+  subType: exotic
+  tags:
+    - Composite
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

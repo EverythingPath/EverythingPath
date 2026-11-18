@@ -1,0 +1,85 @@
+_id: o4vWDCKqxbn9Gelq
+_key: '!items!o4vWDCKqxbn9Gelq'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/net.png
+name: Snag Net
+system:
+  actions:
+    - _id: scw8j4hgqein18kr
+      ability:
+        attack: _default
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: inst
+      name: Throw
+      range:
+        units: ft
+        value: '10'
+      touch: true
+      uses:
+        self:
+          per: single
+          value: 1
+    - _id: 3vZULcSCAAF5HzIW
+      ability:
+        attack: _default
+      actionType: mcman
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: '1'
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Trip
+      range:
+        units: melee
+  baseTypes:
+    - Snag Net
+  description:
+    unidentified: >-
+      <p>This short, wide net is covered in barbed loops and slipknots. It works
+      like a typical
+      @UUID[Compendium.pf1.weapons-and-ammo.Item.6oevs2mE3QqqQEAK]{net}, except
+      it has the trip weapon special feature. If you entangle an opponent and
+      hold the trailing rope, on your turn in place of a melee attack you may
+      make a combat maneuver check to trip against that opponent; if you
+      succeed, you may trip your opponent or deal 1 point of piercing damage to
+      it. The concentration DC to cast while entangled in a snag net is 17 + the
+      spell's level. The Escape Artist DC to escape a snag net is 22.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 30
+  properties:
+    spc: true
+    trp: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+    - id: PZO1121
+      pages: '201'
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  tags:
+    - Strix
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 10
+type: weapon

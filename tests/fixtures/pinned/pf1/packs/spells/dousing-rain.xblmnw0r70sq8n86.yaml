@@ -1,0 +1,60 @@
+_id: xblmnw0r70sq8n86
+_key: '!items!xblmnw0r70sq8n86'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Dousing Rain
+system:
+  actions:
+    - _id: pq4sim74uwg7i79h
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cylinder (10-ft. radius, 40 ft. high)
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: medium
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a beckoning gesture, you call forth a downpour of rain. For the
+      duration of the spell, the following effects apply within the affected
+      area. Nonmagical fires are automatically extinguished, and all creatures
+      and objects in the area gain fire resistance 5. The conjured water is
+      conductive, and whenever a doused creature takes electricity damage, it
+      takes 1 additional point of electricity damage. At 6th, 12th, and 18th
+      levels, the fire resistance increases by 5 and the additional electricity
+      damage increases by 1 point.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      bard: 2
+      druid: 2
+      hunter: 2
+      shaman: 2
+      skald: 2
+      witch: 2
+  level: 2
+  materials:
+    value: a drop of water
+  school: evo
+  sources:
+    - id: PZO1136
+      pages: '176'
+  sr: false
+type: spell

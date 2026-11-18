@@ -1,0 +1,59 @@
+_id: L4KYkvLrUYAQJcdl
+_key: '!items!L4KYkvLrUYAQJcdl'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/siangham.PNG
+name: Siangham
+system:
+  actions:
+    - _id: 4sn521gugvwnyf5i
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Siangham
+  description:
+    unidentified: >-
+      <p>This weapon is a handheld shaft fitted with a pointed tip for stabbing
+      foes. It resembles a (much sturdier) arrow with a grip designed for melee
+      combat.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 3
+  properties:
+    fin: true
+    mnk: true
+  sources:
+    - id: PZO1110
+      pages: 143, 148
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - monk
+  weight:
+    value: 1
+type: weapon

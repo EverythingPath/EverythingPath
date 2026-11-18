@@ -1,0 +1,60 @@
+_id: p3mgpxw7ug23mgr8
+_key: '!items!p3mgpxw7ug23mgr8'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Recentering Drone
+system:
+  actions:
+    - _id: g8fojkftahlxi746
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/2 levels (no two of which may be more than 30 ft. apart)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You emit a calming subsonic drone that allows the targets to
+      temporarily refocus and restore their balance when they're suffering from
+      debilitating conditions. A target with the dazzled, fatigued, shaken, or
+      sickened condition ignores the penalties of those conditions for the
+      duration of this spell. A target with one of the following conditions is
+      treated as having the associated lesser condition for the duration of the
+      spell, as shown by the following table.</p><table
+      border="1"><tbody><tr><th>Condition</th><th>Lesser
+      Condition</th></tr><tr><td>Blinded</td><td>Dazzled</td></tr><tr><td>Exhausted</td><td>Fatigued</td></tr><tr><td>Frightened</td><td>Shaken</td></tr><tr><td>Nauseated</td><td>Sickened</td></tr></tbody></table><p>
+      At the end of the spell's duration, the targets are again subject to the
+      appropriate penalties if the original conditions affecting the target are
+      still in effect.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      druid: 2
+      hunter: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO9443
+      pages: '27'
+type: spell

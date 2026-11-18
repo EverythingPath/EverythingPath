@@ -1,0 +1,63 @@
+_id: mDJlmENIJf6IpZFc
+_key: '!items!mDJlmENIJf6IpZFc'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/sickle.png
+name: Spider-Leg Sickle
+system:
+  actions:
+    - _id: 9obj53ald5fuvsvf
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Spider-Leg Sickle
+  description:
+    unidentified: >-
+      <p>This wickedly curved sickle is cast in the form of a segmented spider's
+      leg. It has the same statistics as a normal sickle and can trip opponents,
+      but deals piercing damage rather than slashing damage. The leatherwrapped
+      handle contains a hollow recess that can hold a single dose of poison.
+      Filling the reservoir is a full-round action that carries the usual risks
+      of poisoning yourself. Once filled, the reservoir keeps the blade
+      saturated and viable for up to 2 hours. The first successful attack made
+      with the spider-leg sickle during this time administers and expends the
+      dose of poison. Mog-Lathar's deacons carry masterwork versions of these
+      weapons. The cult uses blue whinnis poison, and within the radius of the
+      <em>dreamstone</em>'s effects the unconsciousness effect may trigger lucid
+      dreaming.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    fin: true
+    trp: true
+  sources:
+    - id: PZO9549
+      pages: '13'
+  weight:
+    value: 2
+type: weapon

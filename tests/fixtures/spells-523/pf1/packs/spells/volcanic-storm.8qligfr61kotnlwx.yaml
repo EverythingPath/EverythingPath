@@ -1,0 +1,69 @@
+_id: 8qligfr61kotnlwx
+_key: '!items!8qligfr61kotnlwx'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/fire-arrows-2.jpg
+name: Volcanic Storm
+system:
+  actions:
+    - _id: 4lt5ud0m8c04b3gv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cylinder (20-ft. radius, 40 ft. high)
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - bludgeoning
+          - formula: 2d6
+            types:
+              - fire
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: long
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Chunks of hot volcanic rock and clumps of ash pound down when this
+      spell is cast, dealing 3d6 points of bludgeoning damage and 2d6 points of
+      fire damage to every creature in the area. This damage only occurs once,
+      when the spell is cast.</p><p>For the remaining duration of the spell,
+      heavy ash rains down in the area. Creatures inside this area take a -4
+      penalty on Perception skill checks and the entire area is treated as
+      difficult terrain. At the end of the duration, the rock and ash disappear,
+      leaving no aftereffects (other than the damage dealt).</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      druid: 4
+      hunter: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: obsidian and ash
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '248'
+type: spell

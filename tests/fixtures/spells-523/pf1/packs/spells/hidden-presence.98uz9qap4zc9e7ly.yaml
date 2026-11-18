@@ -1,0 +1,71 @@
+_id: 98uz9qap4zc9e7ly
+_key: '!items!98uz9qap4zc9e7ly'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Hidden Presence
+system:
+  actions:
+    - _id: x3iycla34ieukobq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: up to one creature per 3 caster levels
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You prevent the targets from having conscious awareness of your
+      presence. You make yourself completely un<i>detect</i>able to the subjects
+      by erasing all awareness of your presence from their minds. The targets
+      can't see, hear, smell, feel, or taste you, including with extraordinary
+      or supernatural senses such as blindsense, blindsight, scent, or
+      tremorsense. They can't pinpoint your location by any means, including
+      <i>detect</i> spells.  The targets remain unaware of your actions,
+      provided you don't make any attacks or cause any obvious or directly
+      threatening changes in the targets' environment. If you attack any of the
+      target creatures, the effect ends. If you take an action that creates a
+      sustained and obvious change in the target's environment-for example,
+      attacking a creature other than a target or moving a sizeable or attended
+      object the target can see-the target immediately receives a new saving
+      throw.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: eye drops made with extract of poppy
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '216'
+  subschool:
+    - compulsion
+type: spell

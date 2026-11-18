@@ -1,0 +1,81 @@
+_id: g9koefk7x9szoheo
+_key: '!items!g9koefk7x9szoheo'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/air/air-burst-spiral-blue-gray.webp
+name: Control Winds
+system:
+  actions:
+    - _id: 5mhala9m1nwcm6fh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40 ft./level radius cylinder 40 ft. high
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '@cl * 40'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '40'
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You alter wind force in the area surrounding you. You can make the wind
+      blow in a certain direction or manner, increase its strength, or decrease
+      its strength. The new wind direction and strength persist until the spell
+      ends or until you choose to alter your handiwork, which requires
+      concentration. You may create an "eye" of calm air up to 80 feet in
+      diameter at the center of the area if you so desire, and you may choose to
+      limit the area to any cylindrical area less than your full
+      limit.</p><p><em>Wind Direction</em>: You may choose one of four basic
+      wind patterns to function over the spell's area.</p><ul><li><p>A downdraft
+      blows from the center outward in equal strength in all
+      directions.</p></li><li><p>An updraft blows from the outer edges in toward
+      the center in equal strength from all directions, veering upward before
+      impinging on the eye in the center.</p></li><li><p>Rotation causes the
+      winds to circle the center in clockwise or counterclockwise
+      fashion.</p></li><li>A blast simply causes the winds to blow in one
+      direction across the entire area from one side to the
+      other.</li></ul><p><em>Wind Strength</em>: For every three caster levels,
+      you can increase or decrease wind strength by one level. Each round on
+      your turn, a creature in the wind must make a Fortitude save or suffer the
+      effect of being in the windy area. See Environment for more
+      details.</p><p>Strong winds (21+ mph) make sailing difficult.</p><p>A
+      severe wind (31+ mph) causes minor ship and building damage.</p><p>A
+      windstorm (51+ mph) drives most flying creatures from the skies, uproots
+      small trees, knocks down light wooden structures, tears off roofs, and
+      endangers ships.</p><p>Hurricane force winds (75+ mph) destroy wooden
+      buildings, uproot large trees, and cause most ships to founder.</p><p>A
+      tornado (175+ mph) destroys all nonfortified buildings and often uproots
+      large trees.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      druid: 5
+      hunter: 5
+      occultist: 5
+      shaman: 5
+    domain:
+      Air: 5
+      Weather: 6
+  level: 5
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '261'
+  sr: false
+type: spell
