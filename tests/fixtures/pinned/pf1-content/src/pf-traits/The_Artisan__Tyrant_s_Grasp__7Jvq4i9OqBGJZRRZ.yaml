@@ -1,0 +1,68 @@
+_id: 7Jvq4i9OqBGJZRRZ
+_key: '!items!7Jvq4i9OqBGJZRRZ'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: The Artisan (Tyrant's Grasp)
+system:
+  actions:
+    - _id: viwYL5mwgSG17bXj
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      description: >-
+        <p>Once per day, you can spend a full round casting a spell you can cast
+        that has a normal casting time of 1 standard action to increase your
+        effective caster level for that spell by 1. This ability has no affect
+        on spells with a casting time other than 1 standard action.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  changes:
+    - _id: 5qADgY3n
+      formula: '1'
+      target: skill.apr
+      type: trait
+    - _id: Esr92rjl
+      formula: '1'
+      target: skill.hea
+      type: trait
+  contextNotes:
+    - target: cl
+      text: >-
+        Once per day, as a full round action, you can cast with a casting time
+        of 1 standard action to increase your effective caster level for that
+        spell by 1. This ability has no affect on spells with a casting time
+        other than 1 standard action.
+        ([[@resources.theArtisanTyrantsGrasp.value]] remaining uses)
+  description:
+    instructions: >-
+      <p>Select Appraise or Heal when you take this trait.</p><p>Update the
+      Class skills section of the Details tab of this trait to reflect your
+      choice.</p>
+    value: >-
+      <p><em>Precision is important in getting exactly what you want, and you
+      give careful consideration in building everything from homes and vases to
+      roads and empires. Your own attention to detail has proven vital in
+      rebuilding Roslar’s Coffer from the orc occupation a decade ago, whether
+      you are an accountant, architect, engineer, or
+      herbalist.</em></p><p><strong>Benefits</strong>: Your attention to detail
+      provides you a +1 trait bonus on Appraise and Heal checks, and one of
+      these skills becomes a class skill for you.</p><p>Once per day, you can
+      spend a full round casting a spell you can cast that has a normal casting
+      time of 1 standard action to increase your effective caster level for that
+      spell by 1. This ability has no affect on spells with a casting time other
+      than 1 standard action.</p>
+  sources:
+    - id: PZO9000-24E
+      pages: '6'
+  subType: trait
+  tags:
+    - Tyrant's Grasp
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    value: 1
+type: feat

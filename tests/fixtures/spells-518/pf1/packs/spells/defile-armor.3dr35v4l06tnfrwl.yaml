@@ -1,0 +1,47 @@
+_id: 3dr35v4l06tnfrwl
+_key: '!items!3dr35v4l06tnfrwl'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Defile Armor
+system:
+  actions:
+    - _id: 6s820csar73pf7a8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: armor touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>As @UUID[Compendium.pf1.spells.Item.mjddoap3a58b2bux]{sanctify armor},
+      except you gain DR 5/good when using your judgment or smite ability.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 3
+      inquisitor: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '215'
+type: spell

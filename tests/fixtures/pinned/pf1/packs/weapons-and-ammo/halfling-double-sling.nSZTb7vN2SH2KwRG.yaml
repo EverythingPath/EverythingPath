@@ -1,0 +1,75 @@
+_id: nSZTb7vN2SH2KwRG
+_key: '!items!nSZTb7vN2SH2KwRG'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sling-double.png
+name: Halfling Double Sling
+system:
+  actions:
+    - _id: 3wrimg2yn272umyc
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: slingBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '50'
+  ammo:
+    type: slingBullet
+  baseTypes:
+    - Halfling Double Sling
+  description:
+    unidentified: >-
+      <p>At first glance resembling a baton-like stick with a sling dangling
+      from each end, this weapon requires extraordinary skill, or halfling
+      acrobatics, to use to full effect. You can use a double sling as a normal
+      sling, or use the second end to make one additional ranged attack each
+      round. You take the normal penalties for fighting with two weapons when
+      you use both ends of a double sling (as if it were a double weapon); the
+      Two- Weapon Fighting feat reduces these penalties as normal. Reloading one
+      end of a double sling is a move action ( just like a normal sling), so
+      unless you have an ability or feat (such as Ammo Drop) that allows you to
+      quickly reload a sling, you cannot normally make multiple attacks per
+      round for several consecutive rounds with this weapon.</p><p>You can hurl
+      ordinary stones with a double sling, but stones are not as dense or as
+      round as bullets. Thus, such an attack deals damage as if the weapon were
+      designed for a creature one size category smaller than you, and you take a
+      -1 penalty on attack rolls.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: leather
+  price: 10
+  sources:
+    - id: PZO9415
+      pages: '22'
+  subType: exotic
+  tags:
+    - Halfling
+  weaponGroups:
+    - double
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

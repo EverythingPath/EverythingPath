@@ -1,0 +1,34 @@
+_id: sM3zBc3XboHD6itx
+_key: '!items!sM3zBc3XboHD6itx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Fluid Nature
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: JCKNNNcm
+      formula: min(floor(@class.level/5),1)
+      target: bonusFeats
+      type: untyped
+  contextNotes:
+    - target: cmd
+      text: +4 bonus against bull rush, drag, grapple, reposition, and trip attempts
+  description:
+    value: >-
+      <p>You receive a +4 bonus to your Combat Maneuver Defense against bull
+      rush, drag, grapple, reposition, and trip attempts. A creature trying to
+      confirm a critical hit against you has a –4 penalty on its confirmation
+      roll.</p>
+
+      <p>At 5th level, you gain
+      @UUID[Compendium.pf1.feats.JreaiTHdyWFNj3Tb]{Dodge} as a bonus feat. You
+      do not need to meet the prerequisite to gain this feat.</p>
+  subType: classFeat
+  tags:
+    - Revelation
+    - Waves Mystery
+type: feat

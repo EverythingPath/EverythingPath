@@ -1,0 +1,160 @@
+_id: INprX7ISw247EOKK
+_key: '!items!INprX7ISw247EOKK'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Enclave Protector
+system:
+  actions:
+    - _id: wpPDflfBRvdPcPTB
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}</p><p>The
+        warded creature or object becomes difficult to detect by divination
+        spells such as clairaudience/clairvoyance, locate object, and detect
+        spells. Nondetection also prevents location by such magic items as
+        crystal balls. If a divination is attempted against the warded creature
+        or item, the caster of the divination must succeed on a caster level
+        check (1d20 + caster level) against a DC of 11 + the caster level of the
+        spellcaster who cast nondetection. If you cast nondetection on yourself
+        or on an item currently in your possession, the DC is 15 + your caster
+        level.</p><p>If cast on a creature, nondetection wards the creature's
+        gear as well as the creature itself.</p>
+      duration:
+        units: perm
+      name: Nondetection
+      notes:
+        effect:
+          - >-
+            If a divination is attempted you, they must attempt a caster level
+            check,  the DC for that check is [[15 + @attributes.hd.total]]
+      range:
+        units: touch
+      target:
+        value: creature or object touched
+    - _id: 6EgEdc0JlOmx5oCx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures and objects within a 5-ft.-radius burst
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{Faerie
+        Fire}</em></p><p>A pale glow surrounds and outlines the subjects.
+        Outlined subjects shed light as candles. Creatures outlined by
+        <em>faerie fire</em> take a -20 penalty on all Stealth checks. Outlined
+        creatures do not benefit from the concealment normally provided by
+        <em>darkness</em> (though a 2nd-level or higher magical
+        <em>darkness</em> effect functions normally), <em>blur</em>,
+        <em>displacement</em>, <em>invisibility</em>, or similar effects. The
+        light is too dim to have any special effect on undead or dark-dwelling
+        creatures vulnerable to light. The <em>faerie fire</em> can be blue,
+        green, or violet, according to your choice at the time of casting. The
+        <em>faerie fire</em> does not cause any harm to the objects or creatures
+        thus outlined.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Faerie Fire
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: VH8MaSdqRrKtJuZJ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.x5hunybxpzhd3gcm]{Obscure
+        Object}</p><p>This spell hides an object from location by divination
+        (scrying) effects, such as the scrying spell or a crystal ball. Such an
+        attempt automatically fails (if the divination is targeted on the
+        object) or fails to perceive the object (if the divination is targeted
+        on a nearby location, object, or person).</p>
+      duration:
+        units: hour
+        value: '8'
+      name: Obscure Object
+      range:
+        units: touch
+      save:
+        dc: 12 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: one object touched of up to [[@attributes.hd.total * 100]] lbs
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: a7LBZ48gmw12vU91
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.yk5bgi6j9kbtigof]{Sanctuary}</em></p><p>Any
+        opponent attempting to directly attack the warded creature, even with a
+        targeted spell, must attempt a Will save. If the save succeeds, the
+        opponent can attack normally and is unaffected by that casting of the
+        spell. If the save fails, the opponent can't follow through with the
+        attack, that part of its action is lost, and it can't directly attack
+        the warded creature for the duration of the spell.</p><p>Those not
+        attempting to attack the subject remain unaffected. This spell does not
+        prevent the warded creature from being attacked or affected by area of
+        effect spells. The subject cannot attack without breaking the spell but
+        may use nonattack spells or otherwise act.</p><p></p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Sanctuary
+      range:
+        units: touch
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Negates
+        type: will
+      target:
+        value: Creature touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  changes:
+    - _id: KJ8P9tab
+      formula: '1'
+      target: dc.school.abj
+      type: untyped
+  description:
+    value: >-
+      <p>Members of this race add +1 to the caster level of any abjuration
+      spells they cast. Members of this race also gain the following spell-like
+      abilities: constant—nondetection; 1/day—faerie fire, obscure object,
+      sanctuary. The caster level for these effects is equal to the user’s
+      character level.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '228'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+type: feat

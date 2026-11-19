@@ -1,0 +1,56 @@
+_id: 5spjx8eba8jgjuqw
+_key: '!items!5spjx8eba8jgjuqw'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Eruptive Pustules
+system:
+  actions:
+    - _id: azia2qvqaj872z6s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your skin erupts in swollen, pus-filled bumps that burst open if you
+      are struck. Any creature that strikes you with its body or a hand-held
+      weapon deals normal damage, but at the same time the attacker takes 1d6
+      points of acid damage and must save or be sickened for 1 round. If the
+      attack against you is a critical hit, the attacker must save or be
+      nauseated instead of sickened. This damage can harm a swarm.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bloodrager: 3
+      investigator: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '218'
+type: spell

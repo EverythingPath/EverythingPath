@@ -1,0 +1,37 @@
+_id: B1abP8HNMYf9SLdn
+_key: '!items!B1abP8HNMYf9SLdn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Energy Shield
+system:
+  abilityType: su
+  actions:
+    - _id: pgurvzdezwndyqg2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can protect herself from energy damage as a standard
+      action by expending 1 point from her arcane reservoir. She must pick one
+      energy type and gains resistance 10 against that energy type for 1 minute
+      per arcanist level. This protection increases by 5 for every 5 levels the
+      arcanist possesses (up to a maximum of 30 at 20th level).</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat
