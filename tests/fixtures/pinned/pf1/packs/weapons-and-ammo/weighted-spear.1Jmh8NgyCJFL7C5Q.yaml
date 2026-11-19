@@ -1,0 +1,87 @@
+_id: 1Jmh8NgyCJFL7C5Q
+_key: '!items!1Jmh8NgyCJFL7C5Q'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/spear-weighted.png
+name: Weighted Spear
+system:
+  actions:
+    - _id: ew4lffe60yewawks
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Spear Attack
+      range:
+        units: melee
+        value: '0'
+    - _id: JhPEWXpLI8BwSsNP
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Mace Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Weighted Spear
+    - Spear
+  description:
+    unidentified: >-
+      <p>This pole has a spear head at one end and a mace head at the other. It
+      can be wielded like a standard spear (though it isn't balanced for
+      throwing), or it can be used as a double weapon, alternately thrusting and
+      bashing.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    brc: true
+    dbl: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  weaponGroups:
+    - double
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

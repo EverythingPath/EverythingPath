@@ -1,0 +1,60 @@
+_id: ZEVsEIPpOyHmpmEe
+_key: '!items!ZEVsEIPpOyHmpmEe'
+_stats:
+  coreVersion: '12.331'
+folder: hgugkB6LKBczuduh
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Spell-Like Ability (Skinwalker)
+system:
+  abilityType: sp
+  actions:
+    - _id: FKADrhXd6yZteFuY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+        animals}</p><p>You can ask questions of and receive answers from
+        animals, but the spell doesn't make them any more friendly than normal.
+        Wary and cunning animals are likely to be terse and evasive, while the
+        more stupid ones make inane comments. If an animal is friendly toward
+        you, it may do some favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: speak with animals
+      notes:
+        effect:
+          - Use Wisdom for concentration checks
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Skinwalker</p><hr /><p>A skinwalker with a
+      Wisdom score of 11 or higher can use
+      <em>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+      animals}</em> once per day as a spell-like ability, using his Wisdom
+      modifier to determine his concentration checks. The caster level for this
+      ability is equal to the skinwalker's character level.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1133
+      pages: '233'
+    - id: PZO9280
+      pages: '248'
+    - id: PZO9439
+      pages: '7'
+  subType: racial
+  tags:
+    - Skinwalker
+  traitCategory: magical
+  uses:
+    maxFormula: 'gte(@abilities.wis.total, 11) '
+    value: 0
+type: feat

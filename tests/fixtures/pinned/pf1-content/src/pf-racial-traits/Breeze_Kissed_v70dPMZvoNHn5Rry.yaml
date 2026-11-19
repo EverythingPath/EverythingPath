@@ -1,0 +1,59 @@
+_id: v70dPMZvoNHn5Rry
+_key: '!items!v70dPMZvoNHn5Rry'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Breeze-Kissed
+system:
+  abilityType: su
+  actions:
+    - _id: n29iGiaXtKizBYGQ
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: bull rush or trip
+      range:
+        units: ft
+        value: '30'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: ac
+      text: >-
+        +[[2]] racial vs non-magical ranged attacks (As long as you have not
+        used your ranged bullrush/trip ability today).
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Air or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.nb7WkJkqL3bnhkU5]{Fey}
+      type</p><hr /><p>Members of this race are surrounded by swirling winds,
+      gaining a +2 racial bonus to AC against nonmagical ranged attacks. They
+      can calm or renew these winds as a swift action. Once per day, a member of
+      this race can channel this wind into a single gust, making a bull rush or
+      trip combat maneuver attempt against one creature within @Distance[30
+      ft;dual]. Doing so exhausts the user’s breeze-kissed ability for 24 hours.
+      This is a supernatural ability.</p>
+  racePoints: 4
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '221'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

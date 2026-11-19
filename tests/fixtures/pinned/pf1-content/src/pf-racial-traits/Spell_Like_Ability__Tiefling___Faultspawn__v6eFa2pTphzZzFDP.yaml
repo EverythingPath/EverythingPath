@@ -1,0 +1,66 @@
+_id: v6eFa2pTphzZzFDP
+_key: '!items!v6eFa2pTphzZzFDP'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Faultspawn)
+system:
+  abilityType: sp
+  actions:
+    - _id: T62z6pPpndJIGjBT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.5nr9o7o0it6ewf17]{hideous
+        laughter}</p><p>This spell afflicts the subject with uncontrollable
+        laughter. It collapses into gales of manic laughter, falling prone. The
+        subject can take no actions while laughing, but is not considered
+        helpless.</p><p>After the spell ends, it can act normally. On the
+        creature's next turn, it may attempt a new saving throw to end the
+        effect. This is a full round action that does not provoke attacks of
+        opportunity.</p><p>If this save is successful, the effect ends. If not,
+        the creature continues laughing for the entire duration.</p><p>A
+        creature with an Intelligence score of 2 or lower is not
+        affected.</p><p>A creature whose type is different from the caster's
+        receives a +4 bonus on its saving throw, because humor doesn't
+        "translate" well.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: hideous laughter
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: one creature
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Faultspawn</p><hr /><p>Faultspawn can
+      use @UUID[Compendium.pf1.spells.Item.5nr9o7o0it6ewf17]{hideous laughter}
+      once per day as a spell-like ability (with a caster level equal to their
+      character level).</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '251'
+    - id: PZO9423
+      pages: '19'
+  subType: racial
+  tags:
+    - Tiefling
+    - Faultspawn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

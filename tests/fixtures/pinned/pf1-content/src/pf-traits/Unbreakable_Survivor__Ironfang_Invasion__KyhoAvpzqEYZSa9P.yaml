@@ -1,0 +1,64 @@
+_id: KyhoAvpzqEYZSa9P
+_key: '!items!KyhoAvpzqEYZSa9P'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Unbreakable Survivor (Ironfang Invasion)
+system:
+  actions:
+    - _id: ihsRYNN4IO2mIbxt
+      actionType: heal
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      damage:
+        parts:
+          - formula: '@attributes.hd.total + @abilities.con.mod'
+            types:
+              - untyped
+      description: >-
+        <p>Once per day, as a full round action, you may shrug off some of your
+        injuries and immediately heal a number of hit points equal to your
+        Constitution modifier + 1 per Hit Die.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: skill.dip
+      text: >-
+        +[[1]] Trait bonus whenever you attempt to influence residents of
+        Phaendar. At 6th level, you may apply your trait bonus on checks to
+        influence all humanoids in Nirmathas.
+    - target: skill.int
+      text: >-
+        +[[1]] Trait bonus whenever you attempt to influence residents of
+        Phaendar. At 6th level, you may apply your trait bonus on checks to
+        influence all humanoids in Nirmathas.
+  description:
+    value: >-
+      <p><em>Over a decade ago, bandits took everything you valued in life and
+      left you barely alive. You managed to rebuild your life in the years
+      since, and your tenacity has made you a local
+      legend.</em></p><p><strong>Benefits</strong>: Once per day as a full round
+      action, you may shrug off some of your injuries and immediately heal a
+      number of hit points equal to your Constitution modifier + 1 per Hit Die.
+      Your reputation for tenacity inspires your neighbors, and you gain a +1
+      trait bonus whenever you attempt to influence residents of Phaendar with
+      Diplomacy or Intimidate checks. At 6th level, your reputation spreads
+      further across the nation, and you may apply your trait bonus on Diplomacy
+      and Intimidate checks to influence all humanoids in Nirmathas.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9000-20E
+      pages: '8'
+  subType: trait
+  tags:
+    - Ironfang Invasion
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

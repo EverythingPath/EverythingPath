@@ -1,0 +1,63 @@
+_id: 5cdmojmydhwowzy1
+_key: '!items!5cdmojmydhwowzy1'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/environment/settlement/watchtower-city.webp
+name: Teleport, Greater
+system:
+  actions:
+    - _id: e9yq29rw03w79pfq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      save:
+        description: none and Will negates (object)
+        type: will
+      target:
+        value: you and touched objects or other touched willing creatures
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.ptqu8gtrujxsvwy1]{teleport}<em>,</em>
+      except that there is no range limit and there is no chance you arrive off
+      target. In addition, you need not have seen the destination, but in that
+      case you must have at least a reliable description of the place to which
+      you are teleporting. If you attempt to teleport with insufficient
+      information (or with misleading information), you disappear and simply
+      reappear in your original location. Interplanar travel is not
+      possible.</p>
+  learnedAt:
+    bloodline:
+      Abyssal: 7
+      Arcane: 7
+      Infernal: 7
+    class:
+      arcanist: 7
+      psychic: 7
+      sorcerer: 7
+      summoner: 5
+      summonerUnchained: 6
+      witch: 7
+      wizard: 7
+    domain:
+      Travel: 7
+  level: 7
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '359'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

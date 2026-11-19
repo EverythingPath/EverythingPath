@@ -1,0 +1,56 @@
+_id: onsvwqelnbj6z83r
+_key: '!items!onsvwqelnbj6z83r'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Implanted Projection
+system:
+  actions:
+    - _id: j5qarm8qf7crto81
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.2s198jpks0pvimjf]{telempathic
+      projection}, except its mood-altering effects remain dormant in the
+      target's mind. Upon casting this spell, the caster designates a command
+      word or phrase, of which the target retains no memory. The next creature
+      to speak the command word or phrase to the target triggers the implanted
+      <em>telempathic</em> projection, treating the speaker as the original
+      spellcaster.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 3
+      psychic: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9461
+      pages: '13'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

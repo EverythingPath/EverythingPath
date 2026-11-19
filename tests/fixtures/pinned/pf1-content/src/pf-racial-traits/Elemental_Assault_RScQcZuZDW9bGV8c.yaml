@@ -1,0 +1,65 @@
+_id: RScQcZuZDW9bGV8c
+_key: '!items!RScQcZuZDW9bGV8c'
+_stats:
+  coreVersion: '12.331'
+folder: oRCDujilxeupPMmL
+img: systems/pf1/icons/races/creature-types/elemental.png
+name: Elemental Assault
+system:
+  actions:
+    - _id: pPylUqBqXpdepLMc
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>Once per day as a swift action, a suli can shroud her arms in acid,
+        cold, electricity, or fire. This effect lasts for 1 round per level and
+        can be dismissed as a free action. Unarmed strikes with her arms or
+        hands (or attacks with weapons held in those hands) deal +1d6 points of
+        damage of the appropriate energy type.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Elemental Assault
+  description:
+    value: >-
+      <p><strong>Race</strong>: Suli</p><hr /><p>Once per day as a swift action,
+      a suli can shroud her arms in acid, cold, electricity, or fire. This
+      effect lasts for 1 round per level and can be dismissed as a free action.
+      Unarmed strikes with her arms or hands (or attacks with weapons held in
+      those hands) deal +1d6 points of damage of the appropriate energy
+      type.</p><p><strong>Related buffs:</strong></p><p>@Toggle[Elemental
+      Assault (Acid, Suli)]</p><p>@Toggle[Elemental Assault (Cold,
+      Suli)]</p><p>@Toggle[Elemental Assault (Electricity,
+      Suli)]</p><p>@Toggle[Elemental Assault (Fire, Suli)]</p>
+  links:
+    supplements:
+      - name: Elemental Assault (Acid, Suli)
+        uuid: Compendium.pf-content.pf-buffs.Item.5dhYEpIJErvmfN4e
+      - name: Elemental Assault (Cold, Suli)
+        uuid: Compendium.pf-content.pf-buffs.Item.VyWoVIjC4s8uD5GH
+      - name: Elemental Assault (Electricity, Suli)
+        uuid: Compendium.pf-content.pf-buffs.Item.DyhAwDKVqDT6edB6
+      - name: Elemental Assault (Fire, Suli)
+        uuid: Compendium.pf-content.pf-buffs.Item.0lJgJcF96Mib82RK
+  racePoints: 4
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '250'
+    - id: PZO1120
+      pages: '258'
+    - id: PZO9406
+      pages: '28'
+    - id: PZO1121
+      pages: '202'
+  subType: racial
+  tags:
+    - Suli
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

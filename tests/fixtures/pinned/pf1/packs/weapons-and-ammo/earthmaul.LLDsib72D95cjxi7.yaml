@@ -1,0 +1,62 @@
+_id: LLDsib72D95cjxi7
+_key: '!items!LLDsib72D95cjxi7'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: systems/pf1/icons/feats/martial-weapon-proficiency.jpg
+name: Earthmaul
+system:
+  actions:
+    - _id: afpr221wkoouds6b
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Earthmaul
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 6d6; <b>Critical</b> -; <b>Range</b>
+      -; <b>Type</b> B</p><p><b>Crew</b> 3; <b>Aim</b> 0; <b>Load</b> 3;
+      <b>Speed</b> 0 ft.</p><p><b>Category</b> Close Assault; <b>Proficiency</b>
+      Siege Engine</p><h3>Description</h3><p>This war machine is fitted with an
+      enormous hammer. When dropped into the horizontal position, it functions
+      like a sideways-mounted catapult, and is capable of clearing wide swaths
+      of enemies. Although it doesn't use ammunition, the earthmaul must
+      effectively be reloaded by winding the torsion. When the earthmaul is
+      activated, creatures on the ground in a 15-foot cone take 6d6 points of
+      damage, are knocked 10 feet in the direction of the swing, and fall prone.
+      A successful DC 20 Reflex saving throw halves the damage and negates the
+      additional effects. An earthmaul has a hardness of 5 and 100 hit
+      points.</p><p>An earthmaul is a Huge siege engine.</p>
+  hardness: 5
+  hp:
+    base: 100
+  material:
+    base:
+      value: steel
+  price: 1000
+  size: huge
+  sources:
+    - id: PZO9276
+      pages: '39'
+  subType: siege
+  weaponSubtype: assault
+type: weapon
