@@ -1,0 +1,54 @@
+_id: eIbeWPnBDu7zLYjF
+_key: '!items!eIbeWPnBDu7zLYjF'
+_stats:
+  coreVersion: '12.331'
+folder: 3vSL52yi5JvMMdeU
+img: systems/pf1/icons/races/aasimar.png
+name: Spell-Like Ability (Aasimar - Lawbringers)
+system:
+  abilityType: sp
+  actions:
+    - _id: anH2BfXHRiq3kuag
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.b8vp8fgt1o6pq1qc]{Continual
+        Flame}</em></p><p>A flame, equivalent in brightness to a torch, springs
+        forth from an object that you touch. The effect looks like a regular
+        flame, but it creates no heat and doesn't use oxygen. A <em>continual
+        flame</em> can be covered and hidden but not smothered or
+        quenched.</p><p>Light spells counter and dispel <em>darkness</em> spells
+        of an equal or lower level.</p>
+      duration:
+        units: perm
+        value: '@attributes.hd.total * 10'
+      name: Continual Flame
+      range:
+        units: touch
+      target:
+        value: object touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar - Lawbringers</p><hr /><p>Lawbringers
+      can use @UUID[Compendium.pf1.spells.Item.b8vp8fgt1o6pq1qc]{Continual
+      Flame} once per day as a spell-like ability (with a caster level equal to
+      the Lawbringers' character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '239'
+    - id: PZO9424
+      pages: '22'
+  subType: racial
+  tags:
+    - Aasimar
+    - Lawbringers
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

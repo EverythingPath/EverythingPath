@@ -1,0 +1,54 @@
+_id: vaykjptpxxuy5ca6
+_key: '!items!vaykjptpxxuy5ca6'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Questing Stone
+system:
+  actions:
+    - _id: l40rbfzlu1yjrria
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one ioun stone touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.fmuea6pmgrylbux7]{arcane eye}, except
+      that it uses an <em>ioun stone</em> as a visible scrying sensor. The
+      <em>ioun stone</em> moves at the same rate as an <em>arcane eye</em>, and
+      may pass through holes or spaces as small as 2 inches in diameter. It can
+      enter another plane of existence using a <em>gate</em> or similar portal,
+      but the caster loses contact with the sensor should this occur. The
+      enhanced <em>ioun stone</em> has AC 24, 10 hp, hardness 5, fly speed 30
+      (perfect), and a +16 Stealth bonus. The stone does not provide you with
+      its normal benefits while you are using it as a scrying sensor.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      skald: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: div
+  sources:
+    - id: PZO9211
+      pages: '17'
+  sr: false
+type: spell

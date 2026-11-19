@@ -1,0 +1,60 @@
+_id: c9a27yvlb5mrow83
+_key: '!items!c9a27yvlb5mrow83'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Boiling Blood
+system:
+  actions:
+    - _id: 4xkse08boq6mq6of
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration + 1 round/level
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+      target:
+        value: >-
+          one creature per three levels, no two of which may be more than 30 ft.
+          apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The blood of the targeted creatures begins to boil. If a target fails
+      its save, it takes 1 point of fire damage per round. This spell has no
+      effect on creatures that don't have blood.  If a target has the orc
+      subtype, it doesn't take fire damage and instead gains a +2 morale bonus
+      to Strength.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      cleric: 2
+      oracle: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '209'
+type: spell

@@ -1,0 +1,55 @@
+_id: wfp7p703hom627ti
+_key: '!items!wfp7p703hom627ti'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/movement/figure-running-gray.webp
+name: Water Walk, Communal
+system:
+  actions:
+    - _id: af7z5j8e7q1543h2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g2obld7y0lpyztes]{water walk}, except you
+      divide the duration in 10-minute intervals among the creatures
+      touched.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      cleric: 2
+      hunter: 2
+      oracle: 2
+      psychic: 4
+      ranger: 2
+      warpriest: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '249'
+type: spell

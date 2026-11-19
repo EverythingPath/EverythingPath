@@ -1,0 +1,1791 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1-content/ysvwLWqMLwNmuR4W",
+      "upstreamKey": "pf1-content/ysvwLWqMLwNmuR4W",
+      "pack": "pf-feats",
+      "name": "Storm Survivor",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You know how to survive and thrive in even the stormiest of weathers.</em></p><p><strong>Prerequisites</strong>: Knowledge (nature) 2 ranks, Survival 2 ranks.</p><p><strong>Benefits</strong>: When you are in a storm of any type, you gain a +2 circumstance bonus on Perception checks, Survival checks, and saving throws regarding adverse effects from the storm itself. If you have 10 or more ranks in one of these skills, this bonus increases to +4.</p>",
+      "prerequisiteText": "Knowledge (nature) 2 ranks, Survival 2 ranks",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.kna",
+          "min": 2,
+          "kind": "skillRanks"
+        },
+        {
+          "skillRanks": "skill.sur",
+          "min": 2,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.per",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "in a storm, with fewer than 10 Perception ranks"
+            }
+          }
+        },
+        {
+          "target": "skill.per",
+          "bonusType": "circumstance",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "in a storm, with at least 10 Perception ranks"
+            }
+          }
+        },
+        {
+          "target": "skill.sur",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "in a storm, with fewer than 10 Survival ranks"
+            }
+          }
+        },
+        {
+          "target": "skill.sur",
+          "bonusType": "circumstance",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "in a storm, with at least 10 Survival ranks"
+            }
+          }
+        },
+        {
+          "target": "saves",
+          "bonusType": "circumstance",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "against adverse effects from a storm"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You know how to survive and thrive in even the stormiest of weathers.\nPrerequisites: Knowledge (nature) 2 ranks, Survival 2 ranks.\nBenefits: When you are in a storm of any type, you gain a +2 circumstance bonus on Perception checks, Survival checks, and saving throws regarding adverse effects from the storm itself. If you have 10 or more ranks in one of these skills, this bonus increases to +4."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/yux2Kaft8FDKqtsm",
+      "upstreamKey": "pf1-content/yux2Kaft8FDKqtsm",
+      "pack": "pf-feats",
+      "name": "Mantis Style",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Style", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have learned to target vital areas with crippling accuracy.</em></p><p><strong>Prerequisites</strong>: Improved Unarmed Strike, Stunning Fist, Heal 3 ranks.</p><p><strong>Benefits</strong>: You gain one additional Stunning Fist attempt per day. While using this style, you gain a +2 bonus to the DC of effects you deliver with your Stunning Fist.</p><h3>Combat Trick</h3><p>While using this style, you can spend 5 stamina points to use Stunning Fist without expending a use of Stunning Fist for the day.</p>",
+      "prerequisiteText": "Improved Unarmed Strike, Stunning Fist, Heal 3 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/GsjouI6B8X7BA5wN",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.hea",
+          "min": 3,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/yzW2Z4DOUDpEeM89",
+      "upstreamKey": "pf1-content/yzW2Z4DOUDpEeM89",
+      "pack": "pf-feats",
+      "name": "Center of Power",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have posted loyal followers in the most vital places.</em></p><p><strong>Prerequisites</strong>: Leadership score 13, hold a leadership role related to running a kingdom.</p><p><strong>Benefit</strong>: Choose a building in your kingdom as your center of power, and dedicate one of the followers granted to you by the Leadership feat to overseeing that location. For every kingdom turn in which that follower does nothing but oversee that location, the benefits that building grants to your kingdom’s Economy, Fame, Loyalty, and Stability are doubled and any penalties are negated. This feat does not allow a building to grant benefits it does not normally provide, and has no effect on a building’s other effects.</p><p>This feat only applies to one building, and committing multiple followers to this or different buildings has no effect—the selected location is treated as being of particular importance to you, and its uniqueness combined with the follower’s loyalty grants it special efficiencies. The same follower does not have to oversee your center of power every month, but you must keep at least one follower dedicated to this location for the entire month to gain this feat’s benefits. Once per year, you may change which building is your center of power.</p>",
+      "prerequisiteText": "Leadership score 13, hold a leadership role related to running a kingdom",
+      "prerequisites": [
+        {
+          "unchecked": "Leadership score 13",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "hold a leadership role related to running a kingdom",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You have posted loyal followers in the most vital places.\nPrerequisites: Leadership score 13, hold a leadership role related to running a kingdom.\nBenefit: Choose a building in your kingdom as your center of power, and dedicate one of the followers granted to you by the Leadership feat to overseeing that location. For every kingdom turn in which that follower does nothing but oversee that location, the benefits that building grants to your kingdom’s Economy, Fame, Loyalty, and Stability are doubled and any penalties are negated. This feat does not allow a building to grant benefits it does not normally provide, and has no effect on a building’s other effects.\nThis feat only applies to one building, and committing multiple followers to this or different buildings has no effect—the selected location is treated as being of particular importance to you, and its uniqueness combined with the follower’s loyalty grants it special efficiencies. The same follower does not have to oversee your center of power every month, but you must keep at least one follower dedicated to this location for the entire month to gain this feat’s benefits. Once per year, you may change which building is your center of power."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z0UwC37p1kgHerNU",
+      "upstreamKey": "pf1-content/z0UwC37p1kgHerNU",
+      "pack": "pf-feats",
+      "name": "Extended Combat Meditation",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Meditation"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are able to glean insight from your momentary meditation for longer than most can.</em></p><p><strong>Prerequisites</strong>: Wis 13, Combat Meditation, Meditation Master, character level 9th.</p><p><strong>Benefits</strong>: Add your Wisdom bonus (if any) to the number of rounds that you gain the benefits of your meditation feats when using Combat Meditation.</p>",
+      "prerequisiteText": "Wis 13, Combat Meditation, Meditation Master, character level 9th",
+      "prerequisites": [
+        {
+          "ability": "wisdom",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1-content/b9XUeZqIXLKk00yn",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/oXr83ujeuqXySBy1",
+          "kind": "feat"
+        },
+        {
+          "characterLevel": 9,
+          "kind": "characterLevel"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You are able to glean insight from your momentary meditation for longer than most can.\nPrerequisites: Wis 13, Combat Meditation, Meditation Master, character level 9th.\nBenefits: Add your Wisdom bonus (if any) to the number of rounds that you gain the benefits of your meditation feats when using Combat Meditation."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z32SBXeVSPI3MFzu",
+      "upstreamKey": "pf1-content/z32SBXeVSPI3MFzu",
+      "pack": "pf-feats",
+      "name": "Elf-Magic Defense",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Racial", "Hobgoblin"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can better resist arcane trickery from your hated foes.</em></p><p><strong>Prerequisites</strong>: Favored enemy class feature, hobgoblin.</p><p><strong>Benefits</strong>: In addition to the normal benefits against your favored enemies, you add half your favored enemy bonus on saving throws made against arcane spells, spell-like abilities, and supernatural abilities of your favored enemies.</p>",
+      "prerequisiteText": "Favored enemy class feature, hobgoblin",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/XmALhWqXdN9yOmtd",
+          "classFeatureName": "Favored Enemy",
+          "classFeatureClass": "pf1/w3wjj6s3N69BsMc3",
+          "kind": "classFeature"
+        },
+        {
+          "race": ["pf1/19JcztRuEWbrOqQW"],
+          "kind": "race"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You can better resist arcane trickery from your hated foes.\nPrerequisites: Favored enemy class feature, hobgoblin.\nBenefits: In addition to the normal benefits against your favored enemies, you add half your favored enemy bonus on saving throws made against arcane spells, spell-like abilities, and supernatural abilities of your favored enemies."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z4REeulheKMLOc71",
+      "upstreamKey": "pf1-content/z4REeulheKMLOc71",
+      "pack": "pf-feats",
+      "name": "Tempting Bargain",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>By going against traditional teachings and summoner practices, you have secured the service of an outsider whose morality differs wildly from your own, but you must endure its constant temptations or attempts to redeem you.</em></p><p><strong>Prerequisites</strong>: Unchained summoner level 1st, eidolon class feature.</p><p><strong>Benefits</strong>: You can select an eidolon of any alignment, even if its alignment is more than one step away from your own. Your eidolon never refuses your call as a result of the differences between your respective alignments, though it still can refuse to follow commands that are against its ethos or alignment.</p><p> Each time you gain a summoner level, you must attempt a Will saving throw (DC = 10 + half your eidolon's Hit Dice + your eidolon's Charisma modifier). On a failure, your alignment permanently shifts one step closer to that of your eidolon. Modifiers that are not permanent can't be applied on this saving throw.</p><p><strong>Special</strong>: If your alignment becomes the same as that of your eidolon, you can immediately replace this feat with any other feat you would have qualified for at 1st level. The feat you choose for this must be one approved by the GM, depending on the nature of your eidolon and its influence over you.</p>",
+      "prerequisiteText": "Unchained summoner level 1st, eidolon class feature",
+      "prerequisites": [
+        {
+          "unchecked": "Unchained summoner level 1st",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "eidolon class feature",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "By going against traditional teachings and summoner practices, you have secured the service of an outsider whose morality differs wildly from your own, but you must endure its constant temptations or attempts to redeem you.\nPrerequisites: Unchained summoner level 1st, eidolon class feature.\nBenefits: You can select an eidolon of any alignment, even if its alignment is more than one step away from your own. Your eidolon never refuses your call as a result of the differences between your respective alignments, though it still can refuse to follow commands that are against its ethos or alignment.\nEach time you gain a summoner level, you must attempt a Will saving throw (DC = 10 + half your eidolon's Hit Dice + your eidolon's Charisma modifier). On a failure, your alignment permanently shifts one step closer to that of your eidolon. Modifiers that are not permanent can't be applied on this saving throw.\nSpecial: If your alignment becomes the same as that of your eidolon, you can immediately replace this feat with any other feat you would have qualified for at 1st level. The feat you choose for this must be one approved by the GM, depending on the nature of your eidolon and its influence over you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z5dJapN8onucSvI9",
+      "upstreamKey": "pf1-content/z5dJapN8onucSvI9",
+      "pack": "pf-feats",
+      "name": "Cavalry Formation",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Teamwork"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are skilled at riding in close formation with your mounted allies without impeding your effectiveness on the battlefield.</em></p><p><strong>Prerequisites</strong>: Mounted Combat.</p><p><strong>Benefits</strong>: You and your mount can overlap the space of mounts whose riders have this feat, although no more than two creatures can share any one square. Further, you can charge through a space containing an allied mount if that mount's rider has this feat, although the space from which you make your charge attack must comply with this feat's other benefit or be unoccupied.</p><p><strong>Combat Trick</strong>: At the start of your turn, you can spend 2 stamina points to gain the ability to overlap with allied riders who do not have this feat. This ability lasts until the start of your next turn.</p>",
+      "prerequisiteText": "Mounted Combat",
+      "prerequisites": [
+        {
+          "feat": "pf1/0spsP9ylE3goD3jc",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You are skilled at riding in close formation with your mounted allies without impeding your effectiveness on the battlefield.\nPrerequisites: Mounted Combat.\nBenefits: You and your mount can overlap the space of mounts whose riders have this feat, although no more than two creatures can share any one square. Further, you can charge through a space containing an allied mount if that mount's rider has this feat, although the space from which you make your charge attack must comply with this feat's other benefit or be unoccupied.\nCombat Trick: At the start of your turn, you can spend 2 stamina points to gain the ability to overlap with allied riders who do not have this feat. This ability lasts until the start of your next turn."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z7m0lwO20eac6IiO",
+      "upstreamKey": "pf1-content/z7m0lwO20eac6IiO",
+      "pack": "pf-feats",
+      "name": "Reward of Grace",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>When you lay on hands, divine energy ripples through you, granting you grace.</em></p><p><strong>Prerequisites</strong>: Lay on hands class feature.</p><p><strong>Benefits</strong>: Each time you use your lay on hands ability, you gain a +1 sacred bonus on all attack rolls for 1 round.</p>",
+      "prerequisiteText": "Lay on hands class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/WhE4j0Jc82npdMCP",
+          "classFeatureName": "Lay on Hands",
+          "classFeatureClass": "pf1/ohptcds1d5oG6Bjh",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "sacred",
+          "value": 1,
+          "condition": {
+            "situation": {
+              "local": "for 1 round after using lay on hands"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "When you lay on hands, divine energy ripples through you, granting you grace.\nPrerequisites: Lay on hands class feature.\nBenefits: Each time you use your lay on hands ability, you gain a +1 sacred bonus on all attack rolls for 1 round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z90olHy90zBRvC9D",
+      "upstreamKey": "pf1-content/z90olHy90zBRvC9D",
+      "pack": "pf-feats",
+      "name": "Improved Feint Partner",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Teamwork", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Knowledge of your companions' tricks and techniques allow you to take even greater advantage of your allies' feints.</em></p><p><strong>Prerequisites</strong>: Bluff 1 rank, Combat Reflexes, Feint Partner, base attack bonus +6.</p><p><strong>Benefits</strong>: Whenever an ally who also has this feat successfully feints against an opponent, that opponent provokes an attack of opportunity from you.</p><h3>Combat Trick</h3><p>When you feint, you can spend 5 stamina points for each additional ally to grant an attack of opportunity to any number of additional allies--not just those with this feat.</p>",
+      "prerequisiteText": "Bluff 1 rank, Combat Reflexes, Feint Partner, base attack bonus +6",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.blf",
+          "min": 1,
+          "kind": "skillRanks"
+        },
+        {
+          "feat": "pf1/h9nHYLxXvIXBTmup",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/aDxCaN7X5f2LM1NR",
+          "kind": "feat"
+        },
+        {
+          "bab": 6,
+          "kind": "bab"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Knowledge of your companions' tricks and techniques allow you to take even greater advantage of your allies' feints.\nPrerequisites: Bluff 1 rank, Combat Reflexes, Feint Partner, base attack bonus +6.\nBenefits: Whenever an ally who also has this feat successfully feints against an opponent, that opponent provokes an attack of opportunity from you.\nCombat Trick\nWhen you feint, you can spend 5 stamina points for each additional ally to grant an attack of opportunity to any number of additional allies--not just those with this feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z94ffSZLIiZkZjl1",
+      "upstreamKey": "pf1-content/z94ffSZLIiZkZjl1",
+      "pack": "pf-feats",
+      "name": "Efreeti Stance",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Calling upon the burning spirits of incarnate flame, you can manipulate fire to protect yourself and immolate your foes.</em></p><p><strong>Prerequisites</strong>: Con 15, Wis 15, Efreeti Style, Elemental Fist, Improved Unarmed Strike, base attack bonus +11 or monk level 9th.</p><p><strong>Benefits</strong>: You gain one additional Elemental Fist (Advanced Player's Guide 158) attempt per day. While using Efreeti Style, you gain fire resistance equal to your base attack bonus or your monk level plus any base attack bonus gained from levels in classes other than monk, whichever is higher. While denied your Dexterity bonus to AC you are also denied this resistance. Creatures that take fire damage from your Elemental Fist attack must succeed at a Reflex save (DC 10 + 1/2 your character level + your Wis modifier) or catch on fire.</p><h3>Combat Trick</h3><p>When making an Elemental Fist attack, you can spend up to 5 stamina points to increase the DC of the saving throw to avoid catching on fire by an amount equal to the number of stamina points you spent.</p>",
+      "prerequisiteText": "Con 15, Wis 15, Efreeti Style, Elemental Fist, Improved Unarmed Strike, base attack bonus +11 or monk level 9th",
+      "prerequisites": [
+        {
+          "ability": "constitution",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "ability": "wisdom",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1-content/f6eUT8iA6W8aVJGP",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/1NiYcDLPZqYUT0Jc",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "anyOf": [
+            {
+              "bab": 11,
+              "kind": "bab"
+            },
+            {
+              "classLevel": "pf1/W8dxwZ1CZiwLKsqr",
+              "min": 9,
+              "kind": "classLevel"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Calling upon the burning spirits of incarnate flame, you can manipulate fire to protect yourself and immolate your foes.\nPrerequisites: Con 15, Wis 15, Efreeti Style, Elemental Fist, Improved Unarmed Strike, base attack bonus +11 or monk level 9th.\nBenefits: You gain one additional Elemental Fist (Advanced Player's Guide 158) attempt per day. While using Efreeti Style, you gain fire resistance equal to your base attack bonus or your monk level plus any base attack bonus gained from levels in classes other than monk, whichever is higher. While denied your Dexterity bonus to AC you are also denied this resistance. Creatures that take fire damage from your Elemental Fist attack must succeed at a Reflex save (DC 10 + 1/2 your character level + your Wis modifier) or catch on fire.\nCombat Trick\nWhen making an Elemental Fist attack, you can spend up to 5 stamina points to increase the DC of the saving throw to avoid catching on fire by an amount equal to the number of stamina points you spent."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/z99WD7yC0tQWrXMD",
+      "upstreamKey": "pf1-content/z99WD7yC0tQWrXMD",
+      "pack": "pf-feats",
+      "name": "Studied Spell",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Metamagic"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You use your knowledge about the target to bypass its resistances and damage reduction.</em></p><p><strong>Benefits</strong>: When casting a studied spell, designate one target affected by the spell. Attempt an appropriate Knowledge check based on that target's creature type as you cast the spell. The DC for this check is equal to 20 + the creature's CR based on its race and not including any class levels or template (a creature that is defined by class levels has an effective CR of 0 for this ability). If you succeed, your studied spell ignores any energy resistance or damage reduction the target has because of its race as well as any bonuses on saving throws against the spell granted by the target's race (such as the bonus from a dwarf 's hardy ability or a halfling's halfling luck ability). Your studied spell doesn't ignore energy resistance, damage reduction, or saving throw bonuses granted by other spells and effects. If you fail the Knowledge check, the spell still has its normal effects. A studied spell uses up a spell slot 2 levels higher than the spell's actual level.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You use your knowledge about the target to bypass its resistances and damage reduction.\nBenefits: When casting a studied spell, designate one target affected by the spell. Attempt an appropriate Knowledge check based on that target's creature type as you cast the spell. The DC for this check is equal to 20 + the creature's CR based on its race and not including any class levels or template (a creature that is defined by class levels has an effective CR of 0 for this ability). If you succeed, your studied spell ignores any energy resistance or damage reduction the target has because of its race as well as any bonuses on saving throws against the spell granted by the target's race (such as the bonus from a dwarf 's hardy ability or a halfling's halfling luck ability). Your studied spell doesn't ignore energy resistance, damage reduction, or saving throw bonuses granted by other spells and effects. If you fail the Knowledge check, the spell still has its normal effects. A studied spell uses up a spell slot 2 levels higher than the spell's actual level."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zBrrZynIB0EXagds",
+      "upstreamKey": "pf1-content/zBrrZynIB0EXagds",
+      "pack": "pf-feats",
+      "name": "Armor Focus",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your familiarity with a specific type of armor increases the amount of protection you receive from it.</em></p><p><strong>Prerequisites</strong>: Base attack bonus +1, proficiency with selected armor.</p><p><strong>Benefits</strong>: Select one type of armor, such as chain shirt or splint mail. The AC bonus granted by the selected armor increases by 1.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of armor. The Armor Focus feat counts as the armor training class feature for the purpose of armor mastery feat prerequisites and determines what types of armor you can use with armor mastery feats.</p><h3>Combat Trick</h3><p>You can spend 2 stamina points to increase the additional armor bonus granted by this feat to +2 for 1 round. (See page 16.)</p>",
+      "prerequisiteText": "Base attack bonus +1, proficiency with selected armor",
+      "prerequisites": [
+        {
+          "bab": 1,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "proficiency with selected armor",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/zCmej18pfoicxUl1",
+      "upstreamKey": "pf1-content/zCmej18pfoicxUl1",
+      "pack": "pf-feats",
+      "name": "Jabbing Master",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your quick punches become even more lethal.</em></p><p><strong>Prerequisites</strong>: Dodge, Improved Unarmed Strike, Jabbing Dancer, Jabbing Style, Mobility, Power Attack; base attack bonus +12, brawler level 8th, or monk level 8th.</p><p><strong>Benefits</strong>: While using Jabbing Style, the extra damage you deal when you hit a single target with two unarmed strikes increases to 2d6, and the extra damage when you hit a single target with three or more unarmed strikes increases to 4d6.</p><p><strong>Combat Trick</strong>: When you threaten a critical hit with an unarmed strike while using Jabbing Style, you can spend 5 stamina points to double your extra damage from Jabbing Master against that target. You can use this ability only once per target per round.</p>",
+      "prerequisiteText": "Dodge, Improved Unarmed Strike, Jabbing Dancer, Jabbing Style, Mobility, Power Attack; base attack bonus +12, brawler level 8th, or monk level 8th",
+      "prerequisites": [
+        {
+          "feat": "pf1/JreaiTHdyWFNj3Tb",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/Ga7V6a4VSOh1B3X8",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/NR7MpUUAISoFdEFR",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/R7L4SlGRlnThqFrP",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "anyOf": [
+            {
+              "bab": 12,
+              "kind": "bab"
+            },
+            {
+              "classLevel": "pf1/iDlGMIezGuqqt8Us",
+              "min": 8,
+              "kind": "classLevel"
+            },
+            {
+              "classLevel": "pf1/W8dxwZ1CZiwLKsqr",
+              "min": 8,
+              "kind": "classLevel"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your quick punches become even more lethal.\nPrerequisites: Dodge, Improved Unarmed Strike, Jabbing Dancer, Jabbing Style, Mobility, Power Attack; base attack bonus +12, brawler level 8th, or monk level 8th.\nBenefits: While using Jabbing Style, the extra damage you deal when you hit a single target with two unarmed strikes increases to 2d6, and the extra damage when you hit a single target with three or more unarmed strikes increases to 4d6.\nCombat Trick: When you threaten a critical hit with an unarmed strike while using Jabbing Style, you can spend 5 stamina points to double your extra damage from Jabbing Master against that target. You can use this ability only once per target per round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zCrNeo6W5Lir5aKm",
+      "upstreamKey": "pf1-content/zCrNeo6W5Lir5aKm",
+      "pack": "pf-feats",
+      "name": "Staggering Blow",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You know just where to strike to temporarily stagger a foe.</em></p><p><strong>Prerequisites</strong>: Str 13, Power Attack, Vital Strike, base attack bonus +8.</p><p><strong>Benefits</strong>: When you attack a foe using Vital Strike, you can choose to take a -2 penalty on your attack roll to also make the attack a staggering strike. You must make this choice before making the attack roll. If your attack roll is successful, your target must succeed at a Fortitude saving throw (DC = 10 + 1/2 your character level + your Strength modifier) or be staggered until the start of your next turn. Once a creature that failed its save recovers from the effects of your staggering blow, it is immune to the effects of this feat for 24 hours. Constructs, oozes, plants, undead, incorporeal creatures, and creatures that are immune to critical hits are immune to this effect.</p>",
+      "prerequisiteText": "Str 13, Power Attack, Vital Strike, base attack bonus +8",
+      "prerequisites": [
+        {
+          "ability": "strength",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/FUW5mIXHNBBIQ1Sq",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/26k1Gi7t5BoqxhIj",
+          "kind": "feat"
+        },
+        {
+          "bab": 8,
+          "kind": "bab"
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "attack",
+          "bonusType": "untyped",
+          "value": -2,
+          "condition": {
+            "situation": {
+              "local": "when making a staggering strike with Vital Strike"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You know just where to strike to temporarily stagger a foe.\nPrerequisites: Str 13, Power Attack, Vital Strike, base attack bonus +8.\nBenefits: When you attack a foe using Vital Strike, you can choose to take a -2 penalty on your attack roll to also make the attack a staggering strike. You must make this choice before making the attack roll. If your attack roll is successful, your target must succeed at a Fortitude saving throw (DC = 10 + 1/2 your character level + your Strength modifier) or be staggered until the start of your next turn. Once a creature that failed its save recovers from the effects of your staggering blow, it is immune to the effects of this feat for 24 hours. Constructs, oozes, plants, undead, incorporeal creatures, and creatures that are immune to critical hits are immune to this effect."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zGZdjEmOUMv5yyx0",
+      "upstreamKey": "pf1-content/zGZdjEmOUMv5yyx0",
+      "pack": "pf-feats",
+      "name": "Enrage Opponent",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Panache"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>With a quip or a suggestive gesture, you send your enemy into a tizzy.</em></p><p><strong>Prerequisites</strong>: Cha 13, Amateur Swashbuckler or panache class feature, Persuasive.</p><p><strong>Benefits</strong>: As a swift action, you can spend 1 panache point to enrage a creature with an Intelligence of 4 or more within 60 feet that can see or hear you. Attempt an Intimidate check as if to demoralize the creature. If you succeed, the creature takes a -2 penalty to its AC until it has made at least one attack against you (including area effects that include you) or until it can no longer see or hear you. You can have only one opponent enraged at you with this feat at a time, and once you've enraged a creature, you can't enrage it again for 24 hours.</p>",
+      "prerequisiteText": "Cha 13, Amateur Swashbuckler or panache class feature, Persuasive",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "anyOf": [
+            {
+              "feat": "pf1/Vov43JkBzhtPn2T9",
+              "kind": "feat"
+            },
+            {
+              "classFeature": "pf1/LPAbzynGlOwYcGx7",
+              "classFeatureName": "Panache",
+              "classFeatureClass": "pf1/Q3rbWILULpQfpjjZ",
+              "kind": "classFeature"
+            }
+          ]
+        },
+        {
+          "feat": "pf1/L10V7jTzmMYz62zz",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "With a quip or a suggestive gesture, you send your enemy into a tizzy.\nPrerequisites: Cha 13, Amateur Swashbuckler or panache class feature, Persuasive.\nBenefits: As a swift action, you can spend 1 panache point to enrage a creature with an Intelligence of 4 or more within 60 feet that can see or hear you. Attempt an Intimidate check as if to demoralize the creature. If you succeed, the creature takes a -2 penalty to its AC until it has made at least one attack against you (including area effects that include you) or until it can no longer see or hear you. You can have only one opponent enraged at you with this feat at a time, and once you've enraged a creature, you can't enrage it again for 24 hours."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zH9E9Q3ZQNVagRoJ",
+      "upstreamKey": "pf1-content/zH9E9Q3ZQNVagRoJ",
+      "pack": "pf-feats",
+      "name": "Improved Duck and Cover",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Teamwork"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your allies' ability to protect you from damage extends to area attacks.</em></p><p><strong>Prerequisites</strong>: Duck and Cover.</p><p><strong>Benefits</strong>: Whenever you use Duck and Cover, your ally has evasion or improved evasion, and your ally's saving throw roll succeeds, half of the damage you would have taken is transferred to your ally. (This damage is not reduced by the ally's evasion or improved evasion.)</p>",
+      "prerequisiteText": "Duck and Cover",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/tGDTu0hHAPlAdGAp",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your allies' ability to protect you from damage extends to area attacks.\nPrerequisites: Duck and Cover.\nBenefits: Whenever you use Duck and Cover, your ally has evasion or improved evasion, and your ally's saving throw roll succeeds, half of the damage you would have taken is transferred to your ally. (This damage is not reduced by the ally's evasion or improved evasion.)"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zKhLdJ6D6koxQJKP",
+      "upstreamKey": "pf1-content/zKhLdJ6D6koxQJKP",
+      "pack": "pf-feats",
+      "name": "Two-Weapon Drunkard",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You effortlessly wield tankards in your off hand, and can use them to drink from and as deadly weapons in a battle with equal ease.</em></p><p><strong>Prerequisites</strong>: Catch Off-Guard, Two-Weapon Fighting.</p><p><strong>Benefits</strong>: When you wield a tankard as an improvised weapon in your off hand, it functions as a light mace, including for the purpose of determining the effects of feats like Weapon Focus. If you worship Cayden Cailean, your off-hand tankard functions as a divine focus and does not interfere with somatic spell components.</p><p>When you fight with two weapons and have the sickened condition, you do not apply the penalties from being sickened to attack rolls or weapon damage rolls.</p><p><strong>Normal</strong>: A tankard wielded as an improvised weapon normally functions as a gauntlet.</p>",
+      "prerequisiteText": "Catch Off-Guard, Two-Weapon Fighting",
+      "prerequisites": [
+        {
+          "feat": "pf1/bZ1YdzkT8NtRIEJ4",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/Ee7JHADKEK37tTHs",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You effortlessly wield tankards in your off hand, and can use them to drink from and as deadly weapons in a battle with equal ease.\nPrerequisites: Catch Off-Guard, Two-Weapon Fighting.\nBenefits: When you wield a tankard as an improvised weapon in your off hand, it functions as a light mace, including for the purpose of determining the effects of feats like Weapon Focus. If you worship Cayden Cailean, your off-hand tankard functions as a divine focus and does not interfere with somatic spell components.\nWhen you fight with two weapons and have the sickened condition, you do not apply the penalties from being sickened to attack rolls or weapon damage rolls.\nNormal: A tankard wielded as an improvised weapon normally functions as a gauntlet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zL5jIsjVdpJVh5xP",
+      "upstreamKey": "pf1-content/zL5jIsjVdpJVh5xP",
+      "pack": "pf-feats",
+      "name": "Supernatural Spy",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Story"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your familiarity with magic drives you to discover a great supernatural secret. You might work with an eldritch organization, which could be a school of magic such as the Arcanamirium or part of a government with strong ties to magic such as that of Irrisen, or you might attempt to keep your magical inquiries hidden from your employers.</em></p><p><strong>Prerequisites</strong>: Alchemist discovery, arcane discovery, arcanist exploit, or magus arcana class feature and you must either have observed a created magical effect you could not understand or have the Master Craftsman or the Unquenchable Hunger for Knowledge background.</p><p><strong>Benefits</strong>: Treat your Intelligence, Wisdom, or Charisma score as 2 higher for the purpose of calculating the effects and save DCs of one of the following class features: alchemist discoveries, arcane discoveries, arcanist exploits, or magus arcana. You select both the ability score and class feature to be affected when you select this feat, and the choice cannot be changed. This increases the potency of the abilities but does not grant access to additional abilities.</p><p><strong>Goal</strong>: Learn a great supernatural secret, connected in some manner to an aspect of the class feature you selected with this story feat. You must evade or thwart a challenging foe in the process.</p><p><strong>Completion Benefit</strong>: When calculating the effect of the class feature selected with this feat, you treat your class level for the relevant class as 2 higher. This does not impact when you gain access to additional abilities tied to that class feature, only the effectiveness of abilities from the feature you already have.</p>",
+      "prerequisiteText": "Alchemist discovery, arcane discovery, arcanist exploit, or magus arcana class feature and you must either have observed a created magical effect you could not understand or have the Master Craftsman or the Unquenchable Hunger for Knowledge background",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Alchemist discovery, arcane discovery, arcanist exploit, or magus arcana class feature and you must either have observed a created magical effect you could not understand or have the Master Craftsman or the Unquenchable Hunger for Knowledge background"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your familiarity with magic drives you to discover a great supernatural secret. You might work with an eldritch organization, which could be a school of magic such as the Arcanamirium or part of a government with strong ties to magic such as that of Irrisen, or you might attempt to keep your magical inquiries hidden from your employers.\nPrerequisites: Alchemist discovery, arcane discovery, arcanist exploit, or magus arcana class feature and you must either have observed a created magical effect you could not understand or have the Master Craftsman or the Unquenchable Hunger for Knowledge background.\nBenefits: Treat your Intelligence, Wisdom, or Charisma score as 2 higher for the purpose of calculating the effects and save DCs of one of the following class features: alchemist discoveries, arcane discoveries, arcanist exploits, or magus arcana. You select both the ability score and class feature to be affected when you select this feat, and the choice cannot be changed. This increases the potency of the abilities but does not grant access to additional abilities.\nGoal: Learn a great supernatural secret, connected in some manner to an aspect of the class feature you selected with this story feat. You must evade or thwart a challenging foe in the process.\nCompletion Benefit: When calculating the effect of the class feature selected with this feat, you treat your class level for the relevant class as 2 higher. This does not impact when you gain access to additional abilities tied to that class feature, only the effectiveness of abilities from the feature you already have."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zMV50uc8XISVI8P2",
+      "upstreamKey": "pf1-content/zMV50uc8XISVI8P2",
+      "pack": "pf-feats",
+      "name": "Shield Slam (Mythic)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Mythic"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your shield bash produces a powerful kick.</em></p><p><strong>Prerequisites</strong>: Shield Slam.</p><p><strong>Benefits</strong>: When using Shield Slam to bull rush, an opponent knocked prone because of an intervening wall or other surface also takes damage from the collision. The damage dealt is equal to 1d6 points per 2 tiers you possess. As an immediate action, you can expend one use of mythic power to add your tier to your combat maneuver checks when resolving a bull rush made due to Shield Slam.</p>",
+      "prerequisiteText": "Shield Slam",
+      "prerequisites": [
+        {
+          "feat": "pf1/GEo7nDHxddLxi66j",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your shield bash produces a powerful kick.\nPrerequisites: Shield Slam.\nBenefits: When using Shield Slam to bull rush, an opponent knocked prone because of an intervening wall or other surface also takes damage from the collision. The damage dealt is equal to 1d6 points per 2 tiers you possess. As an immediate action, you can expend one use of mythic power to add your tier to your combat maneuver checks when resolving a bull rush made due to Shield Slam."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zNP31vRQbRDWjBy9",
+      "upstreamKey": "pf1-content/zNP31vRQbRDWjBy9",
+      "pack": "pf-feats",
+      "name": "Boar Ferocity",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your flesh-ripping unarmed strikes terrify your victims.</em></p><p><strong>Prerequisites</strong>: Improved Unarmed Strike, Boar Style, Intimidate 6 ranks.</p><p><strong>Benefits</strong>: You add piercing damage to the damage types you can deal with your unarmed strikes. Further, you gain a +2 bonus on Intimidate checks to demoralize opponents. While using Boar Style, whenever you tear an opponent's flesh, you can spend a free action to make an Intimidate check to demoralize that opponent.</p><h3>Combat Trick</h3><p>If your foe is demoralized before you tear its flesh with Boar Style, you can spend 5 stamina points to sicken it for 1 round.</p>",
+      "prerequisiteText": "Improved Unarmed Strike, Boar Style, Intimidate 6 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/14LVyS60Qg1McdDO",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.int",
+          "min": 6,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.int",
+          "bonusType": "untyped",
+          "value": 2,
+          "condition": {
+            "situation": {
+              "local": "on Intimidate checks to demoralize opponents"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your flesh-ripping unarmed strikes terrify your victims.\nPrerequisites: Improved Unarmed Strike, Boar Style, Intimidate 6 ranks.\nBenefits: You add piercing damage to the damage types you can deal with your unarmed strikes. Further, you gain a +2 bonus on Intimidate checks to demoralize opponents. While using Boar Style, whenever you tear an opponent's flesh, you can spend a free action to make an Intimidate check to demoralize that opponent.\nCombat Trick\nIf your foe is demoralized before you tear its flesh with Boar Style, you can spend 5 stamina points to sicken it for 1 round."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zPrKFlqlECPav3RK",
+      "upstreamKey": "pf1-content/zPrKFlqlECPav3RK",
+      "pack": "pf-feats",
+      "name": "Dimensional Dervish",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You teleport with a mere thought, savaging your opponents as you flash in and out of reality.</em></p><p><strong>Prerequisites</strong>: Ability to use the abundant step class feature or cast dimension door, Dimensional Agility, Dimensional Assault, base attack bonus +6.</p><p><strong>Benefits</strong>: You can take a full-attack action, activating abundant step or casting dimension door as a swift action. If your do, you can teleport up to twice your speed (up to the maximum distance allowed by the spell or ability), dividing this teleportation into increments you use before your first attack, between each attack, and after your last attack. You must teleport at least 5 feet each time you teleport.</p><p><strong>Special</strong>: A monk can use additional points from his ki pool to increase his speed before determining the total speed for this teleportation.</p>",
+      "prerequisiteText": "Ability to use the abundant step class feature or cast dimension door, Dimensional Agility, Dimensional Assault, base attack bonus +6",
+      "prerequisites": [
+        {
+          "kind": "unchecked",
+          "unchecked": "Ability to use the abundant step class feature or cast dimension door, Dimensional Agility, Dimensional Assault, base attack bonus +6"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/zPzjImTOB76lpHMI",
+      "upstreamKey": "pf1-content/zPzjImTOB76lpHMI",
+      "pack": "pf-feats",
+      "name": "Firesight",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Racial", "Ifrit"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Fire no longer blinds you, and smoke conceals nothing from your gaze.</em></p><p><strong>Prerequisites</strong>: Ifrit.</p><p><strong>Benefits</strong>: You can see through fire and smoke without penalty, ignoring any cover or concealment bonuses from fire and smoke. This does not allow you to see anything you could not otherwise see (for example, invisible creatures are still invisible). You are immune to the dazzled condition.</p>",
+      "prerequisiteText": "Ifrit",
+      "prerequisites": [
+        {
+          "race": ["pf1/TPHe88Yhy4SsDpKo"],
+          "kind": "race"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Fire no longer blinds you, and smoke conceals nothing from your gaze.\nPrerequisites: Ifrit.\nBenefits: You can see through fire and smoke without penalty, ignoring any cover or concealment bonuses from fire and smoke. This does not allow you to see anything you could not otherwise see (for example, invisible creatures are still invisible). You are immune to the dazzled condition."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zQYrK8PPgFxyizpv",
+      "upstreamKey": "pf1-content/zQYrK8PPgFxyizpv",
+      "pack": "pf-feats",
+      "name": "Cerberus Style",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Style"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You rain blows upon your enemies from three directions, like the three heads of the cerberus guardians of Hell.</em></p><p><strong>Prerequisites</strong>: Cleave, Improved Unarmed Strike, base attack bonus +6 or monk level 6th.</p><p><strong>Benefits</strong>: As a standard action, you can make a single unarmed strike at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against up to two other foes that are also within reach. You take a -2 penalty to your Armor Class until the start of your next turn for each additional attack you make with this feat.</p>",
+      "prerequisiteText": "Cleave, Improved Unarmed Strike, base attack bonus +6 or monk level 6th",
+      "prerequisites": [
+        {
+          "feat": "pf1/Zeq6RWYv5otvg8q7",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/2aTFNMs3pW6nUBlr",
+          "kind": "feat"
+        },
+        {
+          "anyOf": [
+            {
+              "bab": 6,
+              "kind": "bab"
+            },
+            {
+              "classLevel": "pf1/W8dxwZ1CZiwLKsqr",
+              "min": 6,
+              "kind": "classLevel"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/zTSQA4OMOPaN8vrz",
+      "upstreamKey": "pf1-content/zTSQA4OMOPaN8vrz",
+      "pack": "pf-feats",
+      "name": "Infused Spell Cartridges",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can improve your arcane ammunition with more powerful magic.</em></p><p><strong>Prerequisites</strong>: Int 15, Arcane Strike, Spell Cartridges, ability to cast 4th-level arcane spells, proficient with firearms.</p><p><strong>Benefits</strong>: While your gun is imbued with power from the Arcane Strike feat, you can spend a standard action to cast a spell of 3rd level or lower and deliver it via a force bullet. The spell must have a range of touch or produce a ray; if the spell would produce multiple rays, the bullet delivers the effect of only one ray. If the force bullet strikes a target, it deals its force damage and also delivers the effects of the spell. If the force bullet critically hits a target, the spell deals double damage.</p>",
+      "prerequisiteText": "Int 15, Arcane Strike, Spell Cartridges, ability to cast 4th-level arcane spells, proficient with firearms",
+      "prerequisites": [
+        {
+          "ability": "intelligence",
+          "min": 15,
+          "kind": "ability"
+        },
+        {
+          "feat": "pf1/QvlxYVVsBDlykPKe",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/3P5PziFMivddezfs",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "ability to cast 4th-level arcane spells",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "proficient with firearms",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You can improve your arcane ammunition with more powerful magic.\nPrerequisites: Int 15, Arcane Strike, Spell Cartridges, ability to cast 4th-level arcane spells, proficient with firearms.\nBenefits: While your gun is imbued with power from the Arcane Strike feat, you can spend a standard action to cast a spell of 3rd level or lower and deliver it via a force bullet. The spell must have a range of touch or produce a ray; if the spell would produce multiple rays, the bullet delivers the effect of only one ray. If the force bullet strikes a target, it deals its force damage and also delivers the effects of the spell. If the force bullet critically hits a target, the spell deals double damage."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zW5RRkuifjW9gmKR",
+      "upstreamKey": "pf1-content/zW5RRkuifjW9gmKR",
+      "pack": "pf-feats",
+      "name": "Improved Stonecunning (Mythic)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General", "Mythic"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>If you listen close, you can hear the secrets of stone.</em></p><p><strong>Prerequisites</strong>: Improved Stonecunning.</p><p><strong>Benefits</strong>: You gain stone tell as a spell-like ability usable once per day with a caster level equal to twice your tier.</p>",
+      "prerequisiteText": "Improved Stonecunning",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/QmeyBQw47UorjWdq",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "If you listen close, you can hear the secrets of stone.\nPrerequisites: Improved Stonecunning.\nBenefits: You gain stone tell as a spell-like ability usable once per day with a caster level equal to twice your tier."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zWybSUTo0L3ti0Ve",
+      "upstreamKey": "pf1-content/zWybSUTo0L3ti0Ve",
+      "pack": "pf-feats",
+      "name": "Skill Focus (Sleight of Hand)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Choose a skill. You are particularly adept at that skill.</em></p><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.slt",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "3 + 3 * min(1, floor(@skillRanks.slt / 10))"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.slt",
+            "formula": "ifelse(gte(@skills.slt.rank,10),6,3)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Choose a skill. You are particularly adept at that skill.\nBenefits: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.\nSpecial: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zZCAMcfrQpXLO8hA",
+      "upstreamKey": "pf1-content/zZCAMcfrQpXLO8hA",
+      "pack": "pf-feats",
+      "name": "Extra Croaking",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your vocal chords are especially tough and allow you to croak more often.</em></p><p><strong>Prerequisites</strong>: Boggard, terrifying croak.</p><p><strong>Benefits</strong>: You gain one extra use of terrifying croak per hour. If your recharge time is less than 1 hour, you instead gain an extra use each time the ability recharges.</p>",
+      "prerequisiteText": "Boggard, terrifying croak",
+      "prerequisites": [
+        {
+          "unchecked": "Boggard",
+          "kind": "unchecked"
+        },
+        {
+          "unchecked": "terrifying croak",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your vocal chords are especially tough and allow you to croak more often.\nPrerequisites: Boggard, terrifying croak.\nBenefits: You gain one extra use of terrifying croak per hour. If your recharge time is less than 1 hour, you instead gain an extra use each time the ability recharges."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zZhyGsMxZbE1FNF2",
+      "upstreamKey": "pf1-content/zZhyGsMxZbE1FNF2",
+      "pack": "pf-feats",
+      "name": "Charge Through (Mythic)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Mythic"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can plow through those who stand between you and the target of your charge.</em></p><p><strong>Prerequisites</strong>: Charge Through.</p><p><strong>Benefits</strong>: When charging, you can ignore allies in your path when determining whether or not you can charge your target. Furthermore, after you have attempted at least one overrun with Charge Through, you can expend one use of mythic power as a free action to attempt another overrun against a different opponent in the path of the same charge.</p>",
+      "prerequisiteText": "Charge Through",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/fxCtqefm2Tv6VwKt",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You can plow through those who stand between you and the target of your charge.\nPrerequisites: Charge Through.\nBenefits: When charging, you can ignore allies in your path when determining whether or not you can charge your target. Furthermore, after you have attempted at least one overrun with Charge Through, you can expend one use of mythic power as a free action to attempt another overrun against a different opponent in the path of the same charge."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zaUx5Qu2CdJkglKB",
+      "upstreamKey": "pf1-content/zaUx5Qu2CdJkglKB",
+      "pack": "pf-feats",
+      "name": "Voice of the Sibyl",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your voice is strangely compelling.</em></p><p><strong>Prerequisites</strong>: Cha 15.</p><p><strong>Benefits</strong>: You get a +1 bonus on all Bluff, Diplomacy, and Perform (oratory) skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +3 for that skill. You do not get these bonuses if you do not use your voice when using the skill (such as using Bluff to feint in combat).</p>",
+      "prerequisiteText": "Cha 15",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 15,
+          "kind": "ability"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/zdhZRh0PiLyEerKw",
+      "upstreamKey": "pf1-content/zdhZRh0PiLyEerKw",
+      "pack": "pf-feats",
+      "name": "Greater Dirge of Doom",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The haunting sound of sepulchral intonations chills the most stalwart adversary to its very core.</em></p><p><strong>Prerequisites</strong>: Improved Dirge of Doom, ability to perform dirge of doom.</p><p><strong>Benefits</strong>: The effect of your dirge of doom lingers with a target for 2 rounds after the creature leaves the dirge's area of effect. If you use your dirge on a creature that is shaken, it becomes frightened. If you use it on a creature that is frightened, it becomes panicked. Once affected by this feat, a creature cannot be affected by it again for 24 hours.</p><p><strong>Normal</strong>: Fear effects on a creature end immediately once it leaves the area of dirge of doom. A fear effect cannot be made more extreme by dirge of doom and can be changed only to the frightened condition by the Improved Dirge of Doom feat.</p>",
+      "prerequisiteText": "Improved Dirge of Doom, ability to perform dirge of doom",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/KU3ci3xMXS1It4Y7",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "ability to perform dirge of doom",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The haunting sound of sepulchral intonations chills the most stalwart adversary to its very core.\nPrerequisites: Improved Dirge of Doom, ability to perform dirge of doom.\nBenefits: The effect of your dirge of doom lingers with a target for 2 rounds after the creature leaves the dirge's area of effect. If you use your dirge on a creature that is shaken, it becomes frightened. If you use it on a creature that is frightened, it becomes panicked. Once affected by this feat, a creature cannot be affected by it again for 24 hours.\nNormal: Fear effects on a creature end immediately once it leaves the area of dirge of doom. A fear effect cannot be made more extreme by dirge of doom and can be changed only to the frightened condition by the Improved Dirge of Doom feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zdrniFwyVM26yns1",
+      "upstreamKey": "pf1-content/zdrniFwyVM26yns1",
+      "pack": "pf-feats",
+      "name": "Hellcat Pounce",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You attack unsuspecting foes twice.</em></p><p><strong>Prerequisites</strong>: Hellcat Stealth, Skill Focus (Stealth), sneak attack +2d6.</p><p><strong>Benefits</strong>: Whenever you attack and damage an opponent in the surprise round, you may immediately make a second attack against the same opponent using the same attack bonus. The target is not considered flat-footed against this second attack.</p><p><strong>Special</strong>: This ability only functions when carrying a light load or less.</p>",
+      "prerequisiteText": "Hellcat Stealth, Skill Focus (Stealth), sneak attack +2d6",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/Sy1Oj9L3AKXIvfqK",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/2JWwVMFeqHnFDFSv",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "sneak attack +2d6",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You attack unsuspecting foes twice.\nPrerequisites: Hellcat Stealth, Skill Focus (Stealth), sneak attack +2d6.\nBenefits: Whenever you attack and damage an opponent in the surprise round, you may immediately make a second attack against the same opponent using the same attack bonus. The target is not considered flat-footed against this second attack.\nSpecial: This ability only functions when carrying a light load or less."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zes8vxX3D6CKoYC2",
+      "upstreamKey": "pf1-content/zes8vxX3D6CKoYC2",
+      "pack": "pf-feats",
+      "name": "Skill Focus (Knowledge [History])",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Choose a skill. You are particularly adept at that skill.</em></p><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>",
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.khi",
+          "bonusType": "untyped",
+          "value": {
+            "formula": "3 + 3 * min(1, floor(@skillRanks.khi / 10))"
+          }
+        }
+      ],
+      "unsupported": [
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "skill.khi",
+            "formula": "ifelse(gte(@skills.khi.rank,10),6,3)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "situationalNotes": [
+        {
+          "text": "Choose a skill. You are particularly adept at that skill.\nBenefits: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.\nSpecial: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zeyA4Vw8wdkuDpg9",
+      "upstreamKey": "pf1-content/zeyA4Vw8wdkuDpg9",
+      "pack": "pf-feats",
+      "name": "Empty Threats",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have a gift for making authentic-sounding threats you never intend to follow through on.</em></p><p><strong>Prerequisites</strong>: Bluff 5 ranks.</p><p><strong>Benefits</strong>: You can use the Bluff skill to demoralize opponents in combat instead of Intimidate. You can attempt a Bluff check in place of an Intimidate check when using the Dazzling Display feat and feats that list Dazzling Display as a prerequisite. If you use the Bluff skill to demoralize, you cannot use it to feint until the beginning of your next turn, and vice versa.</p>",
+      "prerequisiteText": "Bluff 5 ranks",
+      "prerequisites": [
+        {
+          "skillRanks": "skill.blf",
+          "min": 5,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You have a gift for making authentic-sounding threats you never intend to follow through on.\nPrerequisites: Bluff 5 ranks.\nBenefits: You can use the Bluff skill to demoralize opponents in combat instead of Intimidate. You can attempt a Bluff check in place of an Intimidate check when using the Dazzling Display feat and feats that list Dazzling Display as a prerequisite. If you use the Bluff skill to demoralize, you cannot use it to feint until the beginning of your next turn, and vice versa."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zfXrl0SriAhaLyMy",
+      "upstreamKey": "pf1-content/zfXrl0SriAhaLyMy",
+      "pack": "pf-feats",
+      "name": "Empty Quiver Flexibility",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can apply your ranged fighting feats to melee attacks.</em></p><p><strong>Prerequisites</strong>: Empty Quiver Style, Rapid Shot, Stabbing Shot, Weapon Focus with the chosen weapon.</p><p><strong>Benefits</strong>: While using Empty Quiver Style, you can apply any feats and class abilities you possess that modify your ranged attack rolls and damage rolls with the chosen weapon to melee attack rolls and damage rolls made with that weapon. Additionally, you are considered to be threatening the area around you as if you were wielding a melee weapon.</p>",
+      "prerequisiteText": "Empty Quiver Style, Rapid Shot, Stabbing Shot, Weapon Focus with the chosen weapon",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/7x1byHLp7haAp2Kw",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/NABgOSBRECIREaha",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1-content/qYPyZMd1i34nCPnP",
+          "kind": "feat"
+        },
+        {
+          "unchecked": "Weapon Focus with the chosen weapon",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/zhgwruQYvZZlPssc",
+      "upstreamKey": "pf1-content/zhgwruQYvZZlPssc",
+      "pack": "pf-feats",
+      "name": "Sinister Reputation",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You need spook only a few souls to scare a whole city.</em></p><p><strong>Prerequisites</strong>: Cha 13; Intimidate 5 ranks; Persuasive or renown social talent.</p><p><strong>Benefits</strong>: By spending 8 hours cultivating your local legend in a settlement and then succeeding at an Intimidate check, your fearsome reputation becomes common knowledge. The DC is based on the size of the settlement (see the Sinister Reputation table below and page 203 of Pathfinder RPG GameMastery Guide). If the check succeeds, you can attempt an Intimidate check to demoralize a creature that has fewer Hit Dice than you as a swift action, and using Intimidate to force a creature to act friendly to you takes only half as long. You gain these benefits only while within the settlement and while not disguised. These benefits last for a number of days equal to your half your level + your Charisma modifier.</p><p><strong>Special</strong>: This feat's benefits always apply to a vigilante's area of renown, and he can choose whether the reputation and benefits apply to his social identity, vigilante identity, or both. You can always apply this feat's benefits to followers and cohorts gained from Leadership or similar abilities. Sinister Reputation </p><table><tbody><tr><td><strong>Settlement Size</strong></td><td><strong>DC</strong></td></tr><tr><td>Thorp</td><td>10</td></tr> <tr><td>Hamlet</td><td>12</td></tr><tr><td>Village</td><td>15</td></tr> <tr><td>Small town</td><td>18</td></tr> <tr><td>Large town</td><td>20</td></tr><tr><td>Small city</td><td>25</td></tr> <tr><td>Large city</td><td>30</td></tr><tr><td>Metropolis</td><td>35</td></tr></tbody></table><p></p>",
+      "prerequisiteText": "Cha 13; Intimidate 5 ranks; Persuasive or renown social talent",
+      "prerequisites": [
+        {
+          "ability": "charisma",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "skillRanks": "skill.int",
+          "min": 5,
+          "kind": "skillRanks"
+        },
+        {
+          "kind": "unchecked",
+          "unchecked": "Persuasive or renown social talent"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You need spook only a few souls to scare a whole city.\nPrerequisites: Cha 13; Intimidate 5 ranks; Persuasive or renown social talent.\nBenefits: By spending 8 hours cultivating your local legend in a settlement and then succeeding at an Intimidate check, your fearsome reputation becomes common knowledge. The DC is based on the size of the settlement (see the Sinister Reputation table below and page 203 of Pathfinder RPG GameMastery Guide). If the check succeeds, you can attempt an Intimidate check to demoralize a creature that has fewer Hit Dice than you as a swift action, and using Intimidate to force a creature to act friendly to you takes only half as long. You gain these benefits only while within the settlement and while not disguised. These benefits last for a number of days equal to your half your level + your Charisma modifier.\nSpecial: This feat's benefits always apply to a vigilante's area of renown, and he can choose whether the reputation and benefits apply to his social identity, vigilante identity, or both. You can always apply this feat's benefits to followers and cohorts gained from Leadership or similar abilities. Sinister Reputation\nSettlement Size | DC\nThorp | 10\nHamlet | 12\nVillage | 15\nSmall town | 18\nLarge town | 20\nSmall city | 25\nLarge city | 30\nMetropolis | 35"
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/ziqYaPHDISWhLc4z",
+      "upstreamKey": "pf1-content/ziqYaPHDISWhLc4z",
+      "pack": "pf-feats",
+      "name": "Wild Speaker",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Racial", "Gnome"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>The Bleaching enhances a gnome's ability to communicate with the natural world.</em></p><p><strong>Prerequisites</strong>: Bleachling racial trait, gnome.</p><p><strong>Benefits</strong>: You can use your speak with animals spell-like ability at will.</p>",
+      "prerequisiteText": "Bleachling racial trait, gnome",
+      "prerequisites": [
+        {
+          "unchecked": "Bleachling racial trait",
+          "kind": "unchecked"
+        },
+        {
+          "race": ["pf1/efwHEwjvL9Z94MJI"],
+          "kind": "race"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "The Bleaching enhances a gnome's ability to communicate with the natural world.\nPrerequisites: Bleachling racial trait, gnome.\nBenefits: You can use your speak with animals spell-like ability at will."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zkNGSNoW2NoGFKrV",
+      "upstreamKey": "pf1-content/zkNGSNoW2NoGFKrV",
+      "pack": "pf-feats",
+      "name": "Sheltering Stubborness",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your stubborn mind is not easy to sway.</em></p><p><strong>Prerequisites</strong>: Iron Will.</p><p><strong>Benefits</strong>: When you fail a saving throw against a mind-affecting effect with a duration of 1 round or longer (such as confusion), you can choose to be dazzled for the first round of the duration instead of suffering the usual effect. On subsequent rounds, the effect functions normally. If an effect, immunity, or other ability prevents you from being dazzled, this feat has no effect.</p>",
+      "prerequisiteText": "Iron Will",
+      "prerequisites": [
+        {
+          "feat": "pf1/iAbIGhm7T2OK9Brt",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your stubborn mind is not easy to sway.\nPrerequisites: Iron Will.\nBenefits: When you fail a saving throw against a mind-affecting effect with a duration of 1 round or longer (such as confusion), you can choose to be dazzled for the first round of the duration instead of suffering the usual effect. On subsequent rounds, the effect functions normally. If an effect, immunity, or other ability prevents you from being dazzled, this feat has no effect."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/znwM3JT23L5ZGSvf",
+      "upstreamKey": "pf1-content/znwM3JT23L5ZGSvf",
+      "pack": "pf-feats",
+      "name": "Deflect Arrows (Mythic)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Mythic"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You deflect projectiles and ray spells with uncanny skill.</em></p><p><strong>Prerequisites</strong>: Deflect Arrows.</p><p><strong>Benefits</strong>: When using Deflect Arrows, you can def lect an additional number of ranged attacks per round equal to half your tier. You can expend one use of mythic power as an immediate action to def lect a single ray from a ray spell or effect targeting you.</p>",
+      "prerequisiteText": "Deflect Arrows",
+      "prerequisites": [
+        {
+          "feat": "pf1/ACEQfonKVqh0fwkK",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You deflect projectiles and ray spells with uncanny skill.\nPrerequisites: Deflect Arrows.\nBenefits: When using Deflect Arrows, you can def lect an additional number of ranged attacks per round equal to half your tier. You can expend one use of mythic power as an immediate action to def lect a single ray from a ray spell or effect targeting you."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zouzs8k8I25VXfwa",
+      "upstreamKey": "pf1-content/zouzs8k8I25VXfwa",
+      "pack": "pf-feats",
+      "name": "Magic Trick",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Choose one spell. You are able to manipulate that spell beyond its typical uses.Prerequisites: Ability to cast the chosen spell or spell-like ability.</em></p><p><strong>Benefits</strong>: You can use any magic tricks relating to the chosen spell so long as you meet the appropriate magic trick requirements.</p><p><strong>Special</strong>: You can select the Magic Trick feat multiple times. Each time you take the feat, it applies to a new type of spell.</p><hr><h3>Daylight</h3><p>Though many clerics in the church of Sarenrae can conjure powerful light, it was a warpriest named Amnok who learned to focus it through his shield and blind Sarenrae’s foes. He later learned how to conjure a burst of pure daylight, shining like the sun for a several seconds and defeating an entire cabal of vampires. Most of the manipulations of the daylight spell come from Amnok’s early work. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (daylight) feat to use the trick.</p><p><strong>Barrier of Light (Shield Focus)</strong>: When you cast daylight on a shield, it sheds bright light in a 120-foot cone and raises the light level by one step for an additional 120 feet. As a standard action, you can end the spell by causing the light to suddenly flash, blinding each creature in the cone for 1d4 rounds unless it succeeds at a Fortitude save against your daylight spell DC.</p><p><strong>Blades of Light (Knowledge [religion] 6 ranks)</strong>: When you cast daylight on a melee weapon, you can reduce the duration to 1 round per level and grant the weapon the ability to deal additional damage against undead and evil outsiders equal to 1 point per 2 caster levels (maximum +5). This extra damage does not stack with the holy weapon enchantment and similar effects.</p><p><strong>Burst of Sunlight (Spellcraft 6 ranks or worship deity with Sun domain)</strong>: You can reduce the duration of your daylight spell to 1 round, causing the spell to radiate the equivalent of pure daylight for the purpose of affecting creatures that are damaged, destroyed, or are otherwise affected by such light.</p><p><strong>Convincing Halo (Knowledge [religion] 3 ranks)</strong>: When you cast daylight on a piece of headgear, you can make it appear as a halo. This grants the creature wearing the headgear a +2 circumstance bonus on Diplomacy and Bluff checks against good outsiders.</p><p><strong>Pin Sunlight (Precise Shot)</strong>: When you cast daylight on a piece of ammunition or thrown weapon, you can cause the spell to transfer to the target of a successful ranged attack with that piece of ammunition or thrown weapon, causing the creature to radiate light from its body. If the creature succeeds at a Will save against your daylight spell DC, it instead glows with dim light in a 5-foot radius for 1 minute.</p><p><strong>Vessel of Light (no additional prerequisites)</strong>: When you cast daylight on a torch, lantern, or other tool used to produce mundane light, you increase the duration of your spell to 1 hour per level.</p><hr><h3>Fireball</h3><p>Vincent the Pyroclastic is a destructive force in the Society. He has caused permanent damage to and condemnation of more buildings in the Inner Sea region than any other agent. For him, incineration became an art. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (fireball) feat to use the trick.</p><p><strong>Alchemist’s Inferno (Craft [alchemy] 9 ranks, Spellcraft 9 ranks)</strong>: Using alchemist’s fire as a material component, your fireball sets everything it touches ablaze. The initial blast deals half as much damage, but targets that fail their Reflex saves also catch fire. A creature that catches fire in this way must attempt a Reflex save against the DC of the fireball spell to stop burning instead of the typical DC. Unattended objects automatically catch fire, though nonflammable objects burn for only 1 additional round.</p><p><strong>Cluster Bomb (Spellcraft 6 ranks)</strong>: You are able to throw multiple small explosions with a single spell instead of the normal effect. For every 2 caster levels, you toss a miniature fireball with a 10-foot radius that deals 2d6 points of fire damage. The grid intersection of all blasts must be within 30 feet of each other. If a creature is in the area of multiple blasts, it attempts a single Reflex save against the combined damage.</p><p><strong>Concentrated Fire (Selective Spell or Widen Spell, Spellcraft 6 ranks)</strong>: You can reduce the radius of your fireball by increments of 5 feet, to a minimum of a 5-foot radius. For each 5-foot increment you reduce the spell, you increase the spell’s damage by 1d6. This additional damage can exceed the spell’s maximum damage.</p><p><strong>Sculpt Flames (Reach Spell, Selective Spell)</strong>: You can alter the shape of your fireball to send its fire along the path you desire. When casting the spell, you can change the area to one 5-foot square per caster level. The spell’s area must be continuous and unbroken when cast. If its blocked or otherwise interrupted by a 5-foot wide or larger environmental feature like a wall, the spell fails. A creature only takes damage once from a fireball cast in this way, even if the spell’s area intersects with the creature multiple times.</p><p><strong>Where There’s Smoke (Craft [alchemy] 6 ranks, Spellcraft 6 ranks)</strong>: Using a smokestick as a material component, you make your fireball leave behind a thick cloud of smoke in the spell’s area for 1 minute. A moderate or stronger wind dissipates the smoke in 1 round as a smokestick. When using a smokestick in this way, your fireball deals only 1d6 points of damage per 2 caster levels (maximum 5d6).</p><hr><h3>Floating Disk</h3><p>Although most spellcasters use floating disks as little more than a means of moving luggage, the shulsagas of the Astral Plane have mastered the ability to ride atop a floating disk. A combination of cultural importance, astral secrets, and constant practice allows shulsagas to push the spell’s magic beyond its normal limits. Masters of the art can perform truly extraordinary maneuvers with proper training. In addition to the feat, skill, or other requirements listed for each of these tricks, you must have the Magic Trick (floating disk) feat to use the trick.</p><p><strong>Defensive Disk (Fly 3 ranks, Shield Proficiency)</strong>: While riding atop your floating disk with at least one hand free, you can spend a move action to grip the disk by its edge, tilt it, and use it to deflect blows. Until the beginning of your next turn, your floating disk grants you the benefits of the spell shield. If you are already under the effects of the shield spell from another source, this effect instead increases the spell’s shield bonus by 1 until the beginning of your next turn.</p><p><strong>Disk Rider (Fly 3 ranks)</strong>: You can ride atop any floating disk you create, so long as it has the capacity to support your weight. This grants you a fly speed of 30 feet (average), but the disk cannot move itself or you more than 5 feet above the ground at any time. If you are on a location within the Astral Plane—including Yulgamot itself—the disk can instead fly to any height, and your fly speed while standing on it increases to 40 feet (good). When you cast floating disk, you can step onto the disk in your space as part of the action required to cast the spell.</p><p><strong>Drifting Defense (Fly 6 ranks, Mobility, Shield Proficiency)</strong>: Whenever you move at least 10 feet during your turn, you can activate the defensive disk trick as a free action.</p><p><strong>Expanded Disk (Fly 3 ranks, Heighten Spell)</strong>: If you are Large or larger, you can create a larger floating disk capable of supporting your weight and size; however, for each size category you are larger than Medium, you must use a spell slot that is one level higher (for example, a 4th-level spell is required to create a disk capable of supporting a Gargantuan creature). Once created, a disk augmented with this trick will always support the weight of you and your personal gear, even if this combined mass exceeds the disk’s capacity.</p><p><strong>Force Check (Fly 3 ranks, Catch Off-Guard or Improved Bull Rush)</strong>: When you successfully charge and bull rush a creature while riding atop your floating disk, you can veer the disk into your target, dealing 1d6 points of bludgeoning damage in addition to moving the target. You gain a +4 circumstance bonus to your Armor Class against any attack of opportunity attempted against you when performing a bull rush in this way.</p><p><strong>Spurn Gravity (Fly 6 ranks)</strong>: While astride your floating disk, you can fly higher than 5 feet above the ground. However, you must return to a location 5 feet above a stable surface before the end of your turn or fall. If you take damage from this fall, you fall prone atop your floating disk. As a swift action, you can also reduce the remaining duration of your floating disk to 1 round per level. For the remaining duration of the spell, your fly speed increases to 50 feet and your disk ignores all altitude limitations.</p><hr><h3>Mage Hand</h3><p>Cylindia the Sly was a renowned cat burglar throughout Magnimar. Though she never had any formal magical training, her ancestor’s magical blood was all she needed to produce and master the use of mage hand. She remains unique in that her adaptations to the spell came entirely from practical applications rather than study and experimentation. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (mage hand) feat to use the trick.</p><p><strong>Dirty Magic Trick (base attack bonus +1, Improved Dirty Trick)</strong>: You can manipulate a target’s clothing or a nearby object to attempt a dirty trick combat maneuver against a single opponent in the spell’s range, using your combat maneuver bonus for the check.</p><p><strong>Powerful Hand (Spellcraft 3 ranks)</strong>: You can increase the weight of objects you can move by 5 pounds for every 3 ranks you have in Spellcraft.</p><p><strong>Ranged Aid (base attack bonus +1)</strong>: You’ve learned to use your mage hand to tug at an opponent’s hair, clothing, and equipment. You can use the aid another action at range, attempting a ranged touch attack instead of a melee attack.</p><p><strong>Reaching Hand (Precise Shot or Reach Spell)</strong>: You can focus as a swift action before casting mage hand to increase its range to 50 feet + 5 feet per caster level. If the target of your mage hand spell is outside of the spell’s standard range at the start of your turn, you must spend another swift action to focus again or the spell immediately ends.</p><p><strong>Subtle Hand (Deft Hands, Disable Device 6 ranks, Sleight of Hand 6 ranks)</strong>: You can attempt Disable Device and Sleight of Hand checks within range of your mage hand. Working at a distance increases the normal skill check DC by 5, and you cannot take 10 on this check.</p><p><strong>Throw Punch (Improved Unarmed Strike)</strong>: You can use mage hand to strike an opponent within the spell’s range. This is a melee attack that always deals 1d3 points of force damage. The mage hand has an attack bonus equal to your caster level plus your Intelligence, Wisdom, or Charisma modifier, whichever is highest. Spell resistance applies against this ability.</p><hr><h3>Obscuring Mist</h3><p>Shastalla of the Shackles was a bloodthirsty pirate, famous for her raids on Chelish patrols under the cover of obscuring mist. After Shastalla was caught and executed, the Pathfinder Society purchased her magical library for a small fortune to learn her secrets. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (obscuring mist) feat to use the trick.</p><p><strong>Clinging Mist (Extend Spell, Spellcraft 6 ranks)</strong>: Your thick mist is difficult to escape. A creature that leaves the obscuring mist continues to treat other creatures as if they had concealment for 1d4+1 rounds after it leaves.</p><p><strong>Hydrating Mist (Survival 3 ranks)</strong>: Your mist clings to creatures, soaking them and their equipment. This grants each creature a +4 bonus on Fortitude saves to resist effects of heat and a –4 penalty on saves against effects that deal electricity damage and spells with the electricity descriptor. This effect functions as submersion in water for aquatic creatures and penetrates the skin, hydrating creatures in the mist as if they consumed a canteen full of water.</p><p><strong>Mist Screen (Heighten Spell)</strong>: You can shape your obscuring mist into a dense wall of mist with an area up to one 10-foot square per 2 levels. The sections of wall are 5 feet thick and must remain contiguous, but they do not need to be anchored to a solid surface. At least one section of the wall must include your space. Creatures standing within the wall have concealment. Creatures on the opposite side of the wall have total concealment.</p><p><strong>Obscure Self (Stealth 6 ranks)</strong>: You reduce the area of the obscuring mist to your space plus all adjacent squares, but the mist is no longer stationary and instead automatically moves with you when you move. This does not create enough concealment to attempt Stealth checks. As a swift action, you can anchor the mist, causing it to become stationary and allowing enough concealment to hide. You can release the mist as a swift action, allowing it to move with you again. If you take any fire damage while this trick is in effect, the spell immediately ends.</p><p><strong>Obscure Terrain (Selective Spell)</strong>: Your mist rests low to the ground, blocking sight to all underfoot and making the area difficult to traverse. Your obscuring mist takes up the same area, but no longer blocks sight of other creatures. Instead, all creatures moving through the mist treat the area as difficult terrain. A creature can spend a move action to treat the area as normal terrain until the end of its turn.</p><p><strong>Quenching Mist (Spellcraft 6 ranks or water subtype)</strong>: You can issue a forceful blast of pressurized mist in a 15-foot cone instead of casting obscuring mist normally. This blast automatically quenches any nonmagical fires and functions as dispel magic against magical fires as long as those fires are Medium or smaller. The duration changes to instantaneous and the spell gains the water descriptor. Creatures with the fire subtype within the cone take 1d6 points of damage for every 2 caster levels (maximum 5d6) you have (half on a successful Reflex save).</p><hr><h3>Prestidigitation</h3><p>Though magical practitioners around the multiverse make daily use of prestidigitation, Poshment the Peculiar was the first to dabble in prestidigitation’s many possibilities. Through dedicated study and dubious field tests, he was able to find many more uses than dying his clothes and cleaning up a spell component closet. By the time he had graduated from the Arcanamirium in Absalom, he had already learned to permanently dye clothes and even paint on canvas using only his spellwork. Over the years, he expanded prestidigitation from a multi-use spell to a work of art. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (prestidigitation) feat to use the trick.</p><p><strong>Adjust Scent (Survival 6 ranks)</strong>: You can adjust the smell of an object or willing creature to become more or less powerful, respectively doubling or reducing by half the distance needed to detect the target with the scent universal monster ability.</p><p><strong>Chromatic Savant (Disguise 3 ranks or gnome)</strong>: When you change the color of an item, the changes are permanent. You can also change the color of part or all of a living being, but the effect gradually fades away in about a month. You must succeed at an appropriate Craft check to create complex or specific designs.</p><p><strong>Lasting Changes (Extend Spell)</strong>: The effects of your prestidigitation spells persist for 1 hour per caster level; this does not change its spell level.</p><p><strong>Minor Levitation (Spellcraft 3 ranks)</strong>: You can cause up to 1 pound of material to become weightless and direct it to move up to 5 feet each round as if under the effects of levitate.</p><p><strong>Repulsive Flavor (Craft [cooking] 3 ranks)</strong>: You can cause a willing creature to taste foul. Once a creature with a bite attack successfully attacks the target of your spell, the target gains a +2 circumstance bonus to AC and CMD against bite attacks and grapple checks made with a mouth, such as the grab ability or swallow whole, from that creature.</p><p><strong>Thaumaturgic Aesthetics (Bluff 3 ranks, Disguise 3 ranks, Deceptive)</strong>: While you have a prestidigitation spell active, you can thematically change the effects of other spells you cast, such as changing the color of a fireball, granting your magic missile a specific shape, or adding a floral smell to your mage armor. This increases the DC of Spellcraft and Knowledge (arcana) checks to identify your magic by an amount equal to half of your ranks in Disguise (minimum 1).</p><hr><h3>Shield</h3><p>Kah’la is one of the more studious magi to ever graduate from the Arcanamirium. Though her professors had hoped she would make a fine magical theoretician, she joined the Pathfinder Society and put her theories on abjuration to good use. In addition to the feat, skill, or other requirements listed in parenthesis for each of these tricks, you must have the Magic Trick (shield) feat to use the trick.</p><p><strong>Friendly Shield (Bodyguard)</strong>: When using the Bodyguard feat, you can instead grant your ally the benefit of your active shield spell. You lose the spell’s benefits and your ally gains these benefits for the spell’s duration.</p><p><strong>Force Bash (Improved Bull Rush, Improved Shield Bash)</strong>: While the shield spell is active, as a standard action you can cause your shield to fly toward a target within 30 feet and attempt to bash it. On a successful ranged attack roll, the spell deals 1d8 points of force damage plus 1 point per 3 caster levels (maximum +5 at 15th level). If it deals damage, you can also attempt a bull rush combat maneuver with the shield as a free action. The shield has an attack bonus equal to your caster level plus your Intelligence, Wisdom, or Charisma modifier, whichever is highest. Using the shield in this way consumes 1 minute of the spell’s duration. Spell resistance applies against this ability.</p><p><strong>Force Equipment (Equipment Trick [shield])</strong>: You can use your shield spell with the Equipment Trick (shield) feat for the following tricks: Break Ground, Hurl Shield, Little Wall, Ricochet Shield, Shield Gag.</p><p><strong>Instant Cover (Spellcraft 6 ranks)</strong>: While the shield spell is active, as an immediate action you can expand your shield into a tower shield made of force. Choose one edge of your space. That edge is treated as a wall of force, except for each 2 caster levels it has hardness 5 and 5 hit points. At the end of the current creature’s turn, the shield spell immediately ends.</p><p><strong>Reflective Shield (Spellcraft 9 ranks)</strong>: While the shield spell is active, as an immediate action you can reflect magic missile spells back on their caster as if using spell turning. Using the shield in this way consumes 1 minute of the spell’s duration.</p><hr><h3>Unseen Servant</h3><p>Who better than Seganam, a conjuration professor at Korvosa’s Acadamae, to discover a variety of applications for unseen servant. Originally he modified the spell to assist with his alchemical experiments, but over time he learned to make these servants function in a variety of ways. Today, armor-clad servants stand perpetual guard outside his office. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (unseen servant) feat to use the trick.</p><p><strong>Phantom Decoy (Disguise 6 ranks)</strong>: Your servant can inhabit a suit of armor as if wearing it, appearing as haunted armor. This reduces the unseen servant’s movement speed as normal armor would. Attacks against the unseen servant target an AC equal to 10 plus the armor bonus from the armor. Any successful attack damages the armor as if it were targeted by a sunder combat maneuver. An area effect that deals 6 or more points of damage destroys the unseen servant as usual.</p><p><strong>Unfettered Servant (Reach Spell)</strong>: Without increasing the spell slot, you increase the range of your unseen servant to long. If the servant moves beyond the spell’s range, it finishes its current task before it ceases to exist.</p><p><strong>Unseen Apprentice (Combat Casting, Spellcraft 3 ranks)</strong>: You servant is gifted with a spark of magical prowess. If the servant is adjacent to you when you attempt a concentration check, you gain a +1 bonus to the check. This bonus increases to +2 when you have 10 or more ranks in Spellcraft.</p><p><strong>Unseen Assistant (Craft [any], Perform [any], or Profession [any] 3 ranks)</strong>: You infuse your servant with the spirit of creativity. It can assist you as if successfully using the aid another action with a single Craft, Profession, or Perform skill in which you have 3 or more ranks. Alternatively, it can use any of these skills itself, using half of your total bonus for that skill.</p><p><strong>Unseen Squire (armor proficiency)</strong>: Your servant can assist any character in donning armor with which you are proficient. When doing so, that character is considered as having help to don her armor and can do so in half the usual time: 5 rounds for light armor, 1 minute for medium armor, or 2 minutes for heavy armor.</p><p><strong>Unseen Warrior (base attack bonus +3)</strong>: You imbue your servant with the spirit of battle, reducing the duration to 1 round per level but allowing it to take aid another actions in battle on your turn. The servant has an attack bonus equal to your caster level plus the highest of your Intelligence, Wisdom, or Charisma modifiers.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Choose one spell. You are able to manipulate that spell beyond its typical uses.Prerequisites: Ability to cast the chosen spell or spell-like ability.\nBenefits: You can use any magic tricks relating to the chosen spell so long as you meet the appropriate magic trick requirements.\nSpecial: You can select the Magic Trick feat multiple times. Each time you take the feat, it applies to a new type of spell.\nDaylight\nThough many clerics in the church of Sarenrae can conjure powerful light, it was a warpriest named Amnok who learned to focus it through his shield and blind Sarenrae’s foes. He later learned how to conjure a burst of pure daylight, shining like the sun for a several seconds and defeating an entire cabal of vampires. Most of the manipulations of the daylight spell come from Amnok’s early work. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (daylight) feat to use the trick.\nBarrier of Light (Shield Focus): When you cast daylight on a shield, it sheds bright light in a 120-foot cone and raises the light level by one step for an additional 120 feet. As a standard action, you can end the spell by causing the light to suddenly flash, blinding each creature in the cone for 1d4 rounds unless it succeeds at a Fortitude save against your daylight spell DC.\nBlades of Light (Knowledge [religion] 6 ranks): When you cast daylight on a melee weapon, you can reduce the duration to 1 round per level and grant the weapon the ability to deal additional damage against undead and evil outsiders equal to 1 point per 2 caster levels (maximum +5). This extra damage does not stack with the holy weapon enchantment and similar effects.\nBurst of Sunlight (Spellcraft 6 ranks or worship deity with Sun domain): You can reduce the duration of your daylight spell to 1 round, causing the spell to radiate the equivalent of pure daylight for the purpose of affecting creatures that are damaged, destroyed, or are otherwise affected by such light.\nConvincing Halo (Knowledge [religion] 3 ranks): When you cast daylight on a piece of headgear, you can make it appear as a halo. This grants the creature wearing the headgear a +2 circumstance bonus on Diplomacy and Bluff checks against good outsiders.\nPin Sunlight (Precise Shot): When you cast daylight on a piece of ammunition or thrown weapon, you can cause the spell to transfer to the target of a successful ranged attack with that piece of ammunition or thrown weapon, causing the creature to radiate light from its body. If the creature succeeds at a Will save against your daylight spell DC, it instead glows with dim light in a 5-foot radius for 1 minute.\nVessel of Light (no additional prerequisites): When you cast daylight on a torch, lantern, or other tool used to produce mundane light, you increase the duration of your spell to 1 hour per level.\nFireball\nVincent the Pyroclastic is a destructive force in the Society. He has caused permanent damage to and condemnation of more buildings in the Inner Sea region than any other agent. For him, incineration became an art. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (fireball) feat to use the trick.\nAlchemist’s Inferno (Craft [alchemy] 9 ranks, Spellcraft 9 ranks): Using alchemist’s fire as a material component, your fireball sets everything it touches ablaze. The initial blast deals half as much damage, but targets that fail their Reflex saves also catch fire. A creature that catches fire in this way must attempt a Reflex save against the DC of the fireball spell to stop burning instead of the typical DC. Unattended objects automatically catch fire, though nonflammable objects burn for only 1 additional round.\nCluster Bomb (Spellcraft 6 ranks): You are able to throw multiple small explosions with a single spell instead of the normal effect. For every 2 caster levels, you toss a miniature fireball with a 10-foot radius that deals 2d6 points of fire damage. The grid intersection of all blasts must be within 30 feet of each other. If a creature is in the area of multiple blasts, it attempts a single Reflex save against the combined damage.\nConcentrated Fire (Selective Spell or Widen Spell, Spellcraft 6 ranks): You can reduce the radius of your fireball by increments of 5 feet, to a minimum of a 5-foot radius. For each 5-foot increment you reduce the spell, you increase the spell’s damage by 1d6. This additional damage can exceed the spell’s maximum damage.\nSculpt Flames (Reach Spell, Selective Spell): You can alter the shape of your fireball to send its fire along the path you desire. When casting the spell, you can change the area to one 5-foot square per caster level. The spell’s area must be continuous and unbroken when cast. If its blocked or otherwise interrupted by a 5-foot wide or larger environmental feature like a wall, the spell fails. A creature only takes damage once from a fireball cast in this way, even if the spell’s area intersects with the creature multiple times.\nWhere There’s Smoke (Craft [alchemy] 6 ranks, Spellcraft 6 ranks): Using a smokestick as a material component, you make your fireball leave behind a thick cloud of smoke in the spell’s area for 1 minute. A moderate or stronger wind dissipates the smoke in 1 round as a smokestick. When using a smokestick in this way, your fireball deals only 1d6 points of damage per 2 caster levels (maximum 5d6).\nFloating Disk\nAlthough most spellcasters use floating disks as little more than a means of moving luggage, the shulsagas of the Astral Plane have mastered the ability to ride atop a floating disk. A combination of cultural importance, astral secrets, and constant practice allows shulsagas to push the spell’s magic beyond its normal limits. Masters of the art can perform truly extraordinary maneuvers with proper training. In addition to the feat, skill, or other requirements listed for each of these tricks, you must have the Magic Trick (floating disk) feat to use the trick.\nDefensive Disk (Fly 3 ranks, Shield Proficiency): While riding atop your floating disk with at least one hand free, you can spend a move action to grip the disk by its edge, tilt it, and use it to deflect blows. Until the beginning of your next turn, your floating disk grants you the benefits of the spell shield. If you are already under the effects of the shield spell from another source, this effect instead increases the spell’s shield bonus by 1 until the beginning of your next turn.\nDisk Rider (Fly 3 ranks): You can ride atop any floating disk you create, so long as it has the capacity to support your weight. This grants you a fly speed of 30 feet (average), but the disk cannot move itself or you more than 5 feet above the ground at any time. If you are on a location within the Astral Plane—including Yulgamot itself—the disk can instead fly to any height, and your fly speed while standing on it increases to 40 feet (good). When you cast floating disk, you can step onto the disk in your space as part of the action required to cast the spell.\nDrifting Defense (Fly 6 ranks, Mobility, Shield Proficiency): Whenever you move at least 10 feet during your turn, you can activate the defensive disk trick as a free action.\nExpanded Disk (Fly 3 ranks, Heighten Spell): If you are Large or larger, you can create a larger floating disk capable of supporting your weight and size; however, for each size category you are larger than Medium, you must use a spell slot that is one level higher (for example, a 4th-level spell is required to create a disk capable of supporting a Gargantuan creature). Once created, a disk augmented with this trick will always support the weight of you and your personal gear, even if this combined mass exceeds the disk’s capacity.\nForce Check (Fly 3 ranks, Catch Off-Guard or Improved Bull Rush): When you successfully charge and bull rush a creature while riding atop your floating disk, you can veer the disk into your target, dealing 1d6 points of bludgeoning damage in addition to moving the target. You gain a +4 circumstance bonus to your Armor Class against any attack of opportunity attempted against you when performing a bull rush in this way.\nSpurn Gravity (Fly 6 ranks): While astride your floating disk, you can fly higher than 5 feet above the ground. However, you must return to a location 5 feet above a stable surface before the end of your turn or fall. If you take damage from this fall, you fall prone atop your floating disk. As a swift action, you can also reduce the remaining duration of your floating disk to 1 round per level. For the remaining duration of the spell, your fly speed increases to 50 feet and your disk ignores all altitude limitations.\nMage Hand\nCylindia the Sly was a renowned cat burglar throughout Magnimar. Though she never had any formal magical training, her ancestor’s magical blood was all she needed to produce and master the use of mage hand. She remains unique in that her adaptations to the spell came entirely from practical applications rather than study and experimentation. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (mage hand) feat to use the trick.\nDirty Magic Trick (base attack bonus +1, Improved Dirty Trick): You can manipulate a target’s clothing or a nearby object to attempt a dirty trick combat maneuver against a single opponent in the spell’s range, using your combat maneuver bonus for the check.\nPowerful Hand (Spellcraft 3 ranks): You can increase the weight of objects you can move by 5 pounds for every 3 ranks you have in Spellcraft.\nRanged Aid (base attack bonus +1): You’ve learned to use your mage hand to tug at an opponent’s hair, clothing, and equipment. You can use the aid another action at range, attempting a ranged touch attack instead of a melee attack.\nReaching Hand (Precise Shot or Reach Spell): You can focus as a swift action before casting mage hand to increase its range to 50 feet + 5 feet per caster level. If the target of your mage hand spell is outside of the spell’s standard range at the start of your turn, you must spend another swift action to focus again or the spell immediately ends.\nSubtle Hand (Deft Hands, Disable Device 6 ranks, Sleight of Hand 6 ranks): You can attempt Disable Device and Sleight of Hand checks within range of your mage hand. Working at a distance increases the normal skill check DC by 5, and you cannot take 10 on this check.\nThrow Punch (Improved Unarmed Strike): You can use mage hand to strike an opponent within the spell’s range. This is a melee attack that always deals 1d3 points of force damage. The mage hand has an attack bonus equal to your caster level plus your Intelligence, Wisdom, or Charisma modifier, whichever is highest. Spell resistance applies against this ability.\nObscuring Mist\nShastalla of the Shackles was a bloodthirsty pirate, famous for her raids on Chelish patrols under the cover of obscuring mist. After Shastalla was caught and executed, the Pathfinder Society purchased her magical library for a small fortune to learn her secrets. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (obscuring mist) feat to use the trick.\nClinging Mist (Extend Spell, Spellcraft 6 ranks): Your thick mist is difficult to escape. A creature that leaves the obscuring mist continues to treat other creatures as if they had concealment for 1d4+1 rounds after it leaves.\nHydrating Mist (Survival 3 ranks): Your mist clings to creatures, soaking them and their equipment. This grants each creature a +4 bonus on Fortitude saves to resist effects of heat and a –4 penalty on saves against effects that deal electricity damage and spells with the electricity descriptor. This effect functions as submersion in water for aquatic creatures and penetrates the skin, hydrating creatures in the mist as if they consumed a canteen full of water.\nMist Screen (Heighten Spell): You can shape your obscuring mist into a dense wall of mist with an area up to one 10-foot square per 2 levels. The sections of wall are 5 feet thick and must remain contiguous, but they do not need to be anchored to a solid surface. At least one section of the wall must include your space. Creatures standing within the wall have concealment. Creatures on the opposite side of the wall have total concealment.\nObscure Self (Stealth 6 ranks): You reduce the area of the obscuring mist to your space plus all adjacent squares, but the mist is no longer stationary and instead automatically moves with you when you move. This does not create enough concealment to attempt Stealth checks. As a swift action, you can anchor the mist, causing it to become stationary and allowing enough concealment to hide. You can release the mist as a swift action, allowing it to move with you again. If you take any fire damage while this trick is in effect, the spell immediately ends.\nObscure Terrain (Selective Spell): Your mist rests low to the ground, blocking sight to all underfoot and making the area difficult to traverse. Your obscuring mist takes up the same area, but no longer blocks sight of other creatures. Instead, all creatures moving through the mist treat the area as difficult terrain. A creature can spend a move action to treat the area as normal terrain until the end of its turn.\nQuenching Mist (Spellcraft 6 ranks or water subtype): You can issue a forceful blast of pressurized mist in a 15-foot cone instead of casting obscuring mist normally. This blast automatically quenches any nonmagical fires and functions as dispel magic against magical fires as long as those fires are Medium or smaller. The duration changes to instantaneous and the spell gains the water descriptor. Creatures with the fire subtype within the cone take 1d6 points of damage for every 2 caster levels (maximum 5d6) you have (half on a successful Reflex save).\nPrestidigitation\nThough magical practitioners around the multiverse make daily use of prestidigitation, Poshment the Peculiar was the first to dabble in prestidigitation’s many possibilities. Through dedicated study and dubious field tests, he was able to find many more uses than dying his clothes and cleaning up a spell component closet. By the time he had graduated from the Arcanamirium in Absalom, he had already learned to permanently dye clothes and even paint on canvas using only his spellwork. Over the years, he expanded prestidigitation from a multi-use spell to a work of art. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (prestidigitation) feat to use the trick.\nAdjust Scent (Survival 6 ranks): You can adjust the smell of an object or willing creature to become more or less powerful, respectively doubling or reducing by half the distance needed to detect the target with the scent universal monster ability.\nChromatic Savant (Disguise 3 ranks or gnome): When you change the color of an item, the changes are permanent. You can also change the color of part or all of a living being, but the effect gradually fades away in about a month. You must succeed at an appropriate Craft check to create complex or specific designs.\nLasting Changes (Extend Spell): The effects of your prestidigitation spells persist for 1 hour per caster level; this does not change its spell level.\nMinor Levitation (Spellcraft 3 ranks): You can cause up to 1 pound of material to become weightless and direct it to move up to 5 feet each round as if under the effects of levitate.\nRepulsive Flavor (Craft [cooking] 3 ranks): You can cause a willing creature to taste foul. Once a creature with a bite attack successfully attacks the target of your spell, the target gains a +2 circumstance bonus to AC and CMD against bite attacks and grapple checks made with a mouth, such as the grab ability or swallow whole, from that creature.\nThaumaturgic Aesthetics (Bluff 3 ranks, Disguise 3 ranks, Deceptive): While you have a prestidigitation spell active, you can thematically change the effects of other spells you cast, such as changing the color of a fireball, granting your magic missile a specific shape, or adding a floral smell to your mage armor. This increases the DC of Spellcraft and Knowledge (arcana) checks to identify your magic by an amount equal to half of your ranks in Disguise (minimum 1).\nShield\nKah’la is one of the more studious magi to ever graduate from the Arcanamirium. Though her professors had hoped she would make a fine magical theoretician, she joined the Pathfinder Society and put her theories on abjuration to good use. In addition to the feat, skill, or other requirements listed in parenthesis for each of these tricks, you must have the Magic Trick (shield) feat to use the trick.\nFriendly Shield (Bodyguard): When using the Bodyguard feat, you can instead grant your ally the benefit of your active shield spell. You lose the spell’s benefits and your ally gains these benefits for the spell’s duration.\nForce Bash (Improved Bull Rush, Improved Shield Bash): While the shield spell is active, as a standard action you can cause your shield to fly toward a target within 30 feet and attempt to bash it. On a successful ranged attack roll, the spell deals 1d8 points of force damage plus 1 point per 3 caster levels (maximum +5 at 15th level). If it deals damage, you can also attempt a bull rush combat maneuver with the shield as a free action. The shield has an attack bonus equal to your caster level plus your Intelligence, Wisdom, or Charisma modifier, whichever is highest. Using the shield in this way consumes 1 minute of the spell’s duration. Spell resistance applies against this ability.\nForce Equipment (Equipment Trick [shield]): You can use your shield spell with the Equipment Trick (shield) feat for the following tricks: Break Ground, Hurl Shield, Little Wall, Ricochet Shield, Shield Gag.\nInstant Cover (Spellcraft 6 ranks): While the shield spell is active, as an immediate action you can expand your shield into a tower shield made of force. Choose one edge of your space. That edge is treated as a wall of force, except for each 2 caster levels it has hardness 5 and 5 hit points. At the end of the current creature’s turn, the shield spell immediately ends.\nReflective Shield (Spellcraft 9 ranks): While the shield spell is active, as an immediate action you can reflect magic missile spells back on their caster as if using spell turning. Using the shield in this way consumes 1 minute of the spell’s duration.\nUnseen Servant\nWho better than Seganam, a conjuration professor at Korvosa’s Acadamae, to discover a variety of applications for unseen servant. Originally he modified the spell to assist with his alchemical experiments, but over time he learned to make these servants function in a variety of ways. Today, armor-clad servants stand perpetual guard outside his office. In addition to the feat, skill, or other requirements listed in parentheses for each of these tricks, you must have the Magic Trick (unseen servant) feat to use the trick.\nPhantom Decoy (Disguise 6 ranks): Your servant can inhabit a suit of armor as if wearing it, appearing as haunted armor. This reduces the unseen servant’s movement speed as normal armor would. Attacks against the unseen servant target an AC equal to 10 plus the armor bonus from the armor. Any successful attack damages the armor as if it were targeted by a sunder combat maneuver. An area effect that deals 6 or more points of damage destroys the unseen servant as usual.\nUnfettered Servant (Reach Spell): Without increasing the spell slot, you increase the range of your unseen servant to long. If the servant moves beyond the spell’s range, it finishes its current task before it ceases to exist.\nUnseen Apprentice (Combat Casting, Spellcraft 3 ranks): You servant is gifted with a spark of magical prowess. If the servant is adjacent to you when you attempt a concentration check, you gain a +1 bonus to the check. This bonus increases to +2 when you have 10 or more ranks in Spellcraft.\nUnseen Assistant (Craft [any], Perform [any], or Profession [any] 3 ranks): You infuse your servant with the spirit of creativity. It can assist you as if successfully using the aid another action with a single Craft, Profession, or Perform skill in which you have 3 or more ranks. Alternatively, it can use any of these skills itself, using half of your total bonus for that skill.\nUnseen Squire (armor proficiency): Your servant can assist any character in donning armor with which you are proficient. When doing so, that character is considered as having help to don her armor and can do so in half the usual time: 5 rounds for light armor, 1 minute for medium armor, or 2 minutes for heavy armor.\nUnseen Warrior (base attack bonus +3): You imbue your servant with the spirit of battle, reducing the duration to 1 round per level but allowing it to take aid another actions in battle on your turn. The servant has an attack bonus equal to your caster level plus the highest of your Intelligence, Wisdom, or Charisma modifiers."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zptUvUmy6gk1JwVJ",
+      "upstreamKey": "pf1-content/zptUvUmy6gk1JwVJ",
+      "pack": "pf-feats",
+      "name": "Smell Fear",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Racial", "Half-Orc", "Orc"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can catch the sour scent of fear on the wind.</em></p><p><strong>Prerequisites</strong>: Keen Scent, half-orc or orc.</p><p><strong>Benefits</strong>: You receive a +4 bonus on Perception checks to detect creatures with the shaken, frightened, or panicked conditions using scent. You can substitute your Perception skill for Sense Motive skill checks if the subject has one of the previous conditions or is attempting to cover up their fear in some way.</p>",
+      "prerequisiteText": "Keen Scent, half-orc or orc",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/ITqwFw6U32n5YDML",
+          "kind": "feat"
+        },
+        {
+          "anyOf": [
+            {
+              "race": ["pf1/dCAXgdA6Db1Z3ccz"],
+              "kind": "race"
+            },
+            {
+              "race": ["pf1/JOuAdPAOTat7d5v6"],
+              "kind": "race"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "modifiers": [
+        {
+          "target": "skill.per",
+          "bonusType": "untyped",
+          "value": 4,
+          "condition": {
+            "situation": {
+              "local": "to detect shaken, frightened or panicked creatures using scent"
+            }
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You can catch the sour scent of fear on the wind.\nPrerequisites: Keen Scent, half-orc or orc.\nBenefits: You receive a +4 bonus on Perception checks to detect creatures with the shaken, frightened, or panicked conditions using scent. You can substitute your Perception skill for Sense Motive skill checks if the subject has one of the previous conditions or is attempting to cover up their fear in some way."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zqCO5EJVJTEoa4Ee",
+      "upstreamKey": "pf1-content/zqCO5EJVJTEoa4Ee",
+      "pack": "pf-feats",
+      "name": "Collector's Boon",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You have a knack for unlocking the true potential of your magical equipment.</em></p><p><strong>Prerequisites</strong>: Character level 5th.</p><p><strong>Benefits</strong>: You can enhance the effects of certain magical items when wearing or wielding two or more sympathetic magic items. While you are wearing or wielding at least two items from a set, you gain the two-item benefit listed in the set, as well as any specific benefits detailed in the item description entries for the pieces of that set. You do not gain any benefits that require three or more set pieces; such benefits must be unlocked by taking the Improved Collector's Boon feat.</p><p><strong>Special</strong>: You can't gain the set bonuses of more than one set at a time due to the interference of incompatible sympathetic magical effects. If you have multiple pieces of two or more sets, you must choose the set you gain the benefits of at the start of each day and can't change this decision for 24 hours.</p>",
+      "prerequisiteText": "Character level 5th",
+      "prerequisites": [
+        {
+          "characterLevel": 5,
+          "kind": "characterLevel"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You have a knack for unlocking the true potential of your magical equipment.\nPrerequisites: Character level 5th.\nBenefits: You can enhance the effects of certain magical items when wearing or wielding two or more sympathetic magic items. While you are wearing or wielding at least two items from a set, you gain the two-item benefit listed in the set, as well as any specific benefits detailed in the item description entries for the pieces of that set. You do not gain any benefits that require three or more set pieces; such benefits must be unlocked by taking the Improved Collector's Boon feat.\nSpecial: You can't gain the set bonuses of more than one set at a time due to the interference of incompatible sympathetic magical effects. If you have multiple pieces of two or more sets, you must choose the set you gain the benefits of at the start of each day and can't change this decision for 24 hours."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zqS2kFaxqbh6swvB",
+      "upstreamKey": "pf1-content/zqS2kFaxqbh6swvB",
+      "pack": "pf-feats",
+      "name": "Elemental Knowledge",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your breadth of knowledge widens as you explore your connection to the elements.</em></p><p><strong>Prerequisites</strong>: Expanded element class feature.</p><p><strong>Benefits</strong>: When you chose a different element from your primary element with the expanded element class feature at 7th level, you gain that element's associated skills as class skills. In addition, you gain a +1 bonus on all your element's associated skills. If you chose a third element with expanded element at 15th level, you receive these benefits for that element's associated skills as well.</p>",
+      "prerequisiteText": "Expanded element class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/Fjsv2wNC223ofCE8",
+          "classFeatureName": "Expanded Element",
+          "classFeatureClass": "pf1/vh9TZBE6BRu9sCfE",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your breadth of knowledge widens as you explore your connection to the elements.\nPrerequisites: Expanded element class feature.\nBenefits: When you chose a different element from your primary element with the expanded element class feature at 7th level, you gain that element's associated skills as class skills. In addition, you gain a +1 bonus on all your element's associated skills. If you chose a third element with expanded element at 15th level, you receive these benefits for that element's associated skills as well."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zrmmmPEu7qN9a8ny",
+      "upstreamKey": "pf1-content/zrmmmPEu7qN9a8ny",
+      "pack": "pf-feats",
+      "name": "Baneful Judgment",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You dole out judgment to a particular foe.</em></p><p><strong>Prerequisites</strong>: Bane class feature, judgment class feature, monster lore class feature.</p><p><strong>Benefits</strong>: You can declare a specialized judgment against a creature as a swift action. When pronouncing this judgment, you attempt a Knowledge check to identify the creature, or refer to your previous result if you've already identified the creature. If you succeed at the check or have already identified the creature, you can spend 1 round of bane and choose one judgment other than the healing judgment. You gain the benefits of this judgment against that creature for only 1 round plus 1 additional round for every 5 by which you exceeded the DC to identify the target. Subsequent uses of this judgment do not stack with this ability. A creature cannot be the target of this ability again for 24 hours.</p>",
+      "prerequisiteText": "Bane class feature, judgment class feature, monster lore class feature",
+      "prerequisites": [
+        {
+          "classFeature": "pf1/MpvhQz62qw68D2pd",
+          "classFeatureName": "Bane",
+          "classFeatureClass": "pf1/Fv3FbmXptuDRiL5y",
+          "kind": "classFeature"
+        },
+        {
+          "classFeature": "pf1/qI4IouTn4uvDPSXv",
+          "classFeatureName": "Judgment",
+          "classFeatureClass": "pf1/Fv3FbmXptuDRiL5y",
+          "kind": "classFeature"
+        },
+        {
+          "classFeature": "pf1/9Y9dpXEcjXGtH6Pe",
+          "classFeatureName": "Monster Lore",
+          "classFeatureClass": "pf1/Fv3FbmXptuDRiL5y",
+          "kind": "classFeature"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You dole out judgment to a particular foe.\nPrerequisites: Bane class feature, judgment class feature, monster lore class feature.\nBenefits: You can declare a specialized judgment against a creature as a swift action. When pronouncing this judgment, you attempt a Knowledge check to identify the creature, or refer to your previous result if you've already identified the creature. If you succeed at the check or have already identified the creature, you can spend 1 round of bane and choose one judgment other than the healing judgment. You gain the benefits of this judgment against that creature for only 1 round plus 1 additional round for every 5 by which you exceeded the DC to identify the target. Subsequent uses of this judgment do not stack with this ability. A creature cannot be the target of this ability again for 24 hours."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zrxZvMHYH2QHKH8f",
+      "upstreamKey": "pf1-content/zrxZvMHYH2QHKH8f",
+      "pack": "pf-feats",
+      "name": "Mounted Shield",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your defensive tactics defend both you and your mount.</em></p><p><strong>Prerequisites</strong>: Mounted Combat, Shield Focus.</p><p><strong>Benefits</strong>: You may add your base shield bonus (including the bonus from Shield Focus but not including enhancement bonuses) to your mount's AC. In addition, you may add this bonus when making a Ride check to negate a hit against your mount using the Mounted Combat feat.</p><h3>Combat Trick</h3><p>As long as you have at least 1 stamina point in your stamina pool, you can add your shield's enhancement bonus to your mount's Armor Class.</p>",
+      "prerequisiteText": "Mounted Combat, Shield Focus",
+      "prerequisites": [
+        {
+          "feat": "pf1/0spsP9ylE3goD3jc",
+          "kind": "feat"
+        },
+        {
+          "feat": "pf1/7mD4ZksvKFaorAfj",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your defensive tactics defend both you and your mount.\nPrerequisites: Mounted Combat, Shield Focus.\nBenefits: You may add your base shield bonus (including the bonus from Shield Focus but not including enhancement bonuses) to your mount's AC. In addition, you may add this bonus when making a Ride check to negate a hit against your mount using the Mounted Combat feat.\nCombat Trick\nAs long as you have at least 1 stamina point in your stamina pool, you can add your shield's enhancement bonus to your mount's Armor Class."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zvGUIrZrYog7vxUC",
+      "upstreamKey": "pf1-content/zvGUIrZrYog7vxUC",
+      "pack": "pf-feats",
+      "name": "Fight On",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Racial", "Half-Orc", "Orc", "Dwarf"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You can keep fighting even after you should be dead.</em></p><p><strong>Prerequisites</strong>: Con 13; dwarf, half-orc, or orc.</p><p><strong>Benefits</strong>: Once per day, you can gain a number of temporary hit points equal to your Constitution modifier. You can activate this feat as an immediate action when reduced to 0 or fewer hit points. You can use this feat to prevent yourself from dying. These temporary hit points last for 1 minute. If your hit points drop below 0 due to the loss of these temporary hit points, you fall unconscious and are dying as normal. If you also have the ferocity racial trait, you can use that once you have lost the temporary hit points from this feat.</p>",
+      "prerequisiteText": "Con 13; dwarf, half-orc, or orc",
+      "prerequisites": [
+        {
+          "ability": "constitution",
+          "min": 13,
+          "kind": "ability"
+        },
+        {
+          "anyOf": [
+            {
+              "race": [
+                "pf1/nEltI9y37rKJTeWo"
+              ],
+              "kind": "race"
+            },
+            {
+              "race": [
+                "pf1/dCAXgdA6Db1Z3ccz"
+              ],
+              "kind": "race"
+            },
+            {
+              "race": [
+                "pf1/JOuAdPAOTat7d5v6"
+              ],
+              "kind": "race"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You can keep fighting even after you should be dead.\nPrerequisites: Con 13; dwarf, half-orc, or orc.\nBenefits: Once per day, you can gain a number of temporary hit points equal to your Constitution modifier. You can activate this feat as an immediate action when reduced to 0 or fewer hit points. You can use this feat to prevent yourself from dying. These temporary hit points last for 1 minute. If your hit points drop below 0 due to the loss of these temporary hit points, you fall unconscious and are dying as normal. If you also have the ferocity racial trait, you can use that once you have lost the temporary hit points from this feat."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zvcjGclgv7LF8N7q",
+      "upstreamKey": "pf1-content/zvcjGclgv7LF8N7q",
+      "pack": "pf-feats",
+      "name": "Servant in the House of Truth",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Origin", "Racial", "Shabti"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your creator was a scholar and a seeker of lore, and your memories are filled with the feel of papyrus and ink.</em></p><p><strong>Prerequisites</strong>: Shabti.</p><p><strong>Benefits</strong>: Whenever you attempt a check for a Knowledge skill in which you have ranks, you can roll the check twice and use the better of the two results.</p>",
+      "prerequisiteText": "Shabti",
+      "prerequisites": [
+        {
+          "race": ["pf1/H6tsZqHiaTOcFSOn"],
+          "kind": "race"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your creator was a scholar and a seeker of lore, and your memories are filled with the feel of papyrus and ink.\nPrerequisites: Shabti.\nBenefits: Whenever you attempt a check for a Knowledge skill in which you have ranks, you can roll the check twice and use the better of the two results."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zwjt2vgUU8MgLavK",
+      "upstreamKey": "pf1-content/zwjt2vgUU8MgLavK",
+      "pack": "pf-feats",
+      "name": "Improved Learn Ranger Trap",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your skill with traps is extensive.</em></p><p><strong>Prerequisites</strong>: Learn Ranger Trap, Survival 8 ranks.</p><p><strong>Benefits</strong>: You learn one additional ranger trap and can now use both extraordinary and supernatural versions of any ranger traps you know.</p>",
+      "prerequisiteText": "Learn Ranger Trap, Survival 8 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1-content/DtBrPExq56ukN3ea",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.sur",
+          "min": 8,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your skill with traps is extensive.\nPrerequisites: Learn Ranger Trap, Survival 8 ranks.\nBenefits: You learn one additional ranger trap and can now use both extraordinary and supernatural versions of any ranger traps you know."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zxpgJns0cARQx5Oe",
+      "upstreamKey": "pf1-content/zxpgJns0cARQx5Oe",
+      "pack": "pf-feats",
+      "name": "Lucky Strike",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Racial", "Halfling", "Combat Trick"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your luck increases the potency of your weapon attacks.</em></p><p><strong>Prerequisites</strong>: Base attack bonus +5, adaptive luck racial trait, halfling.</p><p><strong>Benefits</strong>: Spend a use of your adaptive luck racial trait to reroll the damage from a single weapon attack. You deal damage equal to the new damage roll, or the original roll, whichever is greater.</p><h3>Combat Trick</h3><p>You can spend 5 stamina points instead of a use of adaptable luck to reroll the damage from a single attack.</p>",
+      "prerequisiteText": "Base attack bonus +5, adaptive luck racial trait, halfling",
+      "prerequisites": [
+        {
+          "bab": 5,
+          "kind": "bab"
+        },
+        {
+          "unchecked": "adaptive luck racial trait",
+          "kind": "unchecked"
+        },
+        {
+          "race": ["pf1/Hf31mrYb3uucNyLO"],
+          "kind": "race"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your luck increases the potency of your weapon attacks.\nPrerequisites: Base attack bonus +5, adaptive luck racial trait, halfling.\nBenefits: Spend a use of your adaptive luck racial trait to reroll the damage from a single weapon attack. You deal damage equal to the new damage roll, or the original roll, whichever is greater.\nCombat Trick\nYou can spend 5 stamina points instead of a use of adaptable luck to reroll the damage from a single attack."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zyFNuWSharAI85pa",
+      "upstreamKey": "pf1-content/zyFNuWSharAI85pa",
+      "pack": "pf-feats",
+      "name": "Covering Fire (VC)",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["Combat", "Teamwork"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your shot can put an enemy off guard, giving your teammates the opportunity to act.</em></p><p><strong>Prerequisites</strong>: Exotic Weapon Proficiency (firearms), Weapon Focus (at least one firearm).</p><p><strong>Benefits</strong>: When you hit a foe with a firearm for which you have Weapon Focus, that creature takes a -2 penalty on attack rolls for 1 round against any other ally that also has this feat; this changes to a -4 penalty on attacks of opportunity. The penalty applied by this feat does not stack with itself. However, if both you and an ally with this feat attack the same foe, you can cover each other (since a penalty you impose with this feat doesn't apply to attacks against you).</p>",
+      "prerequisiteText": "Exotic Weapon Proficiency (firearms), Weapon Focus (at least one firearm)",
+      "prerequisites": [
+        {
+          "proficiency": {
+            "baseType": "firearms"
+          },
+          "kind": "proficiency"
+        },
+        {
+          "feat": "pf1/n250dFlbykAIAg5Z",
+          "choice": "at least one firearm",
+          "kind": "feat"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your shot can put an enemy off guard, giving your teammates the opportunity to act.\nPrerequisites: Exotic Weapon Proficiency (firearms), Weapon Focus (at least one firearm).\nBenefits: When you hit a foe with a firearm for which you have Weapon Focus, that creature takes a -2 penalty on attack rolls for 1 round against any other ally that also has this feat; this changes to a -4 penalty on attacks of opportunity. The penalty applied by this feat does not stack with itself. However, if both you and an ally with this feat attack the same foe, you can cover each other (since a penalty you impose with this feat doesn't apply to attacks against you)."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zyQLakvaJwxlKEqY",
+      "upstreamKey": "pf1-content/zyQLakvaJwxlKEqY",
+      "pack": "pf-feats",
+      "name": "Swift Swimmer",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>You are a faster swimmer than other members of your race.</em></p><p><strong>Prerequisites</strong>: Lizardfolk, swim speed.</p><p><strong>Benefits</strong>: Your swim speed increases by 15 feet.</p>",
+      "prerequisiteText": "Lizardfolk, swim speed",
+      "prerequisites": [
+        {
+          "race": ["pf1/LU6Rgor1wTS5cCRN"],
+          "kind": "race"
+        },
+        {
+          "unchecked": "swim speed",
+          "kind": "unchecked"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "You are a faster swimmer than other members of your race.\nPrerequisites: Lizardfolk, swim speed.\nBenefits: Your swim speed increases by 15 feet."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/zyZVSe7lH6Bx3CKY",
+      "upstreamKey": "pf1-content/zyZVSe7lH6Bx3CKY",
+      "pack": "pf-feats",
+      "name": "Deadly Dealer",
+      "detail": {
+        "kind": "feat",
+        "featTypes": ["General"],
+        "repeatable": "unreviewed"
+      },
+      "description": "<p><em>Your skill with handling a deck and your arcane talents allow you to turn mundane cards into weapons.</em></p><p><strong>Prerequisites</strong>: Arcane Strike, Sleight of Hand 5 ranks.</p><p><strong>Benefits</strong>: You can throw a card as though it were a dart, with the same damage, range, and other features. You must use the Arcane Strike feat when throwing a card in this way, or else the card lacks the magical force and precision to deal lethal damage. A card is destroyed when thrown in this way.</p><p>Harrow cards are treated as masterwork weapons when thrown using this feat, but are still destroyed after they are thrown. A harrow deck can no longer be used as a fortune-telling device after even a single card is thrown.</p><p>A spellcaster with this feat can enhance a deck of cards as though it were a ranged weapon with 54 pieces of ammunition. This enhancement functions only when used in tandem with this feat, and has no affect on any other way the cards might be used. Only a character who possesses this feat can use an enhanced deck of cards; she must still use the Arcane Strike feat to activate the cards' enhancement.</p>",
+      "prerequisiteText": "Arcane Strike, Sleight of Hand 5 ranks",
+      "prerequisites": [
+        {
+          "feat": "pf1/QvlxYVVsBDlykPKe",
+          "kind": "feat"
+        },
+        {
+          "skillRanks": "skill.slt",
+          "min": 5,
+          "kind": "skillRanks"
+        }
+      ],
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Your skill with handling a deck and your arcane talents allow you to turn mundane cards into weapons.\nPrerequisites: Arcane Strike, Sleight of Hand 5 ranks.\nBenefits: You can throw a card as though it were a dart, with the same damage, range, and other features. You must use the Arcane Strike feat when throwing a card in this way, or else the card lacks the magical force and precision to deal lethal damage. A card is destroyed when thrown in this way.\nHarrow cards are treated as masterwork weapons when thrown using this feat, but are still destroyed after they are thrown. A harrow deck can no longer be used as a fortune-telling device after even a single card is thrown.\nA spellcaster with this feat can enhance a deck of cards as though it were a ranged weapon with 54 pieces of ammunition. This enhancement functions only when used in tandem with this feat, and has no affect on any other way the cards might be used. Only a character who possesses this feat can use an enhanced deck of cards; she must still use the Arcane Strike feat to activate the cards' enhancement."
+        }
+      ]
+    }
+  ]
+}

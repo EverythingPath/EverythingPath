@@ -1,0 +1,55 @@
+_id: bDES4OvFrtuMmPsW
+_key: '!items!bDES4OvFrtuMmPsW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Acid Jet
+system:
+  abilityType: su
+  actions:
+    - _id: vtiozu77j6nj9nzu
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (ceil(@class.level / 2))d6 + @abilities.cha.mod
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates sickened
+        type: fort
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can unleash a jet of acid by expending 1 point from her
+      arcane reservoir and making a ranged touch attack against any one target
+      within 30 feet. If the attack hits, it deals 1d6 points of acid damage +
+      the arcanist’s Charisma modifier, plus an additional 1d6 points of acid
+      damage for every 2 levels beyond 1st (to a maximum of 10d6 at 19th level).
+      The target is also sickened for 1d4 rounds. It can attempt a Fortitude
+      saving throw to negate the sickened condition.</p>
+  sources:
+    - id: PZO1129
+      pages: '9'
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat
