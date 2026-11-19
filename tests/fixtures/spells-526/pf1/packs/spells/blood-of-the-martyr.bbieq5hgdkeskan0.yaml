@@ -1,0 +1,58 @@
+_id: bbieq5hgdkeskan0
+_key: '!items!bbieq5hgdkeskan0'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Blood of the Martyr
+system:
+  actions:
+    - _id: 54znirt9pi8np54b
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to bleed from every orifice, and her organs and
+      blood become suffused with positive energy. If the subject fails her
+      Fortitude save, she takes 1d6 points of bleed damage per 4 caster levels
+      (to a maximum of 4d6 at 16th level) when you cast this spell. Any creature
+      that takes a full-round action to sup the blood of the bleeding subject
+      heals a number of hit points equal to twice as many as the subject lost
+      that round due to the bleed effect. The subject must be willing or
+      helpless to sup her blood, which provokes attacks of opportunity. Only one
+      creature can be healed in this way per round. The subject can lick her own
+      wounds in this way to regain half as many hit points as she lost that
+      round. If the bleeding effect is stopped or the spell's duration ends, the
+      subject's blood no longer heals those who drink it, though in the latter
+      case the subject continues to bleed until the bleeding is stopped via
+      magical healing or a successful DC 15 Heal check.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 3
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO9255
+      pages: '50'
+type: spell

@@ -1,0 +1,77 @@
+_id: d2Xx40c91wwckazK
+_key: '!items!d2Xx40c91wwckazK'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Sword Cane Pistol
+system:
+  actions:
+    - _id: kglz54xwm4kbsd0b
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Shoot
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '10'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Sword Cane Pistol
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 1d3 (small), 1d4 (medium);
+      <strong>Critical</strong> x3; <strong>Range</strong> 10 ft.;
+      <strong>Type</strong> B and P</p><p><strong>Misfire</strong> 1 (5 ft.);
+      <strong>Capacity</strong> 1</p><h3>Description</h3><p>A combination
+      weapon, this gun mixes a
+      @UUID[Compendium.pf1.weapons-and-ammo.Item.GlbFk7TosnBKkr8d]{coat pistol}
+      with a @UUID[Compendium.pf1.weapons-and-ammo.Item.VudBuNqCanzGfOvk]{sword
+      cane}. The sword cane pistol is considered a double weapon for the purpose
+      of creating masterwork or magical versions of this weapon. The pistol
+      attachment makes the nature of the weapon a little more difficult to hide.
+      An observer must succeed at a DC 15 Perception check to realize that an
+      undrawn sword cane pistol is a weapon rather than a simple walking stick;
+      the DC decreases to 5 if the observer is able to handle the
+      weapon.</p><p>A sword cane pistol uses either a bullet and 1 dose of black
+      powder or a single alchemical cartridge as ammunition. The sword part of
+      the weapon must be drawn in order to load the pistol part of the
+      weapon.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 775
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

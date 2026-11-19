@@ -1,0 +1,66 @@
+_id: Ybiyah8XFZ1Yhh35
+_key: '!items!Ybiyah8XFZ1Yhh35'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/switchscythe.PNG
+name: Switchscythe
+system:
+  actions:
+    - _id: tov7jd571gmomq94
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Scythe
+  description:
+    unidentified: >-
+      <p>This scythe has a spring-loaded blade that folds down into the weapon's
+      handle. Opening the scythe blade is a swift action, and closing it again
+      is a standard action. You can use Bluff or Sleight of Hand to treat a
+      closed switchscythe as a hidden weapon; the apparatus can be disguised
+      with 1 minute of work, which grants a +5 bonus on such checks. This
+      disguise is ruined when the weapon is opened and must be reapplied to hide
+      the weapon again. Any effects that apply to a scythe also apply to a
+      switchscythe.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 18
+  properties:
+    trp: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

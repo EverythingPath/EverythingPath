@@ -1,0 +1,119 @@
+_id: FEio8LbQwTnCeXc4
+_key: '!items!FEio8LbQwTnCeXc4'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Shadow Travel
+system:
+  actions:
+    - _id: qOAzdNwGeKvRiozs
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>When you reach character 9th level in any combination of classes, you
+        gain @UUID[Compendium.pf1.spells.Item.btoow6tyv39443gh]{shadow
+        walk}(self only)</p><p>To use the shadow walk spell, you must be in an
+        area of dim light. You and any creature you touch are then transported
+        along a coiling path of shadowstuff to the edge of the Material Plane
+        where it borders the Plane of Shadow. The effect is largely illusory,
+        but the path is quasi-real. You can take more than one creature along
+        with you (subject to your level limit), but all must be touching each
+        other.</p><p>In the region of shadow, you move at a rate of 50 miles (80
+        km) per hour, moving normally on the borders of the Plane of Shadow but
+        much more rapidly relative to the Material Plane. Thus, you can use this
+        spell to travel rapidly by stepping onto the Plane of Shadow, moving the
+        desired distance, and then stepping back onto the Material
+        Plane.</p><p>Because of the blurring of reality between the Plane of
+        Shadow and the Material Plane, you can't make out details of the terrain
+        or areas you pass over during transit, nor can you predict perfectly
+        where your travel will end. It's impossible to judge distances
+        accurately, making the spell virtually useless for scouting or
+        spying.</p><p>Furthermore, when the spell effect ends, you are shunted
+        1d10 x @Distance[100 ft;dual] in a random horizontal direction from your
+        desired endpoint. If this would place you within a solid object, you are
+        shunted 1d10 x @Distance[1000 ft;dual] in the same direction. If this
+        would still place you within a solid object, you (and any creatures with
+        you) are shunted to the nearest empty space available, but the strain of
+        this activity renders each creature fatigued (no save).</p><p>Shadow
+        walk can also be used to travel to other planes that border on the Plane
+        of Shadow, but this usage requires the transit of the Plane of Shadow to
+        arrive at a border with another plane of reality. The transit of the
+        Plane of Shadow requires 1d4 hours.</p><p><s>Any creatures touched by
+        you when shadow walk is cast also make the transition to the borders of
+        the Plane of Shadow.</s></p><p><s>They may opt to follow you, wander off
+        through the plane, or stumble back into the Material Plane (50% chance
+        for either of the latter results if they are lost or abandoned by you).
+        Creatures unwilling to accompany you into the Plane of Shadow receive a
+        Will saving throw, negating the effect if successful.</s></p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Shadow Walk
+      range:
+        units: touch
+      target:
+        value: Self Only
+      uses:
+        self:
+          maxFormula: gte(@attributes.hd.total, 9)
+          per: day
+    - _id: Z7M1rmQHKMrKcN1A
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>When you reach 13th character level in any combination of classes,
+        you gain @UUID[Compendium.pf1.spells.Item.q3st18udsalnyz5v]{plane shift}
+        (self only, to the Shadow Plane or the Material Plane only)</p><p>You
+        move yourself <s>or some other creature</s> to another plane of
+        existence or alternate dimension. <s>If several willing persons link
+        hands in a circle, as many as eight can be affected by the plane shift
+        at the same time. Precise accuracy as to a particular arrival location
+        on the intended plane is nigh impossible.</s> From the Material Plane,
+        you can reach <s>any other</s> the shadow plane, though you appear 5 to
+        500 miles (5d%) from your intended destination. Plane shift transports
+        creatures instantaneously and then ends. The creatures need to find
+        other means if they are to travel back (including casting plane shift
+        again).</p>
+      duration:
+        units: inst
+        value: 10 * x
+      name: Plane Shift
+      notes:
+        effect:
+          - '[[5d100]] miles from intended destination'
+      range:
+        units: personal
+      target:
+        value: Self Only
+      uses:
+        self:
+          maxFormula: gte(@attributes.hd.total, 13)
+          per: day
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Shadow Plane</p><hr /><p>When a member of this
+      race reaches 9th level in any combination of classes, she gains the
+      ability to use shadow walk (self only) as a spell-like ability once per
+      day, and at 13th level, she can use plane shift (self only to the Shadow
+      Plane or the Material Plane only) as a spell-like ability once per day.
+      The caster level of these spell-like abilities is equal to the user’s
+      character level.</p>
+  racePoints: 5
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '231'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+type: feat

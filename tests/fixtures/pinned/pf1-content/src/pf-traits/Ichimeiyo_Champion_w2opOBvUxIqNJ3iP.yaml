@@ -1,0 +1,48 @@
+_id: w2opOBvUxIqNJ3iP
+_key: '!items!w2opOBvUxIqNJ3iP'
+_stats:
+  coreVersion: '12.331'
+folder: rasdJf3aELQxqSwG
+img: icons/skills/melee/weapons-crossed-swords-yellow.webp
+name: Ichimeiyo Champion
+system:
+  actions:
+    - _id: aUHQYEmVyBHMWvFE
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: use
+  contextNotes:
+    - target: will
+      text: >-
+        Once per day, if an effect would compel you to harm an ally, abandon an
+        ally, or break your word, you can attempt a Will save at the usual DC to
+        end the effect. If the effect normally allows a Will save at this point,
+        you can roll twice and take the better result.
+  description:
+    value: >-
+      <p><em>You draw strength from adhering to the Ichimeiyo honor code in
+      combat.</em></p><p><strong>Benefits</strong>: Once per day, if an effect
+      would compel you to harm an ally, abandon an ally, or break your word, you
+      can attempt a Will save at the usual DC to end the effect. If the effect
+      normally allows a Will save at this point, you can roll twice and take the
+      better result.</p>
+  scriptCalls:
+    - _id: HdJOL8zlcHgtCso5
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll will
+      type: script
+      value: actor.rollSavingThrow("will");
+  sources:
+    - id: PZO9463
+      pages: '5'
+  subType: trait
+  traitType: combat
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

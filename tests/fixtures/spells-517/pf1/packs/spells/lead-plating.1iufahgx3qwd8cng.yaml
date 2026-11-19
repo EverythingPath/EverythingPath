@@ -1,0 +1,63 @@
+_id: 1iufahgx3qwd8cng
+_key: '!items!1iufahgx3qwd8cng'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Lead Plating
+system:
+  actions:
+    - _id: outm8pk3kuogppas
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: a creature or object weighing up to 100 lbs./level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You enclose the target in a thin sheath of lead. This doesn't restrict
+      the target's movement or functionality, but protects it from the effects
+      of radiation and prevents the penetration of many divination spells. The
+      lead doesn't coat the target's equipment.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      investigator: 3
+      oracle: 2
+      ranger: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    focus: an ounce of lead
+  school: con
+  sources:
+    - id: PZO9432
+      pages: '27'
+  subschool:
+    - creation
+type: spell

@@ -1,0 +1,55 @@
+_id: caNEmbCtoHA7NYtZ
+_key: '!items!caNEmbCtoHA7NYtZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-magenta-3.jpg
+name: Summon Monster
+system:
+  abilityType: sp
+  actions:
+    - _id: quqa9jhalqi0x83f
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+  associations:
+    classes:
+      - Summoner
+  description:
+    value: >-
+      <p>Starting at 1st level, a summoner can cast
+      @UUID[Compendium.pf1.spells.kyo0kwhw2jhuztju]{Summon Monster I} as a
+      spell-like ability a number of times per day equal to 3 + his Charisma
+      modifier. Drawing upon this ability uses up the same power as the summoner
+      uses to call his eidolon. As a result, he can only use this ability when
+      his eidolon is not summoned. He can cast this spell as a standard action
+      and the creatures remain for 1 minute per level (instead of 1 round per
+      level). At 3rd level, and every 2 levels thereafter, the power of this
+      ability increases by one spell level, allowing him to summon more powerful
+      creatures (to a maximum of
+      @UUID[Compendium.pf1.spells.mi52crelhwuy6bmp]{Summon Monster IX} at 17th
+      level). At 19th level, this ability can be used as
+      @UUID[Compendium.pf1.spells.ursm11405zobemi3]{Gate} or
+      @UUID[Compendium.pf1.spells.mi52crelhwuy6bmp]{Summon Monster IX}. If used
+      as gate, the summoner must pay any required material components. A
+      summoner cannot have more than one summon monster or gate spell active in
+      this way at one time. If this ability is used again, any existing summon
+      monster or gate immediately ends. These summon spells are considered to be
+      part of his spell list for the purposes of spell trigger and spell
+      completion items. In addition, he can expend uses of this ability to
+      fufill the construction requirements of any magic item he creates, so long
+      as he can use this ability to cast the required spell.</p>
+  sources:
+    - id: PZO1115
+      pages: '54'
+  subType: classFeat
+  tag: classFeat_summonMonster
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

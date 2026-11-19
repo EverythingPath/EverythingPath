@@ -1,0 +1,48 @@
+_id: x6y3kyvxf8s31jhy
+_key: '!items!x6y3kyvxf8s31jhy'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/mammals/elk-moose-marked-green.webp
+name: Summon Nature's Ally IX
+system:
+  actions:
+    - _id: 0m16kyp8ur1buu5c
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.0jwi6xovzukorxok], except that you can
+      summon one 9th-level creature, 1d3 8th-level creatures of the same kind,
+      or 1d4+1 lower-level creatures of the same kind.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      druid: 9
+      shaman: 9
+  level: 9
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '354'
+  sr: false
+  subschool:
+    - summoning
+type: spell

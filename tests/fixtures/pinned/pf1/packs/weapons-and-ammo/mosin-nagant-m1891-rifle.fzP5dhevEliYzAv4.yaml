@@ -1,0 +1,79 @@
+_id: fzP5dhevEliYzAv4
+_key: '!items!fzP5dhevEliYzAv4'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/rifle-brown.webp
+name: Mosin-Nagant M1891 Rifle
+system:
+  actions:
+    - _id: b6c624f2ceuwv1kj
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Mosin-Nagant M1891 Rifle
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d10 (medium); <b>Critical</b> x4;
+      <b>Range</b> 80 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1; <b>Capacity</b> 5</p>
+
+      <h3>Description</h3>
+
+      <p>This bolt-action rifle is the mainstay of Russian military forces. It
+      is similar to the advanced firearms rifle with the following differences.
+      It uses the same 7.62 54mmR ammunition as the Madsen machine gun, and is
+      fed from a 5-round internal, nondetachable magazine that is typically
+      loaded with 5-round stripper clips (loading it is a move action).</p>
+
+      <p>Without stripper clips, you may only reload up to 2 rounds of
+      ammunition as a move action. Ammunition is typically sold in groups of 5
+      rounds.</p>
+
+      <p>The rifle has a lug for the attachment of a socket bayonet, and can be
+      equipped with a unique sidemount scope system (see below).</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 500
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: exotic
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 9
+type: weapon
