@@ -1,0 +1,66 @@
+_id: tkmpjwwijmlyb06k
+_key: '!items!tkmpjwwijmlyb06k'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Inhibiting Patterns
+system:
+  actions:
+    - _id: 0xul4usi0pa5a976
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration + 1 round/level
+      effect: one cylinder (10-ft. radius, 40-ft. high)/3 levels
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create one or more vibrant pillars of kaleidoscopic color that rise
+      out from the ground. A creature attempting to move through one of the
+      pillars must attempt a Will save. Failure means the creature can't move
+      through the pillar and can't take any other actions for the duration of
+      its turn that round, but it can attempt to pass through the pillar again
+      in subsequent rounds (attempting another save against the effect). A
+      creature need only succeed at one saving throw to move through all pillars
+      created by this spell.  A creature standing within the area of a pillar is
+      dazzled (no save), while a creature making a ranged attack that passes
+      through one or more of the illusory pillars takes a 50% miss chance. A
+      creature can make a melee attack against a target within a pillar at no
+      penalty.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a sprinkle of ground glass
+  school: ill
+  sources:
+    - id: PZO92109
+      pages: '42'
+  subschool:
+    - pattern
+type: spell

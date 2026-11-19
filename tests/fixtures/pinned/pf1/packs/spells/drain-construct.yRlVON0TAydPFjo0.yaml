@@ -1,0 +1,55 @@
+_id: yRlVON0TAydPFjo0
+_key: '!items!yRlVON0TAydPFjo0'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Drain Construct
+system:
+  actions:
+    - _id: f1qeavrmbh7lndpi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one construct
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You weaken a target construct, temporarily sapping its animating force
+      and limiting its normal functionality. If the construct fails its saving
+      throw, for the duration of this spell, it loses any damage reduction and
+      fast healing it had and its base speed is reduced by half. Additionally,
+      the construct takes a -4 penalty to Strength while this spell is in
+      effect. This penalty increases by 2 for every 3 caster levels beyond 3rd
+      (maximum -14). If the construct is normally immune to magic, this spell's
+      sapping effect is less penetrating and the construct receives a +4 bonus
+      on its saving throw.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: nec
+  sources:
+    - id: PZO9486
+      pages: '28'
+  sr: false
+type: spell

@@ -1,0 +1,629 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/717fyDCcfLtD345B",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "class-abilities",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, and every three levels thereafter, the inquisitor gains a bonus feat in addition to those gained from normal advancement. These bonus feats must be selected from those listed as teamwork feats. The inquisitor must meet the prerequisites of the selected bonus feat.</p><p>As a standard action, the inquisitor can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the inquisitor loses the bonus feat in exchange for the new one. She can only change the most recent teamwork feat gained. Whenever she gains a new teamwork feat, the previous teamwork feat becomes set and cannot be changed again. An inquisitor can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier.</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Inquisitor"]
+            }
+          }
+        },
+        {
+          "field": "changes",
+          "reason": "Unmapped target, bonus type, formula or calculation-stage dependency; contributes nothing.",
+          "value": {
+            "target": "bonusFeats",
+            "formula": "floor(@class.level / 3)",
+            "type": "untyped"
+          }
+        }
+      ],
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/7BfYNNkYjjBevun8",
+      "upstreamKey": "pf1/7BfYNNkYjjBevun8",
+      "pack": "class-abilities",
+      "name": "Ki Pool (UC)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, a monk gains a pool of ki points, supernatural energy he can use to accomplish amazing feats. The number of points in a monk’s ki pool is equal to 1/2 his monk level + his Wisdom modifier. As long as he has at least 1 point in his ki pool, he can make a ki strike.</p>\n<p>At 3rd level, ki strike allows his unarmed attacks to be treated as magic weapons for the purpose of overcoming damage reduction.</p>\n<p>At 7th level, his unarmed attacks are also treated as cold iron and silver for the purpose of overcoming damage reduction.</p>\n<p>At 10th level, his unarmed attacks are also treated as lawful weapons for the purpose of overcoming damage reduction.</p>\n<p>At 16th level, his unarmed attacks are treated as adamantine weapons for the purpose of overcoming damage reduction and bypassing hardness.</p><p>By spending 1 point from his ki pool as a swift action, a monk can make one additional unarmed strike at his highest attack bonus when making a flurry of blows attack. This bonus attack stacks with all bonus attacks gained from flurry of blows, as well as those from haste and similar effects.</p>\n<p>A monk gains additional powers that consume points from his ki pool as he gains levels.</p><p>The ki pool is replenished each morning after 8 hours of rest or meditation; these hours do not need to be consecutive.</p>",
+      "sources": [
+        {
+          "book": "PZO1131",
+          "pages": "15"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "6lp1gpd4sui72ufu",
+                "activation": {
+                  "type": "special",
+                  "unchained": {
+                    "type": "special"
+                  }
+                },
+                "name": "Use"
+              }
+            ],
+            "associations": {
+              "classes": ["Monk (Unchained)"]
+            },
+            "uses": {
+              "maxFormula": "floor(@class.level / 2) + @abilities.wis.mod",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "everythingpath-schedules",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/717fyDCcfLtD345B",
+        "part": "12:pf1/717fyDCcfLtD345B"
+      },
+      "description": "<p>Teamwork Feat: the Inquisitor table's 12th-level row of Teamwork Feat (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Teamwork Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-12",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/717fyDCcfLtD345B",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "everythingpath-schedules",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/717fyDCcfLtD345B",
+        "part": "15:pf1/717fyDCcfLtD345B"
+      },
+      "description": "<p>Teamwork Feat: the Inquisitor table's 15th-level row of Teamwork Feat (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Teamwork Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/717fyDCcfLtD345B",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "everythingpath-schedules",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/717fyDCcfLtD345B",
+        "part": "18:pf1/717fyDCcfLtD345B"
+      },
+      "description": "<p>Teamwork Feat: the Inquisitor table's 18th-level row of Teamwork Feat (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Teamwork Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-18",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/717fyDCcfLtD345B",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "everythingpath-schedules",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/717fyDCcfLtD345B",
+        "part": "6:pf1/717fyDCcfLtD345B"
+      },
+      "description": "<p>Teamwork Feat: the Inquisitor table's 6th-level row of Teamwork Feat (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Teamwork Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-6",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/717fyDCcfLtD345B",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+      "upstreamKey": "pf1/717fyDCcfLtD345B",
+      "pack": "everythingpath-schedules",
+      "name": "Teamwork Feat",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/717fyDCcfLtD345B",
+        "part": "9:pf1/717fyDCcfLtD345B"
+      },
+      "description": "<p>Teamwork Feat: the Inquisitor table's 9th-level row of Teamwork Feat (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Teamwork Feat entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-teamwork-feat-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/717fyDCcfLtD345B",
+      "grantsSlots": [
+        {
+          "kind": "feat",
+          "count": 1,
+          "featTypes": ["Teamwork"]
+        }
+      ]
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+      "upstreamKey": "pf1/7BfYNNkYjjBevun8",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Strike (lawful) (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7BfYNNkYjjBevun8",
+        "part": "10:pf1/7BfYNNkYjjBevun8"
+      },
+      "description": "<p>Ki Strike (lawful) (UC): the Monk (Unchained) table's 10th-level row of Ki Pool (UC) (Pathfinder Unchained pp. 14–19). The Ki Pool (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7BfYNNkYjjBevun8"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+      "upstreamKey": "pf1/7BfYNNkYjjBevun8",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Strike (adamantine) (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7BfYNNkYjjBevun8",
+        "part": "16:pf1/7BfYNNkYjjBevun8"
+      },
+      "description": "<p>Ki Strike (adamantine) (UC): the Monk (Unchained) table's 16th-level row of Ki Pool (UC) (Pathfinder Unchained pp. 14–19). The Ki Pool (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7BfYNNkYjjBevun8"
+    },
+    {
+      "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+      "upstreamKey": "pf1/7BfYNNkYjjBevun8",
+      "pack": "everythingpath-schedules",
+      "name": "Ki Strike (cold iron/silver) (UC)",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/7BfYNNkYjjBevun8",
+        "part": "7:pf1/7BfYNNkYjjBevun8"
+      },
+      "description": "<p>Ki Strike (cold iron/silver) (UC): the Monk (Unchained) table's 7th-level row of Ki Pool (UC) (Pathfinder Unchained pp. 14–19). The Ki Pool (UC) entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder Unchained",
+          "pages": "14–19"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/unchained-monk-ki-pool-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/7BfYNNkYjjBevun8"
+    }
+  ]
+}

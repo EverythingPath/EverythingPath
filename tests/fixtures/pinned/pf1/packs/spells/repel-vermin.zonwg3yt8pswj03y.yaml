@@ -1,0 +1,63 @@
+_id: zonwg3yt8pswj03y
+_key: '!items!zonwg3yt8pswj03y'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Repel Vermin
+system:
+  actions:
+    - _id: 35gq22rh0pw7zg2y
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation centered on you
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        description: none or Will negates; see text
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An invisible barrier holds back vermin. A vermin with HD of less than
+      one-third your level cannot penetrate the barrier.</p><p>A vermin with HD
+      of one-third your level or more can penetrate the barrier if it succeeds
+      on a Will save. Even so, crossing the barrier deals the vermin 2d6 points
+      of damage, and pressing against the barrier causes pain, which deters most
+      vermin.</p>
+  descriptors:
+    - pain
+  learnedAt:
+    bloodline:
+      Pestilence: 4
+    class:
+      bard: 4
+      cleric: 4
+      druid: 4
+      hunter: 3
+      oracle: 4
+      ranger: 3
+      shaman: 4
+      skald: 4
+      warpriest: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '333'
+type: spell

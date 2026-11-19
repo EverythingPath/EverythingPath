@@ -1,0 +1,56 @@
+_id: opk75a0wqvbkdod7
+_key: '!items!opk75a0wqvbkdod7'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Wartrain Mount
+system:
+  actions:
+    - _id: qflsryv1e896swf3
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one indifferent or friendly animal
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instill the target animal with the combat training general purpose
+      (see the Handle Animal skill, <i>Core Rulebook</i> 98). This supersedes
+      the animal's previous trained purpose and any tricks it knows. When the
+      spell ends, it reverts to its previous trained purpose and known
+      tricks.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      bard: 2
+      druid: 2
+      hunter: 1
+      inquisitor: 1
+      mesmerist: 2
+      paladin: 1
+      ranger: 1
+      skald: 2
+  level: 2
+  materials:
+    value: a swatch of black cloth
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '248'
+  subschool:
+    - compulsion
+type: spell

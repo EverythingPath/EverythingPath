@@ -1,0 +1,58 @@
+_id: jy64xofud29j5ju6
+_key: '!items!jy64xofud29j5ju6'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Pain Strike
+system:
+  actions:
+    - _id: yh59y9qxi6f413yr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Pain strike</i> racks the targeted creature with agony, inflicting
+      1d6 points of nonlethal damage per round for 1 round per level (maximum 10
+      rounds). Additionally, the affected creature is sickened for the spell's
+      duration, and the caster gains a +4 circumstance bonus on Intimidate
+      checks against the target.</p>
+  descriptors:
+    - evil
+    - pain
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      psychic: 2
+      sorcerer: 3
+      spiritualist: 3
+      witch: 3
+      wizard: 3
+    subDomain:
+      Torture: 2
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '234'
+type: spell

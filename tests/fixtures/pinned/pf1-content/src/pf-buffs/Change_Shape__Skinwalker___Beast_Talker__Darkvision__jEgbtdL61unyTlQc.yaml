@@ -1,0 +1,32 @@
+_id: jEgbtdL61unyTlQc
+_key: '!items!jEgbtdL61unyTlQc'
+_stats:
+  coreVersion: '12.331'
+folder: 6LCLnfOaXbVFz2J3
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Change Shape (Skinwalker - Beast Talker, Darkvision)
+system:
+  changes:
+    - _id: g6KKrQZx
+      formula: '60'
+      operator: set
+      target: sensedv
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf-content.pf-racial-traits.Item.HSEQTjNZ9ZPnhZUZ]{Beast
+      Talker}</p><p>In the skinwalker's bestial form, they gain a darkvision to
+      a range of @Distance[60 ft;dual].</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@attributes.hd.total'
+  level: null
+  sources:
+    - id: PZO9280
+      pages: '216'
+  subType: feat
+  tags:
+    - Skinwalker
+    - Beast Talker
+type: buff

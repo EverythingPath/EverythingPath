@@ -1,0 +1,111 @@
+_id: GXOXQzqwFrQ7ECS9
+_key: '!items!GXOXQzqwFrQ7ECS9'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Breath Weapon
+system:
+  actions:
+    - _id: 33TnkhOSEO5uXXqK
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+              - cold
+              - electric
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use (Cone)
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: negates
+        type: ref
+    - _id: JoUsLnm19LOqChZj
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+              - cold
+              - electric
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: ray
+      name: Use (Line)
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: negates
+        type: ref
+  description:
+    instructions: >-
+      <p>Delete the non-selected template type attack and edit the remaining one
+      to use only the damage type you selected. any additional augments must be
+      additional manual edits of the action.</p>
+    value: >-
+      <p><strong>Prerequisites:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.OGvHcwhmrl2F70Rh]{Aberration},
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.MtvuVPQzQH0cULmd]{Construct},
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M7iCedGNTrldJq5R]{Dragon},
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.Gw3TLh4PZtyPzAwf]{Humanoid}
+      (reptilian),
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.3rMyzHeDptW8wAaR]{Monstrous
+      Humanoid}, or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to an elemental plane</p><p><strong>Special:</strong>
+      You can take this trait more than once. Each time you do so, the cost of
+      this trait increases by 1 RP. When do, you can augment the breath weapon
+      in the following ways (augmentations marked with an asterisk [*] can be
+      taken more than once).</p><ul><li><p><em>Extra Breath*</em>: The member of
+      this race can use its breath weapon an additional time per
+      day.</p></li><li><p><em>Increased Area</em>: Increase the cone’s size to
+      @Distance[30 ft;dual] or the line to @Distance[50
+      ft;dual].</p></li><li><p><em>Increased Damage*:</em> Increase the damage
+      by an additional d6.</p></li><li><p><em>Powerful Breath</em>: Those who
+      succeed at their saving throws against the breath weapon take half
+      damage.</p></li></ul><hr /><p>Choose one of the following energy types:
+      acid, cold, electricity, or fire. If the creature is an outsider (native),
+      it must have ties to an elemental plane, and it must pick an energy that
+      corresponds to the plane it has ties to (acid [earth], cold [water],
+      electricity [air], or fire [fire]). Then pick either a @Distance[15
+      ft;dual] cone or a @Distance[20 ft;dual]  line. Once per day, as a
+      standard action, members of this race can make a supernatural breath
+      weapon attack that deals 1d6 points of the damage type chosen in the area
+      chosen. All creatures within the affected area must make a Reflex saving
+      throw to avoid taking damage. The save DC against this breath weapon is 10
+      + 1/2 the user’s character level + the user’s Constitution modifier. Those
+      who succeed at the save take no damage from the attack.</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '232'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

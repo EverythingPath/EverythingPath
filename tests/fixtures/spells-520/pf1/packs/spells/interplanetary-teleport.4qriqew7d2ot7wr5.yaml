@@ -1,0 +1,64 @@
+_id: 4qriqew7d2ot7wr5
+_key: '!items!4qriqew7d2ot7wr5'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/sonic/projectile-shock-wave-blue.webp
+name: Interplanetary Teleport
+system:
+  actions:
+    - _id: xsu710zxu2k1edi5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      save:
+        description: none and Will negates (object)
+        type: will
+      target:
+        value: you and touched objects or other touched willing creatures
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.ptqu8gtrujxsvwy1]{teleport}, except there
+      is truly no range limit and you do not need to have seen your destination,
+      though you must have a solid grasp of which world you wish to travel to
+      ("the third planet from the sun" is an acceptable destination, but "a
+      habitable world near that bright star" is not). If you have a specific
+      location on a planet in mind, you arrive there without a chance of
+      failure; otherwise you arrive at a location that would not immediately be
+      life-threatening.</p><p>If no such safe landing zone exists on the world,
+      such as someone attempting to travel into the sun without the proper
+      precautions in place, the spell simply fails.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      cleric: 9
+      oracle: 9
+      psychic: 9
+      sorcerer: 9
+      wizard: 9
+    domain:
+      Void: 9
+  level: 9
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '225'
+    - id: PZO9014
+      pages: '54'
+    - id: PZO9226
+      pages: '295'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

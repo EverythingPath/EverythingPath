@@ -1,0 +1,48 @@
+_id: LrY6Qc1hzRO2ZG8x
+_key: '!items!LrY6Qc1hzRO2ZG8x'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Litany of Admonition
+system:
+  actions:
+    - _id: lTcwa1a0UruhxOnD
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You point out your target’s faults and failures, staggering the target
+      for 1 round. While subject to this spell, the target cannot be the target
+      of another spell that has the word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+  learnedAt:
+    class:
+      antipaladin: 3
+      inquisitor: 4
+      paladin: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO9488
+      pages: '13'
+type: spell

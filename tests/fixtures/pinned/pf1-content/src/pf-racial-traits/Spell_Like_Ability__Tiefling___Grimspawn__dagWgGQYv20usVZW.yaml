@@ -1,0 +1,66 @@
+_id: dagWgGQYv20usVZW
+_key: '!items!dagWgGQYv20usVZW'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Grimspawn)
+system:
+  abilityType: sp
+  actions:
+    - _id: T62z6pPpndJIGjBT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.k0k8gvqyy3rd5gke]{Death
+        Knell}</p><p>You draw forth the ebbing life force of a creature and use
+        it to fuel your own power. Upon casting this spell, you touch a living
+        creature that has -1 or fewer hit points. If the subject fails its
+        saving throw, it dies, and you gain 1d8 temporary hit points and a +2
+        enhancement bonus to Strength. Additionally, your effective caster level
+        goes up by +1, improving spell effects dependent on caster level. This
+        increase in effective caster level does not grant you access to more
+        spells. These effects last for 10 minutes per HD of the subject
+        creature.</p>
+      duration:
+        units: spec
+        value: instantaneous / 10 min per hd of subject
+      name: Death Knell
+      notes:
+        effect:
+          - '@Apply[Death Knell]'
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: Living creature touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Grimspawn</p><hr /><p>Grimspawn can
+      use @UUID[Compendium.pf1.spells.Item.k0k8gvqyy3rd5gke]{death
+      knell}&nbsp;once per day as a spell-like ability (with a caster level
+      equal to their character level).</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '251'
+    - id: PZO9423
+      pages: '19'
+  subType: racial
+  tags:
+    - Tiefling
+    - Grimspawn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

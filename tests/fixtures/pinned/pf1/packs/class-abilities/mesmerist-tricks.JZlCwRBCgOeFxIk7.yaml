@@ -1,0 +1,62 @@
+_id: JZlCwRBCgOeFxIk7
+_key: '!items!JZlCwRBCgOeFxIk7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_12.jpg
+name: Mesmerist Tricks
+system:
+  abilityType: su
+  actions:
+    - _id: ljfuj55u6n1km8mh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p>A mesmerist can create hypnotic bonds with his allies, implanting
+      magical suggestions in their minds that he can later activate. Each day,
+      he can implant a number of these tricks equal to 1/2 his mesmerist level
+      (minimum 1) plus his Charisma bonus (if any). He can have only one trick
+      implanted at a given time, and implanting a new trick ends the previous
+      one (the mesmerist still loses the use of this ability he spent on the
+      previous trick).<p>To implant a trick, the mesmerist must take a standard
+      action and either touch a willing creature or implant the trick in
+      himself. A creature can be the subject of only one mesmerist trick at a
+      time. The mesmerist can activate the trick as a free action when a
+      triggering condition is met (as defined in the trick’s description), even
+      if it isn’t his turn. The subject must be within medium range (100 feet +
+      10 feet per level) for the mesmerist to trigger the trick. The mesmerist
+      monitors for the trick’s triggering condition through a subtle telepathic
+      connection, so he doesn’t need line of sight to trigger it—but anything
+      that blocks telepathic contact prevents him from triggering tricks. An
+      implanted trick lasts until the next time the mesmerist regains his
+      spells.<p>Once triggered, a trick is no longer implanted, and can’t be
+      triggered again until the mesmerist implants the trick again. The duration
+      of the effect caused by triggering a trick is either instantaneous or
+      appears in the trick’s entry. The DC for any mesmerist trick or masterful
+      trick that requires a saving throw or skill check is 10 + 1/2 the
+      mesmerist’s level + the mesmerist’s Charisma modifier.<p>The mesmerist
+      knows one trick at 1st level, and learns another trick at 2nd level and
+      every 2 levels thereafter (to a maximum of 11 tricks at 20th level). Each
+      daily use of mesmerist tricks can be used to implant any trick the
+      mesmerist knows. Unless specifically noted in the mesmerist trick’s
+      description, a mesmerist can’t choose a particular trick more than
+      once.</p>
+  subType: classFeat
+  tag: classFeat_mesmeristTricks
+  uses:
+    maxFormula: max(1, floor(@class.level / 2)) + @abilities.cha.mod
+    per: day
+type: feat

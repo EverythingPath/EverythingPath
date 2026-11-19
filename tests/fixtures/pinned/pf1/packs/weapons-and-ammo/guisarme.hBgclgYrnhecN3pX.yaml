@@ -1,0 +1,62 @@
+_id: hBgclgYrnhecN3pX
+_key: '!items!hBgclgYrnhecN3pX'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/guisarme.PNG
+name: Guisarme
+system:
+  actions:
+    - _id: n4qqt7dmmguacnhj
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Guisarme
+  description:
+    unidentified: >-
+      <p>A guisarme is an 8-foot-long shaft with a blade and a hook mounted at
+      the tip.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 9
+  properties:
+    rch: true
+    trp: true
+  sources:
+    - id: PZO1110
+      pages: 143, 146
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon
