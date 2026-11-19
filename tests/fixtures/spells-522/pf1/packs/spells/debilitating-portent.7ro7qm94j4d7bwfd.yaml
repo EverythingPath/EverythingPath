@@ -1,0 +1,57 @@
+_id: 7ro7qm94j4d7bwfd
+_key: '!items!7ro7qm94j4d7bwfd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Debilitating Portent
+system:
+  actions:
+    - _id: 8jqg0k5wo1svmbpk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (D); see text
+      name: Use
+      range:
+        units: medium
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target is surrounded by a glowing green aura of ill fate. Each time
+      the spell's subject makes an attack or casts a spell, it must succeed at a
+      Will saving throw with a DC = 10 + 1/2 caster level + Charisma (in the
+      case of oracles), Intelligence (in the case of witches), or Wisdom (in the
+      case of clerics). If it fails the saving throw, it deals half damage with
+      the attack or spell. You can dismiss this spell as an immediate action
+      when the target confirms a critical hit; doing so negates the critical
+      hit. The attack that you negated still hits, but only deals half
+      damage.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      psychic: 4
+      spiritualist: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '227'
+  subschool:
+    - compulsion
+type: spell

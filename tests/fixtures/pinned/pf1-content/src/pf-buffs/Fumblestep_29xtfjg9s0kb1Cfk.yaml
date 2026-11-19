@@ -1,0 +1,50 @@
+_id: 29xtfjg9s0kb1Cfk
+_key: '!items!29xtfjg9s0kb1Cfk'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/green_16.jpg
+name: Fumblestep
+system:
+  actions:
+    - _id: UyQd9lEWqlB5nnL2
+      actionType: mcman
+      activation:
+        type: standard
+        unchained:
+          type: nonaction
+      attackBonus: >-
+        (-@attributes.bab.total + @item.level)[Caster Level as BAB] +
+        (max(max(@abilities.cha.mod, @abilities.int.mod),
+        @abilities.cha.mod))[Ability Modifier]
+      img: systems/pf1/icons/skills/green_16.jpg
+      name: Use
+  changes:
+    - _id: 4vl6jz3v
+      formula: '-1'
+      target: ref
+      type: untyped
+    - _id: 1bxs87eu
+      formula: '-1'
+      target: skill.acr
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.19i23oyn5ysfh633]{Fumblestep}</p><p>Fumblestep
+      coats a target's feet in slick ectoplasm that retains some psychic
+      connection to your mind.</p><p>While the spell remains in effect, the
+      target creature takes a -1 penalty on Reflex saving throws and Acrobatics
+      checks.</p><p>At any point during the spell's duration while the target
+      remains in range, you can discharge the spell as a standard action,
+      mentally tugging at the ectoplasm to perform a trip combat maneuver, using
+      your caster level instead of your base attack bonus, and using your
+      Charisma, Intelligence, or Wisdom modifier, whichever is highest, instead
+      of your Strength modifier.</p><p>This trip attempt does not provoke an
+      attack of opportunity and cannot be affected by feats or other means of
+      altering a trip combat maneuver's effects.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

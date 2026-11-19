@@ -1,0 +1,74 @@
+_id: eefd95mtv1nhe5pj
+_key: '!items!eefd95mtv1nhe5pj'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Create Soul Gem
+system:
+  actions:
+    - _id: 0oc5nlgv2t2c7p3h
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one dying or recently dead creature
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You draw forth the ebbing life force of a dying creature or one that
+      has died in the past round, focusing it through a crystal lens focus to
+      transform into a soul gem. If the creature is alive and fails its saving
+      throw, it dies and you capture its soul in the gem. If the creature is
+      dead, it can still resist the spell effect by attempting a Will save as if
+      it were still alive. The value of the soul gem created depends on the
+      nature of the creature it is made from (see page 191). Soul gems created
+      by this spell crumble to dust once the spell's duration expires, releasing
+      the trapped soul to travel on to judgment in the Great Beyond.  Only one
+      soul gem can be created from a dying creature. Any attempt to resurrect a
+      body whose soul is trapped in a soul gem requires a caster check against
+      <i>create soul</i> gem's save DC. Failure results in the resurrection
+      spell having no effect, while success shatters the target's soul gem and
+      returns the creature to life as normal. If the soul gem resides in an
+      unholy location, such as that created by the <i>unhallow</i> spell, the DC
+      of this check increases by 2.  If you are a souldrinker (see page 212),
+      you can cast this spell and expend 5 soul points to fill the gem with the
+      equivalent of one basic soul.</p>
+  descriptors:
+    - death
+    - evil
+  learnedAt:
+    class:
+      arcanist: 3
+      cleric: 3
+      occultist: 3
+      oracle: 3
+      shaman: 3
+      sorcerer: 3
+      spiritualist: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: crystal lens worth 500 gp
+  school: nec
+  sources:
+    - id: PZO1139
+      pages: 184, 38
+type: spell

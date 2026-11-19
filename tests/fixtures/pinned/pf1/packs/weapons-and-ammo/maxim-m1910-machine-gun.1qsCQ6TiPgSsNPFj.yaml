@@ -1,0 +1,87 @@
+_id: 1qsCQ6TiPgSsNPFj
+_key: '!items!1qsCQ6TiPgSsNPFj'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/rifle-brown.webp
+name: Maxim M1910 Machine Gun
+system:
+  actions:
+    - _id: 0xyv722kkwjp0r3o
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '120'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Maxim M1910 Machine Gun
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d8 (medium); <b>Critical</b> x4;
+      <b>Range</b> 120 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2; <b>Capacity</b> 250</p>
+
+      <h3>Description</h3>
+
+      <p>This heavy machine gun uses 7.62 54mmR ammunition in 250-round belts.
+      Although a single person can fire a Maxim, it typically has a two-person
+      crew: the gunner, and a loader who assists with feeding the ammunition
+      belt into the weapon.</p>
+
+      <p>As a full-round action, the loader can use a special aid another action
+      to grant the gunner a +2 bonus on his next attack roll. Because of its
+      size and heavy weight, a Maxim is often either mounted on a wheeled
+      chassis with a gun shield for trench defensive use, or on the back of a
+      horse-drawn wagon called a tachanka (see page 67).</p>
+
+      <p>Assuming a user can even lift the weapon, firing a Maxim M1910 machine
+      gun that is not mounted imparts a -4 penalty on attack rolls and the
+      recoil knocks the wielder prone. The Maxim M1910 is automatic-fire
+      only.</p>
+
+      <p>The armored shield provides cover when firing the weapon from the prone
+      position.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 1500
+  properties:
+    ato: true
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: exotic
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 140
+type: weapon

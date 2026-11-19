@@ -1,0 +1,56 @@
+_id: zgkOFWDlY1YksSel
+_key: '!items!zgkOFWDlY1YksSel'
+_stats:
+  coreVersion: '12.331'
+folder: hGoMGOJhqQPRBkaV
+img: systems/pf1/icons/races/elf.png
+name: Fey-Sighted
+system:
+  actions:
+    - _id: Hh49pmTtUHlr86GG
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect
+        magic}</p><p>You detect magical auras. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of magical
+        auras.</p><p>2nd Round: Number of different magical auras and the power
+        of the most potent aura.</p><p>3rd Round: The strength and location of
+        each aura. If the items or creatures bearing the auras are in line of
+        sight, you can make Knowledge (arcana) skill checks to determine the
+        school of magic involved in each. (Make one check per aura: DC 15 +
+        spell level, or 15 + 1/2 caster level for a nonspell effect.) If the
+        aura emanates from a magic item, you can attempt to identify its
+        properties (see Spellcraft).</p><p></p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Magic
+      range:
+        units: ft
+        value: '60'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Elf<br /><strong>Replaced Trait(s)</strong>:
+      Elven Magic</p><hr /><p>To some elves with fey heritage, magic is a
+      visible presence they have known all their lives. These elves have
+      <i>detect magic</i> as a constant spell-like ability, with a caster level
+      equal to their character level. This racial trait replaces elven
+      magic.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9480
+      pages: '4'
+  subType: racial
+  tags:
+    - Elf
+type: feat

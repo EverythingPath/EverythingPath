@@ -1,0 +1,58 @@
+_id: ks8rck8sp5p7lg5y
+_key: '!items!ks8rck8sp5p7lg5y'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Radiation Ward
+system:
+  actions:
+    - _id: jg36wm4cxy2tmdmz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fort negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A creature warded by this spell gains a +4 bonus on saving throws
+      against radiation-based effects. In addition, the warded creature is
+      immediately aware when it enters an area  of radiation, as well as the
+      radiation level (low, medium, high, or severe) suffusing the area.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      cleric: 2
+      druid: 2
+      hunter: 1
+      investigator: 2
+      oracle: 2
+      ranger: 1
+      shaman: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO9479
+      pages: '15'
+type: spell

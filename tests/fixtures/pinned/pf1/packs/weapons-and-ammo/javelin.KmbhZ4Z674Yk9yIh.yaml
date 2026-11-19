@@ -1,0 +1,87 @@
+_id: KmbhZ4Z674Yk9yIh
+_key: '!items!KmbhZ4Z674Yk9yIh'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/javelin.PNG
+name: Javelin
+system:
+  actions:
+    - _id: dfbbk80dpzhq1zsa
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '30'
+    - _id: oqVpFgwEIvU3gmBb
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-4'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        formula:
+          bonus: '@formulaicAttack * -5'
+          count: ceil(@attributes.bab.total / 5) -1
+        type: custom
+      name: Melee
+      range:
+        units: melee
+      uses:
+        autoDeductChargesCost: '0'
+  baseTypes:
+    - Javelin
+  description:
+    unidentified: >-
+      <p>A javelin is a thin throwing spear . Since it is not designed for
+      melee, you are treated as nonproficient with it and take a -4 penalty on
+      attack rolls if you use a javelin as a melee weapon.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  sources:
+    - id: PZO1110
+      pages: 142, 146
+    - id: PZO9452
+      pages: '0'
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

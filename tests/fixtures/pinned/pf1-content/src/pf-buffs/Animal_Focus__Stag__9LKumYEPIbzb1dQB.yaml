@@ -1,0 +1,28 @@
+_id: 9LKumYEPIbzb1dQB
+_key: '!items!9LKumYEPIbzb1dQB'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/green_13.jpg
+name: Animal Focus (Stag)
+system:
+  changes:
+    - _id: gkn6byxe
+      formula: floor(((@item.level)-1)/7)*5+5
+      target: landSpeed
+      type: enh
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains a 5-foot enhancement bonus to its base land speed.
+      This bonus increases to 10 feet at 8th level and 20 feet at 15th
+      level.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 7
+  subType: feat
+type: buff

@@ -1,0 +1,62 @@
+_id: vffgsrvilkkf18im
+_key: '!items!vffgsrvilkkf18im'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Isolate
+system:
+  actions:
+    - _id: 1hpx9xuhgh1u8oay
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to become invisible and silent, but only to his
+      allies. Any creature with an attitude of indifferent or worse toward the
+      target, and any creature that wishes the target harm, can see the target
+      normally. The target can see and hear himself, can cast spells with verbal
+      components, and can use command words normally, but any effect that
+      requires allies to see or hear the target does not function. An ally that
+      can see invisible creatures can both see and hear the target of
+      <i>isolate</i>.  If the target succeeds at its save, the duration of the
+      spell is reduced to 1 round.</p>
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      bard: 3
+      inquisitor: 3
+      mesmerist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO1130
+      pages: '21'
+  subschool:
+    - glamer
+type: spell
