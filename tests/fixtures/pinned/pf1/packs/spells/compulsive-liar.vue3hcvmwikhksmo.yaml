@@ -1,0 +1,63 @@
+_id: vue3hcvmwikhksmo
+_key: '!items!vue3hcvmwikhksmo'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Compulsive Liar
+system:
+  actions:
+    - _id: lilf7fzc3qog06lo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target becomes unable to speak the truth. Lies the target speaks
+      don't need to be convincing, nor do they even need to be consistent, but
+      they can't be true as far as the target is aware. This extends to
+      non-verbal communication, such as hand signs or written notes. The spell
+      allows talking in metaphors and talking about fictional figures.  The
+      spell doesn't affect the target's ability to say things that are neither
+      true nor false, such as questions, commands, or verbal spell components.
+      If the target of this spell is simultaneously compelled to tell the truth
+      (for instance, by being within a <i>zone of truth</i>), the target is only
+      able to say things that are neither true nor false.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 1
+      mesmerist: 1
+      psychic: 2
+      skald: 1
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '206'
+  subschool:
+    - compulsion
+type: spell

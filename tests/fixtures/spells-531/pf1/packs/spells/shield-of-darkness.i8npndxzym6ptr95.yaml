@@ -1,0 +1,54 @@
+_id: i8npndxzym6ptr95
+_key: '!items!i8npndxzym6ptr95'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Shield of Darkness
+system:
+  actions:
+    - _id: uvtblsj6o2o8wefq
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You shield yourself with darkness, reducing the illumination level in
+      your space to magical darkness and granting you total concealment. Your
+      opponents are automatically aware of which squares you occupy, preventing
+      you from attempting Stealth checks using this concealment unless every
+      square adjacent to you has an illumination level of darkness or lower.
+      <i>Shield of darkness</i> does not hinder your vision, and creatures that
+      can see in magical darkness ignore this effect.</p>
+  descriptors:
+    - darkness
+    - shadow
+  learnedAt:
+    class:
+      antipaladin: 3
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      shaman: 3
+      spiritualist: 3
+      warpriest: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO9466
+      pages: '29'
+  sr: false
+type: spell

@@ -1,0 +1,54 @@
+_id: PpXi216y1kJgHY1C
+_key: '!items!PpXi216y1kJgHY1C'
+_stats:
+  coreVersion: '12.331'
+folder: AVRfXZSXqcyehtLa
+img: systems/pf1/icons/races/creature-types/vermin.png
+name: Frenzy
+system:
+  actions:
+    - _id: 4bIcVazJXYXO7BQx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, when you take damage, you can fly into a frenzy for 1
+        minute, gaining a +2 racial bonus to Constitution and Strength, but a -2
+        penalty to AC.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Frenzy
+      notes:
+        effect:
+          - '@Apply[Frenzy]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><strong>Race</strong>: Trox</p><hr /><p>Once per day when a trox takes
+      damage, it flies into a frenzy for 1 minute, gaining a +2 racial bonus to
+      Constitution and Strength, but a -2 penalty to their
+      AC.</p><p><strong>Related Buff:</strong> @Toggle[Frenzy (Trox)]</p>
+  links:
+    supplements:
+      - name: Frenzy (Trox)
+        uuid: Compendium.pf-content.pf-buffs.Item.n3eYRLhYS5woLzJJ
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '253'
+    - id: PZO1127
+      pages: '264'
+  subType: racial
+  tags:
+    - Trox
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

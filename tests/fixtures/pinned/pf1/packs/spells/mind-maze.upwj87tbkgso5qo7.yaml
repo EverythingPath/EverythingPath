@@ -1,0 +1,66 @@
+_id: upwj87tbkgso5qo7
+_key: '!items!upwj87tbkgso5qo7'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Mind Maze
+system:
+  actions:
+    - _id: 96a4gx1bd7wod23y
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes the target to act as though it's wandering through a
+      maze. While under the effects of the spell, the target can't make attacks
+      or cast spells and must take at least one move action each round to walk
+      in a random direction determined using the guidelines for missed splash
+      weapons (<i>Core Rulebook</i> 202). The target must move at its maximum
+      speed during this required movement, though additional move actions after
+      the first can cover shorter distances. If this movement takes the target
+      into a dangerous area, such as through a threatened square or off a ledge,
+      the target receives a second saving throw to end the effect before moving
+      into peril. Walking into a harmless obstacle, such as a wall, ends the
+      target's movement.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 3
+      cleric: 3
+      oracle: 3
+      shaman: 3
+      skald: 3
+      warpriest: 3
+      witch: 3
+  level: 3
+  materials:
+    value: a chicken skull
+  school: enc
+  sources:
+    - id: PZO9283
+      pages: '41'
+  subschool:
+    - compulsion
+type: spell

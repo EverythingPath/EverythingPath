@@ -1,0 +1,49 @@
+_id: lwem09uijk4ziunm
+_key: '!items!lwem09uijk4ziunm'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Reflexive Barrier
+system:
+  actions:
+    - _id: vp9zh289toj0a4ea
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: spec
+        value: 1 round (see text)
+      name: Use
+      range:
+        units: close
+      save:
+        description: none
+        harmless: true
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>In the blink of an eye, you erect a deflective barrier of force to
+      protect one target. The target gains a deflection bonus to its AC equal to
+      half your caster level. This bonus lasts until the beginning of your next
+      turn. You can cast this spell as a reaction to an attack, but you must do
+      so before the result of the attack is revealed.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      magus: 3
+      psychic: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO9477
+      pages: '10'
+  sr: false
+type: spell

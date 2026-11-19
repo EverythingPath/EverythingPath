@@ -1,0 +1,47 @@
+_id: 260y4g7beqkf8ppi
+_key: '!items!260y4g7beqkf8ppi'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Enemy Insight
+system:
+  actions:
+    - _id: vdkmy2cpl3kaeyyc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: >-
+          you plus one willing creature/3 levels, no two of which can be more
+          than 30 ft. apart
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You forge a mental bond between yourself and the other targets, each of
+      which must have an Intelligence score of 3 or higher. Choose one of your
+      favored enemy types (such as goblinoids or magical beasts). You grant the
+      targets half your favored enemy bonus against that type of creature. If
+      any target moves out of range, the spell ends for it.</p>
+  learnedAt:
+    class:
+      hunter: 2
+      ranger: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO1129
+      pages: '181'
+  sr: false
+type: spell

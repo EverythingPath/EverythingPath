@@ -1,0 +1,61 @@
+_id: aP3q2vkBQ6PnvHFk
+_key: '!items!aP3q2vkBQ6PnvHFk'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Violent Misfire
+system:
+  actions:
+    - _id: J6vGZ18UpN9qWKIx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@cl/2))d6
+            types:
+              - fire
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one early or advanced firearm
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell creates a chaotic charge within the black powder loaded in a
+      target firearm. The next time the target weapon fires during this spell’s
+      duration, it automatically misfires. If this misfire causes the firearm to
+      explode, the radius of the explosion is doubled and it deals maximum
+      damage to all creatures in the radius. The firearm’s wielder also takes
+      1d6 additional points of fire damage per 2 caster levels (maximum 10d6)
+      you have.</p><p>If the target is an advanced firearm, and the firearm
+      misfires a second time in a row while this spell is in effect, it does not
+      explode but still deals the additional damage to the wielder as
+      described.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a small piece of flint
+  school: evo
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell

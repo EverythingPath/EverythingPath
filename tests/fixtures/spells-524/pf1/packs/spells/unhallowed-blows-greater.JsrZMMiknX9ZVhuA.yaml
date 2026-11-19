@@ -1,0 +1,67 @@
+_id: JsrZMMiknX9ZVhuA
+_key: '!items!JsrZMMiknX9ZVhuA'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Unhallowed Blows, Greater
+system:
+  actions:
+    - _id: x47bJ5VYyid0a9VH
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one undead creature/level, no two of which can be more than 30 ft.
+          apart, or one undead creature; see text
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.HK5dl4ECkzd6LDLY]{unhallowed blows}, except
+      the enhancement bonus is +1 per 4 caster levels (maximum +5).
+      Alternatively, you can imbue all of a creature’s natural weapons with a +1
+      enhancement bonus (regardless of your caster level).</p><p><em>Greater
+      unhallowed blows</em> can be made permanent with a
+      @UUID[Compendium.pf1.spells.nsxngq65mbrzgwnm]{permanancy} spell. In this
+      case, the caster must be at least 11th level and must expend 7,500 gp
+      worth of diamond dust as a material component.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a pinch of dust from a destroyed undead creature
+  school: trs
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell

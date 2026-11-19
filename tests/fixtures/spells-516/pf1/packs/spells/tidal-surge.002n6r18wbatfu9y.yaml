@@ -1,0 +1,118 @@
+_id: 002n6r18wbatfu9y
+_key: '!items!002n6r18wbatfu9y'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Tidal Surge
+system:
+  actions:
+    - _id: ze9ywtf1jhzcavfv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst or line; see text
+      damage:
+        parts:
+          - formula: (min(10, floor(@cl / 2)))d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Cone
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half
+        type: ref
+    - _id: XA8bPLvifWXxhvjo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst or line; see text
+      damage:
+        parts:
+          - formula: (min(10, floor(@cl / 2)))d10
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Cone (In/On Water)
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half
+        type: ref
+    - _id: v6Nt3rfxDIZyTVjD
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: line; see text
+      damage:
+        parts:
+          - formula: (min(10, floor(@cl / 2)))d10
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: ray
+      name: Line (In/On Water)
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>If you cast <i>tidal surge</i> on land, you create an onrushing surge
+      of water 10 feet high in a 30-foot cone that deals 1d6 points of
+      bludgeoning damage for every 2 caster levels you have (maximum 10d6 at
+      20th level) and extinguishes all nonmagical fires in the area. Magical
+      fire effects in the area of a <i>tidal surge</i> are affected as if you
+      had cast <i>dispel magic</i>. In addition to taking damage, creatures that
+      fail their Reflex saves are pushed 1d4x5 feet away from you, and Medium or
+      smaller creatures are also knocked prone.</p><p>If you cast this spell in
+      or on a body of water at least 30 feet across, you can shape the spell
+      either as the cone described above or as a 60-foot line. In either shape,
+      the water deals 1d10 points of bludgeoning damage for every 2 caster
+      levels you have in addition to pushing away creatures that fail their
+      Reflex saves.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      druid: 5
+      hunter: 5
+      shaman: 5
+  level: 5
+  school: con
+  sources:
+    - id: PZO1140
+      pages: '237'
+  sr: false
+  subschool:
+    - creation
+type: spell

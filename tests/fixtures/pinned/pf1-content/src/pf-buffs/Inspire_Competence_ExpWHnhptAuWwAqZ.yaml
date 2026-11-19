@@ -1,0 +1,26 @@
+_id: ExpWHnhptAuWwAqZ
+_key: '!items!ExpWHnhptAuWwAqZ'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: icons/tools/instruments/lute-gold-brown.webp
+name: Inspire Competence
+system:
+  changes:
+    - _id: 0y1p8pzy
+      formula: (min(6, (max(2, floor((@item.level + 5) / 4)))))
+      target: skill.acr
+      type: competence
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the level of the performer. You must set
+      the chosen skill in the changes tab.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.2M56kfIOws5yYtxq]{Inspire
+      Competence}</p><p>Gain a +2 competence bonus on skill checks with a
+      particular skill as long as you continue to hear the bard’s performance.
+      This bonus increases by +1 for every four levels the bard has attained
+      beyond 3rd (+3 at 7th, +4 at 11th, +5 at 15th, and +6 at 19th).</p>
+  level: 1
+  subType: feat
+type: buff
