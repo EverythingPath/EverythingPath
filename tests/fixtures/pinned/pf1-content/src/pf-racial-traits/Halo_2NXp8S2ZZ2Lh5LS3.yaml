@@ -1,0 +1,61 @@
+_id: 2NXp8S2ZZ2Lh5LS3
+_key: '!items!2NXp8S2ZZ2Lh5LS3'
+_stats:
+  coreVersion: '12.331'
+folder: PZxrk9JzfGnFGo9P
+img: systems/pf1/icons/races/aasimar.png
+name: Halo
+system:
+  actions:
+    - _id: QJrJHgFc6RYsj8T7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{Light}</p><p>This
+        spell causes a touched object to glow like a torch, shedding normal
+        light in a @Distance[20 ft;dual] radius from the point touched, and
+        increasing the light level for an additional @Distance[20 ft;dual] by
+        one step, up to normal light (darkness becomes dim light, and dim light
+        becomes normal light). In an area of normal or bright light, this spell
+        has no effect. The effect is immobile, but it can be cast on a movable
+        object.</p><p>You can only have one light spell active at any one time.
+        If you cast this spell while another casting is still in effect, the
+        previous casting is dispelled. If you make this spell permanent (through
+        permanency or a similar effect), it does not count against this limit.
+        Light can be used to counter or dispel any darkness spell of equal or
+        lower spell level.</p></div>
+      duration:
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Light
+      range:
+        units: touch
+      target:
+        value: object touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar<br /><strong>Replaced Trait(s)</strong>:
+      Darkvision</p><hr /><p>Some aasimars possess the ability to manifest
+      halos. An aasimar with this racial trait can create <em>light
+      </em>centered on her head at will as a spell-like ability. When using her
+      halo, she gains a +2 circumstance bonus on Intimidate checks against evil
+      creatures and on saving throws against becoming blinded or dazzled. This
+      racial trait replaces the darkvision racial trait.</p><p><strong>Related
+      Buff:</strong> @Toggle[Halo]</p>
+  links:
+    supplements:
+      - name: Halo
+        uuid: Compendium.pf-content.pf-buffs.Item.3EO6OKoyQ8kd6Nyz
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '85'
+  subType: racial
+  tags:
+    - Aasimar
+  traitCategory: defense
+type: feat

@@ -1,0 +1,59 @@
+_id: 2nv15766n5lluhpq
+_key: '!items!2nv15766n5lluhpq'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Cloud Shape
+system:
+  actions:
+    - _id: 7xk0zxhzuf6xt2x5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.mqdoexj35atgqafn]{gaseous form}, except
+      you assume the shape of a Colossal cloud with a space of 30 feet. You
+      choose the general appearance of the cloud (white, stormy, fluffy, flat,
+      and so on), after which your appearance cannot be changed. Even the
+      closest inspection cannot reveal that the cloud in question is actually a
+      magically concealed creature. To all normal tests you are, in fact, a
+      cloud, although a <em>detect magic</em> spell reveals a moderate
+      transmutation aura on the cloud. Your fly speed in cloud form is 30
+      feet.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 4
+      druid: 4
+      hunter: 4
+      ranger: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a bit of gauze and a wisp of smoke
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '160'
+  sr: false
+type: spell

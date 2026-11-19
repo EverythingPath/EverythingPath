@@ -1,0 +1,49 @@
+_id: z47beyclo4mbw0pq
+_key: '!items!z47beyclo4mbw0pq'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Mind Blank, Communal
+system:
+  actions:
+    - _id: 8njceds19rn5t6x1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.blvetbc929cfx4m8]{mind blank}, except you
+      divide the duration in 1-hour increments among the creatures touched.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 8
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+  level: 9
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '236'
+type: spell

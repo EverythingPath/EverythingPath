@@ -1,0 +1,77 @@
+_id: cdi27awh6aua4aif
+_key: '!items!cdi27awh6aua4aif'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Surface Excursion
+system:
+  actions:
+    - _id: fnq6dsjvu9pq4or8
+      actionType: spellsave
+      activation:
+        cost: 3
+        type: round
+        unchained:
+          cost: 9
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      effect: you plus up to one willing creature per 3 levels
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instantly transport yourself and touched allies onto the nearest
+      sky-facing surface directly above you. The destination surface may be
+      solid ground or the surface of a body of water (or other liquid),
+      depending on your position. If reaching the surface would require crossing
+      planar boundaries or no sky-facing surface exists directly above your
+      position, the spell fails and has no effect.  When the spell is cast, a
+      magical beacon appears at both your departure and arrival points,
+      suspended 3 feet in the air. These beacons are invisible to everyone but
+      you and those allies touched when the spell was cast. You and every
+      creature originally targeted by the spell can touch the beacon at your
+      arrival point to teleport back to your original departure point. Each
+      creature that chooses to return in this manner is transported to a free
+      space adjacent to the beacon at your original departure point. If the area
+      around the departure beacon is occupied by a solid body (for instance,
+      rubble from a cave-in), then you and each creature traveling with you take
+      1d6 points of damage and are shunted to a random open space on a solid
+      surface within 100 feet of the beacon. If there is no free space within
+      100 feet, the spell effect ends with no return transportation.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      magus: 5
+      occultist: 4
+      psychic: 5
+      shaman: 5
+      sorcerer: 5
+      spiritualist: 4
+      summoner: 4
+      summonerUnchained: 4
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a handful of soil that has been in the sun for at least 6 hours
+  school: con
+  sources:
+    - id: PZO9479
+      pages: '21'
+  sr: false
+  subschool:
+    - teleportation
+type: spell

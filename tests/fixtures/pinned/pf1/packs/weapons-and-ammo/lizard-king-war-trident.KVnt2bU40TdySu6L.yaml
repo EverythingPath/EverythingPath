@@ -1,0 +1,93 @@
+_id: KVnt2bU40TdySu6L
+_key: '!items!KVnt2bU40TdySu6L'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/polearms/trident-silver-blue.webp
+name: Lizard King War Trident
+system:
+  actions:
+    - _id: 4gghr0xjseu2iw4h
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1,10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: 6SHOqEdKMKkNixDJ
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        units: ft
+        value: '10'
+  baseTypes:
+    - Lizard King War Trident
+  description:
+    unidentified: >-
+      <p>Upon his 100th birthday, a lizard king's status is officially
+      acknowledged, and he is honored with the presentation of a special weapon,
+      the war trident, reserved exclusively for the use of his kind. These
+      large, two-handed tridents are much heavier than normal (12 pounds) in
+      order to take advantage of their wielders' great strength, and as a result
+      they lose their range increment but deal 1d10 points of damage and have a
+      x3 critical hit multiplier. In addition, extensive ritualistic practice
+      with this weapon gives the lizard king the Improved Critical (war trident)
+      feat as a bonus feat. A war trident is worth 20 gp, although most are
+      masterwork and many are inlaid with precious metals and fetch higher
+      prices.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    brc: true
+  sources:
+    - id: PZO1107
+      pages: '38'
+  subType: martial
+  tags:
+    - D&D 3.5
+  uses:
+    per: single
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon

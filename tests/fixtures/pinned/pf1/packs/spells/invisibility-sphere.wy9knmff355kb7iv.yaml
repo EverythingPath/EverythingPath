@@ -1,0 +1,67 @@
+_id: wy9knmff355kb7iv
+_key: '!items!wy9knmff355kb7iv'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Invisibility Sphere
+system:
+  actions:
+    - _id: 410ctaqtghuho9at
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation around the creature
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: spec
+        value: personal or touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, except
+      that this spell confers invisibility upon all creatures within 10 feet of
+      the recipient at the time the spell is cast. The center of the effect is
+      mobile with the recipient.</p><p>Those affected by this spell can see each
+      other and themselves as if unaffected by the spell. Any affected creature
+      moving out of the area becomes visible, but creatures moving into the area
+      after the spell is cast do not become invisible.</p><p>Affected creatures
+      (other than the recipient) who attack negate the <em>invisibility</em>
+      only for themselves. If the spell recipient attacks, the
+      <em>invisibility</em> sphere ends.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '302'
+  subschool:
+    - glamer
+type: spell

@@ -1,0 +1,965 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1/qlQxKPARGGdOgNWm",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "class-abilities",
+      "name": "Bloodline Spells (SOR)",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>At 3rd level, and every two levels thereafter, a sorcerer learns an additional spell, derived from her bloodline. These spells are in addition to the number of spells already known to the sorcerer. These spells cannot be exchanged for different spells at higher levels.</p>",
+      "sources": [
+        {
+          "book": "PZO1110",
+          "pages": "71"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "associations": {
+              "classes": ["Sorcerer"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1/qI4IouTn4uvDPSXv",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "class-abilities",
+      "name": "Judgment",
+      "detail": {
+        "kind": "classFeature"
+      },
+      "description": "<p>Starting at 1st level, an inquisitor can pronounce judgment upon her foes as a swift action. Starting when the judgment is made, the inquisitor receives a bonus or special ability based on the type of judgment made.</p><p>At 1st level, an inquisitor can use this ability once per day. At 4th level and every three levels thereafter, the inquisitor can use this ability one additional time per day. Once activated, this ability lasts until the combat ends, at which point all of the bonuses immediately end. The inquisitor must participate in the combat to gain these bonuses. If she is frightened, panicked, paralyzed, stunned, unconscious, or otherwise prevented from participating in the combat, the ability does not end, but the bonuses do not resume until she can participate in the combat again.</p><p>When the inquisitor uses this ability, she must select one type of judgment to make. As a swift action, she can change this judgment to another type. If the inquisitor is evil, she receives profane bonuses instead of sacred, as appropriate. Neutral inquisitors must select profane or sacred bonuses. Once made, this choice cannot be changed.</p><p><em>Destruction: </em>The inquisitor is filled with divine wrath, gaining a +1 sacred bonus on all weapon damage rolls. This bonus increases by +1 for every three inquisitor levels she possesses.</p><p><em>Healing:</em> The inquisitor is surrounded by a healing light, gaining fast healing 1. This causes the inquisitor to heal 1 point of damage each round as long as the inquisitor is alive and the judgment lasts. The amount of healing increases by 1 point for every three inquisitor levels she possesses.</p><p><em>Justice:</em> This judgment spurs the inquisitor to seek justice, granting a +1 sacred bonus on all attack rolls. This bonus increases by +1 for every five inquisitor levels she possesses. At 10th level, this bonus is doubled on all attack rolls made to confirm critical hits.</p><p><em>Piercing: </em>This judgment gives the inquisitor great focus and makes her spells more potent. This benefit grants a +1 sacred bonus on concentration checks and caster level checks made to overcome a target’s spell resistance. This bonus increases by +1 for every three inquisitor levels she possesses.</p><p><em>Protection:</em> The inquisitor is surrounded by a protective aura, granting a +1 sacred bonus to Armor Class. This bonus increases by +1 for every five inquisitor levels she possesses. At 10th level, this bonus is doubled against attack rolls made to confirm critical hits against the inquisitor.</p><p><em>Purity:</em> The inquisitor is protected from the vile taint of her foes, gaining a +1 sacred bonus on all saving throws. This bonus increases by +1 for every five inquisitor levels she possesses. At 10th level, the bonus is doubled against curses, diseases, and poisons.</p><p><em>Resiliency:</em> This judgment makes the inquisitor resistant to harm, granting DR 1/magic. This DR increases by 1 for every five levels she possesses. At 10th level, this DR changes from magic to an alignment (chaotic, evil, good, or lawful) that is opposite the inquisitor’s. If she is neutral, the inquisitor does not receive this increase.</p><p><em>Resistance:</em> The inquisitor is shielded by a flickering aura, gaining 2 points of energy resistance against one energy type (acid, cold, electricity, fire, or sonic) chosen when the judgment is declared. The protection increases by 2 for every three inquisitor levels she possesses.</p><p><em>Smiting:</em> This judgment bathes the inquisitor’s weapons in a divine light. The inquisitor’s weapons count as magic for the purposes of bypassing damage reduction. At 6th level, the inquisitor’s weapons also count as one alignment type (chaotic, evil, good, or lawful) for the purpose of bypassing damage reduction. The type selected must match one of the inquisitor’s alignments. If the inquisitor is neutral, she does not receive this bonus. At 10th level, the inquisitor’s weapons also count as adamantine for the purpose of overcoming damage reduction (but not for reducing hardness).</p>",
+      "sources": [],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "6oekn6mk4g4zy1y6",
+                "activation": {
+                  "type": "swift",
+                  "unchained": {
+                    "type": "action"
+                  }
+                },
+                "duration": {
+                  "units": "seeText"
+                },
+                "name": "Use",
+                "range": {
+                  "units": "personal"
+                },
+                "target": {
+                  "value": "self"
+                }
+              }
+            ],
+            "associations": {
+              "classes": ["Inquisitor"]
+            },
+            "uses": {
+              "maxFormula": "1 + floor((@class.level - 1) / 3)",
+              "per": "day"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "closure": [],
+  "increments": [
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-10",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 4/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "10:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 4/day: the Inquisitor table's 10th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-10",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-10",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-10",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-10",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-10",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-13",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 5/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "13:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 5/day: the Inquisitor table's 13th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-16",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 6/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "16:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 6/day: the Inquisitor table's 16th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-16",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-16",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-16",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-16",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-16",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-19",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 7/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "19:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 7/day: the Inquisitor table's 19th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-4",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 2/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "4:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 2/day: the Inquisitor table's 4th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-4",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-4",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-4",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-4",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-4",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/inquisitor-judgment-7",
+      "upstreamKey": "pf1/qI4IouTn4uvDPSXv",
+      "pack": "everythingpath-schedules",
+      "name": "Judgment 3/day",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qI4IouTn4uvDPSXv",
+        "part": "7:pf1/qI4IouTn4uvDPSXv"
+      },
+      "description": "<p>Judgment 3/day: the Inquisitor table's 7th-level row of Judgment (Pathfinder RPG Advanced Player's Guide pp. 38–42). The Judgment entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Advanced Player's Guide",
+          "pages": "38–42"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/inquisitor-judgment-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qI4IouTn4uvDPSXv"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "11:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 11th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-11",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "13:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 13th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-13",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "15:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 15th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-15",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "17:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 17th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-17",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "19:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 19th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-19",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "5:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 5th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-5",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "7:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 7th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-7",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    },
+    {
+      "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+      "upstreamKey": "pf1/qlQxKPARGGdOgNWm",
+      "pack": "everythingpath-schedules",
+      "name": "Bloodline Spell",
+      "detail": {
+        "kind": "classFeature",
+        "parentFeature": "pf1/qlQxKPARGGdOgNWm",
+        "part": "9:pf1/qlQxKPARGGdOgNWm"
+      },
+      "description": "<p>Bloodline Spell: the Sorcerer table's 9th-level row of Bloodline Spell (Pathfinder RPG Core Rulebook pp. 70–77). The Bloodline Spell entry's own rules give its value.</p>",
+      "sources": [
+        {
+          "book": "Pathfinder RPG Core Rulebook",
+          "pages": "70–77"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [],
+      "provenance": {
+        "name": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+            "kind": "schedule",
+            "target": "name"
+          }
+        },
+        "description": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+            "kind": "schedule",
+            "target": "description"
+          }
+        },
+        "sources": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+            "kind": "schedule",
+            "target": "sources"
+          }
+        },
+        "detail.parentFeature": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+            "kind": "schedule",
+            "target": "detail.parentFeature"
+          }
+        },
+        "detail.part": {
+          "source": "overlay",
+          "locator": {
+            "externalKey": "everythingpath/sorcerer-bloodline-spell-9",
+            "kind": "schedule",
+            "target": "detail.part"
+          }
+        }
+      },
+      "attributionFrom": "pf1/qlQxKPARGGdOgNWm"
+    }
+  ]
+}
