@@ -1,0 +1,49 @@
+_id: hejjqa03shce03i2
+_key: '!items!hejjqa03shce03i2'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Spell Immunity, Greater Communal
+system:
+  actions:
+    - _id: hv271jyuab0mbk7o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.jg3p4t3dv1a7nqvo]{greater spell
+      immunity}, except you divide the duration among the creatures in 10-minute
+      intervals among the creatures touched.</p>
+  learnedAt:
+    class:
+      cleric: 9
+      oracle: 9
+      psychic: 9
+  level: 9
+  school: abj
+  sources:
+    - id: PZO1118
+      pages: '245'
+type: spell

@@ -1,0 +1,62 @@
+_id: p1jponiizert50x8
+_key: '!items!p1jponiizert50x8'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Cloud of Seasickness
+system:
+  actions:
+    - _id: dxb1hkv8frtwtoov
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates; see text
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kjke96zd1j1jz48z]{stinking cloud}, except
+      as noted above and that the vapors make creatures sickened instead of
+      nauseated. <em>Cloud of Seasickness</em> can be made permanent with a
+      <em>permanency</em> spell (requiring a 9th-level caster and costing 2,500
+      gp). A permanent <em>Cloud of Seasickness</em> dispersed by wind reforms
+      in 10 minutes.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      oracle: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a piece of seaweed
+  school: con
+  sources:
+    - id: PZO9055
+      pages: '73'
+  sr: false
+  subschool:
+    - creation
+type: spell

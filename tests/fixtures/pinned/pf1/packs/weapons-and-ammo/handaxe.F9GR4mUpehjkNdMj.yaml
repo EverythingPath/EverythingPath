@@ -1,0 +1,61 @@
+_id: F9GR4mUpehjkNdMj
+_key: '!items!F9GR4mUpehjkNdMj'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/handaxe.png
+name: Handaxe
+system:
+  actions:
+    - _id: gbnzssivbch6qinj
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Handaxe
+  description:
+    unidentified: >-
+      <p>This one-handed axe is short (roughly 1 foot long) and designed for use
+      with one hand. Unlike throwing axes, it is not well balanced for a
+      graceful tumbling motion, and is instead heavier at its head. Tomahawks,
+      war hatchets, and other such names usually refer to hand axes.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 6
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - axes
+    - tribal
+  weight:
+    value: 3
+type: weapon

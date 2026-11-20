@@ -1,0 +1,51 @@
+_id: RIFRzOndNjxEQUbF
+_key: '!items!RIFRzOndNjxEQUbF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Teamwork Mastery
+system:
+  abilityType: ex
+  actions:
+    - _id: q7et7u4vgqgkyytz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, (floor(@class.level / 2)))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: ally touched
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: 66XOz0Kr
+      formula: '1'
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>You are an immaculate team player and can distribute your team-based
+      insights to your allies with a touch. This revelation grants you a bonus
+      teamwork feat. You must meet the teamwork feat’s prerequisites, if any.
+      Additionally, you can touch an ally as a standard action to confer upon it
+      the benefits of any one teamwork feat that you have. This effect persists
+      for a number of rounds equal to 1/2 your oracle level (minimum 1).</p>
+
+      <p>You can confer the benefits of a teamwork feat you have a number of
+      times per day equal to 3 + your Charisma modifier.</p>
+  subType: classFeat
+  tag: classFeat_teamworkMastery
+  tags:
+    - Revelation
+    - Succor Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

@@ -1,0 +1,60 @@
+_id: 217mso78laewj0ky
+_key: '!items!217mso78laewj0ky'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/nature/elemental-plant-humanoid.webp
+name: Plant Voice
+system:
+  actions:
+    - _id: s2zcohyoxo3gzxay
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one plant creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grant one plant creature the ability to speak, hear, and understand
+      any of the languages you know. If you know more than one language, you may
+      grant the plant creature up to one language per 2 caster levels and you
+      decide which languages to grant when the spell is cast. This spell does
+      not cause the plant creature to be predisposed toward you in any way, but
+      allows you to interact with them with Charisma-based skills normally.
+      Plant creatures with an Intelligence score of 2 or lower can communicate
+      and understand only the simplest of concepts, such as "friend," "food,"
+      and "danger." This spell has no effect on ordinary plants and fungus.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      druid: 2
+      hunter: 2
+      oracle: 3
+      shaman: 2
+      warpriest: 3
+      witch: 3
+  level: 3
+  materials:
+    value: a small root cutting
+  school: trs
+  sources:
+    - id: PZO9457
+      pages: '21'
+type: spell

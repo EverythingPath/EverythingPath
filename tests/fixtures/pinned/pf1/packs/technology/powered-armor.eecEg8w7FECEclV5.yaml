@@ -1,0 +1,283 @@
+_id: eecEg8w7FECEclV5
+_key: '!items!eecEg8w7FECEclV5'
+_stats:
+  coreVersion: '12.343'
+folder: XzcgfkYgrzGgkdab
+img: icons/commodities/tech/sensor-brown.webp
+name: Powered Armor
+system:
+  actions:
+    - _id: IiCAFSGAoK39T58L
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      img: icons/commodities/tech/tube-chamber-lightning.webp
+      name: Activate
+      range:
+        units: personal
+    - _id: kFKCwWMcIHCXECHh
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      img: icons/commodities/tech/bulb-vacuum.webp
+      name: Deactivate
+      range:
+        units: personal
+    - _id: si1vinsoag571dxy
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Selfrepair
+      notes:
+        effect:
+          - Repairs armor
+    - _id: gBWIUHk3mblfgMRj
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      img: icons/weapons/guns/gun-purple.webp
+      name: Shot Laser Pistol
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '50'
+      touch: true
+      uses:
+        perAttack: true
+    - _id: NQwphPaB6wnjVnKs
+      ability:
+        attack: _default
+      actionType: mwak
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      img: icons/weapons/wands/wand-carved-stone-shard.webp
+      name: Use Medlance
+      range:
+        units: touch
+      target:
+        value: one willing target
+      touch: true
+    - _id: IolSFaQaw3zZbXdH
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      img: icons/commodities/tech/sensor-yellow.webp
+      name: Use Helm Camera
+    - _id: 35yXnIOTb733fRSI
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      img: icons/commodities/tech/antenna-powered-purple.webp
+      name: Use Commset
+      range:
+        units: mi
+        value: '1'
+    - _id: nmDiwsfkhCOozGaD
+      activation:
+        type: move
+        unchained:
+          type: action
+      area: 60-foot cone
+      duration:
+        units: hour
+        value: '8'
+      img: icons/magic/light/circle-window-clock-blue.webp
+      name: Use Flashlight
+    - _id: 0irUN2PcDZgvE3J0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      img: systems/pf1/icons/skills/ice_09.jpg
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use Fire Extinguisher
+      range:
+        units: ft
+        value: '15'
+      save:
+        dc: '15'
+        description: Reflex halves
+        type: ref
+    - _id: hJ9NjlPTLQ2Mq0Jk
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      img: icons/magic/water/barrier-ice-shield.webp
+      name: Use Force Field
+      notes:
+        effect:
+          - Creatures that fail the save are dazed for 1 round
+      range:
+        units: personal
+      save:
+        dc: '15'
+        description: Fortitude negates daze
+        type: fort
+    - _id: kgz5cnFyhyAA35ZV
+      activation:
+        type: move
+        unchained:
+          type: action
+      area: 120-foot-radius
+      duration:
+        units: hour
+        value: '1'
+      measureTemplate:
+        size: '120'
+        type: circle
+      name: Use Radiation Detector
+      range:
+        units: ft
+        value: '120'
+    - _id: fKlLc83M4ORDlIAp
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      img: icons/equipment/head/goggles-leather-blue.webp
+      name: Activate Veemod Googles
+      range:
+        units: seeText
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 10
+  artifact: true
+  description:
+    value: >-
+      <h3>Statistics</h3><p><strong>Type</strong> Heavy; <strong>Armor
+      Bonus</strong> +10</p><p><strong>Max Dex Bonus</strong> +4 <strong>Armor
+      Check Penalty </strong>-2</p><p><strong>Arcane Spell Failure
+      Chance</strong> 60%</p><p><strong>Speed (30 ft.)</strong> See text;
+      <strong>Speed (20 ft.) </strong>See text</p><p><strong>Capacity</strong>
+      100; <strong>Usage</strong> see text</p><h3>Description</h3><p>Powered
+      armor represents the pinnacle of personal armor-a suit crafted of multiple
+      skymetals and other materials designed to augment the wearer in numerous
+      ways. The armor actually boosts land speed when worn, granting a +10 foot
+      enhancement bonus to the wearer's speed. While worn, powered armor also
+      grants a +6 enhancement bonus to Strength and Dexterity. Powered armor
+      protects against energy and the environment as if it were a
+      @UUID[Compendium.pf1.technology.eCM9W1r1yfrcjvRo]{Spacesuit}. Powered
+      armor has hardness 20 and 300 hit points. Powered armor is fitted with
+      numerous small booster jets that grant the wearer a fly speed of 60 feet
+      (with average maneuverability) in areas of no gravity and 20 feet (with
+      poor maneuverability) in gravity.</p><p>As a standard action, the wearer
+      may activate the armor's self-repair system. The armor consumes a single
+      charge and repairs 2d6 points of damage. Only 1 charge can be consumed per
+      turn for this effect.</p><p>In addition, the following technological
+      wonders are integrated into a suit of powered armor-each of these devices
+      drains power from the suit's charges as appropriate when they are
+      activated and
+      used.</p><ul><li>@UUID[Compendium.pf1.technology.Item.1jPapJtuRXSOvAXr]{Camera}
+      in the
+      helmet.</li><li>@UUID[Compendium.pf1.technology.Item.vkZiORtGaqdCBT2R]{Commset}
+      in the
+      helmet.</li><li>@UUID[Compendium.pf1.technology.Item.zf260gyIOr7wRR0b]{Fire
+      extinguisher} mounted on the left
+      wrist.</li><li>@UUID[Compendium.pf1.technology.Item.hcqcp6ggD1tXo5Js]{Flashlight}
+      mounted on the helmet.</li><li>Gloves that can function as
+      @UUID[Compendium.pf1.technology.Item.rAt7CqPlJ8okXc2E]{grippers}.</li><li>@UUID[Compendium.pf1.technology.Item.Cv5xR3jr618ojBYm]{Laser
+      pistol} mounted on the right forearm that leaves the hand free. Firing
+      this laser pistol is always considered an off-hand attack, and the number
+      of times it can be fired cannot be increased by feats like Improved Two
+      Weapon
+      Fighting.</li><li>@UUID[Compendium.pf1.technology.Item.nK3XfCurRf9nRZiD]{Magboots}.</li><li>Three
+      @UUID[Compendium.pf1.technology.Item.HWlPYAmdrsouj3oa]{medlances}. Each
+      medlance can be loaded with a single potion or pharmaceutical; activating
+      an integrated medlance is an immediate
+      action.</li><li>@UUID[Compendium.pf1.technology.Item.n08TDl7PQr3bXCa9]{Power
+      receiver}.</li><li>@UUID[Compendium.pf1.technology.Item.AmUgZQmCcIxg3DhV]{Prismatic
+      force field} located on hips; activating this force field is a swift
+      action.</li><li>@UUID[Compendium.pf1.technology.Item.4v27mv8DbXnZnTZk]{Radiation
+      detector} on the right wrist.</li><li>Custom veemods in the visor grant a
+      +10 bonus on Perception checks, low light vision, darkvision up to 120
+      feet, and all-around vision.</li></ul><p>Rumors persist of variant forms
+      of powered armor, including suits sized for giants or that can function as
+      vehicles for multiple creatures.</p>
+  equipmentSubtype: heavyArmor
+  hardness: 20
+  hp:
+    base: 300
+  links:
+    supplements:
+      - uuid: Compendium.pf1.commonbuffs.Item.iy10UP3d0lEgwy2i
+      - uuid: Compendium.pf1.commonbuffs.Item.eKiKTrSBNLubVI6g
+      - uuid: Compendium.pf1.commonbuffs.Item.EDreDkg4ESQIwmEd
+      - uuid: Compendium.pf1.commonbuffs.Item.WRwcMIspQq9acUQW
+  slot: armor
+  sources:
+    - id: PZO9272
+      pages: '61'
+  spellFailure: 60
+  uses:
+    maxFormula: '100'
+    per: charges
+    value: 100
+  weight:
+    value: 50
+type: equipment

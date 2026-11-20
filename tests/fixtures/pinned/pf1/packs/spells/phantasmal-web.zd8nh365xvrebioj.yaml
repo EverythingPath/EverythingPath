@@ -1,0 +1,69 @@
+_id: zd8nh365xvrebioj
+_key: '!items!zd8nh365xvrebioj'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Phantasmal Web
+system:
+  actions:
+    - _id: 5larwotg9zo25iat
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will disbelief, then Fortitude partial; see text
+        type: fort
+      target:
+        value: one creature/level, no two of which may be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You implant within the minds of your targets the illusion that they are
+      engulfed in tangled <i>web</i>s teeming with swarms of tiny spiders. Those
+      who fail to disbelieve the <i>phantasmal web</i> are treated as if in a
+      <i>web</i> spell, but must also make a Fortitude save at the beginning of
+      each turn or become nauseated for that round by the phantasmal
+      spiders.</p><p>As the <i>phantasmal web</i> exists only in the minds of
+      the targets, it cannot be burned or destroyed, and it provides no cover
+      (though it does provide concealment) against attacks made by the targets.
+      Targets cannot escape the <i>phantasmal web</i> by moving, even by
+      teleportation. Freedom of movement allows unobstructed movement but does
+      not negate the concealment or nausea effects.</p><p>Targets of the spell
+      perceive everyone else around them to be engulfed in <i>web</i>s and
+      swarming spiders, but the spell has no visible effect to other creatures
+      (who may assist allies to disbelieve the effect).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      mesmerist: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      spiritualist: 5
+      wizard: 5
+    subDomain:
+      Insanity: 6
+  level: 5
+  school: ill
+  sources:
+    - id: PZO1115
+      pages: '235'
+  subschool:
+    - phantasm
+type: spell
