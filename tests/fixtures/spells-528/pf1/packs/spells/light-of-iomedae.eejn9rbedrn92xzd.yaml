@@ -1,0 +1,61 @@
+_id: eejn9rbedrn92xzd
+_key: '!items!eejn9rbedrn92xzd'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Light of Iomedae
+system:
+  actions:
+    - _id: dtbylosk43sozdj0
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: all undead in a 10-foot-radius spread
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this spell, you create shafts of blue light that illuminate all
+      undead creatures in the area. Affected undead take a -20 penalty on all
+      Stealth checks. Invisible undead are not made visible by this effect, but
+      the light does make it easy to pinpoint the exact squares in which such
+      undead are located (they still retain the 50% miss chance granted by
+      invisibility).</p><p>The <i>light of Iomedae</i> increases light levels by
+      one step in a 5-foot radius around an affected undead creature. Once an
+      undead is affected, it remains illuminated as long as remains within the
+      spell's range, even if it leaves the spell's original radius, until the
+      spell's duration ends.</p><p>Affected undead must also make a Will save
+      when they are first illuminated by the <i>light of Iomedae</i>. Those who
+      fail this save lose all benefits of channel resistance and take a -2
+      penalty on all saving throws made against positive energy effects.</p>
+  descriptors:
+    - good
+    - light
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      paladin: 2
+      warpriest: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO9237
+      pages: '58'
+type: spell

@@ -1,0 +1,45 @@
+_id: FmU1AoSsE69xIeLH
+_key: '!items!FmU1AoSsE69xIeLH'
+_stats:
+  coreVersion: '12.331'
+folder: psuYMTF2CZGcl9ZE
+img: systems/pf1/icons/races/creature-types/construct.png
+name: Sea Longing
+system:
+  abilityType: ex
+  actions:
+    - _id: Z7TOjgmDMt2qoDhS
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '1'
+            types:
+              - Wisdom Drain
+      name: Spend 24 hours more than 10 miles from the sea
+  description:
+    value: >-
+      <p><strong>Race</strong>: Deep One Hybrid</p><hr /><p>Every 24 hours a
+      deep one hybrid spends in an area more than 10 miles from the sea, it must
+      succeed at a DC 20 Will save or take 1 point of Wisdom drain.</p>
+  scriptCalls:
+    - _id: u86IoMEh
+      category: use
+      hidden: false
+      img: null
+      name: DC 20 will save
+      type: script
+      value: actor.rollSavingThrow("will");
+  sources:
+    - id: PZO1133
+      pages: '70'
+  subType: racial
+  tags:
+    - Deep One Hybrid
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

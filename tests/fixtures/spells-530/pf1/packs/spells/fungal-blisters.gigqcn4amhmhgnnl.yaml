@@ -1,0 +1,90 @@
+_id: gigqcn4amhmhgnnl
+_key: '!items!gigqcn4amhmhgnnl'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/death/blood-corruption-vomit-red.webp
+name: Fungal Blisters
+system:
+  actions:
+    - _id: pg48uo92mh9x5ch3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 minute/level or until discharged (see text)
+      effect: Creates [[(floor(@cl / 2))d2 + floor(@cl / 2)]]
+      img: icons/magic/defensive/armor-stone-skin.webp
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+    - _id: aXgxNdpBfTr4QcQo
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5-foot-radius burst centered on you
+      damage:
+        parts:
+          - formula: (floor(@cl / 2))d2 + floor(@cl / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      effect: cloud of harmful spores (disease)
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Burst blister
+      save:
+        description: Fortitude negates
+        type: fort
+      uses:
+        autoDeductChargesCost: '0'
+        self:
+          per: charges
+  components:
+    somatic: true
+    verbal: true
+  description:
+    instructions: <p>Setup max charges of burst blister action after cast</p>
+    value: >-
+      <p>When you cast this spell, horrible, fungal growths sprout forth all
+      over your body. You develop 1d2+1 of these blisters per 2 caster levels.
+      Each time you are dealt more than 5 points of bludgeoning, piercing, or
+      slashing damage from a single attack, one of these blisters bursts,
+      releasing a cloud of harmful spores in a 5-foot-radius burst centered on
+      you. These spores enter the lungs of all living creatures within the cloud
+      that need to breathe and deal 1d6+1 points of damage for every 2 caster
+      levels you have (Fortitude negates). This is a disease effect, and you and
+      plants aren't affected by the spores. It is possible for more than one
+      blister to burst in a single round. If you are reduced to 0 or fewer hit
+      points, all remaining blisters burst, and the resulting spores deal the
+      cumulative amount of damage. You are not able to cast this spell while
+      wearing heavy armor. If you don heavy armor during the spell's duration,
+      all remaining blisters burst as if you had been reduced to 0 or fewer hit
+      points.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO90119
+      pages: '70'
+  sr: false
+  tags:
+    - Cyth-V'sug
+type: spell
