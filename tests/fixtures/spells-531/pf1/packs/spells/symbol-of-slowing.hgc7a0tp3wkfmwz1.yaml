@@ -1,0 +1,61 @@
+_id: hgc7a0tp3wkfmwz1
+_key: '!items!hgc7a0tp3wkfmwz1'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/symbols/rune-sigil-black-pink.webp
+name: Symbol of Slowing
+system:
+  actions:
+    - _id: ncuf8bbahmur33r3
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except all creatures within 60 feet of a <em>symbol of slowing</em> are
+      <em>slow</em>ed (as the <em>slow</em> spell) for 1 round per caster
+      level.</p><p>Symbol of <em>slow</em>ing can be made permanent with a
+      <em>permanency</em> spell by a caster of 11th level or higher for the cost
+      of 10,000 gp.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      occultist: 3
+      oracle: 4
+      sorcerer: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    gpValue: 1000
+    value: >-
+      mercury and phosphorous, plus powdered diamond and opal worth a total of
+      1,000 gp
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '242'
+type: spell

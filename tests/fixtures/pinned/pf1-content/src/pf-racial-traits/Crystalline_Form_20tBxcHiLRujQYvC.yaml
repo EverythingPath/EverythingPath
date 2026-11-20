@@ -1,0 +1,53 @@
+_id: 20tBxcHiLRujQYvC
+_key: '!items!20tBxcHiLRujQYvC'
+_stats:
+  coreVersion: '12.331'
+folder: HwNbN3nPop23QbOP
+img: systems/pf1/icons/races/oread.png
+name: Crystalline Form
+system:
+  actions:
+    - _id: vT57HD5k33KCCcaS
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, you can deflect a single ray attack targeted at you as
+        if you were using the
+        @UUID[Compendium.pf1.feats.Item.ACEQfonKVqh0fwkK]{Deflect Arrows}
+        feat.</p>
+      name: Deflect Ray
+      notes:
+        effect:
+          - Must have one hand free
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: ac
+      text: +[[2]] Racial bonus vs rays
+  description:
+    value: >-
+      <p><strong>Race</strong>: Oread<br /><strong>Replaced Trait(s)</strong>:
+      Earth Affinity</p><hr /><p>Oreads with this trait gain a +2 racial bonus
+      to AC against rays thanks to their reflective crystalline skin. In
+      addition, once per day, they can deflect a single ray attack targeted at
+      them as if they were using the
+      @UUID[Compendium.pf1.feats.Item.ACEQfonKVqh0fwkK]{Deflect Arrows} feat.
+      This racial trait replaces earth affinity.</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '144'
+  subType: racial
+  tags:
+    - Oread
+  traitCategory: defense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

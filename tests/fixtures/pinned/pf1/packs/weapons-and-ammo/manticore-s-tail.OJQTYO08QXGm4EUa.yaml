@@ -1,0 +1,68 @@
+_id: OJQTYO08QXGm4EUa
+_key: '!items!OJQTYO08QXGm4EUa'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/ballista-wood-green.webp
+name: Manticore's Tail
+system:
+  actions:
+    - _id: 4zgyei6efexe8p5i
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      area: 60-foot cone
+      attackBonus: '-2'
+      damage:
+        parts:
+          - formula: sizeRoll(3, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Attack
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: all creatures and objects
+  baseTypes:
+    - Manticore's Tail
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 3d8; <b>Critical</b> 19-20/x2;
+      <b>Range</b> see text; <b>Type</b> P</p><p><b>Crew</b> 3; <b>Aim</b> 0;
+      <b>Load</b> 4; <b>Speed</b> 0 ft.</p><p><b>Category</b> Direct-Fire
+      (Huge); <b>Proficiency</b> Siege Engine</p><h3>Description</h3><p>This
+      massive ballista fires a dozen or more bolts at once in a devastating rain
+      of steel that deals 3d8 points of damage. The crew leader makes a separate
+      attack roll with a -2 penalty against each creature and object within a
+      60-foot cone, ignoring concealment. Confirm any critical threats
+      separately. This weapon has a mishap only if the first attack roll is a
+      mishap. A manticore's tail has a hardness of 5 and 100 hit points.
+      Ammunition for one use of the manticore's tail costs 120 gp and weighs 120
+      pounds.</p>
+  hardness: 5
+  hp:
+    base: 100
+  material:
+    base:
+      value: steel
+  price: 1000
+  size: huge
+  sources:
+    - id: PZO9276
+      pages: '39'
+  subType: siege
+  weaponSubtype: direct
+type: weapon

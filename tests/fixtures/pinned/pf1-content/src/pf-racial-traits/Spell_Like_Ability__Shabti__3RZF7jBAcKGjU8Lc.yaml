@@ -1,0 +1,64 @@
+_id: 3RZF7jBAcKGjU8Lc
+_key: '!items!3RZF7jBAcKGjU8Lc'
+_stats:
+  coreVersion: '12.331'
+folder: CfOTLvo8D5bPPSPB
+img: systems/pf1/icons/skills/light_07.jpg
+name: Spell-Like Ability (Shabti)
+system:
+  abilityType: sp
+  actions:
+    - _id: fMwnfmikKpfrvKYO
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{suggestion}</p><p>You
+        influence the actions of the target creature by suggesting a course of
+        activity (limited to a sentence or two). The suggestion must be worded
+        in such a manner as to make the activity sound reasonable. Asking the
+        creature to do some obviously harmful act automatically negates the
+        effect of the spell.</p><p>The suggested course of activity can continue
+        for the entire duration. If the suggested activity can be completed in a
+        shorter time, the spell ends when the subject finishes what it was asked
+        to do. You can instead specify conditions that will trigger a special
+        activity during the duration. If the condition is not met before the
+        spell duration expires, the activity is not performed.</p><p>A very
+        reasonable suggestion causes the save to be made with a penalty (such as
+        -1 or -2).</p>
+      duration:
+        units: spec
+        value: '[[@attributes.hd.total]] Hours or until completed'
+      name: Suggestion
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 3 + @abilities.cha.mod
+        description: negates (SR)
+        type: will
+      target:
+        value: One living creature
+  description:
+    value: >-
+      <p><strong>Race</strong>: Shabti</p><hr /><p>A shabti can use
+      @UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{suggestion} once per
+      day as a spell-like ability, with a caster level equal to the shabti's
+      class level.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1133
+      pages: '227'
+    - id: PZO9084
+      pages: '50'
+  subType: racial
+  tags:
+    - Shabti
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

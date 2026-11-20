@@ -1,0 +1,75 @@
+_id: 1vh2ewwvzvxunoxk
+_key: '!items!1vh2ewwvzvxunoxk'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal.webp
+name: Protection from Energy
+system:
+  actions:
+    - _id: h00j5yjm51wx24le
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 min./level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Protection from energy</i> grants temporary immunity to the type of
+      energy you specify when you cast it (acid, cold, electricity, fire, or
+      sonic). When the spell absorbs 12 points per caster level of energy damage
+      (to a maximum of 120 points at 10th level), it is
+      discharged.</p><p><i>Protection from energy</i> overlaps (and does not
+      stack with) <i>resist energy</i>. If a character is warded by
+      <i>protection from energy</i> and <i>resist energy</i>, the
+      <i>protection</i> spell absorbs damage until its power is exhausted.</p>
+  learnedAt:
+    bloodline:
+      Destined: 3
+      Elemental: 3
+    class:
+      alchemist: 3
+      arcanist: 3
+      bloodrager: 3
+      cleric: 3
+      druid: 3
+      hunter: 2
+      inquisitor: 3
+      investigator: 3
+      occultist: 3
+      oracle: 3
+      psychic: 3
+      ranger: 2
+      shaman: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 3
+      wizard: 3
+    domain:
+      Luck: 3
+      Protection: 3
+  level: 3
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '327'
+type: spell

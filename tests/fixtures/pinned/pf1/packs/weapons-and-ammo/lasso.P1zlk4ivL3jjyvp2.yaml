@@ -1,0 +1,79 @@
+_id: P1zlk4ivL3jjyvp2
+_key: '!items!P1zlk4ivL3jjyvp2'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/lasso.png
+name: Lasso
+system:
+  actions:
+    - _id: hag0ii35yc9dsb3g
+      ability:
+        attack: _default
+        critMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      touch: true
+    - _id: dAAvLgehwJqWe6Q1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Untie knot
+      range:
+        units: touch
+      uses:
+        autoDeductChargesCost: '-1'
+  baseTypes:
+    - Lasso
+  description:
+    unidentified: >-
+      <p>This thrown weapon is a length of rope with a simple open knot on one
+      end that allows you entangle a foe like you would using a
+      @UUID[Compendium.pf1.weapons-and-ammo.6oevs2mE3QqqQEAK]{net}. The DC to
+      cast a spell while entangled with a lasso is 10 + the spell level being
+      cast. An entangled creature can slip free with a successful DC 15 Escape
+      Artist check as a full-round action. The lasso has 2 hit points and AC 10,
+      and requires a DC 23 Strength check to break it. On a successful hit, the
+      lasso tightens; to use it again you must spend a standard action sliding
+      the knot to enlarge the loop.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 0.1
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+    - id: PZO9410
+      pages: '33'
+    - id: PZO1115
+      pages: '178'
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 5
+type: weapon

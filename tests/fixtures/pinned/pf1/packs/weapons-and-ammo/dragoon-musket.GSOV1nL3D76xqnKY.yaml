@@ -1,0 +1,69 @@
+_id: GSOV1nL3D76xqnKY
+_key: '!items!GSOV1nL3D76xqnKY'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Dragoon Musket
+system:
+  actions:
+    - _id: y3jw0ph8dnnq4nxh
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: dragoonBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 12, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '60'
+  ammo:
+    type: dragoonBullet
+  baseTypes:
+    - Dragoon Musket
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d10 (small), 1d12 (medium);
+      <b>Critical</b> x3; <b>Range</b> 60 ft.; <b>Type</b> B and
+      P</p><p><b>Misfire</b> 1-2 (5 ft.); <b>Capacity</b>
+      3</p><h3>Description</h3><p>This long-barreled musket shoots more
+      precisely than other muskets but is slightly less damaging on a critical
+      hit. It can fire only dragoon cartridges or specially modified <em>mage
+      shot</em>.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2000
+  sources:
+    - id: PZO1136
+      pages: '57'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 12
+type: weapon

@@ -1,0 +1,175 @@
+_id: NBbiF9fQTgRfNaFb
+_key: '!items!NBbiF9fQTgRfNaFb'
+_stats:
+  coreVersion: '12.331'
+folder: 7BVIiJLxMcXsI6IF
+img: systems/pf1/icons/races/changeling.png
+name: Hag Magic (AoE)
+system:
+  abilityType: sp
+  actions:
+    - _id: RpFOI11dYZpXN560
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+        lights}</p><p>Depending on the version selected, you create up to four
+        lights that resemble lanterns or torches (and cast that amount of
+        light), or up to four glowing spheres of light (which look like
+        will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The
+        dancing lights must stay within a @Distance[10 ft;dual]-radius area in
+        relation to each other but otherwise move as you desire (no
+        concentration required): forward or back, up or down, straight or
+        turning corners, or the like. The lights can move up to @Distance[100
+        ft;dual] per round. A light winks out if the distance between you and it
+        exceeds the spell's range.</p><p>You can only have one dancing lights
+        spell active at any one time. If you cast this spell while another
+        casting is still in effect, the previous casting is dispelled. If you
+        make this spell permanent, it does not count against this
+        limit.</p><p>Dancing lights can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: Up to four lights in a 10' radius area
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: 7h7UxTBqydrB7Bf7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect
+        magic}</p><p>You detect magical auras. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of magical
+        auras.</p><p>2nd Round: Number of different magical auras and the power
+        of the most potent aura.</p><p>3rd Round: The strength and location of
+        each aura. If the items or creatures bearing the auras are in line of
+        sight, you can make Knowledge (arcana) skill checks to determine the
+        school of magic involved in each. (Make one check per aura: DC 15 +
+        spell level, or 15 + 1/2 caster level for a nonspell effect.) If the
+        aura emanates from a magic item, you can attempt to identify its
+        properties (see Spellcraft).</p><p></p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Magic
+      range:
+        units: ft
+        value: '60'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: BIIr2IU77S2k7Vv2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise
+        self}</p><p>You make yourself, including clothing, armor, weapons, and
+        equipment, look different. You can seem 1 foot shorter or taller, thin,
+        fat, or in between. You cannot change your creature type (although you
+        can appear as another subtype). Otherwise, the extent of the apparent
+        change is up to you. You could add or obscure a minor feature or look
+        like an entirely different person or gender.</p><p>The spell does not
+        provide the abilities or mannerisms of the chosen form, nor does it
+        alter the perceived tactile (touch) or audible (sound) properties of you
+        or your equipment. If you use this spell to create a disguise, you get a
+        +10 bonus on the Disguise check. A creature that interacts with the
+        glamer gets a Will save to recognize it as an illusion.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: Disguise Self
+      range:
+        units: personal
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: Interact
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: OVu7NmCtvS2t5Hoz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2zyr6klf97jyr5ng]{Pass without
+        Trace}.</p><p>The subject or subjects of this spell do not leave
+        footprints or a scent trail while moving. Tracking the subjects is
+        impossible by nonmagical means.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total * 10'
+      name: Pass without Trace
+      range:
+        units: touch
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: '[[@attributes.hd.total ]] touched creatures'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  changes:
+    - _id: rBersQ8o
+      formula: '1'
+      target: dc.school.enc
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Changeling<br /><strong>Replaced
+      Trait(s)</strong>: Claws; Natural Armor</p><hr /><p>Some changelings
+      develop a gift for spellcasting instead of their mothers’ overtly fearsome
+      traits. A changeling with this trait displays one or more stark white
+      streaks in her hair as a child. The DCs of any saving throws against
+      enchantment spells she casts increase by 1, and if her Charisma score is
+      11 or higher, she also gains the following spell-like abilities, usable
+      once per day each:
+      @UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing lights},
+      @UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect magic},
+      @UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise self}, and
+      @UUID[Compendium.pf1.spells.Item.2zyr6klf97jyr5ng]{Pass without Trace}.
+      The caster level of these spell-like abilities is equal to the
+      changeling’s character level. The DC for these spell-like abilities is
+      equal to 10 + the spell’s level + the changeling’s Charisma modifier. This
+      racial trait replaces the claws and natural armor racial abilities.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9464
+      pages: '24'
+  subType: racial
+  tags:
+    - Changeling
+  traitCategory: magical
+  uses:
+    maxFormula: gte(@abilities.cha.total, 11) * 4
+    per: day
+    value: 0
+type: feat

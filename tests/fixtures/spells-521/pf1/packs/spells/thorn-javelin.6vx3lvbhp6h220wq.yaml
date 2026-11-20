@@ -1,0 +1,54 @@
+_id: 6vx3lvbhp6h220wq
+_key: '!items!6vx3lvbhp6h220wq'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Thorn Javelin
+system:
+  actions:
+    - _id: 4gm6so5xcifq21pn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      effect: javelin-like thorn
+      name: Use
+      range:
+        units: ft
+        value: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A wooden thorn the size of a javelin (appropriate for your size)
+      appears in your open hand. You can wield this thorn as a javelin, and you
+      are proficient in its use. Any creature struck by the javelin must succeed
+      at a Fortitude save or be sickened for 1 round. If you throw the javelin,
+      another one appears in your hand. Any javelin that leaves your grasp
+      disappears at the end of your turn. Each javelin attack you make reduces
+      the spell's remaining duration by 1 minute.</p><p>If an attack reduces the
+      remaining duration to 0 minutes or less, the spell ends after that attack
+      resolves.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      ranger: 1
+      shaman: 1
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '196'
+  sr: false
+  subschool:
+    - creation
+type: spell
