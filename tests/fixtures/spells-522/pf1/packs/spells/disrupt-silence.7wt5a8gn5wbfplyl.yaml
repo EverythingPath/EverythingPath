@@ -1,0 +1,64 @@
+_id: 7wt5a8gn5wbfplyl
+_key: '!items!7wt5a8gn5wbfplyl'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Disrupt Silence
+system:
+  actions:
+    - _id: z57zm5f91axxm7nh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: >-
+        10-ft.-radius emanation centered on a creature, object, or point in
+        space
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>You suppress magical sound-dampening effects within the
+      area.</p><p><em>Disrupt silence</em> temporarily negates magical
+      <em>silence</em> within its area, so that normal sounds can be heard
+      within the overlapping areas of effect. Additionally, <em>disrupt
+      silence</em> can automatically counter or dispel any magical
+      <em>silence</em> effect of equal or lower level cast upon the same target,
+      such as <em>silence</em>. If you cast <em>disrupt silence</em> on the
+      target of a higher-level <em>silence</em> effect, it functions as
+      @UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{dispel magic} instead
+      of its normal function.</p>
+  learnedAt:
+    class:
+      bard: 2
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      psychic: 3
+      skald: 2
+      warpriest: 3
+  level: 3
+  materials:
+    value: tiny silver bell, chime, or gong
+  school: abj
+  sources:
+    - id: PZO1134
+      pages: '212'
+type: spell

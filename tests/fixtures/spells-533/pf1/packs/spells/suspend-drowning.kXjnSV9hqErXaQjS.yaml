@@ -1,0 +1,57 @@
+_id: kXjnSV9hqErXaQjS
+_key: '!items!kXjnSV9hqErXaQjS'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Suspend Drowning
+system:
+  actions:
+    - _id: qfzWMhOAGlRxAc1n
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+      target:
+        value: >-
+          one Medium creatures or smaller drowning creature/level, no two of
+          which can be more than 20 ft. apart
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>The affected creatures immediately—though temporarily—stop drowning and
+      cannot suffocate or drown while this spell is in effect. A target that had
+      been reduced to below 1 hit point from drowning immediately returns to 1
+      hit point. The magic of this spell allows the targets to breathe, drink,
+      and talk normally for the duration of the spell, but targets cannot inhale
+      to increase the amount of air remaining in their lungs. When the spell
+      effect ends, the target resumes drowning unless it is in an environment
+      that allows it to breathe normally (such as an air-breathing creature
+      returning to the surface) or has obtained a method of breathing normally
+      (such as by consuming a <em>potion of water breathing</em>).</p>
+  learnedAt:
+    class:
+      bard: 1
+      cleric: 1
+      druid: 1
+      hunter: 1
+      oracle: 1
+      ranger: 1
+      skald: 1
+      warpriest: 1
+  school: trs
+  sources:
+    - id: PZO9482
+      pages: '21'
+type: spell

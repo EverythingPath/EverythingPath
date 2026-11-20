@@ -1,0 +1,67 @@
+_id: B8KNC8vi2LZdlQHl
+_key: '!items!B8KNC8vi2LZdlQHl'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Forced Mutation
+system:
+  actions:
+    - _id: CbDC1iwoO5g4eNSy
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: living creature touched
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The body of the target creature twists and distorts, reshaping into a
+      grotesque figure. Because of the disfigurement, the creature takes a –4
+      penalty to Constitution and Charisma. The creature also receives one of
+      the following deformities (your choice) from the list in the mutant
+      acquired template: blind, deaf, fragile, fractured mind, lame, poor
+      ability (applied to your choice of Strength, Dexterity, Intelligence, or
+      Wisdom), spasms, and useless arm. The deformity is subject to all
+      limitations described in the
+      @UUID[Compendium.pf1.monster-templates.4pbHKe1aYEcjBEs4]{mutant} template
+      (for example, this spell cannot impose the lame deformity on a creature
+      with a base speed slower than 20 feet).</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      cleric: 3
+      inquisitor: 3
+      magus: 3
+      occultist: 3
+      oracle: 3
+      sorcerer: 3
+      warpriest: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a small piece of radioactive clay
+  school: trs
+  sources:
+    - id: PZO9486
+      pages: '29'
+type: spell

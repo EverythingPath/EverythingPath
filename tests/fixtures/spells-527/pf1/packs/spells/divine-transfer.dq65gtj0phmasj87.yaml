@@ -1,0 +1,49 @@
+_id: dq65gtj0phmasj87
+_key: '!items!dq65gtj0phmasj87'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Divine Transfer
+system:
+  actions:
+    - _id: 0tjtrq3swc14ohbc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a single touch, you transfer some of your life essence to the
+      subject, transferring your hit points and your resolve. When you touch the
+      subject you can transfer up to a number of hit points equal to your
+      Constitution score to the target. These hit points heal the subject, but
+      cannot raise the subject's hit points higher than its normal hit point
+      total. In addition, the subject gains DR/evil equal to your Charisma bonus
+      (if any) for the duration of the spell.</p>
+  learnedAt:
+    class:
+      paladin: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '216'
+type: spell

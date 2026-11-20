@@ -1,0 +1,51 @@
+diff --git a/dist/commonjs/index.js b/dist/commonjs/index.js
+index 751c2c154164fb2135853c197952ea3ac3869b5a..781d687e22af459e7b1c13bd630fa8b9c6918eaa 100644
+--- a/dist/commonjs/index.js
++++ b/dist/commonjs/index.js
+@@ -117,9 +117,9 @@ class ConvexQueryClient {
+         if (result.ok) {
+             const value = result.value;
+             this.queryClient.setQueryData(queryKey, (prev) => {
+-                if (prev === undefined) {
+-                    // If `prev` is undefined there is no react-query entry for this query key.
+-                    // Return `undefined` to signal not to create one.
++                if (prev === undefined && query.state.status !== "error") {
++                    // The initial fetch owns pending results; a failed initial fetch must
++                    // still recover when its live subscription later receives a value.
+                     return undefined;
+                 }
+                 return value;
+diff --git a/dist/esm/index.js b/dist/esm/index.js
+index 16abb980daf0bd69079fa02105e57f2c53b17d79..3d6e15e7854ba5749fc0fb6fc65d80ed119b1d1f 100644
+--- a/dist/esm/index.js
++++ b/dist/esm/index.js
+@@ -104,9 +104,9 @@ export class ConvexQueryClient {
+         if (result.ok) {
+             const value = result.value;
+             this.queryClient.setQueryData(queryKey, (prev) => {
+-                if (prev === undefined) {
+-                    // If `prev` is undefined there is no react-query entry for this query key.
+-                    // Return `undefined` to signal not to create one.
++                if (prev === undefined && query.state.status !== "error") {
++                    // The initial fetch owns pending results; a failed initial fetch must
++                    // still recover when its live subscription later receives a value.
+                     return undefined;
+                 }
+                 return value;
+diff --git a/src/index.ts b/src/index.ts
+index 26e3c21b3aed138ec159021ebd760b3cc4849181..e0fdddfca8791199f79e7e3643e304ba00f9cec6 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -219,9 +219,9 @@ export class ConvexQueryClient {
+     if (result.ok) {
+       const value = result.value;
+       this.queryClient.setQueryData(queryKey, (prev) => {
+-        if (prev === undefined) {
+-          // If `prev` is undefined there is no react-query entry for this query key.
+-          // Return `undefined` to signal not to create one.
++        if (prev === undefined && query.state.status !== "error") {
++          // The initial fetch owns pending results; a failed initial fetch must
++          // still recover when its live subscription later receives a value.
+           return undefined;
+         }
+         return value;

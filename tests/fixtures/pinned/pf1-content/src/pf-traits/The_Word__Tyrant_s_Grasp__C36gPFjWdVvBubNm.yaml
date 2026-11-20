@@ -1,0 +1,45 @@
+_id: C36gPFjWdVvBubNm
+_key: '!items!C36gPFjWdVvBubNm'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: The Word (Tyrant's Grasp)
+system:
+  changes:
+    - _id: Zo9BvHsR
+      formula: '1'
+      target: fort
+      type: trait
+  description:
+    instructions: >-
+      <ol><li><p>If you do not have the lay on hands ability from a
+      class:</p><p>a) Add that feature to your actor</p><p>b) Edit the Feature
+      and update the Details tab&gt; Limited Uses to
+      </p><p>floor(@attributes.hd.total/ 4) +
+      @abilities.cha.mod</p></li><li><p>If you do have the lay on hands ability
+      from a class:</p><p>a) Edit the Feature and update the Details tab&gt;
+      Limited Uses to </p><p>floor(@classes.paladin.level / 2) +
+      @abilities.cha.mod +1</p></li></ol><p>*replace paladin in step 2a with the
+      class tag for the class that granted the feature if you gained LoH from a
+      different class</p>
+    value: >-
+      <p><em>In a nation overcrowded with faith, you often worry that your
+      message is drowned out, but nonetheless important. The souls in Roslar’s
+      Coffer needed comfort and charity once upon a time, but have bounced back
+      so fully—in part thanks to your hard work—that you worry you’ve made
+      yourself unnecessary.</em></p><p><strong>Benefits</strong>: You are
+      accustomed to long hours, granting you a +1 trait bonus on Fortitude
+      saving throws. Your faith is invigorating, and once per day you can lay on
+      hands as a paladin of half your character level (minimum 1). If you gain
+      the lay on hands ability from a class, you instead gain one additional use
+      of lay on hands each day.</p>
+  sources:
+    - id: PZO9000-24E
+      pages: '7'
+  subType: trait
+  tags:
+    - Tyrant's Grasp
+    - Lay On Hands
+  traitType: campaign
+type: feat

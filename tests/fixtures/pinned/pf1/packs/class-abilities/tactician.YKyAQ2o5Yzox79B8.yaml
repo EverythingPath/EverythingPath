@@ -1,0 +1,45 @@
+_id: YKyAQ2o5Yzox79B8
+_key: '!items!YKyAQ2o5Yzox79B8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/strike-back.jpg
+name: Tactician
+system:
+  abilityType: ex
+  actions:
+    - _id: di9rwlddtwhr7g9c
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 3 + floor(@class.level / 2)
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: all allies within 30 ft
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 1st level, a cavalier receives a <a
+      href="https://aonprd.com/Feats.aspx?Category=Teamwork">teamwork feat</a>
+      as a bonus feat. He must meet the prerequisites for this feat. As a
+      standard action, the cavalier can grant this feat to all allies within 30
+      feet who can see and hear him. Allies retain the use of this bonus feat
+      for 3 rounds plus 1 round for every two levels the cavalier possesses.
+      Allies do not need to meet the prerequisites of these bonus feats. The
+      cavalier can use this ability once per day at 1st level, plus one
+      additional time per day at 5th level and for every 5 levels
+      thereafter.</p>
+  subType: classFeat
+  tag: classFeat_tactician
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

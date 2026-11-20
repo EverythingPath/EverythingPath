@@ -1,0 +1,79 @@
+_id: t8591zpp68cvxibv
+_key: '!items!t8591zpp68cvxibv'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Domination Link
+system:
+  actions:
+    - _id: ny34xsfaja8ssw8m
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration, up to 1 min./level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Will negates; see text
+        type: will
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect thoughts}, with
+      the additional ability to find echoes of the thoughts of a creature
+      mentally controlling the target. For example, if the target has been
+      dominated by a vampire, you can use evidence left in the target's mind to
+      learn about that vampire. Each minute you concentrate on the spell, you
+      can learn your choice of one of the following pieces of information.
+      <em>Direction</em>: The controller's general direction and distance.
+      <em>Emotion</em>: The controller's emotional state (gloating, sated,
+      frightened, angry, and so on). <em>Image</em>: A powerful iconic image
+      relevant to the controller or its connection to the target, such as a
+      symbol on a door or a name on a gravestone. <em>Location</em>: The
+      controller's general location, such as "in a large city" or "on a ship."
+      <em>Name</em>: The name by which the target knows its controller (if any).
+      All of this information is based on the last time the influencing creature
+      linked itself to the target, either to issue a command or to receive
+      sensory input from the target. For example, if at nightfall a vampire
+      commanded a dominated victim to walk to a cemetery, this spell can reveal
+      the vampire's general location at that time, though it may have moved
+      since then.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      inquisitor: 3
+      skald: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: a copper piece
+  school: div
+  sources:
+    - id: PZO9427
+      pages: '30'
+  sr: false
+type: spell
