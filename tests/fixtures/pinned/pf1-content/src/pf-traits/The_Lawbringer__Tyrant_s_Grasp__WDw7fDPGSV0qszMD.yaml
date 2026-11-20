@@ -1,0 +1,63 @@
+_id: WDw7fDPGSV0qszMD
+_key: '!items!WDw7fDPGSV0qszMD'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: The Lawbringer (Tyrant's Grasp)
+system:
+  actions:
+    - _id: R9W24Wg6RUjBJaos
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '@abilities.wis.mod + @attributes.hd.total'
+            types:
+              - temp
+      description: >-
+        <p>the first time each day you are knocked unconscious or killed, all
+        allies within 30 feet of you immediately gain a number of temporary hit
+        points equal to [[(@abilities.wis.mod + @attributes.hd.total)]] , as
+        they rally to your defense. These temporary hit points last for 1
+        minute.</p>
+      duration:
+        units: minute
+        value: '1'
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] Trait bonus against fear effects.
+  description:
+    value: >-
+      <p><em>The frontier is a land of risk and disorder, and while people are
+      welcome to brave those elements themselves, they all too often bring pain
+      down upon folk who never wanted such a risk. You might serve on the town
+      guard or as part of a detachment of soldiers supported by Vigil, or you
+      could be simply a concerned farmer who endures when others cannot, but
+      your purpose is to stand as a bulwark against the cruel whims of fate for
+      anyone who needs it.</em></p><p><strong>Benefits</strong>: You gain a +2
+      trait bonus on saving throws against fear effects. If you have the aura of
+      courage class feature, the bonus provided by your aura increases by 1.
+      Your courage is inspiring; the first time each day you are knocked
+      unconscious or killed, all allies within 30 feet of you immediately gain a
+      number of temporary hit points equal to your level plus your Charisma
+      modifier, as they rally to your defense. These temporary hit points last
+      for 1 minute.</p>
+  sources:
+    - id: PZO9000-24E
+      pages: '7'
+  subType: trait
+  tags:
+    - Tyrant's Grasp
+    - Aura of Courage
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

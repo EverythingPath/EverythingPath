@@ -1,0 +1,56 @@
+_id: ueuz3ymuz8pxpzr6
+_key: '!items!ueuz3ymuz8pxpzr6'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Heroic Invocation
+system:
+  actions:
+    - _id: 1mwse7r5i28z9pgu
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one or more creatures, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Using worlds of ancient power, you bestow heroic powers on all
+      creatures subject to this spell. They gain a +4 morale bonus on attack and
+      damage rolls, gain 2d8+4 temporary hit points, and become immune to both
+      fear and charm effects for the spell's duration.  At the end of the
+      spell's duration, the subjects become fatigued.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+  level: 9
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '231'
+  subschool:
+    - compulsion
+type: spell

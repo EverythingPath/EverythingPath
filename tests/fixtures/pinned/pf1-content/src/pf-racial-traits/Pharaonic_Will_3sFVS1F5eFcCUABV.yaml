@@ -1,0 +1,49 @@
+_id: 3sFVS1F5eFcCUABV
+_key: '!items!3sFVS1F5eFcCUABV'
+_stats:
+  coreVersion: '12.331'
+folder: KiEX7l7gq46EN7ac
+img: systems/pf1/icons/skills/light_07.jpg
+name: Pharaonic Will
+system:
+  actions:
+    - _id: YrIiG4OS5VBMOVSo
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>Once per day as an immediate action after failing a save against a
+        charm, compulsion, or fear effect, a shabti with this racial trait can
+        reroll the save with a +2 racial bonus.</p>
+      name: reroll a  failed save
+      notes:
+        effect:
+          - reroll with +[[2]] bonus
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        Once per day as an immediate action after failing a save against a
+        charm, compulsion, or fear effect, you can reroll the save with a +[[2]]
+        Racial bonus.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Shabti<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Rather than working to influence others,
+      some shabti focus inward. Once per day as an immediate action after
+      failing a save against a charm, compulsion, or fear effect, a shabti with
+      this racial trait can reroll the save with a +2 racial bonus.</p><p> This
+      racial trait replaces spell-like ability.</p>
+  sources:
+    - id: PZO9492
+      pages: '23'
+  subType: racial
+  tags:
+    - Shabti
+  traitCategory: defense
+type: feat

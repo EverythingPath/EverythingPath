@@ -1,0 +1,40 @@
+_id: Rj8fmTrCA50gRmxP
+_key: '!items!Rj8fmTrCA50gRmxP'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Eternal Hope
+system:
+  actions:
+    - _id: I3KpcVHKFV3qpKA5
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reroll after rolling a 1 on d20
+      notes:
+        effect:
+          - '[[1d20]]'
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] Racial bonus against fear and despair effects.
+  description:
+    value: >-
+      <p>Members of this race gain a +2 racial bonus on saving throws against
+      fear and despair effects. Also, once per day, after a natural roll of 1 on
+      a d20 roll, members of this race may reroll and use the second result.</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '222'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

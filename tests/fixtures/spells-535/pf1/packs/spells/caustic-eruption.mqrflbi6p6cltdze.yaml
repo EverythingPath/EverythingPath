@@ -1,0 +1,84 @@
+_id: mqrflbi6p6cltdze
+_key: '!items!mqrflbi6p6cltdze'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/acid/projectile-beams-salvo-green.webp
+name: Caustic Eruption
+system:
+  actions:
+    - _id: x5xga4egd2cw5fo0
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius burst
+      damage:
+        parts:
+          - formula: (min(20, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: spec
+        value: instantaneous and 2 rounds; see text
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - '@Action[Followup Damage]'
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Reflex half (see text)
+        type: ref
+    - _id: odPAM81PljbNOpne
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (min(10, floor(@cl / 2)))d6
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Followup Damage
+      save:
+        description: Reflex half (see text)
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Acid erupts from your space in all directions, causing 1d6 points of
+      damage per caster level (maximum 20d6) to creatures and unattended objects
+      in the area. On your turn in each of the next 2 rounds, creatures and
+      objects that failed their saves against the initial burst take an
+      additional 1d6 points of acid damage per 2 caster levels (maximum 10d6)
+      unless the acid is neutralized, dispelled, or washed away.</p>
+  descriptors:
+    - acid
+  learnedAt:
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '210'
+  sr: false
+  subschool:
+    - creation
+type: spell

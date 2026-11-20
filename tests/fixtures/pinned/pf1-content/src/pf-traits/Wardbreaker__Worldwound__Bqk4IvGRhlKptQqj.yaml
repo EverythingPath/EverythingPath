@@ -1,0 +1,55 @@
+_id: Bqk4IvGRhlKptQqj
+_key: '!items!Bqk4IvGRhlKptQqj'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Wardbreaker (Worldwound)
+system:
+  actions:
+    - _id: Jkueh2qlcWOJmFyv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, you can attempt a melee touch attack against an
+        opponent that you believe has a deflection bonus to AC. </p><p>If your
+        attack is successful, your foe’s deflection bonus to AC is halved (to a
+        minimum of +0) for a number of rounds equal to your Charisma modifier.
+        </p><p>You can use this ability twice per day at 10th level and three
+        times per day at 20th level.</p>
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Use
+  description:
+    value: >-
+      <p><em>You have studied techniques designed to pierce magical protections,
+      with the goal of assisting your Abyssal masters in bringing down the
+      wardstones that guard the borders of
+      Mendev.</em></p><p><strong>Requirements</strong>: <span
+      style="text-decoration:underline" data-tooltip="Demon-haunted wasteland at
+      the northernmost reaches of central Avistan "><span
+      style="text-decoration:underline">Worldwound</span></span></p><p><strong>Benefits</strong>:
+      Once per day, you can attempt a melee touch attack against an opponent
+      that you believe has a deflection bonus to AC. If your attack is
+      successful, your foe’s deflection bonus to AC is halved (to a minimum of
+      +0) for a number of rounds equal to your Charisma modifier. You can use
+      this ability twice per day at 10th level and three times per day at 20th
+      level.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9450
+      pages: '13'
+  subType: trait
+  tags:
+    - Worldwound
+  traitType: region
+  uses:
+    maxFormula: 1+ floor(@attributes.hd.total /10)
+    per: day
+    value: 1
+type: feat

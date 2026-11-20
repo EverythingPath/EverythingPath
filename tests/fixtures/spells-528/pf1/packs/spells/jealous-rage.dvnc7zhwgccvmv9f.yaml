@@ -1,0 +1,68 @@
+_id: dvnc7zhwgccvmv9f
+_key: '!items!dvnc7zhwgccvmv9f'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Jealous Rage
+system:
+  actions:
+    - _id: 2876reulw92cjm5l
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill the target with a sense of entitled self-importance, making
+      the subject unable to bear the indignity of another creature getting
+      something that it doesn't have. Whenever an ally of the target receives a
+      harmless spell or spell-like ability, beneficial supernatural effect, or
+      assisting action (including the aid another action, first aid using the
+      Heal skill, etc.) that doesn't also include the target, the target is
+      driven into a murderous rage against either the producer of that effect or
+      the nearest creature that benefited from that effect, whichever is closer.
+      The target must attack that creature on its next turn. Any ability that
+      deals lethal damage is considered an attack for this purpose. Once the
+      target deals lethal damage to the object of his <i>jealous rage</i>, the
+      compulsion to attack that creature ends.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 2
+      bard: 2
+      bloodrager: 2
+      mesmerist: 2
+      psychic: 3
+      shaman: 3
+      skald: 2
+      spiritualist: 2
+      witch: 3
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9461
+      pages: '28'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

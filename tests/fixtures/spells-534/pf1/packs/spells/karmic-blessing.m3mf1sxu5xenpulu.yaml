@@ -1,0 +1,46 @@
+_id: m3mf1sxu5xenpulu
+_key: '!items!m3mf1sxu5xenpulu'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Karmic Blessing
+system:
+  actions:
+    - _id: zgofhls5kqew2bqx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: <p>The target treats one skill of your choice as a class skill.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 1
+      oracle: 1
+      warpriest: 1
+      witch: 1
+  school: div
+  sources:
+    - id: PZO1121
+      pages: '199'
+type: spell

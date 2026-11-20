@@ -1,0 +1,7 @@
+# Spell batch #523 fixtures
+
+The 100 ticket Spell YAML roots and 28 class-context files are byte-identical pinned snapshots recorded in [provenance](provenance.json). Bolt of Glory and Reveal True Shape are specifically held for their record-level `3.5` tags under the owner's policy (2026-10-08). The importer excludes only whole 3.5 packs; both records retain unresolved assessments and individual tag-policy holds. Class and parsed Oracle data supply unreviewed context in isolated memory, without adding curated candidates. The content source directory retains a tracked marker for fresh checkouts.
+
+[Preview](preview.json) contains checked description Notes and source metadata. The [full-context binding preview](binding-preview.json) retains the 100 roots and their recursive linked Spell context from verified full CLI extraction. Raw recursive Spell context lives separately under `binding-context/`; it does not enter the bounded parser input. These fixtures create no Catalog Release or legal admission.
+
+[Catalog tests](../../catalog/spells-523.test.ts) pin source-backed metadata, raw hashes, scoped Notes, inherited notice requirements and current attribution bindings. [Saved-sheet tests](../../../convex/catalogSpells523.integration.test.ts) exercise recorded Spells, ordinary casting calculations, member editing and scoped access on isolated data. [Batch report](../../../docs/catalog-import/spells-523.md) records holds and independently outstanding mechanics.

@@ -1,0 +1,56 @@
+_id: q2n59ewdklpxjpra
+_key: '!items!q2n59ewdklpxjpra'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Eldritch Conduit, Greater
+system:
+  actions:
+    - _id: wb2zq6qh7kjvbrf3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one creature/level, no two of which can be more than 30 ft. apart
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.fwbgmfya11gtko14]{eldritch conduit} save for
+      the differences listed above and that the target must be within medium
+      range (100 ft. + 10 ft./level) in order for you to use the conduit. Using
+      a creature as a conduit for a spell ends the greater <em>eldritch
+      conduit</em> effect on that creature, but does not end the effect for
+      other <em>eldritch conduit</em>s.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      sorcerer: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: a small mirror
+  school: trs
+  sources:
+    - id: PZO9237
+      pages: '54'
+type: spell
