@@ -1,0 +1,90 @@
+_id: 6IIMmcOnRzR48J8u
+_key: '!items!6IIMmcOnRzR48J8u'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/spear.png
+name: Syringe Spear
+system:
+  actions:
+    - _id: 1chpsdfdvfgjosob
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: ePx7IpsNZk0908Ge
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Syringe Spear
+  description:
+    unidentified: >-
+      <p>The blade of this weapon, which is also called an injection spear,
+      contains a thin tube or bore that connects to a hollow container just
+      beneath the crosspiece. A successful hit with the spear injects the liquid
+      contents of the container (typically poison or a potion) into the target.
+      Refilling a syringe spear takes 1 minute.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 100
+  properties:
+    brc: true
+    spc: true
+  sources:
+    - id: PZO9410
+      pages: '5'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: 2h
+  weight:
+    value: 6
+type: weapon

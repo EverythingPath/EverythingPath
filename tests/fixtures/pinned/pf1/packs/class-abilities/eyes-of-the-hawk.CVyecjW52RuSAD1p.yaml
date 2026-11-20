@@ -1,0 +1,26 @@
+_id: CVyecjW52RuSAD1p
+_key: '!items!CVyecjW52RuSAD1p'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/alertness.jpg
+name: Eyes of the Hawk
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Cleric
+  changes:
+    - _id: 3uyly9yt
+      formula: max(1, floor(@class.level / 2))
+      target: skill.per
+      type: racial
+  description:
+    value: >-
+      <p>You gain a racial bonus on Perception checks equal to 1/2 your cleric
+      level (minimum +1). In addition, if you can act during a surprise round,
+      you receive a +2 racial bonus on your Initiative check.</p>
+
+      <p>This power replaces the Speak with Animals power granted by the Animal
+      Domain.</p>
+  subType: classFeat
+type: feat

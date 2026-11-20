@@ -1,0 +1,48 @@
+_id: FXrwYG5Ho5lo2cHN
+_key: '!items!FXrwYG5Ho5lo2cHN'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Litany of Dependability
+system:
+  actions:
+    - _id: lTcwa1a0UruhxOnD
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>By uttering this litany, you cause one creature to take the average
+      result of its next attack roll, saving throw, skill check, or ability
+      check. While subject to this spell, the target cannot be the target of
+      another spell that has the word "litany" in the title.</p>
+  learnedAt:
+    class:
+      inquisitor: 4
+      paladin: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9488
+      pages: '13'
+  subschool:
+    - compulsion
+type: spell

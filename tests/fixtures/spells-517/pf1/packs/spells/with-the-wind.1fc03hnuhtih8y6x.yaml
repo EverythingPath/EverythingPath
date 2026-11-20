@@ -1,0 +1,56 @@
+_id: 1fc03hnuhtih8y6x
+_key: '!items!1fc03hnuhtih8y6x'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: With the Wind
+system:
+  actions:
+    - _id: ll2occblbuphfjzn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create eddies in the air around the subject that protect it from
+      being checked or blown away. The target can't be moved by winds of less
+      than windstorm force unless it wishes to be.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      occultist: 2
+      ranger: 2
+      sorcerer: 2
+      spiritualist: 2
+      wizard: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO1140
+      pages: '237'
+type: spell

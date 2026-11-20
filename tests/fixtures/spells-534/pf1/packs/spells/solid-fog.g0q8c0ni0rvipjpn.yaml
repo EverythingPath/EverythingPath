@@ -1,0 +1,68 @@
+_id: g0q8c0ni0rvipjpn
+_key: '!items!g0q8c0ni0rvipjpn'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Solid Fog
+system:
+  actions:
+    - _id: nf62bedhv4pcopmr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      effect: fog spreads in 20-ft. radius
+      name: Use
+      range:
+        units: medium
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g33euis7yi9pwddy]{fog cloud}, but in
+      addition to obscuring sight, the <em>solid fog</em> is so thick that it
+      impedes movement.</p><p>Creatures moving through a <em>solid fog</em> move
+      at half their normal speed and take a -2 penalty on all melee attack and
+      melee damage rolls. The vapors prevent effective ranged weapon attacks
+      (except for magic rays and the like). A creature or object that falls into
+      <em>solid fog</em> is slowed so that each 10 feet of vapor that it passes
+      through reduces the falling damage by 1d6. A creature cannot take a
+      5-foot-step while in <em>solid fog</em>. <em>Solid fog</em>, and effects
+      that work like <em>solid fog</em>, do not stack with each other in terms
+      of slowed movement and attack penalties.</p><p>Unlike normal fog, only a
+      severe wind (31+ mph) disperses these vapors, and it does so in 1
+      round.</p><p><em>Solid fog</em> can be made permanent with a
+      <em>permanency</em> spell. A permanent <em>solid fog</em> dispersed by
+      wind reforms in 10 minutes.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      magus: 4
+      mesmerist: 4
+      shaman: 4
+      sorcerer: 4
+      spiritualist: 4
+      summonerUnchained: 4
+      witch: 4
+      wizard: 4
+    subDomain:
+      Cloud: 4
+  level: 4
+  materials:
+    value: powdered peas and an animal hoof
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '345'
+  sr: false
+  subschool:
+    - creation
+type: spell

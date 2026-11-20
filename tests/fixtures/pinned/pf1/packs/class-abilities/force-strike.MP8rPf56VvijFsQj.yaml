@@ -1,0 +1,44 @@
+_id: MP8rPf56VvijFsQj
+_key: '!items!MP8rPf56VvijFsQj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Force Strike
+system:
+  abilityType: su
+  actions:
+    - _id: 5j365t7fss8ot3s6
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + @class.level
+            types:
+              - force
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>The arcanist can unleash a blast of force by expending 1 point from her
+      arcane reservoir. This attack automatically strikes one target within 30
+      feet (as @UUID[Compendium.pf1.spells.49yc9dpr4kvgki2s]{Magic Missile}) and
+      deals 1d4 points of force damage, plus 1 point of damage per arcanist
+      level. Spells and effects that negate
+      @UUID[Compendium.pf1.spells.49yc9dpr4kvgki2s]{Magic Missile} also negate
+      this effect.</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat

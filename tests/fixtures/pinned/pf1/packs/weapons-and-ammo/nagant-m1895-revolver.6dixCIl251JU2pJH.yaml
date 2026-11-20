@@ -1,0 +1,67 @@
+_id: 6dixCIl251JU2pJH
+_key: '!items!6dixCIl251JU2pJH'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-pistol-brass.webp
+name: Nagant M1895 Revolver
+system:
+  actions:
+    - _id: 9h1aer0gs8qzd958
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Nagant M1895 Revolver
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Damage</strong> 1d8 (medium);
+      <strong>Critical</strong> x4; <strong>Range</strong> 80 ft.;
+      <strong>Type</strong> B and P</p><p><strong>Misfire</strong> 1;
+      <strong>Capacity</strong> 7</p><h3>Description</h3><p>This firearm is
+      identical in operation to the advanced firearms
+      @UUID[Compendium.pf1.weapons-and-ammo.Item.8swHnPGMoZGkVHjp]{revolver},
+      though it has a capacity of 7 instead of 6.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 400
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: exotic
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 4
+type: weapon

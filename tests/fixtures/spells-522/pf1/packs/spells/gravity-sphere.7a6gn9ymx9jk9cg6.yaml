@@ -1,0 +1,74 @@
+_id: 7a6gn9ymx9jk9cg6
+_key: '!items!7a6gn9ymx9jk9cg6'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Gravity Sphere
+system:
+  actions:
+    - _id: k8n3k3b15n8aip87
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: 30-ft.-radius sphere of altered gravity
+      name: Use
+      range:
+        units: medium
+      save:
+        description: none (see text)
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You affect the local <i>gravity</i> field in a 30-foot-radius sphere
+      around the spell's designated point of origin. Creatures in the affected
+      area can be weighed down by high <i>gravity</i>, lightened by low
+      <i>gravity</i>, or left to float in an area with no <i>gravity</i>,
+      depending on the effect you choose for your <i>gravity sphere</i>. See
+      page 18 for rules on the effects of high, low, and no
+      <i>gravity</i>.</p><p>Creatures that fall within the area of a <i>gravity
+      sphere</i> spell take more damage from the fall if the <i>gravity</i>
+      within is higher and less damage if the <i>gravity</i> within is lower.
+      However, if the creature falls through a <i>gravity sphere</i> and
+      continues to fall in a non-affected area, the rest of the fall damage is
+      calculated normally. For instance, if a creature falls through 20 feet of
+      a low<i>gravity sphere</i> and an additional 30 feet outside the sphere,
+      it would take 1d6 points of damage for the 20 feet of low <i>gravity</i>
+      plus 3d6 points of damage as normal for the 30 feet outside the sphere
+      (for a total of 4d6 points of damage).</p><p>This spell doesn't counteract
+      or negate the effects of other spells that affect <i>gravity</i>; both
+      effects occur simultaneously. For instance, a no-<i>gravity <i>gravity</i>
+      sphere</i> spell cast within the area of a <i>reverse gravity</i> spell
+      would simply mean that creatures float about until the <i>gravity
+      sphere</i>'s duration expires or they exit the <i>gravity sphere</i>, at
+      which point they return to the top of the <i>reverse gravity</i> effect's
+      area. If both <i>gravity</i>-altering magical effects could not feasibly
+      take place simultaneously (at the GM's discretion), the <i>gravity
+      sphere</i> spell supersedes the previous effect (if it's higherlevel than
+      the previous effect) or simply fails (if it's lower-level).</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      druid: 6
+      hunter: 6
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a marble
+  school: trs
+  sources:
+    - id: PZO9449
+      pages: '28'
+  sr: false
+type: spell

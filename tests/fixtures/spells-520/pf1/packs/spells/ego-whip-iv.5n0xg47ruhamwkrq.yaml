@@ -1,0 +1,49 @@
+_id: 5n0xg47ruhamwkrq
+_key: '!items!5n0xg47ruhamwkrq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Ego Whip IV
+system:
+  actions:
+    - _id: 8yzotvgwl381atft
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.Item.z6xg1ckozmmx2s3q]{ego whip I}, but the
+      target takes -8 penalty to the chosen ability score and is staggered for
+      1d8 rounds on a failed Will save. This spell can be undercast.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '169'
+  subschool:
+    - compulsion
+type: spell

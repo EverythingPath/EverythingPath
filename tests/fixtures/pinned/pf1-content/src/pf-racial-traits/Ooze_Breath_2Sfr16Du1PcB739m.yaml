@@ -1,0 +1,64 @@
+_id: 2Sfr16Du1PcB739m
+_key: '!items!2Sfr16Du1PcB739m'
+_stats:
+  coreVersion: '12.331'
+folder: NdqSKNr56WP9EuED
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Ooze Breath
+system:
+  abilityType: su
+  actions:
+    - _id: mBRvy6NdKsawx0u8
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5' (1.5 m) cone
+      damage:
+        parts:
+          - formula: (min(5, floor(@attributes.hd.total / 2)))d4
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#44f370'
+        size: '5'
+        type: cone
+      name: Ooze Breath
+      notes:
+        effect:
+          - those that fail save are @Condition[sickened] for 3 rds
+      range:
+        units: ft
+        value: '5'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: half damage, negate sickened
+        type: ref
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Some undines' outsider heritage can be
+      traced to ooze mephits. These undines have a breath weapon that is a
+      @Distance[5 ft;dual] cone of slime usable once per day. The slime deals
+      1d4 points of acid damage per two character levels (maximum 5d4) and
+      sickens creatures in the area for 3 rounds. A successful Reflex saving
+      throw (DC 10 + 1/2 the undine's level + the undine's Constitution
+      modifier) halves the damage and negates the sickened effect. This racial
+      trait replaces the spell-like ability racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '175'
+  subType: racial
+  tags:
+    - Undine
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
