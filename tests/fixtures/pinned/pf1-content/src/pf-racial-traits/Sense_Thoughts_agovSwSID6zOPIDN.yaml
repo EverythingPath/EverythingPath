@@ -1,0 +1,69 @@
+_id: agovSwSID6zOPIDN
+_key: '!items!agovSwSID6zOPIDN'
+_stats:
+  coreVersion: '12.331'
+folder: hGoMGOJhqQPRBkaV
+img: systems/pf1/icons/races/elf.png
+name: Sense Thoughts
+system:
+  actions:
+    - _id: ydgrAEMiCVbXPv5u
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect
+        thoughts}</p><p>You detect surface thoughts. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of thoughts (from
+        conscious creatures with Intelligence scores of 1 or higher).</p><p>2nd
+        Round: Number of thinking minds and the Intelligence score of each. If
+        the highest Intelligence is 26 or higher (and at least 10 points higher
+        than your own Intelligence score), you are stunned for 1 round and the
+        spell ends. This spell does not let you determine the location of the
+        thinking minds if you can't see the creatures whose thoughts you are
+        detecting.</p><p>3rd Round: Surface thoughts of any mind in the area. A
+        target's Will save prevents you from reading its thoughts, and you must
+        cast detect thoughts again to have another chance. Creatures of animal
+        intelligence (Int 1 or 2) have simple, instinctual thoughts.</p><p>Each
+        round, you can turn to detect thoughts in a new area. The spell can
+        penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of common
+        metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood or dirt
+        blocks it.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: Concentration up to [[@attributes.hd.total]] minutes
+      name: Detect Thoughts
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: Will negates; see text
+        type: will
+  description:
+    value: >-
+      <p><strong>Race</strong>: Elf<br /><strong>Replaced Trait(s)</strong>:
+      Elven Immunities, Keen Senses</p><hr /><p>Ekujae are so closely attuned to
+      each other and their environment that they seem able to read each other's
+      minds and their foes' thoughts. Elves with this alternate racial trait can
+      use <em>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect
+      thoughts}</em> as a spell-like ability once per day, with a caster level
+      equal to their character level.</p><p>This replaces elven immunities and
+      keen senses.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9491
+      pages: '11'
+  subType: racial
+  tags:
+    - Elf
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

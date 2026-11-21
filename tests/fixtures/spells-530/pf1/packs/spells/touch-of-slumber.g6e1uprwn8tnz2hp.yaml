@@ -1,0 +1,69 @@
+_id: g6e1uprwn8tnz2hp
+_key: '!items!g6e1uprwn8tnz2hp'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Touch of Slumber
+system:
+  actions:
+    - _id: ulb5chb8829ikcjr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: nonhostile creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions only against a creature with an attitude toward
+      you of indifferent or better, and only if the target is not hostile toward
+      you or your visible allies. A target touched by you (this touch usually
+      requires a successful melee touch attack) must succeed at a Will saving
+      throw or fall asleep for 2d6 hours. While asleep, the creature is
+      helpless. For 1 minute after the creature is affected, any loud noise or
+      rough contact causes it to awaken immediately. Thereafter, slapping or
+      wounding an affected creature awakens it, but normal noise does not.
+      Awakening a creature is a standard action (this is an application of the
+      aid another action).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 6
+      cleric: 5
+      druid: 5
+      hunter: 5
+      oracle: 5
+      psychic: 6
+      shaman: 5
+      skald: 6
+      sorcerer: 5
+      warpriest: 5
+      witch: 6
+      wizard: 5
+  level: 5
+  materials:
+    value: a bit of seaweed
+  school: enc
+  sources:
+    - id: PZO9468
+      pages: '26'
+  subschool:
+    - compulsion
+type: spell

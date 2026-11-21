@@ -1,0 +1,90 @@
+_id: l6pQh0wzf3GspTKB
+_key: '!items!l6pQh0wzf3GspTKB'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Dissolution’s Child
+system:
+  abilityType: su
+  actions:
+    - _id: EMQdDvKea9nlRdvf
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>This works like
+        @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, except
+        it only lasts 1 round per level (maximum 5 rounds).</p><p>The creature
+        or object touched becomes invisible. If the recipient is a creature
+        carrying gear, that vanishes, too. If you cast the spell on someone
+        else, neither you nor your allies can see the subject, unless you can
+        normally see invisible things or you employ magic to do so.</p><p>Items
+        dropped or put down by an invisible creature become visible; items
+        picked up disappear if tucked into the clothing or pouches worn by the
+        creature. Light, however, never becomes invisible, although a source of
+        light can become so (thus, the effect is that of a light with no visible
+        source). Any part of an item that the subject carries but that extends
+        more than 10 feet from it becomes visible.</p><p>Of course, the subject
+        is not magically silenced, and certain other conditions can render the
+        recipient detectable (such as swimming in water or stepping in a
+        puddle). If a check is required, a stationary invisible creature has a
+        +40 bonus on its Stealth checks. This bonus is reduced to +20 if the
+        creature is moving. The spell ends if the subject attacks any creature.
+        For purposes of this spell, an attack includes any spell targeting a foe
+        or whose area or effect includes a foe. Exactly who is a foe depends on
+        the invisible character's perceptions. Actions directed at unattended
+        objects do not break the spell. Causing harm indirectly is not an
+        attack. Thus, an invisible being can open doors, talk, eat, climb
+        stairs, summon monsters and have them attack, cut the ropes holding a
+        rope bridge while enemies are on the bridge, remotely trigger traps,
+        open a portcullis to release attack dogs, and so forth. If the subject
+        attacks directly, however, it immediately becomes visible along with all
+        its gear.</p><p>Spells such as bless that specifically affect allies but
+        not foes are not attacks for this purpose, even when they include foes
+        in their area.</p><p>Invisibility can be made permanent (on objects
+        only) with a permanency spell.</p>
+      duration:
+        units: round
+        value: min(5, @attributes.hd.total)
+      name: Effective invisibility
+      range:
+        units: spec
+        value: personal or touch
+      target:
+        value: >-
+          you or a creature or object weighing no more than
+          [[@attributes.hd.total *100]] lbs
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Shadow Plane,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.nb7WkJkqL3bnhkU5]{Fey}
+      type,
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.VZg9M6DaaZkIA8ql]{Undead}
+      type, or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.6am3c1HIosN3E6vk]{Half-Undead}
+      subtype</p><hr /><p>Members of this race gain the following supernatural
+      ability: Once per day, a member of this race can change its appearance to
+      look as if it were little more than a @Distance[4 ft;dual]-tall area of
+      shadow. Its physical form still exists and it is not incorporeal—only its
+      appearance changes. This racial trait works like
+      @UUID[Compendium.pf1.spells.Item.oylikodnyku2zewu]{invisibility}, except
+      the effect only lasts 1 round per level (maximum 5 rounds).</p>
+  racePoints: 5
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '227'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

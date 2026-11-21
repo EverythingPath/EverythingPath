@@ -1,0 +1,90 @@
+_id: 19p4nr8rsvt42lmn
+_key: '!items!19p4nr8rsvt42lmn'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Mage's Disjunction
+system:
+  actions:
+    - _id: reeuysfkrlpz752l
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Single Item
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one magic item (see text)
+    - _id: PtWbbWVjeWA5YsEs
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: >-
+        all magical effects and magic items within a 40-ft.-radius burst (see
+        text)
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: 40-ft. Radius
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>All magical effects and magic items within the radius of the spell,
+      except for those that you carry or touch, are disjoined.</p><p>That is,
+      spells and spell-like effects are unraveled and destroyed completely
+      (ending the effect as a <i>dispel magic</i> spell does), and each
+      permanent magic item must make a successful Will save or be turned into a
+      normal item for the duration of this spell.</p><p>An item in a creature's
+      possession uses its own Will save bonus or its possessor's Will save
+      bonus, whichever is higher. If an item's saving throw results in a natural
+      1 on the die, the item is destroyed instead of being suppressed.</p><p>You
+      also have a 1% chance per caster level of destroying an <i>antimagic
+      field</i>. If the <i>antimagic field</i> survives the <i>disjunction</i>,
+      no items within it are disjoined.</p><p>You can also use this spell to
+      target a single item. The item gets a Will save at a -5 penalty to avoid
+      being permanently destroyed. Even artifacts are subject to mage's
+      <i>disjunction</i>, though there is only a 1% chance per caster level of
+      actually affecting such powerful items. If successful, the artifact's
+      power unravels, and it is destroyed (with no save). If an artifact is
+      destroyed, you must make a DC 25 Will save or permanently lose all
+      spellcasting abilities. These abilities cannot be recovered by mortal
+      magic, not even <i>miracle</i> or <i>wish</i>. Destroying artifacts is a
+      dangerous business, and it is 95% likely to attract the attention of some
+      powerful being who has an interest in or connection with the device.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      wizard: 9
+    domain:
+      Magic: 9
+  level: 9
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '306'
+  sr: false
+type: spell

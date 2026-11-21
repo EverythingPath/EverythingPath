@@ -1,0 +1,60 @@
+_id: wRfDdRQGKnZm3nzg
+_key: '!items!wRfDdRQGKnZm3nzg'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/acid/projectile-needles-salvo-green.webp
+name: Pinecone Bomb
+system:
+  actions:
+    - _id: VsN109AYcQMf6KkU
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius spread
+      damage:
+        parts:
+          - formula: (min(5, floor(@cl / 2)))d6
+            types:
+              - piercing
+      duration:
+        units: inst
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Created by Ghorus when he was working to create the ghorans,
+      <em>pinecone bomb</em> infuses a small pinecone with power, causing it to
+      detonate with explosive force when thrown. You throw the pinecone at a
+      target or point within range and it detonates immediately upon landing,
+      dealing 1d6 points of piercing damage per 2 caster levels you have
+      (maximum 5d6) to each creature caught in the spread.</p>
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      ranger: 3
+      shaman: 2
+      witch: 2
+  level: 2
+  materials:
+    value: a pinecone
+  school: evo
+  sources:
+    - id: PZO9494
+      pages: '13'
+type: spell

@@ -1,0 +1,42 @@
+_id: 0laD2ApE7rKwWY7g
+_key: '!items!0laD2ApE7rKwWY7g'
+_stats:
+  coreVersion: '12.331'
+folder: uFWvsCAH0jX3fq16
+img: systems/pf1/icons/skills/yellow_01.jpg
+name: The Rider
+system:
+  actions:
+    - _id: lutLdblEBVCT4i2b
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  description:
+    value: >-
+      <p><em>You are born under the auspice of the mounted caravan guard, whose
+      very presence deters danger.</em></p><p><strong>Requirements</strong>: 14
+      Desnus - 20 Sarenith</p><p><strong>Benefits</strong>: Once per day, when
+      you succeed at a Ride check, you can attempt an immediate Intimidate check
+      against the nearest foe. If you fail this check, the DC of your next
+      Intimidate check against that opponent does not increase (as it normally
+      would).</p>
+  scriptCalls:
+    - _id: IynEAUQzcxrWC7hd
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Roll Intimidate
+      type: script
+      value: await actor.rollSkill("int")
+  sources:
+    - id: PZO9269
+      pages: '37'
+  subType: trait
+  traitType: cosmic
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

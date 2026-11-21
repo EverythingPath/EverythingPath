@@ -1,0 +1,33 @@
+_id: RtpsbHxEozt6xoRY
+_key: '!items!RtpsbHxEozt6xoRY'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/greater-feint.png
+name: Anticipate Peril
+system:
+  changes:
+    - _id: qrpv5exz
+      formula: min(5,(@item.level))
+      target: init
+      type: insight
+  contextNotes:
+    - target: init
+      text: Anticipate Peril buff has been consumed and needs to be removed.
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the caster level of Anticipate
+      Peril.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.ja1p1uuf8fp6fiox]{Anticipate
+      Peril}</p><p>The first time during this spell’s duration that the target
+      has to make an initiative check, the creature adds an insight bonus on
+      that initiative check equal to the spell’s caster level (maximum +5). Once
+      this bonus applies, the effects of the spell end.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

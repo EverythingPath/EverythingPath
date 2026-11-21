@@ -1,0 +1,58 @@
+_id: b8h35mj2mzvhbqux
+_key: '!items!b8h35mj2mzvhbqux'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Heroic Fortune
+system:
+  actions:
+    - _id: xa6mi2gonlgi6hjs
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell grants 1 hero point to the target. This hero point must be
+      spent before the duration expires, or it is lost. The bonus hero point is
+      spent before any other hero points the target might possess.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      bard: 2
+      cleric: 2
+      investigator: 2
+      oracle: 2
+      paladin: 3
+      skald: 2
+      warpriest: 2
+  level: 2
+  materials:
+    gpValue: 100
+    value: diamond dust worth 100 gp
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '324'
+  sr: false
+type: spell

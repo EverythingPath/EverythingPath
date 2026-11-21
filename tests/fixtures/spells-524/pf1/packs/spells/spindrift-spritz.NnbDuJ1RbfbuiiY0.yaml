@@ -1,0 +1,56 @@
+_id: NnbDuJ1RbfbuiiY0
+_key: '!items!NnbDuJ1RbfbuiiY0'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Spindrift Spritz
+system:
+  actions:
+    - _id: J5oXp7UsQcit9sb0
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can cast this spell only as a response to a target attempting a
+      saving throw against an effect that would cause the fatigued, shaken,
+      sickened, or staggered conditions. The target can roll its saving throw
+      twice and take the higher result.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      cleric: 2
+      druid: 2
+      hunter: 1
+      inquisitor: 2
+      oracle: 2
+      paladin: 1
+      ranger: 1
+      shaman: 2
+      spiritualist: 2
+      warpriest: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO9483
+      pages: '14'
+  subschool:
+    - healing
+type: spell
