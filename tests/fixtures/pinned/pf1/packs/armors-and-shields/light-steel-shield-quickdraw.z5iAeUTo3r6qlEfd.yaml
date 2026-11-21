@@ -1,0 +1,63 @@
+_id: z5iAeUTo3r6qlEfd
+_key: '!items!z5iAeUTo3r6qlEfd'
+_stats:
+  coreVersion: '12.343'
+folder: DtVJVwL87ELQxk7u
+img: systems/pf1/icons/items/armor/shield-light-metal.png
+name: Light Steel Shield (Quickdraw)
+system:
+  actions:
+    - _id: ZhdEskX7UWBenKy2
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Bash
+      range:
+        units: melee
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 1
+  description:
+    unidentified: >-
+      <p>This light steel shield is specially crafted with a series of straps to
+      allow a character proficient in shields to ready or stow it on her back
+      quickly and easily. If you have a base attack bonus of +1 or higher, you
+      may don or put away a quickdraw shield as a swift action combined with a
+      regular move. If you have the Two-Weapon Fighting feat, you can draw a
+      light or onehanded weapon with one hand and a quickdraw shield with the
+      other in the time it would normally take you to draw one weapon. If you
+      have the Quick Draw feat, you may don or put away a quickdraw shield as a
+      free action.</p>
+  equipmentSubtype: lightShield
+  hardness: 10
+  hp:
+    base: 10
+  price: 59
+  slot: shield
+  sources:
+    - id: PZO1123
+      pages: '9'
+    - id: PZO1115
+      pages: '179'
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 7
+type: equipment

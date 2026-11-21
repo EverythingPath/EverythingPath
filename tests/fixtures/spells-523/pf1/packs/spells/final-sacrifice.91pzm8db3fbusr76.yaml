@@ -1,0 +1,64 @@
+_id: 91pzm8db3fbusr76
+_key: '!items!91pzm8db3fbusr76'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Final Sacrifice
+system:
+  actions:
+    - _id: n1h5iz0kv641wj5l
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates, then Reflex half (see text)
+        type: ref
+      target:
+        value: one summoned creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You disrupt the conjuring energies within a summoned creature, causing
+      it to violently explode. If the target fails its Fortitude save, it is
+      immediately slain and all creatures within 20 feet of the target take 1d4
+      points of damage per spell level of the  summoning spell that conjured the
+      target. This damage is fire damage unless the target creature has the cold
+      or water subtype, in which case it's cold damage. Creatures caught in this
+      explosion take half damage if they succeed at their Reflex saves against
+      this spell's DC. <i>Final sacrifice</i> can detonate a summoner's eidolon,
+      though an eidolon receives a +4 bonus on its Fortitude save unless the
+      spell is cast by the eidolon's own summoner. If this spell targets an
+      eidolon, creatures within 20 feet of the eidolon take an amount of damage
+      equal to 1d4 + 1/2 the caster level of the summoner who controlled the
+      eidolon.</p>
+  learnedAt:
+    class:
+      antipaladin: 3
+      arcanist: 3
+      bloodrager: 2
+      cleric: 3
+      oracle: 3
+      shaman: 3
+      sorcerer: 3
+      summoner: 2
+      summonerUnchained: 2
+      warpriest: 3
+      witch: 4
+      wizard: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO9458
+      pages: '22'
+type: spell

@@ -1,0 +1,60 @@
+_id: nb9ijjhie5l7x2ir
+_key: '!items!nb9ijjhie5l7x2ir'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Out of Sight
+system:
+  actions:
+    - _id: svmtc7g2p0a7nifi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 minute/level (D); see text
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The spell inhibits the memories of creatures that perceive you. While
+      creatures can perceive you normally, when a creature stops observing you,
+      it must attempt a Will save (spell resistance applies). If it fails, it
+      loses all memory of its awareness of you and your actions while you were
+      under the effects of this spell. The spell's duration listed above
+      measures how long the <i>Out of Sight</i> effect lasts on you, but the
+      memory alteration is instantaneous and can be reversed only by magic such
+      as <i>modify memory</i>.  The creature is still aware of any other changes
+      to itself or its environment. For instance, a guard will remember running,
+      and may notice a newly unlocked door, but will not remember that he was
+      chasing after you.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      medium: 3
+      mesmerist: 3
+      psychic: 4
+  level: 4
+  materials:
+    value: a strip of black cloth
+  school: enc
+  sources:
+    - id: PZO9461
+      pages: '31'
+type: spell

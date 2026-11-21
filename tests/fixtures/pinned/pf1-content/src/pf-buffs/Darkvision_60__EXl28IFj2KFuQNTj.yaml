@@ -1,0 +1,27 @@
+_id: EXl28IFj2KFuQNTj
+_key: '!items!EXl28IFj2KFuQNTj'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Darkvision 60'
+system:
+  description:
+    value: >-
+      <p>Darkvision is the extraordinary ability to see with no light source at
+      all, out to a range specified for the creature. Darkvision is
+      black-and-white only (colors cannot be discerned). It does not allow
+      characters to see anything that they could not see otherwise—invisible
+      objects are still invisible, and illusions are still visible as what they
+      seem to be. Likewise, darkvision subjects a creature to gaze attacks
+      normally. The presence of light does not spoil darkvision.</p>
+  level: null
+  scriptCalls:
+    - _id: 5zKh7D3b3myvRtSK
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: darkvision-60-toggle
+      type: script
+      value: 'actor.update({ "system.traits.senses.dv": state ? 60 : 0});'
+type: buff

@@ -1,0 +1,64 @@
+_id: ao15o4r0jwvl9obm
+_key: '!items!ao15o4r0jwvl9obm'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: systems/pf1/icons/items/inventory/monster-bones.jpg
+name: Boneshatter
+system:
+  actions:
+    - _id: qmybu24s0sbtttzr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(15, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: spec
+        value: instantaneous and 1 minute/level (see text)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: one corporeal creature or object
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's bones (or exoskeleton) splinter, dealing 1d6 points of
+      damage per caster level (maximum 15d6) to the target, which is also
+      exhausted for 1 minute per caster level from the pain and exertion of the
+      transformation.  If the target succeeds at its save, it takes half damage
+      and is fatigued rather than exhausted. Objects made of bone, chitin, or
+      similar material take half again as much damage (+50%) from this spell.
+      This spell has no effect on a creature that has neither a skeleton nor a
+      hard carapace.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 5
+      oracle: 5
+      sorcerer: 4
+      warpriest: 5
+      wizard: 4
+  level: 4
+  materials:
+    value: a broken bone
+  school: nec
+  sources:
+    - id: PZO9084
+      pages: '15'
+    - id: PZO9403
+      pages: '26'
+type: spell

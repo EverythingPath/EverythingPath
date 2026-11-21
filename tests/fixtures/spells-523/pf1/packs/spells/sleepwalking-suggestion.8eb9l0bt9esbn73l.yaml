@@ -1,0 +1,87 @@
+_id: 8eb9l0bt9esbn73l
+_key: '!items!8eb9l0bt9esbn73l'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Sleepwalking Suggestion
+system:
+  actions:
+    - _id: 51jh1fhzhf29d3yh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates or none (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You compel the target creature to rise from its sleep as if
+      sleepwalking and perform a course of activity (limited to a sentence or
+      two). The spell takes effect immediately if the target is already asleep,
+      or as soon as the target falls asleep if it is conscious. You can specify
+      that the creature should wait before taking action when you give your
+      instructions if you so choose. A sleeping creature doesn’t get a save
+      against this spell. The suggested activity must not cause the target to
+      directly harm itself or others, but it doesn’t need to be reasonable. For
+      example, you could instruct the target to unlock doors and windows or
+      poison its ally’s rations, but not jump off a roof or perform a coup de
+      grace action against a sleeping ally. Instructions that cause direct harm
+      prompt the target to awaken just prior to performing the action and the
+      target experiences a vague memory of what it was supposed to do.</p><p>The
+      target moves at its speed, but isn’t capable of running or moving at a
+      higher rate of speed. It moves in dark conditions as if it had darkvision
+      and can perform most simple and skillbased actions, but it can’t engage in
+      combat, spellcasting, or actions that require significant cognitive
+      awareness (like making complex decisions, solving puzzles, or using
+      complicated magic items). If the creature takes any damage while
+      sleepwalking, it must attempt a new saving throw. If it succeeds, the
+      spell ends and the creature awakens. When the target completes the
+      suggested course of activity, or when the spell ends or is dismissed, the
+      target remains unconscious and returns to where it was sleeping and must
+      be awoken normally. It retains no memory of what it did while unconscious
+      (with the only exception described above).</p><p>Unlike the
+      @UUID[Compendium.pf1.spells.Item.ntcb8hjlxps8v212]{sleepwalk} spell,
+      attempts to use sleepwalking suggestion on a creature that is unconscious
+      for any reason other than sleep automatically fail. A creature affected by
+      sleepwalking suggestion is unaware it has been programmed to act in its
+      sleep (unless awoken because it was about to cause harm).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      medium: 3
+      mesmerist: 4
+      psychic: 5
+      skald: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    gpValue: 180
+    value: two doses of oil of taggit worth 180 gp total
+  school: enc
+  sources:
+    - id: PZO1135
+      pages: '127'
+  subschool:
+    - compulsion
+type: spell
