@@ -1,0 +1,55 @@
+_id: 4vktns8ei7kyjr1z
+_key: '!items!4vktns8ei7kyjr1z'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Sensory Overload
+system:
+  actions:
+    - _id: qbzc9mq3va3u1h04
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: 1 creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You overload the target creature's senses, making it difficult for the
+      target to concentrate. For the duration of the effect, the target must
+      succeed at a Will save at the same DC as the original effect to perform
+      any standard or full-round action. On a failure,  the creature loses the
+      action that triggered the saving throw. If successful, the creature is
+      able to take the action, but this spell effect is not negated.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      psychic: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9477
+      pages: '11'
+  subschool:
+    - compulsion
+type: spell

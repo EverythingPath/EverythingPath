@@ -1,0 +1,29 @@
+_id: RaWImNXVEU089SeV
+_key: '!items!RaWImNXVEU089SeV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Naga Defenses
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Bloodrager
+  changes:
+    - _id: e6davhgp
+      formula: 2 + if(gte(@class.level, 16), 2) + if(gte(@class.level, 20), 2)
+      target: nac
+      type: enh
+  description:
+    value: >-
+      <p>At 8th level, when entering a bloodrage, you gain a +2 enhancement
+      bonus to your natural armor bonus and a +4 bonus on saves against
+      poison.</p>
+
+      <p>At 16th level, the bonus to your natural armor increases to +4 and the
+      bonus on saves against poison increases to +8.</p>
+
+      <p>At 20th level, the bonus to your natural armor increases to +6, and you
+      gain immunity to poison.</p>
+  subType: classFeat
+type: feat

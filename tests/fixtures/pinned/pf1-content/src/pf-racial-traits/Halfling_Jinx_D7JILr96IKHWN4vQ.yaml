@@ -1,0 +1,72 @@
+_id: D7JILr96IKHWN4vQ
+_key: '!items!D7JILr96IKHWN4vQ'
+_stats:
+  coreVersion: '12.331'
+folder: RXJPpac5E8PiR8Qt
+img: systems/pf1/icons/races/halfling.png
+name: Halfling Jinx
+system:
+  abilityType: su
+  actions:
+    - _id: WHRImfoJCTLDctkZ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Curse another creature with bad luck at will as a standard
+        action.</p><p>This curse has a range of @Distance[30 ft;dual], and you
+        must be able to see the target and have line of effect to it.</p><p>The
+        target gets a Will saving throw to resist this jinx (DC = 10 + 1/2 your
+        level + your Charisma modifier).</p><p>If your target makes this saving
+        throw, it is immune to your jinx ability for 24 hours.</p><p>A jinxed
+        creature takes a -1 penalty on all saving throws.</p><p>This jinx lasts
+        for 24 hours or until you attempt to use your jinx again.</p><p>A jinx
+        is a supernatural ability, is not mind-affecting, does not allow spell
+        resistance, and can affect any kind of creature not immune to luck
+        effects.</p>
+      duration:
+        units: hour
+        value: '24'
+      name: Jinx
+      range:
+        minUnits: ft
+        minValue: '0'
+        units: spec
+        value: 30 ft (9 m)
+      save:
+        dc: 10 + @abilities.cha.mod + floor(@attributes.hd.total / 2)
+        description: Negates
+        type: will
+      target:
+        value: one creature (not immune to luck effects)
+  description:
+    instructions: >-
+      <p><em><strong>Special note</strong>: From Halflings of Golarion, pg.
+      26.</em></p><p><em>A halfling can select the
+      @UUID[Compendium.pf1.feats.Item.QWQH2kZgd1xZicuX]{Ability Focus} monster
+      feat (see page 314 of the Pathfinder RPG Bestiary) to increase the DC of
+      his jinx.</em></p>
+    value: >-
+      <p><strong>Race</strong>: Halfling<br /><strong>Replaced
+      Trait(s)</strong>: Halfling Luck</p><hr /><p>You lose the halfling luck
+      racial trait (and its +1 racial bonus on saving throws) and instead gain
+      the ability to curse another creature with bad luck at will as a standard
+      action. This curse has a range of 30 feet, and you must be able to see the
+      target and have line of effect to it. The target gets a Will saving throw
+      to resist this jinx (DC = 10 + 1/2 your level + your Charisma modifier).
+      If your target makes this saving throw, it is immune to your jinx ability
+      for 24 hours. A jinxed creature takes a -1 penalty on all saving throws.
+      This jinx lasts for 24 hours or until you attempt to use your jinx again.
+      A jinx is a supernatural ability, is not mind-affecting, does not allow
+      spell resistance, and can affect any kind of creature not immune to luck
+      effects.</p><p></p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9415
+      pages: '27'
+  subType: racial
+  tags:
+    - Halfling
+type: feat

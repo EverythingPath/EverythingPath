@@ -1,0 +1,118 @@
+name: E2E browser runner
+
+on:
+  workflow_call:
+    inputs:
+      suite:
+        description: Browser suite (mandatory or nightly)
+        type: string
+        default: mandatory
+      budget_seconds:
+        description: Setup and execution budget from the job's start (e2e/README.md "Trusted CI configuration")
+        type: number
+        default: 1050
+      timeout_minutes:
+        description: The job's limit, the budget plus 2.5 minutes for teardown and evidence
+        type: number
+        default: 20
+      force_failure:
+        description: Exercise failure evidence and the diagnostic retry
+        type: boolean
+        default: false
+    outputs:
+      required_result:
+        description: Complete first-attempt browser result
+        value: ${{ jobs.browser.outputs.required_result }}
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    environment: e2e
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout_minutes }}
+    # Chromium, WebKit, Firefox and their OS dependencies come preinstalled, as
+    # in the verified local container. The tag must match @playwright/test in
+    # pnpm-lock.yaml. No secret is passed to the container definition; only the
+    # journey step below receives the environment credentials.
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+      options: --user 1001 --ipc host
+    defaults:
+      run:
+        shell: bash
+    outputs:
+      required_result: ${{ steps.journey.outputs.required_result }}
+    steps:
+      - name: Start the suite's setup and execution budget
+        run: echo "E2E_DEADLINE=$(( $(date +%s) + BUDGET_SECONDS ))" >> "$GITHUB_ENV"
+        env:
+          BUDGET_SECONDS: ${{ inputs.budget_seconds }}
+      - uses: actions/checkout@v4
+        timeout-minutes: 1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        timeout-minutes: 1
+      - uses: actions/setup-node@v4
+        timeout-minutes: 1
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies within the remaining budget
+        run: |
+          remaining=$(( E2E_DEADLINE - $(date +%s) ))
+          [ "$remaining" -gt 0 ] || exit 1
+          timeout --signal=INT --kill-after=5s "${remaining}s" pnpm install --frozen-lockfile
+      - name: Use the image's browsers
+        timeout-minutes: 1
+        run: |
+          # The runner forwards HOME but not PLAYWRIGHT_BROWSERS_PATH to Playwright.
+          [ "$(pnpm exec playwright --version)" = 'Version 1.63.0' ] || {
+            echo 'E2E: the Playwright container tag must match @playwright/test.'
+            exit 1
+          }
+          mkdir -p "$HOME/.cache"
+          ln -sfn /ms-playwright "$HOME/.cache/ms-playwright"
+      - name: Run browser journeys
+        id: journey
+        run: |
+          remaining=$(( E2E_DEADLINE - $(date +%s) ))
+          [ "$remaining" -gt 0 ] || exit 1
+          args=(--suite "$SUITE")
+          # The runner ends at E2E_DEADLINE less 30 s, so its report and
+          # final checkpoint are written before this interrupt.
+          timeout --signal=INT --kill-after=5s "${remaining}s" pnpm test:e2e --resources e2e/resources.ci.json --outer-deadline-epoch "$E2E_DEADLINE" "${args[@]}"
+        env:
+          SUITE: ${{ inputs.suite }}
+          E2E_TRUSTED_EXECUTION: 'true'
+          E2E_REVIEWED_SHA: ${{ github.sha }}
+          E2E_FORCE_FAILURE: ${{ inputs.force_failure == true && 'true' || 'false' }}
+          CLERK_PUBLISHABLE_KEY: ${{ vars.CLERK_PUBLISHABLE_KEY }}
+          CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_PREVIEW_DEPLOY_KEY }}
+      - name: Retain sanitized evidence
+        timeout-minutes: 1
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-safe-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e2e-artifacts/e2e-local-ci-slot-0/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Record nightly outcome
+        if: ${{ always() && inputs.suite == 'nightly' }}
+        run: |
+          if ! pnpm exec tsx e2e/nightly-triage.ts summarize; then
+            echo '{"failures":["infrastructure"]}' > nightly-summary.json
+          fi
+      - name: Retain recurrence summary
+        if: ${{ always() && inputs.suite == 'nightly' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-summary
+          path: nightly-summary.json
+          retention-days: 30
+          if-no-files-found: error

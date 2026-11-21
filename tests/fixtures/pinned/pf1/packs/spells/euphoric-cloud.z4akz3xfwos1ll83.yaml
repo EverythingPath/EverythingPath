@@ -1,0 +1,65 @@
+_id: z4akz3xfwos1ll83
+_key: '!items!z4akz3xfwos1ll83'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Euphoric Cloud
+system:
+  actions:
+    - _id: nkm4kwy22lr78fk5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      effect: fog spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a bank of fog similar to that created by <i>fog cloud</i>
+      except its vapors are intoxicating. Living creatures in the cloud become
+      fascinated. This condition lasts as long as a creature is in the cloud and
+      for 1d4+1 rounds after it leaves.</p><p>Any creature that succeeds at its
+      save but remains in the cloud must continue to save each round on your
+      turn.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      arcanist: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      mesmerist: 2
+      psychic: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    gpValue: 5
+    value: rare mushrooms worth 5 gp
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '181'
+    - id: PZO9208
+      pages: '57'
+  sr: false
+  subschool:
+    - creation
+type: spell

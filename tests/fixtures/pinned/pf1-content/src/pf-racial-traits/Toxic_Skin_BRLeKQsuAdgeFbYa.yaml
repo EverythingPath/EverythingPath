@@ -1,0 +1,79 @@
+_id: BRLeKQsuAdgeFbYa
+_key: '!items!BRLeKQsuAdgeFbYa'
+_stats:
+  coreVersion: '12.331'
+folder: cnthBFOul39AFnoN
+img: icons/commodities/biological/foot-amphibian-green.webp
+name: Toxic Skin
+system:
+  abilityType: ex
+  actions:
+    - _id: ODG4wuLZVcpXJjdg
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      area: Skin or Weapon
+      damage:
+        parts:
+          - formula: 1d2
+            types:
+              - Dexterity
+          - formula: 1d2
+            types:
+              - Dexterity
+          - formula: 1d2
+            types:
+              - Dexterity
+          - formula: 1d2
+            types:
+              - Dexterity
+          - formula: 1d2
+            types:
+              - Dexterity
+          - formula: 1d2
+            types:
+              - Dexterity
+      description: >-
+        <p><em>Grippli Poison</em>: Skin or weapon-contact or injury; <em>save
+        </em>Fort DC 10 + 1/2 the grippli's Hit Dice plus its Constitution
+        modifier; <em>frequency </em>1/round for 6 rounds; <em>effect </em>1d2
+        Dexterity damage; <em>cure </em>1 save.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Grippli Poison
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Cure 1 save
+        type: fort
+      target:
+        value: First creature to interact with target area
+  description:
+    value: >-
+      <p><strong>Race</strong>: Grippli<br /><strong>Replaced Trait(s)</strong>:
+      Swamp Stride, Camouflage</p><hr /><p>Once per day as a swift action, a
+      grippli can create a poison that can be applied to a weapon or delivered
+      as a touch attack. Alternatively, the grippli can smear the poison on its
+      own body as a standard action, affecting the first creature to hit it with
+      an unarmed strike or natural weapon. The poison loses its potency after 1
+      hour. The grippli is immune to its own poison. This racial trait replaces
+      swamp stride and camouflage.</p><p>  <i>Grippli Poison</i>: Skin or
+      weapon-contact or injury; <i>save </i>Fort DC 10 + 1/2 the grippli's Hit
+      Dice plus its Constitution modifier; <i>frequency </i>1/round for 6
+      rounds; <i>effect </i>1d2 Dexterity damage; <i>cure </i>1 save.</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '190'
+  subType: racial
+  tags:
+    - Grippli
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
