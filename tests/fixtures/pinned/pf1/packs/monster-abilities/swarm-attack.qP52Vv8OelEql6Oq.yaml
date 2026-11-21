@@ -1,0 +1,55 @@
+_id: qP52Vv8OelEql6Oq
+_key: '!items!qP52Vv8OelEql6Oq'
+_stats:
+  coreVersion: '12.343'
+folder: 0rW9NwM4coxKB7uY
+img: icons/creatures/invertebrates/wasp-swarm-attack.webp
+name: Swarm Attack
+system:
+  actions:
+    - _id: RPbC0gO0bojimD6B
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (ceil(@attributes.hd.total / 5))d6
+            types:
+              - untyped
+      name: Attack
+  description:
+    value: >-
+      <p>Creatures with the swarm subtype don't make standard melee attacks.
+      Instead, they deal automatic damage to any creature whose space they
+      occupy at the end of their move, with no attack roll needed. Swarm attacks
+      are not subject to a miss chance for concealment or cover. A swarm's
+      statistics block has "swarm" in the Melee entries, with no attack bonus
+      given. The amount of damage a swarm deals is based on its Hit Dice, as
+      shown below.</p><table><thead><tr><th>Swarm HD</th><th>Swarm Base
+      Damage</th></tr></thead><tbody><tr><td><p>1-5</p></td><td><p>1d6</p></td></tr><tr><td><p>6-10</p></td><td><p>2d6</p></td></tr><tr><td><p>11-15</p></td><td><p>3d6</p></td></tr><tr><td><p>16-20</p></td><td><p>4d6</p></td></tr><tr><td><p>21
+      or more</p></td><td><p>5d6</p></td></tr></tbody></table><p>A swarm's
+      attacks are nonmagical, unless the swarm's description states otherwise.
+      Damage reduction sufficient to reduce a swarm attack's damage to 0, being
+      incorporeal, or other special abilities usually give a creature immunity
+      (or at least resistance) to damage from a swarm. Some swarms also have
+      acid, blood drain, poison, or other special attacks in addition to normal
+      damage.</p><p>Swarms do not threaten creatures, and do not make attacks of
+      opportunity with their swarm attack. However, they distract foes whose
+      squares they occupy, as described below.</p><p>Swarms possess the
+      @UUID[Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf]{distraction}
+      universal monster rule. Spellcasting or concentrating on spells within the
+      area of a swarm requires a caster level check (DC 20 + spell level). Using
+      skills that involve patience and concentration requires a DC 20 Will
+      save.</p>
+  effectNotes:
+    - plus @Use[Distraction]
+  held: null
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf
+  sources:
+    - id: PZO1112
+      pages: '313'
+  subType: natural
+type: attack

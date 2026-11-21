@@ -1,0 +1,129 @@
+_id: qwY01QLtI9qXrJED
+_key: '!items!qwY01QLtI9qXrJED'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Samsaran Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: WXkxFyruoOVJMEMW
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Charisma score of 11 or higher you gain: 1/day-
+        @UUID[Compendium.pf1.spells.Item.jcs7ba5depdyitey]{comprehend
+        languages},</p><p>You can understand the spoken words of creatures or
+        read otherwise incomprehensible written messages. The ability to read
+        does not necessarily impart insight into the material, merely its
+        literal meaning. The spell enables you to understand or read an unknown
+        language, not speak or write it.</p><p>Written material can be read at
+        the rate of one page (250 words) per minute. Magical writing cannot be
+        read, though the spell reveals that it is magical. This spell can be
+        foiled by certain warding magic (such as the secret page and illusory
+        script spells). It does not decipher codes or reveal messages concealed
+        in otherwise normal text.</p><p>Comprehend languages can be made
+        permanent with a permanency spell</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: comprehend languages
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: LcPcdw6zk841EJnd
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: Cone-shaped emanation
+      description: >-
+        <p>If you have a Charisma score of 11 or higher you gain: 1/day
+        @UUID[Compendium.pf1.spells.Item.1hjxxr3k62rcpb5c]{deathwatch},</p><p>Using
+        the powers of necromancy, you can determine the condition of creatures
+        near death within the spell's range. You instantly know whether each
+        creature within the area is dead, fragile (alive and wounded, with 3 or
+        fewer hit points left), fighting off death (alive with 4 or more hit
+        points), healthy, undead, or neither alive nor dead (such as a
+        construct). Deathwatch sees through any spell or ability that allows
+        creatures to feign death.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10'
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: deathwatch
+      range:
+        units: ft
+        value: '30'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: SLdc759SIhiMmpXM
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Charisma score of 11 or higher you gain: 1/day 
+        @UUID[Compendium.pf1.spells.Item.fipqx43u5blpjsvo]{stabilize}.</p><p>Upon
+        casting this spell, you target a living creature that has -1 or fewer
+        hit points. That creature is automatically stabilized and does not lose
+        any further hit points. If the creature later takes damage, it continues
+        dying normally.</p>
+      duration:
+        units: inst
+        value: '@attributes.hd.total * 10'
+      name: stabilize
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 0 + @abilities.cha.mod
+        description: negates (SR yes)
+        harmless: true
+        type: will
+      target:
+        value: One living Creature
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Prerequisite</strong>: Samsaran subtype</p><hr /><p>Members of
+      this race with a Charisma score of 11 or higher gain the following
+      spell-like abilities: 1/day-
+      <em>@UUID[Compendium.pf1.spells.Item.jcs7ba5depdyitey]{comprehend
+      languages}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.1hjxxr3k62rcpb5c]{deathwatch}</em>,
+      and
+      <em>@UUID[Compendium.pf1.spells.Item.fipqx43u5blpjsvo]{stabilize}</em>.
+      The caster level for these effects is equal to the user’s character
+      level.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '229'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: 3 * gte(@abilities.cha.total, 11)
+    value: 0
+type: feat

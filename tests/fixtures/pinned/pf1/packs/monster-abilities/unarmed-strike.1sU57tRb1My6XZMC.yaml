@@ -1,0 +1,50 @@
+_id: 1sU57tRb1My6XZMC
+_key: '!items!1sU57tRb1My6XZMC'
+_stats:
+  coreVersion: '12.343'
+folder: xPJd6syoxDiunnzG
+img: icons/skills/melee/unarmed-punch-fist.webp
+name: Unarmed Strike
+system:
+  actions:
+    - _id: h1prw1ahiomk0bs5
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+      name: Attack
+      nonlethal: true
+      range:
+        units: melee
+      tag: unarmedStrike
+  baseTypes:
+    - Unarmed Strike
+  description:
+    value: >-
+      <p>The damage from an unarmed strike is considered weapon damage for the
+      purposes of effects that give you a bonus on weapon damage rolls.</p><p>An
+      unarmed strike is always considered a light weapon. Therefore, you can use
+      the Weapon Finesse feat to apply your Dexterity modifier instead of your
+      Strength modifier to attack rolls with an unarmed strike.</p><p>Unarmed
+      strikes do not count as natural weapons (see Combat in core rulebook).</p>
+  proficient: true
+  sources:
+    - id: PZO1110
+      pages: 142, 149
+  subType: weapon
+  weaponGroups:
+    - close
+    - monk
+    - natural
+    - tribal
+type: attack

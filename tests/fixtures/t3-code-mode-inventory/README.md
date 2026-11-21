@@ -1,0 +1,3 @@
+# T3 tool inventory recorded 2026-11-20
+
+`recorded-2026-11-20.json` lists the T3 tools a Codex operator's session exposed on 2026-11-20, copied from the maxima promotion round's continuation result (`$EP_ORCH/mvp-20261023/maxima-promote-1-promotion-r1/result-2.md`): `codeMode` is every `mcp__t3_code__*` name code mode exposed as a function (the same list as that session's deferred T3 tools), and `direct` the two T3 tools offered only as direct calls. Code mode had no `delegate_task`, so the review helper takes the operator's direct `delegate_task` return instead of calling it. `tests/catalog/t3-review-evidence.test.ts` checks that every T3 tool the helper's type names is in `codeMode`.

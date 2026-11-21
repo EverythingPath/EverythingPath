@@ -1,0 +1,56 @@
+_id: eD48G3YnHyBYB3LC
+_key: '!items!eD48G3YnHyBYB3LC'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/wrist-launcher.PNG
+name: Heavy Wrist Launcher
+system:
+  actions:
+    - _id: 7iw185yikeg91hw7
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '30'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Heavy Wrist Launcher
+  description:
+    unidentified: >-
+      <p>A larger version of the wrist launcher, this device fires a single
+      crossbow bolt instead of a featherweight dart. If you are proficient with
+      hand crossbows, you are also proficient with heavy wrist launchers.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 250
+  sources:
+    - id: PZO1134
+      pages: '232'
+  subType: exotic
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

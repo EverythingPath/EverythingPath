@@ -1,0 +1,48 @@
+_id: dzsxppya1vhm744s
+_key: '!items!dzsxppya1vhm744s'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Distressing Tone
+system:
+  actions:
+    - _id: jewg23pclv21wjut
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: 1d4 living creatures
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a powerful tone that vibrates living flesh. Targets must
+      save or gain the sickened condition. Creatures that are immune to critical
+      hits are immune to this spell.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      bard: 2
+      inquisitor: 2
+      skald: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '217'
+type: spell

@@ -1,0 +1,56 @@
+_id: 4amchj89pppg180r
+_key: '!items!4amchj89pppg180r'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Fleshwarping Swarm
+system:
+  actions:
+    - _id: 9unuiuwla8e5z15q
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 2 rounds and 1 hour/level (see text)
+      effect: one swarm of bats, rats, or spiders
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.vxi9c3xwa83xthka]{summon swarm}, except
+      that living and undead creatures that fail their saving throw against the
+      swarm's distraction find that their limbs twist and spasm, as their bodies
+      become susceptible to transmutations. Such creatures take a -4 penalty to
+      Dexterity and on saving throws against transmutation effects for 1 hour
+      per caster level.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a square of red cloth
+  school: con
+  sources:
+    - id: PZO9280
+      pages: '220'
+  sr: false
+  subschool:
+    - summoning
+type: spell

@@ -1,0 +1,51 @@
+_id: i6x6fporwng7de5e
+_key: '!items!i6x6fporwng7de5e'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Synesthesia, Mass
+system:
+  actions:
+    - _id: gk4p2q9c3hft3p3o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          one or more living creatures, no two of which can be more than 30 ft.
+          apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.zk334ykycwiwb0gn]{synesthesia}, except as
+      noted above.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 5
+      psychic: 7
+  level: 7
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '188'
+  subschool:
+    - phantasm
+type: spell

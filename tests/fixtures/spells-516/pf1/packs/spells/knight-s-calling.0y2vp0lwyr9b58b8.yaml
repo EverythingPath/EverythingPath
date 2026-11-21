@@ -1,0 +1,50 @@
+_id: 0y2vp0lwyr9b58b8
+_key: '!items!0y2vp0lwyr9b58b8'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Knight's Calling
+system:
+  actions:
+    - _id: 61nepys2a6pc7f25
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    verbal: true
+  description:
+    value: >-
+      <p>You compel an enemy to come and fight you. On its turn, the target
+      moves its speed toward you, avoiding any other dangers along its path
+      (including any movement that would provoke attacks of opportunity). The
+      target may do nothing but move on its turn. If the target ends its move
+      adjacent to you, you can make an attack of opportunity against the
+      target.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      paladin: 1
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '230'
+  subschool:
+    - compulsion
+type: spell

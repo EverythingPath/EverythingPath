@@ -1,0 +1,26 @@
+_id: 9ZtSoYpYUhFHnCgo
+_key: '!items!9ZtSoYpYUhFHnCgo'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/spell-mastery.jpg
+name: Greater Spell Immunity
+system:
+  contextNotes:
+    - target: sr
+      text: 'You are immune to your chosen spell(s):'
+  description:
+    instructions: <p>Add your spells to the context note.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.jg3p4t3dv1a7nqvo]{Spell Immunity,
+      Greater}</p><p>This spell functions like
+      <em>@UUID[Compendium.pf1.spells.Item.ui70binwqvjsgaam]{spell
+      immunity}</em>, except the immunity applies to spells of 8th level or
+      lower. A creature can have only one spell immunity or greater spell
+      immunity spell in effect on it at a time.</p>
+  duration:
+    units: minute
+    value: '@item.level * 10'
+  level: 15
+  subType: spell
+type: buff

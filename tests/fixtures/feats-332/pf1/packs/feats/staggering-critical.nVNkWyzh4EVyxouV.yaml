@@ -1,0 +1,48 @@
+_id: nVNkWyzh4EVyxouV
+_key: '!items!nVNkWyzh4EVyxouV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/staggering-critical.jpg
+name: Staggering Critical
+system:
+  actions:
+    - _id: h1c2xK2Nwmqxcd5G
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Target is @Condition[staggered] for [[1d4+1]] rounds. A successful
+        Fortitude save DC reduces this to [[1]] round.</p>
+      duration:
+        units: seeText
+      name: Use
+      save:
+        dc: 10 + @attributes.bab.total
+        description: Fortitude, staggered for 1 round
+        type: fort
+  contextNotes:
+    - target: critical
+      text: '@Use[Staggering Critical;speaker]'
+  description:
+    value: >-
+      <p><em>Your critical hits cause opponents to slow
+      down.</em></p><p><strong>Prerequisites</strong>:
+      @UUID[Compendium.pf1.feats.Item.JNlMhMhcDO8wkXiw]{Critical Focus}, base
+      attack bonus +13.</p><p><strong>Benefits</strong>: Whenever you score a
+      critical hit, your opponent becomes staggered for 1d4+1 rounds. A
+      successful Fortitude save reduces the duration to 1 round. The DC of this
+      Fortitude save is equal to 10 + your base attack bonus. The effects of
+      this feat do not stack. Additional hits instead add to the
+      duration.</p><p><strong>Special</strong>: You can only apply the effects
+      of one critical feat to a given critical hit unless you possess Critical
+      Mastery.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 134
+  tags:
+    - Combat
+    - Critical
+    - Offensive
+type: feat
