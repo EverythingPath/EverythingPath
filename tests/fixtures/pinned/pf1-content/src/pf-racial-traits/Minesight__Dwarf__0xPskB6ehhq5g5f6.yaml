@@ -1,0 +1,38 @@
+_id: 0xPskB6ehhq5g5f6
+_key: '!items!0xPskB6ehhq5g5f6'
+_stats:
+  coreVersion: '12.331'
+folder: KP5QLO1nPv43LcXI
+img: systems/pf1/icons/races/dwarf.png
+name: Minesight (Dwarf)
+system:
+  changes:
+    - _id: 1Ke4fnhD
+      formula: '90'
+      operator: set
+      target: sensedv
+      type: base
+  contextNotes:
+    - target: allSavingThrows
+      text: '-2 penalty vs. effects with light descriptor.'
+    - target: attack
+      text: '@Condition[dazzled] in bright light'
+    - target: skill.per
+      text: '@Condition[dazzled] in bright light'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dwarf<br /><strong>Replaced Trait(s)</strong>:
+      Darkvision</p><hr /><p>Dwarves with this racial trait increase the range
+      of their darkvision to @Distance[90 ft;dual]; however, they are
+      automatically dazzled in bright light and take a -2 penalty on saving
+      throws against effects with the light descriptor. This racial trait
+      replaces darkvision.</p>
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '12'
+  subType: racial
+  tags:
+    - Dwarf
+  traitCategory: senses
+type: feat

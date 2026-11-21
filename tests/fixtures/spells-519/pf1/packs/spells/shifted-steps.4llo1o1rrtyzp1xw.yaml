@@ -1,0 +1,75 @@
+_id: 4llo1o1rrtyzp1xw
+_key: '!items!4llo1o1rrtyzp1xw'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Shifted Steps
+system:
+  actions:
+    - _id: kxdu2wtwus6vnpjw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration + 1 round/level
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates and Will disbelief (if interacted with); see text
+        harmless: true
+        type: will
+      target:
+        value: one creature or object up to 10 feet across
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target to sound as if it is elsewhere within range,
+      including its movements, speech, and all other sounds. As long as you
+      concentrate, you can cause the sound's apparent location to change as you
+      see fit within range from your current location. Once you cease
+      concentrating, the sound moves so that it remains the same relative
+      distance and direction from the target. This spell can fool any
+      sound-based blindsense or blindsight (including echolocation), but it
+      can't fool other forms of detection such as other forms of blindsense or
+      blindsight, lifesense, normal vision, and tremorsense. The target receives
+      a saving throw against the effect if it doesn't wish for you to shift its
+      sound, and any creature that interacts with the illusion receives a Will
+      save to disbelieve the glamer.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 2
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      investigator: 2
+      magus: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      spiritualist: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '225'
+  sr: false
+  subschool:
+    - glamer
+type: spell

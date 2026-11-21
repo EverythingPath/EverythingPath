@@ -1,0 +1,27 @@
+_id: LR64SMLpzgyMNNcm
+_key: '!items!LR64SMLpzgyMNNcm'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/feats/wind-stance.jpg
+name: Animal Focus (Owl)
+system:
+  changes:
+    - _id: nu9twpp0
+      formula: floor(((@item.level)-1)/7)*2+4
+      target: skill.ste
+      type: competence
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains a +4 competence bonus to Perception. This bonus
+      increases to +6 at 8th level and +8 at 15th level.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 7
+  subType: feat
+type: buff

@@ -1,0 +1,64 @@
+_id: av7YbbrWBVgNp2hP
+_key: '!items!av7YbbrWBVgNp2hP'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/equipment/head/crown-gold-blue.webp
+name: Crown of Glory
+system:
+  actions:
+    - _id: 72jroi8fd1cs992r
+      actionType: spellsave
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      area: 120-ft.-radius emanation centered on you
+      duration:
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '120'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Will negates
+        type: will
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You gain a +4 enhancement bonus to Charisma. All creatures with fewer
+      than 8 HD are compelled to stop and pay attention to you. Any such
+      creature that wants to take hostile action against you must make a Will
+      save to do so. Any creature that fails this saving throw the first time it
+      attempts a hostile action is enthralled for the duration of the spell (as
+      the @UUID[Compendium.pf1.spells.v3d3lnjj7ks0ztii]{Enthrall} spell), as
+      long as it is in the spell's area. It does not try to leave the area on
+      its own. Creatures with 8 HD or more are not affected.</p>
+
+      <p>When you speak, all listeners telepathically understand you. You can
+      make up to three suggestions to creatures of fewer than 8 HD in range, as
+      if using the @UUID[Compendium.pf1.spells.52v3fogun1n9jzum]{Mass
+      Suggestion} spell (Will save negates). Only creatures within range at the
+      time of a <em>suggestion</em> are subject to it.</p>
+  learnedAt:
+    domain:
+      Glory: 8
+  level: 8
+  materials:
+    gpValue: 200
+    value: an opal worth at least 200 gp
+  school: evo
+  sources:
+    - id: PZO1111
+      pages: '206'
+  tags:
+    - '3.5'
+type: spell

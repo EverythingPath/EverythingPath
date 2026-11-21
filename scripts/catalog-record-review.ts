@@ -1,0 +1,815 @@
+import { execFileSync } from 'node:child_process';
+import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { basename, join, resolve, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { isDeepStrictEqual, parseArgs } from 'node:util';
+import { z } from 'zod';
+import {
+  bindT3Dispatch,
+  captureT3Inputs,
+  completeT3Review,
+  readT3Review,
+  requireTemporaryDirectoryOutside,
+} from './catalog/t3-review-evidence.ts';
+import { launcher } from './catalog/start-without-tsx-cache.mjs';
+import {
+  findRuleValueRecordConflicts,
+  listRuleValueReviews,
+  parseCuration,
+} from './catalog/curation.ts';
+import { catalogDataFiles, formatCatalogData } from './catalog/data-files.ts';
+import {
+  identityLedgerSchema,
+  listLedgerReviews,
+  parseIdentityLedger,
+} from './catalog/everythingpath-identities.ts';
+import {
+  describeReviewRun,
+  findReceiptProblems,
+  hashReport,
+  legacyReviewRuns,
+  parseReviewedCovers,
+  parseReviewReceipts,
+  recordReviewReceipt,
+  reviewReportsDirectory,
+  type ReviewedCover,
+  type ReviewReceipts,
+  type ReviewRun,
+} from './catalog/review-receipts.ts';
+import {
+  confirmationsPath,
+  findSection15RegistryProblems,
+  listSection15Reviews,
+  readPinnedPcgenSha256At,
+  section15ConfirmationsSchema,
+} from './catalog/legal/section15-confirmations.ts';
+import { reviewedAdmissionSchema } from '../src/lib/catalog/admission-schema.ts';
+import { listStructureReviews } from './catalog/structure-curation.ts';
+import {
+  grantedSpellMapPath,
+  grantedSpellMapSchema,
+  listGrantedSpellReviews,
+  parseGrantedSpellMap,
+} from './catalog/granted-spells.ts';
+import {
+  listTraitClassSkillChoiceReviews,
+  parseTraitClassSkillChoiceList,
+  traitClassSkillChoiceListPath,
+  traitClassSkillChoiceListSchema,
+} from './catalog/trait-class-skill-choices.ts';
+import {
+  listReviewedPcgenRecordReviews,
+  parseReviewedPcgenRecords,
+  reviewedPcgenRecordsPath,
+  reviewedPcgenRecordsSchema,
+} from './catalog/reviewed-pcgen-records.ts';
+
+/**
+ * The orchestrator's record step (#757; runbook "Record the review"): the
+ * only writer of review receipts and the only way a record becomes checked.
+ */
+const usage = `Usage:
+  node --import tsx scripts/catalog-record-review.ts --list [--json] [--root <dir>]
+  node --import tsx scripts/catalog-record-review.ts --run <run dir> --ids <file> [--root <dir>]
+  node ${launcher} scripts/catalog-record-review.ts --capture-t3 <new durable dir> --config <json> --caller-json <tool response> [--root <dir>]
+  node ${launcher} scripts/catalog-record-review.ts --bind-t3 <dir> --dispatch <delegate_task response json>
+  node ${launcher} scripts/catalog-record-review.ts --complete-t3 <dir> --status <task_status response json> --report <full report>
+  node ${launcher} scripts/catalog-record-review.ts --t3-run <archived dir> --ids <file> [--root <dir>]
+  node ${launcher} scripts/catalog-record-review.ts --verify [--runs <dir>] [--root <dir>]
+--list prints every record a review receipt can cover: its status, its receipt
+  and its ID. --json prints each record as a review sees it (its ID, source
+  hashes and payload hash); the retired spawn.sh saved that as a reviewer
+  run's reviewed-records.json when the review started.
+--run records a finished cross-model review (an existing run directory of the
+  retired spawn.sh reviewer; no new one can start) as the receipt of the
+  drafted records whose IDs <file> lists,
+  one per line, marks them checked and commits a copy of its report snapshot under
+  ${reviewReportsDirectory}. Each record must be as the run's
+  reviewed-records.json saw it, and the ledger must be consistent once they
+  are checked; otherwise nothing is written.
+--verify checks every receipt's committed report copy, and its run's meta and
+  report snapshot (default $EP_ORCH/runs, else ../ep-orch/runs). It fails when
+  any is missing, unreadable or differs; only a pinned pre-snapshot run
+  (legacyReviewRuns) is checked by its committed copy alone.
+--capture-t3 freezes a fresh nonce-bearing request. Bind its review through the
+  code-mode helper's prepare and bind around the direct delegate_task call;
+  imported task JSON alone cannot authorize binding. See
+  docs/agents/orchestration/t3-reviews.md for the required sequence and config.
+--capture-t3, --bind-t3, --complete-t3, --t3-run and --verify are the round
+  commands. Each declines, before it writes anything, a TMPDIR that is, is
+  inside or contains the round it operates on or the directory holding it
+  (the round directory it is given and its parent; for --verify, each
+  archive it verifies and the runs directory), by real path, so nothing it
+  makes in TMPDIR lands in the runs directory it works in; a round kept
+  elsewhere is outside this rule. Start them through ${launcher}: started
+  without it,
+  tsx writes its disk cache under TMPDIR before the command can check TMPDIR.
+--root is the checkout whose data files to read and write (default: this one).
+`;
+const ledgerPath = 'scripts/catalog/everythingpath-identities.json';
+const receiptsPath = 'scripts/catalog/review-receipts.json';
+const curationPath = catalogDataFiles.curation;
+const registryPath = catalogDataFiles.registry;
+
+const readJson = async (path: string): Promise<unknown> =>
+  JSON.parse(await readFile(path, 'utf8'));
+const formatJson = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`;
+const reportCopyOf = ({ root, runId }: { root: string; runId: string }) =>
+  join(root, reviewReportsDirectory, `${runId}.md`);
+
+/**
+ * Whether the schema accepts the value unchanged: its output equals the
+ * value, so the file's own objects (and their key order) have its type.
+ */
+const isUnchangedBy = <T>(schema: z.ZodType<T>, value: unknown): value is T => {
+  const parsed = schema.safeParse(value);
+  return parsed.success && isDeepStrictEqual(parsed.data, value);
+};
+
+/**
+ * Reads the data files' records a receipt can cover. The ledger is checked
+ * against its schema only: its consistency checks require merges and
+ * same-KEY splits to be checked already, which drafted ones aren't yet.
+ */
+async function loadReviewedData({ root }: { root: string }) {
+  const ledger = await readJson(join(root, ledgerPath));
+  if (!isUnchangedBy(identityLedgerSchema, ledger))
+    throw new Error(
+      `${ledgerPath}: ${identityLedgerSchema.safeParse(ledger).error?.message ?? 'not in its canonical form'}`,
+    );
+  const curationFile = z
+    .record(z.string(), z.unknown())
+    .parse(await readJson(join(root, curationPath)));
+  const { structures = [], ruleValues = [] } = parseCuration(curationFile);
+  const section15 = await loadSection15({ root });
+  const grantedSpells = await loadGrantedSpells({ root });
+  const traitChoices = await loadTraitClassSkillChoices({ root });
+  const pcgenRecords = await loadReviewedPcgenRecords({ root });
+  const records = [
+    ...listLedgerReviews(ledger),
+    ...listStructureReviews(structures),
+    ...listRuleValueReviews(ruleValues),
+    ...(section15
+      ? listSection15Reviews({
+          confirmations: section15.confirmations.confirmations,
+          registry: section15.registry,
+        })
+      : []),
+    ...(grantedSpells ? listGrantedSpellReviews(grantedSpells) : []),
+    ...(traitChoices ? listTraitClassSkillChoiceReviews(traitChoices) : []),
+    ...(pcgenRecords ? listReviewedPcgenRecordReviews(pcgenRecords) : []),
+  ];
+  return {
+    ledger,
+    curationFile,
+    structures,
+    ruleValues,
+    section15,
+    grantedSpells,
+    traitChoices,
+    pcgenRecords,
+    records,
+  };
+}
+/**
+ * A reviewed list, when the checkout has it, in its canonical form, so the
+ * record step writes back only the records it checks; `parse` is the list's
+ * own consistency check.
+ */
+async function loadReviewedList<T>({
+  root,
+  path,
+  schema,
+  parse,
+}: {
+  root: string;
+  path: string;
+  schema: z.ZodType<T>;
+  parse: (list: T) => unknown;
+}) {
+  const file = join(root, path);
+  const isPresent = await stat(file).then(
+    () => true,
+    () => false,
+  );
+  if (!isPresent) return undefined;
+  const list = await readJson(file);
+  if (!isUnchangedBy(schema, list))
+    throw new Error(
+      `${path}: ${schema.safeParse(list).error?.message ?? 'not in its canonical form'}`,
+    );
+  parse(list);
+  return list;
+}
+/** trait-cs: the class-skill choice list. */
+const loadTraitClassSkillChoices = ({ root }: { root: string }) =>
+  loadReviewedList({
+    root,
+    path: traitClassSkillChoiceListPath,
+    schema: traitClassSkillChoiceListSchema,
+    parse: parseTraitClassSkillChoiceList,
+  });
+/** cavalier-master-tactician: the #227 scripted match's reviewed PCGen records. */
+const loadReviewedPcgenRecords = ({ root }: { root: string }) =>
+  loadReviewedList({
+    root,
+    path: reviewedPcgenRecordsPath,
+    schema: reviewedPcgenRecordsSchema,
+    parse: parseReviewedPcgenRecords,
+  });
+/** Granted-levels S1b: the granted-spell map. */
+const loadGrantedSpells = ({ root }: { root: string }) =>
+  loadReviewedList({
+    root,
+    path: grantedSpellMapPath,
+    schema: grantedSpellMapSchema,
+    parse: parseGrantedSpellMap,
+  });
+/**
+ * #716 P10a: the Section 15 confirmations and the Registry, when the checkout
+ * has them. Checking a confirmation also makes its `pcgen:<code>` block
+ * reviewed (`listSection15Reviews`).
+ */
+async function loadSection15({ root }: { root: string }) {
+  const path = join(root, confirmationsPath);
+  const isPresent = await stat(path).then(
+    () => true,
+    () => false,
+  );
+  if (!isPresent) return undefined;
+  const confirmations = await readJson(path);
+  const registry = z
+    .record(
+      z.string(),
+      z.object({ reviewStatus: z.string(), checkedOn: z.string() }).loose(),
+    )
+    .parse(await readJson(join(root, registryPath)));
+  return {
+    confirmations: section15ConfirmationsSchema.parse(confirmations),
+    registry,
+  };
+}
+async function loadReceipts({ root }: { root: string }) {
+  return parseReviewReceipts(await readJson(join(root, receiptsPath)));
+}
+
+/**
+ * Records a finished review as the receipt of the records `idsFile` lists:
+ * reads the run, promotes the records, then writes every file. Nothing is
+ * written unless the run and every promoted record check out. `entry` is the
+ * run's directory as supplied, whose name must be the run's; `runDir` is
+ * where it is read (for --t3-run, the entry as its check resolved it).
+ */
+async function recordRun({
+  root,
+  entry,
+  runDir = entry,
+  idsFile,
+  t3 = false,
+}: {
+  root: string;
+  entry: string;
+  runDir?: string;
+  idsFile: string;
+  t3?: boolean;
+}) {
+  const { run, report, seen } = t3
+    ? await readT3Review({ dir: runDir })
+    : await readFinishedReview({ runDir });
+  if (run.kind === 't3' && gitCommit(root) !== run.evidence.reviewedCommit)
+    throw new Error('Current HEAD differs from the T3 reviewed commit.');
+  if (basename(resolve(entry)) !== run.runId)
+    throw new Error(`${entry} holds run ${run.runId}.`);
+  const ids = await readRecordIds({ idsFile });
+  const promoted = await promoteRecords({ root, run, ids, seen });
+  await writeRecordedReview({ root, run, report, ids, ...promoted });
+  process.stdout.write(
+    `Recorded ${run.runId} (report sha256:${run.reportSha256.slice(0, 12)}) as the receipt of ${ids.length} records.\n`,
+  );
+}
+
+/**
+ * A finished reviewer run as the record step reads it: the run its meta, exit
+ * and report snapshot describe (the directory must be named for it), its
+ * report, and the records it saw when it started.
+ */
+async function readFinishedReview({ runDir }: { runDir: string }) {
+  const meta = await readReviewedMeta({ runDir });
+  const report = await readReportSnapshot({ runDir });
+  const run = describeReviewRun({
+    meta,
+    exit: await readFile(join(runDir, 'exit'), 'utf8'),
+    report,
+  });
+  if (basename(resolve(runDir)) !== run.runId)
+    throw new Error(`${runDir} holds run ${run.runId}.`);
+  const seen = await readJson(join(runDir, 'reviewed-records.json')).catch(
+    () => {
+      throw new Error(
+        `${run.runId} has no reviewed-records.json; spawn.sh saved it when a review started.`,
+      );
+    },
+  );
+  return { run, report, seen: parseReviewedCovers(seen) };
+}
+
+/** The record IDs a file lists, one per line; `#` lines are comments. */
+async function readRecordIds({ idsFile }: { idsFile: string }) {
+  const ids = (await readFile(idsFile, 'utf8'))
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'));
+  if (!ids.length) throw new Error(`${idsFile} lists no record.`);
+  return ids;
+}
+
+/**
+ * Marks the named records checked under the run in the data files as read,
+ * and checks the ledger and curation are consistent once they are. Returns
+ * the files' new contents; writes nothing.
+ */
+async function promoteRecords({
+  root,
+  run,
+  ids,
+  seen,
+}: {
+  root: string;
+  run: ReviewRun;
+  ids: readonly string[];
+  seen: readonly ReviewedCover[];
+}) {
+  const data = await loadReviewedData({ root });
+  const receipts = recordReviewReceipt({
+    records: data.records,
+    receipts: await loadReceipts({ root }),
+    run,
+    ids,
+    seen,
+  });
+  // Consistency once the records are checked: a merge or split needs its decision.
+  parseIdentityLedger(data.ledger);
+  const curation = {
+    ...data.curationFile,
+    structures: data.structures,
+    ...(data.ruleValues.length && { ruleValues: data.ruleValues }),
+  };
+  parseCuration(curation);
+  // stats-d3 fix r1: the overlay parses with a pair over the stored limit (the
+  // import refuses the later record with a status); the record step does not
+  // check a record into one.
+  const [conflict] = findRuleValueRecordConflicts(data.ruleValues);
+  if (conflict) throw new Error(conflict);
+  if (data.section15) {
+    const registry = reviewedAdmissionSchema.shape.registry.parse(
+      data.section15.registry,
+    );
+    // The selected checkout's pinned OGL.txt files, not this script's.
+    const [problem] = findSection15RegistryProblems({
+      registry,
+      confirmations: data.section15.confirmations.confirmations,
+      currentSha256: readPinnedPcgenSha256At(root),
+    });
+    if (problem) throw new Error(problem);
+  }
+  if (data.grantedSpells) parseGrantedSpellMap(data.grantedSpells);
+  if (data.traitChoices) parseTraitClassSkillChoiceList(data.traitChoices);
+  if (data.pcgenRecords) parseReviewedPcgenRecords(data.pcgenRecords);
+  return {
+    ledger: data.ledger,
+    curation,
+    section15: data.section15,
+    grantedSpells: data.grantedSpells,
+    traitChoices: data.traitChoices,
+    pcgenRecords: data.pcgenRecords,
+    receipts,
+  };
+}
+
+/** The reviewed lists whose records the promotion checks, as written. */
+function reviewedListOutputs({
+  root,
+  ids,
+  grantedSpells,
+  traitChoices,
+  pcgenRecords,
+}: {
+  root: string;
+  ids: readonly string[];
+  grantedSpells: Awaited<ReturnType<typeof loadGrantedSpells>>;
+  traitChoices: Awaited<ReturnType<typeof loadTraitClassSkillChoices>>;
+  pcgenRecords: Awaited<ReturnType<typeof loadReviewedPcgenRecords>>;
+}) {
+  return [
+    {
+      prefix: 'granted-spells ',
+      path: grantedSpellMapPath,
+      list: grantedSpells,
+    },
+    {
+      prefix: 'trait-class-skill-choice ',
+      path: traitClassSkillChoiceListPath,
+      list: traitChoices,
+    },
+    {
+      prefix: 'pcgen-record ',
+      path: reviewedPcgenRecordsPath,
+      list: pcgenRecords,
+    },
+  ].flatMap(({ prefix, path, list }) =>
+    list && ids.some((id) => id.startsWith(prefix))
+      ? [{ path: join(root, path), bytes: formatJson(list) }]
+      : [],
+  );
+}
+
+/**
+ * Writes a promotion: the report copy (refused if one with another report is
+ * there), the ledger, the curation when a structure or rule-value record was checked, the
+ * granted-spell map, the class-skill choice list or the reviewed PCGen records
+ * when one of its records was, and the receipts.
+ */
+async function writeRecordedReview({
+  root,
+  run,
+  report,
+  ids,
+  ledger,
+  curation,
+  section15,
+  grantedSpells,
+  traitChoices,
+  pcgenRecords,
+  receipts,
+}: {
+  root: string;
+  run: ReviewRun;
+  report: Uint8Array;
+  ids: readonly string[];
+  ledger: unknown;
+  curation: Record<string, unknown>;
+  section15: Awaited<ReturnType<typeof loadSection15>>;
+  grantedSpells: Awaited<ReturnType<typeof loadGrantedSpells>>;
+  traitChoices: Awaited<ReturnType<typeof loadTraitClassSkillChoices>>;
+  pcgenRecords: Awaited<ReturnType<typeof loadReviewedPcgenRecords>>;
+  receipts: ReviewReceipts;
+}) {
+  const copy = reportCopyOf({ root, runId: run.runId });
+  const existing = await readFile(copy).catch(() => undefined);
+  if (existing && hashReport(existing) !== run.reportSha256)
+    throw new Error(`${copy} holds another report.`);
+  // Materialize every output before creating even the report directory. Parsing
+  // curation alone does not check the formatter's shared-alias invariant.
+  const outputs: { path: string; bytes: string | Uint8Array }[] = [
+    { path: copy, bytes: report },
+    { path: join(root, ledgerPath), bytes: formatJson(ledger) },
+  ];
+  if (ids.some((id) => /^(?:structure|rule-value) /.test(id)))
+    outputs.push({
+      path: join(root, curationPath),
+      bytes: formatCatalogData('curation', curation),
+    });
+  if (section15 && ids.some((id) => id.startsWith('section15-confirmation ')))
+    outputs.push(
+      {
+        path: join(root, confirmationsPath),
+        bytes: formatJson(
+          section15ConfirmationsSchema.parse(section15.confirmations),
+        ),
+      },
+      {
+        path: join(root, registryPath),
+        bytes: formatCatalogData('registry', section15.registry),
+      },
+    );
+  outputs.push(
+    ...reviewedListOutputs({
+      root,
+      ids,
+      grantedSpells,
+      traitChoices,
+      pcgenRecords,
+    }),
+  );
+  outputs.push({ path: join(root, receiptsPath), bytes: formatJson(receipts) });
+  await mkdir(join(root, reviewReportsDirectory), { recursive: true });
+  for (const { path, bytes } of outputs) await writeFile(path, bytes);
+}
+
+/**
+ * A reviewer run's meta, which must name the commit the review read: the
+ * retired spawn.sh wrote `reviewed_commit` for every reviewer run that has a
+ * snapshot.
+ */
+async function readReviewedMeta({ runDir }: { runDir: string }) {
+  const meta = await readFile(join(runDir, 'meta'), 'utf8').catch(() => {
+    throw new Error(`${runDir} has no readable meta.`);
+  });
+  if (!/^reviewed_commit=[0-9a-f]{40}$/m.test(meta))
+    throw new Error(`${runDir}'s meta names no reviewed_commit.`);
+  return meta;
+}
+
+/**
+ * The report as the run finished: the retired spawn.sh's `report.snapshot.md`
+ * (the --report file the reviewer wrote, else its final message) and the hash
+ * it took then. Neither the --report path nor `report.md` is read, since either
+ * can hold other bytes later.
+ */
+async function readReportSnapshot({ runDir }: { runDir: string }) {
+  const snapshot = await readFile(join(runDir, 'report.snapshot.md')).catch(
+    () => {
+      throw new Error(
+        `${runDir} has no report snapshot it can read; spawn.sh saved report.snapshot.md when a review finished.`,
+      );
+    },
+  );
+  const { mode } = await stat(join(runDir, 'report.snapshot.md'));
+  if (mode & 0o222) throw new Error(`${runDir}'s report snapshot is writable.`);
+  const taken = (
+    await readFile(join(runDir, 'report.snapshot.sha256'), 'utf8').catch(
+      () => '',
+    )
+  ).trim();
+  if (hashReport(snapshot) !== taken)
+    throw new Error(`${runDir}'s report snapshot does not match its hash.`);
+  return snapshot;
+}
+
+/** The SHA-256 of each committed report copy, by run id. */
+async function hashReportCopies({ root }: { root: string }) {
+  const directory = join(root, reviewReportsDirectory);
+  const names = await readdir(directory).catch(() => []);
+  return new Map(
+    await Promise.all(
+      names
+        .filter((name) => name.endsWith('.md'))
+        .map(
+          async (name) =>
+            [
+              name.slice(0, -'.md'.length),
+              hashReport(await readFile(join(directory, name))),
+            ] as const,
+        ),
+    ),
+  );
+}
+
+async function verify({ root, runs: given }: { root: string; runs: string }) {
+  const receipts = await loadReceipts({ root });
+  // The archives this verifies: every receipt's run but a pinned one, read in
+  // the runs directory as the check resolved it.
+  const { directory: runs } = await requireTemporaryDirectoryOutside(
+    {
+      kind: 'archives',
+      runs: given,
+      runIds: receipts.receipts
+        .filter(({ runId }) => !legacyReviewRuns.has(runId))
+        .map(({ runId }) => runId),
+    },
+    'verify once more',
+  );
+  const { records } = await loadReviewedData({ root });
+  const copies = await hashReportCopies({ root });
+  const problems = findReceiptProblems({
+    records,
+    receipts,
+    reportSha256s: copies,
+  });
+  for (const receipt of receipts.receipts) {
+    const { runId, reportSha256 } = receipt;
+    const pinned = legacyReviewRuns.get(runId);
+    if (pinned !== undefined) {
+      if (copies.get(runId) === pinned && reportSha256 === pinned)
+        process.stdout.write(
+          `${runId}: a pre-snapshot run on the allowlist; its committed copy has the pinned hash\n`,
+        );
+      else
+        problems.push(
+          `${runId}: its committed copy or receipt doesn't have the allowlist's pinned hash.`,
+        );
+      continue;
+    }
+    try {
+      const runDir = join(runs, runId);
+      if ('evidence' in receipt) {
+        const review = await readT3Review({ dir: runDir });
+        if (
+          review.run.runId !== runId ||
+          review.run.reportSha256 !== reportSha256 ||
+          !isDeepStrictEqual(review.run.evidence, receipt.evidence)
+        )
+          throw new Error(`${runId}: T3 evidence differs from its receipt.`);
+        execFileSync(
+          'git',
+          ['cat-file', '-e', `${receipt.evidence.reviewedCommit}^{commit}`],
+          { cwd: root, stdio: 'pipe' },
+        );
+        for (const cover of receipt.covers) {
+          const saw = review.seen.find(({ id }) => id === cover.id);
+          if (!isDeepStrictEqual(saw, cover))
+            throw new Error(
+              `${runId}: T3 pre-dispatch cover differs for ${cover.id}.`,
+            );
+        }
+        continue;
+      }
+      await readReviewedMeta({ runDir });
+      if (hashReport(await readReportSnapshot({ runDir })) !== reportSha256)
+        problems.push(
+          `${runId}: the run's report snapshot differs from its receipt.`,
+        );
+    } catch (error) {
+      problems.push(error instanceof Error ? error.message : String(error));
+    }
+  }
+  for (const problem of problems) process.stdout.write(`FAIL ${problem}\n`);
+  const hasProblems = problems.length > 0;
+  if (hasProblems) process.exitCode = 1;
+  else process.stdout.write(`${receipts.receipts.length} receipts verified.\n`);
+}
+
+async function listRecords({ root, json }: { root: string; json: boolean }) {
+  const { records } = await loadReviewedData({ root });
+  process.stdout.write(
+    json
+      ? formatJson(
+          records.map(({ id, sources, payloadSha256 }) => ({
+            id,
+            sources,
+            payloadSha256,
+          })),
+        )
+      : records
+          .map(({ id, review }) =>
+            [
+              review.status,
+              review.status === 'checked' ? review.receipt : '-',
+              id,
+            ].join('\t'),
+          )
+          .map((line) => `${line}\n`)
+          .join(''),
+  );
+}
+
+function gitCommit(root: string) {
+  return execFileSync('git', ['rev-parse', 'HEAD'], {
+    cwd: root,
+    encoding: 'utf8',
+  }).trim();
+}
+export async function captureReviewInputs({
+  root,
+  dir,
+  config,
+  caller,
+}: {
+  root: string;
+  dir: string;
+  config: unknown;
+  caller: unknown;
+}) {
+  const reviewedCommit = gitCommit(root);
+  if (
+    execFileSync('git', ['status', '--porcelain'], {
+      cwd: root,
+      encoding: 'utf8',
+    }).trim()
+  )
+    throw new Error('Commit the reviewed checkout before capturing T3 inputs.');
+  const { records } = await loadReviewedData({ root });
+  return captureT3Inputs({
+    dir,
+    config,
+    caller,
+    reviewedCommit,
+    seen: records.map(({ id, sources, payloadSha256 }) => ({
+      id,
+      sources,
+      payloadSha256,
+    })),
+  });
+}
+async function main() {
+  const { values } = parseArgs({
+    options: {
+      'capture-t3': { type: 'string' },
+      config: { type: 'string' },
+      'caller-json': { type: 'string' },
+      'bind-t3': { type: 'string' },
+      dispatch: { type: 'string' },
+      'complete-t3': { type: 'string' },
+      status: { type: 'string' },
+      report: { type: 'string' },
+      't3-run': { type: 'string' },
+      list: { type: 'boolean' },
+      json: { type: 'boolean' },
+      run: { type: 'string' },
+      ids: { type: 'string' },
+      verify: { type: 'boolean' },
+      runs: { type: 'string' },
+      root: { type: 'string' },
+      help: { type: 'boolean' },
+    },
+    strict: true,
+    allowPositionals: false,
+  });
+  const actions = [
+    'capture-t3',
+    'bind-t3',
+    'complete-t3',
+    't3-run',
+    'run',
+    'list',
+    'verify',
+  ] as const;
+  if (actions.filter((key) => values[key]).length > 1)
+    throw new Error('Choose exactly one record/capture/verify action.');
+  const root = values.root
+    ? resolve(values.root)
+    : fileURLToPath(new URL('../', import.meta.url));
+  // The base's join($EP_ORCH, 'runs') as supplied (an empty EP_ORCH is the
+  // working directory's runs), written out, not joined: join would collapse a
+  // link followed by `..` as text, and the runs directory, like an explicit
+  // --runs and --t3-run's $EP_ORCH/runs/$RUN_ID, is resolved by the file
+  // system.
+  const orch = process.env.EP_ORCH ?? resolve(root, '../ep-orch');
+  const runs =
+    values.runs ??
+    (orch === '' || orch.endsWith(sep) ? `${orch}runs` : `${orch}${sep}runs`);
+  // Before anything else (--verify once it knows its archives); the action
+  // then works in the round as the check resolved it.
+  const resolvedRound = async (
+    action: 'capture-t3' | 'bind-t3' | 'complete-t3' | 't3-run',
+    retry: string,
+  ) => {
+    const round = values[action];
+    return round
+      ? (
+          await requireTemporaryDirectoryOutside(
+            { kind: 'round', round },
+            `${retry} once more`,
+          )
+        ).directory
+      : undefined;
+  };
+  const capture = await resolvedRound('capture-t3', 'capture');
+  const bind = await resolvedRound('bind-t3', 'bind');
+  const complete = await resolvedRound('complete-t3', 'complete');
+  const t3Run = await resolvedRound('t3-run', 'record');
+  if (capture && values.config && values['caller-json']) {
+    const { sha256 } = await captureReviewInputs({
+      root,
+      dir: capture,
+      config: await readJson(values.config),
+      caller: JSON.parse(values['caller-json']),
+    });
+    process.stdout.write(
+      `T3 inputs captured; archive completed evidence as t3-review-${sha256} under $EP_ORCH/runs. Bind the review through the code-mode helper (prepare, the direct delegate_task call, bind).\n`,
+    );
+  } else if (bind && values.dispatch) {
+    await bindT3Dispatch({
+      kind: 'raw',
+      dir: bind,
+      response: await readJson(values.dispatch),
+      // A raw import has no original-message reads, so bind refuses it.
+      observations: undefined,
+    });
+  } else if (complete && values.status && values.report) {
+    const { run } = await completeT3Review({
+      dir: complete,
+      response: await readJson(values.status),
+      report: await readFile(values.report),
+    });
+    process.stdout.write(
+      `${run.runId} frozen; archive this directory under $EP_ORCH/runs/${run.runId} before --t3-run and --verify.\n`,
+    );
+  } else if (t3Run && values['t3-run'] && values.ids) {
+    await recordRun({
+      root,
+      entry: values['t3-run'],
+      runDir: t3Run,
+      idsFile: values.ids,
+      t3: true,
+    });
+  } else if (values.list)
+    await listRecords({ root, json: values.json ?? false });
+  else if (values.run && values.ids)
+    await recordRun({ root, entry: values.run, idsFile: values.ids });
+  else if (values.verify) await verify({ root, runs });
+  else {
+    process.stdout.write(usage);
+    if (!values.help) process.exitCode = 2;
+  }
+}
+if (
+  process.argv[1] &&
+  resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+)
+  main().catch((error: unknown) => {
+    process.stderr.write(
+      `${error instanceof Error ? error.message : String(error)}\n`,
+    );
+    process.exitCode = 1;
+  });
