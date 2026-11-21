@@ -1,0 +1,54 @@
+_id: 9pn76tz05b9g0peq
+_key: '!items!9pn76tz05b9g0peq'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Object Possession
+system:
+  actions:
+    - _id: 37qhxyr8shtjskq4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      target:
+        value: unattended Large or smaller object (minimum Tiny)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.g9bxi9inholodv0o]{lesser object
+      possession}, except as noted above. The possessed animated object has a
+      number of Construction Points appropriate for its size (up to 3 CP for
+      Large objects). You can return your consciousness to your body as a
+      standard action. On your next turn, you can attempt to possess a different
+      object as a standard action instead of ending the spell.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      medium: 4
+      mesmerist: 5
+      occultist: 4
+      psychic: 5
+      sorcerer: 5
+      spiritualist: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: nec
+  sources:
+    - id: PZO1132
+      pages: '179'
+  sr: false
+type: spell

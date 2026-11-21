@@ -1,0 +1,70 @@
+_id: 0MFbQaJ3MUWV2fGM
+_key: '!items!0MFbQaJ3MUWV2fGM'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-crank.PNG
+name: Heavy Crank Crossbow
+system:
+  actions:
+    - _id: 258bzy432g24o6bi
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '120'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Heavy Crank Crossbow
+  description:
+    unidentified: >-
+      <p>This heavy crossbow has a winch mounted below the stock. Up to 50 feet
+      of silk rope can be wound onto the winch as a full-round action that
+      provokes attacks of opportunity. The wound rope can be attached to a
+      @UUID[Compendium.pf1.weapons-and-ammo.84twkW8rwnUEX4EY]{Barbed Bolt} or
+      grappling bolt as part of a loading action. After firing such a bolt, the
+      wielder can use the winch to retract the rope or pull herself along the
+      rope if the bolt is secure. When used with a barbed bolt, the winch
+      provides a +2 bonus on grapple combat maneuver checks to pull the target
+      toward you. When used with a grappling bolt, the winch provides a +2 bonus
+      on
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.ZAwjVOTwsBpZRgw4]{Climb}
+      checks.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 400
+  sources:
+    - id: PZO9452
+      pages: '18'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 12
+type: weapon

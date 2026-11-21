@@ -1,0 +1,54 @@
+_id: xr34rqguk8zpflhc
+_key: '!items!xr34rqguk8zpflhc'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Planetary Adaptation, Mass
+system:
+  actions:
+    - _id: hvjfl3bl3b7xa6e8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.ewfehtcszgqok4d7]{planetary adaptation},
+      except as noted above.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 6
+      oracle: 6
+      sorcerer: 7
+      summoner: 6
+      warpriest: 6
+      wizard: 7
+  level: 7
+  school: trs
+  sources:
+    - id: PZO9449
+      pages: '29'
+type: spell

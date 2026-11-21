@@ -1,0 +1,62 @@
+_id: VwxTLVOEPfbvIv9B
+_key: '!items!VwxTLVOEPfbvIv9B'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sling-glove.png
+name: Sling Glove
+system:
+  actions:
+    - _id: 9ttekzdljxwewhsv
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: slingBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '50'
+  ammo:
+    type: slingBullet
+  baseTypes:
+    - Sling Glove
+  description:
+    unidentified: >-
+      <p>This curved, scooped-shaped, 2-foot-long wicker basket attaches to your
+      wrist, allowing you to throw fist-sized stones at great speed merely by
+      whipping your arm forward. Loading a sling glove is a free action that
+      does not provoke an attack of opportunity so long as you have a free hand.
+      You take -4 penalty when throwing a stone at an adjacent target and cannot
+      use the weapon to attack creatures in your space.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: leather
+  price: 5
+  sources:
+    - id: PZO9410
+      pages: '5'
+  subType: exotic
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

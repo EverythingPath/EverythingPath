@@ -1,0 +1,56 @@
+_id: ydsgl0vjfzp3qv87
+_key: '!items!ydsgl0vjfzp3qv87'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Lighten Object
+system:
+  actions:
+    - _id: rytc9eallpfqy1jk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: 1 object of up to 1 cubic ft./level
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's weight decreases by half. If this spell is cast on armor,
+      the armor's armor check penalty decreases by 1, though its categorization
+      as light, medium, or heavy does not change.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      cleric: 1
+      magus: 1
+      oracle: 1
+      skald: 1
+      sorcerer: 1
+      summoner: 1
+      warpriest: 1
+      wizard: 1
+  materials:
+    value: goose down
+  school: trs
+  sources:
+    - id: PZO9267
+      pages: '236'
+    - id: PZO9418
+      pages: '28'
+type: spell

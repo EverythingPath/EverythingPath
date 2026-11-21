@@ -1,0 +1,51 @@
+_id: q986nbkaq8kwbcy2
+_key: '!items!q986nbkaq8kwbcy2'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Crime of Opportunity
+system:
+  actions:
+    - _id: bpm0zr48nth0g5nc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You awaken a sudden criminal impulse in the target, compelling it to
+      commit a criminal act as if affected by the
+      @UUID[Compendium.pf1.spells.Item.dpmoeh4lh1iujpyr]{crime wave} spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      mesmerist: 1
+  materials:
+    value: a slit purse
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '208'
+  subschool:
+    - compulsion
+type: spell

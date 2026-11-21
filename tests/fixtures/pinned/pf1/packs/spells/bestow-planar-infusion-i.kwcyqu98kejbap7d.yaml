@@ -1,0 +1,67 @@
+_id: kwcyqu98kejbap7d
+_key: '!items!kwcyqu98kejbap7d'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Bestow Planar Infusion I
+system:
+  actions:
+    - _id: 6ymz5239yu4fj25a
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell draws upon the latent planar energy of the caster's
+      surroundings, allowing her to temporarily infuse a creature with the
+      plane's power.</p><p>The touched creature gains that plane's basic
+      infusion for the spell's duration. This spell has no effect if cast on the
+      Material Plane, and it ends as soon as the spell's target leaves the plane
+      with which it has been infused. Details on planar infusions can be found
+      in each plane's Infusion section, as presented in Chapter 3 of this book.
+      Once a creature gains the benefits of <em>bestow planar infusion I</em>,
+      it remains attuned to that plane for 24 hours. Additional castings of
+      <em>bestow planar infusion I</em> during this time bestow the same
+      infusion that was granted by the initial casting that day. Planar
+      infusions that can be used a limited number of times per day are not
+      refreshed by multiple castings of <em>bestow planar infusion I</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      cleric: 1
+      inquisitor: 1
+      magus: 1
+      medium: 1
+      occultist: 1
+      oracle: 1
+      psychic: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  school: evo
+  sources:
+    - id: PZO1141
+      pages: '39'
+type: spell

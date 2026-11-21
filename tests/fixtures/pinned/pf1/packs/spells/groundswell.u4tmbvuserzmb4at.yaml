@@ -1,0 +1,60 @@
+_id: u4tmbvuserzmb4at
+_key: '!items!u4tmbvuserzmb4at'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Groundswell
+system:
+  actions:
+    - _id: i54f282sbxdoowt2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell allows the target to cause the ground to rise up beneath
+      him. As a swift action, the target can cause the ground to rise 5 feet,
+      while all adjacent squares are treated as steep slopes (<i>Core
+      Rulebook</i> 428). The <i>groundswell</i> precludes flanking from
+      creatures standing at lower elevations than the target. If the target
+      moves after creating a <i>groundswell</i>, the ground returns to its
+      normal elevation at the end of his turn; otherwise, it remains in place
+      until the target moves or uses a swift action to return the ground to
+      normal. A <i>groundswell</i> cannot increase elevation of the ground
+      beyond 5 feet.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      cleric: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      oracle: 2
+      ranger: 2
+      warpriest: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '19'
+type: spell
