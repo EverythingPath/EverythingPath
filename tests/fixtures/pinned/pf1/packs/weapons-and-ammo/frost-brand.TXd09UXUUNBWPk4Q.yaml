@@ -1,0 +1,99 @@
+_id: TXd09UXUUNBWPk4Q
+_key: '!items!TXd09UXUUNBWPk4Q'
+_stats:
+  coreVersion: '12.343'
+folder: 6XZWJB1Fu5AQ6KhP
+img: icons/weapons/swords/sword-flanged-lightning.webp
+name: Frost Brand
+system:
+  actions:
+    - _id: iblr8sofw7u5g1b2
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        nonCritParts:
+          - formula: 1d6
+            types:
+              - cold
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      img: icons/weapons/swords/sword-flanged-lightning.webp
+      name: Attack
+      range:
+        units: melee
+      tag: frostBrand
+    - _id: 1eG0dpF9evQrxVoz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      img: icons/magic/symbols/runes-star-orange-purple.webp
+      name: Dispel Fire
+      target:
+        value: one lasting firespell
+  aura:
+    school: evo
+  baseTypes:
+    - Greatsword
+  cl: 14
+  description:
+    unidentified: >-
+      <p>This immense two-handed sword is about 5 feet in length. A greatsword
+      may have a dulled lower blade that can be gripped.</p>
+    value: >-
+      <p>This +3 frost greatsword sheds light as a torch when the temperature
+      drops below 0° F. At such times it cannot be concealed when drawn, nor can
+      its light be shut off. Its wielder is protected from fire; the sword
+      absorbs the first 10 points of fire damage each round that the wielder
+      would otherwise take. A frost brand extinguishes all nonmagical fires in a
+      20-foot radius. As a standard action, it can also dispel lasting fire
+      spells, but not instantaneous effects. You must succeed at a dispel check
+      (1d20 +14) against each spell to dispel it. The DC to dispel such spells
+      is 11 + the caster level of the fire
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.4hNO4OAWYF5vXphH]{Craft Magic Arms and
+      Armor}, @UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{dispel magic},
+      @UUID[Compendium.pf1.spells.Item.t1uhggjfimtabp4v]{ice storm},
+      @UUID[Compendium.pf1.spells.Item.1vh2ewwvzvxunoxk]{protection from
+      energy}; <strong>Cost</strong> 27,375 gp</p>
+  enh: 3
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 54475
+  sources:
+    - id: PZO1123
+      pages: '155'
+    - id: PZO1110
+      pages: '471'
+  subType: martial
+  unidentified:
+    name: Greatsword
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 8
+type: weapon

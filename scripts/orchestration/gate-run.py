@@ -1,0 +1,1473 @@
+#!/usr/bin/env python3
+"""Script gate operator: run one gate from its spec, with no model operator (root decision 2026-11-05).
+
+  python3 -B scripts/orchestration/gate-run.py SPEC.json          generate the inputs and run the gate
+  python3 -B scripts/orchestration/gate-run.py --stop SPEC.json   set the attempt's control to stopped (under the
+                                                                  publication lock; a published attempt is left as is)
+
+Detached (operations.md "Script gate operator"):
+  BOUNDED_WAIT=1 $EP_ORCH/bounded.sh --detach <label> driver SPEC.json
+then `scripts/orchestration/await.sh <id>`. The driver kind runs only this script with SPEC or --stop SPEC
+(driver-argv.sh). After a stop, `gate_config.py retry` writes the next attempt's spec.
+
+It runs the sequence a gate operator ran by hand: identity and mode prechecks, the prelaunch memory and disk
+samples, the storage baseline, `gate-operator.py prepare` and `runtime`, the stale-admission probe and
+the retained entry's `resume`. The queue, the observer, collection and `complete` stay the gate
+operator's (gate_operator.py, gate_monitor.py); this script never submits or lands anything itself.
+It writes gate.json from the spec (gate_config.py), its own identity (path and blob at BASE) as the
+operator, then `<result>.json` and `<result>.md` and the done marker, and exits non-zero on any stop.
+"""
+import argparse
+import contextlib
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import select
+import shutil
+import signal
+import subprocess
+import sys
+import threading
+import time
+
+HERE = Path(__file__).resolve().parent
+MAIN = HERE.parent.parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+import disk_guard  # noqa: E402
+import gate_config  # noqa: E402
+import gate_core  # noqa: E402
+import gate_time  # noqa: E402
+from gate_core import SCRIPT_OPERATOR, git, require  # noqa: E402
+from gate_monitor import STORAGE_PATTERN, GiB, launch_minimum_bytes  # noqa: E402
+from workflow_evidence import create_json, execution_tools, now, reference  # noqa: E402
+
+ORCH = '/home/andreas/repos/everythingpath/ep-orch'
+LOCKS = ('resource', 'curator', 'curator2', 'land', 'heavy')
+TOOLS = ('bash', 'git', 'node', 'pnpm', 'python3', 'systemctl', 'docker', 'flock')
+# The caller's session variables that systemctl --user, git and Python need; everything else is dropped.
+KEEP = ('HOME', 'USER', 'LOGNAME', 'SHELL', 'TMPDIR', 'XDG_RUNTIME_DIR', 'DBUS_SESSION_BUS_ADDRESS')
+# `admission.sh status --for <intent>` adds "; behind <intent>: ..." (what waits behind the driver's intent).
+IDLE = re.compile(r'memory: 0(\.0+)?/[0-9.]+ GiB reserved; active: none; queued: none(; behind [A-Za-z0-9._-]+: .*)?')
+GENERATED = ('convex/_generated/api.d.ts', 'convex/_generated/api.js', 'convex/_generated/dataModel.d.ts',
+             'convex/_generated/server.d.ts', 'convex/_generated/server.js')
+PRELAUNCH_SAMPLES, PRELAUNCH_INTERVAL, PRELAUNCH_DEADLINE = 3, 30, 90 * 60
+# Only memory blocking, or only disk blocking, stops sooner: prelaunch has prepared nothing, so root reroutes (no idle waiting).
+PRELAUNCH_MEMORY_DEADLINE, PRELAUNCH_REPORT = 30 * 60, 10 * 60
+REAP_INTERVAL, REAP_DEADLINE = 5, 120
+# The driver's admission intent (admission.sh intent): the gate unit's class, awaiting the five locks; its own
+# limit is the prelaunch's plus the stages up to the claim, so a driver that hangs never holds it for good.
+INTENT_CLASS, INTENT_MARGIN, HANDOFF_INTERVAL = 'gate-2', 30 * 60, 1
+PRECHECK_MARGIN = GiB // 2
+COMMAND_TIMEOUT = 60  # seconds, each instrumentation command (probes, storage, runtime)
+# After a stop with a claim, how long the driver waits for the stopped gate unit's canonical receipt before the
+# retained cancel removes the attempt's scratch: bounded.sh's TimeoutStopSec=300 for a gate unit, then its
+# ExecStopPost receipt. It fits in the driver unit's own TimeoutStopSec=900.
+TERMINAL_WAIT, TERMINAL_INTERVAL = 420, 5
+UNITS = ['systemctl', '--user', 'list-units', 'ep-fresh-*', 'ep-command-*', '--state=active,activating', '--no-legend', '--plain']
+LOADAVG = Path('/proc/loadavg')
+IDLE_SHAPE = re.compile(r'memory: [0-9.]+/[0-9.]+ GiB reserved; active: .*; queued: .*')
+STAGE_LOGS = re.compile(r'logs: logs/(\S+)-\*\.log')
+# gh is not on the driver's fixed PATH (bounded-driver.sh's DRIVER_PATH); it is looked up there, then here.
+GH_DIRECTORIES = ('/usr/local/bin',)
+
+
+def read_jobs(runner):
+    """The manifest run's jobs from GitHub (gate_time.github_jobs). Fixtures replace this function."""
+    gh = shutil.which('gh', path=os.pathsep.join([os.environ.get('PATH', ''), *GH_DIRECTORIES]))
+    if gh is None:
+        raise gate_time.Unmeasured('gh is not installed on this host')
+    return gate_time.github_jobs(runner, gh)
+
+
+class Stop(RuntimeError):
+    """A refusal or stop: the driver records it, launches nothing further and exits non-zero."""
+
+
+class Unavailable(Exception):
+    """Evidence an operational value needs does not exist; the message is the reason the result prints."""
+
+
+def meminfo_available():
+    return int(re.search(r'^MemAvailable:\s+(\d+)', Path('/proc/meminfo').read_text(), re.M)[1]) * 1024
+
+
+def blob(path):
+    raw = Path(path).read_bytes()
+    return hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+
+
+def write_json(path, value):
+    create_json(path, value)
+
+
+def replace_json(path, value):
+    tmp = Path(str(path) + '.tmp.' + str(os.getpid()))
+    tmp.write_text(json.dumps(value, indent=2) + '\n')
+    os.replace(tmp, path)
+
+
+def set_control_state(path, state):
+    """The stop file: the attempt's execution control, which the gate operator and this driver both honour."""
+    control = json.loads(Path(path).read_text())
+    control['state'] = state
+    control.pop('phase', None)
+    replace_json(path, control)
+    return control
+
+
+@contextlib.contextmanager
+def publication_lock(inputs):
+    """The attempt's cross-process publication lock (inputs/publication.lock, flock): finalization holds it
+    while it fixes the verdict and writes the result, and `--stop` holds it while it decides and writes the
+    control, so a stop and a publication never interleave."""
+    inputs = Path(inputs)
+    if not inputs.is_dir():
+        yield
+        return
+    with (inputs / 'publication.lock').open('a+') as stream:
+        fcntl.flock(stream, fcntl.LOCK_EX)
+        yield
+
+
+def stop_attempt(spec_path, orch):
+    """`--stop`: under the publication lock, a published attempt is reported and left unchanged; otherwise
+    its control becomes stopped, which the run's publication reads under the same lock."""
+    spec = gate_config.load_spec(spec_path, orch)
+    inputs = Path(spec['paths']['inputs'])
+    result = Path(spec['paths']['result']).with_suffix('.json')
+    with publication_lock(inputs):
+        if result.is_file():
+            print('already finished: ' + str(json.loads(result.read_text()).get('verdict')))
+            return 0
+        print(json.dumps(set_control_state(inputs / 'control.json', 'stopped')))
+        return 0
+
+
+class Driver:
+    def __init__(self, spec_path, orch=ORCH, main=MAIN, sleep=time.sleep, clock=time.monotonic, available=meminfo_available):
+        self.spec_path, self.orch, self.main = Path(spec_path), str(orch), Path(main)
+        self.sleep, self.clock, self.available = sleep, clock, available
+        self.stages, self.cancel_requested, self.entry = [], False, None
+        # Every driver deadline that fired: {stage, deadline, seconds, at, reason} (Driver.deadline).
+        self.fired, self.active_stage = [], None
+        self.publication, self.published = threading.RLock(), False
+        # The gate-time precheck's record (gate_time_precheck) and whether a gate-time check refused the gate.
+        self.gate_time, self.gate_time_refused = None, False
+        self.own_unit = 'ep-fresh-' + os.environ['BOUNDED_ID'] if os.environ.get('BOUNDED_ID') else None
+        # The admission intent: {id, process, ended} once registered (register_intent); end_intent ends it once.
+        self.intent, self.intent_lock = None, threading.Lock()
+        self.started_at, self.started = now(), clock()
+
+    # -- environment and probes ------------------------------------------------------------
+    def canonical_environment(self):
+        """The gate operator's public environment, rebuilt rather than inherited: no BOUNDED_*, CAPPED_*,
+        ADMISSION_*, LAND_*, VITEST_* or NODE_OPTIONS from a bounded unit or a session reach it."""
+        path, _ = execution_tools(TOOLS, hashes=False)
+        environment = {key: os.environ[key] for key in KEEP if key in os.environ}
+        environment.update(PATH=path, LC_ALL='C.UTF-8', BOUNDED_WORKERS='2', BOUNDED_CPU='600%',
+                           PYTHONDONTWRITEBYTECODE='1', EP_ORCH=self.orch)
+        return environment
+
+    def command(self, argv, accepted=(0,), extra=None):
+        argv = [str(item) for item in argv]
+        try:
+            result = subprocess.run(argv, capture_output=True, text=True, cwd=self.main, env={**self.env, **(extra or {})},
+                                    timeout=COMMAND_TIMEOUT)
+        except subprocess.TimeoutExpired:
+            raise self.deadline('instrumentation', COMMAND_TIMEOUT,
+                                'Instrumentation timed out after %s s: %s' % (COMMAND_TIMEOUT, ' '.join(argv)))
+        record = dict(argv=argv, exitCode=result.returncode, stdout=result.stdout, stderr=result.stderr)
+        if result.returncode not in accepted:
+            raise Stop('Instrumentation failed: ' + ' '.join(argv) + ': exit ' + str(result.returncode) + ' ' + result.stderr.strip())
+        return record
+
+    def deadline(self, name, seconds, reason):
+        """The Stop for one of the driver's deadlines, recorded as fired with the stage it fired in."""
+        self.fired.append(dict(stage=self.active_stage, deadline=name, seconds=seconds, at=now(), reason=reason))
+        return Stop(reason)
+
+    def try_locks(self):
+        """The prelaunch, reap and preclaim lock check: each lock's state read from /proc/locks (`admission.sh held`),
+        opening, creating and taking no lock file. A probe that took the locks, even for a moment, would look to
+        admission like a worker's curator slot and let commands past the driver's intent (admission_intent_blocks).
+        A lock is available when free or missing (no file, so no holder); one held or unreadable is not."""
+        paths = {name: Path(self.orch) / (name + '.lock') for name in LOCKS}
+        held = self.command([self.main / 'scripts/orchestration/admission.sh', 'held', *paths.values()], accepted=(0, 3),
+                            extra=dict(BOUNDED_STATE_DIR=self.orch))
+        locks = {}
+        for name, path in paths.items():
+            state = lock_state(held, path)
+            locks[name] = dict(available=state.get('available') is True, state=state.get('state', 'unavailable'),
+                               **({'unavailable': state['unavailable']} if 'unavailable' in state else {}))
+            with contextlib.suppress(OSError):
+                stat = os.stat(path)
+                locks[name].update(device=stat.st_dev, inode=stat.st_ino)
+        return locks
+
+    def probe(self):
+        """Locks, the admission ledger, other heavy units, memory and load, for the prelaunch, reap and preclaim
+        checks: each lock is tried at once and `admission.sh status` runs, whose sweep reaps reservations no
+        process holds. The terminal probe is terminal_observation, which only reads."""
+        locks = self.try_locks()
+        # The shared ledger, as the gate operator's own admission check reads it (never in the operator's environment),
+        # and as the driver's intent sees it while it holds one: what waits behind the intent doesn't count.
+        intent = self.live_intent()
+        admission = self.command([self.main / 'scripts/orchestration/admission.sh', 'status', *(['--for', intent] if intent else [])],
+                                 extra=dict(BOUNDED_STATE_DIR=self.orch))
+        units = self.command(UNITS)
+        return dict(at=now(), locks=locks, admission=admission, activeUnits=units, foreignActiveUnits=self.foreign_units(units),
+                    hostAvailableBytes=self.available(), loadAverage=LOADAVG.read_text().strip())
+
+    def foreign_units(self, units):
+        return [line.split()[0] for line in units['stdout'].splitlines() if line.strip() and line.split()[0] != (self.own_unit or '') + '.service']
+
+    def observed(self, commands, argv, accepted=(0,), extra=None):
+        """One terminal-probe command: its record (kept under `commands`), or unavailable with the reason when
+        it failed, exited outside `accepted` or timed out."""
+        try:
+            record = self.command(argv, accepted=range(256), extra=extra)
+        except Stop as exc:
+            return unavailable(str(exc))
+        commands.append(record)
+        if record['exitCode'] not in accepted:
+            return unavailable('%s exited %d: %s' % (' '.join(record['argv'][:2]), record['exitCode'], record['stderr'].strip()))
+        return record
+
+    def terminal_observation(self):
+        """The terminal probe's reads, none of which changes anything: `admission.sh held` (the five locks'
+        holders from /proc/locks), `admission.sh peek` (the ledger as it is), `systemctl --user list-units`,
+        /proc/meminfo and /proc/loadavg. A read that fails is unavailable with its reason; it never reads as a
+        free lock, an empty ledger or no heavy unit."""
+        script, commands = self.main / 'scripts/orchestration/admission.sh', []
+        paths = {name: Path(self.orch) / (name + '.lock') for name in LOCKS}
+        held = self.observed(commands, [script, 'held', *paths.values()], accepted=(0, 3))
+        admission = self.observed(commands, [script, 'peek'], extra=dict(BOUNDED_STATE_DIR=self.orch))
+        units = self.observed(commands, UNITS)
+        return dict(at=now(), terminal=True, locks={name: lock_state(held, path) for name, path in paths.items()}, admission=admission,
+                    activeUnits=units, foreignActiveUnits=units if 'unavailable' in units else self.foreign_units(units),
+                    hostAvailableBytes=available(self.available), loadAverage=available(lambda: LOADAVG.read_text().strip()),
+                    commands=commands)
+
+    @staticmethod
+    def idle(probe):
+        return (all(lock['available'] for lock in probe['locks'].values()) and not probe['foreignActiveUnits']
+                and IDLE.fullmatch(ledger_line(probe)) is not None)
+
+    def wait(self, seconds):
+        for _ in range(int(seconds)):
+            if self.cancel_requested:
+                return
+            self.sleep(1)
+
+    # -- the admission intent ------------------------------------------------------------------
+    def register_intent(self):
+        """Before the prelaunch's first lock probe: a pending gate intent in the shared ledger (`admission.sh
+        intent`, a child that holds it while its stdin stays open), so no new capped.sh command is admitted ahead
+        of this gate while it waits (admission.sh admission_fits). Its id reaches the gate operator as
+        GATE_ADMISSION_INTENT, whose idle checks read the ledger as the intent sees it. A failed registration is
+        printed and the gate goes on without one, as before; it never stops the gate."""
+        ident = 'driver-' + (os.environ.get('BOUNDED_ID') or '%s-%d' % (self.spec['label'], os.getpid()))
+        argv = [str(self.main / 'scripts/orchestration/admission.sh'), 'intent', ident, INTENT_CLASS,
+                str(PRELAUNCH_DEADLINE + INTENT_MARGIN), 'gate-run ' + self.spec['label'], *LOCKS]
+        record = dict(at=now(), id=ident, argv=argv, registered=False)
+        with (self.inputs / 'admission-intent.log').open('x') as log:
+            process = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=log, text=True, cwd=self.main,
+                                       env={**self.env, 'BOUNDED_STATE_DIR': self.orch}, start_new_session=True)
+        ready, _, _ = select.select([process.stdout], [], [], COMMAND_TIMEOUT)
+        if ready and process.stdout.readline().strip() == 'intent ' + ident:
+            record['registered'] = True
+            self.intent = dict(id=ident, process=process, ended=None)
+            self.env['GATE_ADMISSION_INTENT'] = ident
+            print('admission intent %s: registered' % ident, flush=True)
+        else:
+            process.kill()
+            process.wait()
+            print('admission intent %s: not registered (%s); the gate goes on without one' % (ident, self.tail(self.inputs / 'admission-intent.log', 2) or 'no answer'), flush=True)
+        write_json(self.inputs / 'admission-intent.json', record)
+
+    def live_intent(self):
+        """The intent's id while it is in force, else None: never registered, ended, or its process gone."""
+        intent = self.intent
+        if intent is None or intent['ended'] or intent['process'].poll() is not None:
+            return None
+        return intent['id']
+
+    def tell_intent(self, line):
+        """One line to the intent's process; False when it is gone."""
+        try:
+            self.intent['process'].stdin.write(line + '\n')
+            self.intent['process'].stdin.flush()
+            return True
+        except (BrokenPipeError, OSError, ValueError):
+            return False
+
+    def claim_intent(self):
+        """Once the prelaunch counted: the gate takes its locks from now on (prepare, then submit and the unit), so a
+        held curator lock is its own and lets no capped.sh command past the intent any more."""
+        with self.intent_lock:
+            if self.live_intent():
+                self.tell_intent('claim')
+
+    def end_intent(self, why):
+        """Ends the intent once, with its reason in events.log: when the gate unit claims its locks, or when the
+        driver stops or finishes. A process that doesn't end within the instrumentation timeout is killed (the
+        sweep then ends the entry)."""
+        with self.intent_lock:
+            intent = self.intent
+            if intent is None or intent['ended']:
+                return
+            intent['ended'] = why
+            process = intent['process']
+            if process.poll() is None:
+                self.tell_intent('end ' + why)
+                with contextlib.suppress(OSError):
+                    process.stdin.close()
+                try:
+                    process.wait(timeout=COMMAND_TIMEOUT)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait()
+            print('admission intent %s: ended (%s)' % (intent['id'], why), flush=True)
+
+    def unit_claimed(self):
+        """Why the intent can end now that resume submitted the gate unit, or None: the unit's own admission entry
+        is queued or active (it holds its locks and waits for or holds its memory), or the unit has ended."""
+        submission = self.load(self.attempt / 'submission.json')
+        ident = submission.get('id') if isinstance(submission, dict) else None
+        if not isinstance(ident, str) or not ident:
+            return None
+        entry = Path(self.orch) / 'admission/entries' / (ident + '.entry')
+        with contextlib.suppress(OSError):
+            if re.search(r'^state=(queued|active)$', entry.read_text(), re.M):
+                return 'the gate unit %s claimed its locks' % ident
+        if (Path(self.orch) / 'bounded' / ident / 'receipt.json').is_file():
+            return 'the gate unit %s ended' % ident
+        return None
+
+    def watch_handoff(self, done):
+        """While resume runs: ends the intent as soon as the gate unit claims its locks (unit_claimed)."""
+        while not done.wait(HANDOFF_INTERVAL):
+            why = safely(self.unit_claimed)
+            if why:
+                self.end_intent(why)
+                return
+
+    def request_stop(self):
+        """A stop signal: persist the stopped control at once, so no gate-operator step that starts or is
+        running from now on keeps submission authority, whatever the driver is doing. After the result is
+        published it changes nothing, so the recorded control stays the actual one."""
+        with self.publication:
+            if self.published:
+                return
+            self.cancel_requested = True
+            self.persist_stop()
+
+    def persist_stop(self):
+        control = getattr(self, 'inputs', None) and self.inputs / 'control.json'
+        try:
+            if control and control.is_file() and json.loads(control.read_text()).get('state') != 'stopped':
+                set_control_state(control, 'stopped')
+        except (OSError, ValueError, AttributeError) as exc:  # A damaged control is reported, never trusted as active.
+            self.stop_persist_error = str(exc)
+
+    def check_stop(self):
+        if self.cancel_requested:
+            raise Stop('Cancelled: the driver received a stop signal')
+        control = self.inputs / 'control.json'
+        if control.is_file() and json.loads(control.read_text()).get('state') == 'stopped':
+            raise Stop('Execution stopped by control: ' + str(control))
+
+    # -- identities ---------------------------------------------------------------------------
+    def check_main(self):
+        s = self.spec
+        head = git(self.main, 'rev-parse', 'HEAD')
+        if head != s['base']:
+            raise Stop('Moved base: MAIN is at ' + head + ', not BASE ' + s['base'] + '; regenerate the spec on the new base')
+        if (git(self.main, 'rev-parse', 'HEAD^{tree}') != s['basetree'] or git(self.main, 'branch', '--show-current') != s.get('feature', gate_config.FEATURE)
+                or git(self.main, 'status', '--porcelain=v1', '--untracked-files=all')):
+            raise Stop('Identity mismatch: MAIN is not the clean integration branch at BASE/BASETREE')
+        # Workers keep committing during a gate, so automatic Git maintenance must be off (operations.md#protected-refs).
+        off = gate_core.maintenance_refusals(gate_core.maintenance_reading(self.main))
+        if off:
+            raise Stop('Automatic Git maintenance can run on MAIN\'s object store: ' + '; '.join(off) + ' (root: ' + gate_core.MAINTENANCE_FIX + ')')
+
+    def check_worktree(self, candidate):
+        s = self.spec
+        wt = s['wt']
+        if (git(wt, 'rev-parse', 'HEAD') != candidate or git(wt, 'rev-parse', 'HEAD^{tree}') != s['tree']
+                or git(wt, 'branch', '--show-current') != s['branch'] or git(wt, 'status', '--porcelain=v1', '--untracked-files=all')):
+            raise Stop('Identity mismatch: WT is not the clean ' + s['branch'] + ' at ' + candidate + ' / TREE ' + s['tree'])
+
+    def identities(self, candidate=None):
+        self.check_main()
+        self.check_worktree(candidate or self.expected_head)
+
+    def check_driver(self):
+        """The operator identity this gate records: MAIN's committed driver at BASE, unmodified."""
+        path = Path(__file__).resolve()
+        if path != (self.main / SCRIPT_OPERATOR).resolve():
+            raise Stop('Identity mismatch: run the driver from MAIN/' + SCRIPT_OPERATOR + ', not ' + str(path))
+        committed = git(self.main, 'rev-parse', self.spec['base'] + ':' + SCRIPT_OPERATOR) if gate_core.git_holds(
+            self.main, 'cat-file', '-e', self.spec['base'] + ':' + SCRIPT_OPERATOR) else None
+        if committed is None or blob(path) != committed:
+            raise Stop('Identity mismatch: the running driver is not the committed ' + SCRIPT_OPERATOR + ' at BASE')
+        return committed
+
+    def check_prepared_mapping(self):
+        """Prepared mode: the prior attempt's mapping must bind exactly this gate before anything waits."""
+        s = self.spec
+        mapping_path = Path(s['paths']['mapping'])
+        if not mapping_path.is_file() or hashlib.sha256(mapping_path.read_bytes()).hexdigest() != s['prepared']['mapping_sha256']:
+            raise Stop('Prepared mapping mismatch: ' + str(mapping_path) + ' is missing or not the pinned sha256')
+        prior = json.loads(mapping_path.read_text())
+        expected = dict(BASE=s['base'], REVIEWED=s['reviewed'], TREE=s['tree'], WT=s['wt'], BR=s['branch'], ARCHIVE=s['archive'])
+        for key, value in expected.items():
+            if prior.get(key) != value:
+                raise Stop('Prepared mapping mismatch: ' + key)
+        if prior.get('SQUASHED') != s['prepared']['candidate']:
+            raise Stop('Prepared mapping mismatch: SQUASHED is not the prepared candidate')
+
+    def check_modes(self):
+        """The mode proofs gate_core re-proves at every authorization, run now so a refusal stops before any wait."""
+        s = self.spec
+        v = dict(MAIN=str(self.main), ORCH=self.orch, WT=s['wt'], BASE=s['base'], REVIEWED=s['reviewed'],
+                 TREE=s['tree'], E=s['paths']['attempt'])
+        fields = gate_config.mode_fields(s)
+        record = {}
+        try:
+            rebase = gate_core.rebase_scope(v, fields)
+            if rebase is not None:
+                record['rebaseProof'] = dict(passed=True, accepted=rebase[0], acceptedTree=rebase[1])
+            carry = gate_core.carried_review(fields)
+            if carry is not None:
+                record['carriedReview'] = dict(passed=True, scope=list(gate_core.carry_scope(v, fields, carry, rebase)))
+            land = gate_core.conditional_land(fields)
+            if land is not None:
+                record['conditionalLand'] = dict(passed=True, scope=list(gate_core.conditional_scope(v, fields, land, rebase)))
+            lane = gate_core.light_lane_scope(v, fields)
+            if lane is not None:
+                record['lane'] = dict(passed=True, proof=lane)
+            if 'remoteChecks' in fields:
+                # gate_core.verify_remote_checks, with the prepared candidate a prepared attempt's mapping adds.
+                from remote_checks import config as remote_config, verify_manifest
+                remote = remote_config(fields['remoteChecks'])
+                commits = {s['reviewed'], *([s['prepared']['candidate']] if 'prepared' in s else [])}
+                verify_manifest(remote['path'], remote['sha256'], s['tree'], s['base'], s['wt'], self.orch, commits)
+                record['remoteChecks'] = dict(passed=True, manifest=fields['remoteChecks'])
+            # MAIN's verifier, live (this host's toolchain and the list's sources), before anything waits.
+            if gate_core.host_audits_receipt(v, fields, live=True) is not None:
+                record['hostAuditsReceipt'] = dict(passed=True, receipt=fields['hostAuditsReceipt'])
+        except Exception as exc:
+            raise Stop('Mode precheck refused: ' + str(exc))
+        return record
+
+    # -- stages -------------------------------------------------------------------------------
+    def stage(self, name, operation):
+        row = dict(name=name, startedAt=now())
+        started = self.clock()
+        self.stages.append(row)
+        self.active_stage = name
+        try:
+            self.check_stop()  # Every boundary: a pending stop starts nothing.
+            outcome = operation()
+            row['outcome'] = 'ok'
+            return outcome
+        except Stop as exc:
+            row.update(outcome='stopped', reason=str(exc))
+            raise
+        except Exception as exc:
+            row.update(outcome='error', reason=str(exc))
+            raise Stop(name + ' failed: ' + str(exc))
+        finally:
+            self.active_stage = None
+            row.update(endedAt=now(), seconds=round(self.clock() - started, 3))
+
+    def run_child(self, name, argv):
+        """One gate-operator command, its output kept under the inputs. It never starts while a stop is
+        pending. A stop signal never kills it: request_stop has already written the stopped control, which
+        the gate operator honours at its own phase boundaries and in the observer, and the driver waits."""
+        self.check_stop()
+        log = self.inputs / (name + '-output.log')
+        with log.open('x') as output:
+            process = subprocess.Popen([str(item) for item in argv], cwd=self.main, env=self.env,
+                                       stdout=output, stderr=subprocess.STDOUT, start_new_session=True)
+            write_json(self.inputs / (name + '-process.json'), dict(at=now(), pid=process.pid, wrapperPid=os.getpid(), argv=[str(item) for item in argv]))
+            code = process.wait()
+        (self.inputs / (name + '-exit.txt')).write_text(str(code) + '\n')
+        self.stages[-1]['exitCode'] = code
+        return code, log
+
+    def tail(self, log, lines=5):
+        return ' | '.join(Path(log).read_text().strip().splitlines()[-lines:])
+
+    # -- the sequence -------------------------------------------------------------------------
+    def run(self):
+        try:
+            self.spec = gate_config.load_spec(self.spec_path, self.orch)
+        except Exception as exc:
+            print('gate-run: invalid spec: ' + str(exc), file=sys.stderr)
+            return 2
+        s, paths = self.spec, self.spec['paths']
+        self.inputs, self.attempt = Path(paths['inputs']), Path(paths['attempt'])
+        self.result_md = Path(paths['result'])
+        self.result_json = self.result_md.with_suffix('.json')
+        self.done = Path(paths['done'])
+        existing = [str(path) for path in (self.result_md, self.result_json, self.done, self.inputs, self.attempt) if path.exists()]
+        if existing:
+            print('gate-run: refusing to overwrite an earlier attempt: ' + ', '.join(existing), file=sys.stderr)
+            return 2
+        self.expected_head = s['prepared']['candidate'] if 'prepared' in s else s['reviewed']
+        self.config_path = self.inputs / 'gate.json'
+        self.verdict, self.reason = 'stopped', None
+        try:
+            self.env = self.canonical_environment()
+            self.sequence()
+        except Stop as exc:
+            self.reason = str(exc)
+        except Exception as exc:  # A driver defect still records its stop and exits non-zero.
+            self.reason = 'Driver error: ' + type(exc).__name__ + ': ' + str(exc)
+        self.end_intent('the driver finished' if self.reason is None else 'the driver stopped: ' + ' '.join(self.reason.split())[:80])
+        self.recover()
+        self.terminal = self.terminal_probe()
+        return self.finish()
+
+    def sequence(self):
+        s = self.spec
+        self.driver_blob = self.stage('identity', lambda: (self.check_main(), self.check_driver())[1])
+        self.stage('worktree', lambda: self.check_worktree(self.expected_head))
+        if 'prepared' in s:
+            self.stage('prepared-mapping', self.check_prepared_mapping)
+        modes = self.stage('mode-prechecks', self.check_modes)
+        self.inputs.mkdir(parents=False)
+        run_id = 'gate-run:' + s['label'] + ':' + (os.environ.get('BOUNDED_ID') or time.strftime('%Y%m%d-%H%M%S') + '-' + str(os.getpid()))
+        self.operator = gate_config.script_operator(self.main, s['base'], run_id)
+        refs = {}
+        write_json(self.inputs / 'operator.json', self.operator)
+        refs['operator'] = reference(self.inputs / 'operator.json')
+        write_json(self.inputs / 'control.json', {**gate_config.control(s, self.operator),
+                                                  **({'state': 'stopped'} if self.cancel_requested else {})})
+        refs['control'] = str(self.inputs / 'control.json')
+        write_json(self.inputs / 'validation-plan.json', gate_config.validation_plan(s, self.main, self.orch))
+        refs['plan'] = reference(self.inputs / 'validation-plan.json')
+        message = gate_config.commit_message(s)
+        if message is not None:
+            with (self.inputs / 'commit-message.txt').open('x') as output:
+                output.write(message)
+            refs['message'] = reference(self.inputs / 'commit-message.txt')
+        write_json(self.inputs / 'mode-precheck.json', modes)
+        self.stage('gate-time', self.gate_time_precheck)
+        probe = self.stage('prelaunch', self.prelaunch)
+        refs['storageBaseline'] = self.stage('storage-baseline', self.storage_baseline)
+        refs['precheck'] = self.stage('environment-precheck', lambda: self.environment_precheck(probe))
+        refs['evidence'] = [str(self.inputs / name) for name in ('mode-precheck.json', 'gate-time-precheck.json', 'prelaunch-probes.jsonl')]
+        write_json(self.config_path, gate_config.gate_config(s, self.main, self.orch, refs))
+        self.env['GATE_CONFIG'] = str(self.config_path)
+        self.check_stop()
+        self.stage('prepare', self.prepare)
+        self.entry = self.stage('runtime', self.runtime)
+        candidate = json.loads((self.attempt / 'mapping.json').read_text())['SQUASHED']
+        self.stage('admission-probe', lambda: self.reap(candidate))
+        self.stage('preclaim', lambda: self.preclaim(candidate))
+        self.stage('resume', self.resume)
+
+    def gate_time_precheck(self):
+        """The gate's mode, its CI part and the baseline of its mode, before prelaunch (gate_time.py; owner rule
+        2026-11-08, root's rulings on gate-time-check): the measure is the gate's total, so the CI part alone stops
+        the gate here only when it is already over the total trigger, which such a gate cannot pass, unless the spec
+        records root's outside cause. The CI part against its own median is recorded for information. An unreadable
+        CI part is an outside cause: it is recorded and never refuses, and the total is judged on the host part alone."""
+        s = self.spec
+        gate_mode = gate_time.mode(s['kind'], 'lane' in s, s.get('remote', {}).get('mode'))
+        exempt = gate_config.gate_time_exempt(s)
+        base = gate_time.baseline(s['paths']['r'], gate_mode, read_jobs)
+        ci = None
+        if 'remote' in s:
+            try:
+                runner = gate_time.manifest_runner(s['paths']['remote'])
+                ci = gate_time.ci_part(runner, read_jobs(runner))
+            except Exception as exc:
+                ci = unavailable(str(exc))
+        self.gate_time = record = dict(at=now(), mode=gate_mode, ci=ci, baseline=base, exempt=exempt, ciCheck=None, ciInformation=None)
+        if ci and 'seconds' in ci and base['median']:
+            record['ciCheck'] = gate_time.judge(ci['seconds'], base['median']['total'])
+            if base['median']['ci']:
+                record['ciInformation'] = gate_time.judge(ci['seconds'], base['median']['ci'])
+        write_json(self.inputs / 'gate-time-precheck.json', record)
+        if record['ciCheck'] and record['ciCheck']['trigger'] and not exempt:
+            self.gate_time_refused = True
+            raise Stop('Gate time refused: ' + gate_time.reason(gate_mode, record['ciCheck'], part='CI part'))
+
+    def hand_gate_time(self):
+        """I/gate-time.json, which the queue's `gate_time.py land` reads just before land.sh: the CI part, the host
+        part before resume and the moment resume started, the submission claim and the wait ledger whose waits the
+        check leaves out, the baseline and root's outside cause."""
+        record = self.gate_time
+        write_json(self.inputs / 'gate-time.json', dict(
+            version=2, mode=record['mode'], ci=record['ci'], hostBefore=gate_time.host_seconds(self.stages), resumeStartedAt=time.time(),
+            claim=str(self.attempt / 'submission-claim.json'), waits=str(self.gate_time_waits()),
+            baseline={key: record['baseline'].get(key) for key in ('median', 'trigger', 'reason')}, exempt=record['exempt']))
+
+    def gate_time_waits(self):
+        return self.attempt / 'gate-waits.tsv'
+
+    def resume_waits(self):
+        """The resume stage's waits (gate_time.resume_waits), none before the submission claim, or {unavailable}."""
+        claim = self.attempt / 'submission-claim.json'
+        if not claim.is_file():
+            return []
+        try:
+            return gate_time.resume_waits(claim, self.gate_time_waits())
+        except gate_time.Unmeasured as exc:
+            return unavailable(str(exc))
+
+    def land_check(self):
+        """The queue's gate-time line (its `gate-time` stage log), or None when the queue never reached the check."""
+        log = Path(str(self.stage_logs(self.load(self.attempt / 'submission.json'))) + '-gate-time.log')
+        if not log.is_file():
+            return None
+        lines = [line for line in log.read_text().splitlines() if line.startswith('gate-time ')]
+        return lines[-1] if lines else None
+
+    def prelaunch(self):
+        """Three consecutive 30 s samples at the gate mode's launch guard plus 0.5 GiB, the disk floor
+        (disk_guard.py) on the volumes of EP_ORCH and MAIN, all five locks free, admission idle and no other heavy
+        unit. Every 10 minutes it prints and records (the probe row's `blocker`) what blocks, against its
+        threshold (prelaunch_report). It stops at 30 minutes when memory is the only blocker or disk is, and at
+        90 minutes for any other, naming the blockers (prelaunch_stop). A disk part it cannot read is printed
+        once as a warning and never blocks."""
+        threshold = launch_minimum_bytes(gate_config.mode_config(self.spec)) + PRECHECK_MARGIN
+        started, consecutive, due, warned = self.clock(), 0, PRELAUNCH_REPORT, set()
+        self.register_intent()  # before the first lock probe
+        with (self.inputs / 'prelaunch-probes.jsonl').open('x', buffering=1) as output:
+            while True:
+                probe, blockers = self.prelaunch_sample(threshold)
+                consecutive = 0 if blockers else consecutive + 1
+                elapsed = self.clock() - started
+                warning = '; '.join(probe['disk']['unavailable'])
+                if warning and warning not in warned:
+                    warned.add(warning)
+                    print('prelaunch %d min: disk floor: warning: probe unavailable (%s); not checked' % (elapsed // 60, warning), flush=True)
+                row = {**probe, 'thresholdBytes': threshold, 'consecutive': consecutive}
+                due = prelaunch_report(row, elapsed, due, blockers, consecutive)
+                output.write(json.dumps(row) + '\n')
+                if consecutive == PRELAUNCH_SAMPLES:
+                    self.claim_intent()
+                    return probe
+                stop = prelaunch_stop(elapsed, blockers, probe, threshold)
+                if stop:
+                    raise self.deadline('prelaunch', *stop)
+                self.wait(PRELAUNCH_INTERVAL)
+
+    def prelaunch_sample(self, threshold):
+        """One prelaunch probe, after the identities and a pending stop, and what keeps it from counting."""
+        self.identities()
+        self.check_stop()
+        probe = {**self.probe(), 'disk': disk_guard.reading([self.orch, str(self.main)])}
+        return probe, prelaunch_blockers(probe, threshold)
+
+    def storage_baseline(self):
+        journal = self.command(['journalctl', '-k', '-b', '--no-pager', '-n', '0', '-o', 'short-iso', '--show-cursor'])
+        if '-- cursor: ' not in journal['stdout']:
+            raise Stop('Storage baseline has no journal cursor')
+        counters = self.command(['btrfs', 'device', 'stats', '/home'])
+        write_json(self.inputs / 'storage-baseline.json', dict(at=now(), journal=journal, counters=counters))
+        return reference(self.inputs / 'storage-baseline.json')
+
+    def storage_check(self):
+        baseline = json.loads((self.inputs / 'storage-baseline.json').read_text())
+        cursor = baseline['journal']['stdout'].split('-- cursor: ')[1].strip()
+        journal = self.command(['journalctl', '-k', '-b', '--after-cursor', cursor, '--no-pager', '-o', 'short-iso',
+                                '--show-cursor', '--grep', STORAGE_PATTERN], accepted=(0, 1))
+        counters = self.command(['btrfs', 'device', 'stats', '/home'])
+        if journal['exitCode'] != 1:
+            raise Stop('Storage event since the baseline: ' + journal['stdout'].strip().splitlines()[0])
+        if counters['stdout'] != baseline['counters']['stdout']:
+            raise Stop('Storage event since the baseline: btrfs device stats changed')
+        return dict(journal=journal, counters=counters)
+
+    def environment_precheck(self, probe):
+        wt = Path(self.spec['wt'])
+        lock = wt / 'node_modules/.pnpm/lock.yaml'
+        value = {**probe, 'canonicalPATH': self.env['PATH'],
+                 'publicEnvironment': {key: self.env.get(key) for key in ('LANG', 'LC_ALL', 'TZ', 'CI', 'VITEST_MAX_WORKERS', 'BOUNDED_WORKERS', 'BOUNDED_CPU')},
+                 'generatedHashes': {name: hashlib.sha256((wt / name).read_bytes()).hexdigest() if (wt / name).is_file() else None for name in GENERATED},
+                 'installedLock': reference(lock) if lock.is_file() else None,
+                 'driver': dict(path=str(self.main / SCRIPT_OPERATOR), blob=self.driver_blob, runId=self.operator['runId'])}
+        write_json(self.inputs / 'environment-precheck.json', value)
+        return reference(self.inputs / 'environment-precheck.json')
+
+    def prepare(self):
+        code, log = self.run_child('prepare', [sys.executable, '-B', self.main / 'scripts/orchestration/gate-operator.py', 'prepare'])
+        if code != 0:
+            failed = self.attempt / 'prepare-failed.json'
+            detail = json.loads(failed.read_text())['error'] if failed.is_file() else self.tail(log)
+            raise Stop('prepare exited ' + str(code) + ': ' + detail)
+
+    def runtime(self):
+        result = self.command([sys.executable, '-B', self.main / 'scripts/orchestration/gate-operator.py', 'runtime'], accepted=(0, 1))
+        entry = result['stdout'].strip()
+        if result['exitCode'] != 0 or entry != str(self.attempt / 'operator-runtime/gate-operator.py'):
+            raise Stop('runtime refused the retained entry: ' + (result['stderr'].strip() or entry))
+        with (self.inputs / 'gate-entry.txt').open('x') as output:
+            output.write(entry + '\n')
+        return entry
+
+    def reap(self, candidate):
+        """Preparation's own capped verifier can leave its reservation for seconds; probe every 5 s, up to
+        2 minutes, and never kill or remove anything."""
+        started = self.clock()
+        with (self.inputs / 'admission-reap.jsonl').open('x', buffering=1) as output:
+            while True:
+                self.identities(candidate)
+                self.check_stop()
+                probe = self.probe()
+                output.write(json.dumps(probe) + '\n')
+                if self.idle(probe):
+                    return probe
+                if self.clock() - started >= REAP_DEADLINE:
+                    raise self.deadline('admission-probe', REAP_DEADLINE,
+                                        'Admission not idle %d s after preparation: %s' % (REAP_DEADLINE, probe['admission']['stdout'].strip()))
+                self.wait(REAP_INTERVAL)
+
+    def preclaim(self, candidate):
+        self.identities(candidate)
+        self.check_stop()
+        probe = self.probe()
+        guard = launch_minimum_bytes(gate_config.mode_config(self.spec))
+        if not self.idle(probe):
+            raise Stop('Admission not idle at the submission claim: ' + probe['admission']['stdout'].strip())
+        if probe['hostAvailableBytes'] < guard:
+            raise Stop('Memory guard: MemAvailable %.2f GiB is below the %.1f GiB launch guard after preparation'
+                       % (probe['hostAvailableBytes'] / GiB, guard / GiB))
+        storage = self.storage_check()
+        write_json(self.inputs / 'preclaim.json', {**probe, 'storage': storage})
+
+    def resume(self):
+        self.hand_gate_time()
+        done = threading.Event()
+        watcher = threading.Thread(target=self.watch_handoff, args=(done,), daemon=True)
+        watcher.start()
+        try:
+            code, log = self.run_child('resume', [sys.executable, '-B', self.entry, 'resume'])
+        finally:
+            done.set()
+            watcher.join()
+        self.end_intent('resume ended')
+        if code != 0:
+            line = safely(self.land_check)
+            if line and line.startswith('gate-time refused: '):
+                self.gate_time_refused = True
+                raise Stop('Gate time refused: ' + line.removeprefix('gate-time refused: '))
+            raise Stop('resume exited ' + str(code) + ': ' + self.tail(log, 3))
+        output = Path(log).read_text().strip().splitlines()
+        last = json.loads(output[-1]) if output else {}
+        if last.get('paused') or last.get('deferred'):
+            raise Stop('resume returned without completion: ' + json.dumps(last))
+
+    def recover(self):
+        """After a stop with a submission claim and no collected result, the retained entry's `cancel` stops only
+        the proven owned invocation and collects it when terminal (gate_operator.stop_owned). A stopped unit ends
+        only after its stop timeout, so when it had not ended before the cancel, the driver waits for its receipt
+        (TERMINAL_WAIT) and runs `cancel` again: with the unit terminal, it collects and removes the attempt's
+        recorded scratch checkouts (gate_operator.remove_scratch), which the unit's SIGKILL left behind."""
+        claim, result = self.attempt / 'submission-claim.json', self.attempt / 'result.json'
+        if self.reason is None or self.entry is None or not claim.is_file() or result.is_file():
+            return
+        ended = self.unit_ended()
+        self.cancel('cancel-output.log')
+        if ended is False and not result.is_file() and self.await_terminal():
+            self.cancel('cancel-terminal-output.log', afterTerminal=True)
+
+    def cancel(self, log, **row):
+        with (self.inputs / log).open('x') as output:
+            code = subprocess.run([sys.executable, '-B', self.entry, 'cancel'], cwd=self.main, env=self.env,
+                                  stdout=output, stderr=subprocess.STDOUT).returncode
+        self.stages.append(dict(name='cancel', at=now(), exitCode=code, **row))
+
+    def unit_ended(self):
+        """Whether the submitted gate unit has its canonical receipt; None when no returned identity says which unit."""
+        invocation = self.load(self.attempt / 'submission.json')
+        if not (isinstance(invocation, dict) and isinstance(invocation.get('id'), str) and invocation['id']):
+            return None
+        return (Path(self.orch) / 'bounded' / invocation['id'] / 'receipt.json').is_file()
+
+    def await_terminal(self):
+        """Wait up to TERMINAL_WAIT for the stopped gate unit's receipt, recorded as the `terminal-wait` stage. A stop
+        signal does not end it: the stop is already in force, and the wait only lets the cleanup follow it."""
+        row, started = dict(name='terminal-wait', startedAt=now()), self.clock()
+        self.stages.append(row)
+        self.active_stage = 'terminal-wait'
+        try:
+            while not self.unit_ended():
+                if self.clock() - started >= TERMINAL_WAIT:
+                    reason = 'the gate unit did not end within %d s of the stop' % TERMINAL_WAIT
+                    self.deadline('terminal-wait', TERMINAL_WAIT, reason)
+                    row.update(outcome='stopped', reason=reason)
+                    return False
+                self.sleep(TERMINAL_INTERVAL)
+            row['outcome'] = 'ok'
+            return True
+        finally:
+            self.active_stage = None
+            row.update(endedAt=now(), seconds=round(self.clock() - started, 3))
+
+    def scratch(self):
+        """The attempt's recorded scratch checkouts (gate_core.scratch_worktrees), the operator's last removal row
+        and every recorded checkout still on disk or in MAIN's worktree list, with why it is left."""
+        rows = self.attempt / 'scratch-cleanup.jsonl'
+        lines = rows.read_text().splitlines() if rows.is_file() else []
+        removal = json.loads(lines[-1]) if lines else None
+        recorded = gate_core.scratch_worktrees(self.attempt)
+        listed = gate_core.worktree_paths(self.main) if recorded else set()
+        remaining = [dict(path=path, onDisk=os.path.lexists(path), listed=path in listed, reason=self.left_reason(path, removal))
+                     for path in recorded if os.path.lexists(path) or path in listed]
+        return dict(recorded=recorded, remaining=remaining, removal=removal)
+
+    def left_reason(self, path, removal):
+        """Why a recorded checkout is still there: the operator kept it, its removal failed, the stopped unit outlived
+        the driver's wait, or no stop path ran on it."""
+        removal = removal or {}
+        kept = [item.get('reason') for item in removal.get('paths', []) if item.get('path') == path and item.get('state') == 'kept']
+        if kept:
+            return kept[0]
+        if 'error' in removal:
+            return 'removal failed: ' + str(removal['error'])
+        if any(row['name'] == 'terminal-wait' and row.get('outcome') == 'stopped' for row in self.stages):
+            return 'the gate unit did not end within %d s of the stop; remove it once its receipt exists' % TERMINAL_WAIT
+        return 'the queue left it and no stop path removed it: remove it by hand'
+
+    def terminal_probe(self):
+        """The run's last observation, once every owned command is terminal: the five locks, admission, other
+        heavy units and the load average. The observation itself changes nothing (terminal_observation); the
+        driver then records it as its own evidence, I/terminal-probe.json, when the inputs exist."""
+        self.active_stage = 'terminal-probe'
+        try:
+            probe = self.terminal_observation()
+        except Exception as exc:  # a driver defect: the whole observation is unavailable
+            return unavailable('terminal probe failed: ' + type(exc).__name__ + ': ' + str(exc))
+        finally:
+            self.active_stage = None
+        if getattr(self, 'inputs', None) is not None and self.inputs.is_dir():
+            path = self.inputs / 'terminal-probe.json'
+            if safely(lambda: write_json(path, probe) or True):
+                probe = {**probe, 'source': str(path)}
+        return probe
+
+    # -- result -------------------------------------------------------------------------------
+    def load(self, path):
+        try:
+            return json.loads(Path(path).read_text())
+        except (OSError, ValueError):
+            return None
+
+    def remote_report(self, remote):
+        """The verified remote suite report a remoteChecks manifest names (remote_checks.suite_report)."""
+        from remote_checks import load as load_manifest, suite_report
+        return suite_report(load_manifest(remote['path'], remote['sha256'], self.orch), remote['path'])
+
+    def suite(self):
+        """Suite counts for every suite this gate ran or used: the local suite (local and compare), the
+        remote suite (compare and replace) and the gate host's host audits (replace)."""
+        config = self.load(self.config_path) or {}
+        remote, lane, receipt = config.get('remoteChecks'), config.get('lane'), config.get('hostAuditsReceipt')
+        out = dict(source='light lane: no suite' if lane else {None: 'local', 'compare': 'local+remote-compare',
+                                                                'replace': 'remote+host-audits'}[remote and remote.get('mode')])
+        local = self.attempt / 'triage-evidence/full.json'
+        if local.exists():
+            out['local'] = counts(local)
+        if remote:
+            out['remote'] = counts(lambda: self.remote_report(remote))
+        audits = self.attempt / 'remote-evidence/host-audits.json'
+        if remote and remote.get('mode') == 'replace' and receipt:
+            # The receipt's run (host-audits.sh --receipt while CI ran), as the queue verified it.
+            out.update(source='remote+host-audits-receipt', hostAuditsReceipt=receipt)
+            audits = self.attempt / 'remote-evidence/host-audits-receipt.json'
+        if audits.exists():
+            record = self.load(audits)
+            exit_code = record.get('exitCode', (record.get('verdict') or {}).get('exitCode')) if isinstance(record, dict) else None
+            out['hostAudits'] = (dict(exitCode=exit_code, **counts(record['report']['path']))
+                                 if isinstance(record, dict) and isinstance(record.get('report'), dict) and isinstance(record['report'].get('path'), str)
+                                 else dict(unavailable='host-audit record unreadable or without a report: ' + str(audits)))
+        return out
+
+    def receipt(self, invocation):
+        if not (invocation and invocation.get('id')):
+            return None
+        path = Path(self.orch) / 'bounded' / invocation['id'] / 'receipt.json'
+        receipt = self.load(path)
+        return dict(path=str(path), **{key: receipt.get(key) for key in ('outcome', 'exitCode', 'startedAt', 'endedAt', 'realPeakBytes')}) if receipt else None
+
+    @staticmethod
+    def operator_result(operator):
+        if not operator:
+            return None
+        return dict(passed=operator.get('passed'), failedChecks=sorted(k for k, ok in operator.get('checks', {}).items() if not ok),
+                    errors=operator.get('errors'), suite=operator.get('suite'))
+
+    def control_state(self):
+        control = self.load(self.inputs / 'control.json')
+        return control.get('state') if isinstance(control, dict) else None
+
+    def landed(self, candidate, head, operator, completion):
+        """Landed only with no stop at all: no recorded reason, no stop request, a still active control, a
+        passed collection and completion, and MAIN at the candidate."""
+        return (self.reason is None and not self.cancel_requested and self.control_state() == 'active'
+                and bool(completion) and completion.get('passed') is True and bool(operator) and operator.get('passed') is True
+                and candidate is not None and head == candidate)
+
+    def gather(self):
+        """Every evidence read the result needs, before the verdict exists. Damaged evidence becomes
+        null or `unavailable`, never an exception: a stopped or failed gate still publishes its result."""
+        s, attempt = self.spec, self.attempt
+        mapping = self.load(attempt / 'mapping.json')
+        operator, completion = self.load(attempt / 'result.json'), self.load(attempt / 'completion.json')
+        operator = operator if isinstance(operator, dict) else None
+        completion = completion if isinstance(completion, dict) else None
+        candidate = mapping.get('SQUASHED') if isinstance(mapping, dict) else None
+        head, tree = safely(lambda: git(self.main, 'rev-parse', 'HEAD')), safely(lambda: git(self.main, 'rev-parse', 'HEAD^{tree}'))
+        invocation = self.load(attempt / 'submission.json')
+        invocation = invocation if isinstance(invocation, dict) else None
+        return dict(candidate=candidate, head=head, operator=operator, completion=completion,
+                    fields=dict(title=s['title'], label=s['label'], kind=s['kind'], spec=safely(lambda: reference(self.spec_path)),
+                                driver=dict(path=str(self.main / SCRIPT_OPERATOR), blob=getattr(self, 'driver_blob', None),
+                                            runId=getattr(self, 'operator', {}).get('runId')),
+                                identities=dict(base=s['base'], basetree=s['basetree'], reviewed=s['reviewed'], tree=s['tree'], candidate=candidate,
+                                                mainHead=head, mainTree=tree, mainAtCandidate=head is not None and head == candidate),
+                                inputs=str(self.inputs), attempt=str(attempt),
+                                gateConfig=safely(lambda: reference(self.config_path)) if self.config_path.is_file() else None,
+                                invocation=invocation, receipt=safely(lambda: self.receipt(invocation)),
+                                operatorResult=safely(lambda: self.operator_result(operator)),
+                                completion=dict(passed=completion.get('passed'), scope=completion.get('scope')) if completion else None,
+                                suite=safely(self.suite, dict(source='unavailable')), stages=self.stages,
+                                scratch=available(self.scratch),
+                                gateTime=safely(self.gate_time_result, unavailable('gate-time record failed'))),
+                    ops=self.operations(invocation))
+
+    def gate_time_result(self):
+        """The result's gate time: CI part, host part (its stage seconds without the wait stages and the resume stage's
+        recorded waits), total, the baseline and its gates, the percentage, the CI checks and the verdict. With an
+        unreadable CI part the total is the host part alone, marked totalLowerBound, so a later baseline reads that
+        gate's CI part from GitHub again; with unrecorded waits the host part names them and no baseline reads it."""
+        record = self.gate_time
+        if record is None:
+            return unavailable('the gate stopped before its gate-time check')
+        ci, base = record['ci'], record['baseline']
+        host = gate_time_host(self.stages, self.resume_waits())
+        lower = bool(ci and 'unavailable' in ci)
+        total = round(host['seconds'] + (ci['seconds'] if ci and not lower else 0), 3)
+        percent = gate_time.judge(total, base['median']['total'])['percent'] if base['median'] else None
+        land = safely(self.land_check)
+        return dict(mode=record['mode'], ci=ci, total=total, totalLowerBound=lower, host=host,
+                    baseline={key: base.get(key) for key in ('median', 'trigger', 'reason', 'gates', 'unreadable')},
+                    percent=percent, ciCheck=record['ciCheck'], ciInformation=record['ciInformation'],
+                    landCheck=land, exempt=record['exempt'], verdict=self.gate_time_verdict(base, land))
+
+    def gate_time_verdict(self, base, land):
+        """refused (a gate-time check stopped the gate), no baseline, exempt (a check triggered and root's outside cause
+        let it go on) or pass."""
+        record = self.gate_time
+        if self.gate_time_refused:
+            return 'refused'
+        if not base['median']:
+            return 'no baseline'
+        is_triggered = gate_time_triggered(record['ciCheck'], land)
+        return 'exempt' if record['exempt'] and is_triggered else 'pass'
+
+    # -- operational summary: every value from the attempt's own evidence, or `unavailable` with the reason --
+    def operations(self, invocation):
+        config = self.load(self.config_path) if self.config_path.is_file() else None
+        lane = config.get('lane') if isinstance(config, dict) else None
+        terminal = getattr(self, 'terminal', None) or unavailable('no terminal probe')
+        return dict(codegen=available(lambda: self.stage_run(invocation, 'codegen', lane)),
+                    preflight=available(lambda: self.stage_run(invocation, 'e2e', lane)),
+                    peaks=available(lambda: self.peaks(invocation)), load=self.load_window(terminal),
+                    timeouts=self.timeouts(), terminal=available(lambda: terminal_state(terminal)))
+
+    def stage_logs(self, invocation):
+        """The queue's stage-log prefix, from the canonical invocation's log (cur-land.sh: `logs: logs/<name>-<stamp>-*.log`)."""
+        if not (isinstance(invocation, dict) and isinstance(invocation.get('log'), str)):
+            raise Unavailable('no canonical invocation: the gate never submitted')
+        with open(invocation['log'], errors='replace') as stream:
+            prefixes = [match[1] for match in map(STAGE_LOGS.fullmatch, (line.rstrip('\n') for line in stream)) if match]
+        if len(prefixes) != 1:
+            raise ValueError('%d stage-log sets in %s' % (len(prefixes), invocation['log']))
+        return Path(self.orch) / 'logs' / prefixes[0]
+
+    def stage_run(self, invocation, name, lane):
+        """Whether the queue ran a stage (codegen, or e2e for the preflight and its retry), from its stage log."""
+        prefix = self.stage_logs(invocation)
+        log = Path(str(prefix) + '-' + name + '.log')
+        if not log.is_file():
+            if lane:
+                return dict(state='skipped', reason='light lane')
+            return {'state': 'not run', 'reason': 'no ' + log.name + ': the queue stopped before it'}
+        if name == 'e2e':
+            return preflight_run(log, Path(str(prefix) + '-e2e-retry.log'))
+        lines = tail_lines(log)
+        return dict(state='ran', log=str(log), last=lines[-1] if lines else '')
+
+    def peaks(self, invocation):
+        """The canonical unit's real peak (its receipt) and kernel memory.peak (bounded.sh's memory file)."""
+        if not (isinstance(invocation, dict) and isinstance(invocation.get('id'), str)):
+            raise Unavailable('no canonical receipt: the gate never submitted')
+        run = Path(self.orch) / 'bounded' / invocation['id']
+        receipt = self.load(run / 'receipt.json')
+        real = receipt.get('realPeakBytes') if isinstance(receipt, dict) else None
+        memory = safely(lambda: dict(line.split('=', 1) for line in (run / 'memory').read_text().splitlines() if '=' in line), {})
+        kernel, samples = memory.get('peak', ''), memory.get('samples', '')
+        return dict(realBytes=real if type(real) is int else unavailable('no realPeakBytes in ' + str(run / 'receipt.json')),
+                    realSource=str(run / 'receipt.json'),
+                    kernelBytes=int(kernel) if kernel.isdigit() else unavailable('no peak in ' + str(run / 'memory')),
+                    kernelSamples=int(samples) if samples.isdigit() else None, kernelSource=str(run / 'memory'))
+
+    def load_window(self, terminal):
+        """Load at start (the first prelaunch probe) and at the end (the terminal probe)."""
+        probes = self.inputs / 'prelaunch-probes.jsonl'
+        def start():
+            with probes.open() as stream:
+                first = json.loads(stream.readline())
+            return dict(loadAverage=first['loadAverage'], at=first['at'], source=str(probes))
+        end = terminal if 'unavailable' in terminal else terminal['loadAverage'] if isinstance(terminal['loadAverage'], dict) else (
+            dict(loadAverage=terminal['loadAverage'], at=terminal['at'], source=terminal.get('source')))
+        return dict(start=available(start), end=end)
+
+    def timeouts(self):
+        """The driver's own deadlines and every one that fired, as Driver.deadline recorded it where it fired:
+        prelaunch (its 90-minute stop and its 30-minute memory-only and disk-only stop), the post-preparation admission probe and
+        the per-command instrumentation limit. The queue's own timeouts end its unit, which the receipt's outcome records."""
+        return dict(fired=list(self.fired), limits=dict(prelaunchSeconds=PRELAUNCH_DEADLINE, prelaunchMemorySeconds=PRELAUNCH_MEMORY_DEADLINE,
+                                                         admissionProbeSeconds=REAP_DEADLINE,
+                                             instrumentationSeconds=COMMAND_TIMEOUT))
+
+    def finish(self):
+        record = self.gather()
+        # The publication boundary: stop signals wait (and a stop from another thread waits on the lock)
+        # while the verdict is fixed from the control and stop state read now and the files are written.
+        blocked = signal.pthread_sigmask(signal.SIG_BLOCK, {signal.SIGTERM, signal.SIGINT})
+        try:
+            with self.publication, publication_lock(self.inputs):  # and a `--stop` process waits on the flock
+                landed = self.landed(record['candidate'], record['head'], record['operator'], record['completion'])
+                if not landed:
+                    self.reason = self.reason or ('Cancelled: the driver received a stop signal' if self.cancel_requested
+                                                  else 'No checked completion: the operator result, completion or landing is missing')
+                    self.persist_stop()  # A stopped run leaves no submission authority behind.
+                verdict = 'landed' if landed else 'stopped'
+                value = dict(version=1, verdict=verdict, passed=landed, stopReason=self.reason, **record['fields'],
+                             control=self.control_state(),
+                             preparedRetry=None if landed else safely(lambda: gate_config.prepared_retry(self.attempt)),
+                             startedAt=self.started_at, endedAt=now(), wallSeconds=round(self.clock() - self.started, 3))
+                value['ops'] = dict(record['ops'], wall=dict(seconds=value['wallSeconds'], startedAt=value['startedAt'], endedAt=value['endedAt']))
+                self.publish(value)
+                self.published = True
+        finally:
+            signal.pthread_sigmask(signal.SIG_SETMASK, blocked)
+        print(json.dumps(dict(verdict=verdict, stopReason=self.reason, result=str(self.result_json))))
+        return 0 if landed else 1
+
+    def publish(self, value):
+        write_json(self.result_json, value)
+        with self.result_md.open('x') as output:
+            output.write(markdown(value))
+        self.done.parent.mkdir(parents=True, exist_ok=True)
+        with self.done.open('x') as output:
+            output.write(value['verdict'] + ' ' + value['label'] + ' ' + value['endedAt'] + ' ' + str(self.result_json) + '\n')
+
+
+SUITE_KEYS = ('numTotalTestSuites', 'numPassedTestSuites', 'numFailedTestSuites', 'numTotalTests',
+              'numPassedTests', 'numFailedTests', 'numPendingTests', 'numTodoTests', 'success')
+
+
+def gate_time_host(stages, waits):
+    """The result's host part: the stage seconds without the wait stages and the resume stage's recorded waits; with
+    unrecorded waits ({unavailable}) none are left out and the host part names them."""
+    is_recorded = isinstance(waits, list)
+    waited = gate_time.wait_seconds(waits) if is_recorded else 0
+    return dict(seconds=round(gate_time.host_seconds(stages) - waited, 3), excludedStages=list(gate_time.EXCLUDED_STAGES),
+                waits=waits, **({'waitSeconds': waited} if is_recorded else {}))
+
+
+def gate_time_triggered(ci_check, land):
+    """Whether a gate-time check triggered: the CI part alone over the trigger, or the queue's land check let an
+    exempt total go on."""
+    return bool((ci_check or {}).get('trigger')) or bool(land and land.startswith('gate-time exempt'))
+
+
+def safely(read, fallback=None):
+    """A result field whose evidence may be damaged: its value, or the fallback (never an exception)."""
+    try:
+        return read()
+    except Exception:
+        return fallback
+
+
+def unavailable(reason):
+    return dict(unavailable=reason)
+
+
+def available(read):
+    """An operational value, or `unavailable` with the reason it could not be read (never a stand-in)."""
+    try:
+        return read()
+    except Exception as exc:
+        return unavailable(str(exc) if isinstance(exc, Unavailable) else type(exc).__name__ + ': ' + str(exc))
+
+
+def e2e_outcome(lines):
+    """An E2E preflight log's outcome: its last `e2e: ` line (e2e-branch.sh), else its last line."""
+    return next((line for line in reversed(lines) if line.startswith('e2e: ')), lines[-1] if lines else '')
+
+
+def preflight_run(log, retry):
+    """The queue's E2E preflight from its log: skipped when e2e-branch.sh said so, else ran, with any retry."""
+    lines = tail_lines(log)
+    row = dict(state='skipped' if any(line.startswith('e2e: skipped') for line in lines) else 'ran', log=str(log), last=e2e_outcome(lines))
+    if retry.is_file():
+        row['retry'] = dict(log=str(retry), last=e2e_outcome(tail_lines(retry)))
+    return row
+
+
+def tail_lines(path, size=65536):
+    """A stage log's last non-empty lines, read from its last `size` bytes (an E2E log can be long)."""
+    with open(path, 'rb') as stream:
+        stream.seek(max(0, stream.seek(0, os.SEEK_END) - size))
+        return [line.strip() for line in stream.read().decode(errors='replace').splitlines() if line.strip()]
+
+
+def ledger_line(probe):
+    """The admission status line of a prelaunch, reap or preclaim probe (`admission.sh status`)."""
+    return probe['admission']['stdout'].strip()
+
+
+def prelaunch_blockers(probe, threshold):
+    """What keeps one prelaunch probe from counting, each as (name, value against its threshold): locks,
+    admission, heavy units, memory and disk (each volume below a disk floor), in that order; empty when the probe counts."""
+    blockers = []
+    held = [name for name, lock in probe['locks'].items() if not lock['available']]
+    if held:
+        blockers.append(('locks', 'held %s (all %d must be free)' % (', '.join(held), len(probe['locks']))))
+    line = ledger_line(probe)
+    if IDLE.fullmatch(line) is None:
+        blockers.append(('admission', '%s (must be idle)' % (line or 'no ledger line')))
+    if probe['foreignActiveUnits']:
+        blockers.append(('heavy units', '%s (none may run)' % ', '.join(probe['foreignActiveUnits'])))
+    if probe['hostAvailableBytes'] < threshold:
+        blockers.append(('memory', 'MemAvailable %.2f GiB < %.2f GiB' % (probe['hostAvailableBytes'] / GiB, threshold / GiB)))
+    if probe['disk']['blockers']:
+        blockers.append(('disk', '; '.join(probe['disk']['blockers'])))
+    return blockers
+
+
+def prelaunch_report(row, elapsed, due, blockers, consecutive):
+    """The heartbeat: at the first probe at or after DUE that does not complete the samples, print the blocker
+    line and record it as ROW's `blocker`. Returns the next 10-minute mark after ELAPSED (DUE when not yet due)."""
+    if elapsed < due or consecutive >= PRELAUNCH_SAMPLES:
+        return due
+    row['blocker'] = blocker_line(elapsed, blockers, consecutive)
+    print(row['blocker'], flush=True)
+    return due + PRELAUNCH_REPORT * (1 + int((elapsed - due) // PRELAUNCH_REPORT))
+
+
+def prelaunch_stop(elapsed, blockers, probe, threshold):
+    """The deadline policy: (seconds, reason) when the prelaunch stops now, else None. Memory alone, or disk
+    alone, stops at 30 minutes; any other blocker, alone or with memory or disk, at 90; a probe with no blocker
+    never stops."""
+    names = [name for name, _ in blockers]
+    if names == ['memory'] and elapsed >= PRELAUNCH_MEMORY_DEADLINE:
+        return PRELAUNCH_MEMORY_DEADLINE, ('Memory guard: MemAvailable %.2f GiB is below %.2f GiB (launch guard plus 0.5 GiB) after %d minutes; '
+                                           'only memory blocked' % (probe['hostAvailableBytes'] / GiB, threshold / GiB, PRELAUNCH_MEMORY_DEADLINE // 60))
+    if names == ['disk'] and elapsed >= PRELAUNCH_MEMORY_DEADLINE:
+        return PRELAUNCH_MEMORY_DEADLINE, 'Disk guard: %s after %d minutes; only disk blocked' % (blockers[0][1], PRELAUNCH_MEMORY_DEADLINE // 60)
+    if blockers and elapsed >= PRELAUNCH_DEADLINE:
+        return PRELAUNCH_DEADLINE, ('Admission not idle: prelaunch blocked for %d minutes before preparation by %s: %s'
+                                    % (PRELAUNCH_DEADLINE // 60, ', '.join(names), '; '.join(text for _, text in blockers)))
+    return None
+
+
+def blocker_line(elapsed, blockers, consecutive):
+    """The prelaunch heartbeat: what blocks after so many minutes, or the samples still to come."""
+    head = 'prelaunch %d min: ' % (elapsed // 60)
+    if not blockers:
+        return head + 'no blocker (%d of %d samples)' % (consecutive, PRELAUNCH_SAMPLES)
+    return head + 'blocked by ' + '; '.join('%s: %s' % blocker for blocker in blockers)
+
+
+def lock_state(held, path):
+    """One lock from `admission.sh held`: {state, available} for held, free or missing (no file, so no holder),
+    else unavailable: the command failed, or it could not read this lock."""
+    if 'unavailable' in held:
+        return held
+    for line in held['stdout'].splitlines():
+        state, _, name = line.partition(' ')
+        if name == str(path) and state in ('held', 'free', 'missing'):
+            return dict(state=state, available=state != 'held')
+    return unavailable('admission.sh held could not read %s: %s' % (path, held['stderr'].strip() or 'no line for it'))
+
+
+def peek_lines(admission):
+    """`admission.sh peek`'s two lines, the status line and `stale: <ids>|none`, as (line, stale ids), or
+    unavailable for both when peek failed or printed anything else."""
+    if 'unavailable' in admission:
+        return admission, admission
+    lines = admission['stdout'].strip().splitlines()
+    if len(lines) != 2 or not IDLE_SHAPE.match(lines[0]) or not lines[1].startswith('stale: '):
+        bad = unavailable('admission.sh peek printed an unexpected ledger: ' + admission['stdout'].strip())
+        return bad, bad
+    names = lines[1][len('stale: '):].split()
+    return lines[0], [] if names == ['none'] else names
+
+
+def terminal_idle(locks, line, stale, units):
+    """Idle only when every read succeeded and showed it: all locks free, an idle ledger and no foreign
+    heavy unit; unavailable, naming the failed reads, when any read failed."""
+    parts = {**{name + '.lock': value for name, value in locks.items()}, 'admission': line, 'stale entries': stale, 'heavy units': units}
+    failed = ['%s: %s' % (name, value['unavailable']) for name, value in parts.items() if isinstance(value, dict) and 'unavailable' in value]
+    if failed:
+        return unavailable('not observed: ' + '; '.join(failed))
+    return all(lock['available'] for lock in locks.values()) and not units and IDLE.fullmatch(line) is not None
+
+
+def terminal_state(probe):
+    if 'unavailable' in probe:
+        return probe
+    line, stale = peek_lines(probe['admission'])
+    locks, units = probe['locks'], probe['foreignActiveUnits']
+    return dict(at=probe['at'], idle=terminal_idle(locks, line, stale, units),
+                locks={name: lock if 'unavailable' in lock else lock['available'] for name, lock in locks.items()},
+                admission=line, stale=stale, foreignActiveUnits=units, source=probe.get('source'))
+
+
+def counts(source):
+    """A Vitest JSON report's totals, from a path or a callable that returns one; a missing, truncated or
+    malformed report is `unavailable` with the reason. Test files are its `testResults` entries; Vitest's
+    numTotalTestSuites/numPassedTestSuites count nested describe blocks too and stay labelled suites."""
+    try:
+        path = source() if callable(source) else source
+        report = json.loads(Path(path).read_text())
+        if not isinstance(report, dict):
+            raise ValueError('not a JSON object')
+        return dict(report=str(path), **{key: report.get(key) for key in SUITE_KEYS}, **file_counts(report.get('testResults')))
+    except Exception as exc:
+        return dict(unavailable=type(exc).__name__ + ': ' + str(exc), **({} if callable(source) else dict(report=str(source))))
+
+
+def file_counts(files):
+    """Test files from a report's `testResults`: one entry per file, by its status."""
+    if not (isinstance(files, list) and all(isinstance(item, dict) for item in files)):
+        return dict(filesUnavailable='the report has no testResults list')
+    statuses = [item.get('status') for item in files]
+    return dict(numTotalTestFiles=len(files), numPassedTestFiles=statuses.count('passed'), numFailedTestFiles=statuses.count('failed'))
+
+
+def count_line(row):
+    if 'unavailable' in row:
+        return 'unavailable (' + row['unavailable'] + ')'
+    files = ('files unavailable (%s)' % row['filesUnavailable'] if 'filesUnavailable' in row
+             else '%s/%s files passed' % (row['numPassedTestFiles'], row['numTotalTestFiles']))
+    return '%s/%s tests passed, %s failed, %s pending; %s; %s/%s suites passed (`%s`)' % (
+        row['numPassedTests'], row['numTotalTests'], row['numFailedTests'], row['numPendingTests'], files,
+        row['numPassedTestSuites'], row['numTotalTestSuites'], row['report'])
+
+
+def shown(value, render):
+    """An operational value as Markdown: rendered, or `unavailable (reason)`."""
+    return 'unavailable (' + value['unavailable'] + ')' if isinstance(value, dict) and 'unavailable' in value else render(value)
+
+
+def stage_text(row):
+    if 'reason' in row:
+        return row['state'] + ' (' + row['reason'] + ')'
+    text = '%s (`%s`: %s)' % (row['state'], row['log'], row['last'])
+    return text + ('; retry ran (`%s`: %s)' % (row['retry']['log'], row['retry']['last']) if 'retry' in row else '')
+
+
+def peak_text(peaks):
+    gib = lambda value: shown(value, lambda count: '%.2f GiB (%d B' % (count / GiB, count))
+    real, kernel = gib(peaks['realBytes']), gib(peaks['kernelBytes'])
+    samples = ', %s samples)' % peaks['kernelSamples'] if peaks['kernelSamples'] is not None else ')'
+    return ('real ' + real + (', receipt)' if type(peaks['realBytes']) is int else '') + ', kernel ' + kernel
+            + (samples if type(peaks['kernelBytes']) is int else ''))
+
+
+def stale_text(stale):
+    if isinstance(stale, dict):
+        return ', stale entries unavailable (%s)' % stale['unavailable']
+    return ', stale entries (no holder): ' + ', '.join(stale) if stale else ''
+
+
+def locks_text(locks):
+    unread = ['%s (%s)' % (name, value['unavailable']) for name, value in locks.items() if isinstance(value, dict)]
+    busy = [name for name, free in locks.items() if free is False]
+    if unread:
+        return 'locks unavailable: ' + '; '.join(unread) + ('; held: ' + ', '.join(busy) if busy else '')
+    return 'all locks free' if not busy else 'held: ' + ', '.join(busy)
+
+
+def terminal_text(state):
+    """The terminal state as Markdown; every part that was not observed prints as `<part> unavailable (<reason>)`."""
+    def part(label, value, render):
+        return label + ' ' + shown(value, render) if isinstance(value, dict) and 'unavailable' in value else render(value)
+    idle = part('idle', state['idle'], lambda value: 'idle' if value else 'not idle')
+    admission = part('admission', state['admission'], lambda line: 'admission `%s`' % line)
+    stale = '' if state['stale'] == state['admission'] else stale_text(state['stale'])
+    units = part('heavy units', state['foreignActiveUnits'],
+                 lambda names: 'no foreign heavy unit' if not names else 'foreign units: ' + ', '.join(names))
+    return '%s: %s, %s%s, %s (%s)' % (idle, locks_text(state['locks']), admission, stale, units, state['at'])
+
+
+def ops_lines(ops):
+    load = ops['load']
+    limits = ops['timeouts']['limits']
+    fired = ops['timeouts']['fired']
+    wall = ops['wall']
+    return ['- **Codegen:** ' + shown(ops['codegen'], stage_text),
+            '- **E2E preflight:** ' + shown(ops['preflight'], stage_text),
+            '- **Peaks:** ' + shown(ops['peaks'], peak_text),
+            '- **Load:** start %s, end %s' % tuple(shown(load[key], lambda row: '`%s` (%s)' % (row['loadAverage'], row['at'])) for key in ('start', 'end')),
+            '- **Timeouts:** %s (limits: prelaunch %s s, %s s when only memory or only disk blocks, admission probe %s s, instrumentation %s s per command)' % (
+                'fired: ' + '; '.join('%s: %s deadline (%s s) at %s: %s' % (row['stage'] or 'run', row['deadline'], row['seconds'], row['at'], row['reason'])
+                                      for row in fired) if fired else 'none fired',
+                limits['prelaunchSeconds'], limits['prelaunchMemorySeconds'], limits['admissionProbeSeconds'], limits['instrumentationSeconds']),
+            '- **Terminal state:** ' + shown(ops['terminal'], terminal_text),
+            '- **Wall time:** %s s (%s to %s)' % (wall['seconds'], wall['startedAt'], wall['endedAt'])]
+
+
+def main_line(value):
+    """What Git shows of MAIN against the candidate (mainAtCandidate), stated apart from the verdict: an in-run stop
+    can come after land.sh moved the integration branch, and then the result is stopped with MAIN at the candidate."""
+    ids = value['identities']
+    if ids['mainHead'] is None:
+        return '- **MAIN:** unavailable (HEAD could not be read); the candidate is `%s`' % ids['candidate']
+    if ids['mainAtCandidate']:
+        return '- **MAIN:** at the candidate `%s`%s' % (ids['candidate'], '' if value['passed'] else ': the integration branch moved before the stop')
+    return '- **MAIN:** not at the candidate: `%s`%s' % (ids['mainHead'], ' (BASE)' if ids['mainHead'] == ids['base'] else '')
+
+
+def next_attempt_line(value):
+    """A stopped result's next step. A stop after land.sh moved MAIN (mainAtCandidate) offers no retry, which would gate
+    a candidate MAIN already holds; otherwise the retry takes the attempt's mapping, or squashes REVIEWED again."""
+    ids, retry = value['identities'], value['preparedRetry']
+    if ids['mainAtCandidate']:
+        return ('- **Next attempt:** none: MAIN moved to the candidate `%s` before the stop, so the gate needs root recovery, '
+                'not a retry' % ids['candidate'])
+    return ('- **Next attempt:** ' + ('`prepared` with `%s`' % json.dumps(retry) if retry else
+                                      'no mapping was written; a retry squashes the same REVIEWED again')
+            + ' (`gate_config.py retry`, runbook step 10)')
+
+
+def gate_time_line(timed):
+    """`- **Gate time:** <total>: CI <part> + host <part> (<waits>); <against the baseline>; ...; verdict <verdict>`."""
+    if 'unavailable' in timed:
+        return '- **Gate time:** unavailable (%s)' % timed['unavailable']
+    n = gate_time.number
+    total = ('at least ' if timed.get('totalLowerBound') else '') + n(timed['total']) + ' s'
+    parts = '%s: CI %s + host %s s (%s)' % (total, ci_text(timed['ci']), n(timed['host']['seconds']), waits_text(timed['host']))
+    clauses = [parts, baseline_text(timed), *gate_time_notes(timed), 'verdict ' + timed['verdict']]
+    return '- **Gate time:** ' + '; '.join(clauses)
+
+
+def gate_time_notes(timed):
+    """The line's optional clauses: the CI part's own checks, the queue's land check and root's outside cause."""
+    n, notes = gate_time.number, []
+    check, information = timed['ciCheck'], timed.get('ciInformation')
+    if check and check['trigger']:
+        notes.append('CI part alone %s s is over the %s s trigger' % (n(check['seconds']), n(timed['baseline']['trigger'])))
+    if information:
+        notes.append('CI part %s its own %s s median (information)' % (signed(information['percent']), n(information['median'])))
+    if timed['landCheck']:
+        notes.append('land check: ' + timed['landCheck'])
+    if timed['exempt']:
+        notes.append('outside cause (root): ' + timed['exempt']['reason'])
+    return notes
+
+
+def signed(percent):
+    return '%.1f%% %s' % (abs(percent), 'over' if percent >= 0 else 'under')
+
+
+def ci_text(ci):
+    if ci is None:
+        return 'none (no remote checks)'
+    if 'unavailable' in ci:
+        return 'unavailable (%s)' % ci['unavailable']
+    return '%s s (%s, run %s attempt %s)' % (gate_time.number(ci['seconds']), ci['job'], ci['runId'], ci['attempt'])
+
+
+def waits_text(host):
+    waits = host.get('waits')
+    if isinstance(waits, dict):
+        return 'waits unavailable: %s' % waits.get('unavailable')
+    return 'waits %s s left out' % gate_time.number(host.get('waitSeconds') or 0)
+
+
+def baseline_text(timed):
+    base, n = timed['baseline'], gate_time.number
+    if not base['median']:
+        return base['reason']
+    median = '%s s median of %s' % (n(base['median']['total']), timed['mode'])
+    against = ('%s the %s' % (signed(timed['percent']), median) if timed['percent'] is not None else 'against the ' + median)
+    return against + ' (trigger %s s; gates %s)' % (n(base['trigger']), ', '.join(str(gate['label']) for gate in base['gates']))
+
+
+def scratch_line(scratch):
+    if 'unavailable' in scratch:
+        return '- **Scratch checkouts:** unavailable (%s)' % scratch['unavailable']
+    if not scratch['recorded']:
+        return '- **Scratch checkouts:** none recorded'
+    left = '; '.join('`%s` (%s)' % (item['path'], item['reason']) for item in scratch['remaining'])
+    return '- **Scratch checkouts:** %d recorded%s' % (len(scratch['recorded']), '; left: ' + left if left else ', none left')
+
+
+def markdown(value):
+    ids, suite = value['identities'], value['suite']
+    lines = ['# ' + value['title'] + ': scripted gate ' + value['label'], '',
+             '- **Verdict:** ' + value['verdict'].upper() + ('' if value['passed'] else ' (exit 1)'),
+             '- **Stop reason:** ' + (value['stopReason'] or 'none'),
+             '- **SHAs:** BASE `%s` (tree `%s`), REVIEWED `%s`, TREE `%s`, candidate `%s`, MAIN now `%s`'
+             % (ids['base'], ids['basetree'], ids['reviewed'], ids['tree'], ids['candidate'], ids['mainHead']), main_line(value)]
+    if value['receipt']:
+        lines.append('- **Invocation:** `%s`, receipt %s exit %s (%s to %s)' % (value['invocation']['id'], value['receipt']['outcome'],
+                     value['receipt']['exitCode'], value['receipt']['startedAt'], value['receipt']['endedAt']))
+    lines.append('- **Suite source:** ' + suite['source'])
+    for name, title in (('local', 'Local suite'), ('remote', 'Remote suite'), ('hostAudits', 'Host audits')):
+        if name in suite:
+            lines.append('- **%s:** %s' % (title, count_line(suite[name])))
+    if value.get('gateTime'):
+        lines.append(gate_time_line(value['gateTime']))
+    if value['operatorResult']:
+        lines.append('- **Collection:** passed %s; failed checks: %s' % (value['operatorResult']['passed'], ', '.join(value['operatorResult']['failedChecks']) or 'none'))
+    if value['completion']:
+        lines.append('- **Completion scope:** ' + str(value['completion']['scope']))
+    if not value['passed']:
+        lines.append(next_attempt_line(value))
+    if 'scratch' in value:
+        lines.append(scratch_line(value['scratch']))
+    lines += ops_lines(value['ops']) if value.get('ops') else []
+    lines += ['- **Driver:** `%s` blob `%s`, run `%s`' % (value['driver']['path'], value['driver']['blob'], value['driver']['runId']),
+              '- **Evidence:** inputs `%s`, attempt `%s`, spec `%s`' % (value['inputs'], value['attempt'], (value['spec'] or {}).get('path')),
+              '', '| Stage | Outcome | Exit | Seconds | Reason |', '|---|---|---|---|---|']
+    for row in value['stages']:
+        lines.append('| %s | %s | %s | %s | %s |' % (row['name'], row.get('outcome', ''), row.get('exitCode', ''), row.get('seconds', ''),
+                                                    str(row.get('reason', '')).replace('|', '/')))
+    return '\n'.join(lines) + '\n'
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description='Run one gate from its spec with the script operator.')
+    parser.add_argument('spec')
+    parser.add_argument('--stop', action='store_true', help="set the attempt's control to stopped and exit")
+    parser.add_argument('--orch', default=os.environ.get('EP_ORCH', ORCH))
+    args = parser.parse_args(argv)
+    if args.stop:
+        return stop_attempt(args.spec, args.orch)
+    driver = Driver(args.spec, orch=args.orch)
+    signal.signal(signal.SIGTERM, lambda signum, frame: driver.request_stop())
+    signal.signal(signal.SIGINT, lambda signum, frame: driver.request_stop())
+    return driver.run()
+
+
+if __name__ == '__main__':
+    sys.exit(main())

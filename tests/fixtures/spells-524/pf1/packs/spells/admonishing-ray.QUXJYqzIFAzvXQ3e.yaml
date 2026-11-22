@@ -1,0 +1,68 @@
+_id: QUXJYqzIFAzvXQ3e
+_key: '!items!QUXJYqzIFAzvXQ3e'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/beam-sky-1.jpg
+name: Admonishing Ray
+system:
+  actions:
+    - _id: falxz03xe3azg2su
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      effect: one or more rays
+      extraAttacks:
+        formula:
+          bonus: '0'
+          count: min(floor((@cl - 3) / 4), 3)
+          label: 'Ray #{0}'
+        type: custom
+      name: Use
+      range:
+        units: close
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You blast your enemies with rays of nonlethal force. You may fire one
+      ray, plus one additional ray for every four levels you possess beyond 3rd
+      (to a maximum of three rays at 11th level). Each ray requires a ranged
+      touch attack to hit and deals 4d6 points of nonlethal damage. This is a
+      force effect. The rays may be fired at the same or different targets, but
+      all rays must be fired simultaneously and aimed at targets within 30 feet
+      of each other. The rays hit about as hard as a punch from a strong adult
+      human, and can knock away unattended objects weighing up to 10 pounds if
+      that amount of force could normally do so.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 2
+      oracle: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO9405
+      pages: '24'
+  tags:
+    - '3.5'
+type: spell

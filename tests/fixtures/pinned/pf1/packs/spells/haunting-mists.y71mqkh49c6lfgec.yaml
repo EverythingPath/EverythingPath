@@ -1,0 +1,63 @@
+_id: y71mqkh49c6lfgec
+_key: '!items!y71mqkh49c6lfgec'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Haunting Mists
+system:
+  actions:
+    - _id: l1dwvrgvdes9tct8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      effect: cloud spreads in 20-ft. radius, 20 ft. high
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: Will partial (see text)
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An illusion of misty vapor inhabited by shadowy shapes arises around
+      you. It is stationary. The illusory mist obscures all sight, including
+      darkvision, beyond 5 feet. A creature 5 feet away has concealment (attacks
+      have a 20% miss chance).</p><p>Creatures farther away have total
+      concealment (50% miss chance, and the attacker cannot use sight to locate
+      the target).</p><p>All creatures within the mist must save or take 1d2
+      points of Wisdom damage and gain the shaken condition. The shaken
+      condition lasts as long as the creature remains in the mist.</p>
+  descriptors:
+    - fear
+    - shadow
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1117
+      pages: '222'
+  sr: false
+  subschool:
+    - figment
+type: spell
