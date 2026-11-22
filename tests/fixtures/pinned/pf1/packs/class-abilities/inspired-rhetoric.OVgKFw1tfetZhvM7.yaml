@@ -1,0 +1,31 @@
+_id: OVgKFw1tfetZhvM7
+_key: '!items!OVgKFw1tfetZhvM7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Inspired Rhetoric
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Inquisitor
+  changes:
+    - _id: 5it01gar
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.dip
+      type: untyped
+    - _id: aly8lmvw
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.int
+      type: untyped
+    - _id: pr9rznkf
+      formula: '@abilities.wis.mod - @abilities.cha.mod'
+      target: skill.prf
+      type: untyped
+  description:
+    value: >-
+      <p>You use your Wisdom modifier in place of your Charisma modifier when
+      making Diplomacy, Intimidate, and Perform (oratory) checks. Perform
+      (oratory) is an inquisitor class skill for you.</p>
+  subType: classFeat
+type: feat

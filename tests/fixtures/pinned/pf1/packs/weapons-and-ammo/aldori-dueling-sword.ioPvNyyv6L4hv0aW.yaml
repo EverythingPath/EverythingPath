@@ -1,0 +1,63 @@
+_id: ioPvNyyv6L4hv0aW
+_key: '!items!ioPvNyyv6L4hv0aW'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sword-dueling.png
+name: Aldori Dueling Sword
+system:
+  actions:
+    - _id: 974ws9snsjqu9fcz
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Aldori Dueling Sword
+  description:
+    unidentified: >-
+      <p>These slightly curved swords measure just over 3 feet in length. An
+      Aldori dueling sword can be used as a martial weapon (in which case it
+      functions as a longsword), but if you have the feat Exotic Weapon
+      Proficiency (Aldori dueling sword), you can use the Weapon Finesse feat to
+      apply your Dexterity modifier instead of your Strength modifier to attack
+      rolls with an Aldori dueling sword sized for you, even though it isn't a
+      light weapon. You can also wield an Aldori dueling sword in two hands to
+      apply 1-1/2 times your Strength bonus to damage rolls.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    fin: true
+  sources:
+    - id: PZO1138
+      pages: '24'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

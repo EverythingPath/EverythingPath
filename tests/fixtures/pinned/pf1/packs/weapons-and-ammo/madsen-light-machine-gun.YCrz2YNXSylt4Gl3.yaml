@@ -1,0 +1,73 @@
+_id: YCrz2YNXSylt4Gl3
+_key: '!items!YCrz2YNXSylt4Gl3'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/rifle-brown.webp
+name: Madsen Light Machine Gun
+system:
+  actions:
+    - _id: vqvb0nnsl1l4vo6x
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '100'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Madsen Light Machine Gun
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d6 (medium); <b>Critical</b> x4;
+      <b>Range</b> 100 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2; <b>Capacity</b> 20, 30, or 40</p>
+
+      <h3>Description</h3>
+
+      <p>This imposing machine gun is light enough to be transported and wielded
+      by a single user. Chambered for the Russian military in 7.62 54mmR, this
+      machine gun uses a top-loading, detachable 20-, 30-, or 40-round
+      magazine.</p>
+
+      <p>Like most machine guns, it is only capable of automatic fire.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 1000
+  properties:
+    ato: true
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: exotic
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 20
+type: weapon

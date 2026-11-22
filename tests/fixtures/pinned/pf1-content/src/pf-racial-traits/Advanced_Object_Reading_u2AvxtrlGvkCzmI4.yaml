@@ -1,0 +1,58 @@
+_id: u2AvxtrlGvkCzmI4
+_key: '!items!u2AvxtrlGvkCzmI4'
+_stats:
+  coreVersion: '12.331'
+folder: mObpPwXSbBNVoXRJ
+img: systems/pf1/icons/spells/evil-eye-eerie-1.jpg
+name: Advanced Object Reading
+system:
+  abilityType: su
+  actions:
+    - _id: 23FTshEqC33IgynP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, she can select one weapon, suit of armor, or spell
+        trigger item on which she has cast
+        <em>@UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{object
+        reading}</em>. For a number of minutes equal to her character level, she
+        is considered proficient with that item or can make use of the spell
+        trigger device as if she were a spellcaster of the appropriate
+        class.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Gain proficiency
+      target:
+        value: >-
+          one weapon, suit of armor, or spell trigger item on which you cast
+          @UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{object reading}.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Munavri</p><hr /><p>A munavri can instantly
+      learn how to use almost any device. Once per day, she can select one
+      weapon, suit of armor, or spell trigger item on which she has cast
+      <em>@UUID[Compendium.pf1.spells.Item.g2msiy3asviz0b1n]{object
+      reading}</em>. For a number of minutes equal to her character level, she
+      is considered proficient with that item or can make use of the spell
+      trigger device as if she were a spellcaster of the appropriate class.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1137
+      pages: '197'
+    - id: PZO9284
+      pages: '34'
+    - id: PZO9289
+      pages: '37'
+  subType: racial
+  tags:
+    - Munavri
+  traitCategory: featSkills
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

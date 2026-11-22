@@ -1,0 +1,53 @@
+_id: py959sph0x3jw93n
+_key: '!items!py959sph0x3jw93n'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Psychic Crush III
+system:
+  actions:
+    - _id: gud7m94rry09az1b
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 7d6 + @cl
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial and Fortitude partial; see text
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.Item.199pl2cgawz38smh]{psychic crush I}, but
+      the target takes 7d6 points of damage + 1 point of damage per caster level
+      on a successful Fortitude save and 1 point of damage per caster level on a
+      successful Will save. The target receives a +2 circumstance bonus on the
+      Fortitude save if it is at full hit points, and no bonus if it has taken
+      any damage. This spell can be undercast.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 7
+  level: 7
+  school: nec
+  sources:
+    - id: PZO1132
+      pages: '183'
+type: spell

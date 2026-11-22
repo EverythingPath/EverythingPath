@@ -1,0 +1,60 @@
+_id: WKeBSFyzkZeAl3B9
+_key: '!items!WKeBSFyzkZeAl3B9'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/fist/glove-spiked.webp
+name: Fighting Fan
+system:
+  actions:
+    - _id: jy7qxtnwj4yses5n
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Fighting Fan
+  description:
+    unidentified: >-
+      <p>Made to resemble a courtier's fan, this device consists of silk paper
+      stretched and folded over a folding frame of hardened steel. Folding fans
+      are typically wielded in pairs using a technique that distracts the
+      opponent. The fans sport sharp tips, which can be poisoned. For a list of
+      appropriate poisons, see Poisons on page 110.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    dst: true
+    fin: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - close
+    - monk
+type: weapon

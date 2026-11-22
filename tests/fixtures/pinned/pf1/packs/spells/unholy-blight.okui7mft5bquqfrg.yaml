@@ -1,0 +1,62 @@
+_id: okui7mft5bquqfrg
+_key: '!items!okui7mft5bquqfrg'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Unholy Blight
+system:
+  actions:
+    - _id: husnoydue6lq1af4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius spread
+      duration:
+        units: spec
+        value: instantaneous (1d4 rounds); see text
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call up unholy power to smite your enemies. The power takes the
+      form of a cold, cloying miasma of greasy darkness. Only good and neutral
+      (not evil) creatures are harmed by the spell.</p><p>The spell deals 1d8
+      points of damage per two caster levels (maximum 5d8) to a good creature
+      (or 1d6 per caster level, maximum 10d6, to a good outsider) and causes it
+      to be sickened for 1d4 rounds. A successful Will save reduces damage to
+      half and negates the sickened effect. The effects cannot be negated by
+      <i>remove disease</i> or <i>heal</i>, but <i>remove curse</i> is
+      effective.</p><p>The spell deals only half damage to creatures who are
+      neither evil nor good, and they are not sickened. Such a creature can
+      reduce the damage by half again (down to one-quarter) with a successful
+      Will save.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 4
+      oracle: 4
+      warpriest: 4
+    domain:
+      Evil: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '364'
+type: spell

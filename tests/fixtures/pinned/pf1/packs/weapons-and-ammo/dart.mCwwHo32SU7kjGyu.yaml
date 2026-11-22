@@ -1,0 +1,60 @@
+_id: mCwwHo32SU7kjGyu
+_key: '!items!mCwwHo32SU7kjGyu'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/dart.png
+name: Dart
+system:
+  actions:
+    - _id: cql222p9plilqj3l
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: dart
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Dart
+  description:
+    unidentified: >-
+      <p>This thrown weapon is larger than an arrow and shorter than a javelin,
+      with a weighted tip and a shorter range than a javelin. Most darts are
+      wooden shafts with a thick metal point.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 0.5
+  sources:
+    - id: PZO1110
+      pages: '142'
+    - id: PZO9452
+      pages: '0'
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 0.5
+type: weapon

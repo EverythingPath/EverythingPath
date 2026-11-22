@@ -1,0 +1,65 @@
+_id: igvtsp96ytiqnumi
+_key: '!items!igvtsp96ytiqnumi'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Unerring Tracker
+system:
+  actions:
+    - _id: 8yx846g6fru4rfye
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>During this spell's duration, you can touch the sign of a creature's
+      passage that you have identified using the Survival skill to make the
+      other steps in the creature's path perfectly clear to you, no matter how
+      minute. This trail can't be more than 24 hours old. You can follow the
+      trail at any speed, provided you have line of sight to the trail. You can
+      distinguish the trail of the particular creature followed even if it joins
+      and splits with other trails. Once you have selected a trail to follow
+      using this spell, it can't be changed.  The spell is unable to follow
+      teleportation or interplanar travel for any distance. The trail appears to
+      end where the creature teleported (though a successful Spellcraft check
+      allows you to determine the method of teleportation, if a spell was used).
+      <i>Unerring tracker</i> can't track creatures under the effect of a
+      <i>pass without trace</i> spell, as those creatures leave no trail at all,
+      but can track creatures using <i>nondetection</i> (though not <i>mind</i>
+      blank).  This spell can be used to track flying creatures, but the trail
+      must at least begin on a solid surface.  This spell doesn't reveal the
+      creature's current position or any shorter path than the one it followed
+      (for instance, it will not reveal that the creature doubled back upon the
+      trail until you reach the point where the creature turned around.) It
+      doesn't reveal traps or other hazards along the trail.</p>
+  learnedAt:
+    class:
+      alchemist: 5
+      druid: 6
+      hunter: 4
+      investigator: 5
+      occultist: 4
+      ranger: 4
+  level: 6
+  school: div
+  sources:
+    - id: PZO1134
+      pages: '228'
+  sr: false
+type: spell

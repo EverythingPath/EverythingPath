@@ -1,0 +1,89 @@
+_id: P2YUScSoUD60dab5
+_key: '!items!P2YUScSoUD60dab5'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/knife-deer-horn.png
+name: Deer Horn Knife
+system:
+  actions:
+    - _id: gqi658oq20oqhfus
+      ability:
+        attack: _default
+        critMult: 3
+        damage: _default
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: iCyLF9l3HUr7JsmP
+      ability:
+        attack: _default
+        critMult: 3
+        damage: _default
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Deer Horn Knife
+  description:
+    unidentified: >-
+      <p>This flat, metal weapon consists of two joined crescent-shaped blades
+      overlapping to form a hollow center with four projecting points. The
+      blades can differ in length. One side of the center is wrapped to serve as
+      a grip while the other acts as a guard. Deer horn knives are traditionally
+      used in pairs.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    blc: true
+    fin: true
+    mnk: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - monk
+    - thrown
+  weight:
+    value: 3
+type: weapon

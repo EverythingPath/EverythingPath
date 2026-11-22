@@ -1,0 +1,42 @@
+_id: XhGkCdqvLjdyET0n
+_key: '!items!XhGkCdqvLjdyET0n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_18.jpg
+name: Caster's Champion
+system:
+  actions:
+    - _id: uv6MZ3q2PL6t6E9U
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+  description:
+    value: >-
+      <p><em>You draw upon the power of an allied arcane spellcaster to enhance
+      your weapons with magical energy.</em></p><p><b>Benefit</b>: Three times
+      per day as a swift action, when you are within 30 feet of an ally who is
+      an arcane spellcaster, you can channel a portion of her arcane power into
+      your weapons. For 1 round, you gain a +1 bonus on all weapon damage rolls,
+      and your weapons are treated as magic for the purpose of overcoming damage
+      reduction. When your base attack bonus reaches +4 and every 4 points
+      thereafter, this bonus increases by 1, to a maximum of +5 at 16th
+      level.</p><p><b>Special</b>: This feat counts as Arcane Strike for the
+      purposes of prerequisites.</p>
+  effectNotes:
+    - +[[(1 + floor(@attributes.bab.total / 4))[1 + BAB/4]]] bonus
+  sources:
+    - id: PZO9293
+      pages: '21'
+  tags:
+    - Combat
+  uses:
+    maxFormula: '3'
+    per: day
+type: feat
