@@ -1,0 +1,56 @@
+_id: gc8a4d1mb1r6pkgx
+_key: '!items!gc8a4d1mb1r6pkgx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Lesser Psychopomp
+system:
+  actions:
+    - _id: ypdrlxjyt4n2mn8q
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one or more summoned psychopomps (see text)
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except that it summons
+      [[/r 1d3]] esobok psychopomps or [[/r 1d4+1]] nosoi psychopomps. Esobok
+      psychopomps are detailed on page 84. Nosoi psychopomps are detailed on
+      page 220 of <em>Pathfinder RPG Bestiary 4</em>.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      oracle: 5
+      sorcerer: 5
+      summoner: 4
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: a crocodile skull funerary mask
+  school: con
+  sources:
+    - id: PZO9080
+      pages: '28'
+  sr: false
+  subschool:
+    - summoning
+type: spell

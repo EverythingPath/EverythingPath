@@ -1,0 +1,23 @@
+_id: Vi8Fh4JceKVHZ7jK
+_key: '!items!Vi8Fh4JceKVHZ7jK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/alertness.jpg
+name: Skill Focus (Bluff)
+system:
+  changes:
+    - _id: 4twux7c6
+      formula: ifelse(gte(@skills.blf.rank,10),6,3)
+      target: skill.blf
+      type: untyped
+  description:
+    value: >-
+      <p><em>Choose a skill. You are particularly adept at that
+      skill.</em></p><p><strong>Benefits</strong>: You get a +3 bonus on all
+      checks involving the chosen skill. If you have 10 or more ranks in that
+      skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can
+      gain this feat multiple times. Its effects do not stack. Each time you
+      take the feat, it applies to a new skill.</p>
+  tags:
+    - General
+type: feat

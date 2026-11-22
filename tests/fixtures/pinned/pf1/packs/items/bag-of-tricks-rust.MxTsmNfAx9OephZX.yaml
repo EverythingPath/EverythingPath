@@ -1,0 +1,74 @@
+_id: MxTsmNfAx9OephZX
+_key: '!items!MxTsmNfAx9OephZX'
+_stats:
+  coreVersion: '12.343'
+folder: Xsrr4hrzufdySmSQ
+img: icons/containers/bags/sack-cloth-heavy-brown.webp
+name: Bag of Tricks, Rust
+system:
+  actions:
+    - _id: SoUuOwqER8z2t7Ju
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 10 Minutes, see text
+      name: Toss
+      range:
+        units: ft
+        value: '20'
+  attackNotes:
+    - Maximum of two animals per day can be drawn from the bag.
+  aura:
+    school: con
+  cl: 3
+  description:
+    value: >-
+      <p>This small sack looks empty at first glance. Anyone reaching into the
+      bag feels a small, fuzzy ball inside. If the ball is removed and tossed up
+      to 20 feet away, it turns into an animal. The animal serves the character
+      who drew it from the bag for 10 minutes (or until slain or ordered back
+      into the bag), at which point it disappears. It can follow any of the
+      commands described in the
+      @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.IrVgSeMcAM8rAh2B]{Handle
+      Animal} skill. Each type of bag of tricks produces a different set of
+      animals. Use the following tables to determine what animals can be
+      drawn.</p><table><thead><tr><th colspan="2">Rust
+      Bag</th></tr><tr><th>d%</th><th>Animal</th></tr></thead><tbody><tr><td>01–30</td><td>Wolverine</td></tr><tr><td>31–60</td><td>Wolf</td></tr><tr><td>61–85</td><td>Boar</td></tr><tr><td>86–100</td><td>Leopard</td></tr></tbody></table><p>The
+      heavy horse and the riding dog appear with harness and tack, and each
+      accepts the character who drew it from the bag as a rider.</p><p>Animals
+      produced are always random, and only one may exist at a time. Up to 10
+      animals can be drawn from the bag each week, but no more than two per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.u3qfd57wvcmhgwca]{summon nature's ally
+      III}; <strong style="box-sizing:border-box;user-select:text;color:rgb(25,
+      24, 19);font-family:Signika,
+      sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial">Cost</strong>
+      4,250 gp</p>
+  hp:
+    base: 10
+  price: 8500
+  proficient: true
+  scriptCalls:
+    - _id: GL5za6QGQxEbw81i
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Roll d100
+      type: script
+      value: new Roll("1d100").toMessage();
+  sources:
+    - id: PZO1123
+      pages: '282'
+  subType: wondrous
+  uses:
+    maxFormula: '10'
+    per: week
+  weight:
+    value: 1
+type: equipment

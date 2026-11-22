@@ -1,0 +1,62 @@
+_id: V2eFtz6QWSP5bipu
+_key: '!items!V2eFtz6QWSP5bipu'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/javelin.PNG
+name: Shrillshaft Javelin
+system:
+  actions:
+    - _id: begtov9g65wwlxfo
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '30'
+  baseTypes:
+    - Shrillshaft Javelin
+  description:
+    unidentified: >-
+      <p>This single-use javelin bears a thunderstone in its haft, just behind
+      the weapon's head. If you hit with one of these javelins, the target takes
+      javelin damage as normal and is the center of the thunderstone's effect.
+      If you miss, roll to see where the javelin lands (as if determining a miss
+      with a splash weapon); that square becomes the center of the
+      thunderstone's effect.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 35
+  properties:
+    spc: true
+  sources:
+    - id: PZO9411
+      pages: '22'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

@@ -1,0 +1,72 @@
+_id: 8vu9wseuc1em7afq
+_key: '!items!8vu9wseuc1em7afq'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/tentacles/tentacles-suctioncups-pink.webp
+name: Grasping Tentacles
+system:
+  actions:
+    - _id: ctvvoyyd6mrgfdjm
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius spread
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.wralcmyi4tdcai24]{black tentacles},
+      except the tentacles blindly grasp at the targets' eyes and ears, and tug
+      at their hair, clothes, and equipment. Instead of grapple attempts, the
+      tentacles attempt dirty trick combat maneuver checks (CMB = your caster
+      level + 4 [the tentacles' Strength bonus] + 1 [the tentacles' size
+      bonus]). Roll on the following table to determine the effect of a
+      successful dirty trick combat maneuver check.</p><table
+      border="1"><tbody><tr><th><p>d%</p></th><th><p>Effect</p></th></tr><tr><td><p>1-20</p></td><td><p>Blinded.
+      The tentacles suction over the victim's
+      eyes.</p></td></tr><tr><td><p>21-40</p></td><td><p>Deafened. The tentacles
+      clap themselves around the victim's
+      ears.</p></td></tr><tr><td><p>41-60</p></td><td><p>Entangled. The
+      tentacles weave around the victim's
+      limbs.</p></td></tr><tr><td><p>61-80</p></td><td><p>Shaken. The tentacles
+      menace the victim from all sides. This is a fear
+      effect.</p></td></tr><tr><td><p>81-100</p></td><td><p>Sickened. The
+      tentacles give off sickening vapors. This is a poison
+      effect.</p></td></tr></tbody></table>
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: octopus or squid tentacle
+  school: con
+  sources:
+    - id: PZO9459
+      pages: '30'
+  sr: false
+  subschool:
+    - creation
+type: spell

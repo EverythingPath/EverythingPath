@@ -1,0 +1,37 @@
+_id: klGH5FlCy3d7lydy
+_key: '!items!klGH5FlCy3d7lydy'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/races/vanara.png
+name: Ape Walk
+system:
+  changes:
+    - _id: ttpgvmpx
+      formula: '30'
+      target: climbSpeed
+      type: untyped
+    - _id: r12ilxzf
+      formula: '8'
+      target: skill.clm
+      type: racial
+  contextNotes:
+    - target: skill.acr
+      text: >-
+        If you have 10 ft. (3 m.) to make a running start, you can long jump up
+        to 10 ft. without a check.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.p6irfohhgss1iod5]{Ape Walk}</p><p>You
+      gain a climb speed of 30 feet and a +8 racial bonus on Climb skill checks.
+      You must have your hands free to climb in this manner. In addition, as
+      long as you have 10 feet of space in which to make a running start, you
+      can make a long jump of up to 10 feet without making an Acrobatics check
+      (an Acrobatics check is still required to jump longer distances).</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level * 10'
+  level: 5
+  subType: spell
+type: buff

@@ -1,0 +1,56 @@
+_id: hdtpfz4x1u2j0aj1
+_key: '!items!hdtpfz4x1u2j0aj1'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Wrathful Weapon
+system:
+  actions:
+    - _id: jt7g6oqgi58xxcij
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: melee weapon touched (see text)
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grant the targeted weapon one of the following weapon special
+      abilities: <i>anarchic</i>, <i>axiomatic</i>, <i>holy</i>, or
+      un<i>holy</i>. If <i>anarchic</i>, this spell has the chaos descriptor; if
+      <i>axiomatic</i>, the law descriptor; if <i>holy</i>, the good descriptor;
+      and if un<i>holy</i>, the evil descriptor. If the caster attempts to place
+      a special ability on a weapon that already has that special ability, the
+      spell fails.  If a warpriest casts this spell on his sacred weapon, the
+      duration doubles. Warpriests with unarmed strike as a sacred weapon can
+      cast this spell on their unarmed strike.</p>
+  descriptors:
+    - see text
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO9451
+      pages: '31'
+type: spell
