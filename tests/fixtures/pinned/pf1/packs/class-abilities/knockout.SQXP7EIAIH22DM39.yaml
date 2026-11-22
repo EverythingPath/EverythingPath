@@ -1,0 +1,53 @@
+_id: SQXP7EIAIH22DM39
+_key: '!items!SQXP7EIAIH22DM39'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/extra-rage.jpg
+name: Knockout
+system:
+  abilityType: ex
+  actions:
+    - _id: bxv7gj0jlxl4mzsv
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: round
+        value: 1d6
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: >-
+          10 + floor(@class.level / 2) + max(@abilities.dex.mod,
+          @abilities.str.mod)
+        description: Fortitude negates unconscious
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Brawler
+  description:
+    value: >-
+      <p>At 4th level, once per day a brawler can unleash a devastating attack
+      that can instantly knock a target unconscious. She must announce this
+      intent before making her attack roll. If the brawler hits and the target
+      takes damage from the blow, the target must succeed at a Fortitude saving
+      throw (DC = 10 + 1/2 the brawler’s level + the higher of the brawler’s
+      Strength or Dexterity modifier) or fall unconscious for 1d6 rounds. Each
+      round on its turn, the unconscious target may attempt a new saving throw
+      to end the effect as a fullround action that does not provoke attacks of
+      opportunity. Creatures immune to critical hits or nonlethal damage are
+      immune to this ability.</p>
+
+      <p>At 10th level, the brawler may use this ability twice per day; at 16th
+      level, she may use it three times per day.</p>
+  subType: classFeat
+  tag: classFeat_knockout
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 10), 1) + if(gte(@class.level, 16), 1)
+    per: day
+type: feat

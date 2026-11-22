@@ -1,0 +1,61 @@
+_id: rXxv6Q9b6Px3qhFE
+_key: '!items!rXxv6Q9b6Px3qhFE'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/thrown/dagger-simple-wood.webp
+name: Tube Arrow Shooter
+system:
+  actions:
+    - _id: 7egw5f3vnzwhmo3t
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '40'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Tube Arrow Shooter
+  description:
+    unidentified: >-
+      <p>This weapon consists of a small metal tube hidden within a sleeve; the
+      tube holds a short, spring-loaded bamboo shaft. You gain a +2 bonus on
+      Sleight of Hand checks made to conceal a tube arrow shooter on your body.
+      Releasing the fastener allows the spring to force the arrow out. Once a
+      shaft is fired, the tube must be reloaded before it can be used again.
+      Reloading a tube is a full-round action, or a standard action if the
+      wielder has the Rapid Reload feat.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 3
+  sources:
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 0.5
+type: weapon

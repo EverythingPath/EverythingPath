@@ -1,0 +1,63 @@
+_id: ld8vm51vaavu0p2a
+_key: '!items!ld8vm51vaavu0p2a'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/movement/pinwheel-turning-blue.webp
+name: Returning Weapon
+system:
+  actions:
+    - _id: we35e4fb8opug2jn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one weapon that can be thrown
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>For the duration of the spell, the target weapon acts as if it had the
+      <i>returning</i> weapon special ability (see page 471 of the <i>Core</i>
+      Rulebook).  This spell can be used as the prerequisite for the
+      <i>returning</i> weapon special ability.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 1
+      cleric: 2
+      hunter: 1
+      inquisitor: 1
+      magus: 1
+      occultist: 1
+      oracle: 2
+      psychic: 2
+      ranger: 1
+      skald: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '242'
+  subschool:
+    - teleportation
+type: spell

@@ -1,0 +1,60 @@
+_id: LijZp7Tvvyis9Ja5
+_key: '!items!LijZp7Tvvyis9Ja5'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/kumade.png
+name: Kumade
+system:
+  actions:
+    - _id: g58y5y0xsthdyncz
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Kumade
+  description:
+    unidentified: >-
+      <p>Adapted from a garden rake, the kumade consists of a wood or bamboo
+      pole topped with a metal claw. The rake head doubles as a grappling hook.
+      When a kumade is secured to a surface, such as a rafter or window sill,
+      its handle can be climbed as a 5-foot length of rope.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    grp: true
+  sources:
+    - id: PZO9455
+      pages: '19'
+  weaponGroups:
+    - axes
+  weaponSubtype: 2h
+  weight:
+    value: 4
+type: weapon
