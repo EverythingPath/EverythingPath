@@ -1,0 +1,56 @@
+_id: a2y1yf0a4jy3610w
+_key: '!items!a2y1yf0a4jy3610w'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Hallucinatory Terrain
+system:
+  actions:
+    - _id: vxpnika50divv7bo
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: one 30-ft. cube/level
+      duration:
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief (if interacted with)
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You make natural terrain look, sound, and smell like some other sort of
+      natural terrain. Structures, equipment, and creatures within the area are
+      not hidden or changed in appearance.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      mesmerist: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a stone, a twig, and a green leaf
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '293'
+  sr: false
+  subschool:
+    - glamer
+type: spell

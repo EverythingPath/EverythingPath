@@ -1,0 +1,64 @@
+_id: y69de8y5ddrhuue5
+_key: '!items!y69de8y5ddrhuue5'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Daze Monster
+system:
+  actions:
+    - _id: olnj4s22oxp9kg66
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature of 6 HD or less
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.hk3xhc08blqzniv0]{daze}, but it can
+      affect any one living creature of any type. Creatures of 7 or more HD are
+      not affected.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      summoner: 1
+      summonerUnchained: 1
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a pinch of wool or similar substance
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '264'
+  subschool:
+    - compulsion
+type: spell

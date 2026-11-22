@@ -1,0 +1,53 @@
+_id: vqnn1vxaqnkdtm9a
+_key: '!items!vqnn1vxaqnkdtm9a'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Psychic Crush II
+system:
+  actions:
+    - _id: 8uam58qtyqsxupvc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 5d6 + @cl
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial and Fortitude partial; see text
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This functions as
+      @UUID[Compendium.pf1.spells.Item.199pl2cgawz38smh]{psychic crush I}, but
+      on a successful Fortitude save, the target takes 5d6 points of damage + 1
+      point of damage per caster level. In addition, the target receives a +4
+      circumstance bonus on the Fortitude save only if it is at full hit points;
+      otherwise, it gains a +2 bonus if it has more than half its total hit
+      points remaining. This spell can be undercast.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      psychic: 6
+  level: 6
+  school: nec
+  sources:
+    - id: PZO1132
+      pages: '182'
+type: spell

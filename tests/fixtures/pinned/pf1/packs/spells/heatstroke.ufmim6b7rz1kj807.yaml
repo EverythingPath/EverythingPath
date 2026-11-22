@@ -1,0 +1,66 @@
+_id: ufmim6b7rz1kj807
+_key: '!items!ufmim6b7rz1kj807'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Heatstroke
+system:
+  actions:
+    - _id: zwn1xp977pmqx0ku
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d4
+            types:
+              - untyped
+      duration:
+        units: minute
+        value: '@cl'
+      effect: ray
+      name: Use
+      nonlethal: true
+      range:
+        units: close
+      save:
+        description: Fortitude partial, see text
+        type: fort
+      touch: true
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A wavering red ray projects from your finger. You must succeed on a
+      ranged touch attack with the ray to hit your target.</p><p>The ray
+      inflicts 1d4 points of nonlethal damage, causing the target to suffer from
+      heatstroke as its body temperature dramatically increases. Except as noted
+      above, this spell otherwise functions as
+      @UUID[Compendium.pf1.spells.Item.vlzave855irdc7yu]{ray of
+      exhaustion}.</p><p>Characters wearing heavy clothing or armor of any sort
+      take a –4 penalty on their saves.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a drop of sweat
+  school: evo
+  sources:
+    - id: PZO9412
+      pages: '28'
+type: spell

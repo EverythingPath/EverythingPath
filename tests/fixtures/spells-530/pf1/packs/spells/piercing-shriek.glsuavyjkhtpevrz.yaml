@@ -1,0 +1,50 @@
+_id: glsuavyjkhtpevrz
+_key: '!items!glsuavyjkhtpevrz'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Piercing Shriek
+system:
+  actions:
+    - _id: giz3qmiiarpnc91n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You emit an ear-splitting shriek which can be heard only by the target
+      of this spell; all other observers merely see you screaming silently. The
+      target suffers wracking pain from the scream, gaining the staggered
+      condition. This spell has no effect on deaf creatures and cannot penetrate
+      an area of <i>silence</i>.</p>
+  descriptors:
+    - pain
+    - sonic
+  learnedAt:
+    class:
+      bard: 2
+      psychic: 2
+      skald: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '231'
+type: spell

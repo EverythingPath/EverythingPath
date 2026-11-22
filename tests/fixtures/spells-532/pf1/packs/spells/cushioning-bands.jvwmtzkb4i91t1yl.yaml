@@ -1,0 +1,62 @@
+_id: jvwmtzkb4i91t1yl
+_key: '!items!jvwmtzkb4i91t1yl'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Cushioning Bands
+system:
+  actions:
+    - _id: fmfbgb1aoxpgf11p
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 hour/level or until discharged
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Invisible bands of force encircle vital areas of the target. The bands
+      resist crushing forces and impacts without interfering with movement. The
+      target gains DR 2/piercing or slashing and takes half damage from
+      constriction, falling, and being buried, as well as from similar crushing
+      effects such as <i>crushing hand</i>. Grapple checks for attacks other
+      than constricting (such as pinning or swallowing whole) are not affected.
+      Once the spell has blocked 12 points of damage per caster level (to a
+      maximum of 120 points at 10th level), it is discharged. The bands have no
+      effect on incorporeal attacks unless they deal damage from constriction or
+      crushing, or unless the attacks would be subject to damage reduction.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 2
+      psychic: 2
+      sorcerer: 2
+      summoner: 2
+      summonerUnchained: 2
+      wizard: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '215'
+  subschool:
+    - creation
+type: spell

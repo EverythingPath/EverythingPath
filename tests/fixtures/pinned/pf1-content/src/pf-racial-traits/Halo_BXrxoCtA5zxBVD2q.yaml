@@ -1,0 +1,69 @@
+_id: BXrxoCtA5zxBVD2q
+_key: '!items!BXrxoCtA5zxBVD2q'
+_stats:
+  coreVersion: '12.331'
+folder: O32ChmG5bmi7g6OL
+img: icons/svg/book.svg
+name: Halo
+system:
+  actions:
+    - _id: 1BR3NZ5LDcOW9qCw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{Light}</p><p>This
+        spell causes a touched object to glow like a torch, shedding normal
+        light in a @Distance[20 ft;dual] radius from the point touched, and
+        increasing the light level for an additional @Distance[20 ft;dual] by
+        one step, up to normal light (darkness becomes dim light, and dim light
+        becomes normal light). In an area of normal or bright light, this spell
+        has no effect. The effect is immobile, but it can be cast on a movable
+        object.</p><p>You can only have one light spell active at any one time.
+        If you cast this spell while another casting is still in effect, the
+        previous casting is dispelled. If you make this spell permanent (through
+        permanency or a similar effect), it does not count against this limit.
+        Light can be used to counter or dispel any darkness spell of equal or
+        lower spell level.</p></div>
+      duration:
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Light
+      range:
+        units: touch
+      target:
+        value: object touched
+  contextNotes:
+    - target: skill.int
+      text: +[[2]] Circumstance bonus vs evil creatures when halo is active.
+    - target: allSavingThrows
+      text: >-
+        +[[2]] Circumstance bonus vs blinded and dazzled conditions when halo is
+        active
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to Elysium, Heaven, or Nirvana</p><hr /><p>Members of
+      this race can create light centered on their head at will as a spell-like
+      ability. When using the halo, a member of this race gains a +2
+      circumstance bonus on Intimidate checks against evil creatures and on
+      saving throws against becoming blinded or dazzled.</p><p><strong>Related
+      Buff:</strong> @Toggle[Halo]</p>
+  links:
+    supplements:
+      - name: Halo
+        uuid: Compendium.pf-content.pf-buffs.Item.3EO6OKoyQ8kd6Nyz
+  racePoints: 2
+  sources:
+    - id: PZO1121
+      pages: '223'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: defense
+  traitType: standard
+type: feat

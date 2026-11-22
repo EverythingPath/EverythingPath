@@ -1,0 +1,57 @@
+_id: pwako3cui5jtzq0q
+_key: '!items!pwako3cui5jtzq0q'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Spellcurse
+system:
+  actions:
+    - _id: gvie4mx9a3unwoeg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will half
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You disrupt any spell energy affecting your target, causing that energy
+      to crackle with power and harm the target. The target takes 1d6 points of
+      damage for each spell with a duration of 1 round or greater currently
+      affecting it. The spells themselves are not dispelled or modified.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      antipaladin: 2
+      cleric: 3
+      inquisitor: 2
+      occultist: 4
+      oracle: 3
+      psychic: 3
+      shaman: 4
+      warpriest: 3
+      witch: 3
+  level: 3
+  materials:
+    value: a fragment of a destroyed magical item
+  school: nec
+  sources:
+    - id: PZO9468
+      pages: '6'
+type: spell
