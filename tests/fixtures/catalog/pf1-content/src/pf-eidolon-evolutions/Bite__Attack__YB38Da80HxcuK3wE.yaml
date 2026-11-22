@@ -1,0 +1,30 @@
+_id: YB38Da80HxcuK3wE
+_key: '!items!YB38Da80HxcuK3wE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-head.jpg
+name: Bite (Attack)
+system:
+  actions:
+    - _id: 4yz80jzwtdbm250i
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackName: Bite
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size, 4)
+            types:
+              - slashing
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-head.jpg
+      name: Attack
+      tag: bite
+  subType: natural
+type: attack

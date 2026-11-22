@@ -1,0 +1,58 @@
+_id: LHIAhoMnq1tv9axA
+_key: '!items!LHIAhoMnq1tv9axA'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/staves/staff-simple-gold.webp
+name: Jutte
+system:
+  actions:
+    - _id: rtyvyoa0e12nv3fc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Jutte
+  description:
+    unidentified: >-
+      <p>This batonlike weapon is fitted with a metal hook that can be used to
+      block and pin an opponent's weapon. Some variations are tipped with a
+      sharpened metal spike or blade.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    dis: true
+    fin: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - monk
+  weight:
+    value: 1
+type: weapon

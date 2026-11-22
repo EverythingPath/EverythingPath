@@ -1,0 +1,62 @@
+_id: P2HkbmWWfqb9fOwD
+_key: '!items!P2HkbmWWfqb9fOwD'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/axe-butchering.PNG
+name: Butchering Axe
+system:
+  actions:
+    - _id: dx4gt9sdjg4908ss
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(3, 6, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Butchering Axe
+  description:
+    unidentified: >-
+      <p>A creation of the orc smiths of Belkzen, this axe has an oversized head
+      bristling with spikes and a long, thick haft that only barely
+      counterbalances its weight. If your Strength is less than 19 (or 17 for a
+      Small or smaller butchering axe), you take a -2 penalty on attacks with
+      it, as you're unable to maneuver its daunting size and weight.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 65
+  properties:
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '8'
+  subType: exotic
+  weaponGroups:
+    - axes
+  weaponSubtype: 2h
+  weight:
+    value: 25
+type: weapon

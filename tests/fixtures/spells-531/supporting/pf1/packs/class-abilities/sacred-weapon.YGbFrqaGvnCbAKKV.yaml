@@ -1,0 +1,146 @@
+_id: YGbFrqaGvnCbAKKV
+_key: '!items!YGbFrqaGvnCbAKKV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-royal-3.jpg
+name: Sacred Weapon
+system:
+  abilityType: su
+  actions:
+    - _id: lwyjn9g18hsmrqlq
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p>At 1st level, weapons wielded by a warpriest are charged with the power
+      of his faith. In addition to the favored weapon of his deity, the
+      warpriest can designate a weapon as a sacred weapon by selecting that
+      weapon with the Weapon Focus feat; if he has multiple Weapon Focus feats,
+      this ability applies to all of them. Whenever the warpriest hits with his
+      sacred weapon, the weapon damage is based on his level and not the weapon
+      type. The damage for Medium warpriests is listed on Table 1–14; see the
+      table below for Small and Large warpriests. The warpriest can decide to
+      use the weapon’s base damage instead of the sacred weapon damage—this must
+      be declared before the attack roll is made. (If the weapon’s base damage
+      exceeds the sacred weapon damage, its damage is unchanged.) This increase
+      in damage does not affect any other aspect of the weapon, and doesn’t
+      apply to alchemical items, bombs, or other weapons that only deal energy
+      damage.</p>
+
+      <hr>
+
+      <table>
+
+      <tbody>
+
+      <tr>
+
+      <td><b>Level</b></td>
+
+      <td><b>Damage (Small)</b></td>
+
+      <td><b>Damage (Large)</b></td>
+
+      </tr>
+
+      <tr>
+
+      <td>1st-4th</td>
+
+      <td>1d4</td>
+
+      <td>1d8</td>
+
+      </tr>
+
+      <tr>
+
+      <td>5th-9th</td>
+
+      <td>1d6</td>
+
+      <td>2d6</td>
+
+      </tr>
+
+      <tr>
+
+      <td>10th-14th</td>
+
+      <td>1d8</td>
+
+      <td>2d8</td>
+
+      </tr>
+
+      <tr>
+
+      <td>15th-19th</td>
+
+      <td>1d10</td>
+
+      <td>3d6</td>
+
+      </tr>
+
+      <tr>
+
+      <td>20th</td>
+
+      <td>2d6</td>
+
+      <td>3d8</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+      <hr>
+
+      <p><br>At 4th level, the warpriest gains the ability to enhance one of his
+      sacred weapons with divine power as a swift action. This power grants the
+      weapon a +1 enhancement bonus. For every 4 levels beyond 4th, this bonus
+      increases by 1 (to a maximum of +5 at 20th level). If the warpriest has
+      more than one sacred weapon, he can enhance another on the following round
+      by using another swift action. The warpriest can use this ability a number
+      of rounds per day equal to his warpriest level, but these rounds need not
+      be consecutive.<p>These bonuses stack with any existing bonuses the weapon
+      might have, to a maximum of +5. The warpriest can enhance a weapon with
+      any of the following weapon special abilities: brilliant energy,
+      defending, disruption, flaming, frost, keen, and shock. In addition, if
+      the warpriest is chaotic, he can add anarchic and vicious. If he is evil,
+      he can add mighty cleaving and unholy. If he is good, he can add ghost
+      touch and holy. If he is lawful, he can add axiomatic and merciful. If he
+      is neutral (with no other alignment components), he can add spell storing
+      and thundering. Adding any of these special abilities replaces an amount
+      of bonus equal to the special ability’s base cost (see Table 15–9 on page
+      469 of the Core Rulebook). Duplicate abilities do not stack. The weapon
+      must have at least a +1 enhancement bonus before any other special
+      abilities can be added.<p>If multiple weapons are enhanced, each one
+      consumes rounds of use individually. The enhancement bonus and special
+      abilities are determined the first time the ability is used each day, and
+      cannot be changed until the next day. These bonuses do not apply if
+      another creature is wielding the weapon, but they continue to be in effect
+      if the weapon otherwise leaves the warpriest’s possession (such as if the
+      weapon is thrown). This ability can be ended as a free action at the start
+      of the warpriest’s turn (that round does not count against the total
+      duration, unless the ability is resumed during the same round). If the
+      warpriest uses this ability on a double weapon, the effects apply to only
+      one end of the weapon.</p>
+  subType: classFeat
+  tag: classFeat_sacredWeapon
+  uses:
+    maxFormula: if(gte(@class.level, 4), @class.level)
+    per: day
+type: feat
