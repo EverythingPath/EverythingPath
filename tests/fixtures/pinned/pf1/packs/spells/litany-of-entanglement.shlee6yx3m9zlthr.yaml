@@ -1,0 +1,52 @@
+_id: shlee6yx3m9zlthr
+_key: '!items!shlee6yx3m9zlthr'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Litany of Entanglement
+system:
+  actions:
+    - _id: 7z80vun09knsxxtj
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your litany conjures chains of energy that lash upward from the ground
+      and hamper the target's movement. The target is entangled. This spell has
+      no effect on flying creatures, or creatures not standing upon solid
+      ground.  While subject to this spell, the target cannot be the target of
+      another spell that has the word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+  learnedAt:
+    class:
+      antipaladin: 2
+      inquisitor: 3
+      paladin: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '234'
+  subschool:
+    - calling
+type: spell

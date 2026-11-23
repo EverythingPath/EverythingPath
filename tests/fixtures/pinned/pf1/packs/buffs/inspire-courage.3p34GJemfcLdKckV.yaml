@@ -1,0 +1,36 @@
+_id: 3p34GJemfcLdKckV
+_key: '!items!3p34GJemfcLdKckV'
+_stats:
+  coreVersion: '12.343'
+folder: XabT4ksgafPj4Gm7
+img: systems/pf1/icons/skills/red_01.jpg
+name: Inspire Courage
+system:
+  changes:
+    - _id: o7gbtdbn
+      formula: 1 + max(0, floor((@item.level + 1) / 6))
+      target: attack
+      type: competence
+    - _id: rf8izhuw
+      formula: 1 + max(0, floor((@item.level + 1) / 6))
+      target: wdamage
+      type: competence
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[1 + max(0, floor((@item.level + 1) / 6))]] Morale vs Fear and Charm
+        effects
+  description:
+    instructions: >-
+      <p>Set the buff's level to the bard level of the person using Inspire
+      Courage.</p>
+    value: >-
+      <p>You gain a morale bonus on saves vs charm and fear effects, and a
+      competence bonus on attack rolls and weapon damage rolls as per
+      @UUID[Compendium.pf1.class-abilities.Item.h56K6HEBOItImPPL].</p>
+  level: 1
+  sources:
+    - id: PZO1110
+      pages: '37'
+  subType: feat
+type: buff

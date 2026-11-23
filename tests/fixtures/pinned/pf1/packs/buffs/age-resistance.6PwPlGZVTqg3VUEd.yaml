@@ -1,0 +1,34 @@
+_id: 6PwPlGZVTqg3VUEd
+_key: '!items!6PwPlGZVTqg3VUEd'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/time/hourglass-tilted-glowing-gold.webp
+name: Age Resistance
+system:
+  changes:
+    - _id: WaaiXiVf
+      formula: min(@abilities.str.base, lookup(@ageCategory.physical, 0, 0, 1, 3, 3))
+      target: str
+      type: untyped
+    - _id: XEsEY43y
+      formula: min(@abilities.dex.base, lookup(@ageCategory.physical, 0, 0, 1, 3, 3))
+      target: dex
+      type: untyped
+    - _id: S8Je6yLF
+      formula: min(@abilities.con.base, lookup(@ageCategory.physical, 0, 0, 1, 3, 3))
+      target: con
+      type: untyped
+  description:
+    value: >-
+      <p>You ignore the physical detriments of being old or middle-aged as per
+      @UUID[Compendium.pf1.spells.Item.li8zwqjorsww6o82].</p>
+  duration:
+    end: initiative
+    units: hour
+    value: '24'
+  sources:
+    - id: PZO1117
+      pages: '205'
+  subType: spell
+type: buff

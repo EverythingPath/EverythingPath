@@ -1,0 +1,41 @@
+_id: zUAVZeb4uCBcGgou
+_key: '!items!zUAVZeb4uCBcGgou'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_03.jpg
+name: Surge
+system:
+  abilityType: su
+  actions:
+    - _id: w8c1c3gnlwet2pik
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can cause a mighty wave to appear that pushes
+      or pulls a single creature. Make a combat maneuver check against the
+      target, using your cleric level + your Wisdom modifier as your CMB. If
+      successful, you may pull or push the creature as if using the bull rush or
+      drag combat maneuver. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Icicle power of the Water Domain.</p>
+  subType: classFeat
+  tag: classFeat_surge
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

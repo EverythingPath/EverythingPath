@@ -1,0 +1,65 @@
+_id: phlu5va1l0h3v3do
+_key: '!items!phlu5va1l0h3v3do'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Thaumaturgic Circle
+system:
+  actions:
+    - _id: 16x8qlweci5ca1pr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation from touched creature
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.1i8b1v3dngkxj6jp]{magic circle against
+      chaos, evil, good, or law}, but rather than stipulating an alignment
+      descriptor, you can designate any one non-alignment subtype of outsider,
+      including air, earth, fire, and water, as well as outsider races such as
+      angels and d<em>evil</em>s.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      inquisitor: 4
+      medium: 3
+      occultist: 3
+      oracle: 4
+      sorcerer: 4
+      summoner: 4
+      summonerUnchained: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a 3-ft.-diameter circle of powdered silver
+  school: abj
+  sources:
+    - id: PZO1132
+      pages: '189'
+  sr: false
+type: spell

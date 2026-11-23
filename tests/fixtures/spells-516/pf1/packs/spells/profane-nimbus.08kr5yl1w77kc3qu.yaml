@@ -1,0 +1,70 @@
+_id: 08kr5yl1w77kc3qu
+_key: '!items!08kr5yl1w77kc3qu'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Profane Nimbus
+system:
+  actions:
+    - _id: o0v2smdqpxlrr8d3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: you
+    - _id: UnbJIinc1xiJsSUw
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + min(15, @cl)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Retaliate
+      target:
+        value: good creature striking you
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You are surrounded by a nimbus of shadow shaped like your god's unholy
+      symbol or a symbol of your faith.</p><p>Any good creature striking you
+      with unarmed strikes, natural weapons, or a handheld weapon deals normal
+      damage, but at the same time, the attacker takes 1d6 points of damage + 1
+      point per caster level (maximum +15). Creatures wielding melee weapons
+      with reach are not subject to this damage if they attack you. Spell
+      resistance applies against this damage.</p><p>You also take half damage
+      from magical attacks with the good descriptor. If such an attack allows a
+      Reflex save for half damage, you take no damage on a successful saving
+      throw.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      antipaladin: 4
+      cleric: 5
+      inquisitor: 5
+      oracle: 5
+      warpriest: 5
+  level: 5
+  school: evo
+  sources:
+    - id: PZO1135
+      pages: '125'
+type: spell

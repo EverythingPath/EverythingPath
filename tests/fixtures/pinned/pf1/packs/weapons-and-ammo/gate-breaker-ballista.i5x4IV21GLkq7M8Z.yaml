@@ -1,0 +1,88 @@
+_id: i5x4IV21GLkq7M8Z
+_key: '!items!i5x4IV21GLkq7M8Z'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/ballista-wood-green.webp
+name: Gate Breaker Ballista
+system:
+  actions:
+    - _id: 6ygx38mcgdscv4zj
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+        damageMult: 1
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '100'
+  baseTypes:
+    - Gate Breaker Ballista
+  description:
+    unidentified: >-
+      <h3>Statistics</h3>
+
+      <p><b>Weight</b> -</p>
+
+      <p><b>Damage</b> 6d8; <b>Critical</b> 19-20/x2; <b>Range</b> 100 ft.;
+      <b>Type</b> B</p>
+
+      <p><b>Crew</b> 5; <b>Aim</b> 3; <b>Load</b> 5; <b>Speed</b> 0 ft.</p>
+
+      <p><b>Category</b> Direct-Fire (Gargantuan); <b>Proficiency</b> Siege
+      Engine</p>
+
+      <h3>Description</h3>
+
+      <p>Resembling a massive crossbow, a ballista's power is provided by
+      twisted skeins of animal sinew used as torsion springs driving a pair of
+      adjustable arms. A cord attached to both arms is winched back and a
+      projectile is loaded into a grooved slider for release. Ballistae are
+      direct-fire weapons.</p>
+
+      <p><em>Light</em>: This common type of ballista, also called an arbalest
+      or scorpion, is size Large, maneuverable, and often mounted atop towers or
+      even vehicles. Light ballistae have a hardness of 5 and 50 hit points.
+      Light ballista bolts cost 10 gp each and weigh 10 pounds.</p>
+
+      <p><em>Heavy</em>: These Huge-sized siege engines are commonly used as
+      castle defenses, as well as on large warships. Heavy ballistae have a
+      hardness of 5 and 100 hit points. Heavy ballista bolts cost 30 gp and
+      weigh 20 pounds each.</p>
+
+      <p><em>Gate Breaker</em>: This massive ballista fires specially weighted
+      quarrels with blunt metal tips. These are used as long-range battering
+      rams, shot at walls or the gates of castles. When they hit a wooden
+      structure, they have a critical range of 19-20/x3. Gate breaker ballistae
+      have a hardness of 5 and 200 hit points. Gate breaker ballista bolts cost
+      50 gp and weigh 30 pounds each.</p>
+  hardness: 5
+  hp:
+    base: 200
+  material:
+    base:
+      value: steel
+  price: 1200
+  size: grg
+  sources:
+    - id: PZO1118
+      pages: '160'
+  subType: siege
+  weaponSubtype: direct
+type: weapon

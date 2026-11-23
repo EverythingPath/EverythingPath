@@ -1,0 +1,34 @@
+_id: 3V4SKStquBCW8grU
+_key: '!items!3V4SKStquBCW8grU'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/weapon_06.jpg
+name: Debilitating Injury (Disoriented)
+system:
+  changes:
+    - _id: qa3vi5t4
+      formula: '-2'
+      target: attack
+      type: untyped
+  contextNotes:
+    - target: attack
+      text: >-
+        Takes an additional -[[floor((@item.level + 2) / 6) * 2]] to attack
+        rolls against attacks made by the rogue.
+  description:
+    instructions: <p>Set buff level to Rogue level.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.nL9Ds9nflmID84vo]{Debilitating
+      Injury (UC)}</p><p><strong>Disoriented</strong>: The target takes a –2
+      penalty on attack rolls. In addition, the target takes an additional –2
+      penalty on all attack rolls it makes against the rogue. At 10th level and
+      16th level, the penalty on attack rolls made against the rogue increases
+      by –2 (to a total maximum of –8).</p><hr>
+  duration:
+    end: initiative
+    units: round
+    value: '1'
+  level: null
+  subType: feat
+type: buff
