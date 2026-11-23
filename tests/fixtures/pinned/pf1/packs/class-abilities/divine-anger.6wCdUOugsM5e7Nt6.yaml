@@ -1,0 +1,43 @@
+_id: 6wCdUOugsM5e7Nt6
+_key: '!items!6wCdUOugsM5e7Nt6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Divine Anger
+system:
+  abilityType: ex
+  actions:
+    - _id: ih8i37o5nfx5aa11
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 6th level, you gain the ability to rage like a barbarian. Your
+      effective barbarian level for this ability is your inquisitor level – 3.
+      If you have levels in barbarian, these levels stack when determining the
+      effect of your rage. You do not gain any rage powers from this granted
+      power, though if you have rage powers from another class, you may use them
+      with these rages. You can rage a number of rounds per day equal to your
+      Wisdom bonus, plus 1 round for every inquisitor level above 4th.</p>
+  subType: classFeat
+  tag: classFeat_divineAnger
+  tags:
+    - Inquisition
+    - Anger Inquisition
+  uses:
+    maxFormula: '@abilities.wis.mod + (@class.level - 4)'
+    per: day
+type: feat

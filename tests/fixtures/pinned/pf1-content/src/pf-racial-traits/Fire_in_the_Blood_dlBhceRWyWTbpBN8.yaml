@@ -1,0 +1,41 @@
+_id: dlBhceRWyWTbpBN8
+_key: '!items!dlBhceRWyWTbpBN8'
+_stats:
+  coreVersion: '12.331'
+folder: STxquJXw503JM504
+img: systems/pf1/icons/races/ifrit.png
+name: Fire in the Blood
+system:
+  abilityType: su
+  actions:
+    - _id: Dmoae3nDL6lYVF6Y
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Fast healing 2 (after fire damage)
+      notes:
+        effect:
+          - '@Heal[2]'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ifrit<br /><strong>Replaced Trait(s)</strong>:
+      Fire Affinity</p><hr /><p>Ifrits with this racial trait mimic the healing
+      abilities of the mephits, gaining fast healing 2 for 1 round anytime they
+      take fire damage (whether or not this fire damage gets through their fire
+      resistance). The ifrits can heal up to 2 hit points per level per day with
+      this ability, after which it ceases to function. This racial trait
+      replaces fire affinity.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '126'
+  subType: racial
+  tags:
+    - Ifrit
+  traitCategory: magical
+  uses:
+    maxFormula: '@attributes.hd.total'
+    per: day
+    value: 0
+type: feat

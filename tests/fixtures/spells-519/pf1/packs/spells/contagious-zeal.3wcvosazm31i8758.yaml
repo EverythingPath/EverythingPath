@@ -1,0 +1,69 @@
+_id: 3wcvosazm31i8758
+_key: '!items!3wcvosazm31i8758'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Contagious Zeal
+system:
+  actions:
+    - _id: 2htqpew819iuewfi
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains a +2 morale bonus on attack rolls and weapon damage
+      rolls, 1d6 temporary hit points, and a +4 morale bonus on saving throws
+      against fear effects and to the DC of  Intimidate checks attempted against
+      her. Once per round, the target can select one other creature to gain this
+      bonus as well. The chosen creature can be no farther from the target than
+      25 feet + 5 feet for every 2 caster levels you possess, and a creature
+      can't be selected more than once in this way. Such allies gain only the
+      bonuses and temporary hit points; they don't continue to spread it to
+      other creatures. The additional creatures' bonuses and temporary hit
+      points share the original spell's duration, so when that duration ends,
+      all affected creatures lose their bonuses and any remaining temporary hit
+      points from this spell.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 2
+      cleric: 3
+      inquisitor: 3
+      oracle: 3
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      spiritualist: 3
+      warpriest: 3
+      wizard: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '162'
+  subschool:
+    - compulsion
+type: spell

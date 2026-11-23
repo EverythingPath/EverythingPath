@@ -1,0 +1,57 @@
+_id: qofdaxrkmupo8key
+_key: '!items!qofdaxrkmupo8key'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Infuse Robot
+system:
+  actions:
+    - _id: f6svum8mf6r6fl5c
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one robot
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>If the targeted robot fails its Will saving throw, it transforms into a
+      magical construct made of wood, stone, flesh, or bone. The robot's
+      statistics and abilities do not change, although it is now a magical
+      construct rather than a technological one. It loses the robot subtype, but
+      does not lose its Intelligence score (if any). You can issue mental
+      commands to the infused robot as long as it stays within range of the
+      spell; issuing commands in this manner is a free action for you. When the
+      spell's duration runs out, the robot transforms back to normal but is
+      staggered for 1d4 rounds.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      druid: 7
+      oracle: 7
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  school: trs
+  sources:
+    - id: PZO9272
+      pages: '9'
+type: spell

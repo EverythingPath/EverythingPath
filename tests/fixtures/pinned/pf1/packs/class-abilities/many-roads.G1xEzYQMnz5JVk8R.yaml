@@ -1,0 +1,30 @@
+_id: G1xEzYQMnz5JVk8R
+_key: '!items!G1xEzYQMnz5JVk8R'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Many Roads
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: dhxge9ww
+      formula: floor(@class.level / 2)
+      target: skill.fly
+      type: untyped
+    - _id: vmxlyitf
+      formula: floor(@class.level / 2)
+      target: skill.sur
+      type: untyped
+  description:
+    value: >-
+      <p>You gain an insight bonus on Fly and Survival checks equal to 1/2 your
+      oracle level. Further, you learn to speak and read three languages in
+      addition to those you already know.</p>
+  subType: classFeat
+  tags:
+    - Revelation
+    - Solar Mystery
+type: feat

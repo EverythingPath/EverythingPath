@@ -1,0 +1,59 @@
+_id: iwkrfp38hdgovoj7
+_key: '!items!iwkrfp38hdgovoj7'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Abeyance
+system:
+  actions:
+    - _id: apgqoizn1k5z4o2j
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Abeyance</i> suppresses the effects of a single  curse on a
+      creature. It does not restore any damage or drain that might have been
+      caused by the curse. <i>Abeyance</i> cannot suppress curses that cannot be
+      removed by <i>remove curse</i>, but it can suppress curses such as
+      lycanthropy that require <i>remove curse</i> along with additional
+      measures. An individual curse can be suppressed only once by
+      <i>abeyance</i>, even if cast by a different caster. <i>Abeyance</i> does
+      not allow a creature to divest itself of cursed objects, though it can
+      suppress a curse contracted from an object.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      paladin: 2
+      warpriest: 2
+  level: 2
+  materials:
+    gpValue: 25
+    value: a flask of holy water worth 25 gp
+  school: abj
+  sources:
+    - id: PZO9082
+      pages: '74'
+type: spell

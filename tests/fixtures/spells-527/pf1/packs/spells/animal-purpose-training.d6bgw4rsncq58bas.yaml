@@ -1,0 +1,59 @@
+_id: d6bgw4rsncq58bas
+_key: '!items!d6bgw4rsncq58bas'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Animal Purpose Training
+system:
+  actions:
+    - _id: aofgbnea6r7x12qc
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one indifferent or friendly animal
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You instill the target animal with a general purpose (see the Handle
+      Animal skill), which can be any purpose except combat training-fighting,
+      guarding, heavy labor, hunting, performance, or riding. This purpose
+      supersedes the animal's previous trained purpose and any tricks it
+      knows.</p><p>When the spell ends, the animal reverts to its previous
+      trained purpose and known tricks.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      bard: 2
+      druid: 2
+      hunter: 1
+      inquisitor: 1
+      paladin: 1
+      psychic: 1
+      ranger: 1
+      shaman: 2
+      skald: 2
+      witch: 1
+  level: 2
+  materials:
+    value: a swatch of black cloth
+  school: enc
+  sources:
+    - id: PZO1129
+      pages: '173'
+  subschool:
+    - compulsion
+type: spell

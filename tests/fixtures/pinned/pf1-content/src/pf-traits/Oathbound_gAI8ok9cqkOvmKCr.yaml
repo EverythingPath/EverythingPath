@@ -1,0 +1,93 @@
+_id: gAI8ok9cqkOvmKCr
+_key: '!items!gAI8ok9cqkOvmKCr'
+_stats:
+  coreVersion: '12.331'
+folder: 13dReUJWCsEjXV2p
+img: icons/magic/holy/prayer-hands-glowing-yellow-white.webp
+name: Oathbound
+system:
+  actions:
+    - _id: dMLzlObW99T4ezl0
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        Once per day, you may reroll against a charm or compulsion effect. You
+        must take the second result even if it is worse.
+  description:
+    value: >-
+      <p><em>You have made a solemn oath, and you pursue that oath with
+      headstrong determination.</em></p><p><strong>Benefits</strong>: Once per
+      day, you may reroll a saving throw against a charm or compulsion effect.
+      You must take the second result even if it is worse.</p>
+  scriptCalls:
+    - _id: nXmpUZsmMdGrdWn3
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Saving Throw
+      type: script
+      value: >-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Saving Throw:</h3>
+            <p>Please pick a saving throw to reroll from the buttons below.</p>
+          </div>
+        `;
+
+
+        const labels = [game.i18n.localize("PF1.SavingThrowFort"),
+        game.i18n.localize("PF1.SavingThrowRef"),
+        game.i18n.localize("PF1.SavingThrowWill")];
+
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Saving Throw`,
+            content: content,
+            buttons: {
+              fort: {
+                label: labels[0],
+                callback: () => "fort",
+              },
+              ref: {
+                label: labels[1],
+                callback: () => "ref",
+              },
+              will: {
+                label: labels[2],
+                callback: () => "will",
+              }
+            },
+            default: 'fort',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+
+        const answer = await getAnswer();
+
+        if(answer !== null) {
+          actor.rollSavingThrow(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO1125
+      pages: '55'
+  subType: trait
+  traitType: faith
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

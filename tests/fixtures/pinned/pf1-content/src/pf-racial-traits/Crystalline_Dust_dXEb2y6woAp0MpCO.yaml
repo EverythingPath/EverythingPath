@@ -1,0 +1,61 @@
+_id: dXEb2y6woAp0MpCO
+_key: '!items!dXEb2y6woAp0MpCO'
+_stats:
+  coreVersion: '12.331'
+folder: 0safJrWJGu9FvC5n
+img: systems/pf1/icons/races/aphorite.png
+name: Crystalline Dust
+system:
+  abilityType: su
+  actions:
+    - _id: ZGmypVOHOJfhEjQU
+      activation:
+        type: move
+        unchained:
+          type: action
+      description: >-
+        <p>This effect grants you a 20% miss chance against melee and ranged
+        attacks. Activating this dust is a move action, but it can be maintained
+        each round as a free action. The effect cannot be disrupted, but it ends
+        immediately if the aphorite is killed, paralyzed, stunned, knocked
+        unconscious, or otherwise prevented from taking a free action to
+        maintain it each round. An aphorite can use this ability a number of
+        rounds per day equal to its Hit Dice, but the rounds do not need to be
+        consecutive.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Crystalline Dust
+      notes:
+        effect:
+          - ''
+      target:
+        value: self
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aphorite</p><hr /><p>An aphorite can manifest a
+      haze of crystalline dust that forms into indistinct runes and glyphs
+      surrounding its body. This effect grants the aphorite a 20% miss chance
+      against melee and ranged attacks. Activating this dust is a move action,
+      but it can be maintained each round as a free action. The effect cannot be
+      disrupted, but it ends immediately if the aphorite is killed, paralyzed,
+      stunned, knocked unconscious, or otherwise prevented from taking a free
+      action to maintain it each round. An aphorite can use this ability a
+      number of rounds per day equal to its Hit Dice, but the rounds do not need
+      to be consecutive.</p><p><strong>Related buff:</strong>
+      @Toggle[Crystalline Dust]</p>
+  links:
+    supplements:
+      - name: Crystalline Dust
+        uuid: Compendium.pf-content.pf-buffs.Item.sg4s5mwIaMp1A8HF
+  showInQuickbar: true
+  sources:
+    - id: PZO1141
+      pages: '224'
+  subType: racial
+  tags:
+    - Aphorite
+  uses:
+    maxFormula: '@attributes.hd.total '
+    per: day
+type: feat

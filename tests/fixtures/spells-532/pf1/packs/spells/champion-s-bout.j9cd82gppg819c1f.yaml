@@ -1,0 +1,57 @@
+_id: j9cd82gppg819c1f
+_key: '!items!j9cd82gppg819c1f'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Champion's Bout
+system:
+  actions:
+    - _id: 4msw43y481fztsuc
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: two creatures
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You allow two chosen champions to fight without interference. The two
+      creatures must be willing in order for the spell to work. After you cast
+      this spell, any creature attempting to aid or hinder either of the two
+      targets in any way must succeed at a Will save or lose its action instead
+      (spell resistance applies). A creature that fails its Will save against
+      champion's bout cannot attempt to interfere again. If a creature
+      successfully interferes with the bout, the spell ends immediately.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 3
+      cleric: 3
+      mesmerist: 3
+      oracle: 3
+      skald: 3
+      warpriest: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO9280
+      pages: '218'
+  subschool:
+    - compulsion
+type: spell
