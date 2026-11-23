@@ -1,0 +1,59 @@
+_id: 7vppeeqnddx6ugkz
+_key: '!items!7vppeeqnddx6ugkz'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Extreme Buoyancy
+system:
+  actions:
+    - _id: 93oq8w4funbad3o2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's buoyancy becomes and stays swiftly rising, regardless of
+      how dense the target and its gear are. Among other effects, the target
+      needs to succeed at a DC 20 Swim check to submerge itself and to stay
+      submerged (see Buoyancy on page 43).</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      bard: 2
+      druid: 2
+      hunter: 2
+      investigator: 2
+      medium: 2
+      occultist: 2
+      psychic: 2
+      ranger: 2
+      shaman: 2
+      skald: 2
+  level: 2
+  materials:
+    value: a bag of air
+  school: evo
+  sources:
+    - id: PZO92102
+      pages: '59'
+type: spell

@@ -1,0 +1,41 @@
+_id: JRzJ1KADTQyp5Pwt
+_key: '!items!JRzJ1KADTQyp5Pwt'
+_stats:
+  coreVersion: '12.343'
+folder: 2abEDB7ist37KRS0
+img: icons/magic/death/mouth-teeth-fangs-vampire.webp
+name: Blood Drain
+system:
+  abilityType: su
+  actions:
+    - _id: oLGf0LDIqNWyFiLB
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: '5'
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Heal self
+      range:
+        units: personal
+  description:
+    value: >-
+      <p>A vampire can suck blood from a grappled opponent; if the vampire
+      establishes or maintains a @Condition[pinned;info]{pin}, it drains blood,
+      dealing [[/r 1d4]] points of Constitution damage. The vampire heals 5 hit
+      points or gains 5 temporary hit points for 1 hour (up to a maximum number
+      of temporary hit points equal to its full normal hit points) each round it
+      drains blood.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1112
+      pages: '271'
+  subType: misc
+type: feat

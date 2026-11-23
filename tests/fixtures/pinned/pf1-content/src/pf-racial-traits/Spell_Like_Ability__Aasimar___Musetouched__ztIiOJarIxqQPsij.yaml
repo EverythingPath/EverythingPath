@@ -1,0 +1,59 @@
+_id: ztIiOJarIxqQPsij
+_key: '!items!ztIiOJarIxqQPsij'
+_stats:
+  coreVersion: '12.331'
+folder: 3vSL52yi5JvMMdeU
+img: systems/pf1/icons/races/aasimar.png
+name: Spell-Like Ability (Aasimar - Musetouched)
+system:
+  abilityType: sp
+  actions:
+    - _id: anH2BfXHRiq3kuag
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft radius spread
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.ec2zmvdzi4m3puh4]{Glitterdust}</em></p><p>A
+        cloud of golden particles covers everyone and everything in the area,
+        causing creatures to become blinded and visibly outlining invisible
+        things for the duration of the spell. All within the area are covered by
+        the dust, which cannot be removed and continues to sparkle until it
+        fades. Each round at the end of their turn blinded creatures may attempt
+        new saving throws to end the blindness effect.</p><p>Any creature
+        covered by the dust takes a -40 penalty on Stealth checks.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Glitterdust
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: Negates (blinding only, not stealth penalty)
+        type: will
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar - Musetouched</p><hr /><p>Musetouched
+      can use @UUID[Compendium.pf1.spells.Item.ec2zmvdzi4m3puh4]{Glitterdust}
+      once per day as a spell-like ability (with a caster level equal to the
+      Musetouched's character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '239'
+    - id: PZO9424
+      pages: '22'
+  subType: racial
+  tags:
+    - Aasimar
+    - Musetouched
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

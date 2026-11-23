@@ -1,0 +1,62 @@
+_id: czhrq71sajl6znhq
+_key: '!items!czhrq71sajl6znhq'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Death Pact
+system:
+  actions:
+    - _id: x7peg78z6d2gjuuz
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You take control of a creature's mind and implant deadly subconscious
+      commands. This spell functions as
+      @UUID[Compendium.pf1.spells.Item.q070n0zoq3zojpas]{dominate person},
+      allowing you to control your subject and see through her senses, but also
+      implants a powerful burst of psychic energy in the subject's mind. At any
+      point during the spell's duration, you can trigger this burst as an
+      immediate action, dealing 1d8 points of damage per caster level (Fortitude
+      half) to the subject. If this damage is enough to reduce to target to 0 or
+      fewer hit points, the target dies instantly. Your target can also
+      willingly trigger this psychic burst as an immediate action. You can
+      specify conditions (such as being captured) when she should do so, though
+      such orders are considered dangerous and allow the subject a new Will
+      saving throw with a +2 bonus.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 5
+      mesmerist: 5
+      psychic: 6
+      skald: 5
+      witch: 6
+  level: 5
+  materials:
+    value: a contract signed in blood
+  school: enc
+  sources:
+    - id: PZO9461
+      pages: '13'
+type: spell

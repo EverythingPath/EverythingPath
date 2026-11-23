@@ -1,0 +1,143 @@
+_id: fY57zno3ncSszWwf
+_key: '!items!fY57zno3ncSszWwf'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Constant Spell-Like Divination
+system:
+  abilityType: sp
+  actions:
+    - _id: UjOo5j81v7qMrO40
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect
+        magic}</p><p>You detect magical auras. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of magical
+        auras.</p><p>2nd Round: Number of different magical auras and the power
+        of the most potent aura.</p><p>3rd Round: The strength and location of
+        each aura. If the items or creatures bearing the auras are in line of
+        sight, you can make Knowledge (arcana) skill checks to determine the
+        school of magic involved in each. (Make one check per aura: DC 15 +
+        spell level, or 15 + 1/2 caster level for a nonspell effect.) If the
+        aura emanates from a magic item, you can attempt to identify its
+        properties (see Spellcraft).</p><p></p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Magic
+      range:
+        units: ft
+        value: '60'
+    - _id: KCfNnyIbAdgXIPcH
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.moftgchcn1d0p2t0]{detect secret
+        doors},</p><p>You can detect secret doors, compartments, caches, and so
+        forth. Only passages, doors, or openings that have been specifically
+        constructed to escape detection are detected by this spell. The amount
+        of information revealed depends on how long you study a particular area
+        or subject.</p><p>1st Round: Presence or absence of secret
+        doors.</p><p>2nd Round: Number of secret doors and the location of each.
+        If an aura is outside your line of sight, then you discern its direction
+        but not its exact location.</p><p>Each Additional Round: The mechanism
+        or trigger for one particular secret portal closely examined by you.
+        Each round, you can turn to detect secret doors in a new area. The spell
+        can penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of
+        common metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood or
+        dirt blocks it.</p>
+      duration:
+        concentration: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Secret Doors
+      range:
+        units: ft
+        value: '60'
+    - _id: JvfvTC28F9qmNxLL
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one creature, one object, or a 5-ft. (1.5 m) cube
+      description: >-
+        <p>If you have a Wisdom score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{detect
+        poison},</p><p>You determine whether a creature, object, or area has
+        been poisoned or is poisonous. You can determine the exact type of
+        poison with a DC 20 Wisdom check. A character with the Craft (alchemy)
+        skill may try a DC 20 Craft (alchemy) check if the Wisdom check fails,
+        or may try the Craft (alchemy) check prior to the Wisdom check. The
+        spell can penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch
+        of common metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood
+        or dirt blocks it.</p>
+      duration:
+        units: inst
+      name: Detect Poison
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one creature, one object, or a 5-ft. (1.5 m) cube
+    - _id: tzWZULz48PIdCpPo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.aa0w7tk852iqn3ni]{Detect
+        Undead}.</p><p>You can detect the aura that surrounds undead creatures.
+        The amount of information revealed depends on how long you study a
+        particular area.</p><p>1st Round: Presence or absence of undead
+        auras.</p><p>2nd Round: Number of undead auras in the area and the
+        strength of the strongest undead aura present. If you are of good
+        alignment, and the strongest undead aura's strength is overwhelming (see
+        below), and the creature has HD of at least twice your character level,
+        you are stunned for 1 round and the spell ends.</p><p>3rd Round: The
+        strength and location of each undead aura. If an aura is outside your
+        line of sight, then you discern its direction but not its exact
+        location.</p><p></p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Undead
+      range:
+        units: ft
+        value: '60'
+  description:
+    instructions: >-
+      <p>Select one of the four listed spells.  Delete the 3 others from the
+      available actions on the details tab of this trait</p>
+    value: >-
+      <p>Choose one of the following spells:
+      @UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{Detect Magic},
+      @UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{Detect Poison},
+      @UUID[Compendium.pf1.spells.Item.moftgchcn1d0p2t0]{Detect Secret Doors},
+      @UUID[Compendium.pf1.spells.Item.aa0w7tk852iqn3ni]{Detect Undead}. Members
+      of this race can use this spell as a constant spell-like ability. The
+      caster level of the spell-like ability is equal to the user’s character
+      level.</p>
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '231'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+type: feat
