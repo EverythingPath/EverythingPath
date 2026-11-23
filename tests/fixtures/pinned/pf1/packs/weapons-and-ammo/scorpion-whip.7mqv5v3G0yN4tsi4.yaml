@@ -1,0 +1,61 @@
+_id: 7mqv5v3G0yN4tsi4
+_key: '!items!7mqv5v3G0yN4tsi4'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/scorpion-whip.png
+name: Scorpion Whip
+system:
+  actions:
+    - _id: 6z20hb7q7lod6vvm
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: ft
+        value: '15'
+  baseTypes:
+    - Scorpion Whip
+  description:
+    unidentified: >-
+      <p>This whip has a series of razor-sharp blades and fangs inset along its
+      tip. It deals lethal damage, even to creatures with armor bonuses. If you
+      are proficient with both the scorpion whip and whip, you can use a
+      scorpion whip in either the normal way (as a light performance weapon) or
+      as a whip. When you use a scorpion whip as a whip, it is equivalent to a
+      whip, but deals lethal damage and can harm creatures regardless of their
+      armor bonus.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+    prf: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weight:
+    value: 3
+type: weapon

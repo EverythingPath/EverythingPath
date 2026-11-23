@@ -1,0 +1,40 @@
+_id: kXvipUvebDtVfxEv
+_key: '!items!kXvipUvebDtVfxEv'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: systems/pf1/icons/skills/yellow_13.jpg
+name: Prayer (Positive)
+system:
+  changes:
+    - _id: o2dkmdkf
+      formula: '1'
+      target: attack
+      type: luck
+    - _id: 6kp0tugu
+      formula: '1'
+      target: wdamage
+      type: luck
+    - _id: 3cxhoj07
+      formula: '1'
+      target: allSavingThrows
+      type: luck
+    - _id: v4txq9o0
+      formula: '1'
+      target: skills
+      type: luck
+  description:
+    value: >-
+      <p>You have a +1 luck bonus on attack rolls, weapon damage rolls, saves
+      and skill checks as per @UUID[Compendium.pf1.spells.Item.hu8179fdqfkl0bqj]
+      spell.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '@item.level'
+  level: 5
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subType: spell
+type: buff

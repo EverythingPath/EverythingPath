@@ -1,0 +1,69 @@
+_id: 0r3tdcs6jf9qkjjr
+_key: '!items!0r3tdcs6jf9qkjjr'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Screaming Flames
+system:
+  actions:
+    - _id: tta4if3wqzg70jg8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, floor(@cl / 2)))d8
+            types:
+              - fire
+      duration:
+        units: inst
+      effect: >-
+        a sheet of flame up to 15 ft. long and 10 ft. high that moves 15 ft. in
+        a straight line.
+      name: Use
+      notes:
+        footer:
+          - '[[/r 1d3]] Wisdom or [[/r 1d6]] Sanity damage'
+      range:
+        units: close
+      save:
+        description: Reflex half and Will negates (see text)
+        type: ref
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A sheer wall of flame appears and rushes away from you. Tendrils of
+      fire reach out of it, shaped into skulls screaming in agony. When the wall
+      passes through a creature's space, that creature must succeed at a Reflex
+      save or take 1d8 points of fire damage for every 2 caster levels you have
+      (maximum 5d8). Any creature taking fire damage must also succeed at a Will
+      save or take 1d3 points of Wisdom damage. Deaf creatures receive a +4
+      circumstance bonus on their Will saves. If your campaign uses the sanity
+      system (Horror Adventures p. 12), a creature takes 1d6 points of sanity
+      damage instead of Wisdom damage.</p>
+  descriptors:
+    - evil
+    - fire
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 3
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  materials:
+    value: a charred animal or humanoid skull fragment
+  school: evo
+  sources:
+    - id: PZO1135
+      pages: '126'
+type: spell

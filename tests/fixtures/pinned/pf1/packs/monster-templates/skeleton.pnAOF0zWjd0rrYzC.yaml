@@ -1,0 +1,127 @@
+_id: pnAOF0zWjd0rrYzC
+_key: '!items!pnAOF0zWjd0rrYzC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Skeleton
+system:
+  acquired: true
+  changes:
+    - _id: 96bbfxq2
+      formula: '2'
+      target: dex
+      type: racial
+    - _id: 4h1mikfq
+      formula: lookup(@size - 2, 0, 1, 2, 2, 3, 6, 10)
+      target: nac
+      type: untyped
+    - _id: TEL9M53z
+      formula: '10'
+      operator: set
+      target: wis
+      type: base
+    - _id: tMgyviPI
+      formula: '10'
+      operator: set
+      target: cha
+      type: base
+    - _id: 62aYTVyc
+      formula: '1'
+      target: bonusFeats
+      type: untypedPerm
+  crOffset: >-
+    ifelse(eq(@attributes.hd.total, 1), 0.3375, ifelse(gte(@attributes.hd.total,
+    12), floor(@attributes.hd.total / 3) + 2, floor(@attributes.hd.total / 2)))
+  creatureTypes:
+    - undead
+  description:
+    instructions: >-
+      <p>Change the alignment in the <strong>Summary tab</strong> to neutral
+      evil.</p><p><strong>Remove</strong> all <strong>HD from classes</strong>
+      and change all <strong>racial HD</strong> to <strong>D8s</strong> (adding
+      1 from @UUID[Compendium.pf1.racialhd.Item.mp1Zmbx0OAzSW4oW] if creature
+      doesn't have any racial HD).</p><p>Change the <strong>Saving
+      Throws</strong> in the <strong>Details tab</strong> in the <strong>Racial
+      HD</strong> or <strong>gained one</strong> to <strong>Fortitude
+      poor</strong>, <strong>Reflex poor</strong> and <strong>Will
+      good</strong>.</p><p>Add <strong>cold</strong> <strong>immunities</strong>
+      and <strong>damage resistance</strong> in the sheet <strong>Details
+      tab</strong>.</p><p><strong>Remove</strong> or <strong>tweak</strong> the
+      gained <strong>claw</strong> attack according the creature's
+      hands.</p><p><strong>Remove all Special Attacks</strong> from the base
+      creature.</p><p>Change <strong>Intelligence</strong> and
+      <strong>Constitution</strong> in the <strong>Attributes tab</strong> and
+      set them to <strong>-</strong>.</p><p>Change the <strong>BAB</strong> in
+      the <strong>Details tab</strong> in the <strong>Racial HD</strong> or
+      <strong>gained one</strong> to
+      <strong>Medium</strong>.</p><p><strong>Remove</strong> <strong>all
+      Feats</strong> from the base creature and all <strong>Special
+      Qualities</strong>.</p>
+    value: >-
+      <p><strong>Acquired/Inherited Template</strong> Acquired<br
+      /><strong>Simple Template</strong> No<br /><strong>Usable with
+      Summons</strong> No</p><p>Skeletons are the animated bones of the dead,
+      brought to unlife through foul magic. While most skeletons are mindless
+      automatons, they still possess an evil cunning imparted to them by their
+      animating force—a cunning that allows them to wield weapons and wear
+      armor.</p><p>"Skeleton" is an acquired template that can be added to any
+      corporeal creature (other than an undead) that has a skeletal system
+      (referred to hereafter as the base creature).</p><p><strong>Challenge
+      Rating:</strong> Depends on Hit Dice, as follows:</p><hr
+      /><table><tbody><tr><td><p><strong>HD</strong></p></td><td><p><strong>CR</strong></p></td><td><p><strong>XP</strong></p></td></tr><tr><td><p>1/2</p></td><td><p>1/6</p></td><td><p>65</p></td></tr><tr><td><p>1</p></td><td><p>1/3</p></td><td><p>135</p></td></tr><tr><td><p>2–3</p></td><td><p>1</p></td><td><p>400</p></td></tr><tr><td><p>4–5</p></td><td><p>2</p></td><td><p>600</p></td></tr><tr><td><p>6–7</p></td><td><p>3</p></td><td><p>800</p></td></tr><tr><td><p>8–9</p></td><td><p>4</p></td><td><p>1,200</p></td></tr><tr><td><p>10–11</p></td><td><p>5</p></td><td><p>1,600</p></td></tr><tr><td><p>12–14</p></td><td><p>6</p></td><td><p>2,400</p></td></tr><tr><td><p>15–17</p></td><td><p>7</p></td><td><p>3,200</p></td></tr><tr><td><p>18–20</p></td><td><p>8</p></td><td><p>4,800</p></td></tr></tbody></table><p><br
+      /><strong>Alignment:</strong> Always neutral
+      evil.</p><p><strong>Type:</strong> The creature's type changes to undead.
+      It retains any subtype except for alignment subtypes (such as good) and
+      subtypes that indicate kind (such as giant). It does not gain the
+      augmented subtype. It uses all the base creature’s statistics and special
+      abilities except as noted here.</p><p><strong>Armor Class:</strong>
+      Natural armor bonus changes as follows:</p><hr
+      /><table><tbody><tr><td><p><strong>Skeleton
+      Size</strong></p></td><td><p><strong>Natural Armor
+      Bonus</strong></p></td></tr><tr><td><p>Tiny or
+      smaller</p></td><td><p>+0</p></td></tr><tr><td><p>Small</p></td><td><p>+1</p></td></tr><tr><td><p>Medium
+      or
+      Large</p></td><td><p>+2</p></td></tr><tr><td><p>Huge</p></td><td><p>+3</p></td></tr><tr><td><p>Gargantuan</p></td><td><p>+6</p></td></tr><tr><td><p>Colossal</p></td><td><p>+10</p></td></tr></tbody></table><p><br
+      /><strong>Hit Dice:</strong> A skeleton drops any HD gained from class
+      levels and changes racial HD to d8s. Creatures without racial HD are
+      treated as if they have 1 racial HD. If the creature has more than 20 Hit
+      Dice, it can’t be made into a skeleton by the animate dead spell. A
+      skeleton uses its Cha modifier (instead of its Con modifier) to determine
+      bonus hit points.</p><p><strong>Saves:</strong> Base save bonuses are Fort
+      +1/3 HD, Ref +1/3 HD, and Will +1/2 HD + 2.</p><p><strong>Defensive
+      Abilities:</strong> A skeleton loses the base creature’s defensive
+      abilities and gains DR 5/bludgeoning and immunity to cold. It also gains
+      all of the standard immunities and traits possessed by undead
+      creatures.</p><p><strong>Speed:</strong> A winged skeleton can’t use its
+      wings to fly. If the base creature flew magically, so can the skeleton.
+      All other movement types are retained.</p><p><strong>Attacks:</strong> A
+      skeleton retains all the natural weapons, manufactured weapon attacks, and
+      weapon proficiencies of the base creature, except for attacks that can’t
+      work without flesh. A creature with hands gains one claw attack per hand;
+      the skeleton can strike with each of its claw attacks at its full attack
+      bonus. A claw attack deals damage depending on the skeleton’s size (see
+      Natural Attacks). If the base creature already had claw attacks with its
+      hands, use the skeleton claw damage only if it’s
+      better.</p><p><strong>Special Attacks:</strong> A skeleton retains none of
+      the base creature’s special attacks.</p><p><strong>Abilities:</strong> A
+      skeleton’s Dexterity increases by +2. It has no Constitution or
+      Intelligence score, and its Wisdom and Charisma scores change to
+      10.</p><p><strong>BAB:</strong> A skeleton’s base attack bonus is equal to
+      3/4 of its Hit Dice.</p><p><strong>Skills:</strong> A skeleton loses all
+      skill ranks possessed by the base creature and gains none of its
+      own.</p><p><strong>Feats:</strong> A skeleton loses all feats possessed by
+      the base creature and gains
+      @UUID[Compendium.pf1.feats.Item.Uuiu3p982omhMEPj] as a bonus
+      feat.</p><p><strong>Special Qualities:</strong> A skeleton loses most
+      special qualities of the base creature. It retains any extraordinary
+      special qualities that improve its melee or ranged attacks.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.MZnbCVzqpvPsMvfT
+      - uuid: Compendium.pf1.feats.Item.Uuiu3p982omhMEPj
+      - uuid: Compendium.pf1.monster-abilities.Item.kcCRPAHsrWouTbij
+  sources:
+    - id: PZO1112
+      pages: 250-251
+  subType: template
+type: feat

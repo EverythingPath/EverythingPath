@@ -1,0 +1,135 @@
+{
+  "observedAt": "2026-10-09",
+  "observationKind": "Historical author-run proof; byte commitments identify these command inputs, while per-candidate current bindings are independently checked by regression tests.",
+  "batch": {
+    "held": 100,
+    "admitted": 0,
+    "failures": 0,
+    "dependentOmissions": 0
+  },
+  "fullEntries": 23109,
+  "fullResources": 538,
+  "fullResourcesFingerprint": "860d0610446ad67823e6f84acda478d5514d53da3fd394fe74ad93436f349318",
+  "selectedEntries": 153,
+  "selectedResources": 0,
+  "globalFailures": 4689,
+  "nonBatchEntriesPreserved": true,
+  "nonBatchAdmissionPreserved": true,
+  "historicalRawCommitments": 11044,
+  "historicalRuntimeCommitments": 9492,
+  "historicalFixtures": 5541,
+  "protectedDefinitions": 15,
+  "completeChecks": 17,
+  "baselineCompleteArtifact": "4a2d2ab1fbd080be44becbbb7d4843010fd17ed4c7e801d9a99f24a1e8153c91",
+  "baselineCompleteAdmission": "c822ad67eb58c6f20d2a2d828022e2b86a5fa3acf36d35b321933f84fb7071c7",
+  "currentCompleteArtifact": "ea51803c68d456a5a10fee90eee867c7f0ef402493e8857eac73f8874f03b4ab",
+  "currentCompleteAdmission": "f58ba1a50e612f188e3201d5bd3306c09c20dd801bc0b689e63df205b9ed719e",
+  "ordinary": {
+    "fingerprints": {
+      "catalog": "16f8b75d27c73d803dc73bb6f807cb831b051fd0a1951ac5ebb62c7f7897e1f2",
+      "unsupported": "2f7d655f2101b9a87226b1bab641cf8b1fd71e4f7b4db22e687cb2b041829fbc",
+      "comparison": "dab4424a351d03165db562341ae44df593a6fbe6ad60c2b4fce7452347391678",
+      "curation": "fa8d5d630c4b0a481effeea75d5623883ca6b909fa09699f6a708952ff4f5e2f",
+      "admission": "7bb6f3825d61cbb63984130f518d2c23483cab956026f439af663d6569968758"
+    },
+    "admitted": 61,
+    "held": 23193,
+    "failures": 4689,
+    "requiredNotices": [
+      "PZO1110"
+    ]
+  },
+  "draft": {
+    "fingerprints": {
+      "catalog": "6cfe7276571f13120f774d9540a127dd543e7bb0f7f68c3979ba3bd618c5b25f",
+      "unsupported": "eb1980e2f1b88abf5f3145d6c54f9e5e2d07a9fb89ed2534f2119da05a7399b9",
+      "comparison": "dab4424a351d03165db562341ae44df593a6fbe6ad60c2b4fce7452347391678",
+      "curation": "a8cc2d1ab9f64e089e393e802dcf3a35a40ea99812be36f1def6ed071039ce7a",
+      "admission": "9e5e4314de2440dd0338910f7a15d130384a479947fd67d176676a20538f19ef"
+    },
+    "admitted": 61,
+    "held": 23193,
+    "failures": 1864,
+    "requiredNotices": [
+      "PZO1110"
+    ]
+  },
+  "sourceVerification": {
+    "status": "verified",
+    "repositories": [
+      {
+        "repository": "pf1",
+        "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d"
+      },
+      {
+        "repository": "pf1-content",
+        "commit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d"
+      }
+    ]
+  },
+  "baselineDescriptionCandidateDelta": 63,
+  "isolatedRelease": {
+    "fingerprint": "2535c554822c9bf2b2e69f5c9169fc39068ea0a74163038aab0653bd89945674",
+    "rows": 3650,
+    "legalRows": 14,
+    "heldCandidatesPublished": 0,
+    "transportVerified": true,
+    "publicLegalPageReconstructionVerified": true
+  },
+  "reviewedInputByteCommitments": {
+    "scripts/catalog/reviewed-curation.json": "6c9d10f9de9b9b2064d025a757734e8f4faf0802a5ddc819c5370e106088ea56",
+    "src/lib/catalog/data/attribution-assessments.json": "ef7c8a123909609abadf265da5fa2d81c52754866bc79b626c5eeb62ba4f0ce4",
+    "src/lib/catalog/data/attribution-evidence.json": "fc31af9ee585158df83833e6aab21ff532cfc8944bd96e4024bfa3e184a69ede",
+    "scripts/catalog/legal/held-notices.json": "b3b58d0b548b2e96e8318a46620e7df86c05f46ff9cadaa4164a73d05c933dd3",
+    "scripts/catalog/legal/spells-529.json": "a7f1b77bdd15c8bb44c53eb2cb0dcbfd26644dd2b1c8315cb6313507522c8a03"
+  },
+  "commandObservations": {
+    "catalogSuite": {
+      "command": "CI=true VITEST_MAX_WORKERS=2 pnpm test tests/catalog",
+      "filesPassed": 97,
+      "filesFailed": 1,
+      "testsPassed": 2081,
+      "testsFailed": 1,
+      "durationSeconds": 254.87,
+      "failure": "Existing feats-345.test.ts mechanics case timed out at 15.992 seconds against unchanged 15-second budget.",
+      "batchChecksPassed": 34
+    },
+    "isolatedDiagnostic": {
+      "command": "CI=true VITEST_MAX_WORKERS=2 pnpm test tests/catalog/feats-345.test.ts",
+      "testsPassed": 9,
+      "durationSeconds": 12.47,
+      "caseSeconds": 9.809,
+      "qualification": "Does not replace the full-run failure or establish its cause."
+    },
+    "standardGates": {
+      "typecheck": "passed",
+      "lint": "passed, standard 8 GiB",
+      "initialMigrationWriters": "passed, 183 registrations",
+      "pin": "passed",
+      "noticeDependencies": "passed, 7550 dependencies; 0 gaps/waivers/stale; 36 earlier advisories; none for #529",
+      "canonicalData": "passed"
+    }
+  },
+  "resourceObservation": {
+    "service": "ep-curation-529-bounded-20261009.service",
+    "memoryPeakBytes": 8338509824,
+    "memoryEvents": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "vitestWorkers": 2,
+    "oneHeavyJob": true,
+    "through": "Final archive packaging"
+  },
+  "archiveHandoff": "Full exact input/output/log archive requires orchestrator copy from launcher-owned TMPDIR; external orchestration research destination is outside this worker writable sandbox.",
+  "archive": {
+    "bytes": 147122967,
+    "sha256": "dc0174b151c27c237a0cac3a8a178611ed17629f074462c7f9a6e35ed28c704f",
+    "status": "Complete in launcher-owned TMPDIR; root must copy externally before launcher cleanup.",
+    "includes": "Exact before/after inputs, ordinary/draft full outputs, fixture outputs, verifier scripts and command logs."
+  }
+}
