@@ -1,0 +1,55 @@
+_id: otj5ldaj8v34z3z3
+_key: '!items!otj5ldaj8v34z3z3'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Make Lost
+system:
+  actions:
+    - _id: wmrsb8p12ilqd7dy
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You strip the targets of their senses of direction and recent memories
+      of travel. They immediately forget the route they  took in the last hour
+      (but not details of encounters along the way) and become lost
+      (<i>Pathfinder RPG Core Rulebook</i> 424).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      druid: 2
+      hunter: 1
+      ranger: 1
+      skald: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9283
+      pages: '41'
+  subschool:
+    - compulsion
+type: spell

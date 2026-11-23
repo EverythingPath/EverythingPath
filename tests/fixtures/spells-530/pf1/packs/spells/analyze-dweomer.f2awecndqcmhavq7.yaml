@@ -1,0 +1,69 @@
+_id: f2awecndqcmhavq7
+_key: '!items!f2awecndqcmhavq7'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Analyze Dweomer
+system:
+  actions:
+    - _id: 7s0iek6eo9qvv93u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: none or Will negates; see text
+        type: will
+      target:
+        value: one object or creature per caster level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can observe magical auras. Each round, you may examine a single
+      creature or object that you can see as a free action. In the case of a
+      magic item, you learn its functions (including any curse effects), how to
+      activate its functions (if appropriate), and how many charges are left (if
+      it uses charges). In the case of an object or creature with active spells
+      cast upon it, you learn each spell, its effect, and its caster
+      level.</p><p>An attended object may attempt a Will save to resist this
+      effect if its holder so desires. If the save succeeds, you learn nothing
+      about the object except what you can discern by looking at it. An object
+      that makes its save cannot be affected by any other <i>analyze dweomer</i>
+      spells for 24 hours.</p><p><i>Analyze dweomer</i> does not function when
+      used on an artifact.</p>
+  learnedAt:
+    class:
+      alchemist: 6
+      arcanist: 6
+      bard: 6
+      investigator: 6
+      occultist: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      spiritualist: 6
+      witch: 6
+      wizard: 6
+    subDomain:
+      Arcane: 6
+  level: 6
+  materials:
+    focus: a ruby and gold lens worth 1,500 gp
+  school: div
+  sources:
+    - id: PZO1110
+      pages: '240'
+  sr: false
+type: spell

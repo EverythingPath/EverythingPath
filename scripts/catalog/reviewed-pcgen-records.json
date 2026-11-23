@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "externalKey": "pf1/mrJ61WiA6PuZgPTJ",
+      "upstreamName": "Master Tacitician",
+      "descriptionSha256": "67b08612c62808d783ef86d5cd0ef7695e9cabf93374a7c33f604af5991e153e",
+      "pcgen": {
+        "file": "roleplaying_game/advanced_players_guide/apg_abilities_class.lst",
+        "key": "Cavalier ~ Master Tactician"
+      },
+      "evidence": "Foundry misspells the Cavalier's 17th-level Master Tactician (Advanced Player's Guide). The Cavalier class grants this record at level 17 (pf1 packs/classes/cavalier.u1ed3H9xtYQXTP5v.yaml:74-75), and its body (\"At 17th level, the cavalier receives an additional teamwork feat as a bonus feat ...\") has the same words as that of the correctly spelled pf1/mvyIXBt01WtR0lM1 (only the markup of \"teamwork feat\" differs), which no class row grants. PCGen's Cavalier feature is KEY:Cavalier ~ Master Tactician (apg_abilities_class.lst:206, TYPE:CavalierClassFeatures, the same DESC), which the Cavalier gains at 17th level (apg_abilities_globalvar.lst:50); no PCGen line carries \"Tacitician\". The reviewed Cavalier schedule binds this key to that feature (scripts/catalog/pcgen/schedules-smite-challenge.ts, master-tactician, level 17). The same-named Divine Strategist (uc_abilities_class.lst:574) and Drill Sergeant (mtt_abilities_class.lst:45) features are other classes' and are not this record.",
+      "status": "checked",
+      "reviewedBy": "gpt-6.2-sol (codex; AI review) for the owner",
+      "reviewedOn": "2026-11-22",
+      "receipt": "t3-review-9ef9ecc82fcfb4577734e838cda2aaa55ad15bc85331eafc881010808f494f83"
+    }
+  ]
+}

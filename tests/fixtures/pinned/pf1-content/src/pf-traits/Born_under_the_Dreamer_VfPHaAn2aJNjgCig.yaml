@@ -1,0 +1,41 @@
+_id: VfPHaAn2aJNjgCig
+_key: '!items!VfPHaAn2aJNjgCig'
+_stats:
+  coreVersion: '12.331'
+folder: rasdJf3aELQxqSwG
+img: icons/skills/melee/weapons-crossed-swords-yellow.webp
+name: Born under the Dreamer
+system:
+  actions:
+    - _id: jnqor55crb5i56og
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+      tag: bornUnderTheDreamer
+  description:
+    value: >-
+      <p><em>Your birth sign aligned significantly with Liavara on the day you
+      were born, and you are touched by the instinctual dreaming spirit of that
+      planet, making you naturally poised and hard to
+      surprise.</em></p><p><strong>Benefits</strong>: Once per day as a free
+      action, you can take 10 on your initiative check.</p>
+  scriptCalls:
+    - _id: iqizU3hGNjQBhQ8O
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Roll Initiative
+      type: script
+      value: 'await actor.rollInitiative({dice: "10", createCombatants: true});'
+  sources:
+    - id: PZO9449
+      pages: '25'
+  subType: trait
+  traitType: combat
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
