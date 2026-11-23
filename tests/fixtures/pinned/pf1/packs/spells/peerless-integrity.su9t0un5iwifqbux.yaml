@@ -1,0 +1,65 @@
+_id: su9t0un5iwifqbux
+_key: '!items!su9t0un5iwifqbux'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Peerless Integrity
+system:
+  actions:
+    - _id: 1s4plz9vryiq1co7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation centered on you
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      save:
+        description: none or Will negates; see text
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Peerless integrity</i> conceals the alignment of creatures from
+      divination magic. All creatures within the spell's area, including you,
+      appear to have lawful good auras for the purposes of divination spells and
+      effects that reveal alignments (such as <i>detect law</i> and <i>see</i>
+      alignmentUC), instead of their actual alignments. If the caster of such
+      divination magic succeeds at a Will save, the caster recognizes whether
+      the readings are true or false. Any creature under the effects of this
+      spell gains a +2 circumstance modifier on Bluff and Diplomacy checks. This
+      spell does not affect other types of divination magic (such as <i>detect
+      thoughts</i> or <i>discern</i> lies) and does not protect against spells
+      or effects that cause harm based on targeted creatures' alignments.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 2
+      bard: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO9462
+      pages: '31'
+  sr: false
+  subschool:
+    - glamer
+type: spell

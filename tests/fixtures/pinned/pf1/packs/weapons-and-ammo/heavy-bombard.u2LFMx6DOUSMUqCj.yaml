@@ -1,0 +1,89 @@
+_id: u2LFMx6DOUSMUqCj
+_key: '!items!u2LFMx6DOUSMUqCj'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/cannon-engraved-gold.webp
+name: Heavy Bombard
+system:
+  actions:
+    - _id: tqd4mkht9o58n0ph
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(9, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '100'
+        units: ft
+        value: '200'
+  ammo:
+    type: siege
+  baseTypes:
+    - Heavy Bombard
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 9d6; <b>Critical</b> x4; <b>Range</b>
+      200 ft. (100 ft. min.); <b>Type</b> B and P</p><p><b>Crew</b> 4;
+      <b>Aim</b> 3; <b>Load</b> 5; <b>Speed</b> 0 ft.</p><p><b>Category</b>
+      Indirect-Fire (Gargantuan); <b>Proficiency</b> Siege
+      Engine</p><h3>Description</h3><p>Resembling either large cauldrons or more
+      traditional cannons, these firearms lob their ammunition in an arc in
+      order to deliver their deadly payloads over troops or castle walls.
+      Bombards are normally fired indirectly, but can also be fired as
+      direct-fire siege engines. When they are used for direct fire, they take a
+      -4 penalty on attack rolls and have their range increment halved, but do
+      not have a minimum range. Like all firearms, bombards do not suffer
+      mishaps, but instead have a misfire chance.</p><p><em>Light</em>: These
+      bombards resemble cauldrons attached to swivels. Often they are mounted
+      into the ground or into the stone of castle walls because of the mighty
+      power of their recoil. The targeting DC of a light bombard is 15. A light
+      bombard has a base misfire range of 1-2 (10 feet). Light bombards have a
+      hardness of 10 and 70 hit points. Light bombard balls cost 30 gp each and
+      weigh 25 pounds.</p><p><em>Standard</em>: These bombards feature the
+      greatest diversity of forms. Many take the cauldron shape of the light
+      bombard, but they may also take the forms of more traditional cannons,
+      albeit featuring stabilizing mechanisms that allow them to fire at a much
+      steeper incline. The targeting DC of a standard bombard is 20. A standard
+      bombard has a misfire range of 1-2 (20 feet). Standard bombards have a
+      hardness of 10 and 140 hit points. Standard bombard balls cost 35 gp each
+      and weigh 30 pounds.</p><p><em>Heavy</em>: These massive siege engines are
+      often fixed to positions on high hilltops or atop massive keeps, raining
+      death down on a valley or strait. Often these firearms come in two pieces
+      connected by a screw mechanism. The bombard is unscrewed to be loaded, and
+      then the main part of the muzzle is screwed back on to the barrel section
+      in order to be fired. Heavy bombards are too large and powerful to mount
+      on vehicles. The targeting DC of a heavy bombard is 25. A heavy bombard
+      has a misfire range of 1-2 (30 feet). Heavy bombards have a hardness of 10
+      and 280 hit points. Heavy bombard balls cost 45 gp each and weigh 50
+      pounds.</p>
+  hardness: 10
+  hp:
+    base: 280
+  material:
+    base:
+      value: steel
+  price: 16000
+  size: grg
+  sources:
+    - id: PZO1118
+      pages: '161'
+  subType: siege
+  weaponSubtype: indirect
+type: weapon

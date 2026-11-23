@@ -1,0 +1,85 @@
+_id: nll8ip8348eti0ff
+_key: '!items!nll8ip8348eti0ff'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Geyser
+system:
+  actions:
+    - _id: x8av3jrhmf6f7cfo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      effect: >-
+        spout of boiling water filling a 5 ft. square and spraying upward 10
+        ft./2 levels
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex partial (see below)
+        type: ref
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause a column of boiling water to spring forth from any horizontal
+      surface, knocking over creatures directly over it and exposing nearby
+      creatures to searing droplets as its spray falls back to the
+      ground.</p><p>Any creature entering the <i>geyser</i>, or occupying the
+      square it appears in, must make a Reflex saving throw to avoid being
+      hurled into the air and then tossed to the ground. If the creature fails
+      its saving throw, it takes 3d6 points of fire damage from the boiling
+      water and also takes falling damage based upon the height of the
+      <i>geyser</i> (e.g., if the <i>geyser</i> is 50 feet tall, the creature
+      takes 5d6 falling damage), landing prone in a random square adjacent to
+      the <i>geyser</i>. A successful saving throw halves the damage and negates
+      the falling damage, and the creature is moved to the closest square
+      adjacent to the <i>geyser</i> (Large-sized or larger creatures are moved
+      enough so that they are not on top of the <i>geyser</i> but still adjacent
+      to it).</p><p>This movement does not provoke attacks of opportunity and
+      does not count toward the creature's normal movement.</p><p>In addition,
+      the <i>geyser</i> sprays boiling water in a hemispherical emanation around
+      its square. The radius of this emanation is equal to one-half the
+      <i>geyser</i>'s height (e.g., a 50-foot <i>geyser</i> has a 25-foot-radius
+      emanation). Any creature within this area, including yourself, takes 1d6
+      points of fire damage each round as droplets of boiling water cascade on
+      them.</p><p>You can choose to make a smaller <i>geyser</i> than your level
+      permits if an obstruction prevents it from reaching its full height, or if
+      you simply want to create a spread of boiling rain that's smaller than
+      what would be created by a full-height <i>geyser</i> spell.</p>
+  descriptors:
+    - fire
+    - water
+  learnedAt:
+    bloodline:
+      Aquatic: 4
+    class:
+      arcanist: 5
+      druid: 4
+      hunter: 4
+      magus: 5
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a piece of lava rock
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '225'
+  sr: false
+  subschool:
+    - creation
+type: spell

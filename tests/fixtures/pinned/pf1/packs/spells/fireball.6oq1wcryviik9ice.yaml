@@ -1,0 +1,79 @@
+_id: 6oq1wcryviik9ice
+_key: '!items!6oq1wcryviik9ice'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/fire/projectile-fireball-orange-yellow.webp
+name: Fireball
+system:
+  actions:
+    - _id: u5zwxkvmw4l9e0fd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius spread
+      damage:
+        parts:
+          - formula: (min(10, @cl))d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A <i>fireball</i> spell generates a searing explosion of flame that
+      detonates with a low roar and deals 1d6 points of fire damage per caster
+      level (maximum 10d6) to every creature within the area.</p><p>Unattended
+      objects also take this damage. The explosion creates almost no
+      pressure.</p><p>You point your finger and determine the range (distance
+      and height) at which the <i>fireball</i> is to burst. A glowing, pea-sized
+      bead streaks from the pointing digit and, unless it impacts upon a
+      material body or solid barrier prior to attaining the prescribed range,
+      blossoms into the <i>fireball</i> at that point. An early impact results
+      in an early detonation. If you attempt to send the bead through a narrow
+      passage, such as through an arrow slit, you must "hit" the opening with a
+      ranged touch attack, or else the bead strikes the barrier and detonates
+      prematurely.</p><p>The <i>fireball</i> sets fire to combustibles and
+      damages objects in the area. It can melt metals with low melting points,
+      such as lead, gold, copper, silver, and bronze. If the damage caused to an
+      interposing barrier shatters or breaks through it, the <i>fireball</i> may
+      continue beyond the barrier if the area permits; otherwise it stops at the
+      barrier just as any other spell effect does.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    bloodline:
+      Efreeti: 3
+    class:
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      occultist: 3
+      sorcerer: 3
+      wizard: 3
+    domain:
+      Fire: 3
+  level: 3
+  materials:
+    value: a ball of bat guano and sulfur
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '283'
+type: spell

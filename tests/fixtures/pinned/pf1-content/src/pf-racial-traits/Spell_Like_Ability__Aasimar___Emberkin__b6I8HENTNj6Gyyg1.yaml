@@ -1,0 +1,108 @@
+_id: b6I8HENTNj6Gyyg1
+_key: '!items!b6I8HENTNj6Gyyg1'
+_stats:
+  coreVersion: '12.331'
+folder: 3vSL52yi5JvMMdeU
+img: systems/pf1/icons/races/aasimar.png
+name: Spell-Like Ability (Aasimar - Emberkin)
+system:
+  abilityType: sp
+  actions:
+    - _id: anH2BfXHRiq3kuag
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p></p><p>@UUID[Compendium.pf1.spells.Item.0d756xyqhinsstas]{Pyrotechnics}</p><p><em>Pyrotechnics</em>
+        turns a fire into a burst of blinding fireworks or a thick cloud of
+        choking smoke, depending on your choice. The spell uses one fire source,
+        which is immediately extinguished. A fire so large that it exceeds a
+        @Distance[20 ft;dual] cube is only partly extinguished. Magical fires
+        are not extinguished, although a fire-based creature used as a source
+        takes 1 point of damage per caster level.</p><p><em>Fireworks:</em> The
+        fireworks are a flashing, fiery, momentary burst of glowing, colored
+        aerial lights. This effect causes creatures within @Distance[120
+        ft;dual] of the fire source to become blinded for 1d4+1 rounds (Will
+        negates). These creatures must have line of sight to the fire to be
+        affected. Spell resistance can prevent blindness.</p>
+      duration:
+        units: round
+        value: '[[1d4+1]]'
+      name: Pyrotechnics-Fireworks
+      notes:
+        effect:
+          - '@Condition[bllinded] for [[1d4+1]] Rounds'
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: creatures within 120 feet of the fire source
+    - _id: 7Q3wA89sibSLMUq3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft radius
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.0d756xyqhinsstas]{Pyrotechnics}</p><p><em>Pyrotechnics</em>
+        turns a fire into a burst of blinding fireworks or a thick cloud of
+        choking smoke, depending on your choice. The spell uses one fire source,
+        which is immediately extinguished. A fire so large that it exceeds a
+        @Distance[20 ft;dual] cube is only partly extinguished. Magical fires
+        are not extinguished, although a fire-based creature used as a source
+        takes 1 point of damage per caster level.</p><p><em>Smoke Cloud</em>: A
+        stream of smoke billows out from the fire, forming a choking cloud that
+        spreads @Distance[20 ft;dual] in all directions and lasts for 1 round
+        per caster level. All sight, even darkvision, is ineffective in or
+        through the cloud. All within the cloud take -4 penalties to Strength
+        and Dexterity (Fortitude negates). These effects last for 1d4+1 rounds
+        after the cloud dissipates or after the creature leaves the area of the
+        cloud. Spell resistance does not apply.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Pyrotechnics-Smoke Cloud
+      notes:
+        effect:
+          - >-
+            All within the cloud take -4 penalties to Strength and Dexterity 
+            These effects last for [[1d4+1]] rounds (after leaving or it
+            dissipates)
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        type: fort
+      target:
+        value: fire source
+  description:
+    value: >-
+      <p><strong>Race</strong>: Aasimar - Emberkin</p><hr /><p>Emberkin can use
+      @UUID[Compendium.pf1.spells.Item.0d756xyqhinsstas]{Pyrotechnics} once per
+      day as a spell-like ability (with a caster level equal to the Emberkin's
+      character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '239'
+    - id: PZO9424
+      pages: '23'
+  subType: racial
+  tags:
+    - Aasimar
+    - Emberkin
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

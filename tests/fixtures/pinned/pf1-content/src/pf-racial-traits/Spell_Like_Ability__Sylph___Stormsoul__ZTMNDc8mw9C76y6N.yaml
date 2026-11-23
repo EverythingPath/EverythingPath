@@ -1,0 +1,54 @@
+_id: ZTMNDc8mw9C76y6N
+_key: '!items!ZTMNDc8mw9C76y6N'
+_stats:
+  coreVersion: '12.331'
+folder: o1nSxKcbPwxbxxD5
+img: systems/pf1/icons/races/sylph.png
+name: Spell-Like Ability (Sylph - Stormsoul)
+system:
+  abilityType: sp
+  actions:
+    - _id: OCQJIZwTOkKslmpN
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, @attributes.hd.total))d6
+            types:
+              - electric
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.33pe0bge7b7aq3io]{shocking
+        grasp} </em></p><p>Your successful melee touch attack deals 1d6 points
+        of electricity damage per caster level (maximum 5d6). When delivering
+        the jolt, you gain a +3 bonus on attack rolls if the opponent is wearing
+        metal armor (or is carrying a metal weapon or is made of metal).</p>
+      duration:
+        units: inst
+        value: '@attributes.hd.total'
+      name: Shocking Grasp
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sylph - Stormsoul</p><hr /><p>Stormsouls can use
+      @UUID[Compendium.pf1.spells.Item.33pe0bge7b7aq3io]{shocking grasp} 1/day
+      as a spell-like ability (with a caster level equal to the Stormsoul's
+      character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9492
+      pages: '21'
+  subType: racial
+  tags:
+    - Sylph
+    - Stormsoul
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

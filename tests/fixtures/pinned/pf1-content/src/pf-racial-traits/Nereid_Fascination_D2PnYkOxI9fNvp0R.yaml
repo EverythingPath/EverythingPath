@@ -1,0 +1,61 @@
+_id: D2PnYkOxI9fNvp0R
+_key: '!items!D2PnYkOxI9fNvp0R'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Nereid Fascination
+system:
+  actions:
+    - _id: 0awH9ceyXpzu5X4Q
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20' Aura
+      description: >-
+        <p>@UUID[Compendium.pf1.class-abilities.Item.tWE66WvFjS1o0S4y]{Fascinate}</p>
+      duration:
+        units: round
+        value: max(1, floor(@attributes.hd.total / 2))
+      name: Aura
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.cha.mod
+        description: Negates
+        type: will
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.M571aaxrlWRfFqiS]{Outsider
+      (Native)} with ties to the Plane of Water or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.nb7WkJkqL3bnhkU5]{Fey}
+      type</p><hr /><p>Members of this race gain the following supernatural
+      ability: Once per day, a member of this race can create a @Distance[20
+      ft;dual]-radius burst that causes humanoids within the aura’s range to
+      become fascinated with the user (as the bard’s fascinate bardic
+      performance). Affected humanoids may resist this effect by making a
+      successful Will saving throw (DC 10 + 1/2 the user’s character level + the
+      user’s Charisma modifier).</p><p><strong>Related buff:
+      </strong>@Toggle[Nereid Fascination]</p>
+  links:
+    supplements:
+      - name: Nereid Fascination
+        uuid: Compendium.pf-content.pf-buffs.Item.jIF1fgTXwk7D94Ra
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: 228-229
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

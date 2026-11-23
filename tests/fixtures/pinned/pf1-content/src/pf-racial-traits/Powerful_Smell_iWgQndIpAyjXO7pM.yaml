@@ -1,0 +1,71 @@
+_id: iWgQndIpAyjXO7pM
+_key: '!items!iWgQndIpAyjXO7pM'
+_stats:
+  coreVersion: '12.331'
+folder: JuBq7kP20NXqHu1h
+img: systems/pf1/icons/skills/blue_06.jpg
+name: Powerful Smell
+system:
+  actions:
+    - _id: HiTBhnftKG2HHXcn
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>All living creatures (except other locathahs and creatures with the
+        stench ability) within the aura must succeed at a Fortitude saving throw
+        (DC 10 + half the locathah's character level + the locathah's
+        Constitution modifier) or be <strong>sickened</strong> for 5 rounds.
+        Creatures that succeed at the saving throw cannot be sickened by the
+        same locathah's powerful smell for 24 hours. A delay poison or
+        neutralize poison spell or similar effect removes the effect from the
+        sickened creature</p>
+      duration:
+        units: round
+        value: '5'
+      name: Powerful Smell
+      range:
+        units: ft
+        value: '15'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Negates
+        type: fort
+  changes:
+    - _id: Vg6MHEgT
+      formula: '-4'
+      target: skill.ste
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Locathah<br /><strong>Replaced
+      Trait(s)</strong>: Natural Armor</p><hr /><p>Although all locathahs have a
+      distinctly fishy odor out of the water, some locathahs have slimier skin
+      that exudes a strong scent both above and below the waves. Locathahs who
+      have this racial trait emit a terrible scent as a @Distance[15 ft;dual]
+      aura that nearly every other creature finds offensive. This is a poison
+      effect. All living creatures (except other locathahs and creatures with
+      the stench ability) within the aura must succeed at a Fortitude saving
+      throw (DC 10 + half the locathah's character level + the locathah's
+      Constitution modifier) or be sickened for 5 rounds. Creatures that succeed
+      at the saving throw cannot be sickened by the same locathah's powerful
+      smell for 24 hours. A <em>delay poison</em> or <em>neutralize poison</em>
+      spell or similar effect removes the effect from the sickened creature. Due
+      to their smell, locathahs with this racial trait have a -4 penalty on
+      Stealth checks. This racial trait replaces natural
+      armor.</p><p><strong>Related buff: </strong>@Toggle[Powerful Smell]</p>
+  links:
+    supplements:
+      - name: Powerful Smell
+        uuid: Compendium.pf-content.pf-buffs.Item.45j0XeQUxS96j94y
+  showInQuickbar: true
+  sources:
+    - id: PZO9482
+      pages: '11'
+  subType: racial
+  tags:
+    - Locathah
+  traitCategory: defense
+type: feat

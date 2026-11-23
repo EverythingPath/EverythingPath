@@ -1,0 +1,56 @@
+_id: z05gnmzadjhhqjwu
+_key: '!items!z05gnmzadjhhqjwu'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Emotive Block
+system:
+  actions:
+    - _id: 3dsxei9mxygzce4o
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You create an emotional block in the target's mind, adding an emotion
+      component to each spell or spell-like ability he uses. This is in addition
+      to any other components the spell already requires, and doesn't replace
+      the somatic component. The target's spell-like abilities require this
+      emotion component, even though they normally don't need spell components.
+      As usual with emotion components, the target can't cast spells (or use
+      spell-like abilities, in this case) while affected by a non-harmless
+      emotion or fear effect.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 2
+      psychic: 3
+      spiritualist: 2
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '169'
+  subschool:
+    - compulsion
+type: spell
