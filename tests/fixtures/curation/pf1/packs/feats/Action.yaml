@@ -1,0 +1,27 @@
+{
+  "_id": "Action",
+  "_key": "!items!Action",
+  "name": "Action",
+  "type": "feat",
+  "system": {
+    "actions": [
+      {
+        "_id": "weaponAction",
+        "conditionals": [
+          {
+            "_id": "closeRange",
+            "name": "Within 30 ft",
+            "modifiers": [
+              {
+                "formula": "1",
+                "target": "attack",
+                "subTarget": "allAttack",
+                "type": "enh"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+_id: e7HJdGe02eg9mWQR
+_key: '!items!e7HJdGe02eg9mWQR'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/green_16.jpg
+name: Hobble
+system:
+  changes:
+    - _id: jy6dc40n
+      formula: '@attributes.speed.land.total / 2'
+      operator: set
+      target: landSpeed
+      type: untyped
+    - _id: naax9jph
+      formula: >-
+        @attributes.speed.climb.total > 0 ? (@attributes.speed.climb.total / 2)
+        : 0
+      operator: set
+      target: climbSpeed
+      type: untyped
+    - _id: ouxx88ez
+      formula: >-
+        @attributes.speed.swim.total > 0 ? (@attributes.speed.swim.total / 2) :
+        0
+      operator: set
+      target: swimSpeed
+      type: untyped
+    - _id: pvfofdzl
+      formula: >-
+        @attributes.speed.burrow.total > 0 ? (@attributes.speed.burrow.total /
+        2) : 0
+      operator: set
+      target: burrowSpeed
+      type: untyped
+    - _id: 7n1vu2nq
+      formula: if(gt(@attributes.speed.fly.total,0),(@attributes.speed.fly.total / 2))
+      operator: set
+      target: flySpeed
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.mzrx5anb5eeovv7t]{Hobble}</p><p>This
+      spell disrupts the method a target uses for movement. Creatures under the
+      effects of this spell move at half their base speed (rounded down to the
+      nearest 5-foot increment) but can still take 5-foot steps as
+      normal.</p><p>Incorporeal creatures and creatures flying with perfect
+      maneuverability are immune to the effects of this spell.</p><p>Each round,
+      a target receives another save to end the effect.</p>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

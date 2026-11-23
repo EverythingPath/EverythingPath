@@ -1,0 +1,148 @@
+_id: xZm1SIpjHpL6UTgs
+_key: '!items!xZm1SIpjHpL6UTgs'
+_stats:
+  coreVersion: '12.331'
+folder: MvyTbqu9jQCwjLwg
+img: icons/creatures/eyes/humanoid-single-yellow.webp
+name: Nidalese Recluse
+system:
+  abilityType: sp
+  actions:
+    - _id: fghNDONa79XMkT1k
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.yk5bgi6j9kbtigof]{Sanctuary}</p><p>Any
+        opponent attempting to directly attack the warded creature, even with a
+        targeted spell, must attempt a Will save. If the save succeeds, the
+        opponent can attack normally and is unaffected by that casting of the
+        spell. If the save fails, the opponent can't follow through with the
+        attack, that part of its action is lost, and it can't directly attack
+        the warded creature for the duration of the spell.</p><p>Those not
+        attempting to attack the subject remain unaffected. This spell does not
+        prevent the warded creature from being attacked or affected by area of
+        effect spells. The subject cannot attack without breaking the spell but
+        may use nonattack spells or otherwise act.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Sanctuary
+      range:
+        units: touch
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: Creature Touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: 9LalI4b3ZuhdITuC
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{Nondetection}</p><p>The
+        warded creature or object becomes difficult to detect by divination
+        spells such as clairaudience/clairvoyance, locate object, and detect
+        spells. Nondetection also prevents location by such magic items as
+        crystal balls. If a divination is attempted against the warded creature
+        or item, the caster of the divination must succeed on a caster level
+        check (1d20 + caster level) against a DC of 11 + the caster level of the
+        spellcaster who cast nondetection. If you cast nondetection on yourself
+        or on an item currently in your possession, the DC is 15 + your caster
+        level.</p><p>If cast on a creature, nondetection wards the creature's
+        gear as well as the creature itself.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Nondetection (self only)
+      range:
+        units: touch
+      save:
+        dc: 15 + @attributes.hd.total
+        description: negates
+        type: will
+      target:
+        value: Self
+      uses:
+        self:
+          maxFormula: gte(@attributes.hd.total, 9)
+          per: day
+    - _id: sIrPtxIgbAQcBzz8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.fxwycv6d7xwzua4t]{Veil}</p><p>You
+        instantly change the appearance of the subjects and then maintain that
+        appearance for the spell's duration. You can make the subjects appear to
+        be anything you wish. The subjects look, feel, and smell just like the
+        creatures the spell makes them resemble. Affected creatures resume their
+        normal appearances if slain. You must succeed on a Disguise check to
+        duplicate the appearance of a specific individual. This spell gives you
+        a +10 bonus on the check.</p><p>Unwilling targets can negate the spell's
+        effect on them by making Will saves or with spell resistance. Those who
+        interact with the subjects can attempt Will disbelief saves to see
+        through the glamer, but spell resistance doesn't help.</p>
+      duration:
+        concentration: true
+        units: spec
+        value: '[[@attributes.hd.total]] hours; see text'
+      name: Veil(self only)
+      range:
+        units: personal
+      save:
+        dc: 10 + 6 + @abilities.cha.mod
+        description: negates
+        type: will
+      target:
+        value: Self
+      uses:
+        self:
+          maxFormula: gte(@attributes.hd.total, 13)
+          per: day
+  description:
+    instructions: >-
+      <p>this trait
+      replaces</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.OYQqWgVtw30JL2qT]{Spell-Like
+      Abilities (Fetchling - Disguise
+      Self)}</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.JRAuStEQiJCdtUwp]{Spell-Like
+      Abilities (Fetchling - Plane
+      Shift)}</p><p>@UUID[Compendium.pf-content.pf-racial-traits.Item.iulHWSMNp9TABDDU]{Spell-Like
+      Abilities (Fetchling - Shadow Walk)}</p>
+    value: >-
+      <p><strong>Race</strong>: Fetchling<br /><strong>Replaced
+      Trait(s)</strong>: Spell-Like Abilities</p><hr /><p>Some fetchlings learn
+      how to deflect unwanted attention. Fetchlings with this racial trait can
+      use @UUID[Compendium.pf1.spells.Item.yk5bgi6j9kbtigof]{Sanctuary} once per
+      day as a spell-like ability. When such a fetchling reaches 9th level in
+      any combination of classes, he gains
+      @UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{Nondetection} (self
+      only) as a spell-like ability usable once per day, and at 13th level, he
+      gains @UUID[Compendium.pf1.spells.Item.fxwycv6d7xwzua4t]{Veil} (self only)
+      usable once per day. A fetchling's caster level is equal to his total Hit
+      Dice. This racial trait modifies the fetchling's spell-like abilities
+      racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9466
+      pages: '6'
+  subType: racial
+  tags:
+    - Fetchling
+  traitCategory: magical
+  uses:
+    maxFormula: 1 + clamp(floor((@attributes.hd.total - 5) / 4), 0, 2)
+    value: 1
+type: feat

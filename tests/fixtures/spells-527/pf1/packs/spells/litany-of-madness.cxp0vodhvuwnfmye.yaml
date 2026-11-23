@@ -1,0 +1,52 @@
+_id: cxp0vodhvuwnfmye
+_key: '!items!cxp0vodhvuwnfmye'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Litany of Madness
+system:
+  actions:
+    - _id: t5lw359ljxzs1udb
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: spec
+        value: 1 or more rounds (see below)
+      name: Use
+      range:
+        units: close
+      save:
+        description: no, see below
+      target:
+        value: one creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This litany is a sermon of madness. The target is confused. At the
+      start of each of its turns, it can make a Will saving throw against the
+      confused effect (DC of the spell). If the target fails the save, it
+      continues to be confused. If it makes the save, the effect ends.  While
+      subject to this spell, the target cannot be the target of another spell
+      that has the word "litany" in the title.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 4
+      inquisitor: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '234'
+  subschool:
+    - charm
+type: spell
