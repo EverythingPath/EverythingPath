@@ -1,0 +1,74 @@
+_id: ofw6gnp6r7t2wcba
+_key: '!items!ofw6gnp6r7t2wcba'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Geas, Lesser
+system:
+  actions:
+    - _id: iz0fvn0vsw30rsqu
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: spec
+        value: 1 day/level or until discharged
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature with 7 HD or less
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>A <em>lesser geas</em> places a magical command on a creature to carry
+      out some service or to refrain from some action or course of activity, as
+      desired by you. The creature must have 7 or fewer HD and be able to
+      understand you. While a <em>geas</em> cannot compel a creature to kill
+      itself or perform acts that would result in certain death, it can cause
+      almost any other course of activity.</p><p>The <em>geas</em>ed creature
+      must follow the given instructions until the <em>geas</em> is completed,
+      no matter how long it takes.</p><p>If the instructions involve some
+      open-ended task that the recipient cannot complete through his own
+      actions, the spell remains in effect for a maximum of 1 day per caster
+      level. A clever recipient can subvert some instructions.</p><p>If the
+      subject is prevented from obeying the <em>lesser geas</em> for 24 hours,
+      it takes a -2 penalty to each of its ability scores. Each day, another -2
+      penalty accumulates, up to a total of -8. No ability score can be reduced
+      to less than 1 by this effect. The ability score penalties are removed 24
+      hours after the subject resumes obeying the <em>lesser geas</em>.</p><p>A
+      <em>lesser geas</em> (and all ability score penalties) can be ended by
+      <em>break enchantment</em>, <em>limited wish</em>, <em>remove curse</em>,
+      <em>miracle</em>, or <em>wish</em>. <em>Dispel magic</em> does not affect
+      a <em>lesser geas</em>.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+    - curse
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      inquisitor: 4
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '288'
+  subschool:
+    - compulsion
+type: spell

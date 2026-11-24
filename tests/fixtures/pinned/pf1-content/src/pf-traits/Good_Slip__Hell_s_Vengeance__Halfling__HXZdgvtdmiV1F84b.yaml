@@ -1,0 +1,81 @@
+_id: HXZdgvtdmiV1F84b
+_key: '!items!HXZdgvtdmiV1F84b'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Good Slip (Hell's Vengeance; Halfling)
+system:
+  actions:
+    - _id: 8ggOcvcEJ8SKR1SX
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, when you are adjacent to a human ally of Chelish
+        descent, you can reroll a Will saving throw before success or failure is
+        known. You must take the results of the second roll, even if it is
+        worse.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Reroll will save
+  changes:
+    - _id: xOSzI5c3
+      formula: '1'
+      target: skill.blf
+      type: trait
+  classSkills:
+    blf: true
+  contextNotes:
+    - target: will
+      text: >-
+        Once per day, when you are adjacent to a human ally of Chelish descent,
+        you can reroll a Will saving throw before success or failure is known.
+        You must take the results of the second roll, even if it is worse.
+  description:
+    value: >-
+      <p><em>Halflings are a common sight in Cheliax and make up the majority of
+      that nation’s slave population. Known derisively as “slips,” halflings are
+      almost universally treated with scorn and contempt, while paradoxically
+      valued as the most precious slaves. You are a Chelish halfling, but unlike
+      most of your race, you have embraced your role in Chelish society, and
+      used it to your own advantage. People constantly overlook you or discount
+      you as an inconsequential slip, but you know the truth—halflings are just
+      as vital to the empire’s health as its nobles, priests, and warriors. You
+      may have been born a free halfling who has never known the chains of
+      slavery, or a slave who was later freed after a period of loyal servitude.
+      Or perhaps you are still a slave, happy (or at least content) in your
+      enslavement, and hoping for some eventual recognition of your
+      contribution, however small, to Cheliax’s great and orderly
+      society.</em></p><p><strong>Requirements</strong>:
+      Halfling</p><p><strong>Benefits</strong>: You are skilled at prevaricating
+      and dissembling, both to deflect blame away from yourself and to mislead
+      others as to your true abilities and role. You gain a +1 trait bonus on
+      Bluff checks, and Bluff is a class skill for you. In addition, your tacit
+      support of Cheliax’s social structure, and the clear knowledge of your own
+      place in society, strengthens your resolve. Once per day, when you are
+      adjacent to a human ally of Chelish descent, you can reroll a Will saving
+      throw before success or failure is known. You must take the results of the
+      second roll, even if it is worse.</p>
+  scriptCalls:
+    - _id: TloLejr0SxmcMfzK
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Will Save
+      type: script
+      value: await actor.rollSavingThrow("will");
+  sources:
+    - id: PZO9000-18E
+      pages: '13'
+  subType: trait
+  tags:
+    - Hell's Vengeance
+    - Halfling
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

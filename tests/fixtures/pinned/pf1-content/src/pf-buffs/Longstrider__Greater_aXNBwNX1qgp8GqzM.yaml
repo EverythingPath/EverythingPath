@@ -1,0 +1,45 @@
+_id: aXNBwNX1qgp8GqzM
+_key: '!items!aXNBwNX1qgp8GqzM'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/dodge.jpg
+name: Longstrider, Greater
+system:
+  changes:
+    - _id: jy6dc40n
+      formula: '20'
+      target: landSpeed
+      type: enh
+    - _id: naax9jph
+      formula: if(gt(@attributes.speed.climb.total,0),10)
+      target: climbSpeed
+      type: enh
+    - _id: ouxx88ez
+      formula: if(gt(@attributes.speed.swim.total,0),10)
+      target: swimSpeed
+      type: enh
+    - _id: pvfofdzl
+      formula: if(gt(@attributes.speed.burrow.total,0),10)
+      target: burrowSpeed
+      type: enh
+    - _id: 7n1vu2nq
+      formula: if(gt(@attributes.speed.fly.total,0),10)
+      target: flySpeed
+      type: enh
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.k78qs00yp7uybprw]{Longstrider,
+      Greater}</p><p>This functions as
+      @UUID[Compendium.pf1.spells.Item.hosf489xyoexmp57]{Longstrider}, except it
+      gives you a +20-foot enhancement bonus to your base speed and a +10-foot
+      enhancement bonus to your other modes of movement (burrow, climb, fly,
+      swim, and so on).</p><p>It does not affect movement modes you do not
+      actually have-for example, if you do not have a swim speed, this spell
+      does not grant you a swim speed.</p>
+  duration:
+    units: hour
+    value: '@item.level'
+  level: 5
+  subType: spell
+type: buff

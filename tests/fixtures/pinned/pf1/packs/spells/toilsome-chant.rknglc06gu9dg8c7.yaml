@@ -1,0 +1,50 @@
+_id: rknglc06gu9dg8c7
+_key: '!items!rknglc06gu9dg8c7'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Toilsome Chant
+system:
+  actions:
+    - _id: bkcqdcg1nvbhub6z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can cast this spell as part of the action to begin an inspire
+      competence bardic performance. The benefit of inspire competence persists
+      for as long as is necessary to complete the target's next skill check
+      using the chosen skill (up to a maximum of 1 hour per caster level), even
+      if you cease your bardic performance.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      skald: 1
+  school: enc
+  sources:
+    - id: PZO1121
+      pages: '19'
+  subschool:
+    - compulsion
+type: spell
