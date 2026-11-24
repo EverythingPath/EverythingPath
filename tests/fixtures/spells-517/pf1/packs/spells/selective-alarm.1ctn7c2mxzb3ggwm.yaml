@@ -1,0 +1,74 @@
+_id: 1ctn7c2mxzb3ggwm
+_key: '!items!1ctn7c2mxzb3ggwm'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/sonic/bell-alarm-red-purple.webp
+name: Selective Alarm
+system:
+  actions:
+    - _id: ffvbixqns4hx61ko
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: up to 20-ft.-radius emanation centered on a point in space
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.nee6cxpoekp3aklq]{alarm}, except that you
+      can tweak the spell to be more discerning in what types of creatures or
+      objects trigger the <em>alarm</em>. Instead of being triggered whenever a
+      creature of Tiny size or larger enters the warded area, you can set
+      whatever triggering conditions you wish, as long as they are based on
+      observable phenomenon. For example, you could cause the selective
+      <em>alarm</em> to trigger when creatures of a certain race (such as orcs,
+      bugbears, or kobolds) enter the area, or whenever a group of four or more
+      creatures enters the area together, or when a metal object is brought into
+      the area. You can't choose triggering conditions that rely on unobservable
+      information, such as having it triggered when creatures of a certain
+      alignment enter the area, nor could you have the <em>alarm</em> be
+      triggered by "something worth more than 5,000 gp" entering the area, or
+      even "a weapon" entering the area, because an item's value and
+      classification as a weapon is subjective, and might vary from one person
+      to the next.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      hunter: 2
+      inquisitor: 3
+      occultist: 3
+      psychic: 3
+      ranger: 2
+      skald: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    focus: a slender iron rod 1 foot in length
+  school: abj
+  sources:
+    - id: PZO1134
+      pages: '224'
+  sr: false
+type: spell

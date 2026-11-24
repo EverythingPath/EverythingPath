@@ -1,0 +1,119 @@
+_id: BiFLo26hRjGOA6Wp
+_key: '!items!BiFLo26hRjGOA6Wp'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/commodities/treasure/statue-carved-figurehead.webp
+name: Firedrake
+system:
+  actions:
+    - _id: fvm8jqh37m4asjrn
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '60'
+        type: ray
+      name: Line
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: '15'
+        description: Reflex half
+        type: ref
+    - _id: b6IvnHeQXBDRIaGI
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Cone
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: '15'
+        description: Reflex half
+        type: ref
+    - _id: ecL0dse7dRGzfvJZ
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      area: 20-foot blast
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Explode
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: '15'
+        description: Reflex half
+        type: ref
+      target:
+        value: all creatures
+  ammo:
+    type: siege
+  baseTypes:
+    - Firedrake
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><strong>Weight</strong>
+      -</p><p><strong>Damage</strong> 6d6; <strong>Critical</strong> -;
+      <strong>Range</strong> -; <strong>Type</strong>
+      fire</p><p><strong>Crew</strong> 3; <strong>Aim</strong> 2;
+      <strong>Load</strong> 5; <strong>Speed</strong> 10
+      ft.</p><p><strong>Category</strong> Direct-Fire (Huge);
+      <strong>Proficiency</strong> Siege Engine</p><h3>Description</h3><p>These
+      large siege engines are typically wheeled or attached to vehicles that can
+      transport them to the battlefield. This apparatus fires gouts of
+      alchemist's fire in either a 60-foot line or a 30-foot cone (siege crew
+      leader's choice). Targets in the area take 6d6 points of fire damage (DC
+      15 Reflex save halves); those who fail their saves also catch on
+      fire.</p><p>A firedrake with the broken condition that suffers a further
+      mishap explodes, dealing its damage to all creatures within a 20-foot
+      blast (DC 15 Reflex save halves).</p><p>One use of firedrake ammunition
+      costs 200 gp and weighs 20 pounds.</p>
+  hardness: 10
+  hp:
+    base: 70
+  material:
+    base:
+      value: steel
+  price: 4000
+  sources:
+    - id: PZO1118
+      pages: '163'
+  subType: exotic
+  weaponSubtype: ranged
+type: weapon

@@ -1,0 +1,48 @@
+_id: ts50ndgdc9ssw3ui
+_key: '!items!ts50ndgdc9ssw3ui'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Bestow Grace
+system:
+  actions:
+    - _id: f9p5sc4yeqb1rcea
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one good creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this spell you can bestow your divine grace on another good
+      creature for a short amount of time, infusing that creature with a portion
+      of your holy virtue. When you touch the subject, you grant that creature a
+      sacred bonus to its saving throws equal to its Charisma bonus (if any) on
+      all saving throws.</p>
+  learnedAt:
+    class:
+      paladin: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO1115
+      pages: '205'
+type: spell

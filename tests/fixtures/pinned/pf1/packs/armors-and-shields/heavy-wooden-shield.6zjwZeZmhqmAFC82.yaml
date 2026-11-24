@@ -1,0 +1,56 @@
+_id: 6zjwZeZmhqmAFC82
+_key: '!items!6zjwZeZmhqmAFC82'
+_stats:
+  coreVersion: '12.343'
+folder: DtVJVwL87ELQxk7u
+img: systems/pf1/icons/items/armor/shield-heavy-wood.png
+name: Heavy Wooden Shield
+system:
+  actions:
+    - _id: zK6ZJX8WI56bdMNn
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Bash
+      range:
+        units: melee
+  armor:
+    acp: 2
+    material:
+      base:
+        value: wood
+    value: 2
+  description:
+    unidentified: >-
+      <p>A heavy wooden shield is essentially the same as a heavy steel shield,
+      except that it responds differently to some spells and effects (such as
+      <em>rusting grasp</em>). A druid can use a heavy wooden shield, but not a
+      heavy steel shield.</p>
+  equipmentSubtype: heavyShield
+  hardness: 5
+  hp:
+    base: 15
+  price: 7
+  slot: shield
+  sources:
+    - id: PZO1110
+      pages: 151-152
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

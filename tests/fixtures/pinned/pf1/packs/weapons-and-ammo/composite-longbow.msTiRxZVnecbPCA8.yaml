@@ -1,0 +1,82 @@
+_id: msTiRxZVnecbPCA8
+_key: '!items!msTiRxZVnecbPCA8'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/longbow.PNG
+name: Composite Longbow
+system:
+  actions:
+    - _id: sgqhw6omb7o38ryx
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+        damageMult: 1
+        max: 0
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: arrow
+      attackBonus: (lt(@abilities.str.mod, @action.ability.max) * -2)[Required Strength]
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '110'
+  ammo:
+    type: arrow
+  baseTypes:
+    - Longbow
+  description:
+    unidentified: >-
+      <p>You need at least two hands to use a bow, regardless of its size. You
+      can use a composite longbow while mounted. All composite bows are made
+      with a particular strength rating (that is, each requires a minimum
+      Strength modifier to use it with proficiency). If your Strength modifier
+      is less than the strength rating of the composite bow, you can't
+      effectively use it, so you take a -2 penalty on attacks with it. The
+      default composite longbow requires a Strength modifier of +0 or higher to
+      use with proficiency. A composite longbow can be made with a high strength
+      rating to take advantage of an aboveaverage Strength score; this feature
+      allows you to add your Strength modifier on damage rolls, up to the
+      maximum bonus indicated for the bow. Each point of Strength bonus granted
+      by the bow adds 100 gp to its cost. If you have a negative modifier due to
+      low Strength, apply it to damage rolls when you use a composite longbow. A
+      composite longbow fires arrows.</p><p>For the purposes of Weapon
+      Proficiency and similar feats, a composite longbow is treated as if it
+      were a longbow.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 100
+  sources:
+    - id: PZO1110
+      pages: 143, 147
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  tags:
+    - Composite
+  weaponGroups:
+    - bows
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

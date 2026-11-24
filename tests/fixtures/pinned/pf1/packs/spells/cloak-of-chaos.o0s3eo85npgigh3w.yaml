@@ -1,0 +1,63 @@
+_id: o0s3eo85npgigh3w
+_key: '!items!o0s3eo85npgigh3w'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Cloak of Chaos
+system:
+  actions:
+    - _id: i04d0zqxk508cu4f
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      save:
+        description: see text
+      target:
+        value: one creature/level in a 20-ft.-radius burst centered on you
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A random pattern of color surrounds the subjects, protecting them from
+      attacks, granting them resistance to spells cast by lawful creatures, and
+      causing lawful creatures that strike the subjects to become confused. This
+      abjuration has four effects.</p><p>First, each warded creature gains a +4
+      deflection bonus to AC and a +4 resistance bonus on saves. Unlike
+      <i>Protection from Law</i>, the benefit of this spell applies against all
+      attacks, not just against attacks by lawful creatures.</p><p>Second, each
+      warded creature gains spell resistance 25 against lawful spells and spells
+      cast by lawful creatures.</p><p>Third, the abjuration protects from
+      possession and mental influence, just as <i>Protection from Law</i>
+      does.</p><p>Finally, if a lawful creature succeeds on a melee attack
+      against a warded creature, the offending attacker is confused for 1 round
+      (Will save negates, as with the <i>confusion spell</i>, but against the
+      save DC of <i>cloak of chaos</i>).</p>
+  descriptors:
+    - chaotic
+  learnedAt:
+    class:
+      cleric: 8
+      oracle: 8
+    domain:
+      Chaos: 8
+  level: 8
+  materials:
+    focus: a tiny reliquary worth 500 gp
+  school: abj
+  sources:
+    - id: PZO1110
+      pages: '255'
+type: spell

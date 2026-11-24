@@ -1,0 +1,44 @@
+_id: 0gIMa4XruFSFJrVI
+_key: '!items!0gIMa4XruFSFJrVI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/estoc.PNG
+name: Silver Dagger, Masterwork
+system:
+  actions:
+    - _id: z85ub49w33j6vwbt
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: silverDaggerMasterwork
+  aura:
+    custom: true
+    school: none
+  description:
+    value: >-
+      <p>As a masterwork weapon, this alchemical silver dagger has a +1
+      enhancement bonus on attack rolls (but not to damage rolls).</p>
+  hardness: 10
+  masterwork: true
+  price: 322
+  showInQuickbar: false
+  sources:
+    - id: PZO1110
+  weight:
+    value: 1
+type: weapon

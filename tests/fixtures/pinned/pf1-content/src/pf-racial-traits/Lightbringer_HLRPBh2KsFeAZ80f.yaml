@@ -1,0 +1,68 @@
+_id: HLRPBh2KsFeAZ80f
+_key: '!items!HLRPBh2KsFeAZ80f'
+_stats:
+  coreVersion: '12.331'
+folder: hGoMGOJhqQPRBkaV
+img: systems/pf1/icons/races/elf.png
+name: Lightbringer
+system:
+  actions:
+    - _id: SpOQMVVoNl5viz1M
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft (6 m) radius
+      description: >-
+        <p>Elves with Intelligence scores of 10 or higher may use
+        @UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{light} at will as a
+        spell-like ability.</p>
+      duration:
+        units: minute
+        value: 10 * (@attributes.hd.total +1)
+      name: Light
+      range:
+        units: touch
+      target:
+        value: Object touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 10)
+          per: round
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        You are treated as one level higher when determining the effects of any
+        light-based spell or effect you cast (including spell-like and
+        supernatural abilities).
+  description:
+    instructions: >-
+      <p>Update your Actor on the Attributes tab&gt; Condition Immunities and
+      check the appropriate box to add "dazzle" as a condition to which your
+      actor is immune. You can also add a custom entry for "light-based
+      blindness"</p>
+    value: >-
+      <p><strong>Race</strong>: Elf<br /><strong>Replaced Trait(s)</strong>:
+      Elven Immunities, Elven Magic</p><hr /><p>Many elves revere the sun, moon,
+      and stars, but some are literally infused with the radiant power of the
+      heavens. Elves with this racial trait are immune to light-based blindness
+      and dazzle effects, and are treated as one level higher when determining
+      the effects of any light-based spell or effect they cast (including
+      spell-like and supernatural abilities). Elves with Intelligence scores of
+      10 or higher may use
+      <em>@UUID[Compendium.pf1.spells.Item.ip9onjfp6nf1vlv9]{light} </em>at will
+      as a spell-like ability. This racial trait replaces the elven immunities
+      and elven magic racial traits.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '22'
+    - id: PZO1115
+      pages: '13'
+  subType: racial
+  tags:
+    - Elf
+  traitCategory: magical
+type: feat

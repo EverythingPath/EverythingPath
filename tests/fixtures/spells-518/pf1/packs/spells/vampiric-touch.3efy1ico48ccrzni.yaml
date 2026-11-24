@@ -1,0 +1,64 @@
+_id: 3efy1ico48ccrzni
+_key: '!items!3efy1ico48ccrzni'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Vampiric Touch
+system:
+  actions:
+    - _id: 7a2zgwkxj9i4u5pr
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous/1 hour; see text
+      name: Use
+      range:
+        units: touch
+      target:
+        value: living creature touched
+      touch: true
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You must succeed on a melee touch attack. Your touch deals 1d6 points
+      of damage per two caster levels (maximum 10d6). You gain temporary hit
+      points equal to the damage you deal. You can't gain more than the
+      subject's current hit points + the subject's Constitution score (which is
+      enough to kill the subject). The temporary hit points disappear 1 hour
+      later.</p>
+  learnedAt:
+    bloodline:
+      Daemon: 3
+      Ghoul: 3
+      Undead: 3
+    class:
+      antipaladin: 3
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      medium: 3
+      mesmerist: 3
+      psychic: 3
+      sorcerer: 3
+      spiritualist: 3
+      witch: 3
+      wizard: 3
+    subDomain:
+      Blood: 3
+      Daemon: 3
+  level: 3
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '364'
+type: spell

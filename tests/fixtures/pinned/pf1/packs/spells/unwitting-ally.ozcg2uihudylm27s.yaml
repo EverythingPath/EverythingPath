@@ -1,0 +1,55 @@
+_id: ozcg2uihudylm27s
+_key: '!items!ozcg2uihudylm27s'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Unwitting Ally
+system:
+  actions:
+    - _id: oatma8cpzlav9896
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You befuddle the target's mind. The target has difficulty telling
+      friend from foe for a short period of time. The subject is considered your
+      ally and not your enemies' ally while determining flanking. The subject
+      takes no other hostile action against your enemies due to this spell's
+      effect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 0
+      mesmerist: 0
+      psychic: 1
+      skald: 0
+  level: 0
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '253'
+  subschool:
+    - charm
+  uses:
+    autoDeductChargesCost: '0'
+type: spell
