@@ -1,0 +1,51 @@
+_id: 49p4v9az7rfzj5fw
+_key: '!items!49p4v9az7rfzj5fw'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Spellcasting Contract
+system:
+  actions:
+    - _id: 724g6b8ossv8ahng
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: spec
+        value: permanent until contractually terminated
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: willing creature touched
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.btbj09zllnb14kyx]{lesser spellcasting
+      contract}, except if the target has 9 HD or more, you can imbue him with
+      one or two 2ndlevel spells and one 3rd-level spell.</p>
+  learnedAt:
+    class:
+      cleric: 7
+      oracle: 7
+  level: 7
+  materials:
+    focus: a written contract
+  school: evo
+  sources:
+    - id: PZO9029
+      pages: '68'
+type: spell

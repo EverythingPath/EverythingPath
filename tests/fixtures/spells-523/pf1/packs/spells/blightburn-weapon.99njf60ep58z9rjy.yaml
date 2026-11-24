@@ -1,0 +1,56 @@
+_id: 99njf60ep58z9rjy
+_key: '!items!99njf60ep58z9rjy'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Blightburn Weapon
+system:
+  actions:
+    - _id: en25apk263g0b1r1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one weapon
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You transform the target weapon into pure blightburn. The weapon
+      functions as normal, but any creature that touches it, or that it strikes,
+      takes 2d6 points of fire damage each round it remains in contact. In
+      addition, the weapon emanates an aura of radiation that causes blightburn
+      sickness. This is as the disease (see page 29), but with a 10-foot radius
+      and a save DC equal to this spell's save DC.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      arcanist: 5
+      inquisitor: 4
+      investigator: 4
+      magus: 4
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: trs
+  sources:
+    - id: PZO9432
+      pages: '26'
+type: spell

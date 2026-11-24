@@ -1,0 +1,65 @@
+_id: fz4uvu2ajibbzx10
+_key: '!items!fz4uvu2ajibbzx10'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Mirage
+system:
+  actions:
+    - _id: ac4u7yiwgqvamo45
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      area: one 40-ft. cube/level (S)
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief (see below)
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create an image of a pool of water, a group of standing stones, a
+      cove, an island, or another simple land formation over a stretch of flat
+      land or water. The image is purely visual, and structures, equipment, and
+      creatures within the area are not hidden or changed in
+      appearance.</p><p>Anyone interacting with the illusion can attempt to
+      disbelieve it, and a creature trained in Survival can make a special
+      attempt to disbelieve the illusion. The creature must be within 120 feet
+      of the illusion's area and can attempt a Survival check instead of a Will
+      saving throw. If the result is equal to or greater than the spell's save
+      DC, the creature realizes the mirage is an illusion as if it disbelieved
+      the spell.</p>
+  learnedAt:
+    class:
+      bard: 3
+      druid: 3
+      hunter: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      ranger: 3
+      skald: 3
+  level: 3
+  materials:
+    value: a pinch of sand and a drop of water
+  school: ill
+  sources:
+    - id: PZO1140
+      pages: '232'
+  subschool:
+    - figment
+type: spell

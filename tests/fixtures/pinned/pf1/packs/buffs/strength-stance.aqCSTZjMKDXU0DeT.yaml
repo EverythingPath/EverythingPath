@@ -1,0 +1,36 @@
+_id: aqCSTZjMKDXU0DeT
+_key: '!items!aqCSTZjMKDXU0DeT'
+_stats:
+  coreVersion: '12.343'
+folder: GoxdX8voXN2V3OVY
+img: icons/magic/control/buff-strength-muscle-damage.webp
+name: Strength Stance
+system:
+  changes:
+    - _id: GV1FtNjh
+      formula: 1 + floor(@classes.barbarianUnchained.level / 4)
+      target: cmb
+      type: competence
+    - _id: YMt0Oix5
+      formula: 1 + floor(@classes.barbarianUnchained.level / 4)
+      target: cmd
+      type: competence
+    - _id: lhLolUDz
+      formula: '8'
+      target: strChecks
+      type: competence
+  description:
+    value: >-
+      <p>The barbarian gains a +1 competence bonus on combat maneuvers and to
+      her CMD. These bonuses increase by 1 for every 4 levels the barbarian has.
+      In addition, she gains a +8 competence bonus on Strength checks to lift,
+      push, bend, or break objects (this does not apply to combat
+      maneuvers).</p><p>See
+      @UUID[Compendium.pf1.class-abilities.Item.3c9wm12qx3pWhh79] for more
+      details.</p>
+  level: null
+  sources:
+    - id: PZO1131
+      pages: '12'
+  subType: feat
+type: buff

@@ -1,0 +1,72 @@
+_id: wUBozJUAb1DYim2w
+_key: '!items!wUBozJUAb1DYim2w'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-topbarrel.webp
+name: Pepperbox Rifle
+system:
+  actions:
+    - _id: q21cj7bewfk52qte
+      ability:
+        attack: dex
+        critMult: 4
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '80'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Pepperbox Rifle
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d8 (small), 1d10 (medium);
+      <b>Critical</b> x4; <b>Range</b> 80 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2; <b>Capacity</b> 4</p>
+
+      <h3>Description</h3>
+
+      <p>The four barrels of this rifle are set into a turnable housing that can
+      be quickly rotated by hand (a free action) between shots. A pepperbox
+      rifle uses metal cartridges as ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 7000
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Advanced Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 15
+type: weapon

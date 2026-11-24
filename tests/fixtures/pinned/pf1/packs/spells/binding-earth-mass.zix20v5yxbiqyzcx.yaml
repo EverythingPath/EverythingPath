@@ -1,0 +1,51 @@
+_id: zix20v5yxbiqyzcx
+_key: '!items!zix20v5yxbiqyzcx'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Binding Earth, Mass
+system:
+  actions:
+    - _id: r5ijoeq4qnodxacr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: >-
+          one creature or object/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.fc7glgr01tgej071]{binding earth}, except
+      as noted above.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      druid: 6
+      hunter: 6
+      witch: 6
+  level: 6
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '149'
+type: spell

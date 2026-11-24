@@ -1,0 +1,144 @@
+_id: znVNJkn5hkmGtzca
+_key: '!items!znVNJkn5hkmGtzca'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Chance Encounter (Wrath of the Righteous)
+system:
+  actions:
+    - _id: 3etKHIbtZ0qTJufB
+      activation:
+        type: free
+        unchained:
+          type: free
+      description: >-
+        <p>Once per day, if you fail an Acrobatics, Bluff, Disguise, Sleight of
+        Hand, or Stealth check, you may immediately reroll that check as a free
+        action. You must take the second result, even if it is worse.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  contextNotes:
+    - target: skill.acr
+      text: >-
+        Once per day, you may immediately reroll a failed check as a free
+        action. You must take the second result. 
+        ([[@resources.chanceEncounterWrathOfTheRighteous.value]] remaining uses)
+    - target: skill.blf
+      text: >-
+        Once per day, you may immediately reroll a failed check as a free
+        action. You must take the second result. 
+        ([[@resources.chanceEncounterWrathOfTheRighteous.value]] remaining uses)
+    - target: skill.dis
+      text: >-
+        Once per day, you may immediately reroll a failed check as a free
+        action. You must take the second result. 
+        ([[@resources.chanceEncounterWrathOfTheRighteous.value]] remaining uses)
+    - target: skill.slt
+      text: >-
+        Once per day, you may immediately reroll a failed check as a free
+        action. You must take the second result. 
+        ([[@resources.chanceEncounterWrathOfTheRighteous.value]] remaining uses)
+    - target: skill.ste
+      text: >-
+        Once per day, you may immediately reroll a failed check as a free
+        action. You must take the second result. 
+        ([[@resources.chanceEncounterWrathOfTheRighteous.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>You always tended to get in over your head as a child, but your
+      biggest youthful misadventure was the time you “accidentally” found
+      yourself behind enemy lines in the Worldwound. You probably never would
+      have made it back home to Kenabres if not for the help of a mysterious
+      woman who helped you trick your way through a group of cultists. The woman
+      never told you her name, but you remember her beauty and a deep sense of
+      sadness she seemed to carry with her. Her skill with the bow was
+      impressive as well, but the thing you remember most about her was the
+      symbol of Desna she wore—she often held onto it without seeming to realize
+      it, as if the connection to the goddess was something she clung to in a
+      sense of need, as someone might clutch at a rope while dangling over a
+      vast pit. She left your side a few moments before you were picked up by a
+      patrol of crusaders, who finished the job of escorting you back to safety,
+      and you’ve never seen her again. Ever since, you’ve just been lucky when
+      it comes to trickery.</em></p><p><strong>Benefits</strong>: Once per day,
+      if you fail an Acrobatics, Bluff, Disguise, Sleight of Hand, or Stealth
+      check, you may immediately reroll that check as a free action. You must
+      take the second result, even if it is worse.</p><p><strong>Associated
+      Mythic Path</strong></p><p>Trickster</p><p><strong>Multiple
+      Characters</strong></p><p>You and other characters were all saved by the
+      same mysterious woman in your childhood. This could have been the same
+      event, or she could have saved you on separate occasions—the discovery
+      that someone else was saved by the mysterious stranger has resulted in a
+      long friendship (or perhaps friendly rivalry) with the others she
+      rescued.</p>
+  scriptCalls:
+    - _id: u29OYf6mKbi7wsAB
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll one of several skills.
+      type: script
+      value: |-
+        const content = `
+          <div class="flexcol">
+            <h3>Rerolling a Skill:</h3>
+            <p>Please pick a skill to reroll from the buttons below.</p>
+          </div>
+        `;
+
+        async function getAnswer() {
+          return Dialog.wait({
+            title: `${item.name} – Reroll a Skill`,
+            content: content,
+            buttons: {
+              acr: {
+                label: pf1.config.skills["acr"],
+                callback: () => "acr",
+              },
+              blf: {
+                label: pf1.config.skills["blf"],
+                callback: () => "blf",
+              },
+              dis: {
+                label: pf1.config.skills["dis"],
+                callback: () => "dis",
+              },
+              slt: {
+                label: pf1.config.skills["slt"],
+                callback: () => "slt",
+              },
+              ste: {
+                label: pf1.config.skills["ste"],
+                callback: () => "ste",
+              }
+            },
+            default: 'acr',
+            close: () => null,
+          },
+          {
+             height: "auto",
+             width: 680,
+          });
+        }
+
+        const answer = await getAnswer();
+        if(answer !== null) {
+          actor.rollSkill(answer);
+        } else {
+          ui.notifications.warn(`No answer was selected. Restoring use of "${item.name}".`);
+          await item.update({"system.uses.value": 1 });
+        }
+  sources:
+    - id: PZO9000-13E
+      pages: '5'
+    - id: PZO9437
+      pages: '31'
+  subType: trait
+  tags:
+    - Wrath of the Righteous
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

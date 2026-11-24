@@ -1,0 +1,100 @@
+_id: gbyk3kokpifgj1vr
+_key: '!items!gbyk3kokpifgj1vr'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Maze of Madness and Suffering
+system:
+  actions:
+    - _id: j0cbiskha5d2m6ps
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial, see below
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell works like <i>maze</i>, except the DC of the Intelligence
+      check to escape is 22 and each round a creature remains in the <i>maze</i>
+      a different effect occurs depending on which section of the <i>maze</i> it
+      is in. Roll on the following table each time the creature attempts an
+      Intelligence check to escape the <i>maze</i> to see which part of the
+      <i>maze</i> it wanders through; if a creature doesn't attempt an
+      Intelligence check, it stays in the same section and suffers that
+      section's effects. Any conditions or damage taken persist for the listed
+      duration even if the creature exits the <i>maze</i> before then, but
+      conditions don't stack with themselves. </p><table
+      border="1"><tbody><tr><th>d% [[/r d100]]</th><th>Maze
+      Section</th></tr><tr><td>1-20</td><td>Circus</td></tr><tr><td>21-40</td><td>Haunted
+      forest</td></tr><tr><td>41-60</td><td>Hellscape</td></tr><tr><td>61-80</td><td>Oasis
+      of respite</td></tr><tr><td>81-100</td><td>Strange
+      city</td></tr></tbody></table> <i>Circus</i>: The creature finds itself in
+      a nightmarish circus of giant beasts, garishly painted faces, and hideous,
+      mocking laughter. The creature must succeed at a Will save or gain a
+      lesser madness (see page 182). The save uses the madness's normal DC.
+      <i>Haunted Forest</i>: The creature travels through a dark forest of
+      grasping trees while shadowy beasts prowl at the edge of its vision. The
+      creature must succeed at a Will save or become frightened for 2d4 rounds.
+      This is a fear effect. A frightened creature can still attempt
+      Intelligence checks to escape the <i>maze</i>, but it takes 3d6 points of
+      slashing and piercing damage from the trees' branches. <i>Hellscape</i>:
+      The creature navigates a landscape of fire and stone walls carved with
+      diabolical faces while the cries of the damned echo in the air. The
+      creature must succeed at a Will save or become paralyzed by fear and
+      potential torment for 1 round. This is a  fear effect. The creature can't
+      attempt to escape the <i>maze</i> while paralyzed, and if it fails three
+      consecutive saving throws against this paralysis, the hellscape delivers a
+      coup de grace, dealing the creature 4d6 points of fire damage. The
+      creature must succeed at a Fortitude save (DC = 10 + the damage dealt) or
+      die. A creature that survives the coup de grace escapes from the paralysis
+      as well. <i>Oasis of Respite</i>: Whether it appears as a beautiful glade,
+      a perfumed palace, or a literal desert oasis, this section of the
+      <i>maze</i> is supernaturally peaceful, especially in comparison to the
+      rest of the <i>maze</i>. The creature must succeed at a Will save or
+      become fascinated for 1 round. The creature can't attempt to escape the
+      <i>maze</i> while fascinated. A creature that fails three consecutive
+      saving throws to this fascination enters a state of lethargy and gives up
+      ever escaping the <i>maze</i>, remaining in this area until the spell ends
+      on its own in 10 minutes (as per <i>maze</i>). <i>Strange City</i>: The
+      creature journeys through a city of cyclopean architecture under a sky of
+      indescribable color and numerous stars. The creature must succeed at a
+      Will save or take 2d4 points of Wisdom damage. If your campaign uses the
+      sanity system (see page 12), the creature instead takes 2d10 points of
+      sanity damage.</p>
+  descriptors:
+    - evil
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+  level: 9
+  materials:
+    gpValue: 1000
+    value: an ornate puzzle box worth 1,000 gp and soaked in fresh blood
+  school: con
+  sources:
+    - id: PZO1135
+      pages: '122'
+  subschool:
+    - teleportation
+type: spell
