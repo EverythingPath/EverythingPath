@@ -1,0 +1,167 @@
+_id: i3JDTzYghUAVE4a2
+_key: '!items!i3JDTzYghUAVE4a2'
+_stats:
+  coreVersion: '12.331'
+folder: hGoMGOJhqQPRBkaV
+img: systems/pf1/icons/races/elf.png
+name: Envoy
+system:
+  actions:
+    - _id: 1WJEDncTsUoOzLCP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have an Intelligence score of 11 or higher you
+        gain:</p><p>@UUID[Compendium.pf1.spells.Item.jcs7ba5depdyitey]{Comprehend
+        Languages}</p><p>You can understand the spoken words of creatures or
+        read otherwise incomprehensible written messages. The ability to read
+        does not necessarily impart insight into the material, merely its
+        literal meaning. The spell enables you to understand or read an unknown
+        language, not speak or write it.</p><p>Written material can be read at
+        the rate of one page (250 words) per minute. Magical writing cannot be
+        read, though the spell reveals that it is magical. This spell can be
+        foiled by certain warding magic (such as the secret page and illusory
+        script spells). It does not decipher codes or reveal messages concealed
+        in otherwise normal text.</p><p>Comprehend languages can be made
+        permanent with a permanency spell.</p>
+      duration:
+        units: minute
+        value: 10 * @attributes.hd.total
+      name: Comprehend Languages
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: Rp47Tb7NkSZkbHM4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: Cone-Shaped Emanation
+      description: >-
+        <p>If you have an Intelligence score of 11 or higher you
+        gain:</p><p>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{Detect
+        Magic}</p><p>You detect magical auras. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p>1st Round: Presence or absence of magical
+        auras.</p><p>2nd Round: Number of different magical auras and the power
+        of the most potent aura.</p><p>3rd Round: The strength and location of
+        each aura. If the items or creatures bearing the auras are in line of
+        sight, you can make Knowledge (arcana) skill checks to determine the
+        school of magic involved in each. (Make one check per aura: DC 15 +
+        spell level, or 15 + 1/2 caster level for a nonspell effect.) If the
+        aura emanates from a magic item, you can attempt to identify its
+        properties (see Spellcraft).</p>
+      duration:
+        concentration: true
+        units: minute
+        value: '@attributes.hd.total'
+      name: Detect Magic
+      range:
+        units: ft
+        value: '60'
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: STUWjwTKLPEL2d1V
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one creature, one object, or a 5-ft. cube
+      description: >-
+        <p>If you have an Intelligence score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{Detect
+        Poison}</p><p>You determine whether a creature, object, or area has been
+        poisoned or is poisonous. You can determine the exact type of poison
+        with a DC 20 Wisdom check. A character with the Craft (alchemy) skill
+        may try a DC 20 Craft (alchemy) check if the Wisdom check fails, or may
+        try the Craft (alchemy) check prior to the Wisdom check. The spell can
+        penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of common
+        metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood or dirt
+        blocks it.</p><p></p>
+      duration:
+        units: inst
+      name: Detect Poison
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2)*5+25
+      target:
+        value: one creature, one object, or a 5-ft. cube
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+    - _id: pH1hWQNmIyaVNQur
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have an Intelligence score of 11 or higher you gain:
+        @UUID[Compendium.pf1.spells.Item.j0bc0iii8zp1jiwr]{Read Magic}</p><p>You
+        can decipher magical inscriptions on objects-books, scrolls, weapons,
+        and the like-that would otherwise be unintelligible. This deciphering
+        does not normally invoke the magic contained in the writing, although it
+        may do so in the case of a cursed or trapped scroll. Furthermore, once
+        the spell is cast and you have read the magical inscription, you are
+        thereafter able to read that particular writing without recourse to the
+        use of read magic. You can read at the rate of one page (250 words) per
+        minute. The spell allows you to identify a Glyph of Warding with a DC 13
+        Spellcraft check, a greater Glyph of Warding with a DC 16 Spellcraft
+        check, or any symbol spell with a Spellcraft check (DC 10 + spell
+        level).</p><p><br class="Apple-interchange-newline"></p><p></p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: Read Magic
+      range:
+        units: personal
+      target:
+        value: You
+      uses:
+        self:
+          maxFormula: gte(@abilities.int.total, 11)
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Elf<br /><strong>Replaced Trait(s)</strong>:
+      Elven Magic</p><hr /><p>Elves often have trouble relating to neighbors of
+      other races, especially those with much shorter lifespans. As a result,
+      some are trained in minor magics that are particularly useful when dealing
+      with non-elves. Elves with this racial trait and an Intelligence score of
+      11 or higher gain the following spell-like abilities once per day:
+      <em>@UUID[Compendium.pf1.spells.Item.jcs7ba5depdyitey]{Comprehend
+      Languages}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{Detect Magic}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{Detect
+      Poison}</em>, and
+      <em>@UUID[Compendium.pf1.spells.Item.j0bc0iii8zp1jiwr]{Read Magic}</em>.
+      The caster level for these effects is equal to the elf's level. This
+      racial trait replaces elven magic.</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '22'
+  subType: racial
+  tags:
+    - Elf
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.int.total, 11)
+    value: 0
+type: feat

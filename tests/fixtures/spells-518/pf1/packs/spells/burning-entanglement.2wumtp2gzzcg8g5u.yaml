@@ -1,0 +1,107 @@
+_id: 2wumtp2gzzcg8g5u
+_key: '!items!2wumtp2gzzcg8g5u'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/shielding-fire-3.jpg
+name: Burning Entanglement
+system:
+  actions:
+    - _id: 7rbyecwzfwanbci3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40-ft.-radius spread
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Reflex negates or partial (see text)
+        type: ref
+    - _id: s7To5uoopMVJebBb
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Entangled Damage
+      save:
+        description: Reflex half
+        type: ref
+      target:
+        value: creature that begins its turn entangled
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: hvJssDKK6AGgmq0G
+      actionType: spellsave
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Unentangled Damage
+      save:
+        description: Reflex negates
+        type: ref
+      target:
+        value: creature that begins its turn in the area but is not entangled
+      uses:
+        autoDeductChargesCost: '0'
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as per
+      @UUID[Compendium.pf1.spells.Item.2nn2tshkn4p7k25l]{entangle}, except it
+      sets the foliage on fire. A creature that begins its turn
+      <em>entangled</em> by the spell takes 4d6 points of fire damage (Reflex
+      half), and a creature that begins its turn in the area but is not
+      <em>entangled</em> takes 2d6 points of fire damage (Reflex negates). Smoke
+      rising from the vines partially obscures visibility. Creatures can see
+      things in the smoke within 5 feet clearly, but attacks against anything
+      farther away in the smoke must contend with concealment (20% miss chance).
+      When the spell's duration expires, the vines burn away entirely.</p>
+  learnedAt:
+    class:
+      druid: 3
+      hunter: 3
+      ranger: 3
+      shaman: 3
+      witch: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1136
+      pages: '140'
+  sr: false
+type: spell

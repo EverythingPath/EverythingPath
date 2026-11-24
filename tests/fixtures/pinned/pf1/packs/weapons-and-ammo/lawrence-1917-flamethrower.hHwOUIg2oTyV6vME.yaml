@@ -1,0 +1,106 @@
+_id: hHwOUIg2oTyV6vME
+_key: '!items!hHwOUIg2oTyV6vME'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/rifle-brown.webp
+name: Lawrence 1917 Flamethrower
+system:
+  actions:
+    - _id: 03yvslso5qvafx7z
+      ability:
+        attack: dex
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      area: 60-foot line
+      damage:
+        parts:
+          - formula: sizeRoll(4, 6, @size)
+            types:
+              - fire
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      measureTemplate:
+        size: '60'
+        type: ray
+      name: Attack
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: '20'
+        description: Reflex to avoid catching fire (see text)
+        type: ref
+  baseTypes:
+    - Lawrence 1917 Flamethrower
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 4d6 (medium); <b>Critical</b> -;
+      <b>Range</b> -; <b>Type</b> fire</p>
+
+      <p><b>Misfire</b> ; <b>Capacity</b> 6</p>
+
+      <h3>Description</h3>
+
+      <p>One of the most infamous devices to evolve as a result of trench
+      warfare, the flamethrower is still in its infancy in the early twentieth
+      century. The British military produced the Lawrence 1917, which found its
+      way into the hands of Russia's soldiers. The device consists of a
+      cumbersome backpack of two tanks and a swivelmounted, handheld projection
+      unit, or "lance." When the device is aimed and a small hand lever
+      depressed, a small gas burner ignites the oil, which is propelled forth in
+      a blazing stream of intense flame. A flamethrower with full tanks is
+      capable of unleashing up to 6 charges of ignited oil, to devastating
+      effect.</p>
+
+      <p>When using a flamethrower, the wielder projects a 60-foot-long line of
+      fire, attempting a separate attack roll against each creature within the
+      line. Each attack roll takes a -2 penalty, and its attack damage cannot be
+      modified by precision damage or damage-increasing feats such as
+      @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}. Effects that
+      grant concealment, such as fog or smoke, or the <em>blur</em>,
+      <em>invisibility</em>, or <em>mirror image</em> spells, do not foil this
+      line attack. If any of the rolls threatens a critical hit, the wielder
+      confirms the critical for that roll alone.</p>
+
+      <p>All affected creatures take 4d6 points of damage, and any creature hit
+      by the flaming stream must also succeed at succeed at a DC 20 Reflex save
+      or catch fire, taking an additional 2d6 points of damage each round until
+      the flames are extinguished. A burning creature can attempt a new save as
+      a full-round action, and dropping and rolling on the ground grants a +2
+      bonus on this save.</p>
+
+      <p>The device's tanks and backpacks are awkward, and the wielder takes a
+      -4 armor check penalty when wearing the cumbersome device. In addition,
+      the tanks have hardness 10 and 5 hit points, and if the tank is ruptured
+      in the presence of any adjacent flame (including the device's own gas
+      igniter), a mighty conflagration erupts, the wielder takes 6d6 points of
+      fire damage, and all creatures within a 20-foot radius take 3d6 points of
+      fire damage (Reflex DC 20 for half ). Any creatures who take damage must
+      succeed at a DC 20 Reflex save or catch on fire.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 800
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: exotic
+  tags:
+    - Modern Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 20
+type: weapon

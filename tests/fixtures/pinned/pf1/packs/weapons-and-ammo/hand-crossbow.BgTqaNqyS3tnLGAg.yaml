@@ -1,0 +1,66 @@
+_id: BgTqaNqyS3tnLGAg
+_key: '!items!BgTqaNqyS3tnLGAg'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/crossbow-hand.PNG
+name: Hand Crossbow
+system:
+  actions:
+    - _id: oqtqk2srl1oe2bc0
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '30'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Hand Crossbow
+  description:
+    unidentified: >-
+      <p>You can draw a hand crossbow back by hand. Loading a hand crossbow is a
+      move action that provokes attacks of opportunity. A hand crossbow fires
+      standard crossbow bolts, like those used by light and heavy
+      crossbows.</p><p>You can shoot, but not load, a hand crossbow with one
+      hand at no penalty. You can shoot a hand crossbow with each hand, but you
+      take a penalty on attack rolls as if attacking with two light weapons.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 100
+  sources:
+    - id: PZO1110
+      pages: 143, 145
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,48 @@
+_id: 86xra7zolqibyn7d
+_key: '!items!86xra7zolqibyn7d'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Underbrush Decoy
+system:
+  actions:
+    - _id: bo1c5mydl2cmt32w
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: one non-creature plant of size Tiny, Small, or Medium
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>You cause a plant to rustle noisily, distracting nearby creatures. You
+      can attempt a Bluff check to create a distraction to hide, using your
+      caster level + your Wisdom modifier in place of your total Bluff skill
+      bonus and applying the result to all creatures within 30 feet. You count
+      the target as distracted, as do any creatures that knew about your
+      distraction in advance. Creatures might not be distracted if they detect
+      you casting the spell or otherwise anticipate your subterfuge.</p>
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      ranger: 1
+      shaman: 1
+  school: trs
+  sources:
+    - id: PZO1134
+      pages: '228'
+type: spell

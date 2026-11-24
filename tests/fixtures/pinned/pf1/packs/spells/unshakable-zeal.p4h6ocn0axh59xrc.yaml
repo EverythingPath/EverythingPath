@@ -1,0 +1,62 @@
+_id: p4h6ocn0axh59xrc
+_key: '!items!p4h6ocn0axh59xrc'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Unshakable Zeal
+system:
+  actions:
+    - _id: yq4k2ksxebrwbmtf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    focus: true
+    somatic: true
+  description:
+    value: >-
+      <p>You fill the target with boundless enthusiasm and faith in its ultimate
+      triumph. Whenever the target fails an attack roll, a save, a skill check,
+      a concentration check, or an ability check, the target receives a +4
+      morale bonus on its next attempt at the failed check within 1 round (this
+      includes attack rolls against the same foe, saving throws against the same
+      ability from the same foe, and so on). In addition, when the target would
+      be affected by a fear or emotion effect, it can instead dismiss
+      <i>unshakable zeal</i> without spending an action to negate the effect on
+      itself.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 5
+      inquisitor: 6
+      psychic: 7
+      skald: 5
+      spiritualist: 6
+  level: 5
+  materials:
+    focus: a silver circlet
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '190'
+  subschool:
+    - compulsion
+type: spell

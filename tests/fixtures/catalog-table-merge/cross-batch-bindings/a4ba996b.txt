@@ -1,0 +1,656 @@
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { z } from 'zod';
+import {
+  buildAssessmentBinding,
+  collectReferences,
+} from '../../scripts/catalog/admission';
+import type { PreviewEntry } from '../../scripts/catalog/map';
+import { packPolicy } from '../../scripts/catalog/inventory';
+import { uuidKey } from '../../scripts/catalog/records';
+import type { AttributionAssessment } from '../../src/lib/catalog/admission-schema';
+
+/**
+ * Cross-batch content bindings (#756). An Attribution Assessment's content
+ * fingerprint hashes every whole entry in its content closure, curated
+ * Modifiers and Notes included. When a later batch curates an entry that sits
+ * in an earlier batch's closure, the earlier assessment goes stale, but the
+ * earlier batch's tests re-bind against its own fixture copy of that entry and
+ * keep passing.
+ *
+ * Two checks keep this visible:
+ * - Staleness: each batch fixture's copy of an entry another batch owns must
+ *   match that batch's own fixture entry, which that batch's tests check
+ *   against a fresh import. A differing copy fails when it changes the content
+ *   binding of one of the fixture batch's assessments.
+ * - Coverage: every assessment's closure must be committed in its batch's
+ *   fixtures, so the staleness check can see it.
+ */
+
+const fixtureFileNames = ['preview.json', 'binding-preview.json'] as const;
+
+// Parsing: every batch inventory and fixture file, as committed.
+
+const inventorySchema = z.object({
+  candidates: z.array(z.object({ externalKey: z.string() })),
+});
+const unsupportedSchema = z.looseObject({
+  field: z.string(),
+  reason: z.string(),
+  value: z.unknown().optional(),
+});
+// Loose, so every field the binding hashes is kept.
+const fixtureEntrySchema = z.looseObject({
+  externalKey: z.string(),
+  upstreamKey: z.string(),
+  pack: z.string(),
+  name: z.string(),
+  description: z.string(),
+  detail: z.looseObject({ kind: z.string() }),
+  modifiers: z.array(z.unknown()),
+  unsupported: z.array(unsupportedSchema),
+});
+const fixtureFileSchema = z.looseObject({
+  entries: z.array(fixtureEntrySchema),
+  closure: z.array(fixtureEntrySchema).optional(),
+  resources: z.array(fixtureEntrySchema).optional(),
+});
+
+export type FixtureFile = { path: string; entries: PreviewEntry[] };
+export type BatchFixture = {
+  /** The batch's fixture directory, `tests/fixtures/<batch>`. */
+  batch: string;
+  /** The keys the batch's inventory owns. */
+  ownedKeys: ReadonlySet<string>;
+  /** Its committed previews' entries, closures and resources. */
+  files: FixtureFile[];
+};
+
+/**
+ * Every batch inventory (`scripts/catalog/legal/<batch>.json` with
+ * candidates) and its committed fixture previews. `spells-516-evidence` is
+ * #516's inventory.
+ */
+export function loadCommittedBatchFixtures(root = process.cwd()) {
+  const legalDir = join(root, 'scripts/catalog/legal');
+  return readdirSync(legalDir)
+    .filter((name) => name.endsWith('.json'))
+    .sort()
+    .flatMap((name): BatchFixture[] => {
+      const ownedKeys = readInventoryKeys({ dir: legalDir, name });
+      if (!ownedKeys) return [];
+      const batch = name.replace(/(-evidence)?\.json$/, '');
+      return [{ batch, ownedKeys, files: readFixtureFiles({ root, batch }) }];
+    });
+}
+
+/** Legal files that are not batch inventories. */
+const nonInventoryFiles = new Set([
+  'held-notices.json',
+  'known-notice-holds.json',
+  'notice-dependency-waivers.json',
+  // #716 P10a's Section 15 files: confirmations, holds and matcher inputs.
+  'section15-confirmations-716.json',
+  'section15-holds-716.json',
+  'section15-inputs-716.json',
+]);
+/**
+ * The notice reviews before #286, which record no `candidates`: they
+ * inventory notices, not content. From #286 on, notice reviews carry an empty
+ * `candidates` list and parse as inventories.
+ */
+const contentlessNoticeReviews = new Set([
+  'inherited-notices-264.json',
+  'inherited-notices-265.json',
+  'inherited-notices-266.json',
+  'inherited-notices-267.json',
+  'inherited-notices-268.json',
+  'inherited-notices-269.json',
+  'inherited-notices-270.json',
+  'inherited-notices-271.json',
+  'inherited-notices-272.json',
+  'inherited-notices-273.json',
+  'inherited-notices-274.json',
+  'inherited-notices-275.json',
+  'inherited-notices-276.json',
+  'inherited-notices-277.json',
+  'inherited-notices-278.json',
+  'inherited-notices-279.json',
+  'inherited-notices-280.json',
+  'inherited-notices-281.json',
+  'inherited-notices-282.json',
+  'inherited-notices-283.json',
+  'inherited-notices-284.json',
+  'inherited-notices-285.json',
+]);
+
+/**
+ * An inventory's owned keys; undefined for legal files that aren't batch
+ * inventories. Every other legal file must parse as one.
+ */
+function readInventoryKeys({ dir, name }: { dir: string; name: string }) {
+  if (nonInventoryFiles.has(name) || contentlessNoticeReviews.has(name)) return;
+  const data: unknown = JSON.parse(readFileSync(join(dir, name), 'utf8'));
+  const { candidates } = inventorySchema.parse(data);
+  return new Set(candidates.map((row) => row.externalKey));
+}
+
+function readFixtureFiles({ root, batch }: { root: string; batch: string }) {
+  return fixtureFileNames.flatMap((name): FixtureFile[] => {
+    const path = `tests/fixtures/${batch}/${name}`;
+    if (!existsSync(join(root, path))) return [];
+    const data = fixtureFileSchema.parse(
+      JSON.parse(readFileSync(join(root, path), 'utf8')),
+    );
+    const entries = [
+      ...data.entries,
+      ...(data.closure ?? []),
+      ...(data.resources ?? []),
+    ];
+    // The schema keeps every field; the binding code reads them as imported.
+    return [{ path, entries: entries as unknown as PreviewEntry[] }];
+  });
+}
+
+// Comparison: a copy against its owner's entry.
+
+/** Description links to entries outside a bounded import are stripped. */
+const isLinkDiagnostic = (issue: { field: string }) =>
+  issue.field === 'description.link';
+const unwrapCatalogLinks = (html: string) =>
+  html.replace(/<a href="catalog:[^"<>]+">(.*?)<\/a>/g, '$1');
+
+/**
+ * An entry with its import-scope differences removed: a bounded import strips
+ * the description links to entries outside its selection and reports each.
+ * Every other field, curated or not, is compared.
+ */
+const comparable = (entry: PreviewEntry) =>
+  JSON.stringify({
+    ...entry,
+    description: unwrapCatalogLinks(entry.description),
+    unsupported: entry.unsupported.filter((issue) => !isLinkDiagnostic(issue)),
+  });
+
+/**
+ * A link written without a label (`@UUID[...]`) shows its target's name when
+ * the import resolves it and "Reference unavailable" when a bounded import
+ * strips it (scripts/catalog/sanitize.ts). Two copies whose descriptions
+ * differ only that way, and whose other fields compare equal, are the same
+ * content in different import scopes.
+ */
+const STRIPPED_LABEL = 'Reference unavailable';
+const escapeRegExp = (text: string) =>
+  text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function linkedTextMatches(linked: string, other: string) {
+  const parts = linked.split(/<a href="catalog:[^"<>]+">(.*?)<\/a>/g);
+  if (parts.length === 1) return false;
+  const pattern = parts
+    .map((part, index) =>
+      index % 2
+        ? `(?:${escapeRegExp(part)}|${STRIPPED_LABEL})`
+        : escapeRegExp(part),
+    )
+    .join('');
+  return new RegExp(`^${pattern}$`).test(unwrapCatalogLinks(other));
+}
+function sameApartFromStrippedLabels(a: PreviewEntry, b: PreviewEntry) {
+  const withoutDescription = (entry: PreviewEntry) =>
+    comparable({ ...entry, description: '' });
+  return (
+    withoutDescription(a) === withoutDescription(b) &&
+    (linkedTextMatches(a.description, b.description) ||
+      linkedTextMatches(b.description, a.description))
+  );
+}
+
+/**
+ * #719: a race lists only the Racial Traits its import included, and keeps the
+ * mechanics of the ones it lacks. A race whose list is a strict subset of the
+ * other copy's comes from a narrower extraction, so its fields can't be
+ * compared. Curation never changes the list. An alternate trait's `replaces`
+ * is compared: #721 resolves it once curated ability Modifiers map.
+ */
+function isRaceScopeDifference(a: PreviewEntry, b: PreviewEntry) {
+  const traitsOf = (entry: PreviewEntry) =>
+    'racialTraits' in entry.detail && Array.isArray(entry.detail.racialTraits)
+      ? new Set<unknown>(entry.detail.racialTraits)
+      : undefined;
+  const [left, right] = [traitsOf(a), traitsOf(b)];
+  if (!left || !right || left.size === right.size) return false;
+  const [small, large] = left.size < right.size ? [left, right] : [right, left];
+  return [...small].every((key) => large.has(key));
+}
+
+/**
+ * The copy with its owner's current entry in place. Only the copy's own
+ * import scope is kept: its catalog links, when the descriptions differ in
+ * nothing else, and its link diagnostics.
+ */
+function withOwnerEntry({
+  copy,
+  owner,
+}: {
+  copy: PreviewEntry;
+  owner: PreviewEntry;
+}): PreviewEntry {
+  const sameText =
+    unwrapCatalogLinks(copy.description) ===
+    unwrapCatalogLinks(owner.description);
+  return {
+    ...owner,
+    description: sameText ? copy.description : owner.description,
+    unsupported: [
+      ...copy.unsupported.filter(isLinkDiagnostic),
+      ...owner.unsupported.filter((issue) => !isLinkDiagnostic(issue)),
+    ],
+  };
+}
+
+type OwnerEntry = { batch: string; entry: PreviewEntry };
+
+/** Each owned key's entry in its batch's first fixture file that has it. */
+function collectOwnerEntries(fixtures: readonly BatchFixture[]) {
+  const owners = new Map<string, OwnerEntry>();
+  for (const { batch, ownedKeys, files } of fixtures)
+    for (const file of files)
+      for (const entry of file.entries)
+        if (ownedKeys.has(entry.externalKey) && !owners.has(entry.externalKey))
+          owners.set(entry.externalKey, { batch, entry });
+  return owners;
+}
+
+/** A file's copies of other batches' entries that differ from the owner's. */
+function findOutdatedCopies({
+  fixture,
+  file,
+  owners,
+}: {
+  fixture: BatchFixture;
+  file: FixtureFile;
+  owners: ReadonlyMap<string, OwnerEntry>;
+}) {
+  const outdated = new Map<string, OwnerEntry>();
+  for (const copy of file.entries) {
+    const owner = owners.get(copy.externalKey);
+    if (!owner || owner.batch === fixture.batch) continue;
+    if (isRaceScopeDifference(copy, owner.entry)) continue;
+    if (comparable(copy) === comparable(owner.entry)) continue;
+    if (sameApartFromStrippedLabels(copy, owner.entry)) continue;
+    outdated.set(copy.externalKey, {
+      batch: owner.batch,
+      entry: withOwnerEntry({ copy, owner: owner.entry }),
+    });
+  }
+  return outdated;
+}
+
+// Staleness.
+
+export type StaleCrossBatchBinding = {
+  /** The batch whose assessment is stale. */
+  batch: string;
+  fixture: string;
+  externalKey: string;
+  name: string;
+  /** The batches whose curation changed the assessment's closure. */
+  changedBy: string[];
+  /** The changed closure entries. */
+  changedKeys: string[];
+  /** The assessment's recorded content fingerprint. */
+  recordedFingerprint: string;
+  /** The binding over the fixture as committed. */
+  fixtureFingerprint: string;
+  /**
+   * The binding over the fixture with the owners' entries. A full
+   * `catalog:preview` re-bind can differ where the copy's import scope does.
+   */
+  currentFingerprint: string;
+};
+type Assessments = readonly Pick<
+  AttributionAssessment,
+  'externalKey' | 'contentFingerprint'
+>[];
+
+const contentFingerprint = ({
+  entries,
+  entry,
+}: {
+  entries: PreviewEntry[];
+  entry: PreviewEntry;
+}) =>
+  buildAssessmentBinding({
+    artifact: { catalog: { entries }, comparison: { records: [], packs: [] } },
+    entry,
+    requiredNotices: [],
+    evidenceIds: [],
+    evidence: {},
+    registry: {},
+  }).contentFingerprint;
+
+/**
+ * The assessments whose content binding changes when their fixture's copies
+ * of other batches' entries take those batches' current entries.
+ */
+export function findStaleCrossBatchBindings({
+  fixtures,
+  assessments,
+}: {
+  fixtures: readonly BatchFixture[];
+  assessments: Assessments;
+}): StaleCrossBatchBinding[] {
+  const owners = collectOwnerEntries(fixtures);
+  const recorded = new Map(
+    assessments.map((row) => [row.externalKey, row.contentFingerprint]),
+  );
+  return fixtures.flatMap((fixture) =>
+    fixture.files.flatMap((file) => {
+      const outdated = findOutdatedCopies({ fixture, file, owners });
+      if (!outdated.size) return [];
+      return file.entries.flatMap((root) => {
+        const recordedFingerprint = recorded.get(root.externalKey);
+        if (!fixture.ownedKeys.has(root.externalKey) || !recordedFingerprint)
+          return [];
+        const stale = rebindRoot({ file, root, outdated });
+        return stale
+          ? [
+              {
+                batch: fixture.batch,
+                fixture: file.path,
+                externalKey: root.externalKey,
+                name: root.name,
+                recordedFingerprint,
+                ...stale,
+              },
+            ]
+          : [];
+      });
+    }),
+  );
+}
+
+/**
+ * The root's binding with every outdated copy replaced, and the copies that
+ * change it one at a time; undefined when none is in its closure.
+ */
+function rebindRoot({
+  file,
+  root,
+  outdated,
+}: {
+  file: FixtureFile;
+  root: PreviewEntry;
+  outdated: ReadonlyMap<string, OwnerEntry>;
+}) {
+  const replacing = (keys: ReadonlySet<string>) =>
+    file.entries.map((entry) =>
+      keys.has(entry.externalKey)
+        ? (outdated.get(entry.externalKey)?.entry ?? entry)
+        : entry,
+    );
+  const fixtureFingerprint = contentFingerprint({
+    entries: file.entries,
+    entry: root,
+  });
+  const currentFingerprint = contentFingerprint({
+    entries: replacing(new Set(outdated.keys())),
+    entry: root,
+  });
+  if (fixtureFingerprint === currentFingerprint) return;
+  const changedKeys = [...outdated.keys()]
+    .filter(
+      (key) =>
+        contentFingerprint({
+          entries: replacing(new Set([key])),
+          entry: root,
+        }) !== fixtureFingerprint,
+    )
+    .sort();
+  const changedBy = [
+    ...new Set(changedKeys.map((key) => outdated.get(key)?.batch ?? key)),
+  ].sort();
+  return { changedBy, changedKeys, fixtureFingerprint, currentFingerprint };
+}
+
+// Coverage.
+
+export type UncoveredBatch = {
+  batch: string;
+  /** Assessed keys whose closure no fixture file of the batch commits. */
+  externalKeys: string[];
+};
+
+/**
+ * Stripped links into packs the importer maps whose target the pinned
+ * sources lack, so a full-corpus import strips them too. Each must still
+ * occur in a fixture.
+ */
+export const danglingCatalogLinks: readonly {
+  uuid: string;
+  reason: string;
+}[] = [
+  {
+    uuid: 'Compendium.pf-content.pf-items.Item.Zf3UVfrbf2UPJ9ZC',
+    reason:
+      'No pf-items record has this id at pf1-content 11.4.0; Alchemical Breath (Kobold) (#368) links it.',
+  },
+  {
+    uuid: 'Compendium.pf1.weapons-and-ammo.Item.mKHMd3cbVPWTwX17',
+    reason:
+      'No weapons-and-ammo record has this id (a klar) at pf1 v11.11; Shoanti Tattoo (Human; Shoanti) (#382) links it.',
+  },
+  {
+    uuid: 'Compendium.pf-content.pf-feats.RmhtvELGu73iR8yh',
+    reason:
+      'No pf-feats record has this id at pf1-content 11.4.0 (the Multiattack feat is pf1/RmhtvELGu73iR8yh in the pf1 feats pack); the companion feature Multiattack (#507) links it.',
+  },
+  {
+    uuid: 'Compendium.pf-content.pf-feats.Item.n1wLrcwaqOSDqrOo',
+    reason:
+      'No pf-feats record has this id at pf1-content 11.4.0 (Improved Natural Armor is pf1/n1wLrcwaqOSDqrOo in the pf1 feats pack); Animal Companion Feats (#507) links it.',
+  },
+  {
+    uuid: 'Compendium.pf1.monster-abilities.Item.P3r81I2PlyyDXkzL',
+    reason:
+      'The pf1 Freeze monster ability is no catalog entry: the importer admits only the generic natural attacks from monster-abilities (scripts/catalog/map.ts); Creepy Doll (#397) links it.',
+  },
+  {
+    uuid: 'Compendium.pf1.monster-abilities.Item.WMwjQfyTC5BCoZlf',
+    reason:
+      'The pf1 Distraction monster ability is no catalog entry: the importer admits only the generic natural attacks from monster-abilities (scripts/catalog/map.ts; #506 records it excluded); Swarm Attack (#506) links it.',
+  },
+  {
+    uuid: 'Compendium.pf-content.pf-racial-traits.Item.UsBkDqNJ8C119TCb',
+    reason:
+      'Elemental Assault, an ARG race builder trait the import contract excludes by its Race Builder folder (#396 records it excluded); Elemental Assault (Cold, Race Builder) and (Electricity, Race Builder) (#548) link it.',
+  },
+  {
+    uuid: 'Compendium.pf-content.pf-racial-traits.Item.ORyyVJgnmWufSpWO',
+    reason:
+      'Frenzy, an ARG race builder trait the import contract excludes by its Race Builder folder (#394 records it excluded); Frenzy (Race Builder) (#548) links it.',
+  },
+  {
+    uuid: 'Compendium.pf-content.pf-racial-traits.Item.jY1SkZ5fM0vMJbgt',
+    reason:
+      'Stonesinger, an ARG race builder trait the import contract excludes by its Race Builder folder (#400 records it excluded); Deep Delver (#400) links it.',
+  },
+];
+const dangling = new Set(danglingCatalogLinks.map((link) => link.uuid));
+
+/**
+ * The catalog entry a stripped description link names, when the importer maps
+ * its pack: links into excluded or unassigned packs (roll tables, goods and
+ * services, monster templates) never resolve to catalog entries.
+ */
+function strippedDependency(issue: { field: string; value?: unknown }) {
+  if (!isLinkDiagnostic(issue) || typeof issue.value !== 'string') return;
+  const match = /^Compendium\.(pf1|pf-content|pf1-content)\.([^.]+)\./.exec(
+    issue.value,
+  );
+  const key = uuidKey(issue.value);
+  if (!match?.[2] || !key || dangling.has(issue.value)) return;
+  const repo = match[1] === 'pf1' ? 'pf1' : 'pf1-content';
+  return packPolicy({ repo, pack: match[2] }).kind === 'map' ? key : undefined;
+}
+
+/**
+ * Batches with an assessment whose content closure isn't committed, so the
+ * staleness check can't see it: an assessed key with no fixture entry, or one
+ * no fixture file holds the closure of. A file holds a closure when every key
+ * the closure reaches is in it, and no entry in the closure had a link to a
+ * catalog entry stripped: a bounded import strips links to entries outside
+ * its selection, so each such link is a dependency the file lacks.
+ */
+export function findUncoveredBatches({
+  fixtures,
+  assessments,
+}: {
+  fixtures: readonly BatchFixture[];
+  assessments: Assessments;
+}): UncoveredBatch[] {
+  const assessed = new Set(assessments.map((row) => row.externalKey));
+  return fixtures.flatMap((fixture) => {
+    const externalKeys = [...fixture.ownedKeys]
+      .filter((key) => assessed.has(key))
+      .filter(
+        (key) =>
+          !fixture.files.some((file) => holdsClosure({ file, root: key })),
+      )
+      .sort();
+    return externalKeys.length ? [{ batch: fixture.batch, externalKeys }] : [];
+  });
+}
+
+function holdsClosure({ file, root }: { file: FixtureFile; root: string }) {
+  const byKey = new Map(
+    file.entries.map((entry) => [entry.externalKey, entry]),
+  );
+  const seen = new Set<string>();
+  const pending = [root];
+  for (let key = pending.pop(); key !== undefined; key = pending.pop()) {
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const entry = byKey.get(key);
+    if (!entry) return false;
+    if (entry.unsupported.some((issue) => strippedDependency(issue)))
+      return false;
+    pending.push(...collectReferences(entry));
+  }
+  return true;
+}
+
+/** Listed dangling links no fixture has any more. */
+function findUnusedDanglingLinks(fixtures: readonly BatchFixture[]) {
+  const used = new Set(
+    fixtures.flatMap((fixture) =>
+      fixture.files.flatMap((file) =>
+        file.entries.flatMap((entry) =>
+          entry.unsupported.flatMap((issue) =>
+            isLinkDiagnostic(issue) && typeof issue.value === 'string'
+              ? [issue.value]
+              : [],
+          ),
+        ),
+      ),
+    ),
+  );
+  return danglingCatalogLinks
+    .filter((link) => !used.has(link.uuid))
+    .map(
+      (link) =>
+        `${link.uuid}: no fixture strips this link any more. Remove it from the dangling links.`,
+    );
+}
+
+// The gate.
+
+export type AcceptedStaleBinding = Omit<
+  StaleCrossBatchBinding,
+  'fixture' | 'fixtureFingerprint'
+>;
+
+/**
+ * Every stale cross-batch binding and uncovered batch the accepted lists
+ * don't name exactly, and every accepted row that no longer applies.
+ */
+export function checkCrossBatchBindings({
+  fixtures,
+  assessments,
+  acceptedStale,
+  uncoveredBatches,
+}: {
+  fixtures: readonly BatchFixture[];
+  assessments: Assessments;
+  acceptedStale: readonly AcceptedStaleBinding[];
+  uncoveredBatches: readonly string[];
+}): string[] {
+  const stale = findStaleCrossBatchBindings({ fixtures, assessments });
+  const uncovered = findUncoveredBatches({ fixtures, assessments });
+  return [
+    ...findStaleProblems({ stale, acceptedStale }),
+    ...findCoverageProblems({ uncovered, uncoveredBatches }),
+    ...findUnusedDanglingLinks(fixtures),
+  ];
+}
+
+const acceptedIdentity = (row: AcceptedStaleBinding) =>
+  JSON.stringify([
+    row.batch,
+    row.name,
+    row.externalKey,
+    row.changedBy,
+    row.changedKeys,
+    row.recordedFingerprint,
+    row.currentFingerprint,
+  ]);
+
+function findStaleProblems({
+  stale,
+  acceptedStale,
+}: {
+  stale: readonly StaleCrossBatchBinding[];
+  acceptedStale: readonly AcceptedStaleBinding[];
+}) {
+  const accepted = new Set(acceptedStale.map(acceptedIdentity));
+  const found = new Set(stale.map(acceptedIdentity));
+  return [
+    ...stale
+      .filter((row) => !accepted.has(acceptedIdentity(row)))
+      .map(describeStaleBinding),
+    ...acceptedStale
+      .filter((row) => !found.has(acceptedIdentity(row)))
+      .map(
+        (row) =>
+          `${row.batch}: ${row.name} (${row.externalKey}) no longer has the accepted stale binding ${row.recordedFingerprint} -> ${row.currentFingerprint}. Remove its row once re-bound.`,
+      ),
+  ];
+}
+
+function findCoverageProblems({
+  uncovered,
+  uncoveredBatches,
+}: {
+  uncovered: readonly UncoveredBatch[];
+  uncoveredBatches: readonly string[];
+}) {
+  const allowed = new Set(uncoveredBatches);
+  const found = new Set(uncovered.map((row) => row.batch));
+  return [
+    ...uncovered
+      .filter((row) => !allowed.has(row.batch))
+      .map(
+        (row) =>
+          `${row.batch}: ${row.externalKeys.length} assessments' content closures aren't committed (${row.externalKeys.slice(0, 3).join(', ')}${row.externalKeys.length > 3 ? ', …' : ''}). Commit their full-corpus closures in the batch fixture.`,
+      ),
+    ...uncoveredBatches
+      .filter((batch) => !found.has(batch))
+      .map(
+        (batch) =>
+          `${batch}: its closures are now committed. Remove it from the uncovered batches.`,
+      ),
+  ];
+}
+
+/** One line naming the stale assessment and the batches that changed it. */
+export const describeStaleBinding = (row: StaleCrossBatchBinding) =>
+  `${row.batch}: ${row.name} (${row.externalKey}) is bound to ${row.recordedFingerprint}, but ${row.changedBy.join(', ')} has since curated ${row.changedKeys.join(', ')} in its closure (${row.fixture}). Update the fixture copy and re-bind the assessment.`;

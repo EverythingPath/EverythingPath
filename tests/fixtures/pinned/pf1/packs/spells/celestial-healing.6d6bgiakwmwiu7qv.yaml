@@ -1,0 +1,65 @@
+_id: 6d6bgiakwmwiu7qv
+_key: '!items!6d6bgiakwmwiu7qv'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-beam-green.webp
+name: Celestial Healing
+system:
+  actions:
+    - _id: uxsdffkgnbn6cfd0
+      actionType: heal
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: floor(@cl / 2)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You anoint a wounded creature with the blood of an outsider with the
+      good subtype (such as an angel) or holy water, giving it fast healing 1.
+      The target radiates the aura of a good creature for the duration of the
+      spell and can sense the righteousness of the magic, though this has no
+      long-term effect on the target's alignment. If the target has its own evil
+      aura, this is not suppressed by celestial healing, and can also be
+      detected normally.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      cleric: 1
+      magus: 1
+      oracle: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: 1 drop of blood from a good outsider or 1 dose of holy water
+  school: con
+  sources:
+    - id: PZO9465
+      pages: '13'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,54 @@
+_id: kYrFvGcCjii7eVHt
+_key: '!items!kYrFvGcCjii7eVHt'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: systems/pf1/icons/skills/shadow_09.jpg
+name: Armor of Darkness
+system:
+  actions:
+    - _id: eck7dlja80noldnf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell envelops the target in shadows that can, if you desire,
+      conceal the creature's features. It grants the recipient a +3 deflection
+      bonus to Armor Class (+1 for every 4 caster levels, to a maximum bonus of
+      +8). The subject can see through the armor and gains darkvision to 60
+      feet. The subject gains a +2 bonus on saving throws against any holy,
+      good, or light spells or effects. Undead creatures under the effect gain
+      +4 turn resistance.</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    domain:
+      Darkness: 4
+  level: 4
+  school: abj
+  sources:
+    - id: PZO1111
+      pages: '206'
+  tags:
+    - '3.5'
+type: spell

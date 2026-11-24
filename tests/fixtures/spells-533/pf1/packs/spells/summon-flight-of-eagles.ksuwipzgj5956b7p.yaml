@@ -1,0 +1,56 @@
+_id: ksuwipzgj5956b7p
+_key: '!items!ksuwipzgj5956b7p'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Flight of Eagles
+system:
+  actions:
+    - _id: fgkx6pmygmulum73
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      effect: 1d4+1 summoned creatures
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You summon 1d4+1 giant eagles to serve as you designate. The summoned
+      birds can fight if you wish, but can also serve as mounts.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bloodrager: 4
+      druid: 6
+      hunter: 4
+      ranger: 4
+      shaman: 6
+      sorcerer: 6
+      summoner: 6
+      summonerUnchained: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    focus: a gold feather worth 100 gp
+  school: con
+  sources:
+    - id: PZO1138
+      pages: '77'
+    - id: PZO9409
+      pages: '27'
+  sr: false
+  subschool:
+    - summoning
+type: spell

@@ -1,0 +1,65 @@
+_id: otf7OZQZhkAWoUR4
+_key: '!items!otf7OZQZhkAWoUR4'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/thrown/bolas-steel.webp
+name: Meteor Hammer
+system:
+  actions:
+    - _id: p84ox3gyzzrfqch1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Meteor Hammer
+  description:
+    unidentified: >-
+      <p>This weapon consists of one or two spherical weights attached by a
+      10-foot chain. You whirl the weights and wrap them around an opponent's
+      body. If you succeed at a trip attempt with a meteor hammer, you can drag
+      your opponent 5 feet closer to you rather than knocking her prone. You may
+      use this weapon in two different ways: In meteor mode you use it as a
+      double weapon, while in fortress mode you cannot use it as a double weapon
+      but gain reach and a +1 shield bonus to AC. Switching between these two
+      modes is a free action decided at the start of your turn.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  properties:
+    rch: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '21'
+  subType: exotic
+  weaponGroups:
+    - flails
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon
