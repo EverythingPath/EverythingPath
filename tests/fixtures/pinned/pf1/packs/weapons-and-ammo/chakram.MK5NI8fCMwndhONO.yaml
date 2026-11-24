@@ -1,0 +1,90 @@
+_id: MK5NI8fCMwndhONO
+_key: '!items!MK5NI8fCMwndhONO'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/chakram.png
+name: Chakram
+system:
+  actions:
+    - _id: kvnono81fo9i55p8
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '30'
+    - _id: eYYMLfpxhSpu1Pj8
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-1'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      name: Melee
+      range:
+        units: melee
+        value: '30'
+      save:
+        dc: '15'
+        description: Reflex see text
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  baseTypes:
+    - Chakram
+  description:
+    unidentified: >-
+      <p>The chakram is a simple, elegant, and highly portable thrown weapon. It
+      is a flat, open-centered metal discus with a sharpened edge. You can wield
+      the chakram as a melee weapon, but it is not designed for such use; you
+      take a -1 penalty on your attack roll with the weapon and must succeed at
+      a DC 15 Reflex save or cut yourself on the blade (half damage, no Strength
+      modifier). You do not need to make this save if wearing heavy armor.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 1
+  sources:
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - bladesHeavy
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 1
+type: weapon

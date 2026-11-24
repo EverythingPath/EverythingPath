@@ -1,0 +1,60 @@
+_id: nd5ys802f7j3imgc
+_key: '!items!nd5ys802f7j3imgc'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Hermean Potential
+system:
+  actions:
+    - _id: 1s6rjjk4xpmqmb8s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You gift the target with the ability to perfect its actions via mental
+      clarity. On the next attack roll, saving throw, ability check, or
+      sk<i>ill</i> check the target attempts, it rolls twice and takes the more
+      favorable result. For every 5 caster levels you have, the target can roll
+      twice on an additional attack roll, saving throw, ability check, or
+      sk<i>ill</i> check (to a maximum of 5 rolls at 20th level). <i>Hermean
+      potential</i> is countered and dispelled by <i>ill</i> omenAPG, but does
+      not itself counter or dispel <i>ill</i> omen.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      medium: 1
+      mesmerist: 1
+      psychic: 1
+      witch: 1
+  materials:
+    focus: a gold dragon scale
+  school: enc
+  sources:
+    - id: PZO9470
+      pages: '31'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

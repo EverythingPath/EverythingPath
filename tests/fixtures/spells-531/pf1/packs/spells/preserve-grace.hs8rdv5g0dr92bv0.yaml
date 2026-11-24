@@ -1,0 +1,58 @@
+_id: hs8rdv5g0dr92bv0
+_key: '!items!hs8rdv5g0dr92bv0'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Preserve Grace
+system:
+  actions:
+    - _id: vga7az7pobonhghy
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: day
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one good-aligned creature
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The Lantern Bearers must often make difficult decisions during their
+      missions, such as determining what to do with captured enemies-should they
+      be executed, imprisoned, set free, or given a chance to mend their ways?
+      With this spell, you grant a creature the ability to foresee moral
+      consequences, as if the creature were wearing a <i>phylactery of
+      faithfulness</i>. The spell's guidance focuses on the protection of beauty
+      and encourages peaceful resolution and mercy.</p>
+  descriptors:
+    - good
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 1
+      oracle: 2
+      paladin: 1
+      warpriest: 2
+  level: 2
+  materials:
+    focus: a silver hand mirror worth 50 gp
+  school: div
+  sources:
+    - id: PZO1138
+      pages: '115'
+  sr: false
+type: spell

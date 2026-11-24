@@ -1,0 +1,68 @@
+_id: v1tzi42zvey13xew
+_key: '!items!v1tzi42zvey13xew'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Quieting Weapons
+system:
+  actions:
+    - _id: utgtrqorl5lvbpe4
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        type: will
+      target:
+        value: up to one natural or manufactured weapon per 3 caster levels
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>The target weapons and any ammunition they fire make no sound as part
+      of their normal functions as a weapon. For instance, a firearm's firing
+      would not make an explosive sound, but if you  cast this spell on a
+      creature's bite attack, it would not prevent it from vocalizing from its
+      mouth. The first time a creature is struck by a weapon affected by this
+      spell, it must succeed at a Will save (SR applies to this effect) or it
+      becomes unable to make noise louder than a whisper (Perception DC 10 to
+      hear) whether vocally or by other means for the duration of the effect.
+      Because the creature can still whisper, this doesn't interfere with verbal
+      spell components. Whether it succeeds or fails its saving throw, the
+      creature is immune to further effects from this casting of <i>quieting
+      weapons</i>.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      cleric: 4
+      hunter: 3
+      inquisitor: 4
+      magus: 4
+      occultist: 4
+      oracle: 4
+      psychic: 4
+      ranger: 3
+      skald: 4
+      sorcerer: 4
+      spiritualist: 4
+      warpriest: 4
+      wizard: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '223'
+  subschool:
+    - glamer
+type: spell
