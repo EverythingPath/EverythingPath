@@ -1,0 +1,58 @@
+_id: 45n492e4bxowkdqu
+_key: '!items!45n492e4bxowkdqu'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Vacuous Vessel
+system:
+  actions:
+    - _id: yonkcijuxrggwe39
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: container touched
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell makes a single bag, chest, sack, or other container look and
+      feel empty. The container must be no larger than 1 cubic foot per caster
+      level or the spell fails. Anyone peering into or reaching into the
+      container must succeed at a Will save or perceive the container as being
+      completely empty. All items within the container when the spell was cast
+      are still present, but they can't be noticed unless removed from the
+      bag-such as by someone who can perceive them, or who upends the
+      container.  Casting <i>vacuous vessel</i> on another container or placing
+      a new item in the existing container immediately dismisses the currently
+      active spell.</p>
+  learnedAt:
+    class:
+      arcanist: 0
+      bard: 0
+      skald: 0
+      sorcerer: 0
+      wizard: 0
+  level: 0
+  school: ill
+  sources:
+    - id: PZO9462
+      pages: '27'
+  subschool:
+    - glamer
+  uses:
+    autoDeductChargesCost: '0'
+type: spell

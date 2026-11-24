@@ -1,0 +1,58 @@
+_id: hfca2lb4tlmrzoxm
+_key: '!items!hfca2lb4tlmrzoxm'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Firebrand
+system:
+  actions:
+    - _id: maxa2pcfg2ci4001
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates, but see below
+        harmless: true
+        type: will
+      target:
+        value: one creature/4 levels, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You mark several allies with a flaming rune. This rune does not cause
+      damage, and sheds light as if it were a torch. While the <i>firebrand</i>
+      burns, any creature it marks is immune to damage from any fire spell you
+      cast. All of the target's weapons (both natural and manufactured) inflict
+      +1d6 points of fire damage on a hit (this bonus fire damage stacks with
+      any amount of fire damage a creature's weapons might already inflict). At
+      any point during the spell's duration, a creature bearing a
+      <i>firebrand</i> can launch a beam of fire at any target within 30 feet as
+      a swift action. This ray requires a ranged touch attack to hit and deals
+      6d6 points of fire damage. Once a creature uses its <i>firebrand</i> to
+      fire a ray in this manner, the effects of the spell end for that
+      creature.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '222'
+type: spell

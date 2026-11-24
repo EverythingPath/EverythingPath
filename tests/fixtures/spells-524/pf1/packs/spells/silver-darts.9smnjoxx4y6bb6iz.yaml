@@ -1,0 +1,57 @@
+_id: 9smnjoxx4y6bb6iz
+_key: '!items!9smnjoxx4y6bb6iz'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Silver Darts
+system:
+  actions:
+    - _id: jrnpv1uxnupl3m21
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      save:
+        description: Reflex half
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A cone of silver darts springs from your hand. These darts act as a
+      silver weapon that deals 1d6 points of piercing damage per caster level
+      (maximum 10d6). Any creature with an armor bonus greater than +4 or a
+      natural armor bonus greater than +4 takes 50% less damage.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a silver needle
+  school: con
+  sources:
+    - id: PZO1129
+      pages: '192'
+  subschool:
+    - creation
+type: spell

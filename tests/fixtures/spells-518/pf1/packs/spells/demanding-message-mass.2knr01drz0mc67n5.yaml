@@ -1,0 +1,63 @@
+_id: 2knr01drz0mc67n5
+_key: '!items!2knr01drz0mc67n5'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Demanding Message, Mass
+system:
+  actions:
+    - _id: 8ngogaknwict5aw5
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 10 minutes/level, then 1 hour/level or until completed (D); see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature/level
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.pbmyom76oatconaq]{demanding message},
+      except that you can issue one <em>suggestion</em> to each of the spell's
+      targets instead of just one. Each time you do so, it takes a standard
+      action. You can issue a different <em>suggestion</em> to each target.</p>
+  descriptors:
+    - languageDependent
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 6
+      mesmerist: 6
+      occultist: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    focus: a piece of copper wire
+  school: enc
+  sources:
+    - id: PZO1134
+      pages: '210'
+  subschool:
+    - compulsion
+type: spell

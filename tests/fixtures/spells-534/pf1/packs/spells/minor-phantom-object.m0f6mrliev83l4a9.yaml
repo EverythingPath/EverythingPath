@@ -1,0 +1,57 @@
+_id: m0f6mrliev83l4a9
+_key: '!items!m0f6mrliev83l4a9'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Minor Phantom Object
+system:
+  actions:
+    - _id: mehqqthrvw8lll03
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      effect: >-
+        illusory, unattended, nonmagical object of nonliving plant matter, up to
+        1 cu. ft./level
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as the
+      @UUID[Compendium.pf1.spells.jsvjsax2eabrlx8g]{minor creation}, except the
+      object created is a semi-real illusion. Any creature that interacts with
+      the object may make a Will save, with success causing the object to cease
+      to exist. A gnome casting this spell may make a Spellcraft check in place
+      of any Craft check required to make a complex item.</p>
+  descriptors:
+    - shadow
+  learnedAt:
+    class:
+      arcanist: 4
+      mesmerist: 4
+      psychic: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1121
+      pages: '39'
+  subschool:
+    - shadow
+type: spell
