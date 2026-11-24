@@ -1,0 +1,52 @@
+_id: ORyyVJgnmWufSpWO
+_key: '!items!ORyyVJgnmWufSpWO'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Frenzy
+system:
+  actions:
+    - _id: vogHSD0x0BXvS4cg
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, when you take damage, you can fly into a frenzy for 1
+        minute, gaining a +2 racial bonus to Constitution and Strength, but a -2
+        penalty to AC.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Frenzy
+      notes:
+        effect:
+          - '@Apply[Frenzy]'
+      range:
+        units: personal
+  description:
+    value: >-
+      <p>Once per day, whenever a member of this race takes damage, it flies
+      into a frenzy for 1 minute, gaining a +2 racial bonus to Constitution and
+      Strength, but a -2 penalty to AC.</p><p><strong>Related Buff:</strong>
+      @Toggle[Frenzy (Race Builder)]</p>
+  links:
+    supplements:
+      - name: Frenzy (Race Builder)
+        uuid: Compendium.pf-content.pf-buffs.Item.3o48BZtE21Il0Z2p
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '235'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

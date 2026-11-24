@@ -1,0 +1,59 @@
+_id: gPg9NlZvgLqEG6KM
+_key: '!items!gPg9NlZvgLqEG6KM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/battleaxe.PNG
+name: Undercutting Axe
+system:
+  actions:
+    - _id: ce9v92raepw9j4ol
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: undercuttingAxe
+  aura:
+    school: nec
+  baseTypes:
+    - Battleaxe
+  cl: 9
+  description:
+    value: >-
+      <p>This +1 giant-bane battleaxe feels unusually heavy, as if it were made
+      from something far heavier than mere wood and steel. Once per day its
+      wearer can, as a swift action after a successful attack roll, invoke a
+      maximized ray of enfeeblement on the creature struck (11 point Strength
+      penalty, 7 rounds, Fortitude DC 16 half).</p><p><strong>Base
+      Item</strong>: giant-bane
+      battleaxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Maximize Spell, ray of enfeeblement, summon monster
+      I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 23310
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - axes
+  weight:
+    value: 6
+type: weapon

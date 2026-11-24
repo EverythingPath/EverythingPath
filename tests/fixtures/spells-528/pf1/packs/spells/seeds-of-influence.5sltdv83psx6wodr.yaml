@@ -1,0 +1,70 @@
+_id: 5sltdv83psx6wodr
+_key: '!items!5sltdv83psx6wodr'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Seeds of Influence
+system:
+  actions:
+    - _id: xlmkj9oerl8it57q
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>You leave a magical trace in the mind of a creature with an attitude of
+      at least indifferent toward you. The target takes a cumulative -2 penalty
+      on its Will save to negate the spell for each step by which its attitude
+      is better than indifferent.  The target takes a -2 penalty on saving
+      throws against divination spells you cast. You can target that creature
+      with mind-affecting spells of a spell level lower than <i>Seeds of
+      Influence</i> as if those spells were modified by Enlarge Spell (the
+      modified spell doesn't take longer to cast and doesn't use a higher-level
+      spell slot). Whenever the target succeeds at a saving throw against a
+      divination or mind-affecting spell you cast, <i>Seeds of Influence</i>
+      ends for that target. A creature can  be subject to only one <i>Seeds of
+      Influence</i> spell at a time; later castings of <i>Seeds of Influence</i>
+      remove any previous casting.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      medium: 3
+      mesmerist: 3
+      psychic: 4
+      skald: 3
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a rose
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '62'
+  subschool:
+    - compulsion
+type: spell

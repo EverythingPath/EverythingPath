@@ -1,0 +1,29 @@
+_id: WMJq96Aa7kZgeVXI
+_key: '!items!WMJq96Aa7kZgeVXI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/athletic.jpg
+name: STR/DEX Bonus
+system:
+  associations:
+    classes:
+      - Eidolon
+  changes:
+    - _id: 2167egmx
+      formula: floor((@class.level + 1) / 2.54)
+      target: str
+      type: untyped
+    - _id: 9eu6k92k
+      formula: floor((@class.level + 1) / 2.54)
+      target: dex
+      type: untyped
+  description:
+    value: >-
+      <p>Add this modifier to the eidolon's Strength and Dexterity scores, as
+      determined by its base form.</p><p>Some options available through the
+      eidolon's evolution pool might modify these scores.</p><p><strong>Str/Dex
+      Bonus</strong>: [[ floor((@class.level + 3) * 2 / 5) - 1 ]]</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+type: feat

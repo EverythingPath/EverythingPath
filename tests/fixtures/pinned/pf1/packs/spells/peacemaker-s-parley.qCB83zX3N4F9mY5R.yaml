@@ -1,0 +1,55 @@
+_id: qCB83zX3N4F9mY5R
+_key: '!items!qCB83zX3N4F9mY5R'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Peacemaker’s Parley
+system:
+  actions:
+    - _id: ViNC6KbpJ4yAIFmt
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      area: creatures in a 20-ft.-radius spread
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><em>Editor's Note:</em> In order to prepare this spell, the caster must
+      spend an hour performing a ritual in which he beseeches <b>Grundinnar</b>.
+      Further details can be found in <em>Pathfinder Companion: Dwarves of
+      Golarion.</em></p><p>You can attempt to influence unfriendly or hostile
+      creatures, altering their attitudes toward you. After casting, make a
+      Diplomacy check against the creatures as a free action; you gain a +2
+      sacred bonus on this check against creatures that failed their saves
+      against the spell. Even if you favorably manipulate the attitude of the
+      affected targets, they quickly revert to their previous attitude if
+      threatened or treated poorly.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO9408
+      pages: '23'
+  subschool:
+    - charm
+type: spell

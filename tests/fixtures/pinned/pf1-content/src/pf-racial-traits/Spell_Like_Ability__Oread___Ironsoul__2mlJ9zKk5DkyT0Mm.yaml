@@ -1,0 +1,66 @@
+_id: 2mlJ9zKk5DkyT0Mm
+_key: '!items!2mlJ9zKk5DkyT0Mm'
+_stats:
+  coreVersion: '12.331'
+folder: vBJVzeHSaziYyQlM
+img: systems/pf1/icons/races/oread.png
+name: Spell-Like Ability (Oread - Ironsoul)
+system:
+  abilityType: sp
+  actions:
+    - _id: OpkpKUzXTOMqE1nA
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.09juighnblqlqwro]{unerring
+        weapon}</p><p>This spell causes a weapon to veer closer to vital areas,
+        improving the result of a critical threat. This transmutation grants a
+        +2 bonus on attack rolls to confirm critical hits plus 1 additional
+        bonus point per four caster levels (maximum total bonus +7). If the
+        spell is cast on projectiles, the effect ends on a specific projectile
+        whenever that projectile is used to make an attack, regardless of
+        whether the attack hits. For this spell, shuriken are considered
+        projectiles.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: unerring weapon
+      notes:
+        effect:
+          - '@Apply[Unerring Weapon]'
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: one weapon or 20 projectiles (all together at time of casting)
+  description:
+    value: >-
+      <p><strong>Race</strong>: Oread - Ironsoul</p><hr /><p>Ironsouls can use
+      @UUID[Compendium.pf1.spells.Item.09juighnblqlqwro]{unerring weapon} 1/day
+      as spell-like ability (with a caster level equal to the Gemsoul's
+      character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9492
+      pages: '20'
+  subType: racial
+  tags:
+    - Oread
+    - Ironsoul
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
