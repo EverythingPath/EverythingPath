@@ -1,0 +1,56 @@
+_id: pxxf3q4p6kbqqw2q
+_key: '!items!pxxf3q4p6kbqqw2q'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Aerial Tracks
+system:
+  actions:
+    - _id: c9aqv72zokffbv1j
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: circle centered on you, with a radius of 100 feet + 10 feet per level
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: 100 + (10 * @cl)
+        type: circle
+      name: Use
+      range:
+        units: medium
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the air in the area to ripple where creatures have flown
+      through it up to 1 day ago per caster level. These aerial ripples are
+      tinged by glowing wisps, providing enough illumination to follow the
+      tracks without penalties due to poor lighting. The area moves with you,
+      allowing you to follow the tracks through the air over long distances
+      provided you can fly or follow the route along the ground within range to
+      read the aerial tracks. Other creatures can also follow the trail as long
+      as they move with you. The base DC of Survival checks to track creatures
+      through the air with this spell is the same as tracking creatures across
+      soft ground.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 3
+      inquisitor: 4
+      ranger: 3
+      shaman: 4
+  level: 4
+  school: div
+  sources:
+    - id: PZO1134
+      pages: '203'
+  sr: false
+type: spell

@@ -1,0 +1,57 @@
+_id: ol9newf4vrcx0kpf
+_key: '!items!ol9newf4vrcx0kpf'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Power Word Stun
+system:
+  actions:
+    - _id: rkurfe1mvfkv61es
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature with 150 hp or less
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You utter a single word of power that instantly causes one creature of
+      your choice to become stunned, whether the creature can hear the word or
+      not. The duration of the spell depends on the target's current hit point
+      total. Any creature that currently has 151 or more hit points is
+      unaffected by <i>power word stun</i>.</p><table><tbody><tr><th>Hit
+      Points</th><th>Duration</th></tr><tr><td>50 or less</td><td>4d4
+      rounds</td></tr><tr><td>51-100</td><td>2d4
+      rounds</td></tr><tr><td>101-150</td><td>1d4
+      rounds</td></tr></tbody></table>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Arcane: 8
+      Infernal: 8
+    class:
+      arcanist: 8
+      psychic: 8
+      sorcerer: 8
+      witch: 8
+      wizard: 8
+    domain:
+      War: 8
+  level: 8
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subschool:
+    - compulsion
+type: spell

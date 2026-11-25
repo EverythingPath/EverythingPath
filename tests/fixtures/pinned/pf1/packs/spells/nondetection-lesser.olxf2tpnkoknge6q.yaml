@@ -1,0 +1,65 @@
+_id: olxf2tpnkoknge6q
+_key: '!items!olxf2tpnkoknge6q'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Nondetection, Lesser
+system:
+  actions:
+    - _id: satqya0ihae9qp8u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}, except
+      it blocks the effects of only divination spells and effects that target an
+      area, rather than you or an object in your possession specifically. For
+      example, lesser <em>nondetection</em> doesn't ward you against a
+      spellcaster who is attempting to scry on you with the <em>scrying</em>
+      spell or find an object in your possession with <em>locate object</em>,
+      but it does protect you against effects that target an area you happen to
+      be in, such as detect spells or <em>clairaudience/clairvoyance</em>.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 2
+      arcanist: 2
+      hunter: 3
+      inquisitor: 2
+      investigator: 2
+      ranger: 3
+      sorcerer: 2
+      summoner: 2
+      summonerUnchained: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a drop of mercury
+  school: abj
+  sources:
+    - id: PZO9468
+      pages: '25'
+  sr: false
+type: spell
