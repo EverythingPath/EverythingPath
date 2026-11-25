@@ -1,0 +1,61 @@
+_id: c8jk0q8v39uvzsxx
+_key: '!items!c8jk0q8v39uvzsxx'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-worn-green.webp
+name: Delay Poison, Communal
+system:
+  actions:
+    - _id: g3s1pdw6zy9bldsz
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creatures touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.l7e01shgg8c44zfg]{delay poison}, except
+      you divide the duration in 1-hour intervals among the creatures
+      touched.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      bard: 3
+      cleric: 3
+      druid: 3
+      hunter: 3
+      inquisitor: 3
+      investigator: 3
+      oracle: 3
+      paladin: 3
+      ranger: 3
+      skald: 3
+      warpriest: 3
+      witch: 3
+  level: 3
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '227'
+  subschool:
+    - healing
+type: spell

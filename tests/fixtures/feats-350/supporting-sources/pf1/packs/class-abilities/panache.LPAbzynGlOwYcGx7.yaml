@@ -1,0 +1,50 @@
+_id: LPAbzynGlOwYcGx7
+_key: '!items!LPAbzynGlOwYcGx7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_10.jpg
+name: Panache
+system:
+  abilityType: ex
+  actions:
+    - _id: 4njwtccr6qa23tbh
+      activation:
+        type: special
+        unchained:
+          type: special
+      name: Use
+  associations:
+    classes:
+      - Swashbuckler
+  description:
+    value: >-
+      <p>More than just a lightly armored warrior, a swashbuckler is a daring
+      combatant. She fights with panache: a fluctuating measure of a
+      swashbuckler’s ability to perform amazing actions in combat. At the start
+      of each day, a swashbuckler gains a number of panache points equal to her
+      Charisma modifier (minimum 1). Her panache goes up or down throughout the
+      day, but usually cannot go higher than her Charisma modifier (minimum 1),
+      though feats and magic items can affect this maximum. A swashbuckler
+      spends panache to accomplish deeds (see below), and regains panache in the
+      following ways.<p><em>Critical Hit with a Light or One-Handed Piercing
+      Melee Weapon: </em>Each time the swashbuckler confirms a critical hit with
+      a light or one-handed piercing melee weapon, she regains 1 panache point.
+      Confirming a critical hit on a helpless or unaware creature or a creature
+      that has fewer Hit Dice than half the swashbuckler’s character level
+      doesn’t restore panache.<p><em>Killing Blow with a Light or One-Handed
+      Piercing Melee Weapon: </em>When the swashbuckler reduces a creature to 0
+      or fewer hit points with a light or one-handed piercing melee weapon
+      attack while in combat, she regains 1 panache point. Destroying an
+      unattended object, reducing a helpless or unaware creature to 0 or fewer
+      hit points, or reducing a creature that has fewer Hit Dice than half the
+      swashbuckler’s character level to 0 or fewer hit points doesn’t restore
+      any panache.</p>
+  sources:
+    - id: PZO1129
+      pages: '56'
+  subType: classFeat
+  tag: panache
+  uses:
+    maxFormula: '@abilities.cha.mod'
+    per: day
+type: feat

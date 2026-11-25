@@ -1,0 +1,69 @@
+_id: 4ahy3ap8ye816o40
+_key: '!items!4ahy3ap8ye816o40'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Kalistocrat's Nightmare
+system:
+  actions:
+    - _id: fu8xy5y61upygbny
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 hour/level (see text)
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You temporarily curse a creature so its touch lessens the value of
+      coins it touches. While under the effects of this curse, whenever the
+      target touches a coin of higher value than copper piece, that coin changes
+      into a copper piece. The change takes place over the course of the
+      following minute, allowing the target to interact with multiple coins
+      before the effect of the curse becomes apparent. The affected coins are
+      permanently transmuted from their previous material (typically gold or
+      silver) into copper coins, though <i>remove curse</i> (which can affect up
+      to 50 coins with a single casting) or a similar spell can restore them to
+      their previous material.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      alchemist: 2
+      arcanist: 3
+      bard: 2
+      cleric: 3
+      inquisitor: 2
+      investigator: 2
+      magus: 2
+      occultist: 2
+      oracle: 3
+      skald: 2
+      sorcerer: 3
+      warpriest: 3
+      witch: 2
+      wizard: 3
+  level: 3
+  materials:
+    value: a copper piece
+  school: trs
+  sources:
+    - id: PZO9468
+      pages: '22'
+type: spell

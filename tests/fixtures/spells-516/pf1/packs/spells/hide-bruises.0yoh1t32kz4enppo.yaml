@@ -1,0 +1,60 @@
+_id: 0yoh1t32kz4enppo
+_key: '!items!0yoh1t32kz4enppo'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Hide Bruises
+system:
+  actions:
+    - _id: 4dhkjups3nfd3ryq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none and Will disbelief (see text)
+        type: will
+      target:
+        value: one creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target's wounds to seem to disappear. A creature attempting a Heal
+      check to tell the severity of the target's injuries takes a -10 penalty on
+      that check. A creature that physically touches the glamered areas can
+      attempt a Will save to recognize it as an illusion.</p>
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 1
+      bard: 1
+      inquisitor: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: drop of blood
+  school: ill
+  sources:
+    - id: PZO1136
+      pages: '20'
+  subschool:
+    - glamer
+type: spell

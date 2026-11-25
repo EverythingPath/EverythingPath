@@ -1,0 +1,60 @@
+_id: oiop1tjfchmo4atk
+_key: '!items!oiop1tjfchmo4atk'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Hostile Juxtaposition, Greater
+system:
+  actions:
+    - _id: pep5nmu43kidaf7k
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until discharged
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/4 levels
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.s0uh1psyg0cfd9e6]{Hostile Juxtaposition},
+      except you can target one creature for every four caster levels you have
+      or you can target a single creature that is larger than you are. You can
+      switch places with each target only once while the effect lasts. Once you
+      have used it to teleport and switch places with each affected target, the
+      spell is discharged.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      mesmerist: 4
+      psychic: 7
+      sorcerer: 7
+      summoner: 6
+      summonerUnchained: 6
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a coin
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '231'
+  subschool:
+    - teleportation
+type: spell

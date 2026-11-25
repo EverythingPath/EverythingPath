@@ -1,0 +1,49 @@
+_id: bf2lu50t56iswz18
+_key: '!items!bf2lu50t56iswz18'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Feather Step
+system:
+  actions:
+    - _id: kqxp4i4xp2s5buda
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>For the duration of this spell, the subject ignores the adverse
+      movement effects of difficult terrain, and can even take 5-foot steps in
+      difficult terrain.</p>
+  learnedAt:
+    class:
+      bard: 1
+      druid: 1
+      hunter: 1
+      psychic: 1
+      ranger: 1
+      skald: 1
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '221'
+type: spell

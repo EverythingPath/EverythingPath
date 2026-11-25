@@ -1,0 +1,27 @@
+_id: 1W9YmqCqawLmMXmf
+_key: '!items!1W9YmqCqawLmMXmf'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/birds/raptor-owl-flying-moon.webp
+name: Owl's Wisdom
+system:
+  changes:
+    - _id: o943eq2i
+      formula: '4'
+      target: wis
+      type: enh
+  description:
+    value: >-
+      <p>The subject has a +4 enhancement bonus to Wisdom as per
+      @UUID[Compendium.pf1.spells.Item.b9ggsagifzk4fwut] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: '318'
+  subType: spell
+type: buff

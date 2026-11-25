@@ -1,0 +1,99 @@
+_id: 0d756xyqhinsstas
+_key: '!items!0d756xyqhinsstas'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/fire/explosion-fireball-medium-purple-orange.webp
+name: Pyrotechnics
+system:
+  actions:
+    - _id: 25kis6cp0nc0lbpg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 120 foot radius
+      duration:
+        units: spec
+        value: >-
+          [[1d4+1]] rounds, or [[1d4+1]] rounds after creatures leave the smoke
+          cloud; see text
+      measureTemplate:
+        size: '120'
+        type: circle
+      name: Fireworks
+      range:
+        units: long
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one fire source, up to a 20-ft. cube
+    - _id: JWDvm0q6QUsi7drg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        color: '#a49e94'
+        size: '20'
+        type: circle
+      name: Smoke Cloud
+      range:
+        units: long
+      save:
+        description: Fortitude negates; see text
+        type: fort
+      target:
+        value: one fire source, up to a 20-ft. cube
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Pyrotechnics</i> turns a fire into a burst of blinding fireworks or
+      a thick cloud of choking smoke, depending on your choice. The spell uses
+      one fire source, which is immediately extinguished. A fire so large that
+      it exceeds a 20-foot cube is only partly extinguished. Magical fires are
+      not extinguished, although a fire-based creature used as a source takes 1
+      point of damage per caster level.</p><p><i>Fireworks:</i> The fireworks
+      are a flashing, fiery, momentary burst of glowing, colored aerial lights.
+      This effect causes creatures within 120 feet of the fire source to become
+      blinded for 1d4+1 rounds (Will negates). These creatures must have line of
+      sight to the fire to be affected. Spell resistance can prevent
+      blindness.</p><p><i>Smoke Cloud</i>: A stream of smoke billows out from
+      the fire, forming a choking cloud that spreads 20 feet in all directions
+      and lasts for 1 round per caster level. All sight, even darkvision, is
+      ineffective in or through the cloud. All within the cloud take -4
+      penalties to Strength and Dexterity (Fortitude negates). These effects
+      last for 1d4+1 rounds after the cloud dissipates or after the creature
+      leaves the area of the cloud. Spell resistance does not apply.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      magus: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+    subDomain:
+      Smoke: 2
+  level: 2
+  materials:
+    value: one fire source
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '328'
+type: spell

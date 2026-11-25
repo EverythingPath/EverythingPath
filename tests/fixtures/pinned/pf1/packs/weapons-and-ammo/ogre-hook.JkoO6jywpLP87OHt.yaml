@@ -1,0 +1,62 @@
+_id: JkoO6jywpLP87OHt
+_key: '!items!JkoO6jywpLP87OHt'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/ogre-hook.png
+name: Ogre Hook
+system:
+  actions:
+    - _id: 37bql3lqa8as1pow
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Ogre Hook
+  description:
+    unidentified: >-
+      <p>This large crook of sharpened metal makes it easy to trip and catch
+      fleeing opponents. Invented by ogres, most ogre hooks are Large and
+      crudely fashioned-often from metal torn from previous victims' weapons and
+      armor. Despite their poor workmanship, the rarity and peril involved in
+      getting ogre hooks make such items quite valuable.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 24
+  properties:
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

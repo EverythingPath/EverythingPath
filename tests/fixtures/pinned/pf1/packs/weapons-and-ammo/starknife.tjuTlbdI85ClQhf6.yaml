@@ -1,0 +1,89 @@
+_id: tjuTlbdI85ClQhf6
+_key: '!items!tjuTlbdI85ClQhf6'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/thrown/shuriken-blue.webp
+name: Starknife
+system:
+  actions:
+    - _id: w6e259sbegh59fk9
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: EAmLa4ulL7W8ilYM
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Starknife
+  description:
+    unidentified: >-
+      <p>From a central metal ring, four tapering metal blades extend from this
+      weapon like points on a compass rose. By gripping the crossbar that runs
+      through the weapon's open middle, a wielder can strike with it as a deadly
+      melee weapon. Alternatively, by gripping it by the outer rim, a
+      starknife's light, aerodynamic design allows it to be thrown short
+      distances in a manner similar to a chakram.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 24
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 149
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - bladesLight
+    - thrown
+  weight:
+    value: 3
+type: weapon

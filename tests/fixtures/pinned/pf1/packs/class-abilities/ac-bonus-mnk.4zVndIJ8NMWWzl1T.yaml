@@ -1,0 +1,44 @@
+_id: 4zVndIJ8NMWWzl1T
+_key: '!items!4zVndIJ8NMWWzl1T'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-air-1.jpg
+name: AC Bonus (MNK)
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Monk
+      - Monk (Unchained)
+  changes:
+    - _id: c1v782dm
+      formula: >-
+        if(and(and(lt(@shield.type, 1), lt(@armor.type, 1)),
+        lt(@attributes.encumbrance.level, 1)), 1) * (@abilities.wis.mod +
+        floor(@class.level / 4))
+      target: ac
+      type: untyped
+    - _id: 3n8ckhwe
+      formula: >-
+        if(and(and(lt(@shield.type, 1), lt(@armor.type, 1)),
+        lt(@attributes.encumbrance.level, 1)), 1) * (@abilities.wis.mod +
+        floor(@class.level / 4))
+      target: cmd
+      type: untyped
+  description:
+    value: >-
+      <p>When unarmored and unencumbered, the monk adds his Wisdom bonus (if
+      any) to his AC and his CMD. In addition, a monk gains a +1 bonus to AC and
+      CMD at 4th level. This bonus increases by 1 for every four monk levels
+      thereafter, up to a maximum of +5 at 20th level. </p><p>These bonuses to
+      AC apply even against touch attacks or when the monk is flat-footed. He
+      loses these bonuses when he is immobilized or helpless, when he wears any
+      armor, when he carries a shield, or when he carries a medium or heavy
+      load.</p>
+  sources:
+    - id: PZO1110
+      pages: '57'
+    - id: PZO1131
+      pages: '14'
+  subType: classFeat
+type: feat

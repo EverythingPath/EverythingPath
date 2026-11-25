@@ -1,0 +1,69 @@
+_id: jdsvncnna6oy189a
+_key: '!items!jdsvncnna6oy189a'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/unholy/barrier-shield-glowing-pink.webp
+name: Deeper Darkness
+system:
+  actions:
+    - _id: x33gjl1dr683gqf4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      target:
+        value: object touched
+  components:
+    divineFocus: 2
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.tsndfcfijmgxs37p]{darkness}, except that
+      objects radiate <em>darkness</em> in a 60-foot radius and the light level
+      is lowered by two steps. Bright light becomes dim light and normal light
+      becomes <em>darkness</em>. Areas of dim light and <em>darkness</em> become
+      supernaturally dark. This functions like <em>darkness</em>, but even
+      creatures with darkvision cannot see within the spell's
+      confines.</p><p>This spell does not stack with itself. <em>Deeper
+      darkness</em> can be used to counter or dispel any light spell of equal or
+      lower spell level.</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    bloodline:
+      Div: 3
+      Shadow: 3
+    class:
+      adept: 3
+      antipaladin: 3
+      cleric: 3
+      inquisitor: 3
+      occultist: 3
+      oracle: 3
+      shaman: 3
+      warpriest: 3
+    domain:
+      Darkness: 3
+  level: 3
+  materials:
+    value: bat fur and a piece of coal
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '265'
+  sr: false
+type: spell
