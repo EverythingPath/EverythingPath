@@ -1,0 +1,54 @@
+_id: yyzf346hiq8ixt0u
+_key: '!items!yyzf346hiq8ixt0u'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Hold Animal
+system:
+  actions:
+    - _id: w863o4zndngqrnxk
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level; see text
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one animal
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.78kwl5t99j9e8tzh]{hold person}, except
+      that it affects an animal instead of a humanoid.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      druid: 2
+      hunter: 2
+      mesmerist: 2
+      psychic: 2
+      ranger: 2
+    domain:
+      Animal: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '296'
+  subschool:
+    - compulsion
+type: spell

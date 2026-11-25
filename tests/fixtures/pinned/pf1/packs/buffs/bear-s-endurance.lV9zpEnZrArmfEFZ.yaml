@@ -1,0 +1,27 @@
+_id: lV9zpEnZrArmfEFZ
+_key: '!items!lV9zpEnZrArmfEFZ'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/abilities/bear-roar-bite-brown-green.webp
+name: Bear's Endurance
+system:
+  changes:
+    - _id: wp3yjxvr
+      formula: '4'
+      target: con
+      type: enh
+  description:
+    value: >-
+      <p>The subject has a +4 enhancement bonus to Constitution as per
+      @UUID[Compendium.pf1.spells.Item.usdv1eqvibmxun6x] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: 246, 247
+  subType: spell
+type: buff

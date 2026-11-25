@@ -1,0 +1,62 @@
+_id: npc4636d0wmq3hs0
+_key: '!items!npc4636d0wmq3hs0'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Undeath Inversion
+system:
+  actions:
+    - _id: qwjbz1jna09lm0pf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: spec
+        value: 1 round/level (D); see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates; see text
+        type: will
+      target:
+        value: one undead creature
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You alter an undead creature's energy affinity so that it takes damage
+      from negative energy and gains healing from positive energy, as if it were
+      a living creature. If the target was able to channel negative energy or
+      produce negative energy effects (such as inflict spells), these abilities
+      produce positive energy instead, healing living targets and harming the
+      undead. The target cannot impose negative levels on other creatures for
+      the duration of the spell. The target's creature type does not change, and
+      it is still considered an undead creature. Each round on its turn, the
+      subject may attempt a new saving throw to end the effect. This is a
+      fullround action that does not provoke attacks of opportunity.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      oracle: 4
+      sorcerer: 4
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a gold piece with one scratched face
+  school: nec
+  sources:
+    - id: PZO9444
+      pages: '27'
+type: spell

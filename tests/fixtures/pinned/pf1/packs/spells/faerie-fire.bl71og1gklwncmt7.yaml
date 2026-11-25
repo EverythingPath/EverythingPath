@@ -1,0 +1,57 @@
+_id: bl71og1gklwncmt7
+_key: '!items!bl71og1gklwncmt7'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/projectiles-trio-pink.webp
+name: Faerie Fire
+system:
+  actions:
+    - _id: 80mo8lin4bqh6538
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures and objects within a 5-ft.-radius burst
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      range:
+        units: long
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A pale glow surrounds and outlines the subjects. Outlined subjects shed
+      light as candles. Creatures outlined by <i>faerie fire</i> take a -20
+      penalty on all Stealth checks. Outlined creatures do not benefit from the
+      concealment normally provided by <i>darkness</i> (though a 2nd-level or
+      higher magical <i>darkness</i> effect functions normally), <i>blur</i>,
+      <i>displacement</i>, <i>invisibility</i>, or similar effects. The light is
+      too dim to have any special effect on undead or dark-dwelling creatures
+      vulnerable to light. The <i>faerie fire</i> can be blue, green, or violet,
+      according to your choice at the time of casting. The <i>faerie fire</i>
+      does not cause any harm to the objects or creatures thus outlined.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      druid: 1
+      hunter: 1
+      mesmerist: 1
+    subDomain:
+      Light: 1
+      Moon: 1
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '280'
+type: spell

@@ -1,0 +1,104 @@
+{
+  "classes": {
+    "alchemist": { "name": "Alchemist", "foundry": ["pf1/JcaqlAawhf14q1lq"] },
+    "barbarian": { "name": "Barbarian", "foundry": ["pf1/g3pq7xWWdUVYw6ai"] },
+    "bard": { "name": "Bard", "foundry": ["pf1/6GjOjO6r3R06fLwE"] },
+    "cleric": { "name": "Cleric", "foundry": ["pf1/SjFqQceVeVBzBwgn"] },
+    "druid": { "name": "Druid", "foundry": ["pf1/7eZQP0MzeO2svmVF"] },
+    "monk": { "name": "Monk", "foundry": ["pf1/W8dxwZ1CZiwLKsqr"] }
+  },
+  "races": {
+    "dwarf": { "name": "Dwarf", "foundry": ["pf1/nEltI9y37rKJTeWo"] },
+    "gnome": { "name": "Gnome", "foundry": ["pf1/efwHEwjvL9Z94MJI"] },
+    "half-elf": { "name": "Half-Elf", "foundry": ["pf1/cCepRrfH5SalFfT4"] },
+    "half-orc": { "name": "Half-Orc", "foundry": ["pf1/dCAXgdA6Db1Z3ccz"] },
+    "halfling": { "name": "Halfling", "foundry": ["pf1/Hf31mrYb3uucNyLO"] },
+    "human": { "name": "Human", "foundry": ["pf1/e6IaBxKgMxy1yKlr"] }
+  },
+  "rewards": [
+    {
+      "id": "bardicPerformanceRound",
+      "name": "+1 round of bardic performance per day",
+      "class": "bard",
+      "races": ["gnome", "half-elf"],
+      "fraction": { "numerator": 1, "denominator": 1 },
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:142"
+      }
+    },
+    {
+      "id": "bomb",
+      "name": "+1/2 bomb per day",
+      "class": "alchemist",
+      "races": ["gnome"],
+      "fraction": { "numerator": 1, "denominator": 2 },
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:148"
+      }
+    },
+    {
+      "id": "clericDomainPowerUse",
+      "name": "+1/2 use per day of a 1st-level domain power",
+      "class": "cleric",
+      "races": ["dwarf", "halfling"],
+      "fraction": { "numerator": 1, "denominator": 2 },
+      "targets": [
+        { "key": "classFeat_fireBolt", "name": "Fire Bolt" },
+        { "key": "classFeat_rebukeDeath", "name": "Rebuke Death" },
+        { "key": "classFeat_touchOfGlory", "name": "Touch of Glory" },
+        { "key": "classFeat_restorativeTouch", "name": "Restorative Touch" }
+      ],
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:150"
+      }
+    },
+    {
+      "id": "stunningFist",
+      "name": "+1/2 Stunning Fist attempt per day and +1 CMD against grapple",
+      "class": "monk",
+      "races": ["halfling"],
+      "fraction": { "numerator": 1, "denominator": 2 },
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:162"
+      }
+    },
+    {
+      "id": "druidDomainPowerUse",
+      "name": "+1/2 use per day of a 1st-level domain power",
+      "class": "druid",
+      "races": ["half-elf"],
+      "fraction": { "numerator": 1, "denominator": 2 },
+      "targets": [{ "key": "classFeat_fireBolt", "name": "Fire Bolt" }],
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:168"
+      }
+    },
+    {
+      "id": "kiPoint",
+      "name": "+1/4 point to the ki pool",
+      "class": "monk",
+      "races": ["human"],
+      "fraction": { "numerator": 1, "denominator": 4 },
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:199"
+      }
+    },
+    {
+      "id": "rageRound",
+      "name": "+1 round of rage per day",
+      "class": "barbarian",
+      "races": ["dwarf", "half-orc"],
+      "fraction": { "numerator": 1, "denominator": 1 },
+      "source": {
+        "book": "APG",
+        "pcgen": "roleplaying_game/advanced_players_guide/apg_abilities_race.lst:213"
+      }
+    }
+  ]
+}
