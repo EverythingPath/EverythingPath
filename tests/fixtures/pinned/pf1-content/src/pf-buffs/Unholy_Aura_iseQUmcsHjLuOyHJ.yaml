@@ -1,0 +1,64 @@
+_id: iseQUmcsHjLuOyHJ
+_key: '!items!iseQUmcsHjLuOyHJ'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/light-magenta-3.jpg
+name: Unholy Aura
+system:
+  actions:
+    - _id: Z98DfkbAQb5Krq9E
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/light-magenta-3.jpg
+      name: Use
+      save:
+        dc: 10[Base] + 8[Spell level] + 4[Casting Modifier]
+        description: Fortitude Negates
+        type: fort
+  changes:
+    - _id: d73b0it5
+      formula: '4'
+      target: allSavingThrows
+      type: resist
+    - _id: 3sg9jhth
+      formula: '4'
+      target: ac
+      type: deflection
+  contextNotes:
+    - target: sr
+      text: '[[25]] SR vs Good spells and spells cast by Good creatures.'
+    - target: will
+      text: +[[2]] Morale vs existing Enchantment [charm] and [compulsion] effects.
+    - target: ac
+      text: >-
+        Good creatures who succeed a melee attack vs you take 1d6 STR damage
+        (Fort save negates).
+  description:
+    instructions: >-
+      <p>Change the <code>4[Casting Modifier]</code> section in the action's
+      saving throw formula to the buff caster's casting modifier.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.flrn1xmm2wfrxbkf]{Unholy Aura}</p><p>A
+      malevolent darkness surrounds the subjects, protecting them from attacks,
+      granting them resistance to spells cast by good creatures, and weakening
+      good creatures when they strike the subjects. This abjuration has four
+      effects.</p><ul><li>Each warded creature gains a +4 deflection bonus to AC
+      and a +4 resistance bonus on saves. Unlike the effect of protection from
+      good, this benefit applies against all attacks, not just against attacks
+      by good creatures.</li><li>A warded creature gains spell resistance 25
+      against good spells and spells cast by good creatures.</li><li>The
+      abjuration protects the subjects from possession and mental influence,
+      just as @UUID[Compendium.pf1.spells.Item.71g6nmvy8qnodwyz]{protection from
+      good} does.</li><li>If a good creature succeeds on a melee attack against
+      a warded creature, the offending attacker takes 1d6 points of Strength
+      damage (Fortitude negates).</li></ul>
+  duration:
+    units: round
+    value: '@item.level'
+  level: 15
+  subType: spell
+type: buff

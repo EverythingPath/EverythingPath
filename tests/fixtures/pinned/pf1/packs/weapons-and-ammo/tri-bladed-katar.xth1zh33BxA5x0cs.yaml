@@ -1,0 +1,59 @@
+_id: xth1zh33BxA5x0cs
+_key: '!items!xth1zh33BxA5x0cs'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/katar-tribladed.PNG
+name: Tri-Bladed Katar
+system:
+  actions:
+    - _id: s7r5m6jv4rrws1fs
+      ability:
+        attack: _default
+        critMult: 4
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Punching Dagger
+  description:
+    unidentified: >-
+      <p>Where most punching daggers boast a single thick blade, the tri-bladed
+      katar features a fan of three splayed razor edges. Any effects that apply
+      to a punching dagger also apply to a tri-bladed katar.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 6
+  properties:
+    fin: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+    - bladesLight
+    - close
+  weight:
+    value: 2
+type: weapon

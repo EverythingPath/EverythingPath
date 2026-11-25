@@ -1,0 +1,72 @@
+_id: kp5zx6jqqsikq6ey
+_key: '!items!kp5zx6jqqsikq6ey'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Judgment Light
+system:
+  actions:
+    - _id: 0t63t998zdro444u
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft.-radius burst
+      duration:
+        units: spec
+        value: instantaneous, see text
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      save:
+        description: see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An inquisitor may only cast this spell while she has a judgment active.
+      When she does cast this spell, it causes one or more of the following
+      effects based on the inquisitor's active judgments. <i>Destruction</i>:
+      Red light erupts from the caster. Enemies in the area take 4d8 points of
+      damage and become shaken for 1d4 rounds. A successful Will saving throw
+      halves the damage and negates the shaken effect. <i>Healing</i>: Green
+      light erupts from the caster. Allies in the area regain a number of hit
+      points equal to 1d8 + the caster's Wisdom modifier. <i>Justice</i>: Blue
+      light erupts from the caster, revealing hidden and invisible creatures to
+      all. The light outlines such creatures for 1 round per caster level,
+      imposing a -20 penalty on Stealth checks on those creatures.
+      <i>Piercing</i>: Violet light erupts from the caster, reducing the spell
+      resistance of enemies within the burst by 5 for 1 round per caster level.
+      <i>Protection</i>: Amber light erupts from the caster, granting allies in
+      the burst a +2 sacred bonus to AC and CMD, and a +4 bonus to AC against
+      critical confirmation attack rolls for 1 round per caster level.
+      <i>Purity</i>: White light erupts from the caster, allowing each ally
+      within the burst to attempt a saving throw against a single effect that
+      allows a saving throw with a +2 sacred bonus on the roll.
+      <i>Resiliency</i>: Golden light erupts from the caster, granting allies
+      within the burst DR 3/magic or the alignment your judgment allows for 1
+      round per caster level. <i>Resistance</i>: Copper light erupts from the
+      caster, granting allies within the burst resistance 5 against the energy
+      the judgment protects the inquisitor against when she casts this spell for
+      1 round per caster level. <i>Smiting</i>: Silver light erupts from the
+      caster, making allies' weapons within the burst count as magic, the
+      alignment her weapon is, and adamantine for purposes of overcoming damage
+      reduction for 1 round per caster level.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      inquisitor: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1118
+      pages: '232'
+type: spell

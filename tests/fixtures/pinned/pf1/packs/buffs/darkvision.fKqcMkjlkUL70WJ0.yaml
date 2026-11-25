@@ -1,0 +1,26 @@
+_id: fKqcMkjlkUL70WJ0
+_key: '!items!fKqcMkjlkUL70WJ0'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/eyes/humanoid-single-blind.webp
+name: Darkvision
+system:
+  changes:
+    - _id: I9WS5kKI
+      formula: '60'
+      operator: set
+      target: sensedv
+      type: untyped
+  description:
+    instructions: <p>Set item level to caster level.</p>
+    value: >-
+      <p>Grants darkvision 60 ft. for 1 Hour per item level as per
+      @UUID[Compendium.pf1.spells.Item.mz9yr5yhr0f3oqtp] spell.</p>
+  duration:
+    end: initiative
+    units: hour
+    value: '@item.level'
+  level: 3
+  subType: spell
+type: buff

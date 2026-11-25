@@ -1,0 +1,70 @@
+_id: vqfrp8t0c1lw1jna
+_key: '!items!vqfrp8t0c1lw1jna'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/buff-strength-muscle-damage-orange.webp
+name: Heroism
+system:
+  actions:
+    - _id: twv4kuszh08zzbw2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell imbues a single creature with great bravery and morale in
+      battle. The target gains a +2 morale bonus on attack rolls, saves, and
+      skill checks.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Imperious: 3
+      Martyred: 3
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 2
+      bloodrager: 3
+      inquisitor: 3
+      investigator: 3
+      medium: 2
+      psychic: 3
+      skald: 2
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+    domain:
+      Charm: 4
+    subDomain:
+      Heroism: 3
+  level: 3
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '295'
+  subschool:
+    - compulsion
+type: spell

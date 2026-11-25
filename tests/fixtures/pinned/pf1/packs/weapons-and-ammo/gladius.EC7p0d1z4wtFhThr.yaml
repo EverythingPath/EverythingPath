@@ -1,0 +1,60 @@
+_id: EC7p0d1z4wtFhThr
+_key: '!items!EC7p0d1z4wtFhThr'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Gladius
+system:
+  actions:
+    - _id: rndhvflw2ap0fhxa
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Gladius
+    - Shortsword
+  description:
+    unidentified: >-
+      <p>The gladius is the favorite sword of gladiators, with a heavier blade
+      than the standard shortsword. Feats and abilities that affect shortswords
+      apply to the gladius.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    fin: true
+    prf: true
+  sources:
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 3
+type: weapon

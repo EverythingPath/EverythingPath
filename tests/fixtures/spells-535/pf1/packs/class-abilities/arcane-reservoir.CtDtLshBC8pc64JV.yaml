@@ -1,0 +1,42 @@
+_id: CtDtLshBC8pc64JV
+_key: '!items!CtDtLshBC8pc64JV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-orange-3.jpg
+name: Arcane Reservoir
+system:
+  abilityType: su
+  actions:
+    - _id: 06yyya125bdn84cf
+      activation:
+        type: special
+        unchained:
+          type: special
+      name: Use
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>An arcanist has an innate pool of magical energy that she can draw upon
+      to fuel her arcanist exploits and enhance her spells. The arcanist’s
+      arcane reservoir can hold a maximum amount of magical energy equal to 3 +
+      the arcanist’s level. Each day, when preparing spells, the arcanist’s
+      arcane reservoir fills with raw magical energy, gaining a number of points
+      equal to 3 + 1/2 her arcanist level. Any points she had from the previous
+      day are lost. She can also regain these points through the consume spells
+      class feature and some arcanist exploits. The arcane reservoir can never
+      hold more points than the maximum amount noted above; points gained in
+      excess of this total are lost.<p>Points from the arcanist reservoir are
+      used to fuel many of the arcanist’s powers. In addition, the arcanist can
+      expend 1 point from her arcane reservoir as a free action whenever she
+      casts an arcanist spell. If she does, she can choose to increase the
+      caster level by 1 or increase the spell’s DC by 1. She can expend no more
+      than 1 point from her reservoir on a given spell in this way.</p>
+  subType: classFeat
+  tag: classFeat_arcaneReservoir
+  uses:
+    maxFormula: 3 + @class.level
+    per: day
+    rechargeFormula: 3 + floor(@class.level / 2)
+type: feat

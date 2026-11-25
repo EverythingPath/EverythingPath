@@ -1,0 +1,64 @@
+_id: 181gol7xz8quxfks
+_key: '!items!181gol7xz8quxfks'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Haze of Dreams
+system:
+  actions:
+    - _id: fv0hvahjrn7f0suy
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill an enemy's head with waking dreams, a reminder of the
+      pleasures, delights, and terrors to be found in the dream world. While in
+      this strange dream state, the target moves at half its normal speed (round
+      down to the next 5-foot increment), which affects the creature's jumping
+      distance as normal for decreased speed.</p><p>Multiple <i>Haze of
+      Dreams</i> effects do not stack, nor does this spell's effect stack with
+      <i>slow</i>.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      cleric: 1
+      inquisitor: 1
+      oracle: 1
+      paladin: 1
+      shaman: 1
+      skald: 1
+      warpriest: 1
+      witch: 1
+  materials:
+    value: pinch of sand
+  school: enc
+  sources:
+    - id: PZO9267
+      pages: '235'
+    - id: PZO9416
+      pages: '28'
+  subschool:
+    - charm
+type: spell

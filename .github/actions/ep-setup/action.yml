@@ -1,0 +1,50 @@
+name: Everythingpath job setup
+description: >-
+  The setup every gate job shares after its checkout (speed-ci-shards fix r1): the gate-commit probe,
+  pnpm, Node.js, the pnpm store for the offline install, and the runner's hardware in the log. A job
+  that is not a gate job (WIP CI) passes gate-probe false.
+inputs:
+  runner-label:
+    description: The job's runs-on, echoed with the hardware (remote-ci.test.py holds them equal).
+    required: true
+  gate-probe:
+    description: Probe the checkout as gate-push.sh's tree-only commit first ("true" or "false").
+    default: 'true'
+runs:
+  using: composite
+  steps:
+    - name: Gate commit
+      if: ${{ inputs.gate-probe == 'true' }}
+      # The commit, its tree and its Gate-Reviewed, Gate-Base and Gate-Tree trailers; anything
+      # but a gate-push.sh commit stops the job here.
+      shell: bash
+      run: |
+        python3 -B scripts/orchestration/remote_ci.py probe > "$RUNNER_TEMP/gate-commit.json"
+        { echo '### Gate commit'; echo '```json'; cat "$RUNNER_TEMP/gate-commit.json"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: .nvmrc
+        cache: pnpm
+
+    - name: Fill the pnpm store for the offline install
+      # The same HOME, PATH and PNPM_HOME remote_ci.py gives its commands, so both see one store.
+      shell: bash
+      run: env -i HOME="$HOME" PATH="$PATH" ${PNPM_HOME:+PNPM_HOME="$PNPM_HOME"} pnpm fetch
+
+    - name: Runner hardware
+      # Benchmark data, log only (the manifest has no field for it), for tuning the shard count.
+      # RUNNER_NAME is the machine.
+      shell: bash
+      env:
+        RUNNER_LABEL: ${{ inputs.runner-label }}
+      run: |
+        echo "runner label: $RUNNER_LABEL"
+        echo "runner $RUNNER_NAME, image ${ImageOS:-?} ${ImageVersion:-?}, $RUNNER_OS/$RUNNER_ARCH"
+        echo "nproc $(nproc)"
+        lscpu
+        free -g
