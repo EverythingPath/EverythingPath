@@ -1,0 +1,72 @@
+_id: olbko3loip9gjwo0
+_key: '!items!olbko3loip9gjwo0'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Innocuous Shape
+system:
+  actions:
+    - _id: kvm2cvfw4si0da3v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: living creature touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell transforms a creature into a Medium or smaller animal or
+      humanoid of no more than 1 Hit Die. If you use this spell to cause the
+      target to take on the form of an animal, the spell functions as
+      @UUID[Compendium.pf1.spells.Item.774kmgcb7ygviht0]{beast shape II}. If the
+      form is that of a humanoid, the spell can function as
+      @UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{alter self},
+      @UUID[Compendium.pf1.spells.Item.42ddkxklxocbodnb]{youthful appearance},
+      or both, such that you can transform a creature into a generic,
+      <em>youthful</em> humanoid of any type. Any creature that interacts with
+      the target of this spell must succeed at a Will saving throw (using the DC
+      of the spell) or view the target in the most innocuous possible light. On
+      a failed saving throw, the creature views all of the target's actions as
+      inoffensive and no cause for concern unless the target becomes an obvious
+      threat. The creature can otherwise act normally, and feels no compunction
+      to obey or ignore the target; it simply assumes none of the target's
+      actions are dangerous or malicious unless shown evidence that proves
+      otherwise.</p>
+  learnedAt:
+    class:
+      alchemist: 4
+      arcanist: 4
+      investigator: 4
+      psychic: 4
+      shaman: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a handful of dandelion seeds
+  school: trs
+  sources:
+    - id: PZO9468
+      pages: '25'
+  subschool:
+    - polymorph
+type: spell

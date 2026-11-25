@@ -1,0 +1,712 @@
+_id: 9NkBjZfztOP8qgsY
+_key: '!items!9NkBjZfztOP8qgsY'
+_stats:
+  coreVersion: '12.343'
+folder: 1uDzTmqE6tgpIano
+img: icons/containers/chest/chest-reinforced-steel-red.webp
+name: Kit, Inquisitor's
+system:
+  hp:
+    base: 10
+  items:
+    C43WV3uziMGgH2Hf:
+      _id: C43WV3uziMGgH2Hf
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.snfogneawzopfzzl
+      img: systems/pf1/icons/items/inventory/torch.jpg
+      name: Torch
+      system:
+        actions:
+          - _id: 7IkvstJGhp2Kfl21
+            activation:
+              type: full
+              unchained:
+                cost: 3
+                type: action
+            name: Enlight (using flint and steal)
+            tag: ignite
+          - _id: KNOoanyFVJlRjrdg
+            ability:
+              attack: str
+              damage: str
+              damageMult: 1
+            actionType: mwak
+            activation:
+              type: attack
+              unchained:
+                type: attack
+            attackBonus: '-2[Improvised Weapon]'
+            damage:
+              parts:
+                - formula: sizeRoll(1, 3, @size)
+                  types:
+                    - bludgeoning
+                - formula: '1'
+                  types:
+                    - fire
+            extraAttacks:
+              type: standard
+            name: Attack
+            uses:
+              autoDeductChargesCost: '0'
+          - _id: shc8HOmsOaDPbFKX
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Extinguish
+            tag: extinguish
+        description:
+          value: >-
+            <p>A torch burns for 1 hour, shedding normal light in a 20-foot
+            radius and increasing the light level by one step for an additional
+            20 feet beyond that area (darkness becomes dim light and dim light
+            becomes normal light). A torch does not increase the light level in
+            normal light or bright light. If a torch is used in combat, treat it
+            as a one-handed improvised weapon that deals bludgeoning damage
+            equal to that of a gauntlet of its size, plus 1 point of fire
+            damage.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.01
+        quantity: 10
+        scriptCalls:
+          - _id: X6fUtOgays06HuzF
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn on light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "ignite") return;
+
+              fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+                .then(lm => lm.execute({ token, range: 40 }));
+          - _id: B7q2csNBZkQnLMYQ
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn off light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "extinguish") return;
+
+              // Lights off as it comes from Foundry default
+              const light = new foundry.data.LightData().toObject();
+              token.document.update({ light });
+        sources:
+          - id: PZO1123
+            pages: 58, 74
+          - id: PZO1110
+            pages: 157, 158
+        subType: adventuring
+        weight:
+          value: 1
+      type: loot
+    QIjnHFPE7f5ZiPeV:
+      _id: QIjnHFPE7f5ZiPeV
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.qlmtnppwxkubqyhp
+      img: icons/sundries/survival/rope-wrapped-grey.webp
+      name: Rope
+      system:
+        description:
+          value: >-
+            <p>This 50-foot length of hemp rope has 2 hit points and can be
+            burst with a DC 23 Strength check.</p>
+        equipped: false
+        hp:
+          base: 2
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: 58, 70
+          - id: PZO1110
+            pages: 157, 158
+        subType: adventuring
+        weight:
+          value: 10
+      type: loot
+    SUZ4qPo7ZYCGMu5k:
+      _id: SUZ4qPo7ZYCGMu5k
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.jewqhqesccxrvivd
+      img: systems/pf1/icons/items/inventory/candle.jpg
+      name: Candle
+      system:
+        actions:
+          - _id: su42oeevO8Sw3cKi
+            activation:
+              type: special
+              unchained:
+                type: nonaction
+            duration:
+              units: hour
+              value: '1'
+            name: Ignite
+            tag: ignite
+            uses:
+              autoDeductChargesCost: '1'
+          - _id: jhOeLTBf4RwThzDe
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Extinguish
+            tag: extinguish
+        description:
+          value: >-
+            <p>A candle dimly illuminates a small area, increasing the light
+            level in a 5-foot radius by one step (darkness becomes dim light and
+            dim light becomes normal light). A candle cannot increase the light
+            level above normal light. A candle burns for 1 hour.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.01
+        quantity: 10
+        scriptCalls:
+          - _id: H62XLSB8fS11kyM9
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn on light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "ignite") return;
+
+              fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+                .then(lm => lm.execute({ token, range: 5 }));
+          - _id: 2Ru4FFdAZ4vzHqM2
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn off light
+            type: script
+            value: |
+              if (!token) return;
+              if (action.tag !== "extinguish") return;
+
+              // Lights off as it comes from Foundry default
+              const light = new foundry.data.LightData().toObject();
+              token.document.update({ light });
+        sources:
+          - id: PZO1123
+            pages: 56, 61
+          - id: PZO1110
+            pages: 155, 158
+        subType: adventuring
+      type: loot
+    TCIdJ36bndoNkSgV:
+      _id: TCIdJ36bndoNkSgV
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.Ueae6c2qqJJGpncA
+      img: icons/containers/chest/chest-simple-box-red.webp
+      name: Mess Kit
+      system:
+        description:
+          value: >-
+            <p>This kit includes a plate, bowl, cup, fork, knife, and spoon,
+            made of wood, horn, or tin. Each item has a handle or small hole,
+            and can be tied together using the included leather cord.</p>
+        hp:
+          base: 10
+        items:
+          75V6g53wDWtG50uT:
+            _id: 75V6g53wDWtG50uT
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.jzu5QqK20bW9gkN1
+            img: icons/tools/cooking/fork-steel-tan.webp
+            name: Fork
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+          B5gFNbiUqEKlkI3d:
+            _id: B5gFNbiUqEKlkI3d
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.fASUzJozDXZldwNT
+            img: icons/containers/kitchenware/bowl-clay-brown.webp
+            name: Bowl
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.2
+            type: loot
+          G0t7OoDwQXQgSuli:
+            _id: G0t7OoDwQXQgSuli
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.GZtAdQ7gJlCe9z64
+            img: icons/tools/cooking/knife-chef-steel-brown.webp
+            name: Knife
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+                - Crafting
+                - Survival
+              weight:
+                value: 0.1
+            type: loot
+          HrXDTu0yJArUbpYe:
+            _id: HrXDTu0yJArUbpYe
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.tVkpdPfIJomoFjUl
+            img: icons/consumables/meat/plate-hock-bone-pink.webp
+            name: Plate
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: tradeGoods
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.4
+            type: loot
+          ssTkq1uXfAO6KeFH:
+            _id: ssTkq1uXfAO6KeFH
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.QqdYeaj0M8e5FWWK
+            img: icons/containers/kitchenware/vase-wood-wrapped-brown.webp
+            name: Cup
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: tradeGoods
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+          wPKymHrQQpgJ2oYO:
+            _id: wPKymHrQQpgJ2oYO
+            _stats:
+              compendiumSource: Compendium.pf1.items.Item.Asg5Ek4CFqb80P7C
+            img: icons/tools/cooking/soup-ladle.webp
+            name: Spoon
+            system:
+              equipped: false
+              hp:
+                base: 10
+              subType: gear
+              tags:
+                - Mundane
+                - Cooking
+              weight:
+                value: 0.1
+            type: loot
+        price: 0.2
+        sources:
+          - id: PZO1123
+            pages: '57'
+      type: container
+    WoSm54XEQRlIEB4O:
+      _id: WoSm54XEQRlIEB4O
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.s5KkeKPLnneb0WR4
+      img: icons/equipment/neck/amulet-engraved-wood.webp
+      name: Holy symbol (Wood)
+      system:
+        description:
+          value: >-
+            <p>A holy symbol focuses positive energy and is used by good clerics
+            and paladins (or by neutral clerics who want to cast good spells or
+            channel positive energy). Each religion has its own holy symbol. The
+            material used to make the holy symbol has no effect on its powers,
+            though a religion may place special significance on a particular
+            material.</p><p>Unholy Symbols: An unholy symbol is like a holy
+            symbol except that it focuses negative energy and is used by evil
+            clerics (or by neutral clerics who want to cast evil spells or
+            channel negative energy).</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO1110
+            pages: 158, 161
+        subType: adventuring
+      type: loot
+    XaNAwk5ldNghBZ0K:
+      _id: XaNAwk5ldNghBZ0K
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.iegwwsarycqwoezj
+      img: systems/pf1/icons/items/inventory/cloth-blue.jpg
+      name: Bedroll
+      system:
+        description:
+          value: >-
+            <p>This consists of two woolen sheets sewn together along the bottom
+            and one side to create a bag for sleeping in. Some have cloth straps
+            along the open side so the bedroll can be tied closed while you are
+            sleeping. It can be rolled and tied into a tight coil for storage or
+            transport. Most people use a <em>blanket</em> with the bedroll to
+            stay warm or provide a ground cushion.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.1
+        sources:
+          - id: PZO1123
+            pages: '56'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        weight:
+          value: 5
+      type: loot
+    av59ysi8clHNBDtD:
+      _id: av59ysi8clHNBDtD
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.ucgkbtqiybhyiwwk
+      img: icons/containers/bags/sack-cloth-purple.webp
+      name: Spell Component Pouch
+      system:
+        description:
+          value: >-
+            <p>A spellcaster with a spell component pouch is assumed to have all
+            the material components and focuses needed for spellcasting, except
+            for components that have a specific cost, divine focuses, and
+            focuses that wouldn’t fit in a pouch. Most spell component pouches
+            are waterproof and can be strung onto a belt or bandolier.</p>
+        hp:
+          base: 10
+        price: 5
+        sources:
+          - id: PZO1123
+            pages: '77'
+          - id: PZO1110
+            pages: 158, 161
+        weight:
+          value: 2
+      type: container
+    b4UKdWDBMsxszhoK:
+      _id: b4UKdWDBMsxszhoK
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.wjvxmolafiegvesl
+      img: icons/containers/bags/coinpouch-simple-leather-tan.webp
+      name: Belt Pouch
+      system:
+        description:
+          value: >-
+            <p>A typical leather or cloth belt pouch has a leather cord to cinch
+            it shut and another to tie it to your belt. It is large enough to
+            hold 100–200 coins or two apples.</p>
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '56'
+        weight:
+          value: 0.5
+      type: container
+    eHC30r88MqHd2dUs:
+      _id: eHC30r88MqHd2dUs
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.ygmrcisvftnvjyob
+      img: icons/commodities/stone/rock-chunk-grey.webp
+      name: Flint And Steel
+      system:
+        actions:
+          - _id: nOah5FBBvcEip0El
+            activation:
+              type: full
+              unchained:
+                cost: 3
+                type: action
+            name: Light any fire
+        description:
+          value: >-
+            <p>Lighting a <em>torch</em> with a <em>flint and steel</em> is a
+            full-round action. Lighting any other fire with them takes at least
+            that long.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: 56, 64
+          - id: PZO1110
+            pages: 155, 158
+        subType: adventuring
+      type: loot
+    ei2MEUn7XFaA6NP0:
+      _id: ei2MEUn7XFaA6NP0
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.lSCPUK5Ea6R0t4fz
+      img: systems/pf1/icons/items/inventory/backpack.jpg
+      name: Backpack, common
+      system:
+        description:
+          value: >-
+            <p>This leather knapsack has one large pocket that closes with a
+            buckled strap and holds about 2 cubic feet of material. Some may
+            have one or more smaller pockets on the sides.</p>
+        hp:
+          base: 10
+        price: 2
+        sources:
+          - id: PZO1123
+            pages: '58'
+        weight:
+          value: 2
+      type: container
+    emPaW2gUpYslGjcg:
+      _id: emPaW2gUpYslGjcg
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.zompehbhvegvncwu
+      img: icons/sundries/survival/cuffs-shackles-steel.webp
+      name: Manacles, common
+      system:
+        description:
+          value: >-
+            <p>Manacles can bind a Medium creature. A manacled creature can use
+            the <em>Escape Artist</em> skill to slip free (DC 30, or DC 35 for
+            masterwork manacles). Breaking the manacles requires a
+            <em>Strength</em> check (DC 26, or DC 28 for masterwork manacles).
+            Manacles have <em>hardness</em> 10 and 10 <em>hit
+            points</em>.</p><p>Most manacles have locks; add the cost of the
+            lock you want to the cost of the manacles.</p><p>For the same cost,
+            you can buy manacles for a Small creature. For a Large creature,
+            manacles cost 10 times the indicated amount, and for a Huge
+            creature, 100 times the indicated amount. Gargantuan, Colossal,
+            Tiny, Diminutive, and Fine creatures can be held only by specially
+            made manacles, which cost at least 100 times the indicated
+            amount.</p><h3>Expanded Information</h3><p><strong>Fetters</strong>:
+            These manacles are specifically designed to fit around the ankles,
+            and use the same rules for breaking, escape, and cost relative to
+            size. A creature in fetters is entangled and can move at only half
+            speed. In addition, a fettered creature must succeed at a DC 15
+            <em>Acrobatics</em> check to move more than its (reduced) speed in a
+            round. If it fails the check by 5 or more, the creature falls
+            prone.</p><p><strong>Frontal Restraint</strong>: A creature whose
+            wrists are bound with manacles can wield only one melee weapon or
+            shield in combat (the weapon may be a two-handed weapon). It cannot
+            make use of ranged weapons, except for crossbows (but even these
+            cannot be reloaded by the bound creature). Any attack the creature
+            makes while manacled takes a -4 penalty. The creature can attempt
+            skill checks using its hands, but at a -5 penalty (-15 on Disable
+            Device checks to pick the lock of manacles the creature is
+            wearing).</p><p><strong>Rear Restraint</strong>: Manacles might be
+            employed to keep a creature's hands behind its back. In such cases,
+            the creature cannot use its hands to effectively employ any weapon
+            or shield. The creature can attempt to use its hands to perform a
+            skill, but at a -10 penalty (-25 on Disable Device checks to pick
+            the lock of manacles the creature is wearing). While manacled, a
+            creature can attempt to flip its arms beneath its legs, bringing its
+            hands in front of itself. This requires a successful DC 25 Escape
+            Artist check (a separate Escape Artist check is then required to
+            escape the manacles).</p><p><strong>Restraining Two
+            Individuals</strong>: Two creatures might share one set of manacles.
+            While manacled together, the manacled individuals must remain
+            adjacent to one another. If they are not working together, they are
+            both treated as grappled. If they are working together, they can
+            move together in the same round (using the movement speed of the
+            slower creature). A manacled creature can forfeit its turn during
+            combat to mimic the other manacled creature's movements, allowing
+            that creature to act as if unrestrained.</p>
+        equipped: false
+        hardness: 10
+        hp:
+          base: 10
+        price: 15
+        sources:
+          - id: PZO9293
+            pages: '15'
+          - id: PZO1110
+            pages: 156-157, 158
+          - id: PZO1123
+            pages: 57, 68
+        subType: adventuring
+        weight:
+          value: 2
+      type: loot
+    k8BHGSxvL6CD3UNt:
+      _id: k8BHGSxvL6CD3UNt
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.fdfdwpuaqjjudyeo
+      img: icons/sundries/books/book-red-cross.webp
+      name: Holy text, cheap
+      system:
+        description:
+          value: >-
+            <p>This is the religious text of a particular religion, with a
+            title, text, and detailed rites specific to that faith. The cheap
+            variety is a small, light book with no illustrations, printed or
+            written on thin paper, and with a cover made of <em>canvas</em> or
+            thin leather.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '57'
+        subType: adventuring
+        weight:
+          value: 1
+      type: loot
+    q7HeytIrRJv7juNM:
+      _id: q7HeytIrRJv7juNM
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.yMoclCylbCRKyaZF
+      img: systems/pf1/icons/items/inventory/soap.jpg
+      name: Soap
+      system:
+        actions:
+          - _id: ootoocddr3l2eoat
+            activation:
+              type: special
+              unchained:
+                type: special
+            name: Use
+        description:
+          value: >-
+            <p>You can use this thick block of soap to scrub clothes, pots,
+            linens, or anything else that might be dirty. A bar of soap has
+            approximately 50 uses.</p>
+        hp:
+          base: 10
+        price: 0.01
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO9410
+            pages: '19'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        uses:
+          maxFormula: '50'
+          per: charges
+          value: 50
+        weight:
+          value: 0.5
+      type: loot
+    uyqzkrSQ9DE4JNBH:
+      _id: uyqzkrSQ9DE4JNBH
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.habofoapdifirevm
+      img: icons/tools/cooking/cauldron-empty.webp
+      name: Pot, common
+      system:
+        description:
+          value: >-
+            <p>This 8-inch-diameter iron pot is sturdy and has feet, a lid, and
+            a rounded handle. It can hold enough stew to feed one hungry human
+            for one meal.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.8
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        tags:
+          - Cooking
+        weight:
+          value: 4
+      type: loot
+    x0onQJGqadR2vzi3:
+      _id: x0onQJGqadR2vzi3
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.bsztkhkrhgmsbqpt
+      img: systems/pf1/icons/items/inventory/waterskin.jpg
+      name: Waterskin
+      system:
+        description:
+          value: >-
+            <p>A water or wineskin holds 1/2 gallon of liquid and weighs 4 lb
+            when full.</p><p><strong>Empty Weight</strong>: -;
+            <strong>Capacity</strong>: 1/2 gallon/4 lb.<sup>1</sup></p><p
+            class="source"><sup>1</sup> When made for Medium characters. Weighs
+            one-quarter the normal amount when made for Small characters. Weighs
+            twice the normal amount when made for Large characters. Containers
+            carry one-quarter the normal amount when made for Small
+            characters.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '58'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        weight:
+          value: 4
+      type: loot
+    yjxKmIxzkLZNJ2ca:
+      _id: yjxKmIxzkLZNJ2ca
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.manvtbznrwjmnrua
+      img: systems/pf1/icons/items/inventory/meat.jpg
+      name: Trail Rations
+      system:
+        actions:
+          - _id: VdYbDgVtRRoWmGoA
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Use
+        description:
+          value: >-
+            <p>The listed price is for a day's worth of food. This bland food is
+            usually some kind of hard tack, jerky, and dried fruit, though the
+            contents vary from region to region and the race of those creating
+            it. As long as it stays dry, it can go for months without
+            spoiling.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.5
+        quantity: 5
+        sources:
+          - id: PZO1123
+            pages: '95'
+          - id: PZO1110
+            pages: '158'
+        subType: food
+        uses:
+          per: single
+        weight:
+          value: 1
+      type: loot
+  sources:
+    - id: PZO1123
+      pages: '57'
+type: container

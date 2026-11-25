@@ -1,0 +1,58 @@
+_id: 9ozs6mdxa4ltwtuw
+_key: '!items!9ozs6mdxa4ltwtuw'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Oppressive Boredom
+system:
+  actions:
+    - _id: dpg7tpntuy3jhtqw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level or until broken (see text)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill your target with boredom. The target loses all interest in its
+      current task and must make a Will save against the spell's effect in order
+      to perform its next action. If the target fails, it takes no action that
+      round. The boredom lasts until the duration expires or the target breaks
+      the spell's effect with a successful Will save.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '230'
+  subschool:
+    - compulsion
+type: spell

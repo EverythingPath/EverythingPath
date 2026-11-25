@@ -1,0 +1,40 @@
+{
+  "purpose": "preview",
+  "summary": {
+    "entries": 1,
+    "issues": 1
+  },
+  "entries": [
+    {
+      "externalKey": "pf1/Action",
+      "pack": "feats",
+      "issues": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "actions": [
+              {
+                "_id": "weaponAction",
+                "conditionals": [
+                  {
+                    "_id": "closeRange",
+                    "name": "Within 30 ft",
+                    "modifiers": [
+                      {
+                        "formula": "1",
+                        "target": "attack",
+                        "subTarget": "allAttack",
+                        "type": "enh"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

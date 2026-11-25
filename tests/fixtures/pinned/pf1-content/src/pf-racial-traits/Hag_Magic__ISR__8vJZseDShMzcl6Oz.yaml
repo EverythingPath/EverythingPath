@@ -1,0 +1,55 @@
+_id: 8vJZseDShMzcl6Oz
+_key: '!items!8vJZseDShMzcl6Oz'
+_stats:
+  coreVersion: '12.331'
+folder: 7BVIiJLxMcXsI6IF
+img: systems/pf1/icons/races/changeling.png
+name: Hag Magic (ISR)
+system:
+  abilityType: sp
+  actions:
+    - _id: uGuLwWboggx9iqS1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: 1st level witch spell
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+    - _id: 8FJGb9gBIrJdZHmJ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: 0 level witch spell
+      uses:
+        self:
+          maxFormula: '3'
+          per: day
+  description:
+    instructions: >-
+      <p>Choose a single witch spell of either first or zero level, update the
+      level appropriate action on details tab of this trait with the parameters
+      of the relevant spell, delete the action for the unchosen spell level.</p>
+    value: >-
+      <p><strong>Race</strong>: Changeling<br /><strong>Replaced
+      Trait(s)</strong>: Natural Armor</p><hr /><p>Some changelings have an
+      innate talent for magic. They can choose one 1st- or 0-level spell from
+      the witch spell list that does not have a material component costing more
+      than 1 gp. They can use the chosen spell as a spell-like ability once per
+      day if it is a 1st-level spell or three times per day if it is a 0-level
+      spell (caster level equal to the changeling's character level). This
+      racial trait replaces natural armor.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '214'
+  subType: racial
+  tags:
+    - Changeling
+  traitCategory: magical
+type: feat

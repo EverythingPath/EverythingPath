@@ -1,0 +1,63 @@
+_id: 2enTpUyXaDcCqALb
+_key: '!items!2enTpUyXaDcCqALb'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: systems/pf1/icons/skills/weapon_12.jpg
+name: Harvester
+system:
+  actions:
+    - _id: ztt5v9kw06j0ew5t
+      ability:
+        attack: _default
+        critMult: 4
+        damage: _default
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(2, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Harvester
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 2d8; <b>Critical</b> x4; <b>Range</b>
+      -; <b>Type</b> S</p><p><b>Crew</b> 4; <b>Aim</b> 0; <b>Load</b> 0;
+      <b>Speed</b> 0 ft.</p><p><b>Category</b> Close Assault; <b>Proficiency</b>
+      Siege Engine</p><h3>Description</h3><p>A variety of scythe-like blades
+      extend from two sides of this wheeled machine. When it's pulled-typically
+      by an aurochs or enslaved giants-the wheels' rotation causes the blades to
+      slash indiscriminately. Each round the harvester moves, it makes a melee
+      attack with a +10 modifier against any adjacent creature it passes; it
+      deals 2d8 points of damage to those it hits. Multiple harvesters can be
+      strung together. The crew required for a train of harvesters is equal to
+      the total crew of the individual machines. Adjacent creatures are attacked
+      by each individual harvester that passes them. A harvester has a hardness
+      of 5 and 50 hit points.</p><p>A harvester is a Large siege engine.</p>
+  hardness: 5
+  hp:
+    base: 50
+  material:
+    base:
+      value: steel
+  price: 800
+  size: lg
+  sources:
+    - id: PZO9276
+      pages: '39'
+  subType: siege
+  weaponSubtype: assault
+type: weapon
