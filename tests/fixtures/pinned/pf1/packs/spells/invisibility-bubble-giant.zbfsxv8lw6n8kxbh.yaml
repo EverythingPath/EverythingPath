@@ -1,0 +1,63 @@
+_id: zbfsxv8lw6n8kxbh
+_key: '!items!zbfsxv8lw6n8kxbh'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Invisibility Bubble, Giant
+system:
+  actions:
+    - _id: 0kprkyznlkjvqzee
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius emanation centered on the touched creature's space
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions as per
+      @UUID[Compendium.pf1.spells.Item.r696gayroq1pwaik]{invisibility bubble},
+      but the bubble is larger, which allows you to target a creature of up to
+      size Gargantuan, or allows more creatures into the bubble.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      mesmerist: 3
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a needle from a sea urchin
+  school: ill
+  sources:
+    - id: PZO92102
+      pages: '60'
+  subschool:
+    - glamer
+type: spell

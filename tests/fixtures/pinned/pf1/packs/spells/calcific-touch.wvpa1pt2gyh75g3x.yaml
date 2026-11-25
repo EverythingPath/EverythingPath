@@ -1,0 +1,54 @@
+_id: wvpa1pt2gyh75g3x
+_key: '!items!wvpa1pt2gyh75g3x'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Calcific Touch
+system:
+  actions:
+    - _id: af49ge3v5pshg8he
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: creature or creatures touched (up to one per level)
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your touch progressively transmutes the substance of creatures you
+      touch into stone. Once per round, you may deliver a touch attack that
+      inflicts 1d4 points of Dexterity damage and slows the target (as the
+      spell) for 1 round. A successful Fortitude save negates the slow effect
+      but not the ability damage. A target reduced to 0 Dexterity is petrified
+      permanently. <i>Break enchantment</i>, <i>restoration</i>, <i>or stone to
+      flesh</i> can reverse the effects of <i>calcific touch</i>.</p>
+  descriptors:
+    - earth
+  learnedAt:
+    class:
+      arcanist: 4
+      bloodrager: 4
+      psychic: 4
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: trs
+  sources:
+    - id: PZO1115
+      pages: '208'
+type: spell

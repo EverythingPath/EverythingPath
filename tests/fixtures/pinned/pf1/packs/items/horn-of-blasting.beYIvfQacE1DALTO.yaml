@@ -1,0 +1,70 @@
+_id: beYIvfQacE1DALTO
+_key: '!items!beYIvfQacE1DALTO'
+_stats:
+  coreVersion: '12.343'
+folder: Xsrr4hrzufdySmSQ
+img: icons/commodities/bones/horn-drinking-white.webp
+name: Horn of Blasting
+system:
+  actions:
+    - _id: kobU9IYorSrwG2B5
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40-foot cone
+      damage:
+        parts:
+          - formula: 5d6
+            types:
+              - sonic
+      duration:
+        units: inst
+      measureTemplate:
+        size: '40'
+        type: cone
+      name: Use
+      save:
+        dc: '16'
+        description: Fortitude half and negates the deafening
+        type: fort
+      target:
+        value: Creatures and crystalline objects
+  aura:
+    school: evo
+  cl: 7
+  description:
+    unidentified: >-
+      <p>This spiraling animal horn can be sounded and be played as an
+      instrument.</p>
+    value: >-
+      <p>This spiraling animal horn can be sounded as a normal horn, but if the
+      command word is spoken and the instrument is then played, it deals 5d6
+      points of sonic damage to creatures within a 40-foot cone and causes them
+      to be deafened for 2d6 rounds (a DC 16 Fortitude save reduces the damage
+      by half and negates the deafening). Crystalline objects and creatures take
+      7d6 points of sonic damage, with no save unless they're held, worn, or
+      carried by creatures (Fortitude DC 16 negates).</p><p>If a <em>horn of
+      blasting</em> is used magically more than once in a given day, there is a
+      20% cumulative chance with each extra use that it explodes and deals 10d6
+      points of sonic damage to the person sounding
+      it.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.bacuzpculp9tld48]{shout};
+      <strong>Cost</strong> 10,000 gp</p>
+  hp:
+    base: 10
+  price: 20000
+  sources:
+    - id: PZO1123
+      pages: '302'
+    - id: PZO1110
+      pages: '519'
+  subType: wondrous
+  unidentified:
+    name: Horn
+  weight:
+    value: 1
+type: equipment

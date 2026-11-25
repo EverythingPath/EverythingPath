@@ -1,0 +1,63 @@
+_id: 597thk7efof38132
+_key: '!items!597thk7efof38132'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-embers-glow-yellow-purple.webp
+name: Delay Disease
+system:
+  actions:
+    - _id: gpbuad8wi7rk3owt
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target becomes temporarily immune to disease. Any disease to which
+      it is exposed during the spell's duration does not affect the target until
+      the spell's duration has expired. If the target is currently infected with
+      a disease, you must make a caster level check against the disease's DC to
+      suspend it for the duration of the spell; otherwise, that disease affects
+      the target normally. <i>Delay disease</i> does not cure any damage a
+      disease may have already done.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      cleric: 2
+      druid: 2
+      hunter: 2
+      inquisitor: 2
+      investigator: 2
+      mesmerist: 2
+      oracle: 2
+      paladin: 2
+      ranger: 2
+      warpriest: 2
+      witch: 1
+  level: 2
+  school: con
+  sources:
+    - id: PZO1121
+      pages: '155'
+  subschool:
+    - healing
+type: spell

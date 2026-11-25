@@ -1,0 +1,65 @@
+_id: W04roMBNFAtgR2ZS
+_key: '!items!W04roMBNFAtgR2ZS'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/nunchaku.png
+name: Sansetsukon
+system:
+  actions:
+    - _id: h0hf9etdm6rr40j4
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Sansetsukon
+  description:
+    unidentified: >-
+      <p>Also called a three-section staff, this weapon is divided into three
+      2-footlong segments chained together, allowing the wielder greater
+      flexibility than a normal staff and allowing the weapon to be swung
+      rapidly to create a defensive block, wrap and catch weapons, or harness
+      momentum via a whipping motion for powerful strikes.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 8
+  properties:
+    blc: true
+    dis: true
+    mnk: true
+  sources:
+    - id: PZO1123
+      pages: '19'
+  subType: martial
+  weaponGroups:
+    - flails
+    - monk
+  weaponSubtype: 2h
+  weight:
+    value: 3
+type: weapon

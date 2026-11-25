@@ -1,0 +1,58 @@
+_id: lmst00dtapf4xhya
+_key: '!items!lmst00dtapf4xhya'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/lightning/fist-unarmed-strike-blue.webp
+name: Force Punch
+system:
+  actions:
+    - _id: o6rxv4ue0kqrredg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell charges your hand with telekinetic force. Your successful
+      melee touch attack deals 1d4 points of force damage per level (maximum
+      10d4) and causes the target to be pushed away from you in a straight line
+      up to 5 feet per two caster levels. For every size category of the target
+      above Medium, reduce the distance pushed by 5 feet (-5 feet for Large, -10
+      feet for Huge, -15 for Gargantuan, and -20 feet for Colossal) to a minimum
+      of 0 feet. A successful Fortitude save negates the movement but not the
+      damage.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      magus: 3
+      psychic: 3
+      sorcerer: 3
+      spiritualist: 3
+      wizard: 3
+    subDomain:
+      Fist: 4
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '221'
+type: spell

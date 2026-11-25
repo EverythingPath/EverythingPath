@@ -1,0 +1,63 @@
+_id: n3E6bZfR6PVCRS3j
+_key: '!items!n3E6bZfR6PVCRS3j'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/shotel.png
+name: Temple Sword
+system:
+  actions:
+    - _id: 57k1g170k7hhbcpj
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Temple Sword
+  description:
+    unidentified: >-
+      <p>Heavy blades typically used by guardians of religious sites, temple
+      swords have distinctive crescentshaped blades, which appear to be an
+      amalgam of sickle and sword. Many have holes drilled into the blade or the
+      pommel so that charms, bells, or other holy trinkets can be attached to
+      reflect the owner's devotion or to serve as foci for prayer or meditation.
+      Monks are proficient with the temple sword.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 30
+  properties:
+    mnk: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+    - monk
+  weaponSubtype: 1h
+  weight:
+    value: 3
+type: weapon

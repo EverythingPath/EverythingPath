@@ -1,0 +1,66 @@
+_id: td7njmfarubxh6u3
+_key: '!items!td7njmfarubxh6u3'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Shroud of Darkness
+system:
+  actions:
+    - _id: rm4djii6jehw53on
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/3 levels, no two of which can be more than 30 ft. apart
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a dark incantation and a gesture of your hand over your eyes, you
+      cause a shroud of <i>darkness</i> to descend upon the targets of this
+      spell. The subjects treat the light level as two steps lower than normal
+      for the duration of this spell. Bright light becomes dim light, normal
+      light becomes <i>darkness</i>, and areas of dim light and <i>darkness</i>
+      become supernaturally dark (as <i>darkness</i>, but even creatures with
+      darkvision cannot see).</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    class:
+      antipaladin: 4
+      arcanist: 5
+      bard: 5
+      cleric: 5
+      inquisitor: 5
+      mesmerist: 4
+      oracle: 5
+      shaman: 5
+      skald: 5
+      sorcerer: 5
+      warpriest: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a pinch of black sand
+  school: evo
+  sources:
+    - id: PZO9296
+      pages: '13'
+type: spell
