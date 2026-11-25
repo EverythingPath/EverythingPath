@@ -1,0 +1,69 @@
+_id: 6rndjc976yelg14e
+_key: '!items!6rndjc976yelg14e'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Speak with Plane
+system:
+  actions:
+    - _id: 1kjkh9kuh63ha1v9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (see text)
+        type: will
+      target:
+        value: one plane with a sentient structure
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You tap into the awareness and consciousness of a plane with a sentient
+      structure (<i>Planar Adventures</i> 60), allowing it to answer questions.
+      A tangible manifestation of the plane (such as the ground) must be within
+      the spell's range upon casting.  You can ask the sentient plane one
+      question per 2 caster levels. If the plane's alignment is at least one
+      step away from yours, the plane can attempt a Will save to resist the
+      spell. A plane typically has a +20 bonus on Will saves, and a demiplane
+      typically has a +15 bonus on Will saves. A plane's traits can further
+      affect these bonuses: a mildly aligned plane receives a +2 bonus, and a
+      strongly aligned plane or a plane with the wild magic trait receives a +4
+      bonus on its save.  If a plane has been subject to this spell within the
+      past week, a new casting of this spell targeting the same plane fails. If
+      <i>Speak with Plane</i> targets a plane that does not have a sentient
+      structure, the spell fails.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      medium: 3
+      oracle: 4
+      shaman: 4
+      sorcerer: 4
+      summoner: 3
+      summonerUnchained: 3
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: a small glass bead
+  school: div
+  sources:
+    - id: PZO9492
+      pages: '12'
+type: spell

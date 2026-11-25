@@ -1,0 +1,54 @@
+_id: bssd4dmnz6m5yrf2
+_key: '!items!bssd4dmnz6m5yrf2'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Winged Sword
+system:
+  actions:
+    - _id: uleqw6dcll9x6i4r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one melee weapon
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The weapon targeted by this spell grows small feathered wings. For the
+      duration of the spell, the weapon acts as if it had the <i>throwing</i>
+      weapon special ability. This spell can be used in place of <i>magic
+      stone</i> as a prerequisite for the <i>throwing</i> weapon special
+      ability.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      inquisitor: 3
+      magus: 2
+      occultist: 2
+      paladin: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO9465
+      pages: '10'
+type: spell

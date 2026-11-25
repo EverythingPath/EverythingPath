@@ -1,0 +1,51 @@
+_id: w76u0zl4b5e5ir3e
+_key: '!items!w76u0zl4b5e5ir3e'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/melee/sword-damaged-broken-orange.webp
+name: Break, Greater
+system:
+  actions:
+    - _id: ti05g62shccew0ah
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: all Medium or smaller objects in a 30-ft. burst centered on you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You release a burst of destructive energy. Each Medium or smaller
+      object in the area gains the broken condition unless it succeeds at a
+      Fortitude saving throw. If a broken object fails this save, it is instead
+      destroyed. Magic items can be broken by this spell, but not destroyed.
+      Objects in your possession are not immune.</p>
+  learnedAt:
+    class:
+      arcanist: 6
+      bloodrager: 4
+      occultist: 6
+      psychic: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 100
+    value: an unbroken platinum tuning fork worth 100 gp
+  school: trs
+  sources:
+    - id: PZO1134
+      pages: '205'
+type: spell

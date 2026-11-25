@@ -1,0 +1,183 @@
+_id: zDEBYg9tQ8I6BmBc
+_key: '!items!zDEBYg9tQ8I6BmBc'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Genial Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: m8fxBNAtL0wjViqp
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm
+        person},</p><p>This charm makes a humanoid creature regard you as its
+        trusted friend and ally (treat the target's attitude as friendly). If
+        the creature is currently being threatened or attacked by you or your
+        allies, however, it receives a +5 bonus on its saving throw.</p><p>The
+        spell does not enable you to control the charmed person as if it were an
+        automaton, but it perceives your words and actions in the most favorable
+        way. You can try to give the subject orders, but you must win an opposed
+        Charisma check to convince it to do anything it wouldn't ordinarily do.
+        (Retries are not allowed.) An affected creature never obeys suicidal or
+        obviously harmful orders, but it might be convinced that something very
+        dangerous is worth doing. Any act by you or your apparent allies that
+        threatens the charmed person breaks the spell. You must speak the
+        person's language to communicate your commands, or else be good at
+        pantomiming.</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm Person
+      notes:
+        effect:
+          - DC includes the +1 bonus provided by this trait.
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod + 12'
+        description: Negates
+        type: will
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: SWlA55fk8tR16Sxk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.o8ds5jtvf0hf92dw]{guidance},</p><p>This
+        spell imbues the subject with a touch of divine guidance.</p><p>The
+        creature gets a +1 competence bonus on a single attack roll, saving
+        throw, or skill check. It must choose to use the bonus before making the
+        roll to which it applies.</p>
+      duration:
+        units: spec
+        value: 1 minute or until discharged
+      name: Guidance
+      range:
+        units: touch
+      save:
+        dc: '@abilities.cha.mod +10'
+        description: Negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: u6ClRpIRwk1uloxT
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.msaqovkgfxi6q8s8]{message},</p><p>You
+        can whisper messages and receive whispered replies.</p><p>Those nearby
+        can hear these messages with a DC 25 Perception check. You point your
+        finger at each creature you want to receive the message. When you
+        whisper, the whispered message is audible to all targeted creatures
+        within range.</p><p>Magical silence, @Distance[1 ft;dual] of stone, 1
+        inch of common metal (or a thin sheet of lead), or @Distance[3 ft;dual]
+        of wood or dirt blocks the spell.</p><p>The message does not have to
+        travel in a straight line. It can circumvent a barrier if there is an
+        open path between you and the subject, and the path's entire length lies
+        within the spell's range. The creatures that receive the message can
+        whisper a reply that you hear. The spell transmits sound, not meaning;
+        it doesn't transcend language barriers. To speak a message, you must
+        mouth the words and whisper.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10'
+      name: Message
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: up to [[@attributes.hd.total ]] creatures
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: bF8ffxXrEFsCMgC3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  changes:
+    - _id: BYQvQKsw
+      formula: '1'
+      target: dc.school.enc
+      type: racial
+  description:
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic</p><hr /><p>Gnomes with this racial trait add 1 to the DC of
+      saving throws against enchantment spells that they cast. Gnomes with
+      Charisma scores of 11 or higher also gain the following spell-like
+      abilities:
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm
+      person}, @UUID[Compendium.pf1.spells.Item.o8ds5jtvf0hf92dw]{guidance},
+      @UUID[Compendium.pf1.spells.Item.msaqovkgfxi6q8s8]{message}</em>, and
+      <em>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}</em>.
+      The caster level for these effects is equal to the gnome's level. The DC
+      for these spells is equal to 10 + the spell's level + the gnome's Charisma
+      modifier. This racial trait replaces gnome magic.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9476
+      pages: '14'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

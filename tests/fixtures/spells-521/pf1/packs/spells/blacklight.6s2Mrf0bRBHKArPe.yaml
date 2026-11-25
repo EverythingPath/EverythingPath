@@ -1,0 +1,61 @@
+_id: 6s2Mrf0bRBHKArPe
+_key: '!items!6s2Mrf0bRBHKArPe'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/unholy/barrier-shield-glowing-pink.webp
+name: Blacklight
+system:
+  actions:
+    - _id: iw7vwyu2wpo4r7op
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius emanation
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates or none (object)
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create an area of total darkness. The darkness is impenetrable even
+      to darkvision, but you can see normally within it. Creatures outside the
+      spell's area, even you, cannot see through it.</p>
+
+      <p>You can cast the spell on a point in space, but the effect is
+      stationary unless cast on a mobile object. You can cast the spell on a
+      creature, and the effect then radiates from the creature and moves as it
+      moves. Unattended objects and points in space do not get saving throws or
+      benefit from spell resistance. <em>Blacklight</em> counters or dispels any
+      light spell of equal or lower level. <em>Daylight</em> counters or dispels
+      <em>blacklight</em>.</p>
+  descriptors:
+    - darkness
+  learnedAt:
+    class:
+      arcanist: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1111
+      pages: '206'
+  tags:
+    - '3.5'
+type: spell

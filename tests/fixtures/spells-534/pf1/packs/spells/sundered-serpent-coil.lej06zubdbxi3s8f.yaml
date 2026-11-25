@@ -1,0 +1,58 @@
+_id: lej06zubdbxi3s8f
+_key: '!items!lej06zubdbxi3s8f'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Sundered Serpent Coil
+system:
+  actions:
+    - _id: obsrahnm5hvsibac
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one 5-foot square
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Use
+      range:
+        units: medium
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.wralcmyi4tdcai24]{black tentacles},
+      except it creates a Large decapitated snake, which erupts from the ground
+      and grapples a creature you specify within its 5-foot reach. As a standard
+      action, you can command the snake to release its grappled target and
+      direct it to attack a different creature.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      magus: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a snake scale
+  school: con
+  sources:
+    - id: PZO1130
+      pages: '200'
+  sr: false
+  subschool:
+    - creation
+type: spell

@@ -1,0 +1,48 @@
+_id: M6rx2faMBFZFzuY9
+_key: '!items!M6rx2faMBFZFzuY9'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/abilities/mouth-teeth-long-red.webp
+name: Summon Barghest II
+system:
+  actions:
+    - _id: KSvA8aSL0RAlxYod
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned greater barghest or 1d3 summoned barghest
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.ViSMOM9zfKVQLvCQ], save that it can summon 1
+      greater barghest or 1d3 normal barghests with 2 growth points each.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      cleric: 6
+      oracle: 6
+      warpriest: 6
+  level: 6
+  school: con
+  sources:
+    - id: DYN0010-A
+      pages: '26'
+  sr: false
+  subschool:
+    - summoning
+type: spell

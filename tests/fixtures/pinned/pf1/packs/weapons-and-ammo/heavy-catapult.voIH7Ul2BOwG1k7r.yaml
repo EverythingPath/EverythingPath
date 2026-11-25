@@ -1,0 +1,76 @@
+_id: voIH7Ul2BOwG1k7r
+_key: '!items!voIH7Ul2BOwG1k7r'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/catapult-simple.webp
+name: Heavy Catapult
+system:
+  actions:
+    - _id: thufxz0lxinzdph2
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(8, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        minUnits: ft
+        minValue: '100'
+        units: ft
+        value: '300'
+  ammo:
+    type: siege
+  baseTypes:
+    - Heavy Catapult
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 8d6; <b>Critical</b> x2; <b>Range</b>
+      300 ft. (100 ft. min.); <b>Type</b> B</p><p><b>Crew</b> 4; <b>Aim</b> 3;
+      <b>Load</b> 3; <b>Speed</b> 0 ft.</p><p><b>Category</b> Indirect-Fire
+      (Gargantuan); <b>Proficiency</b> Siege
+      Engine</p><h3>Description</h3><p>Catapults are stone-throwing siege
+      engines powered by winched arms that run through torsion skeins, and hold
+      their payload in a cup that swings up and over the weapon when released.
+      Catapults can hurl a variety of different types of ammunition (the damage
+      given is for stone projectiles; other types of ammunition can be found
+      later in this chapter). They are indirect-fire siege
+      engines.</p><p><em>Light</em>: These catapults are Large and often mounted
+      on wheels. The targeting DC of a light catapult is 15. Light catapults
+      have a hardness of 5 and 50 hit points. Light catapult stones cost 10 gp
+      and weigh 50 pounds each. <em>Standard</em>: These Huge siege engines are
+      too large to be transported to the battlefield in one piece, and require
+      assembly. They typically hurl large stones indirectly at a target
+      (targeting DC 20). Standard catapults have a hardness of 5 and 100 hit
+      points. Standard catapult stones cost 15 gp and weigh 75 pounds each.
+      <em>Heavy</em>: These Gargantuan siege engines are too large to be
+      transported to the battlefield in one piece, and require assembly. They
+      typically hurl large stones indirectly at a target (targeting DC 25).
+      Heavy catapults have a hardness of 5 and 200 hit points. Heavy catapult
+      stones cost 25 gp and weigh 90 pounds each.</p>
+  hardness: 5
+  hp:
+    base: 200
+  material:
+    base:
+      value: steel
+  price: 1000
+  size: grg
+  sources:
+    - id: PZO1118
+      pages: '162'
+  subType: siege
+  weaponSubtype: indirect
+type: weapon

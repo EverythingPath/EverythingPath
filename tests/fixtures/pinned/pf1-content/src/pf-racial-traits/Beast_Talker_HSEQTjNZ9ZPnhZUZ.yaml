@@ -1,0 +1,113 @@
+_id: HSEQTjNZ9ZPnhZUZ
+_key: '!items!HSEQTjNZ9ZPnhZUZ'
+_stats:
+  coreVersion: '12.331'
+folder: 4OV6db7IrcSr0odh
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Beast Talker
+system:
+  actions:
+    - _id: iUGNAHATvZniPPjm
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+        animals}</p><p>You can ask questions of and receive answers from
+        animals, but the spell doesn't make them any more friendly than normal.
+        Wary and cunning animals are likely to be terse and evasive, while the
+        more stupid ones make inane comments. If an animal is friendly toward
+        you, it may do some favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: speak with animals- beast talker
+      notes:
+        effect:
+          - Use Wisdom for concentration checks
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11) * 1440
+          per: day
+    - _id: SsaeDYYERTJlLeS3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Each time you assumes bestial form, you can choose to increase one
+        physical ability score with a +2 racial bonus (Strength, Dexterity, or
+        Constitution) and to gain one of the following
+        features:</p><ul><li><p>Two claw attacks that each deal 1d4 points of
+        damage,</p></li><li><p>Darkvision to a range of @Distance[60 ft;dual],
+        or a</p></li><li><p>+1 natural armor bonus.</p></li></ul><p>These
+        benefits last until you return to humanoid form as a swift action or for
+        upto 1 minute per level.</p><p></p><p><strong>+2 Strength:</strong>
+        @Toggle[Change Shape (Skinwalker - Beast Talker, STR)]</p><p><strong>+2
+        Dexterity:</strong> @Toggle[Change Shape (Skinwalker - Beast Talker,
+        DEX)]</p><p><strong>+2 Constitution:</strong> @Toggle[Change Shape
+        (Skinwalker - Beast Talker, CON)]</p><p><strong>Natural Armor:</strong>
+        @Toggle[Change Shape (Skinwalker - Beast Talker, Natural
+        Armor)]</p><p><strong>Darkvision:</strong> @Toggle[Change Shape
+        (Skinwalker - Beast Talker, Darkvision)]</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Change Shape-beast talker
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    instructions: >-
+      <p>Remove
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.mLxAldGcZ0UnEfd7]{Change
+      Shape (Skinwalker)}
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.ZEVsEIPpOyHmpmEe]{Spell-Like
+      Ability (Skinwalker)} to ensure no conflicts with ability usage. Note that
+      the trait specifies the speak with animals SLA so may not apply to
+      subraces. If used in conjunction with a subrace you would need to limit
+      duration of any associated buffs.</p><p><span
+      style="mso-ansi-language:EN-CA">You must modify your natural attack(s) to
+      match the parameters specified in this trait or its parent, including
+      setting damage, reach, etc. manually. These natural attacks may only be
+      used when selected during a shape change.</span></p>
+    value: >-
+      <p><strong>Race</strong>: Skinwalker<br /><strong>Replaced
+      Trait(s)</strong>: alters the change shape and spell-like ability racial
+      traits.</p><hr /><p>Some skinwalkers' ability to communicate with animals
+      is stronger than their ability to transform. Such skinwalkers can only use
+      their change shape ability once per day for 1 minute per level, but they
+      can use their <em>speak with animals </em>spell-like ability at will. This
+      racial trait alters the change shape and spell-like ability racial
+      traits.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.MZnbCVzqpvPsMvfT
+      - name: Change Shape (Skinwalker - Beast Talker, CON)
+        uuid: Compendium.pf-content.pf-buffs.Item.mEyDsdVHR2V9oQQP
+      - name: Change Shape (Skinwalker - Beast Talker, Natural Armor)
+        uuid: Compendium.pf-content.pf-buffs.Item.8tGMOYDj4liqSfQw
+      - name: Change Shape (Skinwalker - Beast Talker, Darkvision)
+        uuid: Compendium.pf-content.pf-buffs.Item.jEgbtdL61unyTlQc
+      - name: Change Shape (Skinwalker - Beast Talker, STR)
+        uuid: Compendium.pf-content.pf-buffs.Item.PrftgCwJL1GNw2Z0
+      - name: Change Shape (Skinwalker - Beast Talker, DEX)
+        uuid: Compendium.pf-content.pf-buffs.Item.HCA9XtDHKEM0LKPf
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '216'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Beast Talker
+type: feat

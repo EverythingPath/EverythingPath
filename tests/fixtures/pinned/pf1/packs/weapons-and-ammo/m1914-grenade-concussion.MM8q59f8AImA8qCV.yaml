@@ -1,0 +1,69 @@
+_id: MM8q59f8AImA8qCV
+_key: '!items!MM8q59f8AImA8qCV'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/thrown/bomb-fuse-black.webp
+name: M1914 Grenade (Concussion)
+system:
+  actions:
+    - _id: 0djf18dcarlidn53
+      actionType: save
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(3, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Attack
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+      save:
+        dc: '15'
+        description: Reflex half
+        type: ref
+  baseTypes:
+    - M1914 Grenade (Concussion)
+  description:
+    unidentified: >-
+      <p>This time-delayed concussion grenade is a mainstay of trench warfare.
+      The device appears to be little more than a metal cylinder tapering to a
+      handle containing a spring-loaded lever. To detonate the device, you
+      disengage the safety pin while depressing the handle's lever, which
+      releases the firing pin when thrown. The device detonates at the beginning
+      of your next turn, hopefully in the area you targeted.</p>
+
+      <p>The device relies on a concussive blast to deal damage, and all
+      creatures within a 20-foot radius take 3d6 points of bludgeoning damage
+      (Reflex DC 15 for half ).</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 50
+  properties:
+    spc: true
+  sources:
+    - id: PZO9071
+      pages: '64'
+  subType: misc
+  tags:
+    - Modern Firearm
+  weaponSubtype: other
+  weight:
+    value: 1
+type: weapon
