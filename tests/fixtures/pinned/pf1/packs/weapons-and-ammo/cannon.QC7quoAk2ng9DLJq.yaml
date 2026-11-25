@@ -1,0 +1,62 @@
+_id: QC7quoAk2ng9DLJq
+_key: '!items!QC7quoAk2ng9DLJq'
+_stats:
+  coreVersion: '12.343'
+folder: kcvTVAG7Ax7g3UcQ
+img: icons/weapons/artillery/cannon-simple.webp
+name: Cannon
+system:
+  actions:
+    - _id: ia8tzcyaivl5451t
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(6, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '100'
+  ammo:
+    type: siege
+  baseTypes:
+    - Cannon
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 6d6; <b>Critical</b> x4; <b>Range</b>
+      100 ft.; <b>Type</b> B and P</p><p><b>Crew</b> 2; <b>Aim</b> 1;
+      <b>Load</b> 3; <b>Speed</b> 10 ft.</p><p><b>Category</b> Direct-Fire
+      (Large); <b>Proficiency</b> Siege Engine</p><h3>Description</h3><p>Cannons
+      are crafted of metal-some are cast in one piece, others welded with iron
+      bands-and mounted either in the ground or on wooden frames. Cannons use
+      black powder to propel their projectiles with great force. A cannon has a
+      misfire range of 1 (20 feet). Cannons have a hardness of 10 and 70 hit
+      points. Cannon balls cost 30 gp each and weigh 25 pounds.</p>
+  hardness: 10
+  hp:
+    base: 70
+  material:
+    base:
+      value: steel
+  price: 6000
+  size: lg
+  sources:
+    - id: PZO1118
+      pages: '162'
+  subType: siege
+  weaponSubtype: direct
+type: weapon

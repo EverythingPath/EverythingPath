@@ -1,0 +1,64 @@
+_id: a6w5DSGKSZo6LvTN
+_key: '!items!a6w5DSGKSZo6LvTN'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/sickle-sword.png
+name: Sickle-Sword
+system:
+  actions:
+    - _id: hn3eshanjle8bkrc
+      ability:
+        attack: _default
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Sickle-Sword
+  description:
+    unidentified: >-
+      <p>Favored by those residents of Irrisen with no talent for witchcraft,
+      this exotic blade curves multiple times along its 3-1/2 feet. The
+      sickle-sword's hilt is long and curved, and its blade bears a small
+      secondary grip partway up its length. These allow a wielder with a free
+      hand to rapidly twist the sword in unpredictable ways. When wielding a
+      sickle-sword in one hand and nothing in the other, you can spend a swift
+      action to gain a +2 bonus on your next attack roll before the end of your
+      turn.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 20
+  properties:
+    dst: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon

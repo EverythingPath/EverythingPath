@@ -1,0 +1,67 @@
+_id: e185z4g1taqtaq9d
+_key: '!items!e185z4g1taqtaq9d'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Compel Hostility
+system:
+  actions:
+    - _id: 2jxg92mtwt56hqi2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: see text
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Whenever a creature you can see that threatens you makes an attack
+      against one of your allies, as an immediate action, you can compel that
+      creature to attack you instead. When you compel a creature to attack you,
+      you must first overcome that creature's spell resistance, and the creature
+      can attempt a Will saving throw to ignore the compulsion.</p><p>A summoner
+      casting this spell can choose his eidolon as the target of the spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 1
+      cleric: 1
+      hunter: 1
+      inquisitor: 1
+      medium: 1
+      mesmerist: 1
+      oracle: 1
+      paladin: 1
+      psychic: 1
+      ranger: 1
+      skald: 1
+      summoner: 1
+      summonerUnchained: 1
+      warpriest: 1
+      witch: 1
+  materials:
+    value: a drop of your blood
+  school: enc
+  sources:
+    - id: PZO1118
+      pages: '226'
+  sr: false
+  subschool:
+    - compulsion
+type: spell

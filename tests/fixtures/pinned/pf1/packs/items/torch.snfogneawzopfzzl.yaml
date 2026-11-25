@@ -1,0 +1,96 @@
+_id: snfogneawzopfzzl
+_key: '!items!snfogneawzopfzzl'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: systems/pf1/icons/items/inventory/torch.jpg
+name: Torch
+system:
+  actions:
+    - _id: 7IkvstJGhp2Kfl21
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      name: Enlight (using flint and steal)
+      tag: ignite
+    - _id: KNOoanyFVJlRjrdg
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-2[Improvised Weapon]'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+          - formula: '1'
+            types:
+              - fire
+      extraAttacks:
+        type: standard
+      name: Attack
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: shc8HOmsOaDPbFKX
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Extinguish
+      tag: extinguish
+  description:
+    value: >-
+      <p>A torch burns for 1 hour, shedding normal light in a 20-foot radius and
+      increasing the light level by one step for an additional 20 feet beyond
+      that area (darkness becomes dim light and dim light becomes normal light).
+      A torch does not increase the light level in normal light or bright light.
+      If a torch is used in combat, treat it as a one-handed improvised weapon
+      that deals bludgeoning damage equal to that of a gauntlet of its size,
+      plus 1 point of fire damage.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 0.01
+  scriptCalls:
+    - _id: X6fUtOgays06HuzF
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 40 }));
+    - _id: B7q2csNBZkQnLMYQ
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "extinguish") return;
+
+        // Lights off as it comes from Foundry default
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1123
+      pages: 58, 74
+    - id: PZO1110
+      pages: 157, 158
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

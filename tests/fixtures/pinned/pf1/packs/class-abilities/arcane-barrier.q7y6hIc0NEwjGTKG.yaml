@@ -1,0 +1,44 @@
+_id: q7y6hIc0NEwjGTKG
+_key: '!items!q7y6hIc0NEwjGTKG'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Arcane Barrier
+system:
+  abilityType: su
+  actions:
+    - _id: 15zdt8kiivu5dmw7
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p>As a swift action, the arcanist can expend 1 point from her arcane
+      reservoir to create a barrier of magic that protects her from harm. This
+      barrier grants the arcanist a number of temporary hit points equal to her
+      arcanist level + her Charisma modifier, and lasts for 1 minute per
+      arcanist level or until all the temporary hit points have been lost.</p>
+
+      <p>Each additional time per day the arcanist uses this ability, the number
+      of arcane reservoir points she must spend to activate it increases by 1
+      (so the second time it is used, the arcanist must expend 2 points from her
+      arcane reservoir, 3 points for the third time, and so on). The temporary
+      hit points from this ability do not stack with themselves, but additional
+      uses do cause the total number of temporary hit points and the duration to
+      reset.</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit
+type: feat

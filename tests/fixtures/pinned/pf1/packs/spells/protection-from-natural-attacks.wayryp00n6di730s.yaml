@@ -1,0 +1,59 @@
+_id: wayryp00n6di730s
+_key: '!items!wayryp00n6di730s'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/barrier-shield-dome-deflect-blue.webp
+name: Protection from Natural Attacks
+system:
+  actions:
+    - _id: cunur0zxiszaeibo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Upon casting this spell, select one type of natural attack from the
+      following: bite, claw, gore, hoof, pincers, slam, sting, swarm, tail slap,
+      talon, tentacle, or wing. For the duration of the spell, the target gains
+      DR 5/- against all attacks from natural weapons of the selected type.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      druid: 4
+      hunter: 2
+      investigator: 3
+      psychic: 4
+      ranger: 2
+      shaman: 4
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+  level: 4
+  materials:
+    value: a scale from a lizard
+  school: abj
+  sources:
+    - id: PZO9478
+      pages: '30'
+type: spell

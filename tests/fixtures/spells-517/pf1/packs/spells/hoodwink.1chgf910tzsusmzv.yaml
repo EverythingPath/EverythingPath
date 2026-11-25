@@ -1,0 +1,75 @@
+_id: 1chgf910tzsusmzv
+_key: '!items!1chgf910tzsusmzv'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Hoodwink
+system:
+  actions:
+    - _id: gs8wppv8wlsrb3ea
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          up to one creature/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You befuddle the targets' senses, preventing the targets from clearly
+      perceiving their surroundings. Instead, <em>hoodwink</em>ed creatures see
+      only the roughest shapes and details and hear only muffled noises.
+      However, targets can clearly hear verbal communication from the spell's
+      caster. This spell does not impart understanding of the caster's language
+      if the creature can't already understand it. Other than to hear the caster
+      speak, targets automatically fail Perception checks with DCs greater than
+      5, and they are too disoriented by the spell to accurately remember the
+      path they took while under its effects.</p><p>While under the effects of
+      this spell, targets without the help of a guide move at half speed, and
+      any attacks they make are treated as though the creature they are
+      attacking had concealment.</p><p>Moving faster than half speed requires
+      targets to succeed at a DC 10 Acrobatics check. Those that fail this check
+      fall prone. If the target is attacked or physically harmed by any creature
+      other than another target of <em>hoodwink</em>, the spell's effect ends
+      immediately for that target only.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      medium: 2
+      mesmerist: 2
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: small piece of black cloth
+  school: enc
+  sources:
+    - id: PZO1136
+      pages: '212'
+  subschool:
+    - compulsion
+type: spell

@@ -1,0 +1,79 @@
+_id: pQRscj9fI2UyLRCX
+_key: '!items!pQRscj9fI2UyLRCX'
+_stats:
+  coreVersion: '12.331'
+folder: PIVj1MVMqsVbaJAX
+img: icons/svg/book.svg
+name: Stench Aura
+system:
+  actions:
+    - _id: mWGzXdOz2IFj2Ggy
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Members of this race secrete a terrible scent as a @Distance[15
+        ft;dual] aura that nearly every other creature finds offensive. All
+        living creatures (except those with the stench aura ability) within the
+        aura must succeed at a Fortitude saving throw (DC 10 + 1/2 the user’s
+        character level + the user’s Constitution modifier) or be sickened for 5
+        rounds. Creatures that succeed at the saving throw cannot be sickened by
+        the same creature’s stench aura for 24 hours. A delay poison or
+        neutralize poison spell or similar effect removes the effect from the
+        sickened creature. This is a poison effect.</p>
+      duration:
+        units: round
+        value: '5'
+      name: Stench Aura
+      notes:
+        effect:
+          - Creatures that fail are @Condition[sickened] for 5 rounds
+        footer:
+          - >-
+            Creatures that succeed at the saving throw cannot be sickened by the
+            same creature’s stench aura for 24 hours. A delay poison or
+            neutralize poison spell or similar effect removes the effect from
+            the sickened creature. This is a poison effect.
+      range:
+        units: ft
+        value: '15'
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: negates
+        type: fort
+      target:
+        value: All living creatures (except those with the stench aura ability)
+  description:
+    value: >-
+      <p><strong>Prerequisite:</strong>
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.3rMyzHeDptW8wAaR]{Monstrous
+      Humanoid} type, reptilian subtype, or
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.VZg9M6DaaZkIA8ql]{Undead}
+      type</p><p><strong>Special</strong>: This trait can be taken up to two
+      times. The second time it is taken, the size of the aura increases to
+      @Distance[30 ft;dual], and the duration of the effect increases to 10
+      rounds.</p><hr /><p>Members of this race secrete a terrible scent as a
+      @Distance[15 ft;dual] aura that nearly every other creature finds
+      offensive. All living creatures (except those with the stench aura
+      ability) within the aura must succeed at a Fortitude saving throw (DC 10 +
+      1/2 the user’s character level + the user’s Constitution modifier) or be
+      sickened for 5 rounds. Creatures that succeed at the saving throw cannot
+      be sickened by the same creature’s stench aura for 24 hours. A delay
+      poison or neutralize poison spell or similar effect removes the effect
+      from the sickened creature. This is a poison effect.</p><p><strong>Related
+      buff:</strong> @Toggle[Stench Aura]</p>
+  links:
+    supplements:
+      - name: Stench Aura
+        uuid: Compendium.pf-content.pf-buffs.Item.aDfhYYfmFOdJxPJz
+  racePoints: 4
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '234'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: offense
+type: feat

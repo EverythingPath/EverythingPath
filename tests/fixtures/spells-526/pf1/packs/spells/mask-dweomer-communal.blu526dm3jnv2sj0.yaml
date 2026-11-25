@@ -1,0 +1,53 @@
+_id: blu526dm3jnv2sj0
+_key: '!items!blu526dm3jnv2sj0'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Mask Dweomer, Communal
+system:
+  actions:
+    - _id: pdln97luqs58nxge
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: none; see text
+      target:
+        value: creatures or objects touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.gvae8m5lvfnrazq3]{mask dweomer}, except
+      you divide the duration in 1-day increments among the creatures or objects
+      touched.</p>
+  learnedAt:
+    class:
+      occultist: 2
+      psychic: 2
+      witch: 2
+  level: 2
+  materials:
+    value: a piece of gauze
+  school: ill
+  sources:
+    - id: PZO1118
+      pages: '236'
+  sr: false
+  subschool:
+    - glamer
+type: spell

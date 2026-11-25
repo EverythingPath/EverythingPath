@@ -1,0 +1,75 @@
+_id: s7o5skukxrg2yvh7
+_key: '!items!s7o5skukxrg2yvh7'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Alleviate Corruption
+system:
+  actions:
+    - _id: fuh31t947uiq5iyw
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature other than yourself
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You combat the rising corruption (see page 14) in another creature or
+      advance the long-term process of exorcising it entirely. This spell has
+      two purposes, and you choose which application to use at the time of
+      casting. <i>Combat Corruption</i>: Each time a creature fails a saving
+      throw to prevent its corruption from progressing (as described in that
+      corruption's Progression section), it advances to the next corruption
+      stage-at stage 3, it loses the battle against its corruption. Using this
+      spell can lower the target's corruption stage by 1. This has no effect if
+      the target isn't at progression stage of 1 or higher. <i>Remove
+      Corruption</i>: You can remove 1 manifestation level from the target
+      creature, as well as the most recently acquired manifestation and its
+      corresponding gift and stain. Doing this also reduces the power of gifts
+      and stains that vary based upon manifestation level. This application of
+      <i>alleviate corruption</i> doesn't reduce the target's corruption stage.
+      If the target creature loses all manifestation levels, it is cured of the
+      corruption.  Either application of the spell requires a caster level
+      check. The DC is equal to 10 + double the target's manifestation level + 3
+      times the target's corruption stage (effectively 0, 3, or 6, since stage 3
+      removes the character from player control).  Tampering with corruptions is
+      dangerous, as their nature is contagious. If you fail this caster level
+      check by 5 or more, you contract the corruption and gain a manifestation
+      (the rules for the useful and vile corruption variants still apply). A
+      roll of natural 1 on the caster level check is an automatic failure. If
+      you already have the same corruption, you must instead attempt an
+      immediate saving throw against it. Casting <i>alleviate corruption</i> on
+      yourself automatically fails, as does casting it on a target who has fully
+      succumbed to a corruption (failed three saving throws against it). A
+      creature can be the beneficiary of this spell only once per week, whether
+      it succeeds or not.</p>
+  learnedAt:
+    class:
+      cleric: 6
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      spiritualist: 6
+      warpriest: 6
+      witch: 6
+  level: 6
+  school: abj
+  sources:
+    - id: PZO1135
+      pages: '108'
+type: spell

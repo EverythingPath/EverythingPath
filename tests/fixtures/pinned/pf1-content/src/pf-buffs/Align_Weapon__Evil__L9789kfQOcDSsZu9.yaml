@@ -1,0 +1,30 @@
+_id: L9789kfQOcDSsZu9
+_key: '!items!L9789kfQOcDSsZu9'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/weapons/swords/sword-winged-pink.webp
+name: Align Weapon (Evil)
+system:
+  contextNotes:
+    - target: meleeWeapon
+      text: Can bypass DR/Evil
+    - target: rangedWeapon
+      text: Can bypass DR/Evil
+  description:
+    instructions: <p>Disable this buff when not attacking with the affected weapon.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.zujht80bgjdk9cyb]{Align
+      Weapon}</p><p>A weapon that is aligned can bypass the damage reduction of
+      certain creatures. This spell has no effect on a weapon that already has
+      an alignment.</p><p>You can't cast this spell on a natural weapon, such as
+      an unarmed strike. When you make a weapon chaotic, evil, good, or lawful,
+      align weapon is a chaotic, evil, good, or lawful spell,
+      respectively.</p><hr>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  subType: spell
+type: buff
