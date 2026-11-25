@@ -1,0 +1,30 @@
+_id: Fu67exEYA9UV29h2
+_key: '!items!Fu67exEYA9UV29h2'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/yellow_16.jpg
+name: Lead Blades
+system:
+  description:
+    instructions: >-
+      <p>Create a second actionor add a conditional modifier for damage with the
+      following (assuming a medium creature and 1d8 damage dice)
+      </p><ul><li><code>sizeRoll(1,8,@size + 1)</code></li></ul>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.d0rd4z2kcln69xif]{Lead
+      Blades}</p><p>Lead blades increases the momentum and density of your melee
+      weapons just as they strike a foe. All melee weapons you are carrying when
+      the spell is cast deal damage as if one size category larger than they
+      actually are.</p><p>For instance, a Medium longsword normally deals 1d8
+      points of damage, but it would instead deal 2d6 points of damage if
+      benefiting from lead blades (see page 145 of the Core Rulebook for more
+      information).</p><p>Only you can benefit from this spell. If anyone else
+      uses one of your weapons to make an attack it deals damage as normal for
+      its size.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

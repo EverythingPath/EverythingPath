@@ -1,0 +1,33 @@
+_id: GiP6E1ohZlWq8xUY
+_key: '!items!GiP6E1ohZlWq8xUY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/horror-eerie-1.jpg
+name: Deep One Curse
+system:
+  associations:
+    classes:
+      - Oracle
+  changes:
+    - _id: a123bebl
+      formula: if(gte(@class.level, 5), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>The lure of the ocean tugs at your soul. You reduce your base land
+      speed by 5 feet. You gain a swim speed equal to your land speed, and if
+      you already have a swim speed, you increase it by 10 feet.</p>
+
+      <p>At 5th level, your natural armor bonus increases by 1 as your skin
+      thickens.</p>
+
+      <p>At 10th level, you gain a +1 bonus to your caster level when casting
+      spells underwater and when casting spells with the water descriptor.</p>
+
+      <p>At 15th level, you gain the benefits of freedom of movement while
+      underwater.</p>
+  subType: classFeat
+  tags:
+    - Curse
+type: feat

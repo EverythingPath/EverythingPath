@@ -1,0 +1,67 @@
+_id: w6ki1yahqx5d52cz
+_key: '!items!w6ki1yahqx5d52cz'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/skills/yellow_17.jpg
+name: Blistering Invective
+system:
+  actions:
+    - _id: 9c194z2fnqhi0ynn
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-ft. radius
+      damage:
+        parts:
+          - formula: 1d10
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#ff6600'
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Reflex partial, see text
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You unleash an insulting tirade so vicious and spiteful that enemies
+      who hear it are physically scorched by your fury. When you cast this
+      spell, make an Intimidate check to demoralize each enemy within 30 feet of
+      you (see page 99 of the <i>Pathfinder RPG Core</i> Rulebook). Enemies that
+      are demoralized this way take 1d10 points of fire damage and must succeed
+      at a Reflex save or catch fire. Spell resistance can negate the fire
+      damage caused by this spell, but does not protect the creature from the
+      demoralizing effect.</p>
+  descriptors:
+    - fire
+    - languageDependent
+  effectNotes:
+    - '@Skill[int;speaker]'
+  learnedAt:
+    class:
+      alchemist: 2
+      bard: 2
+      inquisitor: 2
+      investigator: 2
+      mesmerist: 2
+      skald: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1118
+      pages: '224'
+  sr: false
+type: spell

@@ -1,0 +1,75 @@
+_id: s3grfkqsd0shhq7x
+_key: '!items!s3grfkqsd0shhq7x'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Symbol of Distraction
+system:
+  actions:
+    - _id: idds0ld2y37qp9lb
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except that all creatures within the radius of a <em>Symbol of
+      Distraction</em> instead become fascinated by the symbol for 10 minutes
+      per caster level. Unlike <em>symbol of death</em>, <em>Symbol of
+      Distraction</em> has no hit point limit; once triggered, a <em>Symbol of
+      Distraction</em> simply remains active for a duration of 10 minutes x your
+      caster level. All fascinated creatures move toward the <em>Symbol of
+      Distraction</em>, trying to remain within the symbol's area of effect. If
+      the symbol leads affected creatures into a dangerous area, each fascinated
+      creature can attempt an additional Will saving throw, with success
+      indicating it is no longer fascinated. If a creature's view of the symbol
+      is completely blocked, it is immediately freed of the symbol's effect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 6
+      cleric: 6
+      mesmerist: 6
+      occultist: 4
+      oracle: 6
+      psychic: 6
+      skald: 6
+      sorcerer: 6
+      warpriest: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  materials:
+    gpValue: 5000
+    value: >-
+      mercury and phosphorus, plus powdered diamond and opal worth a total of
+      5,000 gp
+  school: enc
+  sources:
+    - id: PZO9468
+      pages: '26'
+  subschool:
+    - compulsion
+type: spell

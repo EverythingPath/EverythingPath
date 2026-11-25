@@ -1,0 +1,65 @@
+_id: 1msv71n204g06fbe
+_key: '!items!1msv71n204g06fbe'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Explosion of Rot
+system:
+  actions:
+    - _id: 5eglkbuw67nniav8
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10-ft.-radius burst
+      damage:
+        parts:
+          - formula: (min(15, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+      notes:
+        footer:
+          - Staggered for [[1d4]] rounds on failed save
+      range:
+        units: close
+      save:
+        description: Reflex half (see text)
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call forth a burst of decay that ravages all creatures in the area.
+      Even nonliving creatures such as constructs and undead crumble or wither
+      in this malignant eruption of rotting energy. Creatures in the area of
+      effect take 1d6 points of damage per caster level (maximum 15d6) and are
+      staggered for 1d4 rounds. A target that succeeds at a Reflex saving throw
+      takes half damage and negates the staggered effect. Plant creatures are
+      particularly susceptible to this rotting effect; a plant creature caught
+      in the burst takes a -2 penalty on the saving throw and takes 1 extra
+      point of damage per die.</p>
+  learnedAt:
+    class:
+      druid: 4
+      hunter: 4
+  level: 4
+  materials:
+    value: a rotting flower
+  school: nec
+  sources:
+    - id: PZO1140
+      pages: '229'
+    - id: PZO9443
+      pages: '25'
+type: spell

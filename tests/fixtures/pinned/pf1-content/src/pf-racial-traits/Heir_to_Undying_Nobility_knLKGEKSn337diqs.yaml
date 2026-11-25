@@ -1,0 +1,106 @@
+_id: knLKGEKSn337diqs
+_key: '!items!knLKGEKSn337diqs'
+_stats:
+  coreVersion: '12.331'
+folder: izvlhYC3B5BZD1Pm
+img: icons/magic/death/mouth-bite-fangs-vampire.webp
+name: Heir to Undying Nobility
+system:
+  actions:
+    - _id: NcqOd4uPaaNE6n2z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div class="description-body"><p>You give the subject a single command,
+        which it obeys to the best of its ability at its earliest opportunity.
+        You may select from the following options.</p><p><em>Approach</em>: On
+        its turn, the subject moves toward you as quickly and directly as
+        possible for 1 round. The creature may do nothing but move during its
+        turn, and it provokes attacks of opportunity for this movement as
+        normal.</p><p><em>Drop</em>: On its turn, the subject drops whatever it
+        is holding. It can't pick up any dropped item until its next
+        turn.</p><p><em>Fall</em>: On its turn, the subject falls to the ground
+        and remains prone for 1 round. It may act normally while prone but takes
+        any appropriate penalties.</p><p><em>Flee</em>: On its turn, the subject
+        moves away from you as quickly as possible for 1 round. It may do
+        nothing but move during its turn, and it provokes attacks of opportunity
+        for this movement as normal.</p><p><em>Halt</em>: The subject stands in
+        place for 1 round. It may not take any actions but is not considered
+        helpless.</p><p>If the subject can't carry out your command on its next
+        turn, the spell automatically fails.</p></div>
+      duration:
+        units: round
+        value: '1'
+      name: Command
+      range:
+        units: close
+      save:
+        dc: 10+1+@abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: DItEKgK3Ht4scHqU
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div class="description-body"><p>This charm makes a humanoid creature
+        regard you as its trusted friend and ally (treat the target's attitude
+        as friendly). If the creature is currently being threatened or attacked
+        by you or your allies, however, it receives a +5 bonus on its saving
+        throw.</p><p>The spell does not enable you to control the charmed person
+        as if it were an automaton, but it perceives your words and actions in
+        the most favorable way. You can try to give the subject orders, but you
+        must win an opposed Charisma check to convince it to do anything it
+        wouldn't ordinarily do. (Retries are not allowed.) An affected creature
+        never obeys suicidal or obviously harmful orders, but it might be
+        convinced that something very dangerous is worth doing. Any act by you
+        or your apparent allies that threatens the charmed person breaks the
+        spell. You must speak the person's language to communicate your
+        commands, or else be good at pantomiming.</p></div>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Charm Person
+      range:
+        units: close
+      save:
+        dc: 10+1+@abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dhampir<br /><strong>Replaced Trait(s)</strong>:
+      Spell-Like Ability</p><hr /><p>Descended from undead nobility, perhaps
+      from Geb, Nidal, or Ustalav, some dhampirs inherit a bit of their
+      ancestors' ability to control living beings. They can use command and
+      charm person each once per day. This racial trait replaces the spell-like
+      ability racial trait.</p>
+  sources:
+    - id: PZO9280
+      pages: '215'
+  subType: racial
+  tags:
+    - Dhampir
+  traitCategory: magical
+type: feat
