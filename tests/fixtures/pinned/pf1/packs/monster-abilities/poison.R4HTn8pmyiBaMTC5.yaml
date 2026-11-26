@@ -1,0 +1,58 @@
+_id: R4HTn8pmyiBaMTC5
+_key: '!items!R4HTn8pmyiBaMTC5'
+_stats:
+  coreVersion: '12.343'
+folder: ks1gs7KC2CO3U9hN
+img: systems/pf1/icons/races/drow.png
+name: Poison
+system:
+  abilityType: ex
+  actions:
+    - _id: nWQEJMqSqeqKAevY
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: '4'
+      name: Use
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Fortitude negates
+        type: fort
+  description:
+    instructions: >-
+      <p>Change the description above, then on <em>Use</em> (Details tab) change
+      effect and the save DC.</p>
+    value: >-
+      <p>A creature with this ability can poison those it attacks. The effects
+      of the poison, including its save, frequency, and cure, are included in
+      the creature's description. The saving throw to resist a poison is usually
+      a Fortitude save (DC = 10 + 1/2 poisoning creature’s racial HD + that
+      creature’s Constitution modifier; the exact DC is given in the creature’s
+      descriptive text). Poisons can be removed through neutralize poison and
+      similar effects.</p><p><em>Format:</em> <strong>Poison Name (Ex)</strong>
+      Sting - injury; save Fort DC 22, frequency 1/round for 6 rounds, effect
+      1d4 Con damage, cure 2 consecutive saves</p><p><em>Location:</em> Special
+      Attacks and individual attacks.</p><section class="secret"
+      id="secret-sCgoWOfowByja0kp"><p><strong>Poison Name (Ex)</strong> Sting -
+      injury; save Fort DC 22, frequency 1/round for 6 rounds, effect 1d4 Con
+      damage, cure 2 consecutive saves</p></section>
+  showInCombat: true
+  sources:
+    - id: PZO1112
+      pages: '302'
+    - id: PZO1116
+      pages: '300'
+    - id: PZO1120
+      pages: '297'
+    - id: PZO1127
+      pages: '297'
+    - id: PZO1133
+      pages: '297'
+    - id: PZO1137
+      pages: '296'
+  subType: misc
+type: feat

@@ -1,0 +1,64 @@
+_id: hy95c7we5tfxqzri
+_key: '!items!hy95c7we5tfxqzri'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Wall of Sound
+system:
+  actions:
+    - _id: 54xmcxo549ve7x17
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      effect: >-
+        translucent wall of sound up to 20 ft. long/level or a ring of sound
+        with a radius of up to 5 ft./two levels; either form 20 ft. high
+      name: Use
+      range:
+        units: medium
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A translucent barrier of pure sound springs into existence. This wall
+      is silent except for a faint hum, but bursts with discordant noise when
+      touched by an object or creature. The wall deflects arrows, bolts, loose
+      debris, and Small or smaller flying creatures like a <i>wind wall</i>
+      spell, except these things rebound harmlessly rather than being directed
+      upward. The burst of discordant noise deals 2d4 points of sonic damage to
+      creatures within 10 feet of the triggering object or creature; touching or
+      passing through the wall deals 2d6 points of sonic damage + 1 point of
+      sonic damage per caster level (maximum +20). If you evoke the wall so that
+      it appears where creatures are, each creature takes damage as if passing
+      through the wall. A <i>silence</i> spell suppresses the wall within its
+      area, but the wall reappears when the <i>silence</i> ends.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      bloodrager: 4
+      magus: 4
+      psychic: 5
+      skald: 4
+      sorcerer: 5
+      spiritualist: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a tuning fork and a quartz crystal
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '248'
+type: spell

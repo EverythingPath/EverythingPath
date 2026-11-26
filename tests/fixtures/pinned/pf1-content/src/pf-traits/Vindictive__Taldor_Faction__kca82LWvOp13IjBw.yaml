@@ -1,0 +1,54 @@
+_id: kca82LWvOp13IjBw
+_key: '!items!kca82LWvOp13IjBw'
+_stats:
+  coreVersion: '12.331'
+folder: Deq32iqkuiMz2xsk
+img: icons/environment/people/charge.webp
+name: Vindictive (Taldor Faction)
+system:
+  actions:
+    - _id: koRhK5mbzGOSAQby
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>Once per day, you can declare a creature that has dealt you hit point
+        damage to be your vindictive target as an immediate action when the
+        damage is dealt. You receive a +1 trait bonus on damage rolls against
+        this target for 1 minute.</p>
+      duration:
+        units: minute
+        value: '1'
+      img: icons/environment/people/charge.webp
+      name: Use
+  contextNotes:
+    - target: attack
+      text: >-
+        Once per day, you can declare a creature that has dealt you hit point
+        damage to be your vindictive target as an immediate action when the
+        damage is dealt. You receive a +[[1]] Trait bonus on damage rolls
+        against this target for 1 minute.
+        ([[@resources.vindictiveTaldorFaction.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>Your family is prone to endless feuds, and you were raised by
+      people who simply do not forgive a slight
+      easily.</em></p><p><strong>Requirements</strong>: Taldor
+      Faction</p><p><strong>Benefits</strong>: Once per day, you can declare a
+      creature that has dealt you hit point damage to be your vindictive target
+      as an immediate action when the damage is dealt. You receive a +1 trait
+      bonus on damage rolls against this target for 1 minute.</p>
+  sources:
+    - id: PZOPSS0000E
+      pages: '19'
+  subType: trait
+  tags:
+    - Taldor Faction
+    - Pathfinder Society
+  traitType: faction
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

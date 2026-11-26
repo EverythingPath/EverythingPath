@@ -1,0 +1,60 @@
+_id: kg0bw8dv660csdis
+_key: '!items!kg0bw8dv660csdis'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Wall of Blindness/Deafness
+system:
+  actions:
+    - _id: 9f1k6i4u6aupb48v
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 1 round/level
+      effect: >-
+        translucent wall 20 ft. long/level or a translucent ring with a radius
+        of up to 5 ft./two levels; either form 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a translucent wall of energy, within which can be seen
+      indistinct images of faces with their eyes or ears sewn shut. When you
+      create the wall, decide whether it blinds or deafens. Any creature that
+      passes through the wall must save or become permanently blinded or
+      deafened (as blindness/deafness).  The wall must be vertical and either
+      rectangular or a ring. It need not touch the ground. The wall must be
+      continuous and unbroken when formed. If its surface is broken by any
+      object or creature when it is cast, the spell fails.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      cleric: 5
+      oracle: 5
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      warpriest: 5
+      witch: 4
+      wizard: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO1129
+      pages: '198'
+type: spell

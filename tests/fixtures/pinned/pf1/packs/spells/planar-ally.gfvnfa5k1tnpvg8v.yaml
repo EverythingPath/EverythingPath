@@ -1,0 +1,62 @@
+_id: gfvnfa5k1tnpvg8v
+_key: '!items!gfvnfa5k1tnpvg8v'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/creatures/magical/spirit-undead-ghost-blue.webp
+name: Planar Ally
+system:
+  actions:
+    - _id: egenlz3qidbn34od
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      effect: >-
+        one or two called outsiders, totaling no more than 12 HD, which cannot
+        be more than 30 ft. apart when they appear
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 1
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.c3vws58yy0pk47gs]{Lesser Planar Ally}, except
+      you may call a single creature of 12 HD or less, or two creatures of the
+      same kind whose HD total no more than 12. The creatures agree to help you
+      and request your return payment together.</p>
+  descriptors:
+    - see text for lesser planar ally
+  learnedAt:
+    class:
+      cleric: 6
+      oracle: 6
+      psychic: 6
+      shaman: 6
+      warpriest: 6
+    subDomain:
+      Agathion: 6
+      Archon: 6
+      Azata: 6
+      Psychopomp: 6
+  level: 6
+  materials:
+    gpValue: 1250
+    value: offerings worth 1,250 gp plus payment
+  school: con
+  sources:
+    - id: PZO1110
+      pages: '320'
+  sr: false
+  subschool:
+    - calling
+type: spell
