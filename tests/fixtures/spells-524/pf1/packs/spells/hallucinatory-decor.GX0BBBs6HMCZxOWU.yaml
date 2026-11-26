@@ -1,0 +1,62 @@
+_id: GX0BBBs6HMCZxOWU
+_key: '!items!GX0BBBs6HMCZxOWU'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/perception/orb-crystal-ball-scrying.webp
+name: Hallucinatory Decor
+system:
+  actions:
+    - _id: u39zpdhepiwcxi7r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one 10-ft. cube/level (S)
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You transform the decor of a courtyard, structure, or other edifice to
+      meet your highest standards and personal tastes. Objects and architectural
+      elements remain in the same configuration — a chair remains a chair — but
+      can look, sound, and smell like a different physical material and artistic
+      style. You cannot change the appearance of natural terrain, but landscaped
+      areas such as a garden or orchard can be affected. This spell functions in
+      all other ways as
+      @UUID[Compendium.pf1.spells.a2y1yf0a4jy3610w]{Hallucinatory Terrain}.</p>
+
+      <p>Members of the Prophet of Kalistrade prestige class can cast this
+      spell, even though it is not a divination or enchantment.</p>
+  learnedAt:
+    class:
+      arcanist: 3
+      bard: 3
+      mesmerist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 3
+      wizard: 3
+  level: 3
+  school: ill
+  sources:
+    - id: PZO9488
+      pages: '19'
+  sr: false
+  subschool:
+    - glamer
+type: spell

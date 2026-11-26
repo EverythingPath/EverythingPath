@@ -1,0 +1,49 @@
+_id: vX5XU5duSaFc9PfU
+_key: '!items!vX5XU5duSaFc9PfU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Servant of Winter
+system:
+  abilityType: sp
+  actions:
+    - _id: lkqwcz9pezi0wnmb
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a full-round action, you can summon a single ice elemental
+      (Pathfinder RPG Bestiary 2 114) to serve you.</p>
+
+      <p>At 7th level, you can summon a Medium ice elemental, as
+      @UUID[Compendium.pf1.spells.aqri3zf6mzgd4di6]{Summon Monster IV}.</p>
+
+      <p>At 11th level, you can summon a Huge ice elemental, as
+      @UUID[Compendium.pf1.spells.mf6k8tg8xu0wedoz]{Summon Monster VI}.</p>
+
+      <p>At 15th level, you can summon an elder ice elemental, as
+      @UUID[Compendium.pf1.spells.j91n23p4tfjixp3s]{Summon Monster VIII}.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 15th level.</p>
+
+      <p>You must be at least 7th level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_servantOfWinter
+  tags:
+    - Revelation
+    - Winter Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

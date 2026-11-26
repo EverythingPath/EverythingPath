@@ -1,0 +1,43 @@
+_id: qlweoovcvtklmsre
+_key: '!items!qlweoovcvtklmsre'
+_stats:
+  coreVersion: '12.343'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Healer's Kit
+system:
+  actions:
+    - _id: 5NJDROOUPpWlCn1N
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      name: Treat Deadly Wounds
+      uses:
+        autoDeductChargesCost: '2'
+  changes:
+    - _id: LN3UE5on
+      formula: '2'
+      target: skill.hea
+      type: circumstance
+  description:
+    value: >-
+      <p>This collection of bandages and herbs provides a +2 <em>circumstance
+      bonus</em> on <em>Heal</em> checks. A healer's kit is exhausted after 10
+      uses.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 50
+  sources:
+    - id: PZO1123
+      pages: '77'
+    - id: PZO1110
+      pages: 158, 161
+  subType: tool
+  uses:
+    maxFormula: '10'
+    per: charges
+    value: 10
+  weight:
+    value: 1
+type: loot

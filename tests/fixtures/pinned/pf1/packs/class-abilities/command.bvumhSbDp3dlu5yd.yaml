@@ -1,0 +1,42 @@
+_id: bvumhSbDp3dlu5yd
+_key: '!items!bvumhSbDp3dlu5yd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_06.jpg
+name: Command
+system:
+  abilityType: su
+  actions:
+    - _id: bmhf3s93chkx6kuz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can give a creature an emotionless yet
+      undeniable order, as per the spell
+      @UUID[Compendium.pf1.spells.2p6fzj5t03oivndd]{Command}. A Will save
+      negates this effect. You cannot target a creature more than once per day
+      with this ability. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Touch of Law power of the Law Domain.</p>
+  subType: classFeat
+  tag: classFeat_command
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

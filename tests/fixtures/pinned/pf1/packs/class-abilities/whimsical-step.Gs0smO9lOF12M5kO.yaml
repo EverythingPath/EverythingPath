@@ -1,0 +1,43 @@
+_id: Gs0smO9lOF12M5kO
+_key: '!items!Gs0smO9lOF12M5kO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Whimsical Step
+system:
+  abilityType: su
+  actions:
+    - _id: 74v1yw2qvoy20q4x
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: 10*@class.level
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day as a move action, you can teleport up to 10 feet per
+      oracle level.</p>
+
+      <p>You can use this ability once per day at 7th level and one additional
+      time per day for every 4 levels beyond 7th.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_whimsicalStep
+  tags:
+    - Revelation
+    - Whimsy Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

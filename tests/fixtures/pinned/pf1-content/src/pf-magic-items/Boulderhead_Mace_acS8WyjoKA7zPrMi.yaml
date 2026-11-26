@@ -1,0 +1,63 @@
+_id: acS8WyjoKA7zPrMi
+_key: '!items!acS8WyjoKA7zPrMi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Boulderhead Mace
+system:
+  actions:
+    - _id: c8dxpm2s1hu3aopx
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: boulderheadMace
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Mace
+  cl: 9
+  description:
+    value: >-
+      <p>The head of this +1 heavy mace is made from a single piece of roughly
+      spherical, polished granite. Once per day, the wielder can command the
+      mace to release this head, which grows to the size of a Large boulder and
+      rolls quickly in a direction the wielder specifies. The boulder rolls in a
+      straight line for up to 60 feet, crushing everything in its path for 3d8+5
+      points of damage (Reflex DC 19 half). The boulder collapses into rubble
+      and dust at the end of its path or if it encounters an obstacle it cannot
+      break through or roll over, creating a 10-foot-square area of difficult
+      terrain. A new stone mace-head grows on the weapon's haft over the next 24
+      hours, and it is unusable as a weapon until the head
+      regrows.</p><p><strong>Base Item</strong>: heavy
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, wall of stone</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 6812
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 8
+type: weapon

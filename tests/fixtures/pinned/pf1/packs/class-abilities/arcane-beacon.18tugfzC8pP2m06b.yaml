@@ -1,0 +1,44 @@
+_id: 18tugfzC8pP2m06b
+_key: '!items!18tugfzC8pP2m06b'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-blue-3.jpg
+name: Arcane Beacon
+system:
+  abilityType: su
+  actions:
+    - _id: ozke5lskj3609987
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action you can become a beacon of arcane energy until the
+      end of your next turn. The aura emanates 15 feet from you. All arcane
+      spells cast within the aura either gain a +1 bonus to their caster level
+      or increase their saving throw DC by +1. The caster chooses the benefit
+      when she casts the spell. You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Hand of the Acolyte power of the Arcane
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_arcaneBeacon
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,54 @@
+_id: yY5vog9dV5DOB5JT
+_key: '!items!yY5vog9dV5DOB5JT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Death's Touch (Revelation)
+system:
+  abilityType: su
+  actions:
+    - _id: 6z9hem06l0w9lk6h
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - negative
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can cause terrible wounds to appear on a creature with a melee
+      touch attack. This attack deals 1d6 points of negative energy damage +1
+      point for every two oracle levels you possess. If used against an undead
+      creature, it heals damage and grants a +2 channel resistance for 1 minute.
+      You can use this ability a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+  sources:
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_deathsTouch
+  tags:
+    - Revelation
+    - Bones Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

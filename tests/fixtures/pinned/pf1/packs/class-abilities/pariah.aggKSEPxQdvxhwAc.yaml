@@ -1,0 +1,47 @@
+_id: aggKSEPxQdvxhwAc
+_key: '!items!aggKSEPxQdvxhwAc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Pariah
+system:
+  abilityType: su
+  actions:
+    - _id: mg4e7dhrmdgt2ddd
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can cause a creature within 60 feet to be shunned by its
+      allies for a number of rounds equal to the witch’s Intelligence
+      modifier.</p><p>Any other creature attempting to directly assist the
+      target with a harmless spell or aid another action must attempt a Will
+      save.</p><p>If the save succeeds, the aiding creature is unaffected by
+      this hex.</p><p>If the save fails, the aiding creature can’t follow
+      through, the action is lost, and the aiding creature can’t directly aid
+      the target for the duration of this hex.</p><p>This hex does not prevent
+      the target from benefiting from area of effect spells.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

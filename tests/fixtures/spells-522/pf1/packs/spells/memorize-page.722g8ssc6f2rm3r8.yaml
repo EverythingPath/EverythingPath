@@ -1,0 +1,71 @@
+_id: 722g8ssc6f2rm3r8
+_key: '!items!722g8ssc6f2rm3r8'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Memorize Page
+system:
+  actions:
+    - _id: 4umo9xf7jtm34ne5
+      actionType: spellsave
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains a perfect memory of the page you used as a focus
+      component. The target can visualize this page as easily as looking at it
+      in person, including minute details visible to close scrutiny by the naked
+      eye. The memory of the page includes text and images, such as a drawing or
+      a map. Someone unfamiliar with the language on the page (or even an
+      illiterate person) could relay what is written simply by copying the
+      shapes of the letters so another person can read them.</p><p>The maximum
+      number of pages that a particular target can memorize through repeated
+      castings of this spell is equal to the target's Intelligence modifier
+      (minimum 1); any attempts beyond this limit have no effect, although the
+      target's memory of a page could be erased (using <i>modify memory</i> or a
+      similar effect) to effectively make room for a different one.</p><p>A
+      creature that memorizes magical writing (such as a scroll or a page from a
+      spellbook) cannot borrow, duplicate, or retain any of the magic in the
+      writing. However, this would allow a wizard to copy a spell into his
+      spellbook so he could prepare the spell from his book (assuming the spell
+      takes up only one page in a spellbook).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      occultist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  materials:
+    focus: the page to be memorized
+  school: enc
+  sources:
+    - id: PZO1129
+      pages: '187'
+type: spell

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "unbudgeted": {
+    "maxNewFileBytes": 1000000,
+    "maxPositiveGrowthBytes": 5000000,
+    "maxAddedLines": 50000
+  },
+  "families": [
+    {
+      "id": "campaign-mvp-inventory",
+      "paths": [
+        "scripts/catalog/scopes/campaign-mvp-v1*",
+        "docs/catalog-import/campaign-mvp*"
+      ],
+      "maxBytes": 100000000,
+      "maxLines": 600000,
+      "reason": "Compact launch inventory and independent validation authorities",
+      "issue": 768
+    },
+    {
+      "id": "catalog-legal-evidence",
+      "paths": [
+        "scripts/catalog/legal/*",
+        "src/lib/catalog/data/attribution-evidence.json"
+      ],
+      "maxBytes": 295000000,
+      "maxLines": 4070000,
+      "reason": "Reviewed legal inventories and attribution evidence, the evidence stored once as hash-named blobs and 94 batch inventories with each repeated entry and text once (legal-l2, legal-l4); measured 280,620,155 B / 3,870,073 lines plus 5% headroom, rounded up",
+      "issue": 744
+    },
+    {
+      "id": "pinned-source-store",
+      "paths": ["tests/fixtures/pinned/*"],
+      "maxBytes": 80000000,
+      "maxLines": 840000,
+      "reason": "Pinned upstream files, byte-identical to their pins, that tests read from a clean checkout; holds the record of every Foundry key the release operator selects for import in the two committed release scopes, the file each selected PCGen owner names, and every file their required or selected rows bind (pbl-store-topup); measured 75,887,567 B / 796,322 lines plus 5% headroom, rounded up",
+      "issue": 251
+    }
+  ]
+}

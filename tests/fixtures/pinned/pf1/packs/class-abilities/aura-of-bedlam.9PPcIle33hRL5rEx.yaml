@@ -1,0 +1,42 @@
+_id: 9PPcIle33hRL5rEx
+_key: '!items!9PPcIle33hRL5rEx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-magenta-2.jpg
+name: Aura of Bedlam
+system:
+  abilityType: su
+  actions:
+    - _id: 57nh55p365lwym44
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot-radius aura of chaos and strife
+      for 1 round per cleric level. Enemies in the aura take a –4 penalty on
+      concentration checks and are treated as experiencing vigorous motion
+      (concentration DC = 10 + spell level) when attempting to cast spells. This
+      penalty increases by 1 for every 2 cleric levels you have beyond 8th. This
+      is a mind-affecting effect. These rounds need not be consecutive.</p>
+
+      <p>This power replaces the Chaos Blade power of the Chaos Domain.</p>
+  subType: classFeat
+  tag: classFeat_auraOfBedlam
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

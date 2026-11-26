@@ -1,0 +1,27 @@
+_id: 1z7euBqoJ1ZDCRW4
+_key: '!items!1z7euBqoJ1ZDCRW4'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/magical/humanoid-silhouette-dashing-blue.webp
+name: Fox's Cunning
+system:
+  changes:
+    - _id: 11mnkusb
+      formula: '4'
+      target: int
+      type: enh
+  description:
+    value: >-
+      <p>The subject has a +4 enhancement bonus to Intelligence as per
+      @UUID[Compendium.pf1.spells.Item.743anqr1ahefv8zd] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: '286'
+  subType: spell
+type: buff

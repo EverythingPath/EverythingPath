@@ -1,0 +1,76 @@
+_id: QCwge35wm645mWQk
+_key: '!items!QCwge35wm645mWQk'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Solar Wind
+system:
+  abilityType: su
+  actions:
+    - _id: 2h4uvokz8az5vqli
+      ability:
+        attack: dex
+      actionType: rwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Attack
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+    - _id: F4sshD8S8zFvZuLy
+      ability:
+        attack: cha
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Bull Rush CMB
+      duration:
+        units: inst
+      name: Bull Rush
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can unleash a blast of searing wind at a single target within 30
+      feet as a ranged touch attack with no range increment. Your solar wind
+      deals 1d6 points of fire damage + 1 for every 2 oracle levels you
+      possess.</p>
+
+      <p>At 7th level, you can also knock an opponent back, treating the blast
+      as a bull rush combat maneuver that uses your caster level + your Charisma
+      modifier in place of your CMB.</p>
+
+      <p>You can use this ability a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+  subType: classFeat
+  tag: classFeat_solarWind
+  tags:
+    - Revelation
+    - Solar Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

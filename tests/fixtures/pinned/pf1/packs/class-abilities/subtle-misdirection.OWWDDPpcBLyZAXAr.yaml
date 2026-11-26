@@ -1,0 +1,36 @@
+_id: OWWDDPpcBLyZAXAr
+_key: '!items!OWWDDPpcBLyZAXAr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/greater-feint.png
+name: Subtle Misdirection
+system:
+  abilityType: sp
+  actions:
+    - _id: 8pjbmbh7gntwmim1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you can <em>touch</em> a creature or an
+      object that weighs no more than 25 pounds per <em>caster level</em> to
+      impart an illusory ward that lasts for 1 minute. Attacks against a warded
+      creature suffer a 20% miss chance, and the ward ends once it negates an
+      attack. The DC of any <em>caster level</em> check, skill check, or saving
+      throw to detect or determine the properties of a warded item increases by
+      1, plus 1 for every 5 <em>wizard</em> levels you have. You can use this
+      ability a number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_subtleMisdirection
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

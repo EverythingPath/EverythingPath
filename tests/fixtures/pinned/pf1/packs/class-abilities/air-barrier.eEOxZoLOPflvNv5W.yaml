@@ -1,0 +1,50 @@
+_id: eEOxZoLOPflvNv5W
+_key: '!items!eEOxZoLOPflvNv5W'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Air Barrier
+system:
+  abilityType: ex
+  actions:
+    - _id: flp846mce9jiapcl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can create an invisible shell of air that grants you a +4 armor
+      bonus.</p>
+
+      <p>At 7th level, and every four levels thereafter, this bonus increases by
+      +2.</p>
+
+      <p>At 13th level, this barrier causes incoming arrows, rays, and other
+      ranged attacks requiring an attack roll against you to have a 50% miss
+      chance.</p>
+
+      <p>You can use this barrier for 1 hour per day per oracle level. This
+      duration does not need to be consecutive, but it must be spent in 1-hour
+      increments.</p>
+  subType: classFeat
+  tag: classFeat_airBarrier
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

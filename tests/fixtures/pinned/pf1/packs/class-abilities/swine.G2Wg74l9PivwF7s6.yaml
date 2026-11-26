@@ -1,0 +1,48 @@
+_id: G2Wg74l9PivwF7s6
+_key: '!items!G2Wg74l9PivwF7s6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Swine
+system:
+  abilityType: su
+  actions:
+    - _id: gk9hwsjpma8q5pec
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can partially transform an enemy into a pig. The effects of
+      the transformation are mostly cosmetic and do not change the creature’s
+      size category or overall shape, but the affected creature takes a –2
+      penalty on Will saving throws for a number of rounds equal to the witch’s
+      Intelligence modifier (Will negates).</p>
+
+      <p>At 8th level, the affected creature’s hands (or paws) turn into hooves,
+      preventing it from using claw attacks or taking any action that would
+      require the creature to use its fingers.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

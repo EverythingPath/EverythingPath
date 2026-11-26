@@ -1,0 +1,39 @@
+_id: X9sRDZwuTOaCYWt3
+_key: '!items!X9sRDZwuTOaCYWt3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Shroud of Retribution
+system:
+  abilityType: su
+  actions:
+    - _id: 3jdlqrm1jeuwvj11
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As an immediate action, you can summon a shroud of spirits that
+      reflects your attackers’ damage back onto them. Any creature that strikes
+      you deals normal damage to you, but at the same time the attacker takes
+      1d8 points of force damage + 1 point per 2 caster levels you possess
+      (maximum +10). This effect lasts until the end of your next turn.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 11th level and every 4 levels thereafter.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_shroudOfRetribution
+  tags:
+    - Revelation
+    - Occult Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

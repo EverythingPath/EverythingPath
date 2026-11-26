@@ -1,0 +1,36 @@
+_id: KXMXBbQfviik9Dna
+_key: '!items!KXMXBbQfviik9Dna'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Knowledge of the Ages
+system:
+  abilityType: su
+  actions:
+    - _id: g2kymbmzemfmppc8
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can search through time to recall some bit of forgotten lore or
+      information. You can retry any Knowledge skill check you have made within
+      the past minute, gaining an insight bonus on the check equal to your
+      Charisma modifier.</p>
+
+      <p>You can use this ability a number times per day equal to your Charisma
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_knowledgeOfTheAges
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: '@abilities.cha.mod'
+    per: day
+type: feat

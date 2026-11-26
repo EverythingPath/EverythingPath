@@ -1,0 +1,47 @@
+_id: rmvMcgMGQT2fzoQf
+_key: '!items!rmvMcgMGQT2fzoQf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/races/undine.png
+name: Laughing Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: y6puvldn91be9p4d
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can cause a creature to burst out laughing for 1
+      round as a melee touch attack. A laughing creature can only take a move
+      action but can defend itself normally. Once a creature has been affected
+      by laughing touch, it is immune to its effects for 24 hours. You can use
+      this ability a number of times per day equal to 3 + your <em>Charisma</em>
+      modifier. This is a mind-affecting effect.</p>
+  sources:
+    - id: PZO1110
+      pages: '76'
+  subType: classFeat
+  tag: classFeat_laughingTouch
+  tags:
+    - Bloodline Power
+    - Fey Bloodline
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

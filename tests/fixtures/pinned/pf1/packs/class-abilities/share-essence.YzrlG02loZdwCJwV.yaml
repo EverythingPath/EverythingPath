@@ -1,0 +1,45 @@
+_id: YzrlG02loZdwCJwV
+_key: '!items!YzrlG02loZdwCJwV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_01.jpg
+name: Share Essence
+system:
+  abilityType: sp
+  actions:
+    - _id: jc4jvtdrbk831x21
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you can share your vital energy with a
+      living creature that you touch. You take 1d6 points of <em>nonlethal
+      damage</em> + 1 for every two wizard levels you possess. You cannot take
+      an amount of <em>nonlethal damage</em> equal to or greater than your
+      current hit point total; any excess is prevented. The recipient gains a
+      number of <em>temporary hit points</em> equal to the amount of damage you
+      received (prevented damage is not counted). These <em>temporary hit
+      points</em> disappear 1 hour later. You may not use this ability to grant
+      yourself <em>temporary hit points</em>. You can use this ability a number
+      of times per day equal to 3 + your <em>Intelligence</em> modifier. This
+      ability has no effect if you are immune to <em>nonlethal damage</em>.</p>
+  subType: classFeat
+  tag: classFeat_shareEssence
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

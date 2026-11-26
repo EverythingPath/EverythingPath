@@ -1,0 +1,42 @@
+_id: GgmIMcsmg5gGDjgU
+_key: '!items!GgmIMcsmg5gGDjgU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Infected Wounds
+system:
+  abilityType: su
+  actions:
+    - _id: q0fah2qgh2atex7b
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The target's wounds become infected (Fortitude negates). The target
+      takes 1 point of Constitution damage per day. After the first day, the
+      target may save once per day to cure the infection.</p>
+
+      <p>This is a disease effect.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat
