@@ -1,0 +1,41 @@
+_id: 62HGyWMZ3iBgFiE8
+_key: '!items!62HGyWMZ3iBgFiE8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_21.jpg
+name: Rend (Attack)
+system:
+  abilityType: ex
+  actions:
+    - _id: 659nmff0w683hung
+      ability:
+        damage: str
+        damageMult: 1.5
+      actionType: mwak
+      activation:
+        type: free
+        unchained:
+          type: free
+      attackName: Rend
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size, 4)
+            types:
+              - slashing
+      img: systems/pf1/icons/skills/red_21.jpg
+      name: Use
+      tag: rendEx
+  description:
+    value: >-
+      <p>If it hits with two or more natural attacks in 1 round, a creature with
+      the rend special attack can cause tremendous damage by latching on to the
+      opponent&rsquo;s body and tearing flesh. This attack deals an additional
+      amount of damage, but no more than once per round. The type of attacks
+      that must hit and the additional damage are included in the
+      creature&rsquo;s description.</p><p>The additional damage is usually equal
+      to the damage caused by one of the attacks plus 1-1/2 times the
+      creature&rsquo;s Strength bonus.</p><p><em>Format</em>: rend (2 claws,
+      1d8+9)</p><p><em>Location</em>: Special Attacks.</p><p><em>Usage:</em>
+      Replace damage</p>
+  subType: misc
+type: feat

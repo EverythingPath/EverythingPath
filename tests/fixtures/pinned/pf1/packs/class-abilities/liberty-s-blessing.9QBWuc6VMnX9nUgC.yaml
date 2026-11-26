@@ -1,0 +1,56 @@
+_id: 9QBWuc6VMnX9nUgC
+_key: '!items!9QBWuc6VMnX9nUgC'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/holy/barrier-shield-winged-blue.webp
+name: Liberty’s Blessing
+system:
+  abilityType: sp
+  actions:
+    - _id: Ef9xYDyXUaHbjqya
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 minute or until used
+      name: Use
+      range:
+        units: touch
+      target:
+        value: One willing creature
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You touch a willing creature as a standard action, granting it a boon.
+      A creature with this boon can, as a swift action, make a saving throw
+      against a single spell or effect it is suffering from that grants a save.
+      The DC of the saving throw is equal to the original DC of the spell or
+      effect. If the saving throw is successful, the effect ends. This boon
+      lasts for 1 minute or until successfully used to remove a spell or effect,
+      whichever duration is shorter. You can use this ability for a number of
+      times equal to 3 + your Wisdom modifier.</p><p>This power replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.2mnWAoFKqKKxWCt4]{Liberation}
+      power of the
+      @UUID[Compendium.pf1.class-abilities.Item.NjMyfBFJ42xbUpwC]{Liberation
+      Domain}.</p>
+  sources:
+    - id: PZO1115
+      pages: '91'
+  subType: classFeat
+  tags:
+    - Domain Power
+    - Freedom Subdomain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,53 @@
+_id: UZzNnXfVG8golVxc
+_key: '!items!UZzNnXfVG8golVxc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Curse of Dampening
+system:
+  abilityType: su
+  actions:
+    - _id: d355oiile3ejywnl
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You diminish one target within 30 feet as a standard action, making its
+      attacks weaker. Whenever the target would roll to deal damage with an
+      attack or spell, it deals the minimum amount of damage. This curse lasts
+      for 1 round per 2 oracle levels you have (minimum 1). A successful Will
+      saving throw negates this effect. This is a mind-affecting curse
+      effect.</p>
+
+      <p>You can use this revelation once per day, plus one additional time at
+      11th level and 15th level. You must be at least 7th level before selecting
+      this revelation.</p>
+  subType: classFeat
+  tag: classFeat_curseOfDampening
+  tags:
+    - Revelation
+    - Succor Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 6), 1) + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

@@ -1,0 +1,39 @@
+_id: pZWj8PZHtqo4YmRa
+_key: '!items!pZWj8PZHtqo4YmRa'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-demon-wing.jpg
+name: Wings (Attack)
+system:
+  actions:
+    - _id: 58yvwxqnej5c817f
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 0.5
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      attackBonus: '-5'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size, 4)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-demon-wing.jpg
+      name: Attack
+      notes:
+        footer:
+          - 'Reach: 15 ft.'
+          - 2 wings +32 (2d6+6)
+      tag: wings
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

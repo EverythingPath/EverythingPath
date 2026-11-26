@@ -1,0 +1,42 @@
+_id: U6dAFqYDRELQROy4
+_key: '!items!U6dAFqYDRELQROy4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: Inspiring Flex
+system:
+  abilityType: ex
+  actions:
+    - _id: 3gf3hp48bmm6e7h8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: allies within range
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 15th level, the cavalier can display her own brawn to inspire
+      greater strength in his allies. As a standard action, she can grant
+      herself and any allies within 30 feet a +4 morale bonus on melee attack
+      rolls, combat maneuver checks, Fortitude saves, and Strength checks. The
+      cavalier can maintain her inspiring flex as a free action, and she can use
+      this ability for a number of rounds per day equal 1/2 her cavalier level;
+      this duration need not be continuous.</p>
+  subType: classFeat
+  tag: classFeat_inspiringFlex
+  uses:
+    maxFormula: floor(@class.level / 2)
+    per: day
+type: feat

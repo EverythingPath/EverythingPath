@@ -1,0 +1,44 @@
+_id: ieedspgjoepqnfqj
+_key: '!items!ieedspgjoepqnfqj'
+_stats:
+  coreVersion: '12.343'
+img: icons/tools/smithing/hammer-maul-steel-grey.webp
+name: Hammer
+system:
+  actions:
+    - _id: otQ1Ww3XKlKVywfm
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: nonaction
+      attackBonus: '-2[Improvised Weapon]'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Attack
+      range:
+        units: melee
+  description:
+    value: >-
+      <p>If a <em>hammer</em> is used in combat, treat it as a one-handed
+      improvised weapon that deals bludgeoning damage equal to that of a spiked
+      gauntlet of its size.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 0.5
+  sources:
+    - id: PZO1110
+      pages: 156, 158
+  subType: gear
+  weight:
+    value: 2
+type: loot

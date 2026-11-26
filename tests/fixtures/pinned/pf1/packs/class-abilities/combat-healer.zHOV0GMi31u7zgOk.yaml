@@ -1,0 +1,41 @@
+_id: zHOV0GMi31u7zgOk
+_key: '!items!zHOV0GMi31u7zgOk'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Combat Healer
+system:
+  abilityType: su
+  actions:
+    - _id: ueimt1lc4wfh7mwq
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Whenever you cast a cure spell (a spell with "cure" in its name), you
+      can cast it as a swift action, as if using the Quicken Spell feat, by
+      expending two spell slots. This does not increase the level of the spell.
+      You can use this ability once per day at 7th level and one additional time
+      per day for every four levels beyond 7th.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: 45, 48
+  subType: classFeat
+  tag: classFeat_combatHealer
+  tags:
+    - Revelation
+    - Battle Mystery
+    - Life Mystery
+    - Succor Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

@@ -1,0 +1,45 @@
+_id: tJ92ZMBb08mpbf5G
+_key: '!items!tJ92ZMBb08mpbf5G'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-water-air-2.jpg
+name: Wall of Ashes
+system:
+  abilityType: su
+  actions:
+    - _id: wtbslas798417au1
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '100'
+      target:
+        value: see text
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can create a wall of swirling ashes anywhere within
+      100 feet. This wall is up to 20 feet high and up to 10 feet long per
+      cleric level you possess. The wall of ash blocks line of sight, and any
+      creature passing through it must make a Fortitude save or be blinded for
+      1d4 rounds. The wall of ash reveals invisible creatures that are inside it
+      or adjacent to it, although they become invisible again if they move away
+      from the wall. You can use this ability for a number of minutes per day
+      equal to your cleric level, but these minutes do not need to be
+      consecutive.</p>
+
+      <p>This power replaces the Fire Resistance power of the Fire Domain.</p>
+  subType: classFeat
+  tag: classFeat_wallOfAshes
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

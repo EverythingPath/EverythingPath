@@ -1,0 +1,52 @@
+_id: yTLMgvXmYIAL205P
+_key: '!items!yTLMgvXmYIAL205P'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Summer's Heat
+system:
+  abilityType: su
+  actions:
+    - _id: kwjdkceys1u9dqdg
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: '@class.level'
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      nonlethal: true
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude halves damage and negates fatigue
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch surrounds her target with oppressive heat, dealing a number
+      of points of nonlethal damage equal to her witch level and causing the
+      target to become fatigued. The target can attempt a Fortitude save to
+      reduce this nonlethal damage by half and negate the fatigued
+      condition.</p>
+
+      <p>Whether or not the target succeeds at this save, it can’t be the target
+      of this hex again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

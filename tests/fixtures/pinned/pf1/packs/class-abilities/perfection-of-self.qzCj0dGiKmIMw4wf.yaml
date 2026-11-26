@@ -1,0 +1,37 @@
+_id: qzCj0dGiKmIMw4wf
+_key: '!items!qzCj0dGiKmIMw4wf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/stand-still.jpg
+name: Perfection of Self
+system:
+  abilityType: su
+  actions:
+    - _id: hjw592fz7r8w8tda
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, as a <em>swift action</em> you can grant yourself an
+      <em>enhancement bonus</em> to a single ability score equal to 1/2 your
+      wizard level (maximum +10) for one round. You may use this ability for a
+      number of times per day equal to your wizard level.</p>
+  subType: classFeat
+  tag: classFeat_perfectionOfSelf
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

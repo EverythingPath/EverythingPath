@@ -1,0 +1,42 @@
+_id: W7nMOLi2kXGEKe72
+_key: '!items!W7nMOLi2kXGEKe72'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-water-air-1.jpg
+name: Invisibility Field
+system:
+  abilityType: sp
+  actions:
+    - _id: bgbfb34kdvleed8z
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can make yourself
+      <em>@UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.Wr2ZWUZcyVWQ4GtX]{Invisible}</em>
+      as a swift action for a number of rounds per day equal to your wizard
+      level. These rounds do not need to be consecutive. This otherwise
+      functions as @UUID[Compendium.pf1.spells.cxgi0ub77t6aink1]{Invisibility,
+      Greater}.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_invisibilityField
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

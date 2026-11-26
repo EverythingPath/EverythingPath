@@ -1,0 +1,44 @@
+_id: crFYRQunvrXQNYFX
+_key: '!items!crFYRQunvrXQNYFX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-sky-2.jpg
+name: Cloud of Smoke
+system:
+  abilityType: su
+  actions:
+    - _id: drxgxd7zv4l012rh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: 5-ft. radius area
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can create a 5-foot-radius cloud of smoke.
+      This power has a range of 30 feet. Creatures inside the cloud take a –2
+      penalty on attack rolls and Perception skill checks for as long as they
+      remain inside and for 1 round after exiting the cloud. Creatures inside
+      the cloud gain concealment from attacks made by opponents that are not
+      adjacent to them. You can use this ability a number of times per day equal
+      to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Fire Bolt power of the Fire Domain.</p>
+  subType: classFeat
+  tag: classFeat_cloudOfSmoke
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

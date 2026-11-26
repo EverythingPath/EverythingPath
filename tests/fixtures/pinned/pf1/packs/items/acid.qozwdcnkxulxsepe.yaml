@@ -1,0 +1,99 @@
+_id: qozwdcnkxulxsepe
+_key: '!items!qozwdcnkxulxsepe'
+_stats:
+  coreVersion: '12.343'
+folder: kB3UEM2uyAcNWHIc
+img: systems/pf1/icons/items/potions/major-green.jpg
+name: Acid
+system:
+  actions:
+    - _id: g2rblzzkmv43el5f
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#04e600'
+        size: '5'
+        type: cone
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      touch: true
+  baseTypes:
+    - Acid
+  description:
+    value: >-
+      <p>You can throw a flask of acid as a <em>splash weapon</em> with a range
+      increment of 10 feet.</p><p>A direct hit deals 1d6 points of acid damage.
+      Every creature within 5 feet of the point where the acid hits takes 1
+      point of acid damage from the
+      splash.</p><h3>Construction</h3><p><strong>Craft (alchemy)</strong> DC
+      15</p><h3>Alchemical Recipe</h3><p><strong>Recipe</strong> (10 Brimstone +
+      8 Salt+ 1 Saltpeter)/distilation; <br /><strong>Craft</strong> DC 15;
+      <strong>Time</strong> 1 day; <strong>Tools</strong> retort;
+      <strong>Type</strong> alchemical weapon</p><h3>Alchemical Power
+      Component</h3><p>A common flask of acid has many uses as an alchemical
+      power component, particularly with attack
+      spells.</p><ul><li>@UUID[Compendium.pf1.spells.Item.wh9zc2reqneafxro]{Acid
+      Arrow} (M): The spell's acid lasts 1 round longer than
+      normal.</li><li>@UUID[Compendium.pf1.spells.Item.ky8n4yzn6kc2cume]{Acid
+      Fog} (M): The fog's radius and height increase by 5
+      feet.</li><li>@UUID[Compendium.pf1.spells.Item.eu2xv8klucttzqmd]{Acid
+      Splash} (F): The spell deals +1 point of
+      damage.</li><li>@UUID[Compendium.pf1.spells.Item.eu2xv8klucttzqmd]{Acid
+      Splash} (M): The spell lasts 1 round longer than
+      normal.</li><li>@UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{Dispel
+      Magic} (M): Using acid as a material component while attempting to dispel
+      or counterspell a spell or effect with the earth subtype gives you a +2
+      bonus on your dispel check. This bonus applies whether you are using
+      dispel magic, greater dispel magic, or some other spell that you can use
+      for counterspelling (for example, if you have the Improved Counterspell
+      feat).</li><li>@UUID[Compendium.pf1.spells.Item.ik9u3eel5vfwrtb5]{Grease}
+      (M): The grease is acidic and deals 1 point of acid damage per round to
+      any creature in the area or holding the greased
+      object.</li><li>@UUID[Compendium.pf1.spells.Item.ijui94bv4uzu8awb]{Wall of
+      Ice} (M): For each flask of acid used as a power component, you may
+      designate one 10-foot square of ice wall that, if <em>broken</em> through,
+      deals 1d6 acid damage in addition to the normal cold
+      damage.</li></ul><p><sup>(M): the alchemical item is expend as a material
+      component.;<br />(F): the item is used as a focus and is not
+      expend.</sup></p>
+  equipped: false
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 10
+  proficient: true
+  sources:
+    - id: PZO9445
+      pages: '30'
+    - id: PZO1123
+      pages: 106, 107
+    - id: PZO9410
+      pages: '26'
+    - id: PZO1110
+      pages: 158, 160
+  subType: misc
+  tags:
+    - Power Component
+  uses:
+    per: single
+  weaponSubtype: splash
+  weight:
+    value: 1
+type: weapon

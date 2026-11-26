@@ -1,0 +1,48 @@
+_id: v971MT6FeybRRkdI
+_key: '!items!v971MT6FeybRRkdI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Iron Skin
+system:
+  abilityType: su
+  actions:
+    - _id: 5xzhxg66qvo91i4g
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level * 10'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, your skin hardens and takes on the appearance of iron,
+      granting you DR 10/adamantine. This functions as
+      @UUID[Compendium.pf1.spells.knyako6zopc1chrv]{Stoneskin}, using your
+      oracle level as the caster level. At 15th level, you can use this ability
+      twice per day.</p>
+
+      <p>You must be at least 11th level to select this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_ironSkin
+  tags:
+    - Revelation
+    - Battle Mystery
+    - Metal Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

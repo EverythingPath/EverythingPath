@@ -1,0 +1,40 @@
+_id: BrlJfnz5ZRKl4f9O
+_key: '!items!BrlJfnz5ZRKl4f9O'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_38.jpg
+name: Spatial Tear
+system:
+  abilityType: sp
+  actions:
+    - _id: c6bpfn2ndagnuhcb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: long
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, once per day, you can unravel the fibers of reality and
+      ride along them as they snap back into place. This power functions as
+      @UUID[Compendium.pf1.spells.ojwg1ki98tq8xyh9]{Dimension Door}, while also
+      creating a mass of @UUID[Compendium.pf1.spells.wralcmyi4tdcai24]{Black
+      Tentacles} centered on your former location. Both of these effects use
+      your sorcerer level as the <em>caster level</em>. At 20th level, you can
+      use this ability twice per day.</p>
+  subType: classFeat
+  tag: classFeat_spatialTear
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 20), 1)
+    per: day
+type: feat

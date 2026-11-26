@@ -1,0 +1,57 @@
+_id: 0lw8AzBtL0dL5zEA
+_key: '!items!0lw8AzBtL0dL5zEA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Heat Aura
+system:
+  abilityType: su
+  actions:
+    - _id: mmt4shq2rld18e5h
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: (max((floor(@class.level / 2)), 1))d4
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: all within range
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a swift action, you can cause waves of heat to radiate from your
+      body. This heat deals 1d4 points of fire damage per two oracle levels
+      (minimum 1d4) to all creatures within 10 feet. A Reflex save halves the
+      damage. In addition, your form wavers and blurs, granting you 20%
+      concealment until your next turn.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 5th level and every five levels thereafter.</p>
+  sources:
+    - id: PZO1115
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_heatAura
+  tags:
+    - Revelation
+    - Flame Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

@@ -1,0 +1,39 @@
+_id: 1VcnvSG8gegTdC6z
+_key: '!items!1VcnvSG8gegTdC6z'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Hard to Fool
+system:
+  abilityType: ex
+  actions:
+    - _id: BIXgmUFXNZ4PNDcY
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  associations:
+    classes:
+      - Rogue
+      - Slayer
+      - Investigator
+      - Ninja
+  description:
+    value: >-
+      <p>Once per day, a character with this talent can roll two dice while
+      making a Sense Motive check, and take the better result. She must choose
+      to use this talent before making the Sense Motive check. A character can
+      use this ability one additional time per day for every 5 class levels she
+      possesses.</p>
+  subType: classFeat
+  tag: classFeat_hardToFool
+  tags:
+    - Rogue Talent
+    - Slayer Talent
+    - Investigator Talent
+    - Ninja Trick
+  uses:
+    maxFormula: 1+ floor(@class.level / 5)
+    per: day
+type: feat

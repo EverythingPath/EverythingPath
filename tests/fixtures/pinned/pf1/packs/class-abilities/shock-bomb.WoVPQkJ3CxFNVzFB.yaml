@@ -1,0 +1,66 @@
+_id: WoVPQkJ3CxFNVzFB
+_key: '!items!WoVPQkJ3CxFNVzFB'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/lightning/orb-ball-blue.webp
+name: Shock Bomb
+system:
+  actions:
+    - _id: A5DxSongEZMEJrOk
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - electric
+        parts:
+          - formula: 1d6
+            types:
+              - electric
+      description: '<p>Direct hit dazzled rounds: [[1d4]]</p>'
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it inflict
+      electricity damage. Creatures that take a direct hit from a shock bomb are
+      dazzled for 1d4 rounds.</p>
+  sources:
+    - id: PZO1115
+      pages: '31'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

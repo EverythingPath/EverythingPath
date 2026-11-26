@@ -1,0 +1,40 @@
+_id: tsNnwtdbOIUCG6h7
+_key: '!items!tsNnwtdbOIUCG6h7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Swaying Word
+system:
+  abilityType: sp
+  actions:
+    - _id: 85aoq6uc8ro8abj5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one humanoid
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, once per day you may speak a word of divinely inspired
+      wisdom that causes a single creature to switch its alliance to you. The
+      target must be within line of sight and able to hear you. If he fails his
+      Will save, he is affected by
+      @UUID[Compendium.pf1.spells.q070n0zoq3zojpas]{Dominate Person}, except the
+      duration is only 1 minute.</p>
+  subType: classFeat
+  tag: classFeat_swayingWord
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

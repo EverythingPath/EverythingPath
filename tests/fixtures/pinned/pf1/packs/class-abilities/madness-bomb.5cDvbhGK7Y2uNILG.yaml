@@ -1,0 +1,73 @@
+_id: 5cDvbhGK7Y2uNILG
+_key: '!items!5cDvbhGK7Y2uNILG'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/control/fear-fright-monster-grin-purple-blue.webp
+name: Madness Bomb
+system:
+  actions:
+    - _id: E9HF94odK6pIG3J7
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 3)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+          - Direct Target takes wisdom damage; see text
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>The alchemist's bombs do more than sear flesh—they sear the mind. A
+      creature that takes a direct hit from a madness bomb takes damage from the
+      bomb plus 1d4 points of Wisdom damage. Reduce the amount of normal damage
+      dealt by the bomb by 2d6 (so a bomb that would normally deal 6d6+4 points
+      of damage deals 4d6+4 points of damage instead). The amount of Wisdom
+      damage dealt by a madness bomb is reduced by 1 for each madness bomb that
+      hit the target in the past 24 hours, to a minimum of 1 point of Wisdom
+      damage.</p>
+
+      <p>An alchemist must be at least 12th level before selecting this
+      discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '31'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+type: feat

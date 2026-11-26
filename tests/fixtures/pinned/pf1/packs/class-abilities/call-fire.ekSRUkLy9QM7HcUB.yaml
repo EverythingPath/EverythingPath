@@ -1,0 +1,45 @@
+_id: ekSRUkLy9QM7HcUB
+_key: '!items!ekSRUkLy9QM7HcUB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-red-1.jpg
+name: Call Fire
+system:
+  abilityType: su
+  actions:
+    - _id: 3201d46nly2o2yxu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can stretch out your hand toward any visible
+      fire source within 60 feet and beckon it toward you. This causes a
+      ribbon-thin streak of fire to approach you in a straight line through the
+      air. Any creature directly in the fire ribbon’s path takes 1d4 points of
+      fire damage; a successful Reflex save (DC = 10 + half your class level +
+      your Wisdom modifier) negates this damage. When the ribbon of fire reaches
+      your hand, it either extinguishes or lights a flammable object of your
+      choice that you’re holding. You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Fire Bolt power of the Fire Domain.</p>
+  subType: classFeat
+  tag: classFeat_callFire
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

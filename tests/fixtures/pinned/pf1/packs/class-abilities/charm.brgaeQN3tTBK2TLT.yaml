@@ -1,0 +1,50 @@
+_id: brgaeQN3tTBK2TLT
+_key: '!items!brgaeQN3tTBK2TLT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_20.jpg
+name: Charm
+system:
+  abilityType: su
+  actions:
+    - _id: ixwtzluvjroy0kj6
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one animal or humanoid
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>A witch can charm an animal or humanoid creature within 30 feet by
+      beckoning and speaking soothing words. This improves the attitude of an
+      animal or humanoid creature by 1 step, as if the witch had successfully
+      used the Diplomacy skill. The effect lasts for a number of rounds equal to
+      the Witch's Intelligence modifier. A Will save negates this effect.
+      Whether or not the save is successful, a creature cannot be the target of
+      this hex again for 1 day.</p>
+
+      <p>At 8th level, this effect improves the attitude of the target creature
+      by 2 steps. This is a mind-affecting charm effect.</p>
+  sources:
+    - id: PZO1115
+      pages: '66'
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

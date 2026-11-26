@@ -1,0 +1,42 @@
+_id: RGVUWMi9hxULzXLX
+_key: '!items!RGVUWMi9hxULzXLX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-red-1.jpg
+name: Malign Eye
+system:
+  abilityType: su
+  actions:
+    - _id: 9xk0cb7uzz7d2u7q
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can afflict one target within 30 feet with
+      your malign eye, causing it to take a –2 penalty on all saving throws
+      against your spells. The effect lasts for 1 minute or until the target
+      hits you with an attack. You can use this ability for a number of times
+      per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Bit of Luck power of the Luck Domain.</p>
+  subType: classFeat
+  tag: classFeat_malignEye
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

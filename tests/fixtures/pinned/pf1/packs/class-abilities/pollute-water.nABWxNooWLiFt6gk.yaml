@@ -1,0 +1,62 @@
+_id: nABWxNooWLiFt6gk
+_key: '!items!nABWxNooWLiFt6gk'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Pollute Water
+system:
+  abilityType: su
+  actions:
+    - _id: CgEuiIY8vy6O827i
+      ability:
+        critRange: null
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Creature
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+      touch: true
+    - _id: EZJDZ0IV8bTtn9g6
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: radius of 10 ft per level
+      duration:
+        units: seeText
+      name: Area
+      range:
+        units: touch
+      target:
+        value: area
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can corrupt bodies of water with foul energies. This
+      functions as the
+      @UUID[Compendium.pf1.class-abilities.0p3L0HtL5ClqZKEi]{blight hex}, except
+      it affects only either an area of standing water or a creature with the
+      aquatic or water subtype. A creature of any type that drinks water from a
+      polluted area must succeed at a Fortitude saving throw or become nauseated
+      for 1d3 rounds and afflicted as if blighted with the blight hex
+      curse.</p><p>A creature that succeeds at this saving throw is immune to
+      the effects of polluted water from this area for 24 hours.</p><p>Polluted
+      water does not quench thirst.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

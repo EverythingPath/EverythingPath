@@ -1,0 +1,45 @@
+_id: lBXIoSoWpLjKcO2b
+_key: '!items!lBXIoSoWpLjKcO2b'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Project Psyche
+system:
+  abilityType: su
+  actions:
+    - _id: 74fq228pqhuxsb5n
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: ft
+        value: '5'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can project your psyche into another vessel. Once per day, you can
+      possess another creature as if using the
+      @UUID[Compendium.pf1.spells.8ai7fslz4zu8xe9s]{Magic Jar} spell, though
+      this does not require a receptacle. You must be adjacent to the target
+      creature, which receives a Will save against the effect.</p>
+
+      <p>You must be at least 11th level to choose this revelation.</p>
+  subType: classFeat
+  tag: classFeat_projectPsyche
+  tags:
+    - Revelation
+    - Occult Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

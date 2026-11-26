@@ -1,0 +1,42 @@
+_id: g3DptNZksB9HU80M
+_key: '!items!g3DptNZksB9HU80M'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_29.jpg
+name: Fossil Form
+system:
+  abilityType: su
+  actions:
+    - _id: 3ldl5i3vq0435pkc
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At the beginning of your turn as a swift action, you can infuse your
+      flesh with minerals, granting you cumbersome security. Until the beginning
+      of your next turn, you are staggered, gain hardness 2, and gain a +2 bonus
+      on saving throws against petrification. This hardness increases by 2 and
+      your saving throw bonus increases by 1 for every 4 cleric levels you have.
+      You can use this ability a number of times per day equal to 3 + your
+      Wisdom modifier.</p>
+
+      <p>This power replaces the Acid Dart power of the Earth Domain.</p>
+  subType: classFeat
+  tag: classFeat_fossilForm
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

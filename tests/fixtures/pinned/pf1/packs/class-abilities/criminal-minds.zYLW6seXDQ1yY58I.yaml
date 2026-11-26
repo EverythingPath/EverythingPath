@@ -1,0 +1,41 @@
+_id: zYLW6seXDQ1yY58I
+_key: '!items!zYLW6seXDQ1yY58I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Criminal Minds
+system:
+  abilityType: sp
+  actions:
+    - _id: mfsl96r8doyry1ue
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can touch a creature and fill its mind with criminal impulses. This
+      otherwise functions as per
+      @UUID[Compendium.pf1.spells.q986nbkaq8kwbcy2]{Crime Of Opportunity},
+      though a target that fails its saving throw and acts on an impulse gets
+      those desires out of its system and becomes immune to the effects of your
+      criminal minds ability for 24 hours. You can use this ability a number of
+      times per day equal to 3 + your Wisdom modifier (minimum 1).</p>
+  subType: classFeat
+  tag: classFeat_criminalMinds
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

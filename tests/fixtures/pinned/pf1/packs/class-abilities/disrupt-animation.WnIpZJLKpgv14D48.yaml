@@ -1,0 +1,45 @@
+_id: WnIpZJLKpgv14D48
+_key: '!items!WnIpZJLKpgv14D48'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Disrupt Animation
+system:
+  abilityType: sp
+  actions:
+    - _id: suwf6hwo6zokmdxb
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: one undead creature
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can use @UUID[Compendium.pf1.spells.oyu8efso7sio8arn]{Disrupt
+      Undead} as a spell-like ability, adding your wisdom modifier to the
+      damage. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_disruptAnimation
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat
