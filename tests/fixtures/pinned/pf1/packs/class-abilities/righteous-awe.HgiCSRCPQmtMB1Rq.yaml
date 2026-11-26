@@ -1,0 +1,39 @@
+_id: HgiCSRCPQmtMB1Rq
+_key: '!items!HgiCSRCPQmtMB1Rq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Righteous Awe
+system:
+  abilityType: su
+  actions:
+    - _id: 4lqjv8bhqnejm9k1
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>Whenever you make an unarmed touch attack against an evil creature, it
+      must succeed at a Will save (DC 10 + 1/2 your inquisitor level + your
+      Wisdom modifier) or become shaken for 1d4 rounds. If the creature touched
+      is an evil outsider, it becomes frightened instead of shaken. You can use
+      this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_righteousAwe
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

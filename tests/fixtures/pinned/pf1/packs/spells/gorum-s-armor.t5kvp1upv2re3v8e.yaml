@@ -1,0 +1,61 @@
+_id: t5kvp1upv2re3v8e
+_key: '!items!t5kvp1upv2re3v8e'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Gorum's Armor
+system:
+  actions:
+    - _id: ekaoho3kg1a7o05z
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: 1 suit of metal armor or 1 metal shield
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The targeted suit of armor or shield sprouts thousands of tiny iron
+      spikes like porcupine quills. These do not harm the armor's wearer (though
+      donning or removing armor under the effects of this spell takes twice as
+      long), but they act as armor spikes or shield spikes (as appropriate). Any
+      creature attacking the wearer with natural weapons takes 1 point of
+      piercing damage for each attack that hits. At 5th level, the spikes gain a
+      +1 enhancement bonus on attack and damage rolls; this bonus increases to
+      +2 at 10th level. At 15th level, the spikes also gain the <i>anarchic</i>
+      weapon quality.</p>
+  learnedAt:
+    class:
+      bloodrager: 1
+      cleric: 1
+      inquisitor: 1
+      magus: 1
+      oracle: 1
+      shaman: 1
+      warpriest: 1
+  materials:
+    value: 1 iron spike
+  school: trs
+  sources:
+    - id: PZO9226
+      pages: '294'
+    - id: PZO9202
+      pages: '17'
+type: spell

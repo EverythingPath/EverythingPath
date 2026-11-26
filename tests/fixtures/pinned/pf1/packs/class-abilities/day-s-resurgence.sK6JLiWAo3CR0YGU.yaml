@@ -1,0 +1,47 @@
+_id: sK6JLiWAo3CR0YGU
+_key: '!items!sK6JLiWAo3CR0YGU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-blue-2.jpg
+name: Day's Resurgence
+system:
+  abilityType: su
+  actions:
+    - _id: 21aegxl9qcyjq75r
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can restore a single creature as if it had just
+      completed 8 hours of rest. It takes 10 minutes to use this power. If the
+      use of this power is disrupted, it must be restarted, but it is not lost.
+      At the end of the 10 minutes, a single willing creature that you have
+      touched regains hit points as if it had rested for the night and may make
+      new saving throws against effects that require a save once per day. The
+      target does not suffer any negative effects if such saving throws are
+      failed, but success counts toward removing the affliction (if possible).
+      This ability does not allow a target to prepare spells an additional time
+      per day. You can use this ability once per day at 8th level, plus one
+      additional time per day for every 2 levels beyond 8th.</p>
+
+      <p>This power replaces the Nimbus of Light power of the Sun Domain.</p>
+  subType: classFeat
+  tag: classFeat_daysResurgence
+  uses:
+    maxFormula: floor((@class.level - 6) / 2)
+    per: day
+type: feat

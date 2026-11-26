@@ -1,0 +1,45 @@
+_id: OCQqGf9TIRC47Ex2
+_key: '!items!OCQqGf9TIRC47Ex2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Honor Bound
+system:
+  abilityType: su
+  actions:
+    - _id: hl3h9k4puq2ndqiv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>With a touch, you can remind a creature of its duties and
+      responsibilities, granting it a new saving throw against each enchantment
+      (charm) or enchantment (compulsion) effect that currently affects it. If
+      the saving throw is successful, the enchantment effect is ended. This
+      power only affects effects that allow a save. If you fail a save against
+      such an effect, you can use this ability as an immediate action to grant
+      yourself an additional save. Once the target (either you or a touched
+      creature) has made one additional save per effect, this ability has no
+      further effect on that particular enchantment effect. You can use this
+      ability a number of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Touch of Glory power of the Glory Domain.</p>
+  subType: classFeat
+  tag: classFeat_honorBound
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

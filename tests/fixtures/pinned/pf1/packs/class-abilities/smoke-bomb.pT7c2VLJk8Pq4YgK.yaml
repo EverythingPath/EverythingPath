@@ -1,0 +1,83 @@
+_id: pT7c2VLJk8Pq4YgK
+_key: '!items!pT7c2VLJk8Pq4YgK'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/fog-gas-smoke-swirling-gray.webp
+name: Smoke Bomb
+system:
+  actions:
+    - _id: iaK2NvBWoi7yKaAm
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+    - _id: kC73OEt81tnprIix
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: '@class.level'
+      img: icons/magic/air/fog-gas-smoke-swirling-gray.webp
+      measureTemplate:
+        color: '#b0b0b0'
+        size: '10'
+        type: circle
+      name: Fog Cloud
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it create a
+      cloud of thick smoke when it detonates. The cloud functions as
+      @UUID[Compendium.pf1.spells.g33euis7yi9pwddy]{Fog Cloud}, filling an area
+      equal to twice the bomb's splash radius for 1 round per level.</p>
+  sources:
+    - id: PZO1115
+      pages: '31'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

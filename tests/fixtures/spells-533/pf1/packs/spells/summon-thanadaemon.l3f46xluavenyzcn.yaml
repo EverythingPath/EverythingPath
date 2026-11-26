@@ -1,0 +1,55 @@
+_id: l3f46xluavenyzcn
+_key: '!items!l3f46xluavenyzcn'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Thanadaemon
+system:
+  actions:
+    - _id: 36t4ey2h6aog4rne
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned creature
+      name: Use
+      range:
+        units: close
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except it summons a
+      single thanadaemon. You can only use this spell in an area with enough
+      open water to accommodate the daemon's skiff, or when on the Astral Plane
+      or Ethereal Plane.</p>
+  descriptors:
+    - evil
+  learnedAt:
+    class:
+      arcanist: 9
+      cleric: 9
+      oracle: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+  level: 9
+  materials:
+    focus: two silver coins
+  school: con
+  sources:
+    - id: PZO1139
+      pages: '39'
+  sr: false
+  subschool:
+    - summoning
+type: spell

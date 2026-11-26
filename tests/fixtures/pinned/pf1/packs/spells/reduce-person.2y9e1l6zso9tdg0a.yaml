@@ -1,0 +1,77 @@
+_id: 2y9e1l6zso9tdg0a
+_key: '!items!2y9e1l6zso9tdg0a'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/control/silhouette-grow-shrink-blue.webp
+name: Reduce Person
+system:
+  actions:
+    - _id: xsg40i18jctsvrdm
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one humanoid creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes instant diminution of a humanoid creature, halving
+      its height, length, and width and dividing its weight by 8. This decrease
+      changes the creature's size category to the next smaller one. The target
+      gains a +2 size bonus to Dexterity, a -2 size penalty to Strength (to a
+      minimum of 1), and a +1 bonus on attack rolls and AC due to its
+      <i>reduced</i> size.</p><p>A Small humanoid creature whose size decreases
+      to Tiny has a space of 2-1/2 feet and a natural reach of 0 feet (meaning
+      that it must enter an opponent's square to attack). A Large humanoid
+      creature whose size decreases to Medium has a space of 5 feet and a
+      natural reach of 5 feet. This spell doesn't change the target's
+      speed.</p><p>All equipment worn or carried by a creature is similarly
+      <i>reduced</i> by the spell.</p><p>Melee and projectile weapons deal less
+      damage. Other magical properties are not affected by this spell. Any
+      <i>reduced</i> item that leaves the <i>reduced</i> creature's possession
+      (including a projectile or thrown weapon) instantly returns to its normal
+      size. This means that thrown weapons deal their normal damage (projectiles
+      deal damage based on the size of the weapon that fired
+      them).</p><p>Multiple magical effects that reduce size do not stack.
+      <i>Reduce person</i> counters and dispels <i>enlarge
+      person</i>.</p><p><i>Reduce person</i> can be made permanent with a
+      <i>permanency</i> spell.</p>
+  learnedAt:
+    class:
+      alchemist: 1
+      arcanist: 1
+      bloodrager: 1
+      investigator: 1
+      magus: 1
+      medium: 1
+      occultist: 1
+      psychic: 1
+      sorcerer: 1
+      summoner: 1
+      summonerUnchained: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: a pinch of powdered iron
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '330'
+type: spell

@@ -1,0 +1,45 @@
+_id: NDysrxC1AH0gLcqd
+_key: '!items!NDysrxC1AH0gLcqd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/gray_04.jpg
+name: Weapon Master
+system:
+  abilityType: su
+  actions:
+    - _id: 9nr1p5o6xog3hq6p
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, as a swift action, you gain the use of one combat feat
+      for a number of rounds per day equal to your cleric level. These rounds do
+      not need to be consecutive and you can change the feat chosen each time
+      you use this ability. You must meet the prerequisites to use this
+      feat.</p>
+  sources:
+    - id: PZO1110
+      pages: '48'
+  subType: classFeat
+  tag: classFeat_weaponMaster
+  tags:
+    - Domain Power
+    - War Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

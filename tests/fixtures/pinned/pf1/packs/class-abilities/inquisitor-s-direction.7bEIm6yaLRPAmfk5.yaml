@@ -1,0 +1,41 @@
+_id: 7bEIm6yaLRPAmfk5
+_key: '!items!7bEIm6yaLRPAmfk5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Inquisitor's Direction
+system:
+  abilityType: su
+  actions:
+    - _id: i60an6ah5iotiqcs
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one ally
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At the start of your turn, you can choose to enter a tranquil,
+      reflective state and forgo all actions (standard, move, swift, immediate,
+      and free actions, including attacks of opportunity) for that round; one
+      ally of your choice within 30 feet gains the benefit of haste for 1 round.
+      You can use this ability a number of times per day equal to your 3 +
+      Wisdom bonus (minimum 1).</p>
+  subType: classFeat
+  tag: classFeat_inquisitorsDirection
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

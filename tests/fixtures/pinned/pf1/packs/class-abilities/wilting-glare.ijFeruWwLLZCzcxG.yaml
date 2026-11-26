@@ -1,0 +1,50 @@
+_id: ijFeruWwLLZCzcxG
+_key: '!items!ijFeruWwLLZCzcxG'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/leaf-orange-1.jpg
+name: Wilting Glare
+system:
+  abilityType: su
+  actions:
+    - _id: t2xj9nobrh8jb5k3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can leach moisture and vitality from a
+      living, corporeal creature you can see within 30 feet. The target takes an
+      amount of nonlethal damage equal to 1d6 + 1 for every 2 cleric levels you
+      have and becomes fatigued until the beginning of your next turn (Fortitude
+      negates). Plant creatures and those with the aquatic or water subtype take
+      lethal damage from this ability, and they are fatigued for a number of
+      rounds equal to your Wisdom modifier. You can use this ability a number of
+      times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Sun's Blessing power of the Sun Domain.</p>
+  subType: classFeat
+  tag: classFeat_wiltingGlare
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

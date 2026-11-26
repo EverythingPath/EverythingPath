@@ -1,0 +1,945 @@
+_id: hbjII7pJ4ECZ2Z5k
+_key: '!actors!hbjII7pJ4ECZ2Z5k'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFCharacter
+img: systems/pf1/icons/skills/blue_32.jpg
+items:
+  - _id: lLSER9nGLmoD9ijI
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.lLSER9nGLmoD9ijI'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/hand-gnarled-green.webp
+    name: Limbs (Arms)
+    system:
+      abilityType: ex
+      class: eidolon
+      description:
+        value: >-
+          <p>An eidolon grows an additional pair of limbs. These limbs can take
+          one of two forms.</p><ul><li>They can be made into legs, complete with
+          feet. Each pair of legs increases the eidolon's base speed by 10
+          feet.</li><li>Alternatively, they can be made into arms, complete with
+          hands.</li></ul><p>The eidolon does not gain any additional natural
+          attacks for an additional pair of arms, but it can take other
+          evolutions that add additional attacks (such as claws or a slam). Arms
+          that have hands can be used to wield weapons, if the eidolon is
+          proficient.</p><p>This evolution can be selected more than once.</p>
+      subType: misc
+      tags:
+        - Eidolon Evolution
+    type: feat
+  - _id: 3Xi4gUkyL1mSaTWd
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.3Xi4gUkyL1mSaTWd'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/intimidating-prowess.jpg
+    name: Evolution Pool (Unchained)
+    system:
+      abilityType: ex
+      actions:
+        - _id: vht59u03zxbacyjm
+          activation:
+            type: passive
+            unchained:
+              type: passive
+          img: systems/pf1/icons/feats/intimidating-prowess.jpg
+          name: Use
+          tag: evolutionPoolUnchained
+          uses:
+            autoDeductChargesCost: '0'
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p><strong>Current Pool</strong>: [[floor((@class.level - 1) * 0.75) +
+          1 + (ifelse(gte((((@class.level - 1) * 75) - floor(((@class.level - 1)
+          * 75) / 100) * 100), 50), 1, 0))]]</p><p>The value given in this
+          column is the total number of points in the eidolon's evolution pool.
+          Points from this pool can be spent on a wide variety of modifications
+          and upgrades that add new abilities, attacks, and powers to the
+          eidolon.</p><p>Whenever the summoner gains a level, the number in this
+          pool increases and the summoner can spend these points to change the
+          abilities of the eidolon. These choices are not set.</p><p>The
+          summoner can change them whenever he gains a level (and through the
+          transmogrify spell).</p><p><strong>Usage</strong></p><p>Subtract from
+          the total when adding evolutions.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+      uses:
+        autoDeductChargesCost: '0'
+        maxFormula: >-
+          floor((@class.level - 1) * 0.75) + 1 + (ifelse(gte((((@class.level -
+          1) * 75) - floor(((@class.level - 1) * 75) / 100) * 100), 50), 1, 0))
+        per: charges
+        value: 0
+    type: feat
+  - _id: FBDetImaNK8Gc6lE
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.FBDetImaNK8Gc6lE'
+    _stats:
+      coreVersion: '12.331'
+    flags:
+      pf1:
+        links:
+          classAssociations:
+            1b5kbkpIvxUjMTJj: 1
+            3YctCb5GmVRANE7z: 1
+            4brPazcok06hng95: 1
+            5kCgFSaVg2nBDHcd: 1
+            73LgFdeUYjYSnOpa: 1
+            7UT7Dl9MUTS5Srtl: 9
+            85OnSzu6IHatg211: 9
+            9oRDGfRJRPEgUYUo: 1
+            C8CUv9Z2uUhxZ9fg: 2
+            DFZLKRlBkWm9ivAH: 1
+            EkzBtPXCJUDKq6FS: 1
+            GbduyI80iu5fN6ei: 1
+            JceQzoibpRhv1GbX: 2
+            KIZNXlyVlX25uKyr: 1
+            LvKEuJY7SxZaZLvv: 1
+            MJreDTnyerzYy9zW: 1
+            P3jwzKSHjKhrRcHl: 1
+            R0aL5ILgO8EHsFU2: 1
+            SjUIBIMN2kVtwlC7: 1
+            V7eLupnrh4OzP4uO: 6
+            VBHDze4BNpILMXJT: 1
+            W5SffxKgSxi5S6mX: 1
+            WeDiot8ZfoMKBgHW: 1
+            XBblZIgv9P1zESbh: 1
+            Y0fHXlXKwgdfdv8E: 1
+            ZFs0d3d4qwlAvGaU: 1
+            aJPiMDj9TV1qddNO: 1
+            aYiiPy7ptPLcYFds: 1
+            ar149VczHBoXRkg2: 1
+            btMSwC8Fwib6jrQt: 1
+            eqT4mWQuuJxbAF1l: 6
+            fUhF03uqEVGRYn62: 1
+            gJNR8JkDQOSJWunz: 1
+            hUXMQUKZbjoaQQcY: 1
+            hf2uRlr1hA4Wt8hG: 2
+            iyxJFf1vEbXxLRbt: 1
+            l0OnqTnAO2MP0ZBV: 1
+            le2iFYbgGwrHiUqz: 1
+            mxbPOdlJe2eiZbd1: 1
+            oF2Qn9IQjJwJgy0q: 1
+            okZeu1bMZK2zuAuh: 1
+            pCAyRBCPCN7JPPw7: 1
+            qbGoUfokKqA28IJj: 1
+            qstlGBOZUQBS5vM6: 1
+            qy2lbszJnwtQMQxl: 1
+            rESbUOpvZUwErTvL: 1
+            sph0Navr3XLfCJ8K: 2
+            swyPy1rDPQbyREpm: 1
+            tPV5ZygN5TtqkE3Z: 1
+            tfuD7jXPWU3A9vRk: 1
+            vUmzv31EL7IqZeAq: 1
+            wZQFeD9Q1dUTQsPS: 1
+            wjOiykRLE5SuOWg4: 1
+            ws303TnzUNWTpyIL: 1
+            ymJ3FCNNLW8qZ2bh: 1
+            yzeJRIJqGdOqzSHj: 1
+    img: systems/pf1/icons/skills/violet_22.jpg
+    name: Eidolon
+    system:
+      bab: high
+      classSkills:
+        blf: true
+        crf: true
+        kpl: true
+        per: true
+        sen: true
+        ste: true
+      customHD: round((@item.level - 1) * 0.75) + 1
+      description:
+        value: >-
+          <p><strong>Source</strong>: <em>Advanced Player's Guide</em></p><p>An
+          eidolon's abilities are determined by the summoner's level and by the
+          choices made using its evolution pool. Table 2&ndash;9: Eidolon Base
+          Statistics determines many of the base statistics of the eidolon. Each
+          eidolon possesses a base form that modifies these base statistics.
+          Eidolons are outsiders for the purpose of determining which spells
+          affect them.</p><table style="width: 96.9314%; height: 447px;"
+          border="1"><thead><tr style="height: 33px;"><th style="width:
+          7.40413%; text-align: center; height: 33px;">Class Level</th><th
+          style="width: 4.89565%; text-align: center; height: 33px;">HD</th><th
+          style="width: 4.8771%; text-align: center; height: 33px;">BAB</th><th
+          style="width: 7.21791%; text-align: center; height: 33px;">Good
+          Saves</th><th style="width: 6.33147%; text-align: center; height:
+          33px;">Bad Save</th><th style="width: 6.51769%; text-align: center;
+          height: 33px;">Skills</th><th style="width: 6.14525%; text-align:
+          center; height: 33px;">Feats</th><th style="width: 8.37989%;
+          text-align: center; height: 33px;">Armor Bonus</th><th style="width:
+          9.31099%; text-align: center; height: 33px;">Str/Dex Bonus</th><th
+          style="width: 12.7178%; text-align: center; height: 33px;">Evolution
+          Pool</th><th style="width: 8.17541%; text-align: center; height:
+          33px;">Max. Attacks</th><th style="width: 15.606%; height:
+          33px;">Special</th></tr></thead><tbody><tr style="height: 42px;"><td
+          style="width: 7.40413%; text-align: center; height: 42px;">1st</td><td
+          style="width: 4.89565%; text-align: center; height: 42px;">1</td><td
+          style="width: 4.8771%; text-align: center; height: 42px;">+1</td><td
+          style="width: 7.21791%; text-align: center; height: 42px;">+2</td><td
+          style="width: 6.33147%; text-align: center; height: 42px;">+0</td><td
+          style="width: 6.51769%; text-align: center; height: 42px;">4</td><td
+          style="width: 6.14525%; text-align: center; height: 42px;">1</td><td
+          style="width: 8.37989%; text-align: center; height: 42px;">+0</td><td
+          style="width: 9.31099%; text-align: center; height: 42px;">+0</td><td
+          style="width: 12.7178%; text-align: center; height: 42px;">3</td><td
+          style="width: 8.17541%; text-align: center; height: 42px;">3</td><td
+          style="width: 15.606%; height: 42px;">Darkvision, link, share
+          spells</td></tr><tr style="height: 16px;"><td style="width: 7.40413%;
+          text-align: center; height: 16px;">2nd</td><td style="width: 4.89565%;
+          text-align: center; height: 16px;">2</td><td style="width: 4.8771%;
+          text-align: center; height: 16px;">+2</td><td style="width: 7.21791%;
+          text-align: center; height: 16px;">+3</td><td style="width: 6.33147%;
+          text-align: center; height: 16px;">+0</td><td style="width: 6.51769%;
+          text-align: center; height: 16px;">8</td><td style="width: 6.14525%;
+          text-align: center; height: 16px;">1</td><td style="width: 8.37989%;
+          text-align: center; height: 16px;">+2</td><td style="width: 9.31099%;
+          text-align: center; height: 16px;">+1</td><td style="width: 12.7178%;
+          text-align: center; height: 16px;">4</td><td style="width: 8.17541%;
+          text-align: center; height: 16px;">3</td><td style="width: 15.606%;
+          height: 16px;">Evasion</td></tr><tr style="height: 16px;"><td
+          style="width: 7.40413%; text-align: center; height: 16px;">3rd</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">3</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+3</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+3</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+1</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">12</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">2</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+2</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+1</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">5</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">3</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">4th</td><td style="width: 4.89565%; text-align: center;
+          height: 16px;">3</td><td style="width: 4.8771%; text-align: center;
+          height: 16px;">+3</td><td style="width: 7.21791%; text-align: center;
+          height: 16px;">+3</td><td style="width: 6.33147%; text-align: center;
+          height: 16px;">+1</td><td style="width: 6.51769%; text-align: center;
+          height: 16px;">12</td><td style="width: 6.14525%; text-align: center;
+          height: 16px;">2</td><td style="width: 8.37989%; text-align: center;
+          height: 16px;">+2</td><td style="width: 9.31099%; text-align: center;
+          height: 16px;">+1</td><td style="width: 12.7178%; text-align: center;
+          height: 16px;">7</td><td style="width: 8.17541%; text-align: center;
+          height: 16px;">4</td><td style="width: 15.606%; height:
+          16px;">&mdash;</td></tr><tr style="height: 33px;"><td style="width:
+          7.40413%; text-align: center; height: 33px;">5th</td><td style="width:
+          4.89565%; text-align: center; height: 33px;">4</td><td style="width:
+          4.8771%; text-align: center; height: 33px;">+4</td><td style="width:
+          7.21791%; text-align: center; height: 33px;">+4</td><td style="width:
+          6.33147%; text-align: center; height: 33px;">+1</td><td style="width:
+          6.51769%; text-align: center; height: 33px;">16</td><td style="width:
+          6.14525%; text-align: center; height: 33px;">2</td><td style="width:
+          8.37989%; text-align: center; height: 33px;">+4</td><td style="width:
+          9.31099%; text-align: center; height: 33px;">+2</td><td style="width:
+          12.7178%; text-align: center; height: 33px;">8</td><td style="width:
+          8.17541%; text-align: center; height: 33px;">4</td><td style="width:
+          15.606%; height: 33px;">Ability score increase</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">6th</td><td style="width: 4.89565%; text-align: center;
+          height: 16px;">5</td><td style="width: 4.8771%; text-align: center;
+          height: 16px;">+5</td><td style="width: 7.21791%; text-align: center;
+          height: 16px;">+4</td><td style="width: 6.33147%; text-align: center;
+          height: 16px;">+1</td><td style="width: 6.51769%; text-align: center;
+          height: 16px;">20</td><td style="width: 6.14525%; text-align: center;
+          height: 16px;">3</td><td style="width: 8.37989%; text-align: center;
+          height: 16px;">+4</td><td style="width: 9.31099%; text-align: center;
+          height: 16px;">+2</td><td style="width: 12.7178%; text-align: center;
+          height: 16px;">9</td><td style="width: 8.17541%; text-align: center;
+          height: 16px;">4</td><td style="width: 15.606%; height:
+          16px;">Devotion</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">7th</td><td style="width:
+          4.89565%; text-align: center; height: 16px;">6</td><td style="width:
+          4.8771%; text-align: center; height: 16px;">+6</td><td style="width:
+          7.21791%; text-align: center; height: 16px;">+5</td><td style="width:
+          6.33147%; text-align: center; height: 16px;">+2</td><td style="width:
+          6.51769%; text-align: center; height: 16px;">24</td><td style="width:
+          6.14525%; text-align: center; height: 16px;">3</td><td style="width:
+          8.37989%; text-align: center; height: 16px;">+6</td><td style="width:
+          9.31099%; text-align: center; height: 16px;">+3</td><td style="width:
+          12.7178%; text-align: center; height: 16px;">10</td><td style="width:
+          8.17541%; text-align: center; height: 16px;">4</td><td style="width:
+          15.606%; height: 16px;">&mdash;</td></tr><tr style="height: 16px;"><td
+          style="width: 7.40413%; text-align: center; height: 16px;">8th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">6</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+6</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+5</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+2</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">24</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">3</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+6</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+3</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">11</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">4</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">9th</td><td style="width: 4.89565%; text-align: center;
+          height: 16px;">7</td><td style="width: 4.8771%; text-align: center;
+          height: 16px;">+7</td><td style="width: 7.21791%; text-align: center;
+          height: 16px;">+5</td><td style="width: 6.33147%; text-align: center;
+          height: 16px;">+2</td><td style="width: 6.51769%; text-align: center;
+          height: 16px;">28</td><td style="width: 6.14525%; text-align: center;
+          height: 16px;">4</td><td style="width: 8.37989%; text-align: center;
+          height: 16px;">+6</td><td style="width: 9.31099%; text-align: center;
+          height: 16px;">+3</td><td style="width: 12.7178%; text-align: center;
+          height: 16px;">13</td><td style="width: 8.17541%; text-align: center;
+          height: 16px;">5</td><td style="width: 15.606%; height:
+          16px;">Multiattack</td></tr><tr style="height: 33px;"><td
+          style="width: 7.40413%; text-align: center; height:
+          33px;">10th</td><td style="width: 4.89565%; text-align: center;
+          height: 33px;">8</td><td style="width: 4.8771%; text-align: center;
+          height: 33px;">+8</td><td style="width: 7.21791%; text-align: center;
+          height: 33px;">+6</td><td style="width: 6.33147%; text-align: center;
+          height: 33px;">+2</td><td style="width: 6.51769%; text-align: center;
+          height: 33px;">32</td><td style="width: 6.14525%; text-align: center;
+          height: 33px;">4</td><td style="width: 8.37989%; text-align: center;
+          height: 33px;">+8</td><td style="width: 9.31099%; text-align: center;
+          height: 33px;">+4</td><td style="width: 12.7178%; text-align: center;
+          height: 33px;">14</td><td style="width: 8.17541%; text-align: center;
+          height: 33px;">5</td><td style="width: 15.606%; height: 33px;">Ability
+          score increase</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">11th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">9</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+9</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+6</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+3</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">36</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">5</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+8</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+4</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">15</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">5</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">12th</td><td style="width: 4.89565%; text-align:
+          center; height: 16px;">9</td><td style="width: 4.8771%; text-align:
+          center; height: 16px;">+9</td><td style="width: 7.21791%; text-align:
+          center; height: 16px;">+6</td><td style="width: 6.33147%; text-align:
+          center; height: 16px;">+3</td><td style="width: 6.51769%; text-align:
+          center; height: 16px;">36</td><td style="width: 6.14525%; text-align:
+          center; height: 16px;">5</td><td style="width: 8.37989%; text-align:
+          center; height: 16px;">+10</td><td style="width: 9.31099%; text-align:
+          center; height: 16px;">+5</td><td style="width: 12.7178%; text-align:
+          center; height: 16px;">16</td><td style="width: 8.17541%; text-align:
+          center; height: 16px;">5</td><td style="width: 15.606%; height:
+          16px;">&mdash;</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">13th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">10</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+10</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+7</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+3</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">40</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">5</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+10</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+5</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">17</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">5</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 33px;"><td style="width: 7.40413%; text-align: center;
+          height: 33px;">14th</td><td style="width: 4.89565%; text-align:
+          center; height: 33px;">11</td><td style="width: 4.8771%; text-align:
+          center; height: 33px;">+11</td><td style="width: 7.21791%; text-align:
+          center; height: 33px;">+7</td><td style="width: 6.33147%; text-align:
+          center; height: 33px;">+3</td><td style="width: 6.51769%; text-align:
+          center; height: 33px;">44</td><td style="width: 6.14525%; text-align:
+          center; height: 33px;">6</td><td style="width: 8.37989%; text-align:
+          center; height: 33px;">+10</td><td style="width: 9.31099%; text-align:
+          center; height: 33px;">+5</td><td style="width: 12.7178%; text-align:
+          center; height: 33px;">19</td><td style="width: 8.17541%; text-align:
+          center; height: 33px;">6</td><td style="width: 15.606%; height:
+          33px;">Improved evasion</td></tr><tr style="height: 33px;"><td
+          style="width: 7.40413%; text-align: center; height:
+          33px;">15th</td><td style="width: 4.89565%; text-align: center;
+          height: 33px;">12</td><td style="width: 4.8771%; text-align: center;
+          height: 33px;">+12</td><td style="width: 7.21791%; text-align: center;
+          height: 33px;">+8</td><td style="width: 6.33147%; text-align: center;
+          height: 33px;">+4</td><td style="width: 6.51769%; text-align: center;
+          height: 33px;">48</td><td style="width: 6.14525%; text-align: center;
+          height: 33px;">6</td><td style="width: 8.37989%; text-align: center;
+          height: 33px;">+12</td><td style="width: 9.31099%; text-align: center;
+          height: 33px;">+6</td><td style="width: 12.7178%; text-align: center;
+          height: 33px;">20</td><td style="width: 8.17541%; text-align: center;
+          height: 33px;">6</td><td style="width: 15.606%; height: 33px;">Ability
+          score increase</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">16th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">12</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+12</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+8</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+4</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">48</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">6</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+12</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+6</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">21</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">6</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">17th</td><td style="width: 4.89565%; text-align:
+          center; height: 16px;">13</td><td style="width: 4.8771%; text-align:
+          center; height: 16px;">+13</td><td style="width: 7.21791%; text-align:
+          center; height: 16px;">+8</td><td style="width: 6.33147%; text-align:
+          center; height: 16px;">+4</td><td style="width: 6.51769%; text-align:
+          center; height: 16px;">52</td><td style="width: 6.14525%; text-align:
+          center; height: 16px;">7</td><td style="width: 8.37989%; text-align:
+          center; height: 16px;">+14</td><td style="width: 9.31099%; text-align:
+          center; height: 16px;">+7</td><td style="width: 12.7178%; text-align:
+          center; height: 16px;">22</td><td style="width: 8.17541%; text-align:
+          center; height: 16px;">6</td><td style="width: 15.606%; height:
+          16px;">&mdash;</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">18th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">14</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+14</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+9</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+4</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">56</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">7</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+14</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+7</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">23</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">6</td><td
+          style="width: 15.606%; height: 16px;">&mdash;</td></tr><tr
+          style="height: 16px;"><td style="width: 7.40413%; text-align: center;
+          height: 16px;">19th</td><td style="width: 4.89565%; text-align:
+          center; height: 16px;">15</td><td style="width: 4.8771%; text-align:
+          center; height: 16px;">+15</td><td style="width: 7.21791%; text-align:
+          center; height: 16px;">+9</td><td style="width: 6.33147%; text-align:
+          center; height: 16px;">+5</td><td style="width: 6.51769%; text-align:
+          center; height: 16px;">60</td><td style="width: 6.14525%; text-align:
+          center; height: 16px;">8</td><td style="width: 8.37989%; text-align:
+          center; height: 16px;">+14</td><td style="width: 9.31099%; text-align:
+          center; height: 16px;">+7</td><td style="width: 12.7178%; text-align:
+          center; height: 16px;">25</td><td style="width: 8.17541%; text-align:
+          center; height: 16px;">7</td><td style="width: 15.606%; height:
+          16px;">&mdash;</td></tr><tr style="height: 16px;"><td style="width:
+          7.40413%; text-align: center; height: 16px;">20th</td><td
+          style="width: 4.89565%; text-align: center; height: 16px;">15</td><td
+          style="width: 4.8771%; text-align: center; height: 16px;">+15</td><td
+          style="width: 7.21791%; text-align: center; height: 16px;">+9</td><td
+          style="width: 6.33147%; text-align: center; height: 16px;">+5</td><td
+          style="width: 6.51769%; text-align: center; height: 16px;">60</td><td
+          style="width: 6.14525%; text-align: center; height: 16px;">8</td><td
+          style="width: 8.37989%; text-align: center; height: 16px;">+16</td><td
+          style="width: 9.31099%; text-align: center; height: 16px;">+8</td><td
+          style="width: 12.7178%; text-align: center; height: 16px;">26</td><td
+          style="width: 8.17541%; text-align: center; height: 16px;">7</td><td
+          style="width: 15.606%; height:
+          16px;">&mdash;</td></tr></tbody></table><p>Class Level: This is the
+          character's summoner level.</p><p><strong>HD</strong>: This is the
+          total number of 10-sided (d10) Hit Dice the eidolon possesses, each of
+          which gains a Constitution modifier, as
+          normal.</p><p><strong>BAB</strong>: This is the eidolon's base attack
+          bonus. An eidolon's base attack bonus is equal to its Hit Dice.
+          Eidolons do not gain additional attacks using their natural weapons
+          for a high base attack bonus.</p><p><strong>Good/Bad Saves</strong>:
+          These are the eidolon's base saving throw bonuses. An eidolon
+          possesses two good saving throws and one bad saving throw, determined
+          by the creature's base form.</p><p><strong>Skills</strong>: This lists
+          the eidolon's total skill ranks. An eidolon can assign skill ranks to
+          any skill, but it must possess the appropriate appendages to use some
+          skills. Eidolons with Intelligence scores above the base value modify
+          these totals as normal (an eidolon receives a number of skill ranks
+          equal to 6 + its Intelligence modifier per HD).</p><p>An eidolon
+          cannot have more ranks in a skill than it has Hit Dice. Eidolon skill
+          ranks are set once chosen, even if the creature changes when the
+          summoner gains a new level.</p><p><strong>Feats</strong>: This is the
+          total number of feats possessed by an eidolon. Eidolons can select any
+          feat that they qualify for, but they must possess the appropriate
+          appendages to use some feats. Eidolon feats are set once chosen, even
+          if the creature changes when the summoner gains a new level. If, due
+          to changes, the eidolon no longer qualifies for a feat, the feat has
+          no effect until the eidolon once again qualifies for the
+          feat.</p><p><strong>Armor Bonus</strong>: The number noted here is the
+          eidolon's base total armor bonus. This bonus may be split between an
+          armor bonus and a natural armor bonus, as decided by the summoner.
+          This number is modified by the eidolon's base form and some options
+          available through its evolution pool. An eidolon cannot wear armor of
+          any kind, as the armor interferes with the summoner's connection to
+          the eidolon.</p><p><strong>Str/Dex Bonus</strong>: Add this modifier
+          to the eidolon's Strength and Dexterity scores, as determined by its
+          base form. Some options available through the eidolon's evolution pool
+          might modify these scores.</p><p><strong>Evolution Pool</strong>: The
+          value given in this column is the total number of points in the
+          eidolon's evolution pool. Points from this pool can be spent on a wide
+          variety of modifications and upgrades that add new abilities, attacks,
+          and powers to the eidolon. Whenever the summoner gains a level, the
+          number in this pool increases and the summoner can spend these points
+          to change the abilities of the eidolon. These choices are not set. The
+          summoner can change them whenever he gains a level (and through the
+          transmogrify spell).</p><p><strong>Max. Attacks</strong>: This
+          indicates the maximum number of natural attacks that the eidolon is
+          allowed to possess at the given level. If the eidolon is at its
+          maximum, it cannot take evolutions that grant additional natural
+          attacks. This does not include attacks made with
+          weapons.</p><p><strong>Special</strong>: This includes a number of
+          abilities gained by all eidolons as they increase in power. Each of
+          these bonuses is described below.</p><p><strong>Darkvision</strong>
+          (Ex): The eidolon has darkvision out to a range of 60
+          feet.</p><p><strong>Link (Ex)</strong>: A summoner and his eidolon
+          share a mental link allows for communication across any distance (as
+          long as they are on the same plane). This communication is a free
+          action, allowing the summoner to give orders to his eidolon at any
+          time. In addition, magic items interfere with the summoner's
+          connection to his eidolon. As a result, the summoner and his eidolon
+          share magic item slots. For example, if the summoner is wearing a
+          ring, his eidolon can wear no more than one ring. In case of a
+          conflict, the items worn by the summoner remain active, and those used
+          by the eidolon become dormant. The eidolon must possess the
+          appropriate appendages to utilize a magic item.</p><p><strong>Share
+          Spells (Ex)</strong>: The summoner may cast a spell with a target of
+          &ldquo;you&rdquo; on his eidolon (as a spell with a range of touch)
+          instead of on himself. A summoner may cast spells on his eidolon even
+          if the spells normally do not affect creatures of the eidolon's type
+          (outsider). Spells cast in this way must come from the summoner spell
+          list. This ability does not allow the eidolon to share abilities that
+          are not spells, even if they function like
+          spells.</p><p><strong>Evasion (Ex)</strong>: If an eidolon is
+          subjected to an attack that normally allows a Reflex save for half
+          damage, it takes no damage if it makes a successful saving
+          throw.</p><p><strong>Ability Score Increase (Ex)</strong>: The eidolon
+          adds +1 to one of its ability scores.</p><p><strong>Devotion
+          (Ex)</strong>: An eidolon gains a +4 morale bonus on Will saves
+          against enchantment spells and
+          effects.</p><p><strong>Multiattack</strong>: An eidolon gains
+          Multiattack as a bonus feat if it has 3 or more natural attacks and
+          does not already have that feat. If it does not have the requisite 3
+          or more natural attacks (or it is reduced to less than 3 attacks), the
+          eidolon instead gains a second attack with one of its natural weapons,
+          albeit at a &ndash;5 penalty. If the eidolon later gains 3 or more
+          natural attacks, it loses this additional attack and instead gains
+          Multiattack.</p><p><strong>Improved Evasion (Ex)</strong>: When
+          subjected to an attack that allows a Reflex saving throw for half
+          damage, an eidolon takes no damage if it makes a successful saving
+          throw and only half damage if the saving throw fails.</p>
+      hd: 10
+      hp: 0
+      links:
+        classAssociations:
+          - level: 1
+            name: Ability Score Increase
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.ImmUxMdvqPXD55Qm
+          - level: 1
+            name: Darkvision
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.rSCFhnhWsomd7Yea
+          - level: 1
+            name: Eidolon Feats
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.JIxOZE8MULu6xtlz
+          - level: 1
+            name: Evolution Pool (Chained)
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.gQahVj8GpA8Yvguq
+          - level: 1
+            name: Link
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.wtM7xs3CFcQdHL83
+          - level: 1
+            name: Maximum Attacks
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.zcYdxGqaH4E7W7cj
+          - level: 1
+            name: Natural Armor Bonus
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.p0ne09vmFxykzhs5
+          - level: 1
+            name: Requires Manual Setup
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.WRk36VbOw70z0KKP
+          - level: 1
+            name: Share Spells
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.Z4wx2mRpp3dWPOIh
+          - level: 1
+            name: STR/DEX Bonus
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.WMJq96Aa7kZgeVXI
+          - level: 1
+            name: Base Attack Bonus
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.55xgxJVviwsNqE0g
+          - level: 1
+            name: Eidolon Saves
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.Gl5sWXBXpYD14pXl
+          - level: 2
+            name: Evasion
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.lV3pdfuVNr6TbAli
+          - level: 6
+            name: Devotion
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.9twQNtuJV5l3smM9
+          - level: 9
+            name: Multiattack
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.KIUb7L9aIqLANp75
+          - level: 14
+            name: Improved Evasion
+            uuid: Compendium.pf-content.pf-eidolon-evolutions.Item.SASbBFJ77Oav01jN
+      savingThrows:
+        fort:
+          value: high
+        will:
+          value: high
+      skillsPerLevel: 6
+    type: class
+  - _id: iyxJFf1vEbXxLRbt
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.iyxJFf1vEbXxLRbt'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_19.jpg
+    name: Ability Score Increase
+    system:
+      abilityType: ex
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>The Eidolon adds +1 to one of its ability scores at levels 5, 10,
+          and 15.</p><p>Current Ability Points: [[ifelse(gt(@class.level, 14),
+          3, ifelse(gt(@class.level, 4), 1,
+          0))]]</p><p><strong>Usage</strong></p><p>Add ability score increase in
+          Changes.&nbsp;</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: okZeu1bMZK2zuAuh
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.okZeu1bMZK2zuAuh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: Darkvision
+    system:
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: <p>As eidolong gains darkvision with a range of 60 feet.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: 4brPazcok06hng95
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.4brPazcok06hng95'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blood_07.jpg
+    name: Eidolon Feats
+    system:
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>This is the total number of feats possessed by an eidolon:
+          [[ceil((round((@class.level - 1) * .75) + 1) / 2)]]. Eidolons can
+          select any feat that they qualify for, but they must possess the
+          appropriate appendages to use some feats. Eidolon feats are set once
+          chosen, even if the creature changes when the summoner gains a new
+          level.</p><p>If, due to changes, the eidolon no longer qualifies for a
+          feat, the feat has no effect until the eidolon once again qualifies
+          for the feat.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: aJPiMDj9TV1qddNO
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.aJPiMDj9TV1qddNO'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/intimidating-prowess.jpg
+    name: Evolution Pool (Chained)
+    system:
+      abilityType: ex
+      actions:
+        - _id: uvqdccvei6c1utq5
+          activation:
+            type: passive
+            unchained:
+              type: passive
+          img: systems/pf1/icons/feats/intimidating-prowess.jpg
+          name: Use
+          tag: evolutionPoolChained
+          uses:
+            autoDeductChargesCost: '0'
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p><strong>Current Pool</strong>: [[@class.level + 1 +
+          floor((@class.level + 6) / 5)]]</p><p>The value given in this column
+          is the total number of points in the eidolon's evolution pool. Points
+          from this pool can be spent on a wide variety of modifications and
+          upgrades that add new abilities, attacks, and powers to the
+          eidolon.</p><p>Whenever the summoner gains a level, the number in this
+          pool increases and the summoner can spend these points to change the
+          abilities of the eidolon. These choices are not set.</p><p>The
+          summoner can change them whenever he gains a level (and through the
+          transmogrify spell).</p><p><strong>Usage</strong></p><p>Subtract from
+          the total when adding evolutions.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+      uses:
+        autoDeductChargesCost: '0'
+        maxFormula: '@class.level + 1 + floor((@class.level + 6) / 5)'
+        per: charges
+        value: 3
+    type: feat
+  - _id: vUmzv31EL7IqZeAq
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.vUmzv31EL7IqZeAq'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/quick-draw.jpg
+    name: Link
+    system:
+      abilityType: ex
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>A summoner and his eidolon share a mental link allows for
+          communication across any distance (as long as they are on the same
+          plane). This communication is a free action, allowing the summoner to
+          give orders to his eidolon at any time. In addition, magic items
+          interfere with the summoner's connection to his eidolon.</p><p>As a
+          result, the summoner and his eidolon share magic item slots.</p><p>For
+          example, if the summoner is wearing a ring, his eidolon can wear no
+          more than one ring. In case of a conflict, the items worn by the
+          summoner remain active, and those used by the eidolon become dormant.
+          The eidolon must possess the appropriate appendages to utilize a magic
+          item.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: WeDiot8ZfoMKBgHW
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.WeDiot8ZfoMKBgHW'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_23.jpg
+    name: Maximum Attacks
+    system:
+      abilityType: ex
+      actions:
+        - _id: eh2bkxg4j1fmm62x
+          activation:
+            type: passive
+            unchained:
+              type: passive
+          img: systems/pf1/icons/skills/yellow_23.jpg
+          name: Use
+          tag: maximumAttacks
+          uses:
+            autoDeductChargesCost: '0'
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>This indicates the maximum number of natural attacks that the
+          eidolon is allowed to possess at the given level.</p><p>If the eidolon
+          is at its maximum, it cannot take evolutions that grant additional
+          natural attacks.</p><p>This does not include attacks made with
+          weapons.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+      uses:
+        autoDeductChargesCost: '0'
+        maxFormula: 3 + floor((@class.level + 1) / 5)
+        per: charges
+        value: 1
+    type: feat
+  - _id: qbGoUfokKqA28IJj
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.qbGoUfokKqA28IJj'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_34.jpg
+    name: Natural Armor Bonus
+    system:
+      associations:
+        classes:
+          - Eidolon
+      changes:
+        - _id: 22vrjim6
+          formula: floor((@class.level + 1) / 2.54) * 2
+          target: nac
+          type: untyped
+      class: eidolon
+      description:
+        value: >-
+          <p>The number noted here is the eidolon's base total armor bonus. This
+          bonus may be split between an armor bonus and a natural armor bonus,
+          as decided by the summoner.</p><p>This number is modified by the
+          eidolon's base form and some options available through its evolution
+          pool.</p><p>An eidolon cannot wear armor of any kind, as the armor
+          interferes with the summoner's connection to the eidolon.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: tfuD7jXPWU3A9vRk
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.tfuD7jXPWU3A9vRk'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/misc/hazard-sign.svg
+    name: Requires Manual Setup
+    system:
+      description:
+        value: >-
+          <p><strong>Skills</strong></p><p>At first level, select 4 additional
+          class skills (if the eidolon has a fly speed, it gains Fly for free)
+          through editting the Class.</p><p><strong>Evolution
+          Points</strong></p><p>If you are using an Unchained Summoner, use
+          @Compendium[pf-content.pf-eidolon-evolutions.B2McodEGU4IGjGqi]{Evolution
+          Pool (Unchained)}.</p><p>If you are using a Chained Summoner, use
+          @Compendium[pf-content.pf-eidolon-evolutions.gQahVj8GpA8Yvguq]{Evolution
+          Pool (Chained)} for tracking evolution points.</p>
+    type: feat
+  - _id: hUXMQUKZbjoaQQcY
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.hUXMQUKZbjoaQQcY'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/improved-counterspell.jpg
+    name: Share Spells
+    system:
+      abilityType: ex
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>The summoner may cast a spell with a target of &ldquo;you&rdquo; on
+          his eidolon (as a spell with a range of touch) instead of on himself.
+          A summoner may cast spells on his eidolon even if the spells normally
+          do not affect creatures of the eidolon's type (outsider).</p><p>Spells
+          cast in this way must come from the summoner spell list. </p><p>This
+          ability does not allow the eidolon to share abilities that are not
+          spells, even if they function like spells.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: gJNR8JkDQOSJWunz
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.gJNR8JkDQOSJWunz'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/athletic.jpg
+    name: STR/DEX Bonus
+    system:
+      associations:
+        classes:
+          - Eidolon
+      changes:
+        - _id: 2167egmx
+          formula: floor((@class.level + 1) / 2.54)
+          target: str
+          type: untyped
+        - _id: 9eu6k92k
+          formula: floor((@class.level + 1) / 2.54)
+          target: dex
+          type: untyped
+      class: eidolon
+      description:
+        value: >-
+          <p>Add this modifier to the eidolon's Strength and Dexterity scores,
+          as determined by its base form.</p><p>Some options available through
+          the eidolon's evolution pool might modify these scores.</p><p
+          ><strong>Str/Dex Bonus</strong>: [[ floor((@class.level + 3) * 2 / 5)
+          - 1 ]]</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: tPV5ZygN5TtqkE3Z
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.tPV5ZygN5TtqkE3Z'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blood_11.jpg
+    name: Base Attack Bonus
+    system:
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p><strong>Current BAB</strong>: [[(round((@class.level - 1) * .75) +
+          1)]]</p><p>This is the eidolon's base attack bonus. An eidolon's base
+          attack bonus is equal to its Hit Dice. Eidolons do not gain additional
+          attacks using their natural weapons for a high base attack bonus.</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+  - _id: KIZNXlyVlX25uKyr
+    _key: '!actors.items!hbjII7pJ4ECZ2Z5k.KIZNXlyVlX25uKyr'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/greater-shield-focus.jpg
+    name: Eidolon Saves
+    system:
+      associations:
+        classes:
+          - Eidolon
+      class: eidolon
+      description:
+        value: >-
+          <p>These are the eidolon's base saving throw bonuses. An eidolon
+          possesses two good saving throws and one bad saving throw, determined
+          by the creature's base form.</p><p><strong>Good Saves</strong>: 
+          [[ifelse(gt(@class.level, 14), 8, ifelse(gt(@class.level, 9), 6,
+          ifelse(gt(@class.level, 4), 4, ifelse(gt(@class.level, 1), 3,
+          2))))]]</p><p><strong>Bad Save</strong>: [[(floor((@class.level + 1) /
+          4))]]</p><p>&nbsp;</p>
+      subType: classFeat
+      tags:
+        - Eidolon
+    type: feat
+name: Biped Baseform
+prototypeToken:
+  texture:
+    src: systems/pf1/icons/skills/blue_32.jpg
+system:
+  abilities:
+    cha:
+      value: 11
+    con:
+      value: 13
+    dex:
+      value: 12
+    int:
+      value: 7
+    str:
+      value: 16
+  attributes:
+    naturalAC: 2
+    speed:
+      fly:
+        maneuverability: good
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    biography:
+      value: >-
+        <p>Size: When summoned, an avian eidolon is Small unless it spends 2
+        points from its evolution pool. At 5th level, a Medium or larger avian
+        eidolon's flight speed increases by 40 feet, as if it had 2 more points
+        in the flight evolution.</p>
+  traits:
+    senses:
+      dv:
+        value: 60
+type: character

@@ -1,0 +1,46 @@
+_id: oDyYUlpLcZYSgmWp
+_key: '!items!oDyYUlpLcZYSgmWp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Gaseous Form
+system:
+  abilityType: su
+  actions:
+    - _id: ukdpt5ak3qhh4lhx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: you and willing allies
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can assume
+      @UUID[Compendium.pf1.spells.mqdoexj35atgqafn]{Gaseous Form} (as the
+      spell). You can remain gaseous for 1 minute per day per oracle level. This
+      duration does not need to be consecutive, but it must be spent in 1-minute
+      increments.</p>
+
+      <p>You must be at least 7th level to select this revelation. You can bring
+      other creatures with you in gaseous form, but each passenger costs an
+      additional minute per minute of travel.</p>
+  subType: classFeat
+  tag: classFeat_gaseousForm
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

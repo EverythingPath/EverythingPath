@@ -1,0 +1,65 @@
+_id: vdh0yuzpjwhky6kr
+_key: '!items!vdh0yuzpjwhky6kr'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/acid/dissolve-drip-droplet-smoke.webp
+name: Poison
+system:
+  actions:
+    - _id: a7ziwhcxmluhphh1
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates; see text
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Calling upon the venomous powers of natural predators, you infect the
+      subject with a horrible poison by making a successful melee touch attack.
+      This poison deals 1d3 Constitution damage per round for 6 rounds. Poisoned
+      creatures can make a Fortitude save each round to negate the damage and
+      end the affliction.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    bloodline:
+      Fey: 4
+      Serpentine: 4
+    class:
+      antipaladin: 4
+      cleric: 4
+      druid: 3
+      hunter: 3
+      mesmerist: 4
+      occultist: 4
+      oracle: 4
+      shaman: 4
+      warpriest: 4
+      witch: 4
+    domain:
+      Scalykind: 4
+    subDomain:
+      Decay: 4
+  level: 4
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '323'
+type: spell

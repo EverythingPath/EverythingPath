@@ -1,0 +1,32 @@
+_id: qMsAhPAyYRbzLadB
+_key: '!items!qMsAhPAyYRbzLadB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_01.jpg
+name: Ember
+system:
+  abilityType: su
+  actions:
+    - _id: zn5skul6af3fcvcr
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, when making a <em>Craft</em> check involving metal, you
+      can expend any number of uses of this ability (up to half your
+      <em>sorcerer</em> level, minimum one use) to gain a <em>circumstance
+      bonus</em> on the check equal to twice the number of uses expended. You
+      can use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_ember
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

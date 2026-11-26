@@ -1,0 +1,42 @@
+_id: 7ze8Fb6EuCVEizGo
+_key: '!items!7ze8Fb6EuCVEizGo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_04.jpg
+name: Gift of Blood
+system:
+  abilityType: su
+  actions:
+    - _id: 6ku6fegubgrun1n1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, as a <em>standard action</em>, you can choose to
+      sacrifice some of your <em>hit points</em> to grant an ally double that
+      number in <em>temporary hit points</em>. You can sacrifice up to your
+      character level in <em>hit points</em> when using this ability. These
+      <em>temporary hit points</em> last up to 1 minute per <em>sorcerer</em>
+      level. You cannot heal your sacrificed <em>hit points</em> until your
+      target has lost its <em>temporary hit points</em>.</p>
+
+      <ul>
+
+      <li>At 9th level, you can use this ability once per day.</li>
+
+      <li>At 17th level, you can use this ability twice per day.</li>
+
+      </ul>
+  subType: classFeat
+  tag: classFeat_giftOfBlood
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

@@ -1,0 +1,27 @@
+_id: dVqLY99ECYnLeoB5
+_key: '!items!dVqLY99ECYnLeoB5'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/creatures/abilities/cougar-roar-rush-orange.webp
+name: Cat's Grace
+system:
+  changes:
+    - _id: 67mmsygc
+      formula: '4'
+      target: dex
+      type: enh
+  description:
+    value: >-
+      <p>The subject has a +4 enhancement bonus to Dexterity as per
+      @UUID[Compendium.pf1.spells.Item.ns8jbp0ilbvbvuif] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: '252'
+  subType: spell
+type: buff

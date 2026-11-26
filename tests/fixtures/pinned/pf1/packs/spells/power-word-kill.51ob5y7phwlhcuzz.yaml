@@ -1,0 +1,52 @@
+_id: 51ob5y7phwlhcuzz
+_key: '!items!51ob5y7phwlhcuzz'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Power Word Kill
+system:
+  actions:
+    - _id: h8w7pzhrvdembquj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: one living creature with 100 hp or less
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You utter a single word of power that instantly kills one creature of
+      your choice, whether the creature can hear the word or not. Any creature
+      that currently has 101 or more hit points is unaffected by <i>power word
+      kill</i>.</p>
+  descriptors:
+    - death
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Pestilence: 9
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+    domain:
+      War: 9
+  level: 9
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '324'
+  subschool:
+    - compulsion
+type: spell

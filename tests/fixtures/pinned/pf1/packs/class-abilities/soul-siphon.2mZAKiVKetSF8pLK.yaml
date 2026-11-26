@@ -1,0 +1,77 @@
+_id: 2mZAKiVKetSF8pLK
+_key: '!items!2mZAKiVKetSF8pLK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Soul Siphon
+system:
+  abilityType: su
+  actions:
+    - _id: g51olhnwaoq3v9vv
+      ability:
+        attack: dex
+      actionType: rwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@abilities.cha.mod'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+    - _id: 3hyFFmZhFByEad9J
+      ability:
+        critRange: null
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: '@class.level'
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Healing
+      range:
+        units: personal
+      target:
+        value: self
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a ranged touch attack, you can unleash a ray that causes a target to
+      gain one negative level. The ray has a range of 30 feet. This negative
+      level lasts for a number of minutes equal to your Charisma modifier.
+      Whenever this ability gives a target a negative level, you heal a number
+      of hit points equal to your oracle level. You can use this ability once
+      per day, plus one additional time at 11th level and every four levels
+      thereafter.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_soulSiphon
+  tags:
+    - Revelation
+    - Bones Mystery
+    - Succor Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

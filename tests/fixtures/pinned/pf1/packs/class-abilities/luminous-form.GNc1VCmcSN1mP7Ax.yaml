@@ -1,0 +1,55 @@
+_id: GNc1VCmcSN1mP7Ax
+_key: '!items!GNc1VCmcSN1mP7Ax'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Luminous Form
+system:
+  abilityType: su
+  actions:
+    - _id: umeihhmd1aatw62j
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can transform your body into churning light, granting you the
+      effects of blur and causing your body to shed light as a sunrod.</p>
+
+      <p>At 7th level, creatures that end their turn adjacent to your luminous
+      form become blinded for 1 round (Fortitude negates).</p>
+
+      <p>At 13th level, creatures that end their turn adjacent to your luminous
+      form are blinded for 1d4 rounds (Fortitude reduces to 1 round).</p>
+
+      <p>At 18th level, your luminescence is as bright as natural sunlight, and
+      creatures affected by natural sunlight are so affected if they end their
+      turn adjacent to your luminous form.</p>
+
+      <p>You can maintain your luminous form for up to 1 minute per day per
+      oracle level; this duration need not be continuous, but it must be used in
+      1-minute increments. You can forgo the blur and blinding aspects of this
+      ability to instead simply shed light as a torch, though this still counts
+      against the ability’s duration for the day.</p>
+  subType: classFeat
+  tag: classFeat_luminousForm
+  tags:
+    - Revelation
+    - Solar Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

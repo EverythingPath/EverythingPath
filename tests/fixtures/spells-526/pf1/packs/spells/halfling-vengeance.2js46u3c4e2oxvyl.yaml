@@ -1,0 +1,65 @@
+_id: 2js46u3c4e2oxvyl
+_key: '!items!2js46u3c4e2oxvyl'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Halfling Vengeance
+system:
+  actions:
+    - _id: qhrrq2vqj48snyhb
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one Small or smaller creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grant the touched target the ability to ascertain the weaknesses of
+      foes. The target deals an additional 1d6 points of precision damage on
+      successful attacks with daggers or slings against foes within 30 feet, as
+      long as the attacked foe is denied its Dexterity bonus to Armor Class or
+      is flanked by the target. This additional damage increases by 1d6 for
+      every 4 caster levels you have beyond 3rd, to a maximum of 5d6 at 19th
+      level. This bonus damage is precision damage and stacks with other sources
+      of precision damage, such as sneak attack. This bonus damage is not
+      multiplied on a critical hit.  Once per round on a successful attack that
+      deals this precision damage, the target can choose to forgo 2d6 points of
+      precision damage (either granted by this spell or from other sources of
+      precision damage, such as sneak attack) to inflict one of the following
+      conditions on the attacked foe for 1 round: </p><ul><li> The attacked foe
+      can't make attacks of opportunity against creatures smaller than it.
+      </li><li> The attacked foe is denied its Dexterity bonus to Armor Class
+      against attacks made with daggers or slings. </li><li> The attacked foe
+      takes a -2 penalty on attacks against creatures smaller than it. </li><li>
+      The attacked foe can't take 5-foot steps.  A creature can benefit from
+      only one <i>halfling vengeance</i> spell at a time.</li></ul>
+  learnedAt:
+    class:
+      antipaladin: 1
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO90131
+      pages: '72'
+type: spell

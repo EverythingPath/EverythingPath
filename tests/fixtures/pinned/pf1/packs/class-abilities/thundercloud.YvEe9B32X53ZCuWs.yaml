@@ -1,0 +1,58 @@
+_id: YvEe9B32X53ZCuWs
+_key: '!items!YvEe9B32X53ZCuWs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-blue-2.jpg
+name: Thundercloud
+system:
+  abilityType: su
+  actions:
+    - _id: un8ozvxo7l8dnhvt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - electric
+      duration:
+        units: round
+        value: '1'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can, as a standard action, summon a storm cloud. This
+      power functions as @UUID[Compendium.pf1.spells.Item.g33euis7yi9pwddy]{fog
+      cloud} except that creatures inside the cloud are deafened and take 2d6
+      points of electricity damage each round from the flashes of thunder and
+      lightning. Once created, you can concentrate on the cloud to move it up to
+      30 feet each round. You can use this ability for a number of rounds per
+      day equal to your cleric level. These rounds do not need to be
+      consecutive.</p><p>This power replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.tap9LNVtXblKh0sv]{Electricity
+      Resistance} power of the
+      @UUID[Compendium.pf1.class-abilities.Item.flMrvQOBVwXagqow]{Air
+      Domain}.</p>
+  sources:
+    - id: PZO1115
+      pages: '88'
+  subType: classFeat
+  tag: classFeat_thundercloud
+  tags:
+    - Domain Power
+    - Cloud Subdomain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,44 @@
+_id: nvHD26CgP0gDMzJR
+_key: '!items!nvHD26CgP0gDMzJR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Retributive Spray
+system:
+  abilityType: su
+  actions:
+    - _id: kbnm8jtuaazp9a5p
+      actionType: save
+      activation:
+        type: special
+        unchained:
+          type: special
+      damage:
+        parts:
+          - formula: 1d8 + floor(@class.level / 2)
+            types:
+              - cold
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.con.mod
+        description: Reflex half
+        type: ref
+  associations:
+    classes:
+      - Bloodrager
+  description:
+    value: >-
+      <p>At 12th level, whenever you’re hit by an attack or spell that deals
+      slashing or piercing damage, your black blood sprays up to 10 feet toward
+      the opponent who attacked you, striking the first creature along its path.
+      That creature takes 1d8 points of cold damage + 1 point of cold damage for
+      every 2 bloodrager levels you possess. A successful Reflex save (DC = 10 +
+      1/2 your bloodrager level + your Constitution modifier) halves the
+      damage.</p>
+  subType: classFeat
+type: feat

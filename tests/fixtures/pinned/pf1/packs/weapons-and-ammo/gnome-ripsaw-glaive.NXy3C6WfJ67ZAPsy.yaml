@@ -1,0 +1,66 @@
+_id: NXy3C6WfJ67ZAPsy
+_key: '!items!NXy3C6WfJ67ZAPsy'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/gnome-ripsaw-glaive.png
+name: Gnome Ripsaw Glaive
+system:
+  actions:
+    - _id: modlqs0566gkjaok
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: reach
+        value: '0'
+  baseTypes:
+    - Gnome Ripsaw Glaive
+  description:
+    unidentified: >-
+      <p>The blade of this glaive is serrated and mounted on an axle, around
+      which a heavy cord is wrapped. When the cord is pulled as a move action,
+      the blade spins rapidly for a number of rounds equal to your Strength
+      bonus. While the blade is spinning, you gain a +2 bonus on damage rolls
+      with the weapon. When the blade is not spinning, treat this weapon as a
+      glaive.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 30
+  properties:
+    rch: true
+    spc: true
+  sources:
+    - id: PZO9481
+      pages: '9'
+  subType: exotic
+  tags:
+    - Gnomish
+  weaponGroups:
+    - polearms
+  weaponSubtype: 2h
+  weight:
+    value: 12
+type: weapon
