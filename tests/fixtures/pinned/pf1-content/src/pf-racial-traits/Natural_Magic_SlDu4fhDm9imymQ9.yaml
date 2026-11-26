@@ -1,0 +1,133 @@
+_id: SlDu4fhDm9imymQ9
+_key: '!items!SlDu4fhDm9imymQ9'
+_stats:
+  coreVersion: '12.331'
+folder: CxdqYljBam86Yw6g
+img: icons/equipment/head/mask-wooden-feathered-blue.webp
+name: Natural Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: xQkbaozLbLvdEIT7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>if you have a Charisma score of 11 or higher you:
+        1/day-@UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{detect
+        poison}</p><p>You determine whether a creature, object, or area has been
+        poisoned or is poisonous. You can determine the exact type of poison
+        with a DC 20 Wisdom check. A character with the Craft (alchemy) skill
+        may try a DC 20 Craft (alchemy) check if the Wisdom check fails, or may
+        try the Craft (alchemy) check prior to the Wisdom check. The spell can
+        penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch of common
+        metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood or dirt
+        blocks it.</p>
+      duration:
+        units: inst
+      name: Detect Poison
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: One creature, object, or 5' (1.5 m) cube
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: jjeFnr4Az26ND0XK
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>if you have a Charisma score of 11 or higher you gain:
+        1/day-@UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{goodberry}
+        (created berries bud from your own body), </p><p>Casting goodberry makes
+        2d4 freshly picked berries magical. You (as well as any other druid of
+        3rd or higher level) can immediately discern which berries are affected.
+        Each transmuted berry provides nourishment as if it were a normal meal
+        for a Medium creature.</p><p>The berry also cures 1 point of damage when
+        eaten, subject to a maximum of 8 points of such curing in any 24-hour
+        period</p>
+      duration:
+        units: day
+        value: '@attributes.hd.total'
+      name: Goodberry
+      range:
+        units: touch
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: '[[2d4]] freash berries touched'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: 0IFOEvSODu3SKlA7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>If you have a Charisma score of 11 or higher you gain 1/day-
+        <em>@UUID[Compendium.pf1.spells.Item.xi1uouy7qlpfaqlr]{purify food and
+        drink}</em>.</p><p>This spell makes spoiled, rotten, diseased,
+        poisonous, or otherwise contaminated food and water pure and suitable
+        for eating and drinking. This spell does not prevent subsequent natural
+        decay or spoilage. Unholy water and similar food and drink of
+        significance is spoiled by purify food and drink, but the spell has no
+        effect on creatures of any type nor upon magic potions. Water weighs
+        about @Weight[8;dual] per gallon. One cubic foot of water contains
+        roughly 8 gallons and weighs about @Weight[60;dual].</p><p></p>
+      duration:
+        units: inst
+      name: Purify Food and Drink
+      notes:
+        footer:
+          - >-
+            1 cubic foot contains approximately 28.3 litres each of which weighs
+            1 kg
+      range:
+        units: ft
+        value: '10'
+      save:
+        dc: 10 + @abilities.cha.mod
+        description: negates (object)
+        type: will
+      target:
+        value: '[[(@attributes.hd.total]] Cubic feet of contaminated food and water'
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Ghoran</p><hr /><p>Ghorans with a Charisma score
+      of 11 or higher gain the following spell-like abilities:
+      1/day-<em>@UUID[Compendium.pf1.spells.Item.kgynwswfuj9oo0es]{detect
+      poison}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.k4whhwm1dsz2upkm]{goodberry}</em>
+      (created berries bud from the ghoran's own body), and
+      <em>@UUID[Compendium.pf1.spells.Item.xi1uouy7qlpfaqlr]{purify food and
+      drink}</em>. The caster level is equal to the ghoran's level. The DC for
+      these spells is equal to 10 + the spell's level + the ghoran's Charisma
+      bonus.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1140
+      pages: '15'
+    - id: PZO9280
+      pages: '243'
+    - id: PZO1133
+      pages: '119'
+    - id: PZO9251
+      pages: '14'
+  subType: racial
+  tags:
+    - Ghoran
+  traitCategory: magical
+type: feat

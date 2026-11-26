@@ -1,0 +1,63 @@
+_id: mcr56gpsuvugsozi
+_key: '!items!mcr56gpsuvugsozi'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Plague Bearer
+system:
+  actions:
+    - _id: z3dmuixlqyjgtrpg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 round/level; see text
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates; see text
+        type: fort
+      target:
+        value: one living creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You make the target an asymptomatic carrier for a host of virulent
+      diseases. Creatures that end their turn adjacent to the target must
+      succeed at a Fortitude save or be affected as if by the spell
+      <i>contagion</i>. The target itself does not become diseased, and suffers
+      no ill effects from this spell. Once <i>plague bearer</i> ends, the target
+      is no longer contagious, though any creature it infected remains
+      diseased.</p>
+  descriptors:
+    - disease
+    - evil
+  learnedAt:
+    class:
+      alchemist: 6
+      antipaladin: 6
+      arcanist: 7
+      cleric: 6
+      druid: 6
+      hunter: 6
+      inquisitor: 6
+      investigator: 6
+      oracle: 6
+      sorcerer: 7
+      warpriest: 6
+      witch: 6
+      wizard: 7
+  level: 7
+  school: nec
+  sources:
+    - id: PZO9267
+      pages: '238'
+type: spell

@@ -1,0 +1,88 @@
+_id: 3wDmT1GpNgUNTgDv
+_key: '!items!3wDmT1GpNgUNTgDv'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/crossbow-heavy.PNG
+name: Heavy Crossbow (Underwater)
+system:
+  actions:
+    - _id: wdwvquezmqnpv9fh
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '120'
+    - _id: 0C8iq73EFcI9MiGm
+      ability:
+        attack: _default
+        critRange: 19
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: bolt
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack (Underwater)
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '20'
+  ammo:
+    type: bolt
+  baseTypes:
+    - Heavy Crossbow
+  description:
+    unidentified: >-
+      <p>Above water, this weapon is identical to a heavy crossbow. You may use
+      it underwater, where it has a range increment of 20 feet. It counts as a
+      heavy crossbow for the purposes of proficiencies and special
+      abilities.</p>
+  hands: 2
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: wood
+  price: 100
+  sources:
+    - id: PZO9452
+      pages: '0'
+  tags:
+    - Underwater
+  weaponGroups:
+    - crossbows
+  weaponSubtype: ranged
+  weight:
+    value: 8
+type: weapon
