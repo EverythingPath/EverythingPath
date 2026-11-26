@@ -1,0 +1,48 @@
+_id: vEoPg08w2QIYnMua
+_key: '!items!vEoPg08w2QIYnMua'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_15.jpg
+name: Ghoulish Claws
+system:
+  abilityType: su
+  actions:
+    - _id: fhm2yiytk8eufpbg
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>Starting at 1st level, you can grow claws as a <em>free action</em>.
+      These claws are treated as <em>natural weapons</em>, allowing you to make
+      two claw attacks as a full attack using your full <em>base attack
+      bonus</em>. Each of these attacks deals 1d4 points of damage + your
+      <em>Strength</em> modifier (1d3 if you are Small). At 5th level, creatures
+      damaged with your claw attack are <em>paralyzed</em> for 1 round, as the
+      <em>ghoul</em> ability (<em>Fort</em> negates). At 7th level, the duration
+      of the <em>paralysis</em> increases to 1d4+1 rounds, and the claws are
+      considered magic weapons for the purpose of overcoming <em>DR</em>. You
+      can use your claws for a number of rounds per day equal to 3 + your
+      <em>Charisma</em> modifier. These rounds do not need to be consecutive. If
+      you’re a <em>ghoul</em> with this <em>bloodline</em>, instead of gaining
+      this ability, your levels in <em>sorcerer</em> stack with your racial
+      <em>Hit Dice</em> when determining the DC of your <em>paralysis</em> and
+      <em>disease</em> special abilities.</p>
+  subType: classFeat
+  tag: classFeat_ghoulishClaws
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

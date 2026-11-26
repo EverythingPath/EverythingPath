@@ -1,0 +1,49 @@
+_id: EeqvtQ3P2kuIHmRm
+_key: '!items!EeqvtQ3P2kuIHmRm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Wings of Terror
+system:
+  abilityType: su
+  actions:
+    - _id: z1amgwjxpohli41j
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can manifest a pair of enormous, batlike demon wings that grant you
+      a fly speed of 60 feet with average maneuverability and a +4 bonus on
+      Intimidate checks.</p>
+
+      <p>At 10th level, your speed increases to 90 feet, your maneuverability
+      increases to good, and the bonus increases to +8 on Intimidate checks.</p>
+
+      <p>You can use these wings for 1 minute per day per oracle level. This
+      duration does not need to be consecutive, but it must be spent in 1-minute
+      increments.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_wingsOfTerror
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,65 @@
+_id: BNxTXNJ5kUtnWxs4
+_key: '!items!BNxTXNJ5kUtnWxs4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Guarding Blade
+system:
+  actions:
+    - _id: xelyauzs0pmzehuq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: guardingBlade
+  aura:
+    school: trs
+  baseTypes:
+    - Short Sword
+  cl: 15
+  description:
+    value: >-
+      <p>This +1 dancing short sword automatically rises up to defend a fallen
+      or sleeping wielder. To activate the sword, the wielder must fall
+      unconscious or die while wielding the weapon or holding it in her hand.
+      Thereafter, should any creature other than an ally of the wielder attempt
+      to touch or strike him with a melee attack, the sword attacks that
+      creature for up to 4 rounds. After 4 rounds, the weapon drops in the
+      wielder's square. Unless the guarding blade is an intelligent item, it
+      lacks the wits to make decisions about which is the best opponent to
+      attack, and when confronted by multiple opponents attacking the wielder,
+      it tends to select a random target each round.</p><p><strong>Base
+      Item</strong>: dancing short
+      sword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, animate objects, mage's faithful hound</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 65310
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

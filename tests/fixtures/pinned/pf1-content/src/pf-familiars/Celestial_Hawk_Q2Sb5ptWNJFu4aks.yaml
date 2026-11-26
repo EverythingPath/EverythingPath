@@ -1,0 +1,199 @@
+_id: Q2Sb5ptWNJFu4aks
+_key: '!actors!Q2Sb5ptWNJFu4aks'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: lmTl4DaaFBa7Is1s
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.lmTl4DaaFBa7Is1s'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: 'Race: Animal'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - animal
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: ycnoLpttmEISOKfh
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.ycnoLpttmEISOKfh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: L2BxBQQD0AFTpwWU
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.L2BxBQQD0AFTpwWU'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-talon-green.jpg
+    name: Talons
+    system:
+      actions:
+        - _id: hh1nqd3ii95wfrcv
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '5'
+          attackName: Talons
+          damage:
+            parts:
+              - formula: 1d4+0
+                types:
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-talon-green.jpg
+          name: Attack
+          notes:
+            footer:
+              - 2 talons +5 (1d4-2)
+          range:
+            units: melee
+          tag: talons
+      subType: natural
+    type: attack
+  - _id: 5JVcQFe34UGKgyaA
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.5JVcQFe34UGKgyaA'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Temperate Forests'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: CNqYX4y6ehUSfaPF
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.CNqYX4y6ehUSfaPF'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary Or Pair'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: wO2nkmoSFySMskdL
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.wO2nkmoSFySMskdL'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: VPrnl3PL4IaZRttk
+    _key: '!actors.items!Q2Sb5ptWNJFu4aks.VPrnl3PL4IaZRttk'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: olmtpofo
+          formula: '5'
+          target: cmb
+          type: untypedPerm
+        - _id: mb7lbys0
+          formula: '3'
+          target: skill.fly
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Celestial Hawk
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 7
+    con:
+      value: 11
+    dex:
+      value: 17
+    int:
+      value: 2
+    str:
+      value: 6
+    wis:
+      value: 14
+  attributes:
+    speed:
+      fly:
+        base: 60
+      land:
+        base: 10
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    cr:
+      base: 0.3375
+    notes:
+      value: "\n        <div class=\"statblockContainer\" style=\"margin-top: 15px\"><div style=\"width: 100%; background-color: #ffe9c7; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); columns: 2 150px\">\r\n    <hr style=\"margin-left: 0; margin-top:-2px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n    <div style=\"padding: 5px;\">\r\n        <h1>Hawk CR 1/3 </h1>\r\n        \r\n        <!-- BASE -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <strong>Source</strong>: Pathfinder RPG Bestiary pg. 131<br/>\r\n            <strong>XP 135</strong><br/>\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            N \r\n            Tiny \r\n            Animal <br/>\r\n            <strong>Init</strong> 3;\r\n            <strong>Senses</strong> low-light vision; Perception +14; \r\n            \r\n        </div>\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Defense</h3>\r\n                <strong>AC</strong> 15, <strong>Touch</strong> 15, <strong>Flat-Footed</strong> 12 (+3 Dex, +2 size)<br/>\r\n            <strong>Hit Points</strong> 4 (1 HD; 1d8)<br/>\r\n            <strong>Fort</strong> 2, <strong>Ref</strong> 5, <strong>Will</strong> 2\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <div>\r\n            <div style=\"break-inside: avoid;\">\r\n                <h3>Offense</h3>\r\n                        <strong>Speed</strong> 60 ft. (average)<br/>\r\n                <strong>Melee</strong> 2 talons +5 (1d4-2)<br/>\r\n                \r\n                \r\n                \r\n                \r\n            </div>\r\n        </div>\r\n        <!-- SPELLCASTING -->\r\n                \r\n        <!-- TACTICS -->\r\n                \r\n                \r\n                \r\n                \r\n        <!-- STATISTICS -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Statistics</h3>\r\n                <strong>Str</strong> 6, <strong>Dex</strong> 17, <strong>Con</strong> 11, <strong>Int</strong> 2, <strong>Wis</strong> 14, <strong>Cha</strong> 7<br/>\r\n            <strong>Base Atk</strong> +0; <strong>CMB</strong> +1; <strong>CMD</strong> 9<br/>\r\n            <strong>Feats</strong> Weapon Finesse<br/>\r\n            <strong>Skills</strong> Fly +7, Perception +14, Racial Modifier +8 Perception<br/>\r\n            <strong>Languages</strong> <br/>\r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <!-- ECOLOGY -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Ecology</h3>                <strong>Environment</strong>: temperate forests<br/>\r\n                <strong>Organization</strong>: solitary or pair<br/>\r\n                <strong>Treasure</strong>: none<br/>\r\n            </div>\r\n        <!-- SPECIAL ABILITIES -->\r\n        \r\n        <!-- DESCRIPTION -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Description</h3>        <div style=\"white-space: pre-wrap\">Falconers prize these majestic birds as trained hunting companions if raised from chicks and properly instructed.\n</div>\r\n                    \r\n    </div>\r\n    <hr style=\"margin-left: 0; margin-bottom: -3px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n</div></div>\n    \n        <br>\n        <hr>\n        <div class=\"rawInputContainer\" style=\"margin-top: 15px;\">\n            <h2>RAW INPUT</h2>\n            <hr>\n            <pre style=\"white-space: pre-wrap; font-size: 10px;\">Hawk CR 1/3\nSource Pathfinder RPG Bestiary pg. 131\nXP 135\nN Tiny animal\nInit +3; Senses low-light vision; Perception +14\nDefense\nAC 15, touch 15, flat-footed 12 (+3 Dex, +2 size)\nhp 4 (1d8)\nFort +2, Ref +5, Will +2\nOffense\nSpeed 10 ft., fly 60 ft. (average)\nMelee 2 talons +5 (1d4-2)\nSpace 2-1/2 ft., Reach 0 ft.\nStatistics\nStr 6, Dex 17, Con 11, Int 2, Wis 14, Cha 7\nBase Atk +0; CMB +1; CMD 9\nFeats Weapon Finesse\nSkills Fly +7, Perception +14; Racial Modifier +8 Perception\nEcology\nEnvironment temperate forests\nOrganization solitary or pair\nTreasure none\nDescription\nFalconers prize these majestic birds as trained hunting companions if raised from chicks and properly instructed.</pre>\n        </div>\n    "
+  skills:
+    fly:
+      rank: -3
+    per:
+      rank: 9
+  traits:
+    senses:
+      custom: low-light vision; Perception +14
+    size: tiny
+type: npc

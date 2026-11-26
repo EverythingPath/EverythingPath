@@ -1,0 +1,44 @@
+_id: TD6EFqyMPl3zYo5W
+_key: '!items!TD6EFqyMPl3zYo5W'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Delicious Fright
+system:
+  actions:
+    - _id: bxs8ql7xg6sj6hjh
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 3 + @abilities.int.mod
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will reduces duration to 1 round
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p><em>The witch can feed on the fear of her victim.</em></p><p>The target
+      of this hex becomes shaken for a number of rounds equal to 3 + the witch’s
+      Intelligence modifier.</p><p>As long as the witch remains within 30 feet
+      of her target, she gains a +1 morale bonus on attack rolls and a +1 morale
+      bonus on saving throws as long as this effect persists.</p><p>A successful
+      Will save reduces the duration of this hex to 1 round.</p><p>This is a
+      mind-affecting fear effect.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

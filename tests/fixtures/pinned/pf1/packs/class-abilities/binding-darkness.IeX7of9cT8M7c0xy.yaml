@@ -1,0 +1,43 @@
+_id: IeX7of9cT8M7c0xy
+_key: '!items!IeX7of9cT8M7c0xy'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/rip-water-2.jpg
+name: Binding Darkness
+system:
+  abilityType: sp
+  actions:
+    - _id: 0agxmn3g1w9rfsaj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1 + floor(@class.level / 5)
+      name: Use
+      range:
+        units: seeText
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you cast a weave of shadows at any foe
+      within 30 feet as a ranged <em>touch attack</em>. The shadows
+      <em>entangle</em> your foe for 1 round plus 1 additional round for every
+      five wizard levels you possess. In conditions of bright light, this
+      duration is halved (minimum 1 round). A creature <em>entangled</em> by
+      your shadows has <em>concealment</em> from those without
+      <em>darkvision</em> or the ability to see in darkness, and other creatures
+      likewise have <em>concealment</em> relative to it. You can use this
+      ability a number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_bindingDarkness
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

@@ -1,0 +1,40 @@
+_id: L4sgpJ5DxgYddhem
+_key: '!items!L4sgpJ5DxgYddhem'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_25.jpg
+name: Metamagic Mastery
+system:
+  abilityType: su
+  actions:
+    - _id: cdkrrf3930vy3d6f
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can apply any one <em>metamagic feat</em> that you
+      know to a spell you are about to cast. This does not alter the level of
+      the spell or the casting time. You can use this ability once per day at
+      8th level and one additional time per day for every two wizard levels you
+      possess beyond 8th. Any time you use this ability to apply a metamagic
+      feat that increases the spell level by more than 1, you must use an
+      additional daily usage for each level above 1 that the feat adds to the
+      spell. Even though this ability does not modify the spell’s actual level,
+      you cannot use this ability to cast a spell whose modified spell level
+      would be above the level of the highest-level spell that you are capable
+      of casting.</p>
+  sources:
+    - id: PZO1110
+      pages: '82'
+  subType: classFeat
+  tag: classFeat_metamagicMastery
+  uses:
+    maxFormula: 1 + floor((@class.level - 8) / 2)
+    per: day
+type: feat

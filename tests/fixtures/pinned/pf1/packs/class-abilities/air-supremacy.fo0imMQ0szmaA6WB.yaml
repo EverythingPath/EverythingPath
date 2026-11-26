@@ -1,0 +1,36 @@
+_id: fo0imMQ0szmaA6WB
+_key: '!items!fo0imMQ0szmaA6WB'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/control/buff-flight-wings-runes-blue-white.webp
+name: Air Supremacy
+system:
+  abilityType: su
+  associations:
+    classes:
+      - Wizard
+  changes:
+    - _id: RBBsAfwX
+      formula: 2 + floor(@class.level / 5)
+      target: skill.fly
+      type: untyped
+  description:
+    value: >-
+      <p>You gain a +2 enhancement bonus on
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.iH69GIwm8BjecrPN]{fly}
+      skill checks. This bonus increases by +1 for every five wizard levels you
+      possess. In addition, you can cast
+      @UUID[Compendium.pf1.spells.68m9du7zw2di7ew6]{feather fall} on yourself at
+      will. At 5th level, you can cast
+      @UUID[Compendium.pf1.spells.plou8h168bfn5hq6]{levitate} on yourself at
+      will. At 10th level, you can cast
+      @UUID[Compendium.pf1.spells.7d6sv5ecvi7kho3m]{fly} on yourself at will. At
+      20th level, whenever you make a Fly skill check, assume the roll resulted
+      in a natural 20.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Air School
+type: feat

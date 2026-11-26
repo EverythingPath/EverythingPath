@@ -1,0 +1,39 @@
+_id: 72YyhmhwZ0xWeRqZ
+_key: '!items!72YyhmhwZ0xWeRqZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Mantle Against Chaos
+system:
+  abilityType: sp
+  actions:
+    - _id: nx6kxxx265fgbrqh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can use @UUID[Compendium.pf1.spells.md6ltvqh9paadsm4]{Protection
+      From Chaos} on yourself or another creature as a spell-like ability. You
+      can use this ability for a number of minutes per day equal to your
+      inquisitor level (minimum 1). This duration does not need to be
+      consecutive, but it must be used in 1 minute increments.</p>
+  subType: classFeat
+  tag: classFeat_mantleAgainstChaos
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

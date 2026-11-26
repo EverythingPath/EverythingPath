@@ -1,0 +1,113 @@
+_id: VCUMZaV149fUuJR6
+_key: '!items!VCUMZaV149fUuJR6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Energy Body
+system:
+  abilityType: su
+  actions:
+    - _id: 456uhugrx5hjnxql
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Transform
+      range:
+        units: personal
+      target:
+        value: self
+    - _id: fgVmwuA5ytyKnKxo
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + @class.level
+            types:
+              - positive
+      name: Repel undead
+      target:
+        value: Undead creature attacking in melee
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: HCdeuwgzvgf9cd8N
+      actionType: heal
+      activation:
+        type: move
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + @class.level
+            types:
+              - positive
+      name: Heal self
+      range:
+        units: personal
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: rNziQ7AaS3jh8MCK
+      actionType: heal
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + @class.level
+            types:
+              - positive
+      name: Heal creature passing through
+      notes:
+        effect:
+          - Once per round.
+    - _id: KeDyB6Ub7TIJB0Vx
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Return to normal form
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can transform your body into pure life
+      energy, resembling a golden-white fire elemental. In this form, you gain
+      the elemental subtype and give off a warm, welcoming light that increases
+      the light level within 10 feet by one step, up to normal light. Any undead
+      creature striking you with its body or a handheld weapon deals normal
+      damage, but at the same time the attacker takes 1d6 points of positive
+      energy damage + 1 point per oracle level. Creatures wielding melee weapons
+      with reach are not subject to this damage if they attack you. If you
+      grapple or attack an undead creature using unarmed strikes or natural
+      weapons, you may deal this damage in place of the normal damage for the
+      attack.</p>
+
+      <p>Once per round, if you pass through a living allied creature's square
+      or the ally passes through your square, it heals 1d6 hit points + 1 per
+      oracle level. You may use this ability to heal yourself as a move action.
+      You choose whether or not to heal a creature when it passes through your
+      space. You may return to your normal form as a free action. You may remain
+      in energy body form for a number of rounds per day equal to your oracle
+      level.</p>
+  sources:
+    - id: PZO1115
+      pages: '48'
+  subType: classFeat
+  tag: classFeat_energyBody
+  tags:
+    - Revelation
+    - Life Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

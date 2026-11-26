@@ -1,0 +1,39 @@
+_id: O6PEQBu8OA6EMPoI
+_key: '!items!O6PEQBu8OA6EMPoI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/intimidating-prowess.jpg
+name: Heroic Echo
+system:
+  abilityType: su
+  actions:
+    - _id: iklnimichld76gf5
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 3rd level, when you receive a <em>morale bonus</em> from any spell,
+      <em>spell-like ability</em>, or magic item, including those you cast on
+      yourself, that bonus increases by +1. At 9th level, this ability also
+      applies to competence bonuses. If you receive a morale effect (or a
+      competence effect at 9th level) that affects an area or multiple targets,
+      as an <em>immediate action</em> you can share your increased bonus with
+      all other recipients. This increase to other participants lasts a number
+      of rounds equal to your <em>Charisma</em> bonus. You can use this ability
+      once per day, plus one time per three levels after 3rd.</p>
+  subType: classFeat
+  tag: classFeat_heroicEcho
+  uses:
+    maxFormula: 1 + (floor((@class.level - 3) / 3))
+    per: day
+type: feat

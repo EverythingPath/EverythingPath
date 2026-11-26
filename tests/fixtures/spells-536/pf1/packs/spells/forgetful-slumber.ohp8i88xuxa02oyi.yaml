@@ -1,0 +1,61 @@
+_id: ohp8i88xuxa02oyi
+_key: '!items!ohp8i88xuxa02oyi'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Forgetful Slumber
+system:
+  actions:
+    - _id: w08hsncm4fklucgh
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell acts as the <i>deeper slumber</i> spell, but only affects
+      one creature of 10 Hit Dice or fewer. In addition, a creature affected by
+      this spell awakens with no knowledge of the events that led to the spell's
+      casting. The target loses all memory from the 5 minutes prior to falling
+      asleep. No effect short of a <i>miracle</i> or <i>wish</i> can restore
+      memories lost by this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      mesmerist: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    value: a few drops of river water
+  school: enc
+  sources:
+    - id: PZO1121
+      pages: '48'
+  subschool:
+    - compulsion
+type: spell

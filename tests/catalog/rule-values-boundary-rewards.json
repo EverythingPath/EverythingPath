@@ -1,0 +1,431 @@
+{
+  "campaign-mvp-v1": {
+    "digest": "sha256:1e0b570a26721f45ce12a161140b5530545a537fcfeaef28fcc4b98a97d8d9b2",
+    "rewards": [
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:129",
+        "name": "Favored Class Bonus ~ Animal Companion Damage Resistance",
+        "eligible": ["Gnome Ranger"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:131",
+        "name": "Favored Class Bonus ~ Animal Companion Hit Point",
+        "eligible": ["Half-Orc Ranger", "Human Ranger"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:133",
+        "name": "Favored Class Bonus ~ Animal Companion Skill Rank",
+        "eligible": ["Half-Elf Druid", "Half-Elf Ranger", "Human Ranger"],
+        "changes": [],
+        "note": "PCGen admits a Half-Elf Druid or Ranger and a Human Ranger, never a Human Druid: !PREMULT:2,[PRECLASS:1,Druid=1],[PREFACT:1,TEMPLATES,IsHuman=true]."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:135",
+        "name": "Favored Class Bonus ~ Arcane School Power Use",
+        "eligible": ["Elf Wizard", "Gnome Wizard"],
+        "changes": [],
+        "note": "+1/2 use a day of one chosen school power: a daily count, but no record keys a school power’s uses."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:138",
+        "name": "Favored Class Bonus ~ Banner Ability",
+        "eligible": ["Human Cavalier"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Cavalier=1 also admits PCGen's Samurai (ultimate_combat/uc_classes.lst:34, TYPE Base.PC.Cavalier), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:140",
+        "name": "Favored Class Bonus ~ Bard Spell",
+        "eligible": ["Human Bard"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:142",
+        "name": "Favored Class Bonus ~ Bardic Performance Round",
+        "eligible": ["Gnome Bard", "Half-Elf Bard"],
+        "changes": ["classFeat_bardicPerformance"],
+        "note": "+1 round a day per selection, unconditionally (STACK:YES MULT:YES); bound by Bardic Performance’s record, whose formula reads it as the reviewed reward bardicPerformanceRound (reward-terms-1)."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:144",
+        "name": "Favored Class Bonus ~ Bloodline Power Use",
+        "eligible": ["Elf Sorcerer"],
+        "changes": [],
+        "note": "+1/2 use a day of one chosen bloodline power: a daily count, but no record keys a bloodline power’s uses."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:146",
+        "name": "Favored Class Bonus ~ Bomb Damage",
+        "eligible": ["Half-Orc Alchemist"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:148",
+        "name": "Favored Class Bonus ~ Bombs",
+        "eligible": ["Gnome Alchemist"],
+        "changes": ["classFeat_bomb"],
+        "note": "+1/2 bomb a day per selection."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:150",
+        "name": "Favored Class Bonus ~ Cleric Domain Power Use",
+        "eligible": ["Dwarf Cleric", "Halfling Cleric"],
+        "changes": [
+          "classFeat_fireBolt",
+          "classFeat_rebukeDeath",
+          "classFeat_restorativeTouch",
+          "classFeat_touchOfGlory"
+        ],
+        "note": "+1/2 use a day per selection of the one 1st-level domain power, usable 3 + Wisdom modifier times a day, that the cleric chose (STACK:YES MULT:YES): each of the four domain-powers-1 records keys such a power; the other 3 + Wisdom powers have no record."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:152",
+        "name": "Favored Class Bonus ~ CMD",
+        "eligible": ["Human Fighter"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:154",
+        "name": "Favored Class Bonus ~ CMD BullRush Trip",
+        "eligible": ["Dwarf Fighter"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:156",
+        "name": "Favored Class Bonus ~ CMD Disarm Overrun",
+        "eligible": ["Half-Elf Fighter"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:158",
+        "name": "Favored Class Bonus ~ CMD Disarm Sunder",
+        "eligible": ["Elf Bard", "Elf Fighter"],
+        "changes": [],
+        "note": "PCGen admits an Elf Bard or Elf Fighter: PRECLASS:1,Bard=1,Fighter=1."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:160",
+        "name": "Favored Class Bonus ~ CMD Grapple Trip",
+        "eligible": ["Halfling Fighter"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:162",
+        "name": "Favored Class Bonus ~ CMD Grapple Stunning Fist",
+        "eligible": ["Halfling Monk"],
+        "changes": ["classFeat_stunningFist"],
+        "note": "+1/2 stunning attack a day per selection, beside a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:164",
+        "name": "Favored Class Bonus ~ Critical Confirmation Elf Weapons",
+        "eligible": ["Elf Ranger"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:166",
+        "name": "Favored Class Bonus ~ Critical Confirmation Halfling Weapons",
+        "eligible": ["Halfling Rogue"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Rogue=1 also admits PCGen's Ninja (ultimate_combat/uc_classes.lst:19, TYPE Base.PC.Rogue), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:168",
+        "name": "Favored Class Bonus ~ Druid Domain Power Use",
+        "eligible": ["Half-Elf Druid"],
+        "changes": ["classFeat_fireBolt"],
+        "note": "+1/2 use a day per selection of the one 1st-level cleric domain power, usable 3 + Wisdom modifier times a day, that the druid chose (STACK:YES MULT:YES): of the domain-powers-1 records only Fire Bolt’s, Fire being one of Nature Bond’s seven domains (PRD coreRulebook/classes/druid.html:395); the other 3 + Wisdom powers have no record."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:170",
+        "name": "Favored Class Bonus ~ Eidolon Hit Point",
+        "eligible": ["Gnome Summoner", "Human Summoner"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:172",
+        "name": "Favored Class Bonus ~ Eidolon Evolution",
+        "eligible": ["Half-Elf Summoner"],
+        "changes": [],
+        "note": "The evolution pool, not a daily count."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:176",
+        "name": "Favored Class Bonus ~ Eidolon Skill Rank",
+        "eligible": ["Halfling Summoner", "Human Summoner"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:178",
+        "name": "Favored Class Bonus ~ Energy Resistance Druid",
+        "eligible": ["Gnome Druid"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:180",
+        "name": "Favored Class Bonus ~ Energy Resistance Paladin",
+        "eligible": ["Human Paladin"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:189",
+        "name": "Favored Class Bonus ~ Extract Formula",
+        "eligible": ["Human Alchemist"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:191",
+        "name": "Favored Class Bonus ~ Fast Movement",
+        "eligible": ["Elf Barbarian"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:193",
+        "name": "Favored Class Bonus ~ Favored Enemy Armor Class",
+        "eligible": ["Halfling Ranger"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:195",
+        "name": "Favored Class Bonus ~ Fire Damage",
+        "eligible": ["Half-Orc Sorcerer"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:197",
+        "name": "Favored Class Bonus ~ Inquisitor Spell",
+        "eligible": ["Human Inquisitor"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:199",
+        "name": "Favored Class Bonus ~ Ki",
+        "eligible": ["Human Monk"],
+        "changes": ["classFeat_kiPool", "classFeat_kiPoolUc"],
+        "note": "+1/4 point per selection to the monk’s ki pool; the PCGen line gives the text only (DESC, CHOOSE:NOCHOICE, no BONUS), so PCGen adds nothing to either pool. PRECLASS:1,Monk=1 also admits PCGen's Unchained Monk: the Monk class (cr_classes.lst:147) with the class choice Monk ~ Unchained Class (pu_abilities_class.lst:115), whose .MOD lines grant its features, its Ki Pool among them (:162, :467); the review keeps both keys. The Monk's pool (classFeat_kiPool) has no maximum record, so nothing is shown there; the Unchained Monk's (classFeat_kiPoolUc) is held for the Necklace of Ki Serenity and the rogue talent Ki Pool, so binding this reward would not by itself lift its hold."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:201",
+        "name": "Favored Class Bonus ~ Lay On Hands Hit Point",
+        "eligible": ["Halfling Paladin"],
+        "changes": [],
+        "note": "Hit points healed, not uses."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:203",
+        "name": "Favored Class Bonus ~ Mount Hit Points",
+        "eligible": ["Elf Cavalier"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Cavalier=1 also admits PCGen's Samurai (ultimate_combat/uc_classes.lst:34, TYPE Base.PC.Cavalier), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:205",
+        "name": "Favored Class Bonus ~ Oracle Spell",
+        "eligible": ["Human Oracle"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:207",
+        "name": "Favored Class Bonus ~ Oracle's Curse Level",
+        "eligible": ["Gnome Oracle"],
+        "changes": [],
+        "note": "The oracle level counts 1/2 higher for the curse’s effects; Song-Bound Curse’s countersong rounds are situational on Bardic Performance (they are not its rounds)."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:209",
+        "name": "Favored Class Bonus ~ Paladin Spell Concentration",
+        "eligible": ["Dwarf Paladin"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:211",
+        "name": "Favored Class Bonus ~ Proficient Weapon",
+        "eligible": ["Dwarf Oracle"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:213",
+        "name": "Favored Class Bonus ~ Rage Round",
+        "eligible": ["Dwarf Barbarian", "Half-Orc Barbarian"],
+        "changes": ["classFeat_rage"],
+        "note": "+1 round of rage a day per selection; the Mad Dog’s rage has the same key."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:215",
+        "name": "Favored Class Bonus ~ Rogue Talent",
+        "eligible": ["Human Rogue"],
+        "changes": [],
+        "note": "A talent gained this way is itself a catalog row the boundary reviews (the Ki Pool talent among them); the reward changes no count by itself. PRECLASS:1,TYPE.Rogue=1 also admits PCGen's Ninja (ultimate_combat/uc_classes.lst:19, TYPE Base.PC.Rogue), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:217",
+        "name": "Favored Class Bonus ~ Skills Creature Attitude",
+        "eligible": ["Human Druid"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:219",
+        "name": "Favored Class Bonus ~ Skills Feint Gather Information",
+        "eligible": ["Half-Elf Rogue"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Rogue=1 also admits PCGen's Ninja (ultimate_combat/uc_classes.lst:19, TYPE Base.PC.Rogue), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:221",
+        "name": "Favored Class Bonus ~ Skills Intimidate Identify Creatures",
+        "eligible": ["Half-Orc Inquisitor"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:223",
+        "name": "Favored Class Bonus ~ Skills Social",
+        "eligible": ["Halfling Bard"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:225",
+        "name": "Favored Class Bonus ~ Skills Stone Traps",
+        "eligible": ["Dwarf Rogue"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Rogue=1 also admits PCGen's Ninja (ultimate_combat/uc_classes.lst:19, TYPE Base.PC.Rogue), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:227",
+        "name": "Favored Class Bonus ~ Skills Magical Writings",
+        "eligible": ["Gnome Rogue"],
+        "changes": [],
+        "note": "PRECLASS:1,TYPE.Rogue=1 also admits PCGen's Ninja (ultimate_combat/uc_classes.lst:19, TYPE Base.PC.Rogue), a class no release scope holds."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:229",
+        "name": "Favored Class Bonus ~ Sorcerer Spell",
+        "eligible": ["Human Sorcerer"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:231",
+        "name": "Favored Class Bonus ~ Spell Penetration Outsiders",
+        "eligible": ["Human Cleric"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:233",
+        "name": "Favored Class Bonus ~ Stabilization",
+        "eligible": ["Half-Orc Fighter"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:235",
+        "name": "Favored Class Bonus ~ Superstitious Rage",
+        "eligible": ["Human Barbarian"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:237",
+        "name": "Favored Class Bonus ~ Trap Sense",
+        "eligible": ["Human Barbarian"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:239",
+        "name": "Favored Class Bonus ~ Wild Empathy Underground",
+        "eligible": ["Dwarf Ranger"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:241",
+        "name": "Favored Class Bonus ~ Witch Spell",
+        "eligible": ["Half-Elf Witch", "Human Witch"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:243",
+        "name": "Favored Class Bonus ~ Witch Familiar Skill Rank",
+        "eligible": ["Half-Orc Witch"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:245",
+        "name": "Favored Class Bonus ~ Wizard Spell",
+        "eligible": ["Human Wizard"],
+        "changes": []
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:263",
+        "name": "Favored Class Bonus ~ CMD Bull Rush",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:264",
+        "name": "Favored Class Bonus ~ CMD Dirty Trick",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:265",
+        "name": "Favored Class Bonus ~ CMD Disarm",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:266",
+        "name": "Favored Class Bonus ~ CMD Drag",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:267",
+        "name": "Favored Class Bonus ~ CMD Grapple",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:268",
+        "name": "Favored Class Bonus ~ CMD Overrun",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:269",
+        "name": "Favored Class Bonus ~ CMD Reposition",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:270",
+        "name": "Favored Class Bonus ~ CMD Steal",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:271",
+        "name": "Favored Class Bonus ~ CMD Sunder",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      },
+      {
+        "key": "rule/core/favored-class/roleplaying_game/advanced_players_guide/apg_abilities_race.lst:272",
+        "name": "Favored Class Bonus ~ CMD Trip",
+        "eligible": ["Human Fighter"],
+        "changes": [],
+        "note": "A choice under Favored Class Bonus ~ CMD (line 152, Human Fighter): a CMD bonus."
+      }
+    ]
+  },
+  "campaign-party-v1": {
+    "digest": "sha256:624db841410815ced13672973ef3020b5be18b8efc9c3a0a7c210c1da27d5902",
+    "rewards": []
+  }
+}

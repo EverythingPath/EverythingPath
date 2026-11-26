@@ -1,0 +1,47 @@
+_id: OXG4lt3sDQJLFAYd
+_key: '!items!OXG4lt3sDQJLFAYd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_16.jpg
+name: Dehydrating Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: j9qlzf6pzzhx6g6s
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>Starting at 1st level, you can make a melee <em>touch attack</em> as a
+      <em>standard action</em> that inflicts 1d6 points of <em>nonlethal
+      damage</em> + 1 for every two sorcerer levels you possess and
+      <em>sickens</em> the target for 1 round. <em>Oozes</em>, <em>plants</em>,
+      and creatures with the <em>aquatic</em> or <em>water</em> subtypes suffer
+      lethal damage instead. You can use this ability a number of times per day
+      equal to 3 + your <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_dehydratingTouch
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

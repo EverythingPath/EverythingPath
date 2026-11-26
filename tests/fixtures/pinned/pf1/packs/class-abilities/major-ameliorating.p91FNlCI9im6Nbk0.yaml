@@ -1,0 +1,63 @@
+_id: p91FNlCI9im6Nbk0
+_key: '!items!p91FNlCI9im6Nbk0'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Major Ameliorating
+system:
+  abilityType: su
+  actions:
+    - _id: 5brv4ndiiyhn7z53
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Suppress
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+    - _id: 4RkHOIJGelqODxL9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '24'
+      name: Resist
+      range:
+        units: touch
+      target:
+        value: touched creature
+      touch: true
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can touch a creature to suppress or protect it from more
+      debilitating negative conditions.</p><p>Each time she uses this hex, the
+      witch either chooses the blinded or deafened condition, or chooses a type
+      of effect: curse, disease, or poison.</p><ul><li><p>If the target is or
+      later becomes afflicted with the chosen condition or effect, that
+      condition or effect is suppressed for a number of minutes equal to the
+      witch’s level.</p></li><li><p>Alternatively, for 24 hours the witch can
+      grant her target a +4 circumstance bonus on saving throws against effects
+      that cause any two of the above conditions or effects (witch’s choice; she
+      can choose any combination of conditions or effects, as long as she
+      chooses only two total).</p></li></ul><p>At 15th level, the witch can
+      choose up to two total conditions or types of effects to suppress or three
+      total conditions or types of effects to grant a circumstance bonus against
+      each time she uses the major ameliorating hex.</p><p>Once a creature has
+      benefited from this hex, it cannot benefit from it again for 24 hours.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

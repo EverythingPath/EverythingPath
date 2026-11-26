@@ -1,0 +1,28 @@
+_id: bqoIfsrF8BF1GC28
+_key: '!items!bqoIfsrF8BF1GC28'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/animal-affinity.jpg
+name: Animal Affinity
+system:
+  changes:
+    - _id: twf87ij3
+      formula: 2 + if(gte(@skills.han.rank, 10), 2)
+      target: skill.han
+      type: untyped
+    - _id: 6cfv98e5
+      formula: 2 + if(gte(@skills.rid.rank, 10), 2)
+      target: skill.rid
+      type: untyped
+  description:
+    value: >-
+      <p><em>You are skilled at working with animals and
+      mounts.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all
+      Handle Animal and Ride skill checks. If you have 10 or more ranks in one
+      of these skills, the bonus increases to +4 for that skill.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 118
+  tags:
+    - General
+type: feat

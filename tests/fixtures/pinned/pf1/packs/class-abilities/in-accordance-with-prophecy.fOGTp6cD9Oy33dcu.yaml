@@ -1,0 +1,40 @@
+_id: fOGTp6cD9Oy33dcu
+_key: '!items!fOGTp6cD9Oy33dcu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-3.jpg
+name: In Accordance with Prophecy
+system:
+  abilityType: su
+  actions:
+    - _id: 5rppcgzi1lcktcfi
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>A number of times per day equal to your <em>Intelligence</em> modifier,
+      you can publicly declare that your next spell is guided by prophecy. When
+      you do, the next spell you cast has a 20% chance of fizzling (1–20 on a
+      d%). If the spell does not fail, treat the spell as if it had been
+      modified by the @UUID[Compendium.pf1.feats.77gXSucrxfrE9yWk]{Empower
+      Spell} feat, even if you do not have that feat. At 12th level, the chance
+      that the spell fizzles is reduced to 15% (1–15 on a d%). At 16th level,
+      the chance is reduced to 10% (1–10 on a d%).</p>
+  subType: classFeat
+  tag: classFeat_inAccordanceWithProphecy
+  uses:
+    maxFormula: '@abilities.int.mod'
+    per: day
+type: feat

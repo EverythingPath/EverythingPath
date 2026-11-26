@@ -1,0 +1,40 @@
+_id: 7QulGFMelZdF9pPl
+_key: '!items!7QulGFMelZdF9pPl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/horror-acid-1.jpg
+name: Unstable Bonds
+system:
+  abilityType: su
+  actions:
+    - _id: u6y8tbuhcb8e8q16
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: 1 creature
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 1st level, your touch can disrupt the bonds that hold a summoned or
+      called creature on this plane. As a melee <em>touch attack</em>, you can
+      cause a summoned or called creature to become <em>shaken</em> and
+      <em>staggered</em> for a number of rounds equal to 1/2 your wizard level
+      (minimum 1). You can use this ability a number of times per day equal to 3
+      + your <em>Intelligence</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_unstableBonds
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

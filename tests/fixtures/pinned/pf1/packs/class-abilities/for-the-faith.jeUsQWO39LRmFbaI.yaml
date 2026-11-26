@@ -1,0 +1,33 @@
+_id: jeUsQWO39LRmFbaI
+_key: '!items!jeUsQWO39LRmFbaI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: For the Faith
+system:
+  abilityType: ex
+  actions:
+    - _id: iy8nmu49izklthh9
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 8th level, the cavalier can call upon his faith to bolster himself
+      in combat. As a free action, the cavalier can call out the name of his
+      deity, granting him a morale bonus on attack rolls equal to his Charisma
+      modifier for 1 round. In addition, any allies within 30 feet that share
+      his faith also receive half this bonus (minimum +1). The cavalier can use
+      this ability once per day, plus one additional time per day at 12th level
+      and every four levels thereafter.</p>
+  subType: classFeat
+  tag: classFeat_forTheFaith
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

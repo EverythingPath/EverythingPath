@@ -1,0 +1,83 @@
+_id: qu7ujh8wcwpzfsr6
+_key: '!items!qu7ujh8wcwpzfsr6'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Guardian Monument, Greater
+system:
+  actions:
+    - _id: yx49djjmhelqpty5
+      actionType: spellsave
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      area: >-
+        40-ft. radius from touched object or 60-ft. radius from touched object;
+        see text
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: 40-ft. Radius
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+    - _id: avYWbnKuVFk62Ysq
+      actionType: spellsave
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      area: >-
+        40-ft. radius from touched object or 60-ft. radius from touched object;
+        see text
+      duration:
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: 60-ft. Radius
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.klgbztt1jdgupsoi]{Lesser Guardian Monument},
+      except it grants DR 4/magic.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 5
+      inquisitor: 5
+      occultist: 5
+      psychic: 5
+      skald: 5
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    focus: an unattended, nonmagical object
+  school: abj
+  sources:
+    - id: PZO9465
+      pages: '9'
+type: spell

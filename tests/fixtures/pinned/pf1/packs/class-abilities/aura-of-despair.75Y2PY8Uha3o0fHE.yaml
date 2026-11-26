@@ -1,0 +1,39 @@
+_id: 75Y2PY8Uha3o0fHE
+_key: '!items!75Y2PY8Uha3o0fHE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_03.jpg
+name: Aura of Despair
+system:
+  abilityType: su
+  actions:
+    - _id: gjirq0jlenci26eu
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: seeText
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of despair for a number of
+      rounds per day equal to your wizard level. Enemies within this aura take a
+      –2 penalty on ability checks, attack rolls, damage rolls, <em>saving
+      throw</em>s, and skill checks. These rounds do not need to be consecutive.
+      This is a mind-affecting effect.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_auraOfDespair
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

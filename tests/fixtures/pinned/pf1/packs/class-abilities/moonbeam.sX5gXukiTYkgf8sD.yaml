@@ -1,0 +1,53 @@
+_id: sX5gXukiTYkgf8sD
+_key: '!items!sX5gXukiTYkgf8sD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Moonbeam
+system:
+  abilityType: su
+  actions:
+    - _id: vae71k2fq4ccd8hl
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can fire a ray of moonlight as a ranged touch attack at any
+      creature within 30 feet. This ray deals 1d6 points of damage + 1 for every
+      2 oracle levels you possess. In addition, the target must succeed at a
+      Fortitude save or become blinded for 1 round.</p>
+
+      <p>You can use this ability a number of times per day equal to your
+      Charisma modifier (minimum 1).</p>
+  subType: classFeat
+  tag: classFeat_moonbeam
+  tags:
+    - Revelation
+    - Lunar Mystery
+  uses:
+    maxFormula: max(1, @abilities.cha.mod)
+    per: day
+type: feat

@@ -1,0 +1,44 @@
+_id: CItAoMTHm5BVVtVt
+_key: '!items!CItAoMTHm5BVVtVt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-red-1.jpg
+name: Insane Focus
+system:
+  abilityType: su
+  actions:
+    - _id: 2szqc0fu1rtaiei0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can touch a willing creature as a standard action, granting it a +4
+      bonus on all saving throws made against mind-affecting effects and
+      immunity to confusion. This bonus lasts for 1 minute. If the creature
+      fails a saving throw against a mind-affecting effect during this period,
+      it loses its immunity to confusion and is immediately confused for one
+      round. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+
+      <p>This power replaces the Visions of Madness power of the Madness
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_insaneFocus
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat
