@@ -1,0 +1,54 @@
+_id: Aw4xfA8YSYHGiUXV
+_key: '!items!Aw4xfA8YSYHGiUXV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-3.jpg
+name: Aura of Madness
+system:
+  abilityType: su
+  actions:
+    - _id: mc81owbvxuhas70b
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will negates
+        type: will
+      target:
+        value: enemies in range
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of madness for a number of
+      rounds per day equal to your cleric level. Enemies within this aura are
+      affected by confusion unless they make a Will save with a DC equal to 10 +
+      1/2 your cleric level + your Wisdom modifier. The confusion effect ends
+      immediately when the creature leaves the area or the aura expires.
+      Creatures that succeed on their saving throw are immune to this aura for
+      24 hours. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_auraOfMadness
+  tags:
+    - Domain Power
+    - Madness Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

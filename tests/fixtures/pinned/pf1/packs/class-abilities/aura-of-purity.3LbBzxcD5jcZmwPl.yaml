@@ -1,0 +1,43 @@
+_id: 3LbBzxcD5jcZmwPl
+_key: '!items!3LbBzxcD5jcZmwPl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Aura of Purity
+system:
+  abilityType: su
+  actions:
+    - _id: 6r7zu9z5ligjyrf0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: 10-ft. radius
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch’s aura purifies the air around her. Diseases, inhaled
+      poisons, and noxious gaseous effects (such as stinking cloud) are negated
+      in a 10-foot aura around the witch for a number of minutes equal to her
+      level. This duration does not need to be consecutive, but it must be spent
+      in 1-minute increments. Effects caused by spells whose level is more than
+      half the witch’s class level are unaffected.</p>
+  subType: classFeat
+  tag: classFeat_auraOfPurity
+  tags:
+    - Hex
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

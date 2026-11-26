@@ -1,0 +1,79 @@
+_id: an7axxZjvKQogI90
+_key: '!items!an7axxZjvKQogI90'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-wood.webp
+name: Air Repeater
+system:
+  actions:
+    - _id: xbo6y6q19i789cf4
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '50'
+  ammo:
+    capacity: 6
+    explode: 0
+    misfire: 1
+    type: gunBullet
+  baseTypes:
+    - Air Repeater
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x4; <b>Range</b> 50 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1 (see text); <b>Capacity</b> 6</p>
+
+      <h3>Description</h3>
+
+      <p>This long-barreled firearm is powered by a removable compressed air
+      reservoir. A misfire while an air repeater has the broken condition does
+      not cause the firearm to explode, but it does destroy the air reservoir.
+      An air repeater can fire 6 shots before the air reservoir is depleted. An
+      air repeater comes with three air reservoirs. Replacing the air reservoir
+      requires 1 minute. The @UUID[Compendium.pf1.feats.11ClnanF4PdEPd9g]{Rapid
+      Reload} feat reduces this to a full-round action.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 600
+  sources:
+    - id: PZO9495
+      pages: '18'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 6
+type: weapon

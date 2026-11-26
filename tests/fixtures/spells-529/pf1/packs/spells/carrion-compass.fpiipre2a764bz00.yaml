@@ -1,0 +1,70 @@
+_id: fpiipre2a764bz00
+_key: '!items!fpiipre2a764bz00'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Carrion Compass
+system:
+  actions:
+    - _id: rnz5m2d7634ljoi9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one undead creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You animate one of the target's fetid organs so that it leads you to
+      the undead creature's most recent controller or the cause of the
+      creature's undeath.</p><p>The organ (typically the heart, the brain, or an
+      eyeball) floats in front of you at chest level and slowly leads you to the
+      undead creature's most recent controller at a rate of 30 feet per round,
+      always staying within your range of vision. If the creature from which the
+      organ originated had no controller, but rather was created deliberately by
+      another creature, the organ instead leads you to that creator.</p><p>If
+      the undead was animated by an effect or event at a particular location,
+      the organ leads you to that location.</p><p>If the creature was animated
+      by none of the methods above, if it was self-created, or if the creature's
+      most recent controller no longer exists, the spell fails. Once the organ
+      is within 10 feet of its intended destination, the spell ends, and the
+      organ falls to the ground.</p><p>The organ cannot engage in combat or
+      execute any other task aside from leading you to its intended target. It
+      may pass through small slits and crevices, though it will not leave your
+      range of vision. The organ cannot travel more than 5 miles from the spot
+      where you cast the spell. If the undead creature to which the organ
+      belonged is destroyed, the spell ends and the organ falls to the
+      ground.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      cleric: 1
+      hunter: 1
+      oracle: 1
+      ranger: 1
+      sorcerer: 2
+      warpriest: 1
+      witch: 1
+      wizard: 2
+  level: 2
+  school: div
+  sources:
+    - id: PZO9444
+      pages: '26'
+  sr: false
+type: spell

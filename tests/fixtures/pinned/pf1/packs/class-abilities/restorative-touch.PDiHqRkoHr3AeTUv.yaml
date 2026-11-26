@@ -1,0 +1,40 @@
+_id: PDiHqRkoHr3AeTUv
+_key: '!items!PDiHqRkoHr3AeTUv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_08.jpg
+name: Restorative Touch
+system:
+  abilityType: su
+  actions:
+    - _id: j0jdzjljl3cjhlbt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can touch a creature, letting the healing power of your deity flow
+      through you to relieve the creature of a minor condition. Your touch can
+      remove the dazed, fatigued, shaken, sickened, or staggered condition. You
+      choose which condition is removed. You can use this ability a number of
+      times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Rebuke Death power of the Healing Domain.</p>
+  subType: classFeat
+  tag: classFeat_restorativeTouch
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

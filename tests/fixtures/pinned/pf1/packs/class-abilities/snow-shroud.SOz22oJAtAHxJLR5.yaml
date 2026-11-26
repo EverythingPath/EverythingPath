@@ -1,0 +1,41 @@
+_id: SOz22oJAtAHxJLR5
+_key: '!items!SOz22oJAtAHxJLR5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_02.jpg
+name: Snow Shroud
+system:
+  abilityType: su
+  actions:
+    - _id: zz198r834wcir49n
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you ignore <em>concealment</em> and <em>Perception</em>
+      penalties in natural or magical snow, ice, fog, and similar weather
+      conditions. In addition, you can surround yourself with a cloak of
+      swirling snow for a number of rounds per day equal to your sorcerer level.
+      This power acts and deals damage as a
+      @UUID[Compendium.pf1.spells.nfm6i9z9r3n2fku7]{Fire Shield} (chill shield)
+      that sheds no light. It provides a 20% miss chance on attacks made against
+      you and grants a bonus on <em>Stealth</em> checks equal to 1/2 your
+      sorcerer level in snowy or icy areas. You can use this ability once per
+      day at 9th level, twice per day at 17th, and three times per day at
+      20th.</p>
+  subType: classFeat
+  tag: classFeat_snowShroud
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 16), 1) + if(gte(@class.level, 20), 1)
+    per: day
+type: feat

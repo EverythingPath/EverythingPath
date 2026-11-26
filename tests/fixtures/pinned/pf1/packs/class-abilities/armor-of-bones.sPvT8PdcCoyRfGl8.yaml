@@ -1,0 +1,49 @@
+_id: sPvT8PdcCoyRfGl8
+_key: '!items!sPvT8PdcCoyRfGl8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Armor of Bones
+system:
+  abilityType: su
+  actions:
+    - _id: 9omd88tbx347wmm3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can conjure armor made of bones that grants you a +4 armor
+      bonus.</p>
+
+      <p>At 7th level, and every four levels thereafter, this bonus increases by
+      +2.</p>
+
+      <p>At 13th level, this armor grants you DR 5/bludgeoning. You can use this
+      armor for 1 hour per day per oracle level. This duration does not need to
+      be consecutive, but it must be spent in 1-hour increments.</p>
+  sources:
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_armorOfBones
+  tags:
+    - Revelation
+    - Bones Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

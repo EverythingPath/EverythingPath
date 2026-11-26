@@ -1,0 +1,43 @@
+_id: l87uNBUghSlWy9zv
+_key: '!items!l87uNBUghSlWy9zv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Floating Lotus
+system:
+  abilityType: su
+  actions:
+    - _id: mu0lba2l1fsc0gxw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can conjure a large lotus flower that floats by her side for
+      a number of minutes per day equal to her level. This duration doesn’t need
+      to be consecutive, but must be spent in 1-minute increments. While
+      summoned, the witch can use the lotus to cross water as if she was
+      affected by @UUID[Compendium.pf1.spells.g2obld7y0lpyztes]{Water Walk}. She
+      can also use the flower for short bursts of flight, gaining a +10
+      enhancement bonus on Acrobatics checks when attempting high jumps and long
+      jumps.</p>
+
+      <p>This bonus increases by 10 at 5th level, and again at 9th level.</p>
+  subType: classFeat
+  tag: classFeat_floatingLotus
+  tags:
+    - Hex
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

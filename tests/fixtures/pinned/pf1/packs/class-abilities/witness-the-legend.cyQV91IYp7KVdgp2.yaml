@@ -1,0 +1,45 @@
+_id: cyQV91IYp7KVdgp2
+_key: '!items!cyQV91IYp7KVdgp2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_38.jpg
+name: Witness the Legend
+system:
+  abilityType: su
+  actions:
+    - _id: 7iki2ugrh8s4pand
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: self or ally
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as a move action, you can extol the virtues of yourself
+      or an ally within 60 feet that you can see. This causes the target to shed
+      light like a torch for 1 minute, and while the effect lasts, you can
+      expend a daily use of your touch of glory domain ability as an immediate
+      action to add 1d6 to an attack, saving throw, skill check, or ability
+      check attempted by the target; for a roll to confirm a critical hit or
+      save against a fear effect, you instead add 1d12. You can use this ability
+      once per day at 8th level and one additional time per day for every 4
+      levels beyond 8th.</p>
+
+      <p>This power replaces the Divine Presence power of the Glory Domain.</p>
+  subType: classFeat
+  tag: classFeat_witnessTheLegend
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

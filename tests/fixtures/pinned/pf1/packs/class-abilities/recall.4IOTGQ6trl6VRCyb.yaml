@@ -1,0 +1,40 @@
+_id: 4IOTGQ6trl6VRCyb
+_key: '!items!4IOTGQ6trl6VRCyb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_02.jpg
+name: Recall
+system:
+  abilityType: su
+  actions:
+    - _id: lz2izxqzxngbru67
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>With a touch, you can cause a creature to recall some bit of forgotten
+      lore or information. The creature can retry any Knowledge skill check it
+      has made within the past minute, gaining a insight bonus on the check
+      equal to your Wisdom modifier. You can use this ability a number times per
+      day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Lore Keeper power of the Knowledge Domain.</p>
+  subType: classFeat
+  tag: classFeat_recall
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

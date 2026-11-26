@@ -1,0 +1,43 @@
+_id: IAuoySnVKaJqT7b6
+_key: '!items!IAuoySnVKaJqT7b6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_11.jpg
+name: Door Sight
+system:
+  abilityType: su
+  actions:
+    - _id: i3zuxbbn7t3kwa81
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: minute
+        value: '10'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: surface touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can lay your hand upon any surface and see what is on the other
+      side, as if using clairvoyance. Using this power takes 1 minute, during
+      which time you must be touching the surface you want to see through. You
+      can keep looking for as long as 10 minutes with each use of this power,
+      but must touch the surface and take no other action the entire time. The
+      surface cannot be thicker than 6 inches plus 1 inch per cleric level you
+      possess. You can use this power a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+
+      <p>This power replaces the Agile Feet power of the Travel Domain.</p>
+  subType: classFeat
+  tag: classFeat_doorSight
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

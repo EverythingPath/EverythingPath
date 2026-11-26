@@ -1,0 +1,59 @@
+_id: 9ezUAbso44HrKLyr
+_key: '!items!9ezUAbso44HrKLyr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/sickle.jpg
+name: Dancing Weapons
+system:
+  abilityType: su
+  actions:
+    - _id: o0iml0gax9ug5krh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>As a standard action, a dancing weapon can be loosed to attack on its
+        own. It fights for 4 rounds using the base attack bonus of the one who
+        loosed it and then drops. While dancing, it cannot make attacks of
+        opportunity, and the activating character it is not considered armed
+        with the weapon. The weapon is considered wielded or attended by the
+        activating character for all maneuvers and effects that target items.
+        While dancing, the weapon shares the same space as the activating
+        character and can attack adjacent foes (weapons with reach can attack
+        opponents up to 10 feet away). The dancing weapon accompanies the
+        activating character everywhere, whether she moves by physical or
+        magical means. If the activating character has an unoccupied hand, she
+        can grasp it while it is attacking on its own as a free action; when so
+        retrieved, the weapon can’t dance (attack on its own) again for 4
+        rounds. This special ability can only be placed on melee weapons.</p>
+      duration:
+        units: round
+        value: '4'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: weapon touched
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can give a weapon touched the dancing special weapon
+      quality for 4 rounds. You can use this ability once per day at 8th level,
+      and an additional time per day for every four levels beyond 8th.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_dancingWeapons
+  tags:
+    - Domain Power
+    - Artifice Domain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

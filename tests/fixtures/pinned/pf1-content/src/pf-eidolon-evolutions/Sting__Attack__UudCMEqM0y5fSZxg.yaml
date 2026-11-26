@@ -1,0 +1,33 @@
+_id: UudCMEqM0y5fSZxg
+_key: '!items!UudCMEqM0y5fSZxg'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/bones/tooth-spiked-brown.webp
+name: Sting (Attack)
+system:
+  actions:
+    - _id: cbq3iyxv8qnahz86
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      img: icons/commodities/bones/tooth-spiked-brown.webp
+      name: Attack
+      tag: sting
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

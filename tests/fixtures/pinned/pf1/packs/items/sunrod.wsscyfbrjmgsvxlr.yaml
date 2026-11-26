@@ -1,0 +1,60 @@
+_id: wsscyfbrjmgsvxlr
+_key: '!items!wsscyfbrjmgsvxlr'
+_stats:
+  coreVersion: '12.343'
+img: icons/sundries/lights/torch-brown.webp
+name: Sunrod
+system:
+  actions:
+    - _id: 4tgyOs6IQsorIFUg
+      activation:
+        type: standard
+        unchained:
+          type: nonaction
+      duration:
+        units: hour
+        value: '6'
+      name: Use
+      tag: ignite
+  description:
+    value: >-
+      <p>This 1-foot-long, gold-tipped iron rod glows brightly when struck (a
+      standard action).</p><p>It sheds normal light in a 30-foot radius and
+      increases the light level by one step for an additional 30 feet beyond
+      that area (darkness becomes dim light and dim light becomes normal
+      light).</p><p>A sunrod does not increase the light level in normal light
+      or bright light. It glows for 6 hours, after which the gold tip is burned
+      out and worthless.</p><h3>Alchemical Recipe</h3><p><strong>Recipe</strong>
+      (2 magnesium + 2 phosphorus)/ceration; <strong>Craft</strong>
+      25</p><p><strong>Time</strong> 10 minutes; <strong>Tools</strong>
+      crucible; <strong>Type</strong> alchemical tool</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 2
+  scriptCalls:
+    - _id: s9jObYUxPgbHP1q2
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 60 }));
+  sources:
+    - id: PZO9445
+      pages: '30'
+    - id: PZO1110
+      pages: 158, 160
+    - id: PZO1123
+      pages: 103, 105
+  subType: tool
+  uses:
+    per: single
+  weight:
+    value: 1
+type: loot

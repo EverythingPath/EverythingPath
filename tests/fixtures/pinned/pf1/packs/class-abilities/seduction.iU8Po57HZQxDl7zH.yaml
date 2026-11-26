@@ -1,0 +1,51 @@
+_id: iU8Po57HZQxDl7zH
+_key: '!items!iU8Po57HZQxDl7zH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Seduction
+system:
+  abilityType: su
+  actions:
+    - _id: i1ex3175awk6i94f
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: concentration + 1
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch uses enthralling movements to fascinate a single creature
+      within 60 feet that can see the witch. A Will save negates this effect. If
+      the target is (or could be) sexually attracted to the witch, the save DC
+      is increased by 2. The effect lasts for 1 round, but the witch can extend
+      this effect for 1 additional round (up to a total number of rounds equal
+      to her class level) by taking a standard action to continue her
+      enthralling movements. Whether or not the target succeeds at its save, it
+      cannot be the target of this ability again for 1 day.</p>
+
+      <p>At 8th level, the fascination effect lasts for 2 additional rounds
+      after the witch ceases taking a standard action to maintain it. This is a
+      mind-affecting charm effect.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

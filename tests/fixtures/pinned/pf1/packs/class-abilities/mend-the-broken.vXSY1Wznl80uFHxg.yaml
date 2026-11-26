@@ -1,0 +1,44 @@
+_id: vXSY1Wznl80uFHxg
+_key: '!items!vXSY1Wznl80uFHxg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Mend the Broken
+system:
+  abilityType: su
+  actions:
+    - _id: 6mu2l2bfxnjedgb5
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d4 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can touch an object or creature as a standard action, healing it of
+      1d4 points of damage + 1 for every 2 inquisitor levels you possess. You
+      can use this ability only on a broken object or a creature with fewer than
+      half its maximum hit points. You can use this ability a number of times
+      per day equal to 3 + your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_mendTheBroken
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

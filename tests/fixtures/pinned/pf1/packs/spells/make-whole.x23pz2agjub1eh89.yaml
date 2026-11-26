@@ -1,0 +1,70 @@
+_id: x23pz2agjub1eh89
+_key: '!items!x23pz2agjub1eh89'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/skills/trades/smithing-anvil-silver-red.webp
+name: Make Whole
+system:
+  actions:
+    - _id: s6bdbadonrhk2419
+      actionType: heal
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      damage:
+        parts:
+          - formula: (min(5, @cl))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one object of up to 10 cu. ft./level or one construct creature of any
+          size
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.24zg8a05hqum3e6j]{mending}, except that
+      it repairs 1d6 points of damage per level when cast on an object or
+      construct creature (maximum 5d6).</p><p><em>Make whole</em> can fix
+      destroyed magic items (at 0 hit points or less), and restores the magic
+      properties of the item if your caster level is at least twice that of the
+      item. Items with charges (such as wands) and single-use items (such as
+      potions and scrolls) cannot be repaired in this way. When <em>make
+      whole</em> is used on a construct creature, the spell bypasses any
+      immunity to magic as if the spell did not allow spell resistance.</p>
+  learnedAt:
+    bloodline:
+      Impossible: 2
+    class:
+      arcanist: 2
+      cleric: 2
+      occultist: 2
+      oracle: 2
+      psychic: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+    subDomain:
+      Flotsam: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '311'
+type: spell

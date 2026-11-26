@@ -1,0 +1,56 @@
+_id: tgdsx9i3048n7tns
+_key: '!items!tgdsx9i3048n7tns'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Magic Siege Engine
+system:
+  actions:
+    - _id: mjxm105t1tmdsypf
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one siege engine touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell permits an indirect fire siege engine to bombard its targets
+      with greater accuracy, delivering more damage. The siege weapon receives a
+      +1 enhancement bonus on targeting rolls and damage rolls. If used on a
+      direct fire siege weapon, this spell acts a <i>magic weapon</i>.</p>
+  learnedAt:
+    class:
+      antipaladin: 2
+      arcanist: 2
+      cleric: 2
+      inquisitor: 2
+      occultist: 2
+      oracle: 2
+      paladin: 2
+      sorcerer: 2
+      warpriest: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '236'
+type: spell

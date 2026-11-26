@@ -1,0 +1,49 @@
+_id: eZ569ZcO7BeZAqB6
+_key: '!items!eZ569ZcO7BeZAqB6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/rip-water-1.jpg
+name: Touch of Chaos
+system:
+  abilityType: sp
+  actions:
+    - _id: mpzmhg8k1ck6fqfo
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can imbue a target with chaos as a melee touch attack. For the next
+      round, anytime the target rolls a d20, he must roll twice and take the
+      less favorable result. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_touchOfChaos
+  tags:
+    - Domain Power
+    - Chaos Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

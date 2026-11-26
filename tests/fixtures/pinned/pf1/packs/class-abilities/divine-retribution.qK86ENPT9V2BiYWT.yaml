@@ -1,0 +1,53 @@
+_id: qK86ENPT9V2BiYWT
+_key: '!items!qK86ENPT9V2BiYWT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Divine Retribution
+system:
+  abilityType: sp
+  actions:
+    - _id: m2hlwoanew5xmp6n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - slashing
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Reflex Half
+        type: ref
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can point at one creature within 30 feet to
+      indicate that it is the target of divine wrath. A mishap or an accident
+      appropriate to the environment occurs, such as a branch falling on the
+      creature, rocks falling from the ceiling, or some other nonmagical
+      misfortune; regardless of the cause, the mishap deals 1d6 points of damage
+      + 1 point for every two inquisitor levels you possess (Reflex half). The
+      GM decides whether this damage is bludgeoning, piercing, or slashing
+      damage. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_divineRetribution
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,55 @@
+_id: 6TRopvOqsHlxvbNW
+_key: '!items!6TRopvOqsHlxvbNW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Erase from Time
+system:
+  abilityType: su
+  actions:
+    - _id: 3fok40s4535zo7g6
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a melee touch attack, you can temporarily remove a creature from
+      time altogether. The target creature must make a Fortitude save or vanish
+      completely for a number of rounds equal to 1/2 your oracle level (minimum
+      1 round). No magic or divinations can detect the creature during this
+      time, as it exists outside of time and space—in effect, the creature
+      ceases to exist for the duration of this ability. At the end of the
+      duration, the creature reappears unharmed in the space it last occupied
+      (or the nearest possible space, if the original space is now
+      occupied).</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 11th level.</p>
+  subType: classFeat
+  tag: classFeat_eraseFromTime
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 11), 1)
+    per: day
+type: feat

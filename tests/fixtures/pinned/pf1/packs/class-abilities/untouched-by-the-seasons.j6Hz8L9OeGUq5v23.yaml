@@ -1,0 +1,39 @@
+_id: j6Hz8L9OeGUq5v23
+_key: '!items!j6Hz8L9OeGUq5v23'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_09.jpg
+name: Untouched by the Seasons
+system:
+  abilityType: su
+  actions:
+    - _id: p7oiqadffttok3g0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@class.level'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>By touching a creature, you can grant it the benefits of endure
+      elements, which last for 1 hour per cleric level. You can use this ability
+      a number of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Storm Burst power of the Weather Domain.</p>
+  subType: classFeat
+  tag: classFeat_untouchedByTheSeasons
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

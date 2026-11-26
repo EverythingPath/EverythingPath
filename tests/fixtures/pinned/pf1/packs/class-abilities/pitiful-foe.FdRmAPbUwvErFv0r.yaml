@@ -1,0 +1,58 @@
+_id: FdRmAPbUwvErFv0r
+_key: '!items!FdRmAPbUwvErFv0r'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Pitiful Foe
+system:
+  abilityType: su
+  actions:
+    - _id: hh4l5gbwdgobss5m
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can temporarily curse one target within 30 feet as a standard
+      action, making it pitiful and ineffective in battle. While this ability is
+      in effect, the target is never considered to be threatening you or your
+      allies, even if it is armed and you or your allies are standing in a
+      square into which it can make a melee attack. If the target rolls a
+      natural 20 on an attack roll or saving throw, the attack or saving throw
+      is not an automatic success (as would be normal) and whether it is
+      successful is instead determined normally. Additionally, the target
+      automatically fails all rolls to confirm critical hits. This curse lasts
+      for 1 round per 2 oracle levels you have (minimum 1). A successful Will
+      saving throw negates this effect. This is a mind-affecting curse
+      effect.</p>
+
+      <p>You can use this revelation once per day, plus one additional time at
+      7th and 15th levels.</p>
+  subType: classFeat
+  tag: classFeat_pitifulFoe
+  tags:
+    - Revelation
+    - Succor Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 6), 1) + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

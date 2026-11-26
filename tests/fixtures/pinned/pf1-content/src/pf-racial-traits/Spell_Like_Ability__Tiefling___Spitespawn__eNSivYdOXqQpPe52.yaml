@@ -1,0 +1,63 @@
+_id: eNSivYdOXqQpPe52
+_key: '!items!eNSivYdOXqQpPe52'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Spitespawn)
+system:
+  abilityType: sp
+  actions:
+    - _id: Z16bpktXlAxiRgRb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.8nrt26t37v7koqr8]{Misdirection}</p><p>By
+        means of this spell, you misdirect the information from divination
+        spells that reveal auras (detect evil, detect magic, discern lies, and
+        the like). On casting the spell, you choose another object within range.
+        For the duration of the spell, the subject of misdirection is detected
+        as if it were the other object. Neither the subject nor the other object
+        gets a saving throw against this effect. Detection spells provide
+        information based on the second object rather than on the actual target
+        of the detection unless the caster of the detection succeeds on a Will
+        save. For instance, you could make yourself detect as a tree if one were
+        within range at casting: not evil, not lying, not magical, neutral in
+        alignment, and so forth. This spell does not affect other types of
+        divination magic (augury, detect thoughts, clairaudience/clairvoyance,
+        and the like).</p>
+      duration:
+        units: hour
+        value: '@attributes.hd.total'
+      name: Misdirection
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one creature or object up to a 10ft cube
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Spitespawn</p><hr /><p>Spitespawn can
+      use @UUID[Compendium.pf1.spells.Item.8nrt26t37v7koqr8]{Misdirection} once
+      per day as a spell-like ability (with a caster level equal to their
+      character level).</p><p></p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '21'
+  subType: racial
+  tags:
+    - Tiefling
+    - Spitespawn
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

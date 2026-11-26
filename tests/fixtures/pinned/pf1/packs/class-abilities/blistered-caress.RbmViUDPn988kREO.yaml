@@ -1,0 +1,59 @@
+_id: RbmViUDPn988kREO
+_key: '!items!RbmViUDPn988kREO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Blistered Caress
+system:
+  abilityType: su
+  actions:
+    - _id: uugkwzg6mnqdz1bn
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d8
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Fortitude half
+        type: fort
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can channel the hostile, unforgiving heat of the sun into your
+      touch. This is a melee touch attack that deals 1d8 points of fire damage
+      per 2 oracle levels (Fortitude half). Against a plant creature, this touch
+      heals or damages the creature (your choice) for 1d6 points of fire damage
+      per oracle level.</p><p>At 7th level, a creature that fails its save
+      against this revelation becomes sickened for 1d4 hours in addition to
+      taking fire damage.</p><p>At 15th level, your touch is so intense that a
+      creature that fails its save is also staggered for 1d6 rounds.</p><p>You
+      can use this ability once per day plus one additional time per day at 10th
+      level.</p>
+  subType: classFeat
+  tag: classFeat_blisteredCaress
+  tags:
+    - Revelation
+    - Solar Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 10), 1)
+    per: day
+type: feat

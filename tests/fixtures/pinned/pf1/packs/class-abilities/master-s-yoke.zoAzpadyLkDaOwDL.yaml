@@ -1,0 +1,47 @@
+_id: zoAzpadyLkDaOwDL
+_key: '!items!zoAzpadyLkDaOwDL'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/weapon_42.jpg
+name: Master's Yoke
+system:
+  abilityType: su
+  actions:
+    - _id: 2ihy4udtkne65t3a
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can attempt to assert your dominance over any visible
+      creature within 30 feet by declaring the target your property. The target
+      can resist this effect with a successful Will save (DC = 10 + half your
+      class level + your Wisdom modifier). If the target fails the save, it is
+      affected as if by dominate monster for a number of rounds equal to half
+      your class level. The target can choose to ignore any order you give and
+      instead take 2 points of Constitution damage and become staggered for 1
+      round. You can use this ability once per day at 8th level, and an
+      additional time per day for every 4 levels beyond 8th. This is a
+      language-based mind-affecting effect.</p>
+
+      <p>This power replaces the Staff of Order power of the Law Domain.</p>
+  subType: classFeat
+  tag: classFeat_mastersYoke
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

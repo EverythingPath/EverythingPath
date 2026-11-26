@@ -1,0 +1,29 @@
+_id: kG8EriOOSJmDmYZd
+_key: '!items!kG8EriOOSJmDmYZd'
+_stats:
+  coreVersion: '12.343'
+folder: abSp08elNrsecBYc
+img: icons/magic/nature/hand-weapon-wood-bark-brown.webp
+name: Barkskin
+system:
+  changes:
+    - _id: zjfo24qt
+      formula: clamp(2 + floor((@item.level - 3) / 3), 2, 5)
+      target: nac
+      type: enh
+  description:
+    instructions: <p>Set the buff's level to the caster level of Barkskin.</p>
+    value: >-
+      <p>Your skin is toughened, granting you an enhancement bonus to your
+      natural armor as per the
+      @UUID[Compendium.pf1.spells.Item.la7kuehewu85ybnt] spell.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level * 10'
+  level: 3
+  sources:
+    - id: PZO1110
+      pages: '246'
+  subType: spell
+type: buff

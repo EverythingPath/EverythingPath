@@ -1,0 +1,46 @@
+_id: R1xjQmsuzpqIalcs
+_key: '!items!R1xjQmsuzpqIalcs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_08.jpg
+name: Incorporeal Form
+system:
+  abilityType: sp
+  actions:
+    - _id: v1qdh93yy0p8jgzw
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you can become <em>incorporeal</em> for 1 round per
+      sorcerer level. While in this form, you gain the incorporeal subtype. You
+      only take half damage from corporeal sources as long as they are magic
+      (you take no damage from non-magic weapons and objects). Likewise, your
+      spells deal only half damage to corporeal creatures. Spells and other
+      effects that do not deal damage function normally. You can use this
+      ability once per day.</p>
+  sources:
+    - id: PZO1110
+      pages: '77'
+  subType: classFeat
+  tag: classFeat_incorporealForm
+  tags:
+    - Bloodline Power
+    - Undead Bloodline
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

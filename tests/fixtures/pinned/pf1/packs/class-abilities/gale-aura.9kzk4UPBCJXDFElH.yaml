@@ -1,0 +1,44 @@
+_id: 9kzk4UPBCJXDFElH
+_key: '!items!9kzk4UPBCJXDFElH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/wind-sky-2.jpg
+name: Gale Aura
+system:
+  abilityType: su
+  actions:
+    - _id: 2r2cbaallyopz0wj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: anamies within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 6th level, as a standard action, you can create a 30-foot aura of
+      gale-like winds that slows the progress of enemies. Creatures in the aura
+      cannot take a 5-foot step. Enemies in the aura treat each square that
+      brings them closer to you as difficult terrain. They can move normally in
+      any other direction. You can use this ability for a number of rounds per
+      day equal to your cleric level. The rounds do not need to be
+      consecutive.</p>
+
+      <p>This power replaces the Lightning Lord pwoer of the Weather Domain.</p>
+  subType: classFeat
+  tag: classFeat_galeAura
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

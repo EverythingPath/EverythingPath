@@ -1,0 +1,39 @@
+_id: JsAjDlSmJKFlWKeW
+_key: '!items!JsAjDlSmJKFlWKeW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_09.jpg
+name: Thief of the Gods
+system:
+  abilityType: su
+  actions:
+    - _id: j9pxhrhd3wkzg898
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, when you make a Disable Device or Sleight of Hand check,
+      you can roll twice and take the higher result. Using this ability is a
+      free action. You can use this ability once per day at 8th level, plus one
+      additional time per day for every 2 levels beyond 8th.</p>
+
+      <p>This power replaces the Master's Illusion power of the Trickery
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_thiefOfTheGods
+  uses:
+    maxFormula: floor((@class.level - 6) / 2)
+    per: day
+type: feat

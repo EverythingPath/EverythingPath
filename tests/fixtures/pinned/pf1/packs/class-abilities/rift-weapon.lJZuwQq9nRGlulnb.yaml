@@ -1,0 +1,49 @@
+_id: lJZuwQq9nRGlulnb
+_key: '!items!lJZuwQq9nRGlulnb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Rift Weapon
+system:
+  abilityType: su
+  actions:
+    - _id: c19oa8mranuabcr0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: weapon touched
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Your understanding of the powers that move through the Outer Rifts
+      allows you to imbue weapons with the ability to penetrate the defenses of
+      creatures native to other planes. Once per day as a standard action, you
+      can touch one weapon (or a group of up to 20 similar pieces of ammunition)
+      and give it the ability to penetrate DR/cold iron for 1 minute per caster
+      level.</p>
+
+      <p>At 9th level, you can also grant the additional ability to bypass
+      either DR/good and DR/law.</p>
+
+      <p>You can use this ability an additional time per day for every 5 oracle
+      levels you possess.</p>
+  subType: classFeat
+  tag: classFeat_riftWeapon
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat
