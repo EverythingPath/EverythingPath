@@ -1,0 +1,71 @@
+_id: 1wnzvfrpl2gp829u
+_key: '!items!1wnzvfrpl2gp829u'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/perception/eye-ringed-glow-angry-small-red.webp
+name: Burning Gaze
+system:
+  actions:
+    - _id: gdak43p2jc6mereh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Fortitude negates (see text)
+        type: fort
+      target:
+        value: you
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your eyes burn like hot coals, allowing you to set objects or foes
+      alight with a glance.</p><p>As a standard action as long as this spell's
+      effects persist, you may direct your <i>burning gaze</i> against a single
+      creature or object within 30 feet of your location. Targeted creatures
+      must succeed at a Fortitude save or take 1d6 points of fire damage.
+      Unattended objects do not get a save. Creatures damaged by the spell must
+      make a Reflex save or catch fire.</p><p>Each round, burning creatures may
+      attempt a Reflex save to quench the flames; failure results in another 1d6
+      points of fire damage. Flammable items worn by a creature must also save
+      or take the same damage as the creature. If a creature or object is
+      already on fire, it suffers no additional effects from <i>burning
+      gaze</i>.</p><p>Note that this spell does not grant an actual gaze attack-
+      foes and allies are not in danger of catching on fire simply by meeting
+      your gaze.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      arcanist: 2
+      bloodrager: 2
+      druid: 2
+      hunter: 2
+      magus: 2
+      mesmerist: 2
+      occultist: 2
+      shaman: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: eye of a mundane salamander
+  school: evo
+  sources:
+    - id: PZO1115
+      pages: '208'
+type: spell

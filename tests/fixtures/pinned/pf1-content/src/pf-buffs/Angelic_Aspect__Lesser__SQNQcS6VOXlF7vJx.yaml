@@ -1,0 +1,42 @@
+_id: SQNQcS6VOXlF7vJx
+_key: '!items!SQNQcS6VOXlF7vJx'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/magic/holy/angel-winged-humanoid-blue.webp
+name: Angelic Aspect (Lesser)
+system:
+  contextNotes:
+    - target: ac
+      text: +[[2]] Deflection vs Evil creatures.
+    - target: allSavingThrows
+      text: +[[2]] Resistance vs Evil creatures.
+    - target: will
+      text: +[[2]] Morale vs existing Enchantment [charm] and [compulsion] effects.
+    - target: ac
+      text: Bodily contact prevented by Evil summoned creatures.
+  description:
+    instructions: >-
+      <p>Add 5 Acid and 5 Cold resistance to Energy Resistance in the Attributes
+      tab.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.4ratngmltr3z4om5]{Angelic Aspect,
+      Lesser}</p><p>You gain low-light vision, resistance to acid 5, resistance
+      to cold 5, and the benefits of
+      @UUID[Compendium.pf1.spells.Item.skgjjub1hng29nwo]{Protection from
+      Evil}.</p><hr>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 3
+  scriptCalls:
+    - _id: SQSpJj3iGlEZIYna
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Toggle LLV
+      type: script
+      value: "await actor.update({'system.traits.senses.ll.enabled': state})"
+  subType: spell
+type: buff

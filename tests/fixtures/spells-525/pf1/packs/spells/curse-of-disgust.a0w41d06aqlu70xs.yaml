@@ -1,0 +1,63 @@
+_id: a0w41d06aqlu70xs
+_key: '!items!a0w41d06aqlu70xs'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Curse of Disgust
+system:
+  actions:
+    - _id: el1rvjv9acszcld3
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You place a curse upon a creature, causing it to avoid the sight of a
+      specific trigger, which is a kind of creature, object, or condition
+      designated by you. When the target is within 30 feet of a trigger and is
+      aware of the trigger, it gains the sickened condition and feels an urge to
+      leave. A successful Will save negates the urge to leave, but the sickened
+      condition persists as long as the target is within 30 feet of a trigger
+      and aware of it. Example triggers include beggars, filthy clothing,
+      diseased creatures, the king, blood, spiders, rats, corpses, and
+      sewage.</p>
+  descriptors:
+    - curse
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 3
+      mesmerist: 3
+      occultist: 4
+      psychic: 6
+      skald: 3
+      sorcerer: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '215'
+  subschool:
+    - compulsion
+type: spell

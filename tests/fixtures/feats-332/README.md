@@ -1,0 +1,13 @@
+# Feats #332 fixtures
+
+This directory preserves the 100 exact candidates from [#332](https://github.com/AndreasUnunger/EverythingPath/issues/332). Every YAML file is byte-for-byte source evidence from Foundry Pathfinder 1e v11.11 commit `418761d2e16a6037c0156bb4a241f7cea5a2986d`. [provenance.json](provenance.json) records source paths, complete file hashes and raw-description hashes. Original action and script fields remain inert evidence; no Foundry code is executed.
+
+[mechanics.json](mechanics.json) records source facts, reviewed outputs and outstanding calculations separately from attribution. The [batch inventory](../../../scripts/catalog/legal/feats-332.json) records individual legal dispositions. [preview.json](preview.json) contains the ordinary normalized extraction made with the complete pinned checkouts and the reviewed Curation Overlay. It preserves out-of-batch link and prerequisite identities; the reduced fixture has only this ticket's YAML files and test version manifests. Reimporting it reproduces numeric Modifiers and Situational Notes while reporting the absent references.
+
+The public resolver tests pin Great Fortitude's +2, Source non-stacking, shared maneuver and spell-resistance Situations, local Combat Casting and running-jump Situations, and Agile Maneuvers' Dexterity substitution above and below Strength when its "Small or larger (baseline CMB uses Strength)" Situation is selected. Automatic size-based application remains outstanding. Tiny, Diminutive and Fine Characters already use Dexterity for CMB and receive no additional substitution in their ordinary totals. The tests also retain prerequisite/proficiency facts and demonstrate outstanding importer calculations without inventing grants or replacing unsupported rank-dependent formulas with unconditional bonuses.
+
+The isolated Convex test materializes the admitted Great Fortitude body in one Character's catalog and selects it through public Character Sheet mutations. Its fixture adapter omits only the importer's unusable `repeatable: unreviewed` field, supplies no inferred repeatability value, and preserves the actual imported Modifier, Sources, description and rule identity. With Fighter 1 and Constitution 14, Fortitude changes from +4 to +6; deactivation returns it to +4 and restoration returns it to +6. Owner and organization member reads observe the same value; outsider, unauthenticated and wrong-campaign operations fail. No Catalog Release is prepared or published, and no remote data is written.
+
+```sh
+pnpm test tests/catalog/feats-332.test.ts convex/catalogFeats332.integration.test.ts
+```

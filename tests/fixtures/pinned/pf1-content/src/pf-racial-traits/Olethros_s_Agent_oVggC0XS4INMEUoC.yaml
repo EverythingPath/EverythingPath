@@ -1,0 +1,49 @@
+_id: oVggC0XS4INMEUoC
+_key: '!items!oVggC0XS4INMEUoC'
+_stats:
+  coreVersion: '12.331'
+folder: QR0A1ZzY2Alo3j3S
+img: icons/magic/unholy/silhouette-light-fire-blue.webp
+name: Olethros's Agent
+system:
+  actions:
+    - _id: 5wSVfCDpQrGdgQoI
+      activation:
+        type: free
+        unchained:
+          type: free
+      description: >-
+        <p>Once per day as a free action, upon making a successful attack, a
+        duskwalker with this racial trait can ignore an amount of DR equal to 10
+        + his Charisma modifier for that attack.</p>
+      name: Olethros's Agent
+      notes:
+        effect:
+          - Ignore DR [[10 + @abilities.cha.mod]]
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: attack
+      text: >-
+        once per day, as a free action, you may ignore DR [[10 +
+        @abilities.cha.mod]]
+  description:
+    value: >-
+      <p><strong>Race</strong>: Duskwalker<br /><strong>Replaced
+      Trait(s)</strong>: Ward against Corruption</p><hr /><p>A few duskwalkers
+      take on more of their patrons' aspects than others. A duskwalker blessed
+      by an olethros is an agent of fate beyond compare. Once per day as a free
+      action, upon making a successful attack, a duskwalker with this racial
+      trait can ignore an amount of DR equal to 10 + his Charisma modifier for
+      that attack. This racial trait replaces ward against corruption.</p>
+  sources:
+    - id: PZO9492
+      pages: '16'
+  subType: racial
+  tags:
+    - Duskwalker
+  traitCategory: offense
+type: feat

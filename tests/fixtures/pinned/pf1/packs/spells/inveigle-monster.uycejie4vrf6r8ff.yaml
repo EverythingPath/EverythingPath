@@ -1,0 +1,57 @@
+_id: uycejie4vrf6r8ff
+_key: '!items!uycejie4vrf6r8ff'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Inveigle Monster
+system:
+  actions:
+    - _id: 9spraner5whbqqqd
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.pgxpdq6q7783u5oo]{inveigle person} except
+      as noted above.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 5
+      mesmerist: 5
+      psychic: 6
+      skald: 5
+      sorcerer: 7
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a drop of alcohol
+  school: enc
+  sources:
+    - id: PZO9292
+      pages: '60'
+  subschool:
+    - charm
+type: spell

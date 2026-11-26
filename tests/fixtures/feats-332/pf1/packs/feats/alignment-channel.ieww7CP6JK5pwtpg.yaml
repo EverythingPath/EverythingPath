@@ -1,0 +1,61 @@
+_id: ieww7CP6JK5pwtpg
+_key: '!items!ieww7CP6JK5pwtpg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/alignment-channel.jpg
+name: Alignment Channel
+system:
+  actions:
+    - _id: 7sgpni7m2zp0t01f
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (ceil(@classes.cleric.level / 2))d6
+            types:
+              - positive
+      duration:
+        units: inst
+      img: systems/pf1/icons/feats/alignment-channel.jpg
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@classes.cleric.level / 2) + @abilities.cha.mod
+        description: Will halves damage
+        type: will
+      target:
+        value: Outsiders of chosen alignment subtype
+  description:
+    value: >-
+      <p>Choose chaos, evil, good, or law. You can channel divine energy to
+      affect outsiders that possess this
+      subtype.</p><p><strong>Prerequisites</strong>: Ability to channel
+      energy.</p><p><strong>Benefits</strong>: Instead of its normal effect, you
+      can choose to have your ability to channel energy heal or harm outsiders
+      of the chosen alignment subtype. You must make this choice each time you
+      channel energy. If you choose to heal or harm creatures of the chosen
+      alignment subtype, your channel energy has no effect on other creatures.
+      The amount of damage healed or dealt and the DC to halve the damage is
+      otherwise unchanged.</p><p><strong>Special</strong>: You can gain this
+      feat multiple times. Its effects do not stack. Each time you take this
+      feat, it applies to a new alignment subtype. Whenever you channel energy,
+      you must choose which type to effect.</p>
+  sources:
+    - id: PZO1110
+      pages: 114, 117
+  tag: feat_alignmentChannel
+  tags:
+    - Channeling
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

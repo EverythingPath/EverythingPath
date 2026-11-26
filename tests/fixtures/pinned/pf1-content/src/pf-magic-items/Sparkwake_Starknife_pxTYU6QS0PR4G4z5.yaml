@@ -1,0 +1,60 @@
+_id: pxTYU6QS0PR4G4z5
+_key: '!items!pxTYU6QS0PR4G4z5'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/thrown/shuriken-blue.webp
+name: Sparkwake Starknife
+system:
+  actions:
+    - _id: 7dce70z6ug5kz5pq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: sparkwakeStarknife
+  aura:
+    school: evo
+  baseTypes:
+    - Starknife
+  cl: 8
+  description:
+    value: >-
+      <p>A faint trail of sparks marks the passage of this +1 shock starknife
+      whenever it is thrown. Once per day, its wielder may throw it so it
+      transforms into an 8th-level lightning bolt (Reflex DC 14 half), returning
+      to its physical form at the end of the bolt's path.</p><p><strong>Base
+      Item</strong>: +1 shock
+      starknife</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, lightning bolt</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 21324
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+    - thrown
+  weight:
+    value: 3
+type: weapon

@@ -1,0 +1,64 @@
+_id: K7YBN0QKQeWCJZ9K
+_key: '!items!K7YBN0QKQeWCJZ9K'
+_stats:
+  coreVersion: '12.331'
+folder: RzalfyOzV6EaGRvl
+img: systems/pf1/icons/races/sylph.png
+name: Breeze-Kissed (Sylph)
+system:
+  abilityType: su
+  actions:
+    - _id: TO9ETL1HyM5ruLF7
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day, the sylph can channel this wind into a single gust,
+        making a bull rush or trip combat maneuver attempt against one creature
+        within @Distance[30 ft;dual]. Whether or not the attempt succeeds, the
+        winds are exhausted and no longer provide a bonus to the sylph's AC for
+        24 hours.</p>
+      name: bull rush or trip
+      range:
+        units: ft
+        value: '30'
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  contextNotes:
+    - target: ac
+      text: >-
+        +[[2]] racial vs non-magical ranged attacks (As long as you have not
+        used your ranged bullrush/trip ability today).
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sylph<br /><strong>Replaced Trait(s)</strong>:
+      Air Affinity</p><hr /><p>Breezes seem to follow most sylphs wherever they
+      go, but some sylphs are better able to control these winds than others. A
+      sylph with this racial trait surrounds herself with swirling winds,
+      gaining a +2 racial bonus to AC against nonmagical ranged attacks. The
+      sylph can calm or renew these winds as a swift action. Once per day, the
+      sylph can channel this wind into a single gust, making a bull rush or trip
+      combat maneuver attempt against one creature within @Distance[30 ft;dual].
+      Whether or not the attempt succeeds, the winds are exhausted and no longer
+      provide a bonus to the sylph's AC for 24 hours. This is a supernatural
+      ability. This racial trait replaces air affinity.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '156'
+  subType: racial
+  tags:
+    - Sylph
+  traitCategory: defense
+  uses:
+    maxFormula: '1'
+    per: day
+    rechargeFormula: '4'
+    value: 1
+type: feat
