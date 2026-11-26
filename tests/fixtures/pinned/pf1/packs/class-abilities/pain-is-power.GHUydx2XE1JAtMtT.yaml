@@ -1,0 +1,42 @@
+_id: GHUydx2XE1JAtMtT
+_key: '!items!GHUydx2XE1JAtMtT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_12.jpg
+name: Pain is Power
+system:
+  abilityType: su
+  actions:
+    - _id: 5imu7eb8tn43ydwa
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, after taking damage from any source, you may attempt a DC
+      25 concentration check as an immediate action. If you succeed, you gain
+      the benefits of a blessing of fervor spell for a number of rounds equal to
+      1/2 your cleric level. If you fail, this ability is expended with no
+      effect. You can use this ability once at 8th level, plus an additional
+      time for every 4 levels you are beyond 8th.</p>
+
+      <p>This power replaces the Scythe of Evil power of the Evil Domain or the
+      Staff of Order power of the Law Domain.</p>
+  subType: classFeat
+  tag: classFeat_painIsPower
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

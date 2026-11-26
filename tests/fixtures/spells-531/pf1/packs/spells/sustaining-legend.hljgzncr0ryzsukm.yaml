@@ -1,0 +1,67 @@
+_id: hljgzncr0ryzsukm
+_key: '!items!hljgzncr0ryzsukm'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Sustaining Legend
+system:
+  actions:
+    - _id: ccw01s2hjv6u1ri7
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The rulers of Azlant are thought to have used this spell to amplify the
+      mythic power of themselves and their most gifted lieutenants. You amplify
+      the mythic power of the target creatures, bolstering them with healing
+      energy each time they draw upon their mythic abilities. When a creature
+      affected by this spell expends uses of mythic power for any ability, it
+      immediately heals 2d8 points of damage + 1 point per caster level (maximum
+      +25). In addition, the creature benefits from one of the following
+      additional effects.</p><ul><li> Remove any one of the following
+      conditions: dazzled, fatigued, shaken, sickened, or
+      staggered.</p><p></li><li> Reduce the dazed or stunned condition to
+      staggered.</p><p></li><li> Reduce the exhausted condition to
+      fatigued.</p><p></li><li> Reduce the frightened condition to shaken, or
+      the panicked condition to frightened.</p><p></li><li> Reduce the nauseated
+      condition to sickened.</li></ul><p>A target can benefit from the effects
+      of <i>sustaining legend</i> only once per round, even if the target
+      expends multiple uses of mythic power during that time.</p>
+  learnedAt:
+    class:
+      bard: 5
+      cleric: 6
+      oracle: 6
+      skald: 5
+      warpriest: 6
+  level: 6
+  school: con
+  sources:
+    - id: PZO9438
+      pages: '15'
+  subschool:
+    - healing
+type: spell

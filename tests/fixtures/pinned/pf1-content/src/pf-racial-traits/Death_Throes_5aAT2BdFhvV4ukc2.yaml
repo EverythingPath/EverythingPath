@@ -1,0 +1,55 @@
+_id: 5aAT2BdFhvV4ukc2
+_key: '!items!5aAT2BdFhvV4ukc2'
+_stats:
+  coreVersion: '12.331'
+folder: hdKt2LOznE9Dq3Bz
+img: icons/magic/unholy/silhouette-robe-evil-power.webp
+name: Death Throes
+system:
+  actions:
+    - _id: E43TgPXRb69XVF5h
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 5 ft (1.5 m) burst
+      description: >-
+        <p>When a caligni is slain, its body combusts in a flash of searing
+        light. All creatures within a @Distance[5 ft;dual] burst must succeed at
+        a Fortitude save (DC = 10 + 1/2 the caligni's Hit Dice + the caligni's
+        Constitution bonus) or be dazzled for 1d4 rounds. The corpse left behind
+        is a third of the caligni's size, withered and unrecognizable as the
+        individual. <em>Raise dead</em> and similar spells cast upon these
+        remains restore a caligni as normal.</p>
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Death Throes
+      notes:
+        effect:
+          - Save or be @Condition[Dazzled] for [[1d4]] rounds.
+      range:
+        units: personal
+      save:
+        dc: 10+floor(@attributes.hd.total/2)+@abilities.con.mod
+        description: Fortitude negates
+        type: fort
+  description:
+    value: >-
+      <p><strong>Race</strong>: Caligni</p><hr /><p>When a caligni is slain, its
+      body combusts in a flash of searing light. All creatures within a
+      @Distance[5 ft;dual] burst must succeed at a Fortitude save (DC = 10 + 1/2
+      the caligni's Hit Dice + the caligni's Constitution bonus) or be dazzled
+      for 1d4 rounds. The corpse left behind is a third of the caligni's size,
+      withered and unrecognizable as the individual. <em>Raise dead</em> and
+      similar spells cast upon these remains restore a caligni as normal.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO1133
+      pages: '66'
+  subType: racial
+  tags:
+    - Caligni
+type: feat

@@ -1,0 +1,65 @@
+_id: dEtxdn5mLY5M3i45
+_key: '!items!dEtxdn5mLY5M3i45'
+_stats:
+  coreVersion: '12.331'
+folder: 0njM63yOJ0z2N0D9
+img: icons/magic/death/mouth-bite-fangs-vampire.webp
+name: Alternate Spell-Like Ability (Dhampir - Ru-Shi)
+system:
+  abilityType: sp
+  actions:
+    - _id: yX2IJPeLx6ZsVb6U
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.qvpzcjm5lmtn389j]{erase}</p><p>Erase
+        removes writings of either magical or mundane nature from a scroll or
+        from one or two pages of paper, parchment, or similar surfaces. With
+        this spell, you can remove explosive runes, a Glyph of Warding, a sepia
+        snake sigil, or an arcane mark, but not illusory script or a symbol
+        spell. Nonmagical writing is automatically erased if you touch it and no
+        one else is holding it. Otherwise, the chance of erasing nonmagical
+        writing is 90%. Magic writing must be touched to be erased, and you also
+        must succeed on a caster level check (1d20 + caster level) against DC
+        15. A natural 1 is always a failure on this check. If you fail to erase
+        explosive runes, a Glyph of Warding, or a sepia snake sigil, you
+        accidentally activate that writing instead.</p>
+      duration:
+        units: inst
+        value: '@attributes.hd.total'
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Erase
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      target:
+        value: one scroll or 2 pages
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dhampir - Ru-Shi</p><p><strong>Replaced
+      Trait(s):</strong>@UUID[Compendium.pf-content.pf-racial-traits.Item.7KMw9IErP1W9vQsO]{Spell-Like
+      Ability (Dhampir)}</p><hr /><p>Ru-shis gain
+      @UUID[Compendium.pf1.spells.Item.qvpzcjm5lmtn389j]{erase} as a spell-like
+      ability.</p>
+  racePoints: 3
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '241'
+    - id: PZO9427
+      pages: '20'
+  subType: racial
+  tags:
+    - Dhampir
+    - Ru-Shi
+  traitCategory: magical
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+type: feat

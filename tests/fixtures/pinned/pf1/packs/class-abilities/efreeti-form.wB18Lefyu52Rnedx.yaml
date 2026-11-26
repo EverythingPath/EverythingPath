@@ -1,0 +1,39 @@
+_id: wB18Lefyu52Rnedx
+_key: '!items!wB18Lefyu52Rnedx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-red-2.jpg
+name: Efreeti Form
+system:
+  abilityType: su
+  actions:
+    - _id: 41tt11j484gk5ily
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you gain the ability to assume the form of an efreeti
+      once per day. This acts like the spell
+      @UUID[Compendium.pf1.spells.61uvtd18e9s6zku3]{Giant Form I}, except you
+      only use it to become an efreeti and its duration is 1 round per level.
+      While in this form, you also gain an efreeti’s heat ability.</p>
+  subType: classFeat
+  tag: classFeat_efreetiForm
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

@@ -1,0 +1,41 @@
+_id: UNgljkBcNmHI99lh
+_key: '!items!UNgljkBcNmHI99lh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-blue-1.jpg
+name: Aurora Borealis
+system:
+  abilityType: sp
+  actions:
+    - _id: rcsmtmg4j5sp02ds
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: medium
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you can create a sheet of cascading colors. This power
+      acts as a @UUID[Compendium.pf1.spells.92hth51cs9oi0nfe]{Wall Of Fire}, but
+      it inflicts cold damage and does not radiate heat. However, one side of
+      the aurora designated by you <em>fascinates</em> creatures within 10 feet,
+      up to a maximum of 2 HD of creatures per sorcerer level. A <em>Will</em>
+      save negates this <em>fascinate</em> effect. The save DC is equal to 10 +
+      1/2 your sorcerer level + your <em>Charisma</em> modifier. You may use
+      this ability for a number of rounds per day equal to your sorcerer level.
+      These rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_auroraBorealis
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,38 @@
+_id: fP8eQtvrzz3zTseu
+_key: '!items!fP8eQtvrzz3zTseu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/air-burst-sky-1.jpg
+name: Wind Servant
+system:
+  abilityType: sp
+  actions:
+    - _id: yech5wqu8mgmqs8g
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you can generate a blast of air that
+      hurls an unattended object (or objects) or an object in your possession up
+      to 30 feet in a straight line. If you have a free hand, you can catch an
+      object hurled toward yourself. You can move objects weighing up to 1 pound
+      per wizard level. Objects are not thrown with enough force to cause
+      damage, although fragile objects like alchemical weapons shatter on
+      contact with a creature or hard surface. To hit a creature with an object,
+      you must succeed at a ranged <em>touch attack</em>. You can use this
+      ability a number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_windServant
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

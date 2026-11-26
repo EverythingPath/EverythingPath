@@ -1,0 +1,41 @@
+_id: WqVgN3PovYXZWB7A
+_key: '!items!WqVgN3PovYXZWB7A'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/improved-disarm.png
+name: Powerful Bond
+system:
+  abilityType: su
+  actions:
+    - _id: bhw0kra2csc2ojpj
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: ally within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a free action, you can open a link to communicate telepathically
+      with a single ally within 60 feet. The telepathic link is two-way and
+      lasts for 1 minute. Unlike normal telepathy, this ability requires a
+      shared language. You can use this ability a number of times per day equal
+      to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Touch of Good power of the Good Domain.</p>
+  subType: classFeat
+  tag: classFeat_powerfulBond
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

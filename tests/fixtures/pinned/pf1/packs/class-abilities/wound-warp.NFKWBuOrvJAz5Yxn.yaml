@@ -1,0 +1,43 @@
+_id: NFKWBuOrvJAz5Yxn
+_key: '!items!NFKWBuOrvJAz5Yxn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/rip-magenta-3.jpg
+name: Wound Warp
+system:
+  abilityType: sp
+  actions:
+    - _id: wle3ppgtt3bmy6n7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      range:
+        units: spec
+        value: 10 * @class.level
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you gain the ability to travel across the battlefield by
+      literally erupting from the fatal wounds of deceased creatures. As a
+      <em>standard action</em> once per day, you can <em>teleport</em> to an
+      unoccupied square adjacent to any <em>dead</em> creature within 10 feet
+      per <em>caster level</em>. Any creatures adjacent to the square you
+      <em>teleport</em> to take 4d6 points of acid damage as you burst into
+      being and shower them with acidic bile. Creatures that make successful
+      <em>Reflex</em> saves (DC 10 + 1/2 your <em>sorcerer</em> level + your
+      <em>Charisma</em> modifier) take half damage. This ability otherwise
+      functions like @UUID[Compendium.pf1.spells.ojwg1ki98tq8xyh9]{Dimension
+      Door}. At 20th level, you can use this ability twice per day.</p>
+  subType: classFeat
+  tag: classFeat_woundWarp
+  uses:
+    maxFormula: '2'
+    per: day
+type: feat

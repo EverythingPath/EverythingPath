@@ -1,0 +1,43 @@
+_id: RCQD0bwQqfULDDjL
+_key: '!items!RCQD0bwQqfULDDjL'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_31.jpg
+name: Rake (Attack)
+system:
+  abilityType: ex
+  actions:
+    - _id: fs35k5b6ezshrwj3
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: free
+        unchained:
+          type: free
+      attackName: Rake
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size, 4)
+            types:
+              - slashing
+      duration:
+        units: inst
+      img: systems/pf1/icons/skills/red_31.jpg
+      name: Use
+      tag: rakeEx
+  description:
+    value: >-
+      <p>A creature with this special attack gains extra natural attacks under
+      certain conditions, typically when it <a>grapples</a> its foe. In addition
+      to the options available to all grapplers, a monster with the rake ability
+      gains two free claw attacks that it can use only against a <a>grappled</a>
+      foe. The bonus and damage caused by these attacks are included in the
+      creature&rsquo;s description. A monster with the rake ability must begin
+      its turn already grappling to use its rake&mdash;it can&rsquo;t begin a
+      grapple and rake in the same turn.</p><p><em>Format</em>: rake (2 claws
+      +8, 1d4+2)</p><p><em>Location</em>: Special Attacks.</p><p><em>Usage:</em>
+      Replace damage</p>
+  subType: misc
+type: feat

@@ -1,0 +1,57 @@
+_id: 6yeorbvt5ysym3nh
+_key: '!items!6yeorbvt5ysym3nh'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Suffocation, Mass
+system:
+  actions:
+    - _id: 3p4lo52jgqt2bdcp
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: >-
+          one living creature/2 levels (no two of which may be more than 30 feet
+          apart)
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.ggt7q1ds0fvxxjgx]{suffocation} except as
+      noted above. Note that the duration of this spell is much longer, forcing
+      those suffering from the effect to make far more Fortitude saves to stave
+      off eventual suffocation.</p>
+  learnedAt:
+    class:
+      arcanist: 9
+      psychic: 9
+      sorcerer: 9
+      witch: 9
+      wizard: 9
+    subDomain:
+      Murder: 9
+  level: 9
+  materials:
+    value: a vial containing a bit of the caster's breath
+  school: nec
+  sources:
+    - id: PZO1115
+      pages: '248'
+type: spell

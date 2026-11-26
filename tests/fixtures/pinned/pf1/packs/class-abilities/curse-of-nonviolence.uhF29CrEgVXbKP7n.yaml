@@ -1,0 +1,45 @@
+_id: uhF29CrEgVXbKP7n
+_key: '!items!uhF29CrEgVXbKP7n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Curse of Nonviolence
+system:
+  abilityType: su
+  actions:
+    - _id: 24hb7psd0t3hawmn
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can curse a creature to prevent it from attacking innocents.
+      If the target fails its Will save, it cannot take violent actions or do
+      anything destructive against any creature with fewer Hit Dice than itself.
+      If another creature takes hostile action against the cursed creature, the
+      cursed creature can act normally in regard to that creature
+      only.</p><p>This is an abjuration effect.</p><p>The curse is permanent but
+      can be removed with a @UUID[Compendium.pf1.spells.myg2b9ww43nnlbr2]{Break
+      Enchantment}, @UUID[Compendium.pf1.spells.suel7sgnztenv551]{Miracle}, or
+      @UUID[Compendium.pf1.spells.nnj51dwfkwd15ngj]{Wish} spell.</p><p>Whether
+      or not the save is successful, a creature cannot be the target of this hex
+      again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

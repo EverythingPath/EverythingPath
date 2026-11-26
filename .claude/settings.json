@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/home/andreas/repos/everythingpath/ep-orch",
+      "/home/andreas/repos/everythingpath/.ep-tmp"
+    ],
+    "allow": [
+      "Read(//home/andreas/repos/everythingpath/ep-orch/**)",
+      "Edit(//home/andreas/repos/everythingpath/ep-orch/**)",
+      "Read(//home/andreas/repos/everythingpath/.ep-tmp/**)",
+      "Edit(//home/andreas/repos/everythingpath/.ep-tmp/**)",
+      "Bash(cd /home/andreas/repos/everythingpath/ep-orch*)",
+      "Bash(cd /home/andreas/repos/everythingpath/.ep-tmp*)",
+      "Bash(/home/andreas/repos/everythingpath/ep-orch/*)"
+    ],
+    "deny": [
+      "Edit(//home/andreas/repos/everythingpath/ep-orch/admission/**)",
+      "Edit(//home/andreas/repos/everythingpath/ep-orch/bounded/**)",
+      "Edit(//home/andreas/repos/everythingpath/ep-orch/remote-checks/**)"
+    ]
+  }
+}

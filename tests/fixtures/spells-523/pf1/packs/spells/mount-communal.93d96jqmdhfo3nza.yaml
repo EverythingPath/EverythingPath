@@ -1,0 +1,54 @@
+_id: 93d96jqmdhfo3nza
+_key: '!items!93d96jqmdhfo3nza'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/environment/creatures/horse-tan.webp
+name: Mount, Communal
+system:
+  actions:
+    - _id: f4b3n1fspvbn7urb
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: 2 * @cl
+      effect: up to six mounts
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.bc1vmv1ezifvfer8]{mount}, except you can
+      summon up to six light horses or ponies, and you divide the duration in
+      2-hour increments among the steeds summoned.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      magus: 2
+      occultist: 2
+      sorcerer: 2
+      summoner: 2
+      summonerUnchained: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  materials:
+    value: a bit of horse hair
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '237'
+  sr: false
+  subschool:
+    - summoning
+type: spell

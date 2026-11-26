@@ -1,0 +1,46 @@
+_id: 48H8gxSPUgEAFs82
+_key: '!items!48H8gxSPUgEAFs82'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Star Chart
+system:
+  abilityType: ex
+  actions:
+    - _id: 91pzdv2fjsrb8qla
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Your copious notes contain a working model of the night sky expressed
+      in artistic scribbles and arcane mathematical formulae. Once per day, you
+      may spend 10 minutes contemplating your star chart to gain the benefit of
+      the spell @UUID[Compendium.pf1.spells.p2kosvizylhy8vfa]{Commune}.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  sources:
+    - id: PZO1129
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_starChart
+  tags:
+    - Revelation
+    - Heavens Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

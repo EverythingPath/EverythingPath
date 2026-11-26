@@ -1,0 +1,46 @@
+_id: z7H8kQycsl5OlegC
+_key: '!items!z7H8kQycsl5OlegC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Polluting Glance
+system:
+  abilityType: su
+  actions:
+    - _id: AXQliD6lnbhTBrfv
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: nonmagical liquid item
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can corrupt nonmagical liquid items (such as alchemical
+      remedies) with a look. The witch can choose one liquid item she can see
+      within 30 feet and change its contents into polluted water as per her
+      pollute water hex (see above). The number of polluting glance hexes the
+      witch can have active at one time is equal to her Intelligence bonus
+      (minimum 1).<p>The witch must have the
+      @UUID[Compendium.pf1.class-abilities.nABWxNooWLiFt6gk]{pollute water hex}
+      to select this hex.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

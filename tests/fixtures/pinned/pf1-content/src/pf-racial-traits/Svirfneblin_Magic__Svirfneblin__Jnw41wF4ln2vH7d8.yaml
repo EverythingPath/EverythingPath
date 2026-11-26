@@ -1,0 +1,186 @@
+_id: Jnw41wF4ln2vH7d8
+_key: '!items!Jnw41wF4ln2vH7d8'
+_stats:
+  coreVersion: '12.331'
+folder: 2fWyJqNdoARq7kA2
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Svirfneblin Magic (Svirfneblin)
+system:
+  abilityType: sp
+  actions:
+    - _id: TgRrNDPKCqglCy7L
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.awia42zci8nufpfl]{nondetection}</p><p>The
+        warded creature or object becomes difficult to detect by divination
+        spells such as clairaudience/clairvoyance, locate object, and detect
+        spells. Nondetection also prevents location by such magic items as
+        crystal balls. If a divination is attempted against the warded creature
+        or item, the caster of the divination must succeed on a caster level
+        check (1d20 + caster level) against a DC of 11 + the caster level of the
+        spellcaster who cast nondetection. If you cast nondetection on yourself
+        or on an item currently in your possession, the DC is 15 + your caster
+        level.</p><p>If cast on a creature, nondetection wards the creature's
+        gear as well as the creature itself.</p>
+      duration:
+        units: perm
+      name: Nondetection
+      notes:
+        effect:
+          - >-
+            If a divination is attempted you, they must attempt a caster level
+            check,  the DC for that check is [[15 + @attributes.hd.total]]
+      range:
+        units: touch
+      target:
+        value: creature or object touched
+    - _id: YlQ5jOwcefYXnbg4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.k7cf5gshkp8xxqux]{blindness/deafness}</p><p>You
+        call upon the powers of unlife to render the subject blinded or
+        deafened, as you choose</p>
+      duration:
+        dismiss: true
+        units: perm
+      name: Blindness/Deafness
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      save:
+        dc: 10 + @abilities.cha.mod + 2
+        description: Negates
+        type: fort
+      target:
+        value: one living creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: Veb1QLL9fycrFLha
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.18kryvj2dfuymk9d]{blur}</em></p><p>The
+        subject's outline appears blurred, shifting, and wavering. This
+        distortion grants the subject concealment (20% miss chance).</p><p>A see
+        invisibility spell does not counteract the blur effect, but a true
+        seeing spell does.</p><p>Opponents that cannot see the subject ignore
+        the spell's effect (though fighting an unseen opponent carries penalties
+        of its own).</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total + 1'
+      name: Blur
+      notes:
+        effect:
+          - Includes +1 CL for illusions
+      range:
+        units: touch
+      save:
+        dc: 10 + 2 + @abilities.cha.mod
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: 9EOuGhEv7YzgLWmi
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>@UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise
+        self}</em></p><p>You make yourself--including clothing, armor, weapons,
+        and equipment--look different. You can seem @Distance[1 ft;dual—shorter
+        or taller, thin, fat, or in between. You cannot change your creature
+        type (although you can appear as another subtype). Otherwise, the extent
+        of the apparent change is up to you. You could add or obscure a minor
+        feature or look like an entirely different person or gender.</p><p>The
+        spell does not provide the abilities or mannerisms of the chosen form,
+        nor does it alter the perceived tactile (touch) or audible (sound)
+        properties of you or your equipment. If you use this spell to create a
+        disguise, you get a +10 bonus on the Disguise check. A creature that
+        interacts with the glamer gets a Will save to recognize it as an
+        illusion.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total * 10 +10'
+      name: Disguise Self
+      notes:
+        effect:
+          - Includes +1 CL for illusions
+      range:
+        units: personal
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: interact
+        type: will
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  changes:
+    - _id: 9pvdsdYH
+      formula: '1'
+      target: dc.school.ill
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Svirfneblin</p><hr /><p>Svirfneblin add 1 to the
+      DCs of any saving throws to resist illusion spells they cast. Svirfneblin
+      also gain the following spell-like abilities: constant-<em><a
+      class="content-link" draggable="true" data-link
+      data-uuid="Compendium.pf1.spells.Item.awia42zci8nufpfl"
+      data-id="awia42zci8nufpfl" data-type="Item" data-pack="pf1.spells"
+      data-tooltip="Spell Item"><i class="fas
+      fa-suitcase"></i>nondetection</a></em>; 1/day-<em><a class="content-link"
+      draggable="true" data-link
+      data-uuid="Compendium.pf1.spells.Item.k7cf5gshkp8xxqux"
+      data-id="k7cf5gshkp8xxqux" data-type="Item" data-pack="pf1.spells"
+      data-tooltip="Spell Item"><i class="fas
+      fa-suitcase"></i>blindness/deafness</a></em>, <em><a class="content-link"
+      draggable="true" data-link
+      data-uuid="Compendium.pf1.spells.Item.18kryvj2dfuymk9d"
+      data-id="18kryvj2dfuymk9d" data-type="Item" data-pack="pf1.spells"
+      data-tooltip="Spell Item"><i class="fas fa-suitcase"></i>blur</a></em>,
+      <em><a class="content-link" draggable="true" data-link
+      data-uuid="Compendium.pf1.spells.Item.oj36nfak6jc2s5ky"
+      data-id="oj36nfak6jc2s5ky" data-type="Item" data-pack="pf1.spells"
+      data-tooltip="Spell Item"><i class="fas fa-suitcase"></i>disguise
+      self</a></em>; caster level equals the svirfneblin's character level.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '250'
+    - id: PZO1121
+      pages: '204'
+    - id: PZO1112
+      pages: '261'
+  subType: racial
+  tags:
+    - Svirfneblin
+  traitCategory: magical
+type: feat

@@ -1,0 +1,35 @@
+_id: Jw6BEoNMBxfSN4cu
+_key: '!items!Jw6BEoNMBxfSN4cu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/link-eerie-1.jpg
+name: Maker's Call
+system:
+  abilityType: su
+  actions:
+    - _id: 7kgyxc5e2w6y0lih
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Summoner
+  description:
+    value: >-
+      <p>At 6th level, as a standard action, a summoner can call his eidolon to
+      his side. This functions as
+      @UUID[Compendium.pf1.spells.ojwg1ki98tq8xyh9]{dimension door}, using the
+      summoner’s caster level. When used, the eidolon appears adjacent to the
+      summoner (or as close as possible if all adjacent spaces are occupied). If
+      the eidolon is out of range, the ability is wasted. The summoner can use
+      this ability once per day at 6th level, plus one additional time per day
+      for every four levels beyond 6th.</p>
+  subType: classFeat
+  tag: classFeat_makersCall
+  uses:
+    maxFormula: floor((@class.level - 2) / 4)
+    per: day
+type: feat

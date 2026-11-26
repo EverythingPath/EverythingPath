@@ -1,0 +1,63 @@
+_id: o2y1z1uh1nja3jd2
+_key: '!items!o2y1z1uh1nja3jd2'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Ice Crystal Teleport
+system:
+  actions:
+    - _id: lk8778tfzj9umve2
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1d4 rounds and instantaneous
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.ptqu8gtrujxsvwy1]{teleport}, except you
+      use it to <em>teleport</em> yourself or one other creature to a safe
+      location you specify (the target can bring along objects as long as their
+      weight doesn't exceed the target's heavy load). You can only send the
+      target to a location with which you are very familiar. The target is first
+      trapped in ice (hardness 0, 3 hit points per inch of thickness, 1 inch
+      thick per caster level) for 1d4 rounds, during which time it is paralyzed,
+      aware but unable to take any physical actions, and begins to fade away as
+      the <em>teleport</em>ation aspect takes effect. At the end of the 1d4
+      rounds, the target <em>teleport</em>s to the specified location, and the
+      ice's hit points drop to 0 and it quickly melts away. If the ice is
+      destroyed before the target <em>teleport</em>s, the spell ends and the
+      <em>teleport</em> doesn't occur.</p>
+  descriptors:
+    - cold
+  learnedAt:
+    class:
+      arcanist: 6
+      sorcerer: 6
+      summoner: 5
+      summonerUnchained: 6
+      witch: 6
+      wizard: 6
+  level: 6
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '224'
+  subschool:
+    - teleportation
+type: spell

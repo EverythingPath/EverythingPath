@@ -1,0 +1,49 @@
+_id: vATa23CycXfo127L
+_key: '!items!vATa23CycXfo127L'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Shard Explosion
+system:
+  abilityType: su
+  actions:
+    - _id: ym388lnihuted0qh
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: (min(1, (floor(@class.level / 2))))d6
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: 10-ft. burst
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a swift action, you can cause jagged pieces of stone to explode
+      outward from your body. These shards deal 1d6 points of piercing damage
+      per two oracle levels (minimum 1d6) to all creatures within a 10-foot
+      burst. A Reflex save halves this damage. In addition, the broken shards
+      make the area difficult terrain until your next turn.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 5th level and every five levels thereafter.</p>
+  subType: classFeat
+  tag: classFeat_shardExplosion
+  tags:
+    - Revelation
+    - Stone Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

@@ -1,0 +1,46 @@
+_id: p4FDsZ8QuaK3vbkr
+_key: '!items!p4FDsZ8QuaK3vbkr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Lava Walk
+system:
+  abilityType: su
+  actions:
+    - _id: 6qrvb5nrdu80n5sc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can walk across lava, magma, and similarly heated stone at your
+      normal movement speed. You are immune to any fire damage caused by the
+      surface while you walk above it, even if it radiates damage at a distance.
+      While using lava walk, you never slip or fall from poor or slippery
+      footing. You can use lava walk for 1 minute per day per oracle level. This
+      duration doesn’t need to be consecutive, but it must be spent in 1-minute
+      increments.</p>
+
+      <p>You must be at least 3rd level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_lavaWalk
+  tags:
+    - Revelation
+    - Volcano Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

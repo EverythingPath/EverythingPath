@@ -1,0 +1,59 @@
+_id: RSvRoQyG8GpS8vhH
+_key: '!items!RSvRoQyG8GpS8vhH'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/spiked-gauntlet.png
+name: Spiked Gauntlet
+system:
+  actions:
+    - _id: 5hrkc9kgptdua4g1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Spiked Gauntlet
+  description:
+    unidentified: >-
+      <p>This is a gauntlet of thick leather or metal with blades or spikes
+      protruding from above the knuckles, allowing the wearer to stab with the
+      force of a punch. The cost and weight given are for a single gauntlet. An
+      attack with a spiked gauntlet is considered an armed attack. Your opponent
+      cannot disarm you of spiked gauntlets.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+  sources:
+    - id: PZO1110
+      pages: 142, 146
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - close
+  weight:
+    value: 1
+type: weapon
