@@ -1,0 +1,39 @@
+_id: zeJUX4m5t8lnpwlh
+_key: '!items!zeJUX4m5t8lnpwlh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Word of Anathema
+system:
+  abilityType: sp
+  actions:
+    - _id: kn1u3mxx82i8ozt2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, once per day, you can speak a word of anathema against a
+      single creature within 60 feet (Will negates). This acts as
+      @UUID[Compendium.pf1.spells.lsboosfk26m0ycqv]{Bestow Curse} and lasts for
+      1 minute, giving the target a –4 penalty on attack rolls, saves, ability
+      checks, and skill checks.</p>
+  subType: classFeat
+  tag: classFeat_wordOfAnathema
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

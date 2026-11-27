@@ -1,0 +1,61 @@
+_id: hmqkmh2d5no4nprp
+_key: '!items!hmqkmh2d5no4nprp'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Reinforce Armaments
+system:
+  actions:
+    - _id: q3ztu5ezwt05qq4m
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: one armor suit or weapon touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You reinforce a weapon or armor suit to give it a temporarily upgrade
+      or mitigate the fragile quality (see page 146). A suit of armor or weapon
+      touched that has the fragile quality is not considered to have the fragile
+      quality for the spell's duration. Normal armor suits or weapons subjected
+      to this spell instead gain the masterwork quality for the spell's duration
+      and their hardness is doubled. If this spell is cast on masterwork or
+      magical armor or weapons, their hardness is doubled for the duration of
+      the spell.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      cleric: 1
+      magus: 1
+      occultist: 1
+      oracle: 1
+      sorcerer: 1
+      warpriest: 1
+      witch: 1
+      wizard: 1
+  materials:
+    value: a metal pin
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '241'
+type: spell

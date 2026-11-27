@@ -1,0 +1,42 @@
+_id: RkFHk8xtXLUcSXno
+_key: '!items!RkFHk8xtXLUcSXno'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/lighting-eerie-2.jpg
+name: Ride the Lightning
+system:
+  abilityType: sp
+  actions:
+    - _id: m96lpid3d5lex48w
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, as a <em>full-round action</em> you can become a living
+      lightning bolt and move in a straight line up to 10 times your
+      <em>speed</em>. You do not provoke <em>attacks of opportunity</em> while
+      moving in this way. Creatures or objects in your path are affected as by
+      your thunderbolt power. Creatures do not block your movement but solid
+      barriers do unless they are reduced to 0 <em>hit points</em>. You can use
+      this power once per day for a number of rounds equal to your sorcerer
+      level.</p>
+  subType: classFeat
+  tag: classFeat_rideTheLightning
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

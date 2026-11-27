@@ -1,0 +1,60 @@
+_id: F4G4W6IN2adn2Ek6
+_key: '!items!F4G4W6IN2adn2Ek6'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/blade-boot.png
+name: Blade Boot
+system:
+  actions:
+    - _id: jy4gvpg3xlbxznaw
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Blade Boot
+  description:
+    unidentified: >-
+      <p>Blade boots come with a spring-mounted knife that pops out when
+      triggered with the right combination of toe presses. You can use a blade
+      boot as an off-hand weapon. Releasing the knife is a swift action;
+      rearming it is a full-round action. When the blade is extended, you treat
+      normal terrain as difficult and difficult terrain as impassable.</p>
+  hardness: 10
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 25
+  properties:
+    fin: true
+    spc: true
+  sources:
+    - id: PZO9410
+      pages: '2'
+  subType: martial
+  weaponGroups:
+    - bladesLight
+    - close
+  weight:
+    value: 2
+type: weapon

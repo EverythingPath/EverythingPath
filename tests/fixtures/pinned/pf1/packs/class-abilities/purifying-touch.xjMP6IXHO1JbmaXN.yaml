@@ -1,0 +1,42 @@
+_id: xjMP6IXHO1JbmaXN
+_key: '!items!xjMP6IXHO1JbmaXN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_16.jpg
+name: Purifying Touch
+system:
+  abilityType: su
+  actions:
+    - _id: k82n4lqaa8utjtbk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can touch a willing creature with divine power,
+      giving it a saving throw against each effect currently affecting it, using
+      the original saving throw DC of the effect. Each successful saving throw
+      ends the related effect. The creature can choose not to make a save
+      against an effect. You can use this ability once per day at 8th level,
+      plus one additional time per day at 14th and 20th level.</p>
+
+      <p>This power replaces the Aura of Protection power of the Protection
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_purifyingTouch
+  uses:
+    maxFormula: floor((@class.level - 2) / 6)
+    per: day
+type: feat

@@ -1,0 +1,66 @@
+_id: yaBbhvmRbPfDjmp3
+_key: '!items!yaBbhvmRbPfDjmp3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Interstellar Void
+system:
+  abilityType: su
+  actions:
+    - _id: qx6qi8yzbeq8f4mv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - cold
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Fortitude halves
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You call upon the frigid depths of outer space to bring a terrible
+      chill to your enemies. As a standard action, one target within 30 feet is
+      cloaked in the void and takes 1d6 points of cold damage for every oracle
+      level you possess. A successful Fortitude save halves this damage.</p>
+
+      <p>At 10th level, the interstellar void is so extreme that a creature that
+      fails its save is fatigued.</p>
+
+      <p>At 15th level, a creature that fail its save is exhausted and stunned
+      for 1 round.</p>
+
+      <p>You can use this ability once per day plus one additional time per day
+      at 10th level.</p>
+  sources:
+    - id: PZO1117
+      pages: '55'
+    - id: PZO1129
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_interstellarVoid
+  tags:
+    - Revelation
+    - Dark Tapestry Mystery
+    - Heavens Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 10), 1)
+    per: day
+type: feat

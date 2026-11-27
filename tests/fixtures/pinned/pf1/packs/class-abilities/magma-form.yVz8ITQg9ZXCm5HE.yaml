@@ -1,0 +1,56 @@
+_id: yVz8ITQg9ZXCm5HE
+_key: '!items!yVz8ITQg9ZXCm5HE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Magma Form
+system:
+  abilityType: su
+  actions:
+    - _id: yg5pnzqrz4re37v7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can assume the form of a Small magma
+      elemental, as @UUID[Compendium.pf1.spells.pawbnw1nm4f0b98e]{Elemental Body
+      I}. You gain the same abilities as if you had chosen an earth elemental’s
+      form, except your earth glide functions as the earth glide ability of a
+      magma elemental.</p>
+
+      <p>At 9th level, you can assume the form of a Medium magma elemental, as
+      @UUID[Compendium.pf1.spells.yldjnorgbx4jsldz]{Elemental Body II}.</p>
+
+      <p>At 11th level, you can assume the form a Large magma elemental, as
+      @UUID[Compendium.pf1.spells.hd32fuc6e7j4isbn]{Elemental Body III}.</p>
+
+      <p>At 13th level, you can assume the form of a Huge magma elemental, as
+      @UUID[Compendium.pf1.spells.v42t5kpxc8mvd615]{Elemental Body IV}.</p>
+
+      <p>You can use this ability once per day, but the duration is 1 hour per
+      oracle level.</p>
+
+      <p>You must be at least 7th level to choose this revelation.</p>
+  subType: classFeat
+  tag: classFeat_magmaForm
+  tags:
+    - Revelation
+    - Volcano Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

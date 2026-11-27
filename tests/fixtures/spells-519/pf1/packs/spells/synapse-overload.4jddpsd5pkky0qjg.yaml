@@ -1,0 +1,48 @@
+_id: 4jddpsd5pkky0qjg
+_key: '!items!4jddpsd5pkky0qjg'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Synapse Overload
+system:
+  actions:
+    - _id: 3v52acem6a4tgj7s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: living creature touched
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You cause the target's mind to unleash a vast overflowing torrent of
+      information throughout the target's body, causing the target's synapses to
+      violently trigger. The target takes 1d6 points of electrical damage per
+      caster level (maximum 15d6) and is staggered for 1 minute. A successful
+      Fortitude saving throw doesn't reduce the damage, but it negates the
+      staggered effect.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 4
+      psychic: 5
+  level: 5
+  school: div
+  sources:
+    - id: PZO1132
+      pages: '187'
+type: spell

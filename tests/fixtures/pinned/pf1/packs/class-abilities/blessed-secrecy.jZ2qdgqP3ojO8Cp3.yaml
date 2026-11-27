@@ -1,0 +1,30 @@
+_id: jZ2qdgqP3ojO8Cp3
+_key: '!items!jZ2qdgqP3ojO8Cp3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Blessed Secrecy
+system:
+  abilityType: su
+  actions:
+    - _id: i8q7gtkq418kz1b0
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 4th level, when you attempt a Bluff, Disguise, Sleight of Hand, or
+      Stealth skill check, you can roll twice and take the more favorable
+      result. You can use this ability a number of times per day equal to your
+      Wisdom bonus.</p>
+  subType: classFeat
+  tag: classFeat_blessedSecrecy
+  uses:
+    maxFormula: '@abilities.wis.mod'
+    per: day
+type: feat

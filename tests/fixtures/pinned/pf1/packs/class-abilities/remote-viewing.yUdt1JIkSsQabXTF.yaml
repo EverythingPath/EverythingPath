@@ -1,0 +1,55 @@
+_id: yUdt1JIkSsQabXTF
+_key: '!items!yUdt1JIkSsQabXTF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_12.jpg
+name: Remote Viewing
+system:
+  abilityType: sp
+  actions:
+    - _id: awaxyi2kam5mxvll
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p><em>Clairaudience/clairvoyance</em> creates an invisible magical
+        sensor at a specific location that enables you to hear or see (your
+        choice) almost as if you were there. You don't need line of sight or
+        line of effect, but the locale must be known--a place familiar to you,
+        or an obvious one. Once you have selected the locale, the sensor doesn't
+        move, but you can rotate it in all directions to view the area as
+        desired. Unlike other scrying spells, this spell does not allow
+        magically or supernaturally enhanced senses to work through it. If the
+        chosen locale is magically dark, you see nothing. If it is naturally
+        pitch black, you can see in a 10-foot radius around the center of the
+        spell's effect. <em>Clairaudience/clairvoyance</em> functions only on
+        the plane of existence you are currently occupying.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>Starting at 6th level, you can use
+      @UUID[Compendium.pf1.spells.6kmkxepwgsbta6ui]{Clairaudience/Clairvoyance}
+      at will as a spell-like ability using your cleric level as the caster
+      level. You can use this ability for a number of rounds per day equal to
+      your cleric level. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_remoteViewing
+  tags:
+    - Domain Power
+    - Knowledge Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

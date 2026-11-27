@@ -1,0 +1,39 @@
+_id: J34N08s9KELedVtO
+_key: '!items!J34N08s9KELedVtO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Touch of Silence
+system:
+  abilityType: su
+  actions:
+    - _id: rbbfgwj3yllp6425
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>With a melee touch attack, you render a target silent (as the spell
+      @UUID[Compendium.pf1.spells.ow4t1zox6dtybgji]{Silence}, but only affecting
+      the target) for 1 round. You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_touchOfSilence
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

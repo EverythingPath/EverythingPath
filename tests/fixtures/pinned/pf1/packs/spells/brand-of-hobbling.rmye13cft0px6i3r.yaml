@@ -1,0 +1,55 @@
+_id: rmye13cft0px6i3r
+_key: '!items!rmye13cft0px6i3r'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Brand of Hobbling
+system:
+  actions:
+    - _id: wxe6uvvjy2plww3g
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: creature touched
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell etches a symbol of chains, a particular prison, or a lawful
+      institution on the target, dealing 1d6 points of damage. The mark can be
+      placed on any exposed portion of the creature, typically on the head or
+      forearm. While the recipient is branded in this way, all of its movement
+      speeds are reduced by half (rounded down to the next 5-foot increment). A
+      Brand of Hobbling can be hidden by clothing or removed by scraping the
+      brand away (the latter deals 1d6 points of damage, though the brand
+      returns if that damage is healed), but in either case the effects of a
+      Brand of Hobbling continue to function.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      inquisitor: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1138
+      pages: '98'
+    - id: PZO9293
+      pages: '60'
+type: spell

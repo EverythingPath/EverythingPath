@@ -1,0 +1,48 @@
+_id: iy8UJ6oQXaPY7YdU
+_key: '!items!iy8UJ6oQXaPY7YdU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Nightmares
+system:
+  abilityType: su
+  actions:
+    - _id: 6nkg2cikp8y4szvd
+      actionType: save
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>Calling upon fell powers, a witch can place a hex on a creature within
+      60 feet that causes its sleep to be tormented by terrible nightmares. This
+      functions as the spell
+      @UUID[Compendium.pf1.spells.siv3ub7hbmcklf8c]{Nightmare} each time the
+      affected creature attempts to rest. A Will save negates this effect. If
+      the save is failed, the target must make a new save each night or be
+      unable to rest.</p>
+  sources:
+    - id: PZO1115
+      pages: '68'
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

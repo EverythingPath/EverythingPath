@@ -1,0 +1,37 @@
+_id: zcYdxGqaH4E7W7cj
+_key: '!items!zcYdxGqaH4E7W7cj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_23.jpg
+name: Maximum Attacks
+system:
+  abilityType: ex
+  actions:
+    - _id: kyqik2xqvneo0mo6
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      img: systems/pf1/icons/skills/yellow_23.jpg
+      name: Use
+      tag: maximumAttacks
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Eidolon
+  description:
+    value: >-
+      <p>This indicates the maximum number of natural attacks that the eidolon
+      is allowed to possess at the given level.</p><p>If the eidolon is at its
+      maximum, it cannot take evolutions that grant additional natural
+      attacks.</p><p>This does not include attacks made with weapons.</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+  uses:
+    autoDeductChargesCost: '0'
+    maxFormula: 3 + floor((@class.level + 1) / 5)
+    per: charges
+    value: 1
+type: feat

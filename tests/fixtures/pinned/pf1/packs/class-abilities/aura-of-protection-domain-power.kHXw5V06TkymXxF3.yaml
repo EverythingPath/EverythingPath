@@ -1,0 +1,53 @@
+_id: kHXw5V06TkymXxF3
+_key: '!items!kHXw5V06TkymXxF3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_13.jpg
+name: Aura of Protection (Domain Power)
+system:
+  abilityType: su
+  actions:
+    - _id: aebsynubjpkplnfy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>+[[1 + floor((@class.level-8) / 4)]] deflection bonus to AC and
+        resistance [[5 + floor(@class.level / 14)]] against all elements (acid,
+        cold, electricity, fire, and sonic)</p>
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: allies within range
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of protection for a number of
+      rounds per day equal to your cleric level. You and your allies within this
+      aura gain a +1 deflection bonus to AC and resistance 5 against all
+      elements (acid, cold, electricity, fire, and sonic). The deflection bonus
+      increases by +1 for every four cleric levels you possess beyond 8th. At
+      14th level, the resistance against all elements increases to 10. These
+      rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_auraOfProtection
+  tags:
+    - Domain Power
+    - Protection Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

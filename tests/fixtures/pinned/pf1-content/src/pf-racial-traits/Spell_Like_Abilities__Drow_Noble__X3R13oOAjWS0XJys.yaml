@@ -1,0 +1,410 @@
+_id: X3R13oOAjWS0XJys
+_key: '!items!X3R13oOAjWS0XJys'
+_stats:
+  coreVersion: '12.331'
+folder: BU8lLJp14WQHGVoh
+img: icons/equipment/finger/ring-crown-silver-blue.webp
+name: Spell-Like Abilities (Drow Noble)
+system:
+  abilityType: sp
+  actions:
+    - _id: ze3dUNmOeN2EoIA5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{Dancing
+        Lights}</p><p>Depending on the version selected, you create up to four
+        lights that resemble lanterns or torches (and cast that amount of
+        light), or up to four glowing spheres of light (which look like
+        will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The
+        dancing lights must stay within a @Distance[10 ft;dual]-radius area in
+        relation to each other but otherwise move as you desire (no
+        concentration required): forward or back, up or down, straight or
+        turning corners, or the like. The lights can move up to @Distance[100
+        ft;dual] per round. A light winks out if the distance between you and it
+        exceeds the spell's range.</p><p>You can only have one dancing lights
+        spell active at any one time. If you cast this spell while another
+        casting is still in effect, the previous casting is dispelled. If you
+        make this spell permanent, it does not count against this
+        limit.</p><p>Dancing lights can be made permanent with a permanency
+        spell.</p></div>
+      duration:
+        units: minute
+        value: '1'
+      effect: Up to four lights, all within a 10-ft.-radius area
+      name: Dancing Lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: up to 4 lights, all within a 10 ft radius
+    - _id: 3QiRRJHUKVRd0ZOc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.jdsvncnna6oy189a]{Deeper
+        Darkness}</p><p>This spell functions as <a class="content-link"
+        draggable="true" data-link=""
+        data-uuid="Compendium.pf1.spells.Item.tsndfcfijmgxs37p"
+        data-id="tsndfcfijmgxs37p" data-type="Item" data-pack="pf1.spells"
+        data-tooltip="Spell Item">darkness</a>, except that objects radiate
+        <em>darkness</em> in a @Distance[60 ft;dual] radius and the light level
+        is lowered by two steps. Bright light becomes dim light and normal light
+        becomes <em>darkness</em>. Areas of dim light and <em>darkness</em>
+        become supernaturally dark. This functions like <em>darkness</em>, but
+        even creatures with darkvision cannot see within the spell's
+        confines.</p><p>This spell does not stack with itself. <em>Deeper
+        darkness</em> can be used to counter or dispel any light spell of equal
+        or lower spell level.</p></div>
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @attributes.hd.total
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: Deeper Darkness
+      range:
+        units: touch
+      target:
+        value: object touched
+    - _id: 23cvixMwL4sRTzSb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures and objects within a 5-ft.-radius burst
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{Faerie
+        Fire}</p><p>A pale glow surrounds and outlines the subjects. Outlined
+        subjects shed light as candles. Creatures outlined by <em>faerie
+        fire</em> take a -20 penalty on all Stealth checks. Outlined creatures
+        do not benefit from the concealment normally provided by
+        <em>darkness</em> (though a 2nd-level or higher magical
+        <em>darkness</em> effect functions normally), <em>blur</em>,
+        <em>displacement</em>, <em>invisibility</em>, or similar effects. The
+        light is too dim to have any special effect on undead or dark-dwelling
+        creatures vulnerable to light. The <em>faerie fire</em> can be blue,
+        green, or violet, according to your choice at the time of casting. The
+        <em>faerie fire</em> does not cause any harm to the objects or creatures
+        thus outlined.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '@attributes.hd.total'
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Faerie Fire
+      range:
+        units: long
+        value: '@attributes.hd.total * 40 + 400'
+    - _id: KBGGfqledNveXZn5
+      actionType: spellsave
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{Feather
+        Fall}</p><p>The affected creatures or objects fall slowly. <em>Feather
+        fall</em> instantly changes the rate at which the targets fall to a mere
+        @Distance[60 ft;dual] per round (equivalent to the end of a fall from a
+        few feet), and the subjects take no damage upon landing while the spell
+        is in effect. When the spell duration expires, a normal rate of falling
+        resumes.</p><p>The spell affects one or more Medium or smaller creatures
+        (including gear and carried objects up to each creature's maximum load)
+        or objects, or the equivalent in larger creatures: a Large creature or
+        object counts as two Medium creatures or objects, a Huge creature or
+        object counts as four Medium creatures or objects, and so
+        forth.</p><p>This spell has no special effect on ranged weapons unless
+        they are falling quite a distance. If the spell is cast on a falling
+        item, the object does half normal damage based on its weight, with no
+        bonus for the height of the drop.</p><p><em>Feather fall</em> works only
+        upon free-falling objects. It does not affect a sword blow or a charging
+        or flying creature.</p></div>
+      duration:
+        units: spec
+        value: until landing or [[@attributes.hd.total]] rounds
+      name: Feather Fall
+      range:
+        units: ft
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10+1+@abilities.cha.mod
+        description: Will negates or Will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: >-
+          one Medium or smaller freefalling object or creature/level, no two of
+          which may be more than 20 ft. apart
+    - _id: iJ56HlEtUuyW0h88
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.plou8h168bfn5hq6]{Levitate}</p><p><em>Levitate</em>
+        allows you to move yourself, another creature, or an object up and down
+        as you wish. A creature must be willing to be levitated, and an object
+        must be unattended or possessed by a willing creature. You can mentally
+        direct the recipient to move up or down as much as @Distance[20 ft;dual]
+        each round; doing so is a move action.</p><p>You cannot move the
+        recipient horizontally, but the recipient could clamber along the face
+        of a cliff, for example, or push against a ceiling to move laterally
+        (generally at half its base land speed).</p><p>A levitating creature
+        that attacks with a melee or ranged weapon finds itself increasingly
+        unstable; the first attack has a -1 penalty on attack rolls, the second
+        -2, and so on, to a maximum penalty of -5. A full round spent
+        stabilizing allows the creature to begin again at -1.</p></div>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Levitate
+      range:
+        units: personal
+      target:
+        value: >-
+          you or one willing creature or one object (total weight up to 100
+          lbs./level)
+    - _id: qlr2COPq83L2QLdc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{Detect
+        Magic}</p><p>You detect magical auras. The amount of information
+        revealed depends on how long you study a particular area or
+        subject.</p><p><em>1st Round</em>: Presence or absence of magical
+        auras.</p><p><em>2nd Round</em>: Number of different magical auras and
+        the power of the most potent aura.</p><p><em>3rd Round</em>: The
+        strength and location of each aura. If the items or creatures bearing
+        the auras are in line of sight, you can make Knowledge (arcana) skill
+        checks to determine the school of magic involved in each. (Make one
+        check per aura: DC 15 + spell level, or 15 + 1/2 caster level for a
+        nonspell effect.) If the aura emanates from a magic item, you can
+        attempt to identify its properties (see Spellcraft).</p><p>Magical
+        areas, multiple types of magic, or strong local magical emanations may
+        distort or conceal weaker auras.</p><p><em>Aura Strength</em>: An aura's
+        power depends on a spell's functioning spell level or an item's caster
+        level; see the accompanying table. If an aura falls into more than one
+        category, detect magic indicates the stronger of the
+        two.</p><table><tbody><tr><th rowspan="2"><p>Spell or Object</p></th><th
+        colspan="4"><p>Aura
+        Power</p></th></tr><tr><th><p>Faint</p></th><th><p>Moderate</p></th><th><p>Strong</p></th><th><p>Overwhelming</p></th></tr><tr><td><p>Functioning
+        spell (spell level)</p></td><td><p>3rd or
+        lower</p></td><td><p>4th-6th</p></td><td><p>7th-9th</p></td><td><p>10th+
+        (deity-level)</p></td></tr><tr><td><p>Magic item (caster
+        level)</p></td><td><p>5th or
+        lower</p></td><td><p>6th-11th</p></td><td><p>12th-20th</p></td><td><p>21st+
+        (artifact)</p></td></tr></tbody></table><p><em>Lingering Aura</em>: A
+        magical aura lingers after its original source dissipates (in the case
+        of a spell) or is destroyed (in the case of a magic item). If <em>detect
+        magic</em> is cast and directed at such a location, the spell indicates
+        an aura strength of dim (even weaker than a faint aura). How long the
+        aura lingers at this dim level depends on its original
+        power:</p><table><tbody><tr><th><p>Original
+        Strength</p></th><th><p>Duration of Lingering
+        Aura</p></th></tr><tr><td><p>Faint</p></td><td><p>1d6
+        rounds</p></td></tr><tr><td><p>Moderate</p></td><td><p>1d6
+        minutes</p></td></tr><tr><td><p>Strong</p></td><td><p>1d6x10
+        minutes</p></td></tr><tr><td><p>Overwhelming</p></td><td><p>1d6
+        days</p></td></tr></tbody></table><p>Outsiders and elementals are not
+        magical in themselves, but if they are summoned, the conjuration spell
+        registers. Each round, you can turn to detect magic in a new area. The
+        spell can penetrate barriers, but @Distance[1 ft;dual] of stone, 1 inch
+        of common metal, a thin sheet of lead, or @Distance[3 ft;dual] of wood
+        or dirt blocks it.</p><p><em>Detect magic</em> can be made permanent
+        with a <em>permanency</em> spell.</p></div>
+      duration:
+        concentration: true
+        units: spec
+        value: concentration, up to [[@attributes.hd.total]] mins
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Detect Magic
+      range:
+        units: ft
+        value: '60'
+    - _id: 5fBr9DK4e0rlIT22
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.21bxbzdaawjrnvyo]{Divine
+        Favor}</p><p>Calling upon the strength and wisdom of a deity, you gain a
+        +1 luck bonus on attack and weapon damage rolls for every three caster
+        levels you have (at least +1, maximum +3). The bonus doesn't apply to
+        spell damage.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Divine Favor
+      notes:
+        effect:
+          - '@Apply[Divine Favor;level=@attributes.hd.total]'
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: NlRduChBmnkaihpN
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: one spellcaster, creature, or object
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{Dispel
+        Magic}</p><p>You can use <em>dispel magic</em> to end one ongoing spell
+        that has been cast on a creature or object, to temporarily suppress the
+        magical abilities of a magic item, or to counter another spellcaster's
+        spell. A dispelled spell ends as if its duration had expired. Some
+        spells, as detailed in their descriptions, can't be defeated by
+        <em>dispel magic</em>. <em>Dispel magic</em> can dispel (but not
+        counter) spell-like effects just as it does spells. The of a spell with
+        an instantaneous duration can't be dispelled, because the magical effect
+        is already over before the <em>dispel magic</em> can take
+        effect.</p><p>You choose to use <em>dispel magic</em> in one of two
+        ways: a targeted dispel or a counterspell.</p><p><em>Targeted
+        Dispel</em>: One object, creature, or spell is the target of the
+        <em>dispel magic</em> spell. You make one dispel check (1d20 + your
+        caster level) and compare that to the spell with highest caster level
+        (DC = 11 + the spell's caster level). If successful, that spell
+        ends.</p><p>If not, compare the same result to the spell with the next
+        highest caster level. Repeat this process until you have dispelled one
+        spell affecting the target, or you have failed to dispel every
+        spell.</p><p>For example, a 7th-level caster casts <em>dispel
+        magic</em>, targeting a creature affected by <em>stoneskin</em> (caster
+        level 12th) and <em>fly</em> (caster level 6th). The caster level check
+        results in a 19. This check is not high enough to end the
+        <em>stoneskin</em> (which would have required a 23 or higher), but it is
+        high enough to end the <em>fly</em> (which only required a 17). Had the
+        dispel check resulted in a 23 or higher, the <em>stoneskin</em> would
+        have been dispelled, leaving the <em>fly</em> intact. Had the dispel
+        check been a 16 or less, no spells would have been affected.</p><p>You
+        can also use a targeted dispel to specifically end one spell affecting
+        the target or one spell affecting an area (such as a <em>wall of
+        fire</em>). You must name the specific spell effect to be targeted in
+        this way. If your caster level check is equal to or higher than the DC
+        of that spell, it ends. No other spells or effects on the target are
+        dispelled if your check is not high enough to end the targeted
+        effect.</p><p>If you target an object or creature that is the effect of
+        an ongoing spell (such as a monster <em>summoned</em> by <em>summon
+        monster</em>), you make a dispel check to end the spell that conjured
+        the object or creature.</p><p>If the object that you target is a magic
+        item, you make a dispel check against the item's caster level (DC = 11 +
+        the item's caster level). If you succeed, all the item's magical
+        properties are suppressed for 1d4 rounds, after which the item recovers
+        its magical properties. A suppressed item becomes nonmagical for the
+        duration of the effect. An interdimensional opening (such as a <em>bag
+        of holding</em>) is temporarily closed. A magic item's physical
+        properties are unchanged: A suppressed magic sword is still a sword (a
+        masterwork sword, in fact). Artifacts and deities are unaffected by
+        mortal magic such as this.</p><p>You automatically succeed on your
+        dispel check against any spell that you cast
+        yourself.</p><p><em>Counterspell</em>: When <em>dispel magic</em> is
+        used in this way, the spell targets a spellcaster and is cast as a
+        counterspell. Unlike a true counterspell, however, <em>dispel magic</em>
+        may not work; you must make a dispel check to counter the other
+        spellcaster's spell.</p></div>
+      duration:
+        units: inst
+      name: Dispel Magic
+      range:
+        units: ft
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: one spellcaster, creature, or object
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+    - _id: 3HMMuZAVFYB81aWg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <div
+        class="description-body"><p>@UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{Suggestion}</p><p>You
+        influence the actions of the target creature by suggesting a course of
+        activity (limited to a sentence or two). The <em>suggestion</em> must be
+        worded in such a manner as to make the activity sound reasonable. Asking
+        the creature to do some obviously harmful act automatically negates the
+        effect of the spell.</p><p>The suggested course of activity can continue
+        for the entire duration. If the suggested activity can be completed in a
+        shorter time, the spell ends when the subject finishes what it was asked
+        to do. You can instead specify conditions that will trigger a special
+        activity during the duration. If the condition is not met before the
+        spell duration expires, the activity is not performed.</p><p>A very
+        reasonable <em>suggestion</em> causes the save to be made with a penalty
+        (such as -1 or -2).</p></div>
+      duration:
+        units: spec
+        value: '[[@attributes.hd.total]] hours or until completed'
+      name: Suggestion
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 3 + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+      uses:
+        self:
+          maxFormula: '1'
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Race</strong>: Drow Noble</p><hr /><p>Drow nobles can cast
+      <em>dancing lights</em>, <em>deeper darkness</em>, <em>faerie fire</em>,
+      <em>feather fall</em>, and <em>levitate </em>each at will, and have
+      <em>detect magic </em>as a constant spell-like ability. A drow noble can
+      also cast <em>divine favor</em>, <em>dispel magic</em>, and <em>suggestion
+      </em>once per day each. In some cases, a drow noble's spell-like abilities
+      might vary, although the level of a particular spell-like ability does
+      not. A drow noble's caster level for her spell-like abilities is equal to
+      her character level.</p>
+  racePoints: 26
+  showInQuickbar: true
+  sources:
+    - id: PZO1112
+      pages: '115'
+  subType: racial
+  tags:
+    - Drow Noble
+  traitCategory: magical
+type: feat

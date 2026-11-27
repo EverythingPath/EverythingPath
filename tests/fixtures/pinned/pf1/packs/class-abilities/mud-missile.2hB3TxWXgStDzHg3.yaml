@@ -1,0 +1,57 @@
+_id: 2hB3TxWXgStDzHg3
+_key: '!items!2hB3TxWXgStDzHg3'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/earth/projectile-boulder-dust.webp
+name: Mud Missile
+system:
+  abilityType: su
+  actions:
+    - _id: Eo7cSrR8BNJM9Y6g
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d6
+            types:
+              - bludgeoning
+      name: Use
+      notes:
+        effect:
+          - >-
+            Target creature is blinded for [[1d4]] rounds. The mud can be
+            removed with a successful strength check (DC [[10 +
+            floor(@caster.wizard.level / 2)]]).
+      range:
+        units: ft
+        value: '30'
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can fling a ball of hardened mud at a foe within 30
+      feet as a standard action. If you succeed at a ranged touch attack, the
+      mud slams into the target’s face, dealing 1d6 points of bludgeoning damage
+      for every 2 wizard levels you have and blinding the target for 1d4 rounds.
+      A creature can remove the blinding mud from itself or another creature
+      with a successful Strength check (DC = 10 + half your wizard level) as a
+      standard action. You can use this ability a number of times per day equal
+      to half your wizard level.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Mud School
+  uses:
+    maxFormula: floor(@class.level / 2)
+    per: day
+type: feat

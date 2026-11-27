@@ -1,0 +1,50 @@
+_id: EzZ8XZHjMCBwaL5o
+_key: '!items!EzZ8XZHjMCBwaL5o'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-3.jpg
+name: Assume Control
+system:
+  abilityType: su
+  actions:
+    - _id: lp5ht6x91in3034v
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: seeText
+      target:
+        value: Summoned Creature
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 1st level, you can attempt to gain control over a summoned creature
+      by disrupting the bond between it and the caster who summoned it. You must
+      make a caster level check (1d20 + caster level) equal to 10 + the
+      summoning caster’s level. If you know the summoned creature’s name, you
+      receive a +2 <em>circumstance bonus</em> on the check. If the check is
+      successful, you can control the summoned creature as if you had summoned
+      it for a number of rounds equal to 1/2 your <em>wizard</em> level (minimum
+      1 round). This does not increase the duration of the original summoning.
+      The original summoning caster can attempt to regain control of the
+      summoned creature as a <em>standard action</em> by making a caster level
+      check against your caster level + 10. When your control ends, the creature
+      reverts to the control of its <em>summoner</em>.</p>
+
+      <p>At 9th level, you can use this ability to bargain with called creatures
+      as if you were the caster who conjured them. You can use this ability a
+      number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_assumeControl
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

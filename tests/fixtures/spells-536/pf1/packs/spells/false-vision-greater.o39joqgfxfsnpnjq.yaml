@@ -1,0 +1,94 @@
+_id: o39joqgfxfsnpnjq
+_key: '!items!o39joqgfxfsnpnjq'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: systems/pf1/icons/misc/magic-swirl.png
+name: False Vision, Greater
+system:
+  actions:
+    - _id: ux0rcsfzxffa616n
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This functions similarly to
+      @UUID[Compendium.pf1.spells.gk8fqfvj99d46p2h]{false vision}, but instead
+      of placing the illusion on a nearby area, you can tie it to a specific
+      individual, and can do so from great distances. The spell can be cast at
+      any distance. The difficulty of the save depends on your knowledge of the
+      subject and what sort of physical connection (if any) you have to that
+      creature.</p>
+
+      <p>The target gains the same bonuses and penalties on its Will save to
+      resist this spell as the bonuses and penalties that apply to the
+      @UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{scrying} spell (including a
+      +5 bonus if the target is on another plane). The illusion created by the
+      spell moves with the target, and is not stationary.</p>
+
+      <p>The image can affect the way the target is perceived, the way the
+      target's surroundings are perceived, and the way that specific creatures
+      or objects around the target are perceived.</p>
+
+      <p>For the target, and any other specific creatures or objects you
+      specify, you can cause them to appear as other creatures or objects that
+      you designate, not to appear at all, or to have their appearance
+      unaltered.</p>
+
+      <p>For the target's surroundings, you can choose to make the target appear
+      to be somewhere else, either a specific location with which you are
+      familiar, or a generic location conjured from your imagination. You can
+      change the way that the spell affects the appearance of any of these
+      things by concentrating on the spell.</p>
+
+      <p>You can also cause creatures or objects to appear in the illusion that
+      are not really there, or to make a creature or object seem to act in a way
+      other than it is actually acting. In this case, you must concentrate on
+      the spell, or these aspects of the illusion simply remain static. The
+      spell can provide visual, auditory, olfactory, tactile, and thermal
+      sensations as needed.</p>
+
+      <p>The illusion applies to only those who observe the target via a
+      divination (<em>scrying</em>) spell, and has no effect on viewers who are
+      there in person.</p>
+  learnedAt:
+    class:
+      arcanist: 7
+      bard: 6
+      mesmerist: 6
+      psychic: 7
+      skald: 6
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  materials:
+    gpValue: 500
+    value: a jade sphere worth 500 gp
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '214'
+  sr: false
+  subschool:
+    - glamer
+type: spell

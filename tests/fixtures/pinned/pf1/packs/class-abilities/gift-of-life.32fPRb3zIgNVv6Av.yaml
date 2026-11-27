@@ -1,0 +1,47 @@
+_id: 32fPRb3zIgNVv6Av
+_key: '!items!32fPRb3zIgNVv6Av'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_07.jpg
+name: Gift of Life
+system:
+  abilityType: su
+  actions:
+    - _id: nofc9w3dnmovu3rd
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: recently dead creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can touch a creature that has died within the past
+      minute to grant it a few moments of life. The dead creature returns to
+      life for a number of rounds equal to your cleric level. Creatures returned
+      to life in this way have a number of hit points equal to half your cleric
+      level, and continue to be affected by any still-active spells, conditions,
+      or afflictions present at the time of their death. At the end of this
+      time, the creature dies again. The creature is free to act as it sees fit
+      during this time. You are granted no control over it. You can use this
+      power once per day at 8th level, plus one additional time per day for
+      every four levels beyond 8th.</p>
+
+      <p>This power replaces the Healer's Blessing power of the Healing
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_giftOfLife
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

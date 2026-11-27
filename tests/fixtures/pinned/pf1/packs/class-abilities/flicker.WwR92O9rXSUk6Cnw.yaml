@@ -1,0 +1,42 @@
+_id: WwR92O9rXSUk6Cnw
+_key: '!items!WwR92O9rXSUk6Cnw'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Flicker
+system:
+  abilityType: sp
+  actions:
+    - _id: b7322cy89vs2z7g6
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can flicker from sight for a short time, allowing you to escape or
+      set up a prank. As a swift action, you can disappear for 1 round per
+      oracle level. This ability functions as invisibility.</p>
+
+      <p>You can use this revelation a number of times per day equal to half
+      your oracle level (minimum 1).</p>
+  subType: classFeat
+  tag: classFeat_flicker
+  tags:
+    - Revelation
+    - Whimsy Mystery
+  uses:
+    maxFormula: max(1, floor(@class.level / 2))
+    per: day
+type: feat

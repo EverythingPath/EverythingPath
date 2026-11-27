@@ -1,0 +1,35 @@
+_id: V6gex88vDD4IQqog
+_key: '!items!V6gex88vDD4IQqog'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: Sneak Attack (CAV)
+system:
+  abilityType: ex
+  actions:
+    - _id: baKSL9suyWG3rBVh
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: (floor((@class.level + 4) / 6))d6
+            types:
+              - precision
+      name: Use
+      powerAttack:
+        critMultiplier: null
+        damageBonus: null
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 2nd level, an order of the blossom cavalier can make a sneak attack,
+      as the rogue ability of the same name. At 2nd level, his sneak attack
+      damage is +1d6. This damage increases by 1d6 at 8th level and every 6
+      levels thereafter. If the cavalier gets a sneak attack bonus from another
+      source, the bonus damage stacks.</p>
+  subType: classFeat
+type: feat

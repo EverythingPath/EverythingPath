@@ -1,0 +1,58 @@
+_id: 1oqvwOeH33hspGDx
+_key: '!items!1oqvwOeH33hspGDx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Mighty Pebble
+system:
+  abilityType: su
+  actions:
+    - _id: rm4ltkp9mc4iygca
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackBonus: floor(@class.level / 4)
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d6 + floor(@class.level / 4)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can charge and throw a pebble (or other stone
+      of similar size) that detonates when it strikes a target as a ranged
+      attack. The pebble has a range increment of 20 feet and has a +1
+      enhancement bonus to attack and damage for every four oracle levels you
+      possess. Any creature struck by the pebble takes 1d6 points of bludgeoning
+      damage per two oracle levels you possess (minimum 1d6). Creatures in
+      squares adjacent to the target take half damage, or no damage if they make
+      a Reflex saving throw. If the attack roll misses, treat the pebble as a
+      thrown splash weapon to determine where it lands.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 5th level and every five levels thereafter.</p>
+  subType: classFeat
+  tag: classFeat_mightyPebble
+  tags:
+    - Revelation
+    - Stone Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

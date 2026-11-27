@@ -1,0 +1,57 @@
+_id: 272szq5d556toqgc
+_key: '!items!272szq5d556toqgc'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Blessing of Courage and Life
+system:
+  actions:
+    - _id: fhgrix5jnr6b2lu2
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 1 minute/level (see below)
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: one living creature
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With this prayer you provide long-lasting succor to a wounded creature.
+      For as long as the effect lasts, the target receives a +2 morale bonus on
+      saving throws against fear and death effects.</p><p>At any time while the
+      spell is in effect, the target can choose to end the spell as a swift
+      action for a burst of healing energy. The target loses the saving throw
+      bonus, but is healed of 1d8 points of damage +1 point per caster level
+      (maximum +10).</p>
+  descriptors:
+    - emotion
+  learnedAt:
+    class:
+      cleric: 2
+      oracle: 2
+      paladin: 2
+      warpriest: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1115
+      pages: '205'
+  subschool:
+    - healing
+type: spell

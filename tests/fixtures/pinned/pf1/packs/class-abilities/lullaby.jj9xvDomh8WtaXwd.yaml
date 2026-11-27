@@ -1,0 +1,40 @@
+_id: jj9xvDomh8WtaXwd
+_key: '!items!jj9xvDomh8WtaXwd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/flute.jpg
+name: Lullaby
+system:
+  abilityType: sp
+  actions:
+    - _id: 2rox1qufb6q3xqkt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: medium
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can use
+      @UUID[Compendium.pf1.spells.99xovzg8h1nh9o9a]{Lullaby} as a spell-like
+      ability a number of times per day equal to 3 + your <em>Charisma</em>
+      modifier. This effect lasts for 1 minute and does not require
+      <em>concentration</em>. The penalty on saves versus sleep effects
+      increases to –4.</p>
+  subType: classFeat
+  tag: classFeat_lullaby
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

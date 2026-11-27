@@ -1,0 +1,47 @@
+_id: eId02njTRNQS3NVF
+_key: '!items!eId02njTRNQS3NVF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Animal Servant
+system:
+  abilityType: su
+  actions:
+    - _id: 5ppdyb183xj7pzpw
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can use this hex to turn a humanoid enemy into an animal and
+      rob it of its free will.</p><p>The transformation works as
+      @UUID[Compendium.pf1.spells.774kmgcb7ygviht0]{Beast Shape II} and is
+      negated by a successful Will save. The transformed creature retains its
+      Intelligence score and known languages, if any, but the witch controls its
+      mind.</p><p>This effect functions as
+      @UUID[Compendium.pf1.spells.66s5qm8kwycgobce]{Dominate Monster}, except
+      the creature does not receive further saving throws to resist the
+      hex.</p><p>The effect can be removed only with wish or similar magic,
+      although slaying the witch also ends the effect.</p><p>Whether or not the
+      save is successful, a creature cannot be the target of this hex again for
+      1 day.</p>
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat
