@@ -1,0 +1,43 @@
+_id: 3rzXWFJTvQNU8qwi
+_key: '!items!3rzXWFJTvQNU8qwi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Swamp's Grasp
+system:
+  actions:
+    - _id: jctfhb1ldtkwoxwd
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 3 + @abilities.int.mod
+      measureTemplate:
+        size: '10'
+        type: rect
+      name: Use
+      range:
+        units: ft
+        value: '90'
+      target:
+        value: 10-ft. square area per level
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can cause an area to become an entangling quagmire. One
+      10-foot square per witch level within 90 feet becomes difficult terrain
+      for a number of rounds equal to 3 + the witch’s Intelligence modifier.</p>
+
+      <p>If the witch uses this hex again before the duration of the previous
+      use has expired, the effects of the previous use of this hex end
+      immediately.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

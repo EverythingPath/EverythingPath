@@ -1,0 +1,45 @@
+_id: M8IQnVMYyqh1Mrl7
+_key: '!items!M8IQnVMYyqh1Mrl7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_02.jpg
+name: Eyes of Darkness
+system:
+  abilityType: su
+  actions:
+    - _id: mpwxv57ysm7yarav
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, your vision is not impaired by lighting conditions, even
+      in absolute darkness and magic darkness. You can use this ability for a
+      number of rounds per day equal to 1/2 your cleric level. These rounds do
+      not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_eyesOfDarkness
+  tags:
+    - Domain Power
+    - Darkness Domain
+  uses:
+    maxFormula: floor(@class.level / 2)
+    per: day
+type: feat

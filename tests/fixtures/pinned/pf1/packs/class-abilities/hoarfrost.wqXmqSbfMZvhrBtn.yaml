@@ -1,0 +1,45 @@
+_id: wqXmqSbfMZvhrBtn
+_key: '!items!wqXmqSbfMZvhrBtn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Hoarfrost
+system:
+  abilityType: su
+  actions:
+    - _id: ge3mpiwwpfil6rfi
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The target is rimed with a shell of frost needles that slowly work
+      their way into its flesh (Fortitude negates). The target turns pale and
+      blue, and takes 1 point of Constitution damage per minute until it dies,
+      saves (once per minute), or is cured. Break enchantment, dispel magic,
+      remove curse, and similar spells end the effect.</p>
+
+      <p>If the target saves, it is immune to this hex for 1 day. This is a cold
+      effect.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

@@ -1,0 +1,48 @@
+_id: hVrmBvlqeeLbwVxn
+_key: '!items!hVrmBvlqeeLbwVxn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_03.jpg
+name: Copycat
+system:
+  abilityType: sp
+  actions:
+    - _id: rmep55cvcmijqya9
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can create an illusory double of yourself as a move action. This
+      double functions as a single
+      @UUID[Compendium.pf1.spells.4jsss37x0pplib8f]{Mirror Image} and lasts for
+      a number of rounds equal to your cleric level, or until the illusory
+      duplicate is dispelled or destroyed. You can have no more than one copycat
+      at a time. This ability does not stack with the mirror image spell. You
+      can use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '48'
+  subType: classFeat
+  tag: classFeat_copycat
+  tags:
+    - Domain Power
+    - Trickery Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

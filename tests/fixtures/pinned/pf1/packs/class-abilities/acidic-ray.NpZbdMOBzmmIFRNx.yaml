@@ -1,0 +1,52 @@
+_id: NpZbdMOBzmmIFRNx
+_key: '!items!NpZbdMOBzmmIFRNx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-acid-1.jpg
+name: Acidic Ray
+system:
+  abilityType: sp
+  actions:
+    - _id: lgiagu5ni7fdgyoc
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (floor(@class.level / 2))
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>Starting at 1st level, you can fire an acidic ray as a standard action,
+      targeting any foe within 30 feet as a ranged touch attack. The acidic ray
+      deals 1d6 points of acid damage + 1 for every two sorcerer levels you
+      possess. You can use this ability a number of times per day equal to 3 +
+      your <em>Charisma</em> modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '72'
+  subType: classFeat
+  tag: classFeat_acidicRay
+  tags:
+    - Bloodline Power
+    - Aberrant Bloodline
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

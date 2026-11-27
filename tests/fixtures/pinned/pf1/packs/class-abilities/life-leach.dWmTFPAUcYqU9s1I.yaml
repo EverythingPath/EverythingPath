@@ -1,0 +1,69 @@
+_id: dWmTFPAUcYqU9s1I
+_key: '!items!dWmTFPAUcYqU9s1I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Life Leach
+system:
+  abilityType: su
+  actions:
+    - _id: dvzp9slz568hhmyx
+      ability:
+        attack: dex
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(floor(@class.level / 2),10))d6
+            types:
+              - untyped
+      duration:
+        units: hour
+        value: max(@abilities.cha.mod, 0)
+      name: Use
+      notes:
+        effect:
+          - >-
+            Gain temp HP equal to damage dealt for [[max(@abilities.cha.mod,
+            0)]] hours
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Fortitude half
+        type: fort
+      target:
+        value: living target
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can draw life force from the bodies of enemies and channel it into
+      yourself. As a standard action, you can drain the life essence from one
+      living target within 30 feet. The target takes 1d6 points of damage per
+      two levels you possess (maximum 10d6). You gain temporary hit points equal
+      to the damage you deal. You can't gain more than the target's current hit
+      points + the target's Constitution score (which is enough to kill the
+      subject). The temporary hit points last a number of hours equal to your
+      Charisma modifier. The target receives a Fortitude save to halve the
+      damage (and the temporary hit points you gain).</p>
+
+      <p>You may use this ability once per day at 7th level, plus one additional
+      time per day for every 4 levels you possess beyond 7th.</p>
+
+      <p>You must be at least 7th level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_lifeLeach
+  tags:
+    - Revelation
+    - Nature Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

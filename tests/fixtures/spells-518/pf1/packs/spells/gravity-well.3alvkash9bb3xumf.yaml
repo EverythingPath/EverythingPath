@@ -1,0 +1,59 @@
+_id: 3alvkash9bb3xumf
+_key: '!items!3alvkash9bb3xumf'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Gravity Well
+system:
+  actions:
+    - _id: lnbv3wdd57sz2g61
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You bring into being a localized region of increased gravity that
+      crushes a creature to the ground. Affected targets weigh twice as much as
+      normal, can move only at half speed, jump only half as far as normal, and
+      can lift and carry only half as much as normal. Any flying target has its
+      maneuverability worsened by two steps (from good to poor, for example;
+      minimum clumsy) and plummets to the ground unless it succeeds at a DC 25
+      Fly check to remain in the air. <i>Freedom of movement</i> negates the
+      effects of this spell. A creature targeted by <i>gravity well</i> behaves
+      normally in the area of a <i>reverse gravity</i> spell.</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      druid: 6
+      hunter: 6
+      sorcerer: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a small lead weight
+  school: trs
+  sources:
+    - id: PZO9434
+      pages: '29'
+  sr: false
+type: spell

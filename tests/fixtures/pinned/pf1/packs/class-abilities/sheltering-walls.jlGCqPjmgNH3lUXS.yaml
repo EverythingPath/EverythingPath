@@ -1,0 +1,45 @@
+_id: jlGCqPjmgNH3lUXS
+_key: '!items!jlGCqPjmgNH3lUXS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_09.jpg
+name: Sheltering Walls
+system:
+  abilityType: sp
+  actions:
+    - _id: vhxx11ok5sk0k65s
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1 + (floor(@class.level / 6))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: ally touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can touch an ally to summon a floating
+      blockade of stone, granting the ally the benefits of partial cover for 1
+      round plus 1 round for every 6 cleric levels you possess. This ability
+      does not grant the ally enough cover to attempt a Stealth check or avoid
+      provoking attacks of opportunity. If the ally benefits from any other form
+      of cover against an attack, the bonuses to AC and on Reflex saving throws
+      increase by 1. You can use this power a number of times per day equal to 3
+      + your Wisdom modifier.</p>
+
+      <p>This pwoer replaces the Resistant Touch power of the Protection
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_shelteringWalls
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

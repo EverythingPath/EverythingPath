@@ -1,0 +1,47 @@
+_id: IBlfY7mhFWlzB2km
+_key: '!items!IBlfY7mhFWlzB2km'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Forced Reincarnation
+system:
+  abilityType: su
+  actions:
+    - _id: u21zwlanemnb826r
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch causes a creature within 30 feet to die and be immediately
+      reincarnated into a new body. A Will save negates this effect. Those that
+      fail are slain and immediately brought back to life with the spell
+      @UUID[Compendium.pf1.spells.3w1ozzzf8hk0gdzm]{Reincarnate}.</p>
+
+      <p>Whether or not the save is successful, a creature cannot be the target
+      of this hex again for 1 day.</p>
+  sources:
+    - id: PZO1115
+      pages: '69'
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

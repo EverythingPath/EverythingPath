@@ -1,0 +1,43 @@
+_id: HmxiCHeh7kJkwzqR
+_key: '!items!HmxiCHeh7kJkwzqR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Crystal Sight
+system:
+  abilityType: ex
+  actions:
+    - _id: 6ztwbnmv0hiy88qr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can see through stone, earth, or sand as easily as if it were
+      transparent crystal. Your gaze can penetrate a number of feet equal to
+      your oracle level, or 1/12th this thickness of metal.</p>
+
+      <p>You can use this ability a number of rounds per day equal to your
+      oracle level, but these rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_crystalSight
+  tags:
+    - Revelation
+    - Stone Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

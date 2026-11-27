@@ -1,0 +1,33 @@
+_id: P7qbzmQZKvp9PPqP
+_key: '!items!P7qbzmQZKvp9PPqP'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/tools/navigation/map-marked-red.webp
+name: Lay of the Land
+system:
+  changes:
+    - _id: c2598g7i
+      formula: (min(5,(@item.level)))
+      target: skill.kge
+      type: insight
+  contextNotes:
+    - target: skill.sur
+      text: +[[(min(5,(@item.level)))]] Insight to avoid getting lost.
+    - target: skill.kge
+      text: Can make untrained checks regarding the affected area.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.3wdb34u6m64ctji7]{Lay of the
+      Land}</p><p>This instant familiarity grants you an insight bonus equal to
+      your caster level (maximum +5) on Knowledge (geography) checks and
+      Survival checks to avoid getting lost so long as you remain in the
+      affected area.</p><p>Additionally, for the duration of the spell you can
+      make Knowledge (geography) checks regarding the affected area as though
+      you were trained in that skill.</p>
+  duration:
+    units: hour
+    value: '24'
+  level: 3
+  subType: spell
+type: buff

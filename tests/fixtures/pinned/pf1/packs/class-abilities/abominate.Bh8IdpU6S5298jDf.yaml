@@ -1,0 +1,45 @@
+_id: Bh8IdpU6S5298jDf
+_key: '!items!Bh8IdpU6S5298jDf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Abominate
+system:
+  abilityType: sp
+  actions:
+    - _id: ix2eg9ckrrgm00sp
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates, Will partial
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch transforms a creature within 30 feet into an aberration. This
+      hex acts as @UUID[Compendium.pf1.spells.t8ei2mrmqg7252vw]{Baleful
+      Polymorph}, except the target is transmuted into a Small, Medium, or Large
+      aberration. The target’s abilities are modified as
+      @UUID[Compendium.pf1.spells.6jc9e9qooa4c89vr]{Monstrous Physique IV}.</p>
+
+      <p>Whether or not its save is successful, a creature cannot be the target
+      of this hex again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

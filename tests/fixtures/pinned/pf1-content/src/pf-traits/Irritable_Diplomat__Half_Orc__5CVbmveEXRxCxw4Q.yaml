@@ -1,0 +1,51 @@
+_id: 5CVbmveEXRxCxw4Q
+_key: '!items!5CVbmveEXRxCxw4Q'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Irritable Diplomat (Half-Orc)
+system:
+  actions:
+    - _id: yHmnwhCznYCP4xy3
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  contextNotes:
+    - target: skill.dip
+      text: >-
+        +[[5]] Trait bonus, once per day on a single check. If that check fails,
+        you take a -[[2]] penalty on all Charisma-based checks for the next 10
+        minutes.
+  description:
+    value: >-
+      <p><em>Most people expect half-orcs to be savage and violent, and you’re
+      used to working a little harder to overcome their assumptions.
+      Unfortunately, you’re still working on keeping patient when they ignore
+      your efforts.</em></p><p><strong>Requirements</strong>:
+      Half-Orc</p><p><strong>Benefits</strong>: Once per day, you may choose to
+      gain a +5 trait bonus on any Diplomacy check, but if it fails, you take a
+      –2 penalty on all Charisma-based checks for the next 10 minutes.</p>
+  scriptCalls:
+    - _id: r3QKu53UOSGVdxmc
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: New Script Call
+      type: script
+      value: |
+        actor.rollSkill("dip", {bonus:`5[${item.name}]`});
+  sources:
+    - id: PZO9428
+      pages: '15'
+  subType: trait
+  tags:
+    - Half-Orc
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

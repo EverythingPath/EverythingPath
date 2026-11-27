@@ -1,0 +1,61 @@
+_id: u1O8ALFiyUM4ZAcF
+_key: '!items!u1O8ALFiyUM4ZAcF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/deafening-critical.jpg
+name: Hurling, Lesser
+system:
+  abilityType: ex
+  actions:
+    - _id: uCN9jkVFPJiAKBR6
+      ability:
+        attack: dex
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.str.mod
+        description: Reflex halfes
+        type: ref
+      target:
+        value: One object
+      touch: true
+  associations:
+    classes:
+      - Barbarian
+      - Barbarian (Unchained)
+      - Skald
+  description:
+    instructions: <p>Add damage formula according to object size.</p>
+    value: >-
+      <p>As a full-round action while raging, the barbarian can lift and hurl an
+      object up to one size category smaller than herself with both hands or two
+      size categories smaller with one hand as an improvised weapon with a range
+      increment of 10 feet. This inflicts damage as a <a
+      href="https://aonprd.com/Rules.aspx?Name=Falling%20Objects&amp;Category=Environmental%20Rules">falling
+      object</a> plus the barbarian’s Strength bonus. This damage is halved if
+      the object is not made of stone, metal, or similar material. This is a
+      ranged touch attack, and the target may attempt a Reflex save (DC 10 + 1/2
+      the barbarian’s level + the barbarian’s Strength modifier) for half
+      damage. The barbarian may apply
+      @UUID[Compendium.pf1.feats.FUW5mIXHNBBIQ1Sq]{Power Attack} to this attack
+      as a one- or two-handed weapon, as appropriate.</p>
+  sources:
+    - id: PZO1115
+      pages: '76'
+  subType: classFeat
+  tags:
+    - Rage Power
+type: feat

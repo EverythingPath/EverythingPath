@@ -1,0 +1,105 @@
+_id: J0zfGICU57qryKxj
+_key: '!items!J0zfGICU57qryKxj'
+_stats:
+  coreVersion: '12.343'
+folder: 6XZWJB1Fu5AQ6KhP
+img: icons/weapons/sickles/scythe-bone-green-fire.webp
+name: Reaver's Scythe
+system:
+  actions:
+    - _id: c067qqd7r9b7lti3
+      ability:
+        attack: _default
+        critMult: 4
+        critRange: 19
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      conditionals:
+        - _id: loCUXuli0ihmYAhA
+          modifiers:
+            - _id: t60aERrzOv60B5pI
+              critical: nonCrit
+              damageType:
+                - untyped
+              formula: 2d6
+              subTarget: allDamage
+              target: damage
+          name: Good Target
+      damage:
+        parts:
+          - formula: sizeRoll(2, 4, @size)
+            types:
+              - piercing
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+    - _id: 3lJQ7NzTNvD1RgJB
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Slay Save
+      save:
+        dc: '14'
+        description: Will negates
+        type: will
+  aura:
+    school: nec
+  baseTypes:
+    - Scythe
+  cl: 12
+  description:
+    instructions: >-
+      <p>Bestow one negative level if the creature wielding the Scythe is good
+      aligned.</p>
+    value: >-
+      <p>The black blade of this +2
+      @UUID[Compendium.pf1.rules.JournalEntry.q479ojN4dcCzbWrc.JournalEntryPage.92O28LXrM0PUWjxb]{keen}
+      @UUID[Compendium.pf1.rules.JournalEntry.q479ojN4dcCzbWrc.JournalEntryPage.p9VNGAMwHRbmRsHB]{unholy}
+      scythe reflects faint images of the souls of those it has claimed.
+      Whenever the scythe is used to drop a creature to –1 hit points or less,
+      the creature must immediately make a DC 14 Will save or be instantly
+      slain. If the reaver’s scythe kills a creature, either through damage or
+      because the creature failed its Will save, the wielder immediately
+      receives 1 hero point. This hero point must be used within 1 hour or it is
+      lost. The wielder cannot gain another hero point from the scythe until the
+      first is used or
+      lost.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, @UUID[Compendium.pf1.spells.Item.bbrkkjmgo5kof6gn]{keen
+      edge}, @UUID[Compendium.pf1.spells.Item.gTOG6zLrWHgHztQ8]{malediction},
+      @UUID[Compendium.pf1.spells.Item.okui7mft5bquqfrg]{unholy blight};
+      <strong>Price</strong> 40,318 gp</p>
+  enh: 2
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 80318
+  properties:
+    trp: true
+  sources:
+    - id: PZO1115
+      pages: '325'
+  subType: martial
+  weaponGroups:
+    - bladesHeavy
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

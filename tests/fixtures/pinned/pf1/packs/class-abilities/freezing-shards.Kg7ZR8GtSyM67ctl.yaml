@@ -1,0 +1,65 @@
+_id: Kg7ZR8GtSyM67ctl
+_key: '!items!Kg7ZR8GtSyM67ctl'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/water/projectiles-ice-faceted-shard-salvo-blue.webp
+name: Freezing Shards
+system:
+  abilityType: su
+  actions:
+    - _id: dLgiqFa3ynxuVKQM
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5 ft. radius centered on you
+      damage:
+        parts:
+          - formula: 1d4
+            types:
+              - piercing
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - cold
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - >-
+            Affected area is difficult terrain (except for the caster) for one
+            round.
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex negates piercing and halfs cold
+        type: ref
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action, you can cause shards of ice to burst forth from
+      the ground around you. The shards deal 1d4 points of piercing damage and
+      1d6 points of cold damage + 1 point for every 2 wizard levels you have to
+      all creatures within 5 feet of you. A successful Reflex save (DC = 10 +
+      half your wizard level + your Intelligence modifier) negates the piercing
+      damage and halves the cold damage. The shards remain until the beginning
+      of your next turn; during this time, the area is difficult terrain. You
+      are not affected by your own freezing shards and can move through the area
+      normally. You can use this ability a number of times per day equal to 3 +
+      your Intelligence modifier.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Ice School
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

@@ -1,0 +1,39 @@
+_id: Lebipph87ARrlM40
+_key: '!items!Lebipph87ARrlM40'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_12.jpg
+name: Seize the Initiative
+system:
+  abilityType: su
+  actions:
+    - _id: 6rof8fpf0gw85iy1
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one ally
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>Whenever you and your allies roll for initiative, you can grant one
+      ally within 30 feet the ability to roll twice and take either result. This
+      decision is made before results are revealed. You can use this ability a
+      number of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Battle Rage power of the War Domain.</p>
+  subType: classFeat
+  tag: classFeat_seizeTheInitiative
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

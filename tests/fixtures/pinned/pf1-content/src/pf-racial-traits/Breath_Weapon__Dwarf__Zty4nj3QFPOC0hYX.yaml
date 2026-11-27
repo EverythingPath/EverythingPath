@@ -1,0 +1,91 @@
+_id: Zty4nj3QFPOC0hYX
+_key: '!items!Zty4nj3QFPOC0hYX'
+_stats:
+  coreVersion: '12.331'
+folder: KP5QLO1nPv43LcXI
+img: systems/pf1/icons/races/dwarf.png
+name: Breath Weapon (Dwarf)
+system:
+  actions:
+    - _id: GQ5uLMJPyL7SuS0P
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, (1 + floor(@attributes.hd.total / 2))))d4
+            types:
+              - fire
+              - cold
+              - electric
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use (Cone)
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Reflex half
+        type: ref
+    - _id: jWjazMgMhBRzi3tV
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (min(5, (1 + floor(@attributes.hd.total / 2))))d4
+            types:
+              - fire
+              - cold
+              - electric
+              - acid
+      duration:
+        units: inst
+      measureTemplate:
+        size: '20'
+        type: ray
+      name: Use (Line)
+      save:
+        dc: 10 + floor(@attributes.hd.total / 2) + @abilities.con.mod
+        description: Reflex half
+        type: ref
+  description:
+    instructions: >-
+      <p>Delete the non-selected template type attack and edit the remaining one
+      to use only the damage type selected.</p>
+    value: >-
+      <p><strong>Race</strong>: Dwarf<br /><strong>Replaced Trait(s)</strong>:
+      Greed, Hatred, Stonecunning, Weapon Familiarity</p><hr /><p>Dwarves with
+      this racial trait can call upon the spirit of a sacred dragon to channel a
+      fraction of that dragon's power. Upon taking this trait, the dwarf must
+      select cold, electricity, or fire as the breath weapon's damage type and
+      either a @Distance[15 ft;dual] cone or a @Distance[20 ft;dual] line as the
+      breath weapon's shape. Once these selections are made, they cannot be
+      changed. Once per day, the dwarf can make a supernatural breath attack in
+      the selected shape, dealing 1d4 points of damage of the chosen damage
+      type, plus 1d4 points of damage of that type for every 2 levels above 1st
+      the dwarf has (to a maximum of 5d4 at 9th level). Targets in the area can
+      attempt a Reflex save (DC = 10 + half the dwarf 's level + the dwarf 's
+      Constitution bonus) for half damage.</p><p>This replaces greed, hatred,
+      stonecunning, and weapon familiarity.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9491
+      pages: '4'
+  subType: racial
+  tags:
+    - Dwarf
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

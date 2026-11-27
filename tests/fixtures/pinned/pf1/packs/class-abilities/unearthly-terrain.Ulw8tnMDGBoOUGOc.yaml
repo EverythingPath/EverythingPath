@@ -1,0 +1,43 @@
+_id: Ulw8tnMDGBoOUGOc
+_key: '!items!Ulw8tnMDGBoOUGOc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Unearthly Terrain
+system:
+  abilityType: su
+  actions:
+    - _id: z8xtefrz9zkr0kj5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: 20-ft. radius around you
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can twist the material world into the harsh, jagged edges and
+      uneven angles of the outer planes. As a standard action, you can turn one
+      20- foot square into difficult terrain for 1 round per level.</p>
+
+      <p>You may use this ability a number of times per day equal to 3 + your
+      Charisma bonus.</p>
+  subType: classFeat
+  tag: classFeat_unearthlyTerrain
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

@@ -1,0 +1,43 @@
+_id: XwAryoOw0A6WKTs5
+_key: '!items!XwAryoOw0A6WKTs5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/exhausting-critical.jpg
+name: Fleeting Glance
+system:
+  abilityType: sp
+  actions:
+    - _id: 8o5nvc4ztvjc3ty3
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you can turn <em>invisible</em> for a number of rounds
+      per day equal to your sorcerer level. This ability functions as
+      @UUID[Compendium.pf1.spells.cxgi0ub77t6aink1]{Invisibility, Greater}.
+      These rounds need not be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '76'
+  subType: classFeat
+  tag: classFeat_fleetingGlance
+  tags:
+    - Bloodline Power
+    - Fey Bloodline
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

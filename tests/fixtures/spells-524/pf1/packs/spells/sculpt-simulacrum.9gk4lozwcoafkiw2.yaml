@@ -1,0 +1,47 @@
+_id: 9gk4lozwcoafkiw2
+_key: '!items!9gk4lozwcoafkiw2'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Sculpt Simulacrum
+system:
+  actions:
+    - _id: e183krzjhsk1cpoc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        type: fort
+      target:
+        value: simulacrum touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create cosmetic changes to a simulacrum, similar to
+      @UUID[Compendium.pf1.spells.Item.oj36nfak6jc2s5ky]{disguise self}, except
+      the changes are physical rather than illusory. This does not change any of
+      the simulacrum's abilities.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      psychic: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1117
+      pages: '236'
+type: spell

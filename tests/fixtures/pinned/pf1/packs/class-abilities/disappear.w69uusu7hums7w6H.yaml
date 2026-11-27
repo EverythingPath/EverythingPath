@@ -1,0 +1,38 @@
+_id: w69uusu7hums7w6H
+_key: '!items!w69uusu7hums7w6H'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Disappear
+system:
+  abilityType: sp
+  actions:
+    - _id: i736gx4b0s5i485q
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can become invisible as per the spell as a standard action. The
+      invisibility lasts for 1 round per inquisitor level or until you attack.
+      You can use this ability a number of times per day equal to 3 + your
+      Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_disappear
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat
