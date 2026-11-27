@@ -1,0 +1,39 @@
+_id: PmO50ReytvNYsuFW
+_key: '!items!PmO50ReytvNYsuFW'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/defensive/shield-barrier-flaming-pentagon-red.webp
+name: Fire Supremacy
+system:
+  abilityType: su
+  actions:
+    - _id: LYc8L8vkh6gaXgYC
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: max(1, floor(@class.level / 2))
+            types:
+              - fire
+      name: Fire Damage
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>You gain resistance 5 to fire. At 10th level, this resistance increases
+      to 10. At 20th level, you gain immunity to fire damage. In addition,
+      whenever you are within 5 feet of a source of flame at least as large as a
+      campfire, you can draw the fire around you for 1 round as a swift action.
+      Anyone striking you with a melee weapon or unarmed strike takes an amount
+      of fire damage equal to 1/2 your wizard level (minimum 1). Weapons with
+      reach avoid this damage.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Fire School
+type: feat

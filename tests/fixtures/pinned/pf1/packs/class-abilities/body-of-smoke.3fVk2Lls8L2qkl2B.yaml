@@ -1,0 +1,38 @@
+_id: 3fVk2Lls8L2qkl2B
+_key: '!items!3fVk2Lls8L2qkl2B'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/air-smoke-casting.webp
+name: Body of Smoke
+system:
+  abilityType: su
+  actions:
+    - _id: Oq02dmTmkQgrgPYN
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can assume a
+      @UUID[Compendium.pf1.spells.mqdoexj35atgqafn]{gaseous form} (as per the
+      spell of that name) as a swift action for a number of minutes per day
+      equal to your wizard level. This duration does not need to be consecutive,
+      but it must be used in 1-minute increments.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Smoke School
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

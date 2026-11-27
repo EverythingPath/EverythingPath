@@ -1,0 +1,41 @@
+_id: rPoHllxGfUC4y7us
+_key: '!items!rPoHllxGfUC4y7us'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Speed or Slow Time
+system:
+  abilityType: sp
+  actions:
+    - _id: vu16rhgeri8vazc9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can speed up or slow down time, as either the
+      @UUID[Compendium.pf1.spells.s9amdo5398alb5p0]{Haste} or
+      @UUID[Compendium.pf1.spells.jcr72piqo6g549e1]{Slow} spell.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 12th level and 17th level.</p>
+
+      <p>You must be at least 7th level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_speedOrSlowTime
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 11), 1) + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

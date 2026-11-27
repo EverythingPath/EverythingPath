@@ -1,0 +1,61 @@
+_id: 3uDC2K6NWo3L6okS
+_key: '!items!3uDC2K6NWo3L6okS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/lance.PNG
+name: Shieldsplitter Lance
+system:
+  actions:
+    - _id: i6ci5fdakkiry38q
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shieldsplitterLance
+  aura:
+    school: evo
+  baseTypes:
+    - Lance
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 keen lance has the ability to penetrate and destroy shields.
+      Whenever its wielder uses it to successfully strike an opponent who
+      carries a shield, the opponent's shield takes the same damage as the
+      opponent. If the wielder uses the lance to make a sunder attack against a
+      shield, it bypasses the shield's hardness.</p><p><strong>Base
+      Item</strong>: keen
+      lance</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, keen edge, shatter</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 18310
+  properties:
+    rch: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - spears
+  weight:
+    value: 10
+type: weapon

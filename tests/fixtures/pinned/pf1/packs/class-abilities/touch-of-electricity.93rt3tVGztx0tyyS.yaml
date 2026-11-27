@@ -1,0 +1,54 @@
+_id: 93rt3tVGztx0tyyS
+_key: '!items!93rt3tVGztx0tyyS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Touch of Electricity
+system:
+  abilityType: su
+  actions:
+    - _id: ugvgq78pvawdjgov
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can perform a melee touch attack that deals
+      1d6 points of electricity damage +1 point for every two oracle levels you
+      possess.</p>
+
+      <p>You can use this ability a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+
+      <p>At 11th level, any weapon that you wield is treated as a shock
+      weapon.</p>
+  subType: classFeat
+  tag: classFeat_touchOfElectricity
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

@@ -1,0 +1,56 @@
+_id: 98277u53x5r925cm
+_key: '!items!98277u53x5r925cm'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Forced Repentance
+system:
+  actions:
+    - _id: 9r6a5skmtcd9z4eh
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one evil creature without the evil subtype
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You force an evil creature that does not have the evil subtype to
+      momentarily reflect on its past actions and be overcome by grief and
+      conscience. The target immediately drops prone and begins to loudly
+      confess all of its sins and transgressions to the caster for the duration
+      of the spell. The spell immediately ends if you move out of line of sight
+      or if the target is attacked.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      inquisitor: 4
+      paladin: 4
+    subDomain:
+      Redemption: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '224'
+  subschool:
+    - compulsion
+type: spell

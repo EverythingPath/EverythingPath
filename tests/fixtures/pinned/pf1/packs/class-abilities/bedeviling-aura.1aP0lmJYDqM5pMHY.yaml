@@ -1,0 +1,35 @@
+_id: 1aP0lmJYDqM5pMHY
+_key: '!items!1aP0lmJYDqM5pMHY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-orange-1.jpg
+name: Bedeviling Aura
+system:
+  abilityType: su
+  actions:
+    - _id: 4866qbi3elhcxohi
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura that bedevils your enemies
+      with phantasmal assailants. Enemies within this aura move at half
+      <em>speed</em>, are unable to take <em>attacks of opportunity</em>, and
+      are considered to be flanked. This is a mind-affecting effect. You can use
+      this ability for a number of rounds per day equal to your wizard level.
+      These rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_bedevilingAura
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

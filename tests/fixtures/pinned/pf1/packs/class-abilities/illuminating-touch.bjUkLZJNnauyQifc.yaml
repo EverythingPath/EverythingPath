@@ -1,0 +1,41 @@
+_id: bjUkLZJNnauyQifc
+_key: '!items!bjUkLZJNnauyQifc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Illuminating Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: gitvbxami4mtlyr4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You cause your hand to shimmer with divine radiance, allowing you to
+      touch a creature as a standard action and give it a bonus equal to 1/2
+      your inquisitor level on a single Will saving throw, Knowledge check,
+      Perception check, or Sense Motive check. This ability lasts for 1 hour or
+      until the creature chooses to apply the bonus to a roll. You can use this
+      ability to grant the bonus a number of times per day equal to 3 + your
+      Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_illuminatingTouch
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

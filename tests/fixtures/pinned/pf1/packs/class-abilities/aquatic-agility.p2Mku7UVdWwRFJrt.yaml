@@ -1,0 +1,38 @@
+_id: p2Mku7UVdWwRFJrt
+_key: '!items!p2Mku7UVdWwRFJrt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-red-3.jpg
+name: Aquatic Agility
+system:
+  abilityType: su
+  actions:
+    - _id: x2tijj7ig3gdipfa
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Magus
+  description:
+    value: >-
+      <p>As an immediate action, the magus can spend 1 point from his arcane
+      pool to gain the benefits of water breathing for 1 round per level. During
+      this time, he can ignore the effects of rough water and underwater combat
+      on his attacks and movement.</p>
+
+      <p>The magus must be at least 6th level before selecting this magus
+      arcana.</p>
+  subType: classFeat
+  tags:
+    - Magus Arcana
+type: feat

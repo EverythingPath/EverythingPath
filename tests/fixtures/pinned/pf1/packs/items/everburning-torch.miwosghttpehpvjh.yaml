@@ -1,0 +1,75 @@
+_id: miwosghttpehpvjh
+_key: '!items!miwosghttpehpvjh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/torch.jpg
+name: Everburning torch
+system:
+  actions:
+    - _id: lp6ctTR5WcsvNTzZ
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-2[Improvised Weapon]'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 3, @size)
+            types:
+              - bludgeoning
+      extraAttacks:
+        type: standard
+      name: Attack
+      uses:
+        autoDeductChargesCost: '0'
+  description:
+    value: >-
+      <p>This otherwise normal torch has a
+      <em>@UUID[Compendium.pf1.spells.Item.b8vp8fgt1o6pq1qc]{continual
+      flame}</em> spell cast on it. This causes it to shed light like an
+      ordinary torch, but it does not emit heat or deal fire damage if used as a
+      weapon.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 110
+  scriptCalls:
+    - _id: W08BUriKQTZ6gTqH
+      category: equip
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (!equipped) return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 40 }));
+    - _id: dqXoJ4di6mBdiYw0
+      category: equip
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |-
+        if (!token) return;
+        if (equipped) return;
+
+        // Lights off as it comes from Foundry default
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1110
+      pages: 158, 160
+    - id: PZO1123
+      pages: 56, 63
+  subType: gear
+  weight:
+    value: 1
+type: loot

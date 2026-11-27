@@ -1,0 +1,88 @@
+_id: alQVMlHc89hMxK2M
+_key: '!items!alQVMlHc89hMxK2M'
+_stats:
+  coreVersion: '12.343'
+folder: HFLxp79AxYLcggU0
+img: icons/equipment/shield/heater-steel-segmented-purple.webp
+name: Hard light shield
+system:
+  actions:
+    - _id: 81z8gsiavh9mjs8i
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Activate / Deactivate
+      range:
+        units: personal
+    - _id: CjpDHShBUJFbJcFQ
+      ability:
+        attack: str
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Bash
+      range:
+        units: melee
+      uses:
+        autoDeductChargesCost: '0'
+  armor:
+    acp: null
+    value: 2
+  description:
+    value: >-
+      <h3>Statistics</h3><p><strong>Type</strong> Shield</p><p><strong>Max Dex
+      Bonus</strong> -; <strong>Armor Check Penalty</strong>
+      0</p><p><strong>Arcane Spell Failure Chance</strong>
+      10%</p><p><strong>Speed (30 ft.)</strong> -; <strong>Speed (20
+      ft.)</strong> -</p><p><strong>Capacity</strong> 20; <strong>Usage</strong>
+      1 charge/minute</p><h3>Description</h3><p>This bulky bracelet is covered
+      in blinking blue lights and pulsing holographic emitters. A hard light
+      shield produces a translucent but substantial holographic barrier when
+      activated. The shield bonus counts as a force effect and applies to the
+      wielder's touch AC against beam and ray attacks (but not other touch
+      attacks). As a transparent force effect, a hard light shield provides no
+      bonus against lasers. A hard light shield can be used to deliver shield
+      bash attacks like a heavy shield.</p><p>When turned off, a hard light
+      shield provides no AC bonus and imposes no spell failure chance.
+      Activating or deactivating a hard light shield is a move action. This item
+      occupies the wearer's wrist
+      slot.</p><h3>Construction</h3><p><strong>Craft</strong> DC 27;
+      <strong>Cost</strong> 3,200
+      gp</p><p>@UUID[Compendium.pf1.feats.Item.SkiZsGPMlsMNeBhf]{Craft
+      Technological Arms and Armor}, graviton lab</p>
+  equipmentSubtype: lightShield
+  hp:
+    base: 10
+  links:
+    supplements:
+      - uuid: Compendium.pf1.commonbuffs.Item.0AfEoAsDnhvMUW2D
+  price: 6400
+  slot: wrists
+  sources:
+    - id: PZO9272
+      pages: '30'
+  spellFailure: 10
+  subType: other
+  uses:
+    maxFormula: '20'
+    per: charges
+    value: 20
+  weight:
+    value: 1
+type: equipment

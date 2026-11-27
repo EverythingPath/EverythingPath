@@ -1,0 +1,44 @@
+_id: h6Ook9Q9qF0lpYGL
+_key: '!items!h6Ook9Q9qF0lpYGL'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/beast_03.jpg
+name: Serpent's Fang
+system:
+  abilityType: ex
+  actions:
+    - _id: u4iuph4z1haet8ys
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can grow fangs as a <em>free action</em>. These fangs
+      are treated as a natural weapon inflicting 1d4 points of damage plus your
+      <em>Strength</em> modifier (1d3 if you are Small) plus poison
+      (Bite—injury; save <em>Fort</em> DC 10 + 1/2 your sorcerer level + your
+      <em>Constitution</em> modifier; frequency 1/round for 6 rounds; effect 1
+      <em>Con</em> damage; cure 1 save). At 5th level, these fangs are
+      considered magical for the purpose of overcoming <em>DR</em> and the
+      poison damage increases to 1d2 <em>Con</em>. At 7th level, your poison
+      requires 2 successful saves to cure. At 11th level, your poison damage
+      increases to 1d4 <em>Con</em>. You can use your fangs for a number of
+      rounds per day equal to 3 + your <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_serpentsFang
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

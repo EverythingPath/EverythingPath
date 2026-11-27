@@ -1,0 +1,60 @@
+_id: 17aTGwzPnyZazYHY
+_key: '!items!17aTGwzPnyZazYHY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Balefire
+system:
+  abilityType: su
+  actions:
+    - _id: xtoy2f1cdbdrbwc6
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You call upon the cleansing or searing fires of the Outer Rifts to burn
+      your foes. As a standard action, one target within 30 feet is wreathed in
+      screaming flames and takes 1d6 points of fire damage per level. A
+      successful Reflex save halves this damage.</p>
+
+      <p>At 10th level, the fire’s howls cause any creatures damaged by it to be
+      staggered for 1 round.</p>
+
+      <p>At 15th level, creatures who fail their saves against the balefire are
+      staggered for 1d4 rounds and stunned for 1 round.</p>
+
+      <p>You can use this ability once per day plus one additional time per day
+      at 10th level.</p>
+  subType: classFeat
+  tag: classFeat_balefire
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 10), 1)
+    per: day
+type: feat

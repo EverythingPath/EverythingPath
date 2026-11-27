@@ -1,0 +1,44 @@
+_id: ab8EI9sncZv7R6pJ
+_key: '!items!ab8EI9sncZv7R6pJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Harrowing Curse
+system:
+  abilityType: su
+  actions:
+    - _id: 1hswynkr482vr792
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can curse a target creature by touching it with a card
+      randomly drawn from a harrow deck she owns. The target is affected as if
+      by the spell @UUID[Compendium.pf1.spells.lsboosfk26m0ycqv]{Bestow Curse}
+      using the witch’s caster level, except that the witch can decrease only
+      the ability score that corresponds to the suit of the card drawn. Whether
+      or not the save is successful, a creature cannot be targeted by this hex
+      more than once in 24 hours.</p><p>At 15th level, this hex acts as a
+      @UUID[Compendium.pf1.spells.dzctlcf0sy7o2fa3]{major curse} spell.</p><p>A
+      witch with the cartomancer archetype can combine this hex with her spell
+      deck’s deliver touch spell ability.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+    - Harrow Deck
+type: feat

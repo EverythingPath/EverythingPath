@@ -1,0 +1,80 @@
+_id: mLxAldGcZ0UnEfd7
+_key: '!items!mLxAldGcZ0UnEfd7'
+_stats:
+  coreVersion: '12.331'
+folder: hgugkB6LKBczuduh
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Change Shape (Skinwalker)
+system:
+  abilityType: su
+  actions:
+    - _id: j7ADsWbJaHfa6bG0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Each time you assumes bestial form, you can choose to increase one
+        physical ability score with a +2 racial bonus (Strength, Dexterity, or
+        Constitution) and to gain one of the following
+        features:</p><ul><li><p>Two claw attacks that each deal 1d4 points of
+        damage,</p></li><li><p>Darkvision to a range of @Distance[60 ft;dual],
+        or a</p></li><li><p>+1 natural armor bonus.</p></li></ul><p>These
+        benefits last until you return to humanoid form as a swift action.</p>
+      duration:
+        units: spec
+        value: until you assume humanoid form
+      name: Change Shape
+      range:
+        units: personal
+  description:
+    instructions: >-
+      <p><span style="mso-ansi-language:EN-CA">You must modify your natural
+      attack(s) to match the parameters specified in this trait, including
+      setting damage, reach, etc. manually. These natural attacks may only be
+      used when selected during a shape change.</span></p>
+    value: >-
+      <p><strong>Race</strong>: Skinwalker</p><hr /><p>A skinwalker can change
+      shape to a bestial form as a standard action. In bestial form, a
+      skinwalker gains a +2 racial bonus to his choice of Strength, Dexterity,
+      or Constitution. While in this form, a skinwalker also takes on an
+      animalistic feature that provides a special effect. Each time a skinwalker
+      assumes bestial form, he can choose to gain one of the following features
+      two claw attacks that each deal 1d4 points of damage, darkvision to a
+      range of @Distance[60 ft;dual], or a +1 natural armor bonus. These
+      benefits last until the skinwalker returns to his humanoid form as a swift
+      action. A skinwalker must first return to his humanoid form before
+      changing to bestial form again to change benefits.</p><hr /><p><strong>+2
+      Strength:</strong> @Toggle[Change Shape (Skinwalker,
+      STR)]</p><p><strong>+2 Dexterity:</strong> @Toggle[Change Shape
+      (Skinwalker, DEX)]</p><p><strong>+2 Constitution:</strong> @Toggle[Change
+      Shape (Skinwalker, CON)]</p><p><strong>Natural Armor:</strong>
+      @Toggle[Change Shape (Skinwalker, Natural
+      Armor)]</p><p><strong>Darkvision:</strong> @Toggle[Change Shape
+      (Skinwalker, Darkvision)]</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.MZnbCVzqpvPsMvfT
+      - name: Change Shape (Skinwalker, Darkvision)
+        uuid: Compendium.pf-content.pf-buffs.Item.Y0grS8O0koZNwFzj
+      - name: Change Shape (Skinwalker, Natural Armor)
+        uuid: Compendium.pf-content.pf-buffs.Item.mcSOsUhKl1gXl2jH
+      - name: Change Shape (Skinwalker, STR)
+        uuid: Compendium.pf-content.pf-buffs.Item.avjzDhqw5rjogazM
+      - name: Change Shape (Skinwalker, DEX)
+        uuid: Compendium.pf-content.pf-buffs.Item.qmWtLB6tIaNTauHh
+      - name: Change Shape (Skinwalker, CON)
+        uuid: Compendium.pf-content.pf-buffs.Item.uQd5gy3SWEAy6yXQ
+  showInQuickbar: true
+  sources:
+    - id: PZO1133
+      pages: '233'
+    - id: PZO9280
+      pages: '248'
+    - id: PZO9439
+      pages: '7'
+  subType: racial
+  tags:
+    - Skinwalker
+type: feat

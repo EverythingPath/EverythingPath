@@ -1,0 +1,46 @@
+_id: 3B1zVwRtjHr7khNN
+_key: '!items!3B1zVwRtjHr7khNN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rhoka.PNG
+name: Slowing Strike (SLA)
+system:
+  abilityType: ex
+  actions:
+    - _id: 2dK8NN3vyqzBWHJ8
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: round
+        value: 1d4
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates
+        type: fort
+  associations:
+    classes:
+      - Slayer
+  description:
+    value: >-
+      <p>An opponent damaged by the slayer’s sneak attack has its speed halved
+      for 1d4 rounds. A successful Fortitude saving throw negates this effect
+      (DC = 10 + 1/2 of the slayer’s level + the slayer’s Intelligence
+      modifier). Against creatures with multiple types of movement, the slayer
+      must choose which movement type to affect. If the slayer affects a
+      creature’s flight movement, its maneuverability is reduced by one step; if
+      it’s airborne at the time, it falls unless it succeeds at a DC 10 Fly
+      check.</p>
+
+      <p>If the slayer targets a creature already affected by this ability, its
+      speed and maneuverability are not further reduced; the slayer may either
+      extend the duration of that effect by 1d4 rounds or choose another
+      movement type to affect (keeping track of the duration of each affected
+      movement separately).</p>
+  subType: classFeat
+  tags:
+    - Slayer Talent
+type: feat

@@ -1,0 +1,42 @@
+_id: nuqoiwsobKH2Vkp5
+_key: '!items!nuqoiwsobKH2Vkp5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_01.jpg
+name: Adoration
+system:
+  abilityType: su
+  actions:
+    - _id: 2id9za2l9xgazyvg
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As an immediate action, you can attempt to thwart a melee or ranged
+      attack that targets you. This ability functions as sanctuary, but only
+      against one individual attack. You must use the ability after the attack
+      is declared but before the roll is made. The creature attacking you
+      receives a Will save to negate this effect. If a creature has more than
+      one attack, this ability only affects one of the attacks. You can use the
+      ability a number of times per day equal to 3 + your Wisdom modifier. This
+      is a mind-affecting effect.</p>
+
+      <p>This power replaces the Dazing Touch power of the Charm Domain.</p>
+  subType: classFeat
+  tag: classFeat_adoration
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

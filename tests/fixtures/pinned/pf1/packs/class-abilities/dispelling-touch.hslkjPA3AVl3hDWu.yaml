@@ -1,0 +1,85 @@
+_id: hslkjPA3AVl3hDWu
+_key: '!items!hslkjPA3AVl3hDWu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_16.jpg
+name: Dispelling Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: 4u1av326ifld7tgo
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>One object, creature, or spell is the target of the <em>dispel
+        magic</em> spell. You make one dispel check (1d20 + your caster level)
+        and compare that to the spell with highest caster level (DC = 11 + the
+        spell's caster level). If successful, that spell ends.</p><p>If not,
+        compare the same result to the spell with the next highest caster level.
+        Repeat this process until you have dispelled one spell affecting the
+        target, or you have failed to dispel every spell.</p><p>dispel magic,
+        targeting a creature affected by <em>stoneskin</em> (caster level 12th)
+        and <em>fly</em> (caster level 6th). The caster level check results in a
+        19. This check is not high enough to end the <em>stoneskin</em> (which
+        would have required a 23 or higher), but it is high enough to end the
+        <em>fly</em> (which only required a 17). Had the dispel check resulted
+        in a 23 or higher, the <em>stoneskin</em> would have been dispelled,
+        leaving the <em>fly</em> intact. Had the dispel check been a 16 or less,
+        no spells would have been affected.</p><p>You can also use a targeted
+        dispel to specifically end one spell affecting the target or one spell
+        affecting an area (such as a <em>wall of</em> fire). You must name the
+        specific spell effect to be targeted in this way. If your caster level
+        check is equal to or higher than the DC of that spell, it ends. No other
+        spells or effects on the target are dispelled if your check is not high
+        enough to end the targeted effect.</p><p>If you target an object or
+        creature that is the effect of an ongoing spell (such as a monster
+        <em>summoned</em> by <em>summon</em> monster), you make a dispel check
+        to end the spell that conjured the object or creature.</p><p>If the
+        object that you target is a magic item, you make a dispel check against
+        the item's caster level (DC = 11 + the item's caster level). If you
+        succeed, all the item's magical properties are suppressed for 1d4
+        rounds, after which the item recovers its magical properties. A
+        suppressed item becomes nonmagical for the duration of the effect. An
+        interdimensional opening (such as a <em>bag of</em> holding) is
+        temporarily closed. A magic item's physical properties are unchanged: A
+        suppressed magic sword is still a sword (a masterwork sword, in fact).
+        Artifacts and deities are unaffected by mortal magic such as
+        this.</p><p>You automatically succeed on your dispel check against any
+        spell that you cast yourself.</p>
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can use a targeted
+      @UUID[Compendium.pf1.spells.Item.gmgwyjfpeuuc4t4o]{dispel magic} effect as
+      a melee touch attack. You can use this ability once per day at 8th level
+      and one additional time per day for every four cleric levels beyond
+      8th.</p>
+  sources:
+    - id: PZO1110
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_dispellingTouch
+  tags:
+    - Domain Power
+    - Magic Domain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

@@ -1,0 +1,24 @@
+_id: Q8xnt84nTaUmKgo1
+_key: '!items!Q8xnt84nTaUmKgo1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/greater-shield-focus.jpg
+name: Fearless
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Sorcerer
+  changes:
+    - _id: 2ro2xe0x
+      formula: 1 + if(gte(@class.level, 9), 1)
+      target: nac
+      type: untyped
+  description:
+    value: >-
+      <p>At 3rd level, you gain a +4 bonus on saving throws made against fear
+      and a +1 <em>natural armor</em> bonus. At 9th level, you lose your
+      <em>light sensitivity</em>, gain immunity to fear, and your <em>natural
+      armor</em> bonus increases to +2.</p>
+  subType: classFeat
+type: feat

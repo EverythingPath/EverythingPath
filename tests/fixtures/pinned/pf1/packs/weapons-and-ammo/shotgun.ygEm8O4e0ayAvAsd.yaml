@@ -1,0 +1,77 @@
+_id: ygEm8O4e0ayAvAsd
+_key: '!items!ygEm8O4e0ayAvAsd'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-topbarrel.webp
+name: Shotgun
+system:
+  actions:
+    - _id: iwz1ql3iyoix416k
+      ability:
+        attack: _default
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '20'
+  ammo:
+    type: gunBullet
+  baseTypes:
+    - Shotgun
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d6 (small), 1d8 (medium);
+      <b>Critical</b> x2; <b>Range</b> 20 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2; <b>Capacity</b> 1</p>
+
+      <h3>Description</h3>
+
+      <p>This advanced version of the blunderbuss shoots in a 30-foot cone when
+      firing pellets, and has a 20-foot range increment when firing a bullet
+      (often called a slug). Shotguns can either be simple and functional, or
+      art pieces in their own right, with engravings and inlay on the stocks and
+      breeches. Those used by the upper class are often emblazoned with images
+      of game animals, family crests, or elaborate maker's marks.</p>
+
+      <p>A shotgun uses metal cartridges (loaded with either a bullet or
+      pellets) as ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 5000
+  properties:
+    sct: true
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Advanced Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 12
+type: weapon

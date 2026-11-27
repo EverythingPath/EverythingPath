@@ -1,0 +1,37 @@
+_id: kYewJH9317exDQ6q
+_key: '!items!kYewJH9317exDQ6q'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/protect-orange-2.jpg
+name: Prescience
+system:
+  abilityType: su
+  actions:
+    - _id: by5a1pa30om76fpv
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At the beginning of your turn, you may, as a <em>free action</em>, roll
+      a single d20. At any point before your next turn, you may use the result
+      of this roll as the result of any d20 roll you are required to make. If
+      you do not use the d20 result before your next turn, it is lost. You can
+      use this ability a number of times per day equal to 3 + your
+      <em>Intelligence</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_prescience
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

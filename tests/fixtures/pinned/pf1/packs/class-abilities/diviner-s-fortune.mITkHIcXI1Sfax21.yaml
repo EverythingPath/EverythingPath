@@ -1,0 +1,42 @@
+_id: mITkHIcXI1Sfax21
+_key: '!items!mITkHIcXI1Sfax21'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/shielding-eerie-3.jpg
+name: Diviner's Fortune
+system:
+  abilityType: sp
+  actions:
+    - _id: keku9aq9ooukssrw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: Creature Touched
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>When you activate this school power, you can touch any creature as a
+      standard action to give it an insight bonus on all of its attack rolls,
+      skill checks, ability checks, and saving throws equal to 1/2 your wizard
+      level (minimum +1) for 1 round. You can use this ability a number of times
+      per day equal to 3 + your <em>Intelligence</em> modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_divinersFortune
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat
