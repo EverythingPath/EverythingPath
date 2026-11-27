@@ -1,0 +1,58 @@
+_id: JIKjq2YVaRlI4svE
+_key: '!items!JIKjq2YVaRlI4svE'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/water/barrier-ice-crystal-wall-jagged-blue.webp
+name: Icy Shackles
+system:
+  abilityType: su
+  actions:
+    - _id: TI2QgYKMdPJgzSET
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      notes:
+        effect:
+          - >-
+            Creature takes [[@abilities.int.mod]] cold damage at the beginning
+            of its turn. The creature can try to free itself with a DC [[10 +
+            floor(@class.level / 2) + @abilities.int.mod]] strength check as a
+            standard action.
+      range:
+        units: touch
+      target:
+        value: One creature touched
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, as a standard action, you can make a melee touch attack
+      against a foe to conjure icy restraints around its ankles, reducing its
+      base speed to 5 feet and dealing it an amount of cold damage at the
+      beginning of its turn equal to your Intelligence modifier. The manacles
+      have AC 10, hardness 0, and 30 hit points, and a creature can destroy them
+      with a successful Strength check (DC = 10 + half your wizard level + your
+      Intelligence modifier) as a standard action. The icy shackles melt away
+      after 1 minute. You can use this ability a number of times per day equal
+      to your Intelligence modifier.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Ice School
+  uses:
+    maxFormula: '@abilities.int.mod'
+    per: day
+type: feat

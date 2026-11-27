@@ -1,0 +1,48 @@
+_id: 6LV4SynpRfRXkpQh
+_key: '!items!6LV4SynpRfRXkpQh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Wind Sight
+system:
+  abilityType: ex
+  actions:
+    - _id: 8a8bbathta8wihwh
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You ignore penalties on Perception checks based on wind and the first
+      100 feet of distance.</p>
+
+      <p>At 7th level, as a standard action, you can see and hear into any area
+      (as if using clairaudience and clairvoyance) within range as long as there
+      is an unobstructed path for air to travel between you and the target area
+      (this does not require line of effect, meaning the path can turn corners
+      and go through spaces no smaller than 1 inch in diameter).</p>
+
+      <p>You can use this ability a number of rounds per day equal to your
+      oracle level, but these rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_windSight
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

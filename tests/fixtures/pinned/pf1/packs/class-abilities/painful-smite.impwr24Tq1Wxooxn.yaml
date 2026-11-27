@@ -1,0 +1,42 @@
+_id: impwr24Tq1Wxooxn
+_key: '!items!impwr24Tq1Wxooxn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/arrow_11.jpg
+name: Painful Smite
+system:
+  abilityType: su
+  actions:
+    - _id: wnrpu52xzxekm509
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>Prior to making a melee attack roll, you can choose to convert all
+      damage from that strike into nonlethal damage, adding your Wisdom modifier
+      to the damage. If your attack hits, as a free action you can attempt an
+      Intimidate check to demoralize the target. You gain a bonus on this
+      Intimidate check equal to the amount of nonlethal damage dealt by the
+      painful smite. You can use this ability a number of times per day equal to
+      3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Destructive Smite power of the Destruction
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_painfulSmite
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

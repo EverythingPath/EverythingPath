@@ -1,0 +1,65 @@
+_id: n24mpqoz2rrn1fsc
+_key: '!items!n24mpqoz2rrn1fsc'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Protection from Spores
+system:
+  actions:
+    - _id: snuetnpl3zta6fcr
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a touch, you bolster a creature's body to protect it from the
+      harmful effects of spores and similar afflictions. While under the effect
+      of this spell, a creature is immune to the effects of brown mold, green
+      slime, russet mold, yellow mold, and any similar hazard, provided the
+      hazard is CR 6 or lower. Similarly, the creature is immune to poison,
+      disease, and infestation attacks from all fungal creatures of CR 6 or
+      lower, including  effects such as basidirond spores, violet fungus rot,
+      and the like. The target is immune to fungus-based toxins, such as striped
+      toadstool. Against similar hazards or monsters of CR 7 or higher, the
+      target gains a bonus on all saving throws against the effect equal to half
+      your caster level. <i>Protection from Spores</i> offers no protection
+      against fungal infestations created by the seeded, by the spell <i>what
+      grows within</i>, or by Xhamen-Dor.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      cleric: 2
+      druid: 2
+      hunter: 1
+      investigator: 2
+      oracle: 2
+      ranger: 1
+      shaman: 2
+      warpriest: 2
+      witch: 2
+  level: 2
+  school: abj
+  sources:
+    - id: PZO90113
+      pages: '66'
+  sr: false
+type: spell

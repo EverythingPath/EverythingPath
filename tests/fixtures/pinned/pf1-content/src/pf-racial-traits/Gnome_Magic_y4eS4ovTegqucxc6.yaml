@@ -1,0 +1,175 @@
+_id: y4eS4ovTegqucxc6
+_key: '!items!y4eS4ovTegqucxc6'
+_stats:
+  coreVersion: '12.331'
+folder: 1OWNsl3OovdHDbuP
+img: icons/svg/book.svg
+name: Gnome Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: se8DQ2WxyXc1ZKUy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft (3 m) radius area
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+        lights}</p><p>Depending on the version selected, you create up to four
+        lights that resemble lanterns or torches (and cast that amount of
+        light), or up to four glowing spheres of light (which look like
+        will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The
+        dancing lights must stay within a @Distance[10 ft;dual]-radius area in
+        relation to each other but otherwise move as you desire (no
+        concentration required): forward or back, up or down, straight or
+        turning corners, or the like. The lights can move up to @Distance[100
+        ft;dual] per round. A light winks out if the distance between you and it
+        exceeds the spell's range.</p><p>You can only have one dancing lights
+        spell active at any one time. If you cast this spell while another
+        casting is still in effect, the previous casting is dispelled. If you
+        make this spell permanent, it does not count against this
+        limit.</p><p>Dancing lights can be made permanent with a permanency
+        spell.</p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights
+      range:
+        units: medium
+        value: '@attributes.hd.total * 10 +100'
+      target:
+        value: up to 4 lights
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: eVIDrKx5RiCl3jPo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost
+        sound},</p><p>Ghost sound allows you to create a volume of sound that
+        rises, recedes, approaches, or remains at a fixed place. You choose what
+        type of sound ghost sound creates when casting it and cannot thereafter
+        change the sound's basic character.</p><p>The volume of sound created
+        depends on your level. You can produce as much noise as four normal
+        humans per caster level (maximum 40 humans). Thus, talking, singing,
+        shouting, walking, marching, or running sounds can be created. The noise
+        a ghost sound spell produces can be virtually any type of sound within
+        the volume limit. A horde of rats running and squeaking is about the
+        same volume as eight humans running and shouting. A roaring lion is
+        equal to the noise from 16 humans, while a roaring dragon is equal to
+        the noise from 32 humans. Anyone who hears a ghost sound receives a Will
+        save to disbelieve.</p><p>Ghost sound can enhance the effectiveness of a
+        silent image spell.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Ghost Sound
+      notes:
+        effect:
+          - Save DC includes the +1 benefit provided by this trait
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod +10 + 1'
+        description: Disbelief
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: Efww05lZ4mo6ImYc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: ZifmlDf6T05YXK5u
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+        animals}.</p><p>You can ask questions of and receive answers from
+        animals, but the spell doesn't make them any more friendly than normal.
+        Wary and cunning animals are likely to be terse and evasive, while the
+        more stupid ones make inane comments. If an animal is friendly toward
+        you, it may do some favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Speak with Animals
+      range:
+        units: personal
+      target:
+        value: you
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  description:
+    value: >-
+      <p><strong>Prerequisite</strong>: Gnome subtype</p><hr /><p>Members of
+      this race gain a +1 bonus to the DC of any saving throws against illusion
+      spells that they cast. Members of this race with a Charisma score of 11 or
+      higher also gain the following spell-like abilities: 1/
+      day—<em>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+      lights}</em>, <em>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost
+      sound}</em>,
+      <em>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}</em>,
+      and <em>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+      animals}. </em> The caster level for these effects is equal to the user’s
+      level. The DC for the spell-like abilities is equal to 10 + the spell’s
+      level + the user’s Charisma modifier.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO1121
+      pages: '228'
+  subType: racial
+  tags:
+    - Race Builder
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    value: 0
+type: feat

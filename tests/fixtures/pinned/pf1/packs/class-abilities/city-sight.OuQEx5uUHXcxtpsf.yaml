@@ -1,0 +1,40 @@
+_id: OuQEx5uUHXcxtpsf
+_key: '!items!OuQEx5uUHXcxtpsf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: City Sight
+system:
+  abilityType: su
+  actions:
+    - _id: 5oqllgs77gc4s3k4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: ifelse(gte(@class.level, 8), 10, 1)
+      name: Use
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch curses a target with the simple vision of urban mortals. On a
+      failed Fortitude save, the subject loses the use of darkvision,
+      greensight, low-light vision, see in darkness, and other visual abilities
+      beyond simple sight, but not nonvisual means of perception like
+      blindsight, scent, or tremorsense. This effect lasts 1 minute.</p>
+
+      <p>At 8th level, this effect lasts for 10 minutes instead. Whether or not
+      the creature succeeds at the saving throw, it can’t be the target of this
+      hex again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

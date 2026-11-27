@@ -1,0 +1,43 @@
+_id: DrBBxD60RS1ldNvf
+_key: '!items!DrBBxD60RS1ldNvf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_23.jpg
+name: Venomous Saliva
+system:
+  abilityType: su
+  actions:
+    - _id: 16ntadf1t99lhite
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: weapon held
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>Just as certain serpents can spray poison from their fangs, as a swift
+      action, you can spit a gout of life-stealing venom onto a weapon you are
+      wielding. The poison lasts for 1 minute or until you make an attack with
+      that weapon that injures a foe. Life-Stealing Venom: Injury; save Fort DC
+      10 + half your class level + your Wisdom modifier; frequency 1/round for 3
+      rounds; effect 1 Con damage; cure 1 save. You can use the venomous saliva
+      ability a number of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Venomous Stare power of the Scalykind
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_venomousSaliva
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

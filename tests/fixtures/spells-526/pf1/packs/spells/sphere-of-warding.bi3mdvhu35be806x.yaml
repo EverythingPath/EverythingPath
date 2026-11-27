@@ -1,0 +1,60 @@
+_id: bi3mdvhu35be806x
+_key: '!items!bi3mdvhu35be806x'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Sphere of Warding
+system:
+  actions:
+    - _id: 8w4qot59aijeqgdo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@cl'
+      effect: 10-ft.-radius sphere emanating from point touched
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (see text)
+        type: will
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You create a luminescent sphere of orbiting energy that harms
+      incorporeal creatures and dispossesses them of any stolen bodies. An
+      incorporeal creature must succeed at a Will save to enter a space
+      overlapping with the sphere; failure means the creature cannot pass
+      through the sphere, as though it were a <i>Wall of Force</i>. If the
+      incorporeal creature succeeds, it may pass through the sphere at will,
+      though if it ends its turn within the sphere, it takes a number of points
+      of force damage equal to 1d6 + 1 per caster level (maximum +10).</p><p>If
+      a creature possessing another creature's body (via either <i>magic jar</i>
+      or a similar effect) enters a <i>Sphere of Warding</i>, that creature is
+      immediately ejected from its host body, the host's spirit returns to its
+      body if it's able, and the possession immediately ends. When ejected, the
+      body enters the sphere, while the possessing creature takes the
+      appropriate amount of force damage (no save) and is shunted to the
+      exterior of the sphere.</p>
+  learnedAt:
+    class:
+      cleric: 5
+      inquisitor: 4
+      oracle: 5
+      warpriest: 5
+      witch: 5
+  level: 5
+  school: abj
+  sources:
+    - id: PZO9444
+      pages: '19'
+type: spell

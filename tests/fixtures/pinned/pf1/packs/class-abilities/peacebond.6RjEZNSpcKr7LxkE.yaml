@@ -1,0 +1,44 @@
+_id: 6RjEZNSpcKr7LxkE
+_key: '!items!6RjEZNSpcKr7LxkE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Peacebond
+system:
+  abilityType: su
+  actions:
+    - _id: tjdmz9rnhtsyg4a0
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>A witch can use this hex on a creature to prevent it from drawing a
+      weapon for a number of rounds equal to the witch’s level. This hex has no
+      effect on natural weapons or weapons already in a creature’s hands, but
+      does prevent an archer from drawing arrows.</p>
+
+      <p>A Will save negates this effect, and whether or not the save is
+      successful, a creature cannot be the target of this hex again for 1
+      day.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

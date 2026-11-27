@@ -1,0 +1,65 @@
+_id: 0Buw9MiprFzt0fer
+_key: '!items!0Buw9MiprFzt0fer'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Death Curse
+system:
+  abilityType: su
+  actions:
+    - _id: 0kbn67bzxverz7iw
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one living creature
+    - _id: IwPZ4JN79aCOXCrP
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 4d6 + @class.level
+      name: Third Round
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude partial
+        type: fort
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>This powerful hex seizes a creature's heart, causing death within just
+      a few moments. This hex has a range of 30 feet. The hexed creature
+      receives a Will save to negate the effect.</p><p>If this save is failed,
+      the creature becomes fatigued the first round of the hex.</p><p>On the
+      second round of the hex, the creature becomes exhausted.</p><p>On the
+      third round, the creature dies unless it succeeds at a Fort
+      save.</p><p>Creatures that fail the first save but succeed at the second
+      remain exhausted and take 4d6 points of damage + 1 point of damage per
+      level of the witch.</p><p>Slaying the witch that hexed the creature ends
+      the effect, but any fatigue or exhaustion remains.</p><p>Whether or not
+      the saves are successful, a creature cannot be the target of this hex
+      again for 1 day.</p>
+  sources:
+    - id: PZO1115
+      pages: '69'
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

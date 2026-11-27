@@ -1,0 +1,48 @@
+_id: UF9H66iMHRuJNepy
+_key: '!items!UF9H66iMHRuJNepy'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Demonhide
+system:
+  abilityType: su
+  actions:
+    - _id: eb4vqalbvrrb1wes
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You alter your flesh to be as tough as a demon’s hide, granting you a
+      +4 armor bonus.</p>
+
+      <p>At 7th level, and every four levels thereafter, this bonus increases by
+      +2.</p>
+
+      <p>At 13th level, this armor also grants you DR 5/cold iron.</p>
+
+      <p>You can use this revelation for 1 hour per day per oracle level. The
+      duration does not need to be consecutive, but it must be spent in 1-hour
+      increments.</p>
+  subType: classFeat
+  tag: classFeat_demonhide
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

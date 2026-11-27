@@ -1,0 +1,50 @@
+_id: jJuULkM2eQpKlYIQ
+_key: '!items!jJuULkM2eQpKlYIQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Form of Flame
+system:
+  abilityType: su
+  actions:
+    - _id: zm7i3tqrag99whf3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can assume the form of a Small fire
+      elemental, as @UUID[Compendium.pf1.spells.pawbnw1nm4f0b98e]{Elemental Body
+      I}.</p><p>At 9th level, you can assume the form of a Medium fire
+      elemental, as @UUID[Compendium.pf1.spells.yldjnorgbx4jsldz]{Elemental Body
+      II}.</p><p>At 11th level, you can assume the form of a Large fire
+      elemental, as @UUID[Compendium.pf1.spells.hd32fuc6e7j4isbn]{Elemental Body
+      III}.</p><p>At 13th level, you can assume the form of a Huge fire
+      elemental, as @UUID[Compendium.pf1.spells.v42t5kpxc8mvd615]{Elemental Body
+      IV}. </p><p>You can use this ability once per day, but the duration is 1
+      hour/level. You must be at least 7th level to select this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_formOfFlame
+  tags:
+    - Revelation
+    - Flame Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

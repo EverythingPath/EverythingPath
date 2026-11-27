@@ -1,0 +1,54 @@
+_id: rRgDV4GMJf7BosAE
+_key: '!items!rRgDV4GMJf7BosAE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/lighting-fire-1.jpg
+name: Lightning Rod
+system:
+  abilityType: su
+  actions:
+    - _id: 64tsdkoejo8y35xl
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: seeText
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a swift action when you cast a spell with the electricity
+      descriptor, you can designate one creature within line of sight. The
+      spell’s damage against that creature increases by 50%, as if affected by
+      the Empower Spell feat. This additional damage results from divine power
+      that is not subject to being reduced by electricity resistance, and you
+      take an equal amount of electricity damage immediately after you cast the
+      spell. The spell can deal this additional damage only once, even if it
+      could affect the target multiple times. You can use this ability once per
+      day at 8th level and one additional time per day for every 4 cleric levels
+      you have beyond 8th.</p><p>This power replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.tap9LNVtXblKh0sv]{Electricity
+      Resistance} power granted by the
+      @UUID[Compendium.pf1.class-abilities.Item.flMrvQOBVwXagqow]{Air
+      Domain}.</p>
+  sources:
+    - id: PZO9472
+      pages: '24'
+  subType: classFeat
+  tag: classFeat_lightningRod
+  tags:
+    - Domain Power
+    - Lightning Subdomain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

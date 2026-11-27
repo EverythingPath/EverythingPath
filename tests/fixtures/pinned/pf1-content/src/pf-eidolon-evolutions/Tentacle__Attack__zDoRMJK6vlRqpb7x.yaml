@@ -1,0 +1,35 @@
+_id: zDoRMJK6vlRqpb7x
+_key: '!items!zDoRMJK6vlRqpb7x'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-tentacle.jpg
+name: Tentacle (Attack)
+system:
+  actions:
+    - _id: 18c11hj0p26se2wt
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 0.5
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      attackBonus: '-5'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size, 4)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-tentacle.jpg
+      name: Attack
+      tag: tentaclesPlusGrab
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

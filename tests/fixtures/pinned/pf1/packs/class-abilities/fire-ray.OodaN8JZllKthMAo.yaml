@@ -1,0 +1,48 @@
+_id: OodaN8JZllKthMAo
+_key: '!items!OodaN8JZllKthMAo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-orange-1.jpg
+name: Fire Ray
+system:
+  abilityType: sp
+  actions:
+    - _id: dp98vblzdgd3d45f
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (floor(@class.level / 2))
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>Starting at 1st level, you can unleash an elemental ray as a
+      <em>standard action</em>, targeting any foe within 30 feet as a ranged
+      <em>touch attack</em>. This ray deals 1d6 points of fire damage + 1 for
+      every two sorcerer levels you possess. You can use this ability a number
+      of times per day equal to 3 + your <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_fireRay
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

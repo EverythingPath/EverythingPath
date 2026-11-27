@@ -1,0 +1,39 @@
+_id: bJHPOEjVfYnYCMtl
+_key: '!items!bJHPOEjVfYnYCMtl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Unnerving Gaze
+system:
+  abilityType: su
+  actions:
+    - _id: 2huv65232dd0jb99
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1d3
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+  associations:
+    classes:
+      - Bloodrager
+  description:
+    value: >-
+      <p>At 16th level, your foes begin to see flashes of the faces of dead
+      loved ones when they look at your face. You gain a gaze attack with a
+      range of 30 feet. All foes who fail a Will save (DC = 10 + 1/2 your
+      bloodrager level + your Charisma modifier) become shaken for 1d3
+      rounds.</p>
+  subType: classFeat
+type: feat

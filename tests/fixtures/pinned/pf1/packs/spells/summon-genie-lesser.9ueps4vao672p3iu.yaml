@@ -1,0 +1,54 @@
+_id: 9ueps4vao672p3iu
+_key: '!items!9ueps4vao672p3iu'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Summon Genie, Lesser
+system:
+  actions:
+    - _id: c79gphgw0knuy76t
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      effect: one summoned genie
+      name: Use
+      range:
+        units: close
+  components:
+    divineFocus: 3
+    focus: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.kyo0kwhw2jhuztju], except you can summon
+      one janni.</p>
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 4
+      oracle: 4
+      sorcerer: 4
+      summoner: 3
+      warpriest: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    focus: an oil lamp worth at least 50 gp
+  school: con
+  sources:
+    - id: PZO9441
+      pages: '11'
+  sr: false
+  subschool:
+    - summoning
+type: spell

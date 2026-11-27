@@ -1,0 +1,60 @@
+_id: t2wg4juk28n98a7j
+_key: '!items!t2wg4juk28n98a7j'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Ardor's Onslaught
+system:
+  actions:
+    - _id: 1w0m15sxoe49i2m6
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20-ft.-radius burst
+      duration:
+        units: spec
+        value: instantaneous or 1d6 rounds; see text
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will partial, see text
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You unleash the power of zealous conviction to smite your enemies with
+      a burst of pulsing metallic energy. Only creatures with a neutral
+      alignment component are harmed by the spell.  The spell deals 1d8 points
+      of damage per 2 caster levels (maximum 5d8) to creatures whose alignment
+      is neutral with no other alignment components (with the exception of
+      neutral outsiders, who take 1d6 points of damage per caster level, maximum
+      10d6). Neutral outsiders are also nauseated for 1d6 rounds. A creature can
+      attempt a Will save to halve the damage and negate the nauseated effect. 
+      The spell deals half damage against creatures that are chaotic neutral,
+      lawful neutral, neutral evil, or neutral good, and such targets are not
+      nauseated. On a successful Will save, such a creature reduces the damage
+      to one-quarter the damage rolled.</p>
+  learnedAt:
+    class:
+      cleric: 4
+      inquisitor: 4
+      oracle: 4
+      warpriest: 4
+  level: 4
+  school: evo
+  sources:
+    - id: PZO1141
+      pages: '39'
+    - id: PZO9443
+      pages: '26'
+type: spell

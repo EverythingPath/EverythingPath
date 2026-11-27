@@ -1,0 +1,45 @@
+_id: rYgHwOkAtwYqG2tL
+_key: '!items!rYgHwOkAtwYqG2tL'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Disguise
+system:
+  abilityType: sp
+  actions:
+    - _id: 2uzv442chon27bpd
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>A witch can change her appearance for a number of hours equal to her
+      class level, as if using
+      @UUID[Compendium.pf1.spells.oj36nfak6jc2s5ky]{Disguise Self}. These hours
+      do not need to be consecutive, but they must be spent in 1-hour
+      increments.</p>
+  sources:
+    - id: PZO1115
+      pages: '66'
+  subType: classFeat
+  tag: classFeat_disguise
+  tags:
+    - Hex
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

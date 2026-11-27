@@ -1,0 +1,89 @@
+_id: UDzK9nM7L9kXvokR
+_key: '!items!UDzK9nM7L9kXvokR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Aging Touch
+system:
+  abilityType: su
+  actions:
+    - _id: b8o4u6coahvvfhoa
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Touch living creature
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+    - _id: w3BVXcbk3mtd1G1v
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Touch object or construct
+      range:
+        units: touch
+      target:
+        value: Object or construct touched
+      touch: true
+    - _id: JSgDbMfjyqnnEP15
+      ability:
+        attack: str
+      actionType: mcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Sunder
+      duration:
+        units: inst
+      name: Touch object in another's possesion
+      range:
+        units: touch
+      target:
+        value: object in another creature's possession
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Your touch ages living creatures and objects. As a melee touch attack,
+      you can deal 1 point of Strength damage for every two oracle levels you
+      possess to living creatures. Against objects or constructs, you can deal
+      1d6 points of damage per oracle level. If used against an object in
+      another creature's possession, treat this attack as a sunder combat
+      maneuver.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      for every five oracle levels you possess.</p>
+  subType: classFeat
+  tag: classFeat_agingTouch
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

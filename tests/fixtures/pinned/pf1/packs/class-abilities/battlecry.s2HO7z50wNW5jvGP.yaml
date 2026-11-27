@@ -1,0 +1,49 @@
+_id: s2HO7z50wNW5jvGP
+_key: '!items!s2HO7z50wNW5jvGP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Battlecry
+system:
+  abilityType: ex
+  actions:
+    - _id: w6tnpnkhl5wc80u8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      name: Use
+      range:
+        units: ft
+        value: '100'
+      target:
+        value: allies
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can unleash an inspiring battlecry. All
+      allies within 100 feet who hear your cry gain a +1 morale bonus on attack
+      rolls, skill checks, and saving throws for a number of rounds equal to
+      your Charisma modifier.</p>
+
+      <p>At 10th level, this bonus increases to +2. You can use this ability
+      once per day, plus one additional time per day at 5th level and for every
+      five levels thereafter.</p>
+  sources:
+    - id: PZO1115
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_battlecry
+  tags:
+    - Revelation
+    - Battle Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

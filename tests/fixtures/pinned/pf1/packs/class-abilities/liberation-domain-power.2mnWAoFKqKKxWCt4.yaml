@@ -1,0 +1,46 @@
+_id: 2mnWAoFKqKKxWCt4
+_key: '!items!2mnWAoFKqKKxWCt4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_06.jpg
+name: Liberation (Domain Power)
+system:
+  abilityType: su
+  actions:
+    - _id: c2t0othmu54ccufz
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You have the ability to ignore impediments to your mobility. For a
+      number of rounds per day equal to your cleric level, you can move normally
+      regardless of magical effects that impede movement, as if you were
+      affected by freedom of movement. This effect occurs automatically as soon
+      as it applies. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_liberation
+  tags:
+    - Domain Power
+    - Liberation Domain
+    - Revolution Subdomain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

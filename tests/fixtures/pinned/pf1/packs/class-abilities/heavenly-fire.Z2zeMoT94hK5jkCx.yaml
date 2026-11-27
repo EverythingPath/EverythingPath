@@ -1,0 +1,55 @@
+_id: Z2zeMoT94hK5jkCx
+_key: '!items!Z2zeMoT94hK5jkCx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-red-2.jpg
+name: Heavenly Fire
+system:
+  abilityType: sp
+  actions:
+    - _id: tx77yrh1b7i5f1nf
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d4 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>Starting at 1st level, you can unleash a ray of heavenly fire as a
+      standard action, targeting any foe within 30 feet as a ranged touch
+      attack. Against evil creatures, this ray deals 1d4 points of damage + 1
+      for every two sorcerer levels you possess. This damage is divine and not
+      subject to energy resistance or immunity. This ray heals good creatures of
+      1d4 points of damage + 1 for every two sorcerer levels you possess. A good
+      creature cannot benefit from your heavenly fire more than once per day.
+      Neutral creatures are neither harmed nor healed by this effect. You can
+      use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '74'
+  subType: classFeat
+  tag: classFeat_heavenlyFire
+  tags:
+    - Bloodline Power
+    - Celestial Bloodline
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat
