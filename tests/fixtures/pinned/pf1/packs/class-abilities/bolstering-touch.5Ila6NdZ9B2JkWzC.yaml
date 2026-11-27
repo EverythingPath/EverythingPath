@@ -1,0 +1,47 @@
+_id: 5Ila6NdZ9B2JkWzC
+_key: '!items!5Ila6NdZ9B2JkWzC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_08.jpg
+name: Bolstering Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: 7dsxxicnwqseygqe
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can touch a willing creature as a standard action, bracing it
+      against frightening situations and allowing it to remain calm. The first
+      fear effect that would affect the subject within the next hour is
+      suppressed for the first 1d4 rounds of its effect. If you touch a creature
+      currently suffering from an ongoing fear effect, this ability instead
+      suppresses the ongoing fear effect for 1 round. The rounds during which
+      the subject ignores the triggering fear effect still count against the
+      effect’s duration. If the fear effect is suppressed for longer than it
+      lasts, the subject isn’t affected by the fear effect at all. You can use
+      this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+
+      <p>This power replaces the Touch of Glory power of the Glory Domain.</p>
+  subType: classFeat
+  tag: classFeat_bolsteringTouch
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

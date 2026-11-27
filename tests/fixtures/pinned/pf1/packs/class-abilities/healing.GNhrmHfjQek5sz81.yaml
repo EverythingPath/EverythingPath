@@ -1,0 +1,53 @@
+_id: GNhrmHfjQek5sz81
+_key: '!items!GNhrmHfjQek5sz81'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/life/heart-cross-strong-green.webp
+name: Healing
+system:
+  abilityType: su
+  actions:
+    - _id: 5i7olkoslvx9sx98
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (1 + gte(@class.level, 5))d8 + min(10, @class.level)
+            types:
+              - positive
+      duration:
+        units: inst
+      img: systems/pf1/icons/skills/violet_02.jpg
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>A witch can soothe the wounds of those she touches. This acts as a
+      @UUID[Compendium.pf1.spells.xoc3vhg3btmfjauq]{Cure Light Wounds} spell,
+      using the witch's caster level.</p>
+
+      <p>Once a creature has benefited from the healing hex, it cannot benefit
+      from it again for 24 hours.</p>
+
+      <p>At 5th level, this hex acts like
+      @UUID[Compendium.pf1.spells.e67esdjp4nojtbr7]{Cure Moderate Wounds}.</p>
+  sources:
+    - id: PZO1115
+      pages: '66'
+    - id: PZO1129
+      pages: '37'
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

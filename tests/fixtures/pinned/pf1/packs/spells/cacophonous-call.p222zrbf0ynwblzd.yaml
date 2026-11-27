@@ -1,0 +1,53 @@
+_id: p222zrbf0ynwblzd
+_key: '!items!p222zrbf0ynwblzd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Cacophonous Call
+system:
+  actions:
+    - _id: 0dsuuqp3ccon35iz
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill your target's mind with a blaring cacophony of discordant
+      sounds, making it hard for the target to act and concentrate.</p><p>The
+      creature gains the nauseated condition for the duration of the spell if it
+      fails its Will save.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      skald: 2
+  level: 2
+  materials:
+    value: a scrap of sheet music
+  school: enc
+  sources:
+    - id: PZO1115
+      pages: '208'
+  subschool:
+    - compulsion
+type: spell

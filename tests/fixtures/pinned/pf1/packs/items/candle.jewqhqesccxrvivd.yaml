@@ -1,0 +1,71 @@
+_id: jewqhqesccxrvivd
+_key: '!items!jewqhqesccxrvivd'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: systems/pf1/icons/items/inventory/candle.jpg
+name: Candle
+system:
+  actions:
+    - _id: su42oeevO8Sw3cKi
+      activation:
+        type: special
+        unchained:
+          type: nonaction
+      duration:
+        units: hour
+        value: '1'
+      name: Ignite
+      tag: ignite
+      uses:
+        autoDeductChargesCost: '1'
+    - _id: jhOeLTBf4RwThzDe
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Extinguish
+      tag: extinguish
+  description:
+    value: >-
+      <p>A candle dimly illuminates a small area, increasing the light level in
+      a 5-foot radius by one step (darkness becomes dim light and dim light
+      becomes normal light). A candle cannot increase the light level above
+      normal light. A candle burns for 1 hour.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 0.01
+  scriptCalls:
+    - _id: H62XLSB8fS11kyM9
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 5 }));
+    - _id: 2Ru4FFdAZ4vzHqM2
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |
+        if (!token) return;
+        if (action.tag !== "extinguish") return;
+
+        // Lights off as it comes from Foundry default
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1123
+      pages: 56, 61
+    - id: PZO1110
+      pages: 155, 158
+  subType: adventuring
+type: loot

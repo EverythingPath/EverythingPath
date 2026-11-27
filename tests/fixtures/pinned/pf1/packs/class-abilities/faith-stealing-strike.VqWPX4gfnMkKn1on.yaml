@@ -1,0 +1,41 @@
+_id: VqWPX4gfnMkKn1on
+_key: '!items!VqWPX4gfnMkKn1on'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-eerie-2.jpg
+name: Faith-Stealing Strike
+system:
+  abilityType: su
+  actions:
+    - _id: qx3zw28gcthfzvj8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature within melee range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can make a single melee attack using your highest base attack bonus
+      against a creature capable of casting divine spells. If you damage the
+      creature, it must succeed at a Will save (DC = 10 + 1/2 your cleric level
+      + your Wisdom modifier) or be unable to cast any divine spells for 1
+      round. If you do not damage your target with the attack, this ability is
+      expended with no effect. You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_faithstealingStrike
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

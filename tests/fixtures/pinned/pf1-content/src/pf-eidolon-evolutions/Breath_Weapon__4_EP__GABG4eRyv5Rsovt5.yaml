@@ -1,0 +1,54 @@
+_id: GABG4eRyv5Rsovt5
+_key: '!items!GABG4eRyv5Rsovt5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_11.jpg
+name: Breath Weapon (4 EP)
+system:
+  abilityType: su
+  actions:
+    - _id: q6heym7umjard8ev
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@attributes.hd.total)d6
+            types:
+              - Replace
+      img: systems/pf1/icons/skills/ice_11.jpg
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      notes:
+        effect:
+          - 30-foot cone or 60-foot line.
+      save:
+        dc: (10 + (@attributes.hd.total / 2) + @ability.con.basemod)
+        description: Save for half
+        type: ref
+      tag: breathWeapon4Ep
+  description:
+    instructions: <p>Replace damage type.</p>
+    value: >-
+      <p>An eidolon learns to exhale a cone or line of magical energy, gaining a
+      breath weapon. Select either acid, cold, electricity, or fire. The eidolon
+      can breathe a 30-foot cone (or 60-foot line) that deals 1d6 points of
+      damage of the selected type per HD it possesses. Those caught in the
+      breath weapon can attempt a Reflex save for half damage.</p><p>The DC is
+      equal to 10 + 1/2 the eidolon's HD + the eidolon's Constitution modifier.
+      The eidolon can use this ability once per day. The eidolon can use this
+      ability 1 additional time per day by spending an additional 1 evolution
+      point (maximum 3/day).</p><p><strong>Requirements</strong></p><p>The
+      summoner must be at least 9th level before selecting this evolution.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+  uses:
+    per: day
+    value: 1
+type: feat

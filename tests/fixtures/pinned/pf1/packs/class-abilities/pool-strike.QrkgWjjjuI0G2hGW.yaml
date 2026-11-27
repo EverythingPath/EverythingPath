@@ -1,0 +1,51 @@
+_id: QrkgWjjjuI0G2hGW
+_key: '!items!QrkgWjjjuI0G2hGW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-red-3.jpg
+name: Pool Strike
+system:
+  abilityType: su
+  actions:
+    - _id: lgc2xyro9gjthsre
+      ability:
+        attack: dex
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Magus
+  description:
+    value: >-
+      <p>The magus can expend 1 point from his arcane pool as a standard action
+      to charge his free hand with energy. He can make a melee touch attack with
+      that hand as a free action as part of activating this ability. If the
+      touch attack hits, it releases the charge and deals 2d6 points of energy
+      damage (acid, cold, electricity, or fire, chosen when he spends the arcane
+      pool point to activate this ability). He can use this ability with the
+      spellstrike class feature. If he misses with this attack, he can hold the
+      charge for up to 1 minute before it dissipates.</p>
+
+      <p>At 6th level, and every three levels thereafter, the amount of damage
+      dealt by this attack increases by 1d6.</p>
+  subType: classFeat
+  tags:
+    - Magus Arcana
+type: feat

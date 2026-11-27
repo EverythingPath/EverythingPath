@@ -1,0 +1,42 @@
+_id: hybEecH3aiZDkjNt
+_key: '!items!hybEecH3aiZDkjNt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Cleansing Flames
+system:
+  abilityType: su
+  actions:
+    - _id: ivb0ce7pltt7x20c
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a swift action, you can take 1d4 points of damage per oracle level
+      to gain a new saving throw against a single ongoing effect. The effect
+      must be one for which you already failed a saving throw. If you succeed,
+      the effect is removed.</p>
+
+      <p>At 7th and 15th levels, you can use this ability one additional time
+      per day.</p>
+  subType: classFeat
+  tag: classFeat_cleansingFlames
+  tags:
+    - Revelation
+    - Volcano Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 6), 1) + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

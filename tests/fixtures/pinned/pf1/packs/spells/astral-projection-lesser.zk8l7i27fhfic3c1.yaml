@@ -1,0 +1,52 @@
+_id: zk8l7i27fhfic3c1
+_key: '!items!zk8l7i27fhfic3c1'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Astral Projection, Lesser
+system:
+  actions:
+    - _id: zwgniqlya1pdpdtz
+      activation:
+        cost: 30
+        type: minute
+        unchained:
+          cost: 30
+          type: minute
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: touch
+      target:
+        value: you plus one additional willing creature touched per two caster levels
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.lnahlmp5mih2ongh]{astral projection},
+      except you cannot leave the Astral Plane and explore other planes (though
+      you can still return to the plane you were on when you cast this
+      spell).</p>
+  learnedAt:
+    class:
+      arcanist: 5
+      cleric: 5
+      oracle: 5
+      psychic: 5
+      sorcerer: 5
+      warpriest: 5
+      wizard: 5
+  level: 5
+  materials:
+    gpValue: 1000
+    value: 1,000 gp jacinth
+  school: nec
+  sources:
+    - id: PZO1117
+      pages: '207'
+type: spell

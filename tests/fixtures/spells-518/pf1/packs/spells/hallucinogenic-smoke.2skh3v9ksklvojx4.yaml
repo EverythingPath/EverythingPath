@@ -1,0 +1,62 @@
+_id: 2skh3v9ksklvojx4
+_key: '!items!2skh3v9ksklvojx4'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Hallucinogenic Smoke
+system:
+  actions:
+    - _id: dix1qz55mgcs3jzo
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: 3 rounds/level or until discharged; see text
+      name: Use
+      range:
+        units: personal
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: you
+  components:
+    material: true
+    somatic: true
+  description:
+    value: >-
+      <p>Dark gray smoke seeps from your eyes, ears, and mouth for the spell's
+      duration, though the smoke doesn't significantly hamper your vision. Upon
+      casting the spell, you may immediately exhale the smoke in a 30-foot cone
+      or do so in a later round as a standard action, ending the spell. Each
+      living creature caught within the cone must succeed at a Fortitude save or
+      be nauseated for 1 round per caster level as it is wracked with waves of
+      nausea and disorienting visions. If it succeeds at its Fortitude save, the
+      creature is instead sickened for 1d4 rounds.  If you don't expel the smoke
+      by the end of the spell's duration, you suffer the spell's effects
+      instead.  If you cast <i>augury</i> during the duration of
+      <i>hallucinogenic smoke</i>, treat your caster level as 5 higher when
+      determining the chance for a meaningful reply. Additionally, you know
+      whether a result of "nothing" resulted from a failed or successful
+      <i>augury</i>.</p>
+  descriptors:
+    - poison
+  learnedAt:
+    class:
+      cleric: 4
+      oracle: 4
+      warpriest: 4
+      witch: 4
+  level: 4
+  materials:
+    value: tobacco leaves, ingested
+  school: con
+  sources:
+    - id: PZO9436
+      pages: '28'
+type: spell

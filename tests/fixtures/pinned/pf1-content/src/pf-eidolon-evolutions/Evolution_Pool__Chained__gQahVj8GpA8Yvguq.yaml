@@ -1,0 +1,43 @@
+_id: gQahVj8GpA8Yvguq
+_key: '!items!gQahVj8GpA8Yvguq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/intimidating-prowess.jpg
+name: Evolution Pool (Chained)
+system:
+  abilityType: ex
+  actions:
+    - _id: rt7hvolkdgqtzigq
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      img: systems/pf1/icons/feats/intimidating-prowess.jpg
+      name: Use
+      tag: evolutionPoolChained
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Eidolon
+  description:
+    instructions: <p>Subtract from the total when adding evolutions.</p>
+    value: >-
+      <p><strong>Current Pool</strong>: [[@class.level + 1 + floor((@class.level
+      + 6) / 5)]]</p><p>The value given in this column is the total number of
+      points in the eidolon's evolution pool. Points from this pool can be spent
+      on a wide variety of modifications and upgrades that add new abilities,
+      attacks, and powers to the eidolon.</p><p>Whenever the summoner gains a
+      level, the number in this pool increases and the summoner can spend these
+      points to change the abilities of the eidolon. These choices are not
+      set.</p><p>The summoner can change them whenever he gains a level (and
+      through the transmogrify spell).</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+  uses:
+    autoDeductChargesCost: '0'
+    maxFormula: '@class.level + 1 + floor((@class.level + 6) / 5)'
+    per: charges
+    value: 3
+type: feat

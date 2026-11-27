@@ -1,0 +1,65 @@
+_id: 7k5ypftnzy9r7mzz
+_key: '!items!7k5ypftnzy9r7mzz'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Animate Rope
+system:
+  actions:
+    - _id: 7a598fmkfl620flx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      target:
+        value: one rope-like object, length up to 50 ft. + 5 ft./level; see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You can animate a nonliving rope-like object. The maximum length
+      assumes a rope with a 1-inch diameter. Reduce the maximum length by 50%
+      for every additional inch of thickness, and increase it by 50% for each
+      reduction of the rope's diameter by half.</p><p>The possible commands are
+      "coil" (form a neat, coiled stack), "coil and knot," "loop," "loop and
+      knot," "tie and knot," and the opposites of all of the above ("uncoil,"
+      and so forth). You can give one command each round as a move action, as if
+      directing an active spell.</p><p>The rope can enwrap only a creature or an
+      object within 1 foot of it - it does not snake outward - so it must be
+      thrown near the intended target. Doing so requires a successful ranged
+      touch attack roll (range increment 10 feet). A typical 1-inch-diameter
+      hemp rope has 2 hit points, AC 10, and requires a DC 23 Strength check to
+      burst it. The rope does not deal damage, but it can be used as a trip line
+      or to cause a single opponent that fails a Reflex saving throw to become
+      entangled. A creature capable of spellcasting that is bound by this spell
+      must make a concentration check with a DC of 15 + the spell's level to
+      cast a spell. An entangled creature can slip free with a DC 20 Escape
+      Artist check.</p><p>The rope itself and any knots tied in it are not
+      magical.</p><p>The spell cannot affect objects carried or worn by a
+      creature.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      mesmerist: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+    domain:
+      Artifice: 1
+  school: trs
+  sources:
+    - id: PZO1110
+      pages: '242'
+  sr: false
+type: spell

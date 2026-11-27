@@ -1,0 +1,45 @@
+_id: 9GChQ0cDSYcsrhlf
+_key: '!items!9GChQ0cDSYcsrhlf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Unexpected Whimsy
+system:
+  abilityType: su
+  actions:
+    - _id: liuogbd4tm9ewuyt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: enemies in range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you dance, act like a buffoon, or commit some
+      other act of whimsy. When you do, enemies within 30 feet of you that can
+      see and hear you must succeed a Will saving throw (DC = 10 + 1/2 your
+      cleric level + half your Wisdom modifier) or they collapse into gales of
+      manic laughter, falling prone. Those who fail their saving throws can take
+      no actions other than laughing for 1 round, but are not considered
+      helpless. You can use this ability once per day at 8th level and one
+      additional time for every 4 levels you possess beyond 8th.</p>
+
+      <p>This power replaces the Chaos Blade power of the Chaos Domain.</p>
+  subType: classFeat
+  tag: classFeat_unexpectedWhimsy
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

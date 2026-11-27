@@ -1,0 +1,50 @@
+_id: HLd4skGtB4uTjuwU
+_key: '!items!HLd4skGtB4uTjuwU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Resiliency
+system:
+  abilityType: ex
+  actions:
+    - _id: 40ajgnje13caxe85
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Rogue
+      - Rogue (Unchained)
+      - Investigator
+      - Ninja
+  description:
+    value: >-
+      <p>Once per day, a character with this ability can gain a number of
+      temporary hit points equal to the character's level. Activating this
+      ability is an immediate action that can only be performed when she is
+      brought to below 0 hit points. This ability can be used to prevent her
+      from dying. These temporary hit points last for 1 minute. If the
+      character's hit points drop below 0 due to the loss of these temporary hit
+      points, she falls unconscious and is dying as normal.</p>
+  sources:
+    - id: PZO1110
+      pages: '68'
+  subType: classFeat
+  tag: classFeat_resiliency
+  tags:
+    - Rogue Talent
+    - Investigator Talent
+    - Ninja Trick
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

@@ -1,0 +1,47 @@
+_id: 87l6qDvFEsDsE0xY
+_key: '!items!87l6qDvFEsDsE0xY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Pyroclastic Shove
+system:
+  abilityType: su
+  actions:
+    - _id: esqbazwo6emjg1t5
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you conjure a cascade of volcanic ash to bull
+      rush a creature within 30 feet of you. The CMB of this cascade is equal to
+      your base attack bonus + your Charisma modifier + 4 from the cascade’s
+      Gargantuan size. If the bull rush succeeds, the creature takes 1d6 points
+      of fire damage per oracle level.</p>
+
+      <p>At 12th and at 17th level, you can use this ability one additional time
+      per day.</p>
+
+      <p>You must be 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_pyroclasticShove
+  tags:
+    - Revelation
+    - Volcano Mystery
+  uses:
+    maxFormula: floor((@class.level - 2) / 5)
+    per: day
+type: feat

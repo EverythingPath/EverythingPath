@@ -1,0 +1,42 @@
+_id: xHg1RuRmKpSKbSsd
+_key: '!items!xHg1RuRmKpSKbSsd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-sky-3.jpg
+name: Blinding Ray
+system:
+  abilityType: sp
+  actions:
+    - _id: c9cmmlqses5478p9
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: seeText
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action you can fire a shimmering ray at any foe within 30
+      feet as a ranged touch attack. The ray causes creatures to be
+      <em>@UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.A9KUpd2bsdZZsQqj]{blinded}</em>
+      for 1 round. Creatures with more Hit Dice than your wizard level are
+      <em>@UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.xHUnCadQ2qYsfvV0]{dazzled}</em>
+      for 1 round instead. You can use this ability a number of times per day
+      equal to 3 + your <em>Intelligence</em> modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_blindingRay
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

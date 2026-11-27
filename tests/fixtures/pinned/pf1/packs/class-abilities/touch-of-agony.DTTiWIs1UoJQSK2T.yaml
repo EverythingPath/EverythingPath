@@ -1,0 +1,41 @@
+_id: DTTiWIs1UoJQSK2T
+_key: '!items!DTTiWIs1UoJQSK2T'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_11.jpg
+name: Touch of Agony
+system:
+  abilityType: sp
+  actions:
+    - _id: q7m270zvcw52zydu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can make a melee <em>touch attack</em> as a
+      <em>standard action</em> that wracks a living creature with agonizing
+      pain. The target takes 1d4 points of <em>nonlethal damage</em> each round
+      for a number of rounds equal to 1/2 your sorcerer level (minimum 1). You
+      can use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_touchOfAgony
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

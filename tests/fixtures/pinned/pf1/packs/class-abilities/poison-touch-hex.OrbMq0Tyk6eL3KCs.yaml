@@ -1,0 +1,56 @@
+_id: OrbMq0Tyk6eL3KCs
+_key: '!items!OrbMq0Tyk6eL3KCs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Poison Touch Hex
+system:
+  abilityType: su
+  actions:
+    - _id: tkb044PPOk8Gx4Lw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Grant Claw
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: creature
+    - _id: 31PxUUaqlXemuHiV
+      actionType: save
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      name: Witch Toxin
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fort cures
+        type: fort
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch empowers herself or an ally within 30 feet with poisonous
+      nails. The affected creature gains a claw attack as a secondary attack
+      that deals 1d3 points of damage (1d2 for Small creatures) and has the
+      following poison ability:</p><fieldset><legend>Witch
+      Toxin</legend><p>Claw—injury; save Fort DC 10 + half the witch’s level +
+      the witch’s Intelligence modifier; frequency 1/round for 6 rounds; effect
+      1d2 Str; cure 1 save.</p></fieldset><p>The creature gains this claw attack
+      for a number of minutes equal to the witch’s level. If the target already
+      has a claw attack, that attack gains the poison ability listed above, but
+      the DC is 1 higher.</p><p>Once a creature has benefited from this hex, it
+      cannot benefit from it again for 24 hours.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

@@ -1,0 +1,287 @@
+_id: NKiPR96W8na5kPqG
+_key: '!items!NKiPR96W8na5kPqG'
+_stats:
+  coreVersion: '12.343'
+folder: 1uDzTmqE6tgpIano
+img: icons/containers/chest/chest-reinforced-steel-red.webp
+name: Kit, Vigilante's
+system:
+  hp:
+    base: 10
+  items:
+    2tkgTcuD7HgdFk0U:
+      _id: 2tkgTcuD7HgdFk0U
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.lSCPUK5Ea6R0t4fz
+      img: systems/pf1/icons/items/inventory/backpack.jpg
+      name: Backpack, common
+      system:
+        description:
+          value: >-
+            <p>This leather knapsack has one large pocket that closes with a
+            buckled strap and holds about 2 cubic feet of material. Some may
+            have one or more smaller pockets on the sides.</p>
+        hp:
+          base: 10
+        price: 2
+        sources:
+          - id: PZO1123
+            pages: '58'
+        weight:
+          value: 2
+      type: container
+    7Uy3cZHFzKytHiQj:
+      _id: 7Uy3cZHFzKytHiQj
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.snfogneawzopfzzl
+      img: systems/pf1/icons/items/inventory/torch.jpg
+      name: Torch
+      system:
+        actions:
+          - _id: 7IkvstJGhp2Kfl21
+            activation:
+              type: full
+              unchained:
+                cost: 3
+                type: action
+            name: Enlight (using flint and steal)
+            tag: ignite
+          - _id: KNOoanyFVJlRjrdg
+            ability:
+              attack: str
+              damage: str
+              damageMult: 1
+            actionType: mwak
+            activation:
+              type: attack
+              unchained:
+                type: attack
+            attackBonus: '-2[Improvised Weapon]'
+            damage:
+              parts:
+                - formula: sizeRoll(1, 3, @size)
+                  types:
+                    - bludgeoning
+                - formula: '1'
+                  types:
+                    - fire
+            extraAttacks:
+              type: standard
+            name: Attack
+            uses:
+              autoDeductChargesCost: '0'
+          - _id: shc8HOmsOaDPbFKX
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Extinguish
+            tag: extinguish
+        description:
+          value: >-
+            <p>A torch burns for 1 hour, shedding normal light in a 20-foot
+            radius and increasing the light level by one step for an additional
+            20 feet beyond that area (darkness becomes dim light and dim light
+            becomes normal light). A torch does not increase the light level in
+            normal light or bright light. If a torch is used in combat, treat it
+            as a one-handed improvised weapon that deals bludgeoning damage
+            equal to that of a gauntlet of its size, plus 1 point of fire
+            damage.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.01
+        quantity: 10
+        scriptCalls:
+          - _id: X6fUtOgays06HuzF
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn on light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "ignite") return;
+
+              fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+                .then(lm => lm.execute({ token, range: 40 }));
+          - _id: B7q2csNBZkQnLMYQ
+            category: use
+            hidden: false
+            img: icons/svg/dice-target.svg
+            name: Turn off light
+            type: script
+            value: |-
+              if (!token) return;
+              if (action.tag !== "extinguish") return;
+
+              // Lights off as it comes from Foundry default
+              const light = new foundry.data.LightData().toObject();
+              token.document.update({ light });
+        sources:
+          - id: PZO1123
+            pages: 58, 74
+          - id: PZO1110
+            pages: 157, 158
+        subType: adventuring
+        weight:
+          value: 1
+      type: loot
+    Tpw52VIVVdNJaFBu:
+      _id: Tpw52VIVVdNJaFBu
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.wjvxmolafiegvesl
+      img: icons/containers/bags/coinpouch-simple-leather-tan.webp
+      name: Belt Pouch
+      system:
+        description:
+          value: >-
+            <p>A typical leather or cloth belt pouch has a leather cord to cinch
+            it shut and another to tie it to your belt. It is large enough to
+            hold 100–200 coins or two apples.</p>
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '56'
+        weight:
+          value: 0.5
+      type: container
+    X321sRPOMXdxWi4g:
+      _id: X321sRPOMXdxWi4g
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.manvtbznrwjmnrua
+      img: systems/pf1/icons/items/inventory/meat.jpg
+      name: Trail Rations
+      system:
+        actions:
+          - _id: VdYbDgVtRRoWmGoA
+            activation:
+              type: nonaction
+              unchained:
+                type: nonaction
+            name: Use
+        description:
+          value: >-
+            <p>The listed price is for a day's worth of food. This bland food is
+            usually some kind of hard tack, jerky, and dried fruit, though the
+            contents vary from region to region and the race of those creating
+            it. As long as it stays dry, it can go for months without
+            spoiling.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.5
+        quantity: 5
+        sources:
+          - id: PZO1123
+            pages: '95'
+          - id: PZO1110
+            pages: '158'
+        subType: food
+        uses:
+          per: single
+        weight:
+          value: 1
+      type: loot
+    nMOGgqWvzdCEeciC:
+      _id: nMOGgqWvzdCEeciC
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.yMoclCylbCRKyaZF
+      img: systems/pf1/icons/items/inventory/soap.jpg
+      name: Soap
+      system:
+        actions:
+          - _id: ootoocddr3l2eoat
+            activation:
+              type: special
+              unchained:
+                type: special
+            name: Use
+        description:
+          value: >-
+            <p>You can use this thick block of soap to scrub clothes, pots,
+            linens, or anything else that might be dirty. A bar of soap has
+            approximately 50 uses.</p>
+        hp:
+          base: 10
+        price: 0.01
+        sources:
+          - id: PZO1123
+            pages: '57'
+          - id: PZO9410
+            pages: '19'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        uses:
+          maxFormula: '50'
+          per: charges
+          value: 50
+        weight:
+          value: 0.5
+      type: loot
+    rgg5ySQSpAn7BPjt:
+      _id: rgg5ySQSpAn7BPjt
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.fwfwshvyweqbthwk
+      img: systems/pf1/icons/items/inventory/cloth-green.jpg
+      name: Blanket
+      system:
+        description:
+          value: >-
+            <p>This warm, woven blanket has straps so it can be rolled up and
+            tied. Blankets are often used in conjunction with bedrolls to
+            provide additional warmth or a ground cushion.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 0.5
+        sources:
+          - id: PZO1123
+            pages: '56'
+          - id: PZO9410
+            pages: '19'
+          - id: PZO1110
+            pages: '158'
+          - id: PZO1115
+            pages: '181'
+        subType: adventuring
+        weight:
+          value: 3
+      type: loot
+    y9Exfni7UacFfR7v:
+      _id: y9Exfni7UacFfR7v
+      _stats:
+        compendiumSource: Compendium.pf1.items.Item.bsztkhkrhgmsbqpt
+      img: systems/pf1/icons/items/inventory/waterskin.jpg
+      name: Waterskin
+      system:
+        description:
+          value: >-
+            <p>A water or wineskin holds 1/2 gallon of liquid and weighs 4 lb
+            when full.</p><p><strong>Empty Weight</strong>: -;
+            <strong>Capacity</strong>: 1/2 gallon/4 lb.<sup>1</sup></p><p
+            class="source"><sup>1</sup> When made for Medium characters. Weighs
+            one-quarter the normal amount when made for Small characters. Weighs
+            twice the normal amount when made for Large characters. Containers
+            carry one-quarter the normal amount when made for Small
+            characters.</p>
+        equipped: false
+        hp:
+          base: 10
+        price: 1
+        sources:
+          - id: PZO1123
+            pages: '58'
+          - id: PZO1110
+            pages: '158'
+        subType: adventuring
+        weight:
+          value: 4
+      type: loot
+  sources:
+    - id: PZO1134
+      pages: '234'
+type: container

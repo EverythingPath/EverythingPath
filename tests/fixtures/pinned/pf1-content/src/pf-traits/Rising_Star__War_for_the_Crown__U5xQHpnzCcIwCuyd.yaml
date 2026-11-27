@@ -1,0 +1,82 @@
+_id: U5xQHpnzCcIwCuyd
+_key: '!items!U5xQHpnzCcIwCuyd'
+_stats:
+  coreVersion: '12.331'
+folder: pCbPxzsBnEH3Mz08
+img: icons/tools/navigation/map-chart-tan.webp
+name: Rising Star (War for the Crown)
+system:
+  actions:
+    - _id: 2jlgJTeEcC8ylPwJ
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once each day, you can invoke your patron’s reputation or name one of
+        your own prominent works to gain a +2 circumstance bonus on a single
+        Bluff, Diplomacy, or Intimidate check.</p>
+      img: icons/tools/navigation/map-chart-tan.webp
+      name: Use
+  changes:
+    - _id: ztGanTMI
+      formula: '1'
+      target: skill.sen
+      type: trait
+    - _id: 27ikmWNs
+      formula: '1'
+      target: skill.sur
+      type: trait
+    - _id: I48PaCUQ
+      formula: '1'
+      type: trait
+  contextNotes:
+    - target: skill.blf
+      text: >-
+        Once each day, you can gain a +[[2]] Circumstance bonus on a single
+        check. ([[@resources.risingStarWarForTheCrown.value]] remaining uses)
+    - target: skill.dip
+      text: >-
+        Once each day, you can gain a +[[2]] Circumstance bonus on a single
+        check. ([[@resources.risingStarWarForTheCrown.value]] remaining uses)
+    - target: skill.int
+      text: >-
+        Once each day, you can gain a +[[2]] Circumstance bonus on a single
+        check. ([[@resources.risingStarWarForTheCrown.value]] remaining uses)
+  description:
+    instructions: >-
+      <ol><li><p>Select a single Craft or Perform skill when you take this
+      trait.</p></li><li><p>Update the Skills tab of your Actor to add the skill
+      chosen at step 1</p></li><li><p>Update the target of the untargeted change
+      on the Changes tab of this trait to reflect your choice at step
+      1.</p></li><li><p>Select Sense Motive, Survival, or the skill chosen at
+      step 1.</p></li><li><p>Update the Class skills section of the Details tab
+      of this trait to reflect your choice at step 4.</p></li></ol>
+    value: >-
+      <p><em>All too often, great minds must suffer for their art, but you’re
+      one of the lucky ones. Your skills attracted the attention of a noble
+      patron who pays for your food, housing, and tools. As your patron
+      introduces you to other cultural elites, you’re slowly learning to
+      navigate the treacherous waters of high society, but you still remember
+      the lean times when each meal was a hard-won
+      treasure.</em></p><p><strong>Benefits</strong>: You gain a +1 trait bonus
+      on Sense Motive and Survival checks, as well as checks using a single
+      Craft or Perform skill of your choice; one of these skills is always a
+      class skill for you. Once each day, you can invoke your patron’s
+      reputation or name one of your own prominent works to gain a +2
+      circumstance bonus on a single Bluff, Diplomacy, or Intimidate check. You
+      begin the game with a masterwork musical instrument or tool appropriate to
+      the Craft or Perform skill you selected, a gift from your patron.</p><hr
+      />
+  sources:
+    - id: PZO9000-22E
+      pages: '9'
+  subType: trait
+  tags:
+    - War for the Crown
+  traitType: campaign
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

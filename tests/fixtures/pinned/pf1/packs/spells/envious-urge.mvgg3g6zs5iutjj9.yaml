@@ -1,0 +1,61 @@
+_id: mvgg3g6zs5iutjj9
+_key: '!items!mvgg3g6zs5iutjj9'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Envious Urge
+system:
+  actions:
+    - _id: bubkjwrq6bgbz0jv
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You fill creatures with feelings of seething envy. Affected targets
+      turn upon the nearest creature (whether an ally or enemy) and attempt to
+      disarm it of a valuable weapon, steal something it is holding, or grapple
+      it and strip it of something it prizes (your choice). Affected targets can
+      attempt a new Will save each round as a free action to end this
+      effect.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 6
+      bard: 4
+      mesmerist: 4
+      psychic: 6
+      skald: 4
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1117
+      pages: '218'
+  subschool:
+    - compulsion
+type: spell

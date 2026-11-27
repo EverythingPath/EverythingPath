@@ -1,0 +1,37 @@
+_id: WfJdBgyEaKKisulS
+_key: '!items!WfJdBgyEaKKisulS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/enchant-red-3.jpg
+name: Hasted Assault
+system:
+  abilityType: su
+  actions:
+    - _id: xxxx1kaqf23screv
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Magus
+  description:
+    value: >-
+      <p>The magus can expend 1 point from his arcane pool as a swift action to
+      move more quickly. This functions as haste, but only targets the magus and
+      lasts for a number of rounds equal to the magus's Intelligence bonus.</p>
+
+      <p>The magus must be at least 9th level before selecting this magus
+      arcana.</p>
+  subType: classFeat
+  tags:
+    - Magus Arcana
+type: feat

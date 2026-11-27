@@ -1,0 +1,62 @@
+_id: 3zggJMxuipE68IkT
+_key: '!items!3zggJMxuipE68IkT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_14.jpg
+name: Perfected Form
+system:
+  abilityType: su
+  actions:
+    - _id: 8td188oq7wa4ao4l
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: minute
+        value: '1'
+      name: Surge of self-confidence
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        Perfected Form: +[[1 + floor(@class.level / 5)]] sacred or profane bonus
+        against polymorph effects
+  description:
+    value: >-
+      <p>You maintain an unshakable sense of who you are, and no force can
+      compel you to be anything else. You gain a +1 sacred (if your patron is
+      good or neutral) or profane (if your patron is evil) bonus on saving
+      throws against polymorph, petrification, and transmutation effects. This
+      bonus increases by 1 for every 5 cleric levels you have (maximum +5). Once
+      per day when you succeed at a saving throw against such an effect, you can
+      gain a surge of self-confidence as an immediate action that grants you a
+      number of temporary hit points equal to your cleric level and a +2 morale
+      bonus on attack rolls, skill checks, and saving throws; both effects last
+      for 1 minute.</p><p>This power replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.2mnWAoFKqKKxWCt4]{Liberation}
+      power of the
+      @UUID[Compendium.pf1.class-abilities.Item.NjMyfBFJ42xbUpwC]{Liberation
+      Domain} or the
+      @UUID[Compendium.pf1.class-abilities.Item.Iu8gyBT93dRpGtgH]{Strength
+      Surge} power of the
+      @UUID[Compendium.pf1.class-abilities.Item.6JYvxEtSqmjDbDWr]{Strength
+      Domain}.</p>
+  sources:
+    - id: PZO9472
+      pages: '26'
+  subType: classFeat
+  tags:
+    - Domain Power
+    - Self-Realization Subdomain
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

@@ -1,0 +1,46 @@
+_id: 2Tl29p9YHHwvWaFi
+_key: '!items!2Tl29p9YHHwvWaFi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Unnerve Beasts
+system:
+  abilityType: su
+  actions:
+    - _id: h8vlg5toa5n1mbrn
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The target becomes offensive to animals (Will negates). Animals become
+      distraught and aggressive in the victim's presence—horses buck, dogs snap
+      and bark, bulls charge, and so on. The hex lasts a number of hours equal
+      to the witch's Intelligence modifier.</p><p>A creature that saves against
+      the hex cannot be affected by the hex for 1 day. The reaction of the
+      animals is a <em>mind-affecting charm</em> effect, but the hex on the
+      target is not.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

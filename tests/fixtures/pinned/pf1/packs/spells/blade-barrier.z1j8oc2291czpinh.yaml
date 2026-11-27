@@ -1,0 +1,63 @@
+_id: z1j8oc2291czpinh
+_key: '!items!z1j8oc2291czpinh'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/skills/melee/swords-triple-orange.webp
+name: Blade Barrier
+system:
+  actions:
+    - _id: pv61obeu2ayq1b4k
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      effect: >-
+        wall of whirling blades up to 20 ft. long/level, or a ringed wall of
+        whirling blades with a radius of up to 5 ft. per two levels; either form
+        is 20 ft. high
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Reflex half or Reflex negates; see text
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>An immobile, vertical curtain of whirling blades shaped of pure force
+      springs into existence. Any creature passing through the wall takes 1d6
+      points of damage per caster level (maximum 15d6), with a Reflex save for
+      half damage.</p><p>If you evoke the barrier so that it appears where
+      creatures are, each creature takes damage as if passing through the
+      wall.</p><p>Each such creature can avoid the wall (ending up on the side
+      of its choice) and thus take no damage by making a successful Reflex
+      save.</p><p>A <i>blade barrier</i> provides cover (+4 bonus to AC, +2
+      bonus on Reflex saves) against attacks made through it.</p>
+  descriptors:
+    - force
+  learnedAt:
+    class:
+      cleric: 6
+      inquisitor: 6
+      occultist: 6
+      oracle: 6
+      psychic: 6
+      warpriest: 6
+    domain:
+      Good: 6
+      War: 6
+  level: 6
+  school: evo
+  sources:
+    - id: PZO1110
+      pages: '249'
+type: spell

@@ -1,0 +1,55 @@
+_id: QZJtfwamnWW0mHjJ
+_key: '!items!QZJtfwamnWW0mHjJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-2.jpg
+name: Nimbus of Light
+system:
+  abilityType: su
+  actions:
+    - _id: rGzJds2jReLLMyUO
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: '@class.level'
+            types:
+              - untyped
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: Undead within radius
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot nimbus of light for a number of
+      rounds per day equal to your cleric level. This acts as a
+      @UUID[Compendium.pf1.spells.7x2z0i8rcx7s81fk]{Daylight} spell. In
+      addition, undead within this radius take an amount of damage equal to your
+      cleric level each round that they remain inside the nimbus. Spells and
+      spell-like abilities with the darkness descriptor are automatically
+      dispelled if brought inside this nimbus. These rounds do not need to be
+      consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_nimbusOfLight
+  tags:
+    - Domain Power
+    - Sun Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

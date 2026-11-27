@@ -1,0 +1,65 @@
+_id: VH05vtasBdGaUaju
+_key: '!items!VH05vtasBdGaUaju'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fireball-red-3.jpg
+name: Breath Weapon
+system:
+  abilityType: su
+  actions:
+    - _id: cfmg3wey7soohjqp
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: seeText
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you gain a breath weapon. This breath weapon deals 1d6
+      points of damage of your energy type per sorcerer level. Those caught in
+      the area of the breath receive a Reflex save for half damage. The DC of
+      this save is equal to 10 + 1/2 your sorcerer level + your Charisma
+      modifier. The shape of the breath weapon depends on your dragon type (as
+      indicated on the above chart).</p><p>At 9th level, you can use this
+      ability once per day. At 17th level, you can use this ability twice per
+      day. At 20th level, you can use this ability three times per
+      day.</p><table><thead><tr><th>Dragon Type</th><th>Energy
+      Type</th><th>Breath
+      Shape</th></tr></thead><tbody><tr><td>Black</td><td>Acid</td><td>60-foot
+      line</td></tr><tr><td>Blue</td><td>Electricity</td><td>60-foot
+      line</td></tr><tr><td>Green</td><td>Acid</td><td>30-foot
+      cone</td></tr><tr><td>Red</td><td>Fire</td><td>30-foot
+      cone</td></tr><tr><td>White</td><td>Cold</td><td>30-foot
+      cone</td></tr><tr><td>Brass</td><td>Fire</td><td>60-foot
+      line</td></tr><tr><td>Bronze</td><td>Electricity</td><td>60-foot
+      line</td></tr><tr><td>Copper</td><td>Acid</td><td>60-foot
+      line</td></tr><tr><td>Gold</td><td>Fire</td><td>30-foot
+      cone</td></tr><tr><td>Silver</td><td>Cold</td><td>30-foot
+      cone</td></tr></tbody></table>
+  sources:
+    - id: PZO1110
+      pages: '75'
+  subType: classFeat
+  tag: classFeat_breathWeapon
+  tags:
+    - Bloodline Power
+    - Draconic Bloodline
+  uses:
+    maxFormula: clamp(floor((@class.level - 11) / 3), 1, 3)
+    per: day
+type: feat

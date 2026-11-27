@@ -1,0 +1,35 @@
+_id: HMmsaPUiNgB5Xa8u
+_key: '!items!HMmsaPUiNgB5Xa8u'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Creator's Will
+system:
+  abilityType: sp
+  actions:
+    - _id: 7qh0s4p2wn84mv6z
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can cast
+      @UUID[Compendium.pf1.spells.jsvjsax2eabrlx8g]{Minor Creation} as a
+      <em>spell-like ability</em>. You can have no more than one
+      @UUID[Compendium.pf1.spells.jsvjsax2eabrlx8g]{Minor Creation}active at a
+      time. If you cast the spell again, the previous casting immediately ends.
+      At 12th level, this ability improves to
+      @UUID[Compendium.pf1.spells.b8lt1275mz4ez4d8]{Major Creation}. You can use
+      this ability a number of times per day equal to 1/2 your wizard level.</p>
+  subType: classFeat
+  tag: classFeat_creatorsWill
+  uses:
+    maxFormula: floor(@class.level / 2)
+    per: day
+type: feat

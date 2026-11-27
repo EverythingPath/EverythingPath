@@ -1,0 +1,48 @@
+_id: 43TqhrjAlDrOPTM1
+_key: '!items!43TqhrjAlDrOPTM1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Distraction Hex
+system:
+  abilityType: su
+  actions:
+    - _id: BDUjHMLSc7fO0IFr
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1 + clamp(floor(@class.level / 8), 0, 2)
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can cause a creature within 30 feet to suffer hallucinatory
+      distractions whenever it tries to cast a spell or use a spell-like ability
+      for 1 round. Anytime the creature attempts to do so, it must succeed at a
+      concentration check (DC = 15 + twice the spell level) or lose the spell. A
+      successful Will saving throw negates this hex. At 8th level and 16th
+      level, the duration of this hex is extended by 1 round. Whether or not the
+      save is successful, a creature cannot be the target of this hex again for
+      1 day.</p><p>Hexes that affect the misfortune hex, such as cackle, also
+      affect distraction.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

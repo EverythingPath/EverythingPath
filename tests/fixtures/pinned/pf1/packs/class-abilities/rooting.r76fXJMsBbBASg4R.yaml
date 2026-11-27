@@ -1,0 +1,41 @@
+_id: r76fXJMsBbBASg4R
+_key: '!items!r76fXJMsBbBASg4R'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_31.jpg
+name: Rooting
+system:
+  abilityType: ex
+  actions:
+    - _id: xvvtkmwzkgnkfh46
+      activation:
+        type: move
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, as a <em>move action</em>, you can extend roots into the
+      ground. Your <em>speed</em> is reduced to 5 feet, but you gain a +4 bonus
+      to <em>natural armor</em> and a +10 bonus to <em>CMD</em> against <em>bull
+      rush</em>, <em>overrun</em>, <em>reposition</em>, and <em>trip</em>
+      maneuvers. You also gain <em>tremorsense</em> 30 feet and <em>fast
+      healing</em> 1. You can use this power for a number of minutes per day
+      equal to your sorcerer level. This duration need not be consecutive, but
+      it must be used in 1-minute increments.</p>
+  subType: classFeat
+  tag: classFeat_rooting
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,35 @@
+_id: zfeKCQsoGM530tTV
+_key: '!items!zfeKCQsoGM530tTV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-tail.jpg
+name: Tail (Attack)
+system:
+  actions:
+    - _id: v8ftxh9x62exeel0
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 0.5
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      attackBonus: '-5'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size, 4)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-tail.jpg
+      name: Attack
+      tag: tail
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

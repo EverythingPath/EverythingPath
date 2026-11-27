@@ -1,0 +1,56 @@
+_id: MppbibIym3XqWhnf
+_key: '!items!MppbibIym3XqWhnf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Erupt
+system:
+  abilityType: su
+  actions:
+    - _id: lncj43mc4pau8rku
+      actionType: spellsave
+      activation:
+        type: swift
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: (max(1, floor(@class.level / 2)))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#000000'
+        size: '10'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: 10-ft. radius burst
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a swift action, you cause flaming shards of rock to erupt from your
+      body. These shards deal 1d6 points of damage per 2 oracle levels (minimum
+      1d6) to all creatures in a 10-foot-radius burst (Reflex half). Half of
+      this damage is fire damage and the other half is piercing damage. The
+      shards create difficult terrain for 1 round.</p><p>You can use this
+      ability once per day, plus one additional time per day at 5th level and
+      every 5 levels thereafter.</p>
+  subType: classFeat
+  tag: classFeat_erupt
+  tags:
+    - Revelation
+    - Volcano Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

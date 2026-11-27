@@ -1,0 +1,46 @@
+_id: 3OyZAQkE27iAmOnB
+_key: '!items!3OyZAQkE27iAmOnB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/book-blue.jpg
+name: Teaching Moment
+system:
+  abilityType: su
+  actions:
+    - _id: mzw8ds0e5tnvgdut
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: ally within 30 ft.
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, when you or an ally within 30 feet rolls a natural 1 or a
+      natural 20 on an attack roll, an ability check, a skill check, or a saving
+      throw, as an immediate action you can grant all allies within 30 feet
+      special insights that help them overcome similar challenges. Once during
+      the next minute, each affected creature can choose to roll twice and take
+      the better result before attempting an attack roll, ability check, skill
+      check, or saving throw. You can use this ability once per day at 8th
+      level, and one additional time per day for every 4 cleric levels beyond
+      8th.</p>
+
+      <p>This power replaces the Unity power of the Community Domain or the
+      Remote Viewing power of the Knowledge Domain.</p>
+  subType: classFeat
+  tag: classFeat_teachingMoment
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

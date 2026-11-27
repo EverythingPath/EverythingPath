@@ -1,0 +1,40 @@
+_id: Tp051wDu0yArpgke
+_key: '!items!Tp051wDu0yArpgke'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Grasp of Honesty
+system:
+  abilityType: su
+  actions:
+    - _id: mh8ouol5n3qt8c3x
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, any creature you are grappling or pinning is affected by
+      @UUID[Compendium.pf1.spells.snspotd2cno49ed5]{Zone of Truth} (Will
+      negates). Outside of combat, you may use this ability by touching a target
+      with both hands. You can use this ability a number of rounds per day equal
+      to your inquisitor level. These rounds do not need to be consecutive. The
+      effect ends if you stop grappling, pinning, or touching the target.</p>
+  subType: classFeat
+  tag: classFeat_graspOfHonesty
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

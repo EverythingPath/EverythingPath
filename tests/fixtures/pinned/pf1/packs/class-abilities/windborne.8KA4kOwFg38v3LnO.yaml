@@ -1,0 +1,39 @@
+_id: 8KA4kOwFg38v3LnO
+_key: '!items!8KA4kOwFg38v3LnO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/air-burst-sky-1.jpg
+name: Windborne
+system:
+  abilityType: sp
+  actions:
+    - _id: v2win2so5h831k1c
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you can turn gaseous (as the spell
+      @UUID[Compendium.pf1.spells.mqdoexj35atgqafn]{Gaseous Form}) for a number
+      of rounds per day equal to your sorcerer level. These rounds need not be
+      consecutive. At 11th level and every two levels thereafter, your speed
+      while gaseous increases by +10 feet, to a maximum speed of 60 feet at 19th
+      level.</p>
+  subType: classFeat
+  tag: classFeat_windborne
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat
