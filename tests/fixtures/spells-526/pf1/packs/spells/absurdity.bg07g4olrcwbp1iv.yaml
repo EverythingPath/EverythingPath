@@ -1,0 +1,74 @@
+_id: bg07g4olrcwbp1iv
+_key: '!items!bg07g4olrcwbp1iv'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Absurdity
+system:
+  actions:
+    - _id: id4aubpyy4blqqz7
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: >-
+          up to one creature/level, no two of which can be more than 30 ft.
+          apart
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Your targets perceive intimidation and threats as laughably absurd. A
+      character attempting to intimidate your targets is instead perceived as
+      having exaggerated facial features or babbling and awkward speech. Effects
+      that impose fear conditions become objects of ridicule, with the targets
+      making fun of the source of the object as it attempts to scare them.
+      <i>Absurdity</i> protects your targets from gaining lesser fear conditions
+      (spooked, shaken, and scared), granting them immunity to spooked and a 50%
+      chance to negate shaken or scared conditions instead of gaining them from
+      any effect, including uses of the Intimidate skill to demoralize. Any
+      other effect related to a spell or ability that generates fear (such as
+      dying from a <i>phantasmal killer</i>) affects them normally, and effects
+      that ignore immunity to fear also ignore <i>absurdity</i>.  However,
+      target creatures also have serious difficulty noticing potential threats;
+      they take a -10 penalty on Sense Motive checks to avoid surprise or to
+      notice that a creature is actively threatening or malicious and a -2
+      penalty on initiative checks. The spell doesn't prevent spells or effects
+      that provide early warning or a form of danger sense (like <i>anticipate
+      peril</i> or <i>find traps</i>) from alerting the affected character to
+      danger.</p>
+  descriptors:
+    - emotion
+    - mindAffecting
+  learnedAt:
+    class:
+      bard: 2
+      medium: 2
+      mesmerist: 2
+      psychic: 2
+      skald: 2
+      spiritualist: 2
+  level: 2
+  school: ill
+  sources:
+    - id: PZO1135
+      pages: '108'
+  sr: false
+  subschool:
+    - phantasm
+type: spell

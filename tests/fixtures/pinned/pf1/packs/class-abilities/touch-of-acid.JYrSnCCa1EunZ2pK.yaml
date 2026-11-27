@@ -1,0 +1,54 @@
+_id: JYrSnCCa1EunZ2pK
+_key: '!items!JYrSnCCa1EunZ2pK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Touch of Acid
+system:
+  abilityType: su
+  actions:
+    - _id: t9vspwjlqblkd7b6
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - acid
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can perform a melee touch attack that deals
+      1d6 points of acid damage +1 point for every two oracle levels you
+      possess.</p>
+
+      <p>You can use this ability a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+
+      <p>At 11th level, any weapon that you wield deals +1d6 points of acid
+      damage, similar to how a flaming weapon operates.</p>
+  subType: classFeat
+  tag: classFeat_touchOfAcid
+  tags:
+    - Revelation
+    - Stone Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

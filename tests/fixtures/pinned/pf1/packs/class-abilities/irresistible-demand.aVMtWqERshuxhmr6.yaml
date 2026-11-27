@@ -1,0 +1,41 @@
+_id: aVMtWqERshuxhmr6
+_key: '!items!aVMtWqERshuxhmr6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_15.jpg
+name: Irresistible Demand
+system:
+  abilityType: sp
+  actions:
+    - _id: 1sqbjl6m0kfgtbuc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can force others to do your bidding. As a
+      <em>standard action</em>, you attempt to dominate a creature as though
+      using the @UUID[Compendium.pf1.spells.66s5qm8kwycgobce]{Dominate Monster}
+      spell, except that the creature must have a number of <em>Hit Dice</em>
+      equal to or less than your wizard level. The targeted creature receives a
+      <em>Will saving throw</em> each round to negate the effect. The DC is
+      equal to 10 + 1/2 your wizard level + your <em>Intelligence</em> modifier.
+      You can dominate creatures for a number of rounds per day equal to your
+      wizard level. These rounds do not need to be consecutive. You must
+      concentrate as a <em>standard action</em> to maintain control over a
+      dominated creature.</p>
+  subType: classFeat
+  tag: classFeat_irresistibleDemand
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

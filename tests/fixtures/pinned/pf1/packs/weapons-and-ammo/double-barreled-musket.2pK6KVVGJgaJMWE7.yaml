@@ -1,0 +1,90 @@
+_id: 2pK6KVVGJgaJMWE7
+_key: '!items!2pK6KVVGJgaJMWE7'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-double-barrel.webp
+name: Double-Barreled Musket
+system:
+  actions:
+    - _id: tbuyn9qr2pd1ji6d
+      ability:
+        attack: _default
+        critMult: 4
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      conditionals:
+        - _id: Y2KfKmMMejLmi66j
+          modifiers:
+            - _id: T1LB1d2fFTJ7nINg
+              formula: '-4'
+              subTarget: allAttack
+              target: attack
+              type: untyped
+          name: Both Barrels
+      damage:
+        parts:
+          - formula: sizeRoll(1, 12, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '10'
+  ammo:
+    capacity: 2
+    explode: 5
+    misfire: 3
+    type: gunBullet
+  baseTypes:
+    - Double-Barreled Musket
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d10 (small), 1d12 (medium);
+      <b>Critical</b> x4; <b>Range</b> 10 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-3 (5 ft.); <b>Capacity</b> 2</p>
+
+      <h3>Description</h3>
+
+      <p>This musket has two parallel barrels; each barrel can be shot
+      independently as separate attacks, or both can be fired at once as a
+      standard action (the attack action).</p>
+
+      <p>If both barrels are fired at once, they must both target the same
+      creature or object, and the gun becomes wildly inaccurate, taking a -4
+      penalty on each shot. Each barrel of a double-barreled musket uses either
+      a bullet and 1 dose of black powder or a single alchemical cartridge as
+      ammunition.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2500
+  sources:
+    - id: PZO1123
+      pages: '43'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 11
+type: weapon

@@ -1,0 +1,52 @@
+_id: tJKiz80YYgojxJOS
+_key: '!items!tJKiz80YYgojxJOS'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Fangwood Insurgent (Nirmathas)
+system:
+  actions:
+    - _id: ectOrWJtFXYGeHeS
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, when in a forest, you can designate yourself or an ally
+        to roll twice for initiative and take either result.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: roll twice for initiative
+  contextNotes:
+    - target: init
+      text: +[[1]] Trait bonus when in a forest.
+    - target: init
+      text: >-
+        Once per day, when in a forest, you can designate yourself or an ally to
+        roll twice for initiative and take either result.
+        ([[@resources.fangwoodInsurgentNirmathas.value]] remaining uses)
+  description:
+    value: >-
+      <p><em>You have spent many years living under the canopy of the Southern
+      Fangwood, during which you and your comrades clashed regularly with the
+      soldiers of imperialist Molthune. After years of guerrilla warfare, you’ve
+      learned to interpret the sounds of the forest to detect signs of
+      enemies.</em></p><p><strong>Requirements</strong>: <span
+      data-tooltip="Young resource-heavy nation in central Avistan.  Formerly
+      claimed by Taldor, Cheliax and Molthune."><span
+      style="text-decoration:underline">Nirmathas</span></span></p><p><strong>Benefits</strong>:
+      You gain a +1 trait bonus on initiative checks when in a forest. Once per
+      day when in a forest, you can designate yourself or an ally to roll twice
+      for initiative and take either result.</p>
+  sources:
+    - id: PZO9451
+      pages: '13'
+  subType: trait
+  tags:
+    - Nirmathas
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

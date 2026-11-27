@@ -1,0 +1,52 @@
+_id: ehQflQB4BXvEdHYh
+_key: '!items!ehQflQB4BXvEdHYh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Slumber
+system:
+  abilityType: su
+  actions:
+    - _id: yhlapre6iyfni4w8
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>A witch can cause a creature within 30 feet to fall into a deep,
+      magical sleep, as per the spell
+      @UUID[Compendium.pf1.spells.3plb67e51webutdz]{sleep}.</p><p>The creature
+      receives a Will save to negate the effect. If the save fails, the creature
+      falls asleep for a number of rounds equal to the witch's level. This hex
+      can affect a creature of any HD. The creature will not wake due to noise
+      or light, but others can rouse it with a standard action. This hex ends
+      immediately if the creature takes damage.</p><p>Whether or not the save is
+      successful, a creature cannot be the target of this hex again for 1
+      day.</p>
+  sources:
+    - id: PZO1115
+      pages: 66-67
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

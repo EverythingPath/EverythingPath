@@ -1,0 +1,53 @@
+_id: vsPPygCVgWzGdVbN
+_key: '!items!vsPPygCVgWzGdVbN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Eldritch Bolt
+system:
+  abilityType: su
+  actions:
+    - _id: y8vet7095p4beufa
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d8 + floor(@class.level / 2)
+            types:
+              - force
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: 30 + if(gte(@class.level, 10), 30)
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can damage foes with a bolt of raw magical energy. Make a ranged
+      touch attack against any foe within 30 feet. On a hit, you deal 1d8 points
+      of force damage, +1 point of damage per two oracle levels. At 10th level,
+      the bolt’s range increases to 60 feet.</p>
+
+      <p>You may use this revelation a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+  subType: classFeat
+  tag: classFeat_eldritchBolt
+  tags:
+    - Revelation
+    - Spellscar Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

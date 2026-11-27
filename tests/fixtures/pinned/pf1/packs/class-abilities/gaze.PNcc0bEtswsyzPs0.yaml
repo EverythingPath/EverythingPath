@@ -1,0 +1,42 @@
+_id: PNcc0bEtswsyzPs0
+_key: '!items!PNcc0bEtswsyzPs0'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_05.jpg
+name: Gaze
+system:
+  abilityType: su
+  actions:
+    - _id: wz7bm6a9a9rluyyw
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.con.mod'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.con.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Bloodrager
+  description:
+    value: >-
+      <p>At 1st level, you can harness the power of the medusa through your
+      gaze. As a standard action, choose a creature within your line of sight
+      who is within 30 feet of you. The creature must succeed at a Fortitude
+      saving throw or have its speed halved for a number of rounds equal to your
+      Constitution modifier (minimum 1 round). The DC of this save is equal to
+      10 + half your bloodrager level + your Constitution modifier.</p>
+  subType: classFeat
+type: feat

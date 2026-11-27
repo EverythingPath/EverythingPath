@@ -1,0 +1,52 @@
+_id: 3wZ8WwBQPft1nO76
+_key: '!items!3wZ8WwBQPft1nO76'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Minor Prophecy
+system:
+  abilityType: su
+  actions:
+    - _id: jhpwfe026eqs0rit
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+    - _id: 6lZe1jtUA8v4BrUh
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      description: <p>Augury accuracy reduced by 5%.</p>
+      duration:
+        units: inst
+      name: Forgo Material
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can call on her prophetic ancestors to cast
+      @UUID[Compendium.pf1.spells.d1wxnax51cecplm4]{Augury} once per day. She
+      can spend a full hour casting the spell to negate the need for material
+      components, but this reduces the accuracy of the spell by 5%.</p>
+  subType: classFeat
+  tag: classFeat_minorProphecy
+  tags:
+    - Hex
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

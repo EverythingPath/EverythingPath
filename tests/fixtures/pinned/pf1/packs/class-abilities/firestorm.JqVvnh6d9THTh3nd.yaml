@@ -1,0 +1,46 @@
+_id: JqVvnh6d9THTh3nd
+_key: '!items!JqVvnh6d9THTh3nd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Firestorm
+system:
+  abilityType: su
+  actions:
+    - _id: srjhvpv3ty97g0qy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      name: Use
+      range:
+        units: seeText
+      target:
+        value: 10-ft. cube area per caster level
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can cause fire to erupt around you. You can
+      create one 10-foot cube of fire per oracle level. These cubes can be
+      arranged in any pattern you desire, but each cube must be adjacent to
+      another and one must be adjacent to you. Any creature caught in these
+      flames takes 1d6 points of fire damage per oracle level, with a Reflex
+      save resulting in half damage. This fire lasts for a number of rounds
+      equal to your Charisma modifier. You can use this ability once per
+      day.</p>
+
+      <p>You must be at least 11th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_firestorm
+  tags:
+    - Revelation
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

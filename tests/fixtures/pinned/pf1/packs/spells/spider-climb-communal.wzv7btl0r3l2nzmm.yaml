@@ -1,0 +1,59 @@
+_id: wzv7btl0r3l2nzmm
+_key: '!items!wzv7btl0r3l2nzmm'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/creatures/invertebrates/spider-pink-purple.webp
+name: Spider Climb, Communal
+system:
+  actions:
+    - _id: p4qxr9bx5tu9admx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creatures touched
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.3mfmhx8avu7h3iom]{spider climb}, except
+      you divide the duration in 10-minute intervals among the creatures
+      touched.</p>
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      druid: 3
+      hunter: 3
+      investigator: 3
+      occultist: 3
+      psychic: 3
+      sorcerer: 3
+      summoner: 3
+      summonerUnchained: 3
+      wizard: 3
+  level: 3
+  materials:
+    value: a live spider
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '245'
+type: spell

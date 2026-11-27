@@ -1,0 +1,44 @@
+_id: 14eYLZcghqZr1F8R
+_key: '!items!14eYLZcghqZr1F8R'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/mech_9.jpg
+name: More for Me
+system:
+  abilityType: su
+  actions:
+    - _id: t4cf4jp2fmrzb541
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>When another character within 30 feet casts a spell with a range
+      greater than touch, you can attempt a caster level check as an immediate
+      action (DC = 15 + the spell’s level). If you succeed at the check, you
+      receive the spell’s benefit instead of one of the spell’s intended targets
+      (chosen by you). If you are already a target of the spell, you are
+      affected as though you were targeted by the same spell twice (which may or
+      may not benefit you; remember that bonuses from the same source do not
+      stack). This ability does not grant you knowledge of the spell being cast.
+      You can use this ability a number of times per day equal to 3 + your
+      Wisdom modifier.</p>
+
+      <p>This power replaces the Copycat power of the Trickery Domain.</p>
+  subType: classFeat
+  tag: classFeat_moreForMe
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

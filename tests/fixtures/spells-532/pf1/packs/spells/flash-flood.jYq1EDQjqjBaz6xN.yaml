@@ -1,0 +1,75 @@
+_id: jYq1EDQjqjBaz6xN
+_key: '!items!jYq1EDQjqjBaz6xN'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/water/wave-water-blue.webp
+name: Flash Flood
+system:
+  actions:
+    - _id: HmFR7z0KZ1vjYUjm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      damage:
+        parts:
+          - formula: (floor(@cl / 2))d6
+            types:
+              - bludgeoning
+      duration:
+        units: spec
+        value: instantaneous and 1 round per level; see text
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        description: Reflex partial, see text
+        type: ref
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You call forth a fast-moving wave that batters all creatures in its
+      path and leaves the target area flooded. Each creature in the area must
+      succeed at a Reflex save or take 1d6 points of bludgeoning damage per 2
+      caster levels (maximum 10d6). The wave also attempts a bull rush combat
+      maneuver against all creatures of any size within its area of effect.
+      Attempt a single combat maneuver check and apply the result to each
+      creature within the area. Your CMB for this bull rush is equal to your
+      caster level plus your Intelligence, Wisdom, or Charisma modifier,
+      whichever is highest. This bull rush attempt doesn’t provoke attacks of
+      opportunity.</p><p>The area covered by the cone remains inundated for 1
+      round per caster level. If cast on land, treat the area as a <em>deep
+      bog</em>. If cast on water, the water level within the affected area rises
+      by 5 feet.</p>
+  descriptors:
+    - water
+  learnedAt:
+    class:
+      arcanist: 6
+      druid: 6
+      hunter: 6
+      shaman: 6
+      sorcerer: 6
+      wizard: 6
+  level: 6
+  materials:
+    value: water-smoothed pebble
+  school: con
+  sources:
+    - id: PZO9494
+      pages: '27'
+  sr: false
+  subschool:
+    - creation
+type: spell

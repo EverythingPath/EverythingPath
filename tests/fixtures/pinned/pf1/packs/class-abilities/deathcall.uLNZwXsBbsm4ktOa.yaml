@@ -1,0 +1,35 @@
+_id: uLNZwXsBbsm4ktOa
+_key: '!items!uLNZwXsBbsm4ktOa'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Deathcall
+system:
+  abilityType: su
+  actions:
+    - _id: 1cs1au2j7q7senjv
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      description: <p>[[-1 - min(2, floor(@class.level / 8))]] penalty to stabilize.</p>
+      name: Use
+      range:
+        units: ft
+        value: '120'
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch’s presence makes death more likely for wounded foes.
+      Creatures within 120 feet of the witch take a –1 penalty on checks to
+      stabilize when dying.</p>
+
+      <p>At 8th level, this penalty changes to –2, and at 16th level, it changes
+      to –3.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

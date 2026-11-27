@@ -1,0 +1,42 @@
+_id: MPu3HSO28JoRzlUX
+_key: '!items!MPu3HSO28JoRzlUX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_05.jpg
+name: Divine Challenge
+system:
+  abilityType: su
+  actions:
+    - _id: 2vhralheuiozmr8c
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a swift action, you can challenge a visible foe within 30 feet,
+      gaining a +1 sacred bonus to your AC against that creature’s attacks and a
+      bonus equal to 1/2 your cleric level on Bluff skill checks to feint
+      against it. These bonuses last for a number of rounds equal to 1/2 your
+      cleric level. You can use this ability a number of times per day equal to
+      3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Battle Rage power of the War Domain.</p>
+  subType: classFeat
+  tag: classFeat_divineChallenge
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,42 @@
+_id: dW1cX5yWBOBRrEWO
+_key: '!items!dW1cX5yWBOBRrEWO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/sickening-critical.jpg
+name: Corrupting Aura
+system:
+  abilityType: ex
+  actions:
+    - _id: x91rtvi1e0o8arjk
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: seeText
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you can surround yourself with an aura of corrupting
+      energy for a number of rounds per day equal to your <em>sorcerer</em>
+      level.</p>
+
+      <p>Any creature within 10 feet of you takes 1d6 points of <em>nonlethal
+      damage</em> + 1 for every 2 <em>sorcerer</em> levels you possess, and it
+      is <em>sickened</em> for 1 round. In addition, any creature within the
+      aura that attempts casting a divine spell must succeed at a <em>caster
+      level</em> check (DC 15 + double the level of the spell) or lose the
+      spell. You can use this ability once per day at 9th level, twice per day
+      at 17th, and three times per day at 20th.</p>
+  subType: classFeat
+  tag: classFeat_corruptingAura
+  uses:
+    maxFormula: floor((@class.level - 1) / 8)  + floor(@class.level / 20)
+    per: day
+type: feat

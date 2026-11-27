@@ -1,0 +1,76 @@
+_id: khmR334BidfHHSA3
+_key: '!items!khmR334BidfHHSA3'
+_stats:
+  coreVersion: '12.343'
+folder: Xsrr4hrzufdySmSQ
+img: icons/sundries/lights/lantern-iron-lit-yellow.webp
+name: Lantern of Revealing
+system:
+  actions:
+    - _id: duSBHR0cCUYXhd2M
+      activation:
+        type: special
+        unchained:
+          type: nonaction
+      duration:
+        units: hour
+        value: '6'
+      name: Ignite
+      tag: ignite
+    - _id: askmHMomLt5Jfy3Z
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Extinguish
+      tag: extinguish
+  aura:
+    school: evo
+  cl: 5
+  description:
+    value: >-
+      <p>This lantern operates as a normal
+      @UUID[Compendium.pf1.items.Item.zylvLcc5P4EPkxzu]{hooded lantern}. While
+      it is lit, it also reveals all invisible creatures and objects within 25
+      feet of it, just like the spell invisibility
+      purge.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.xsecnbuvc3rbrefu]{invisibility purge};
+      <strong>Cost</strong> 15,000 gp</p>
+  hp:
+    base: 10
+  price: 30000
+  scriptCalls:
+    - _id: OdBwULcXLKhoIN1q
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 60 }));
+    - _id: kSy8RBgNWvtE79hq
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |
+        if (!token) return;
+        if (action.tag !== "extinguish") return;
+
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1123
+      pages: '307'
+    - id: PZO1110
+      pages: '522'
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,43 @@
+_id: xv3XFU7lww8OHQCW
+_key: '!items!xv3XFU7lww8OHQCW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_32.jpg
+name: Animate Servant
+system:
+  abilityType: su
+  actions:
+    - _id: rptqptjl5yet1kxt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: medium
+      target:
+        value: object touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as a standard action, you can give life to inanimate
+      objects. This ability functions as
+      @UUID[Compendium.pf1.spells.k9iu3d82hlo7coct]{Animate Objects} using your
+      cleric level as the caster level. You can use this ability once per day at
+      8th level, and one additional time per day for every four levels beyond
+      8th.</p>
+
+      <p>This power replaces the Dancing Weapon power of the Artifice
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_animateServant
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

@@ -1,0 +1,41 @@
+_id: wz6brMzcYRUkh0Bb
+_key: '!items!wz6brMzcYRUkh0Bb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_08.jpg
+name: Hardened Fists
+system:
+  abilityType: su
+  actions:
+    - _id: d9ypl448kjjmf189
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can make your fists grow large, callused, and gnarled
+      as a <em>free action</em>. Your unarmed strikes deal damage as though you
+      were one size category larger, deal lethal damage, and do not provoke
+      <em>attacks of opportunity</em>. If you have claws, they are affected
+      instead, and they deal damage as though you were one size category larger.
+      You can use this ability for a number of rounds per day equal to 3 + your
+      <em>Charisma</em> modifier. These rounds do not need to be
+      consecutive.</p>
+  subType: classFeat
+  tag: classFeat_hardenedFists
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

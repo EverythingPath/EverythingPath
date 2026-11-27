@@ -1,0 +1,34 @@
+_id: kYuSSvMUoT3MDyod
+_key: '!items!kYuSSvMUoT3MDyod'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Breaking Down Koan (UC)
+system:
+  abilityType: su
+  actions:
+    - _id: qr40uxvce3hws4sj
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will negates
+        type: will
+  associations:
+    classes:
+      - Monk (Unchained)
+  description:
+    value: >-
+      <p>A monk with this ability can spend 1 ki point as a swift action to
+      present a paradox, riddle, or complicated question to a creature within 30
+      feet. The creature must succeed at a Will save (DC = 10 + 1/2 the monk’s
+      level + his Wisdom modifier) or be confused for 1 round. This is a
+      mind-affecting, language-dependent effect.</p>
+
+      <p>A monk must be at least 8th level before selecting this ki power.</p>
+  subType: classFeat
+type: feat

@@ -1,0 +1,44 @@
+_id: JWp1SQMchKzumB8I
+_key: '!items!JWp1SQMchKzumB8I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Rewind Time
+system:
+  abilityType: su
+  actions:
+    - _id: i5uoe1ymd59evcwe
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day as an immediate action, you can reroll any one d20 roll
+      that you have just made before the results of the roll are revealed. You
+      must take the result of the reroll, even if it's worse than the original
+      roll.</p>
+
+      <p>At 11th level, and every four levels thereafter, you can use this
+      ability an additional time per day.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_rewindTime
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

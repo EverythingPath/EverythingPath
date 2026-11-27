@@ -1,0 +1,76 @@
+_id: tU2oGF0EOkgJl5fj
+_key: '!items!tU2oGF0EOkgJl5fj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Brain Drain
+system:
+  abilityType: su
+  actions:
+    - _id: augfhmh6ltobma0p
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d4
+            types:
+              - untyped
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: ft
+        value: '100'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one intelligent creature
+    - _id: hmbHFC4xZlx0yhGr
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: spec
+        value: '@abilities.cha.mod'
+      name: Search through memories
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can take a standard action to violently probe the mind of a single
+      intelligent enemy within 100 feet. The target receives a Will save to
+      negate the effect and immediately knows the source of this harmful mental
+      prying. Those who fail this save are wracked with pain, taking 1d4 points
+      of damage for every oracle level you possess. After successfully attacking
+      with this ability, you may use a full-round action to sort through the
+      jumble of stolen thoughts and memories to make a single Knowledge check
+      using the victim's skill bonus. The randomly stolen thoughts remain in
+      your mind for a number of rounds equal to your Charisma modifier. Treat
+      the knowledge gained as if you had used
+      @UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect thoughts}. This
+      is a mind-affecting effect.</p><p>You can use this ability once per day at
+      1st level, plus one additional time per day at 5th level and for every
+      five levels beyond 5th.</p>
+  sources:
+    - id: PZO1117
+      pages: '54'
+  subType: classFeat
+  tag: classFeat_brainDrain
+  tags:
+    - Revelation
+    - Dark Tapestry Mystery
+    - Lore Mystery
+    - Occult Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

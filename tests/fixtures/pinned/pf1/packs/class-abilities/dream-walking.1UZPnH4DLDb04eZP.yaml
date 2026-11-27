@@ -1,0 +1,38 @@
+_id: 1UZPnH4DLDb04eZP
+_key: '!items!1UZPnH4DLDb04eZP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Dream Walking
+system:
+  abilityType: sp
+  actions:
+    - _id: am2na3arg2kak2hw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you can enter the ethereal plane. This functions like
+      @UUID[Compendium.pf1.spells.btccs4sjo2nog1a0]{Ethereal Jaunt}, but with a
+      duration of 1 minute for every 2 sorcerer levels you possess. Once during
+      this trip, you may cast
+      @UUID[Compendium.pf1.spells.siv3ub7hbmcklf8c]{Nightmare} as a
+      <em>spell-like ability</em> on a creature you see on the Material Plane.
+      (This is an exception to the normal rule that ethereal creatures cannot
+      affect targets on the Material Plane).</p>
+  subType: classFeat
+type: feat

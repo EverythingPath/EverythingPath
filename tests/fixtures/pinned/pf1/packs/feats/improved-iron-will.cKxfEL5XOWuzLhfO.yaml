@@ -1,0 +1,35 @@
+_id: cKxfEL5XOWuzLhfO
+_key: '!items!cKxfEL5XOWuzLhfO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/improved-iron-will.jpg
+name: Improved Iron Will
+system:
+  description:
+    value: >-
+      <p><em>Your clarity of thought allows you to resist mental
+      attacks.</em></p><p><strong>Prerequisites</strong>:
+      @UUID[Compendium.pf1.feats.Item.iAbIGhm7T2OK9Brt]{Iron
+      Will}.</p><p><strong>Benefits</strong>: Once per day, you may reroll a
+      Will save. You must decide to use this ability before the results are
+      revealed. You must take the second roll, even if it is worse.</p>
+  scriptCalls:
+    - _id: sP1zwT8P2BFl8Z9O
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll will
+      type: script
+      value: actor.rollSavingThrow("will");
+  sources:
+    - id: PZO1110
+      pages: 115, 127
+  tag: feat_improvedIronWill
+  tags:
+    - General
+    - Saving Throw
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
