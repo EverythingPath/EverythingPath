@@ -1,0 +1,44 @@
+_id: 8U8h0ZAw7W274GlK
+_key: '!items!8U8h0ZAw7W274GlK'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/defensive/shield-barrier-flaming-pentagon-red.webp
+name: Lava Shield
+system:
+  abilityType: su
+  actions:
+    - _id: hS3uDVHgQj4YpTuP
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      target:
+        value: One edge of your space
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can create a barrier of lava to protect you for 1
+      round as a standard action. Choose one edge of your space. That edge is
+      treated as a solid wall for attacks targeting you only. You gain total
+      cover from attacks that pass through this edge, and you gain the benefits
+      of fire shield (warm shield) while adjacent to the lava shield. You can
+      dismiss the lava shield as a free action, and it disappears immediately if
+      you leave your space. You can use this ability a number of rounds per day
+      equal to half your wizard level.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Magma School
+  uses:
+    maxFormula: floor(@class.level / 2)
+    per: day
+type: feat

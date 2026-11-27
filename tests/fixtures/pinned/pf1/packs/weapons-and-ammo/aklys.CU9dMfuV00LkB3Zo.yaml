@@ -1,0 +1,85 @@
+_id: CU9dMfuV00LkB3Zo
+_key: '!items!CU9dMfuV00LkB3Zo'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/aklys.png
+name: Aklys
+system:
+  actions:
+    - _id: 2vr622ax6hn78dab
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '20'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: rB0MWkXSio9ntqBL
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '20'
+  baseTypes:
+    - Aklys
+  description:
+    unidentified: >-
+      <p>The aklys is a hooked throwing club with a 20-foot-long cord, usually
+      of woven leather; you can retrieve the aklys after throwing it as a move
+      action. The hook allows you to make trip attacks at range. Some aklyses
+      have holes drilled through them and whistle when flung.</p>
+  hardness: 5
+  hp:
+    base: 2
+  material:
+    base:
+      value: steel
+  price: 5
+  properties:
+    fin: true
+    prf: true
+    trp: true
+  sources:
+    - id: PZO1123
+      pages: '20'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - hammers
+    - thrown
+  weight:
+    value: 2
+type: weapon

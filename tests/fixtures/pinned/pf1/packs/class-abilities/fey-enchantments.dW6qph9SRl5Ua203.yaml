@@ -1,0 +1,44 @@
+_id: dW6qph9SRl5Ua203
+_key: '!items!dW6qph9SRl5Ua203'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: Fey Enchantments
+system:
+  abilityType: sp
+  actions:
+    - _id: y2dtdglwnlwmp15h
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 8th level, an order of the blossom cavalier learns to use the
+      following spell-like abilities:
+      @UUID[Compendium.pf1.spells.0324zq42g3fu4kko]{Animal Messenger},
+      @UUID[Compendium.pf1.spells.v3d3lnjj7ks0ztii]{Enthrall},
+      @UUID[Compendium.pf1.spells.5nr9o7o0it6ewf17]{Hideous Laughter}, and
+      @UUID[Compendium.pf1.spells.zqj5qzyl46af27v0]{Suggestion}, with a caster
+      level equal to his cavalier level. He can use these spell-like abilities a
+      total of three times per day, in any combination (such as by casting
+      @UUID[Compendium.pf1.spells.v3d3lnjj7ks0ztii]{Enthrall} three times, or
+      @UUID[Compendium.pf1.spells.0324zq42g3fu4kko]{Animal Messenger} once and
+      @UUID[Compendium.pf1.spells.zqj5qzyl46af27v0]{Suggestion} twice). The
+      saving throw DC for these spell-like abilities is 10 + half the cavalier’s
+      level + his Charisma modifier. At 16th level, the cavalier can use his
+      spell-like abilities seven times per day, and he adds
+      @UUID[Compendium.pf1.spells.smbkd2yobhshbpqf]{Charm Monster} and
+      @UUID[Compendium.pf1.spells.9avh63v2izqxldze]{Terrible Remorse} to the
+      list.</p>
+  subType: classFeat
+  tag: classFeat_feyEnchantments
+  uses:
+    maxFormula: 3 + if(gte(@class.level, 16), 4)
+    per: day
+type: feat

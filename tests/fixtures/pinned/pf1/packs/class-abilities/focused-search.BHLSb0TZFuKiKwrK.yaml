@@ -1,0 +1,36 @@
+_id: BHLSb0TZFuKiKwrK
+_key: '!items!BHLSb0TZFuKiKwrK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Focused Search
+system:
+  abilityType: ex
+  actions:
+    - _id: eytj7mxvqm933p4k
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      name: Use
+      target:
+        value: one object or person
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>Once per day, you may designate a person or object as your focus. This
+      takes 1 minute of concentration, during which time you must either picture
+      this item or person if familiar to you, or meditate on the item’s or
+      person’s description if not. Until you choose a new focus, you gain a
+      bonus equal to half your inquisitor level on Perception checks to see or
+      hear your focus, or when using Survival to track your focus or a creature
+      with your focus in its possession. This bonus stacks with that gained from
+      the track special ability.</p>
+  subType: classFeat
+  tag: classFeat_focusedSearch
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

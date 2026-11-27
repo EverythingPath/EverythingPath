@@ -1,0 +1,41 @@
+_id: 3hBUzYx78WwKJ0uA
+_key: '!items!3hBUzYx78WwKJ0uA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_36.jpg
+name: Protoplasm
+system:
+  abilityType: sp
+  actions:
+    - _id: 1qpmigmqn07ccnzq
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1d3
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can create a ball of entropic protoplasm and hurl it
+      at targets within 30 feet. This protoplasm acts as a <em>tanglefoot
+      bag</em> that also inflicts 1 point of acid damage per round to a creature
+      <em>entangled</em> by it. The protoplasm dissolves within 1d3 rounds. You
+      may use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_protoplasm
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

@@ -1,0 +1,62 @@
+_id: kTiSd8vO1cPMxXWo
+_key: '!items!kTiSd8vO1cPMxXWo'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/waraxe-dwarven-double.png
+name: Dwarven Double Waraxe
+system:
+  actions:
+    - _id: ubl0aque4zljid2i
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - slashing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Dwarven Double Waraxe
+  description:
+    unidentified: >-
+      <p>This hefty waraxe is similar to the common dwarven waraxe, but its
+      recurved blade spans forward and back from its head like a deadly
+      butterfly. A dwarven double waraxe grants a +1 bonus on all attack rolls
+      after the first when using Cleave or Great Cleave.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 60
+  properties:
+    spc: true
+  sources:
+    - id: PZO1121
+      pages: '17'
+  subType: exotic
+  tags:
+    - Dwarf
+  weaponGroups:
+    - axes
+    - double
+  weaponSubtype: 1h
+  weight:
+    value: 12
+type: weapon

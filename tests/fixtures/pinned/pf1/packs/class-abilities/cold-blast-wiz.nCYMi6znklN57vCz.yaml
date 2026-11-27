@@ -1,0 +1,55 @@
+_id: nCYMi6znklN57vCz
+_key: '!items!nCYMi6znklN57vCz'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/water/projectiles-ice-explosion.webp
+name: Cold Blast (WIZ)
+system:
+  abilityType: su
+  actions:
+    - _id: nu0alWhEoBOQAmVm
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5 ft radius, centered on you
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - cold
+      duration:
+        units: round
+        value: '1'
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex have and negates stagger effect
+        type: ref
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action, you can unleash a blast of freezing cold. This
+      blast deals 1d6 points of cold damage + 1 point for every two wizard
+      levels you possess to all creatures within 5 feet of you and staggers them
+      for 1 round. A successful Reflex save negates the staggered effect and
+      halves the damage. The DC of this save is equal to 10 + 1/2 your wizard
+      level + your Intelligence modifier. You can use this ability a number of
+      times per day equal to 3 + your Intelligence modifier.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Water School
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

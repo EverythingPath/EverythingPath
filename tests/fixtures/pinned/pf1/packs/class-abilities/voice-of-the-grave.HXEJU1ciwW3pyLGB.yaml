@@ -1,0 +1,52 @@
+_id: HXEJU1ciwW3pyLGB
+_key: '!items!HXEJU1ciwW3pyLGB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Voice of the Grave
+system:
+  abilityType: su
+  actions:
+    - _id: 7y43ih57cu5r0yud
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '10'
+      target:
+        value: dead creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can @UUID[Compendium.pf1.spells.byn5q46du0ck592a]{Speak with Dead},
+      as per the spell, for a number of rounds per day equal to your oracle
+      level. These rounds do not need to be consecutive.</p>
+
+      <p>At 5th level, and every five levels thereafter, the dead creature you
+      question takes a cumulative –2 penalty on its Will save to resist this
+      effect.</p>
+  sources:
+    - id: PZO1117
+      pages: '53'
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_voiceOfTheGrave
+  tags:
+    - Revelation
+    - Bones Mystery
+    - Ancestor Mystery
+    - Occult Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

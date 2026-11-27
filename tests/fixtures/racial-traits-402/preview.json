@@ -1,0 +1,163 @@
+{
+  "entries": [
+    {
+      "externalKey": "pf1-content/rBKJCVwy3X2VjFdU",
+      "upstreamKey": "pf1-content/rBKJCVwy3X2VjFdU",
+      "pack": "pf-racial-traits",
+      "name": "Languages (Dwarf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/nEltI9y37rKJTeWo"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Dwarf</p><hr><p>Dwarves begin play speaking Common and Dwarven. Dwarves with high Intelligence scores can choose from the following languages: Giant, Gnome, Goblin, Orc, Terran, and Undercommon.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "236"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "21"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "10"
+        }
+      ],
+      "modifiers": [],
+      "unsupported": [
+        {
+          "field": "gameContent",
+          "reason": "Source game-content fields retained for feature curation; only explicitly mapped detail/modifiers have an interpretation.",
+          "value": {
+            "languages": ["common", "dwarven"]
+          }
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/oTQL4P3IdoJQAkOB",
+      "upstreamKey": "pf1-content/oTQL4P3IdoJQAkOB",
+      "pack": "pf-racial-traits",
+      "name": "Elven Immunities (Half-Elf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/cCepRrfH5SalFfT4"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Elf</p><hr><p>Half-elves are immune to magic sleep effects and get a +2 racial bonus on saving throws against enchantment spells and effects.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "24"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "40"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": "enchantment"
+          }
+        }
+      ],
+      "unsupported": [],
+      "situationalNotes": [
+        {
+          "text": "Immune to magic sleep effects."
+        }
+      ]
+    },
+    {
+      "externalKey": "pf1-content/orOAYDkNl4pqYWA4",
+      "upstreamKey": "pf1-content/orOAYDkNl4pqYWA4",
+      "pack": "pf-racial-traits",
+      "name": "+2 to One Ability Score (Half-Elf)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/cCepRrfH5SalFfT4"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Half-Elf</p><hr><p>Half-elf characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "237"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "24"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "40"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "ability.$choice",
+          "bonusType": "racial",
+          "value": 2
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "externalKey": "pf1-content/qoCLqjadKmJEN9R7",
+      "upstreamKey": "pf1-content/qoCLqjadKmJEN9R7",
+      "pack": "pf-racial-traits",
+      "name": "Fearless (Halfling)",
+      "detail": {
+        "kind": "racialTrait",
+        "bonusSkillRanksPerLevel": 0,
+        "raceKeys": ["pf1/Hf31mrYb3uucNyLO"],
+        "standard": true,
+        "replaces": []
+      },
+      "description": "<p><strong>Race</strong>: Halfling</p><hr><p>Halflings receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck.</p>",
+      "sources": [
+        {
+          "book": "PZO9280",
+          "pages": "238"
+        },
+        {
+          "book": "PZO1110",
+          "pages": "26"
+        },
+        {
+          "book": "PZO1121",
+          "pages": "60"
+        }
+      ],
+      "modifiers": [
+        {
+          "target": "saves",
+          "bonusType": "racial",
+          "value": 2,
+          "condition": {
+            "situation": "fear"
+          },
+          "stacksWithinEntry": true
+        }
+      ],
+      "unsupported": []
+    }
+  ],
+  "closure": []
+}

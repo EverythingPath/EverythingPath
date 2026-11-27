@@ -1,0 +1,43 @@
+_id: ADUgheC6QFoV34Cu
+_key: '!items!ADUgheC6QFoV34Cu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_20.jpg
+name: Whispering Evil
+system:
+  abilityType: su
+  actions:
+    - _id: n2nou02ues8odcmi
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: foes within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as a standard action, you can whisper a hypnotizing
+      litany of empty promises. Each enemy within a 30-foot emanation that can
+      hear you must succeed on a Will saving throw or become fascinated for as
+      long as you continue the litany. You can use this power a number of rounds
+      per day equal to your cleric level, but these rounds do not need to be
+      consecutive. This is a mind-affecting effect.</p>
+
+      <p>This power replaces the Scythe of Evil power of the Evil Domain.</p>
+  subType: classFeat
+  tag: classFeat_whisperingEvil
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,62 @@
+_id: mixa6uq4tbb7w834
+_key: '!items!mixa6uq4tbb7w834'
+_stats:
+  coreVersion: '12.343'
+folder: 4NHp2XrrZ02oHYog
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal-purple.webp
+name: Curse of Magic Negation
+system:
+  actions:
+    - _id: czb1dwtap17lmudj
+      actionType: spellsave
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You disrupt the target creature's ability to draw upon magical
+      energies. For the duration of the spell, it gains the negated spellblight
+      (see page 97). Dispel checks to remove the spellblight take a -5 penalty
+      due to this spell's interference with magical energies.</p>
+  descriptors:
+    - curse
+  learnedAt:
+    class:
+      arcanist: 4
+      cleric: 5
+      inquisitor: 4
+      mesmerist: 3
+      occultist: 4
+      oracle: 5
+      psychic: 4
+      sorcerer: 4
+      warpriest: 5
+      witch: 4
+      wizard: 4
+  level: 4
+  materials:
+    gpValue: 250
+    value: powdered lead and platinum worth 250 gp
+  school: abj
+  sources:
+    - id: PZO1117
+      pages: '215'
+  sr: false
+type: spell

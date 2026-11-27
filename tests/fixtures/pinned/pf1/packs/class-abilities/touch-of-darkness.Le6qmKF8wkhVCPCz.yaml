@@ -1,0 +1,49 @@
+_id: Le6qmKF8wkhVCPCz
+_key: '!items!Le6qmKF8wkhVCPCz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/rip-sky-1.jpg
+name: Touch of Darkness
+system:
+  abilityType: sp
+  actions:
+    - _id: giee9ut2pinugn5h
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a melee touch attack, you can cause a creature's vision to be
+      fraught with shadows and darkness. The creature touched treats all other
+      creatures as if they had concealment, suffering a 20% miss chance on all
+      attack rolls. This effect lasts for a number of rounds equal to 1/2 your
+      cleric level (minimum 1). You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_touchOfDarkness
+  tags:
+    - Domain Power
+    - Darkness Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

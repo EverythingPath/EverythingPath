@@ -1,0 +1,52 @@
+_id: oJ10BJJcClN5CjPU
+_key: '!items!oJ10BJJcClN5CjPU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_05.jpg
+name: Progenitor's Sting
+system:
+  abilityType: sp
+  actions:
+    - _id: fwfnhfjmq8efehyq
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: One weapon
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>You can magically apply your toxic essence onto your weapon or onto the
+      weapon of a willing ally within 30 feet as a <em>standard action</em>.
+      (Poison—injury; save <em>Fort</em> DC 10 + half your <em>sorcerer</em>
+      level + your <em>Charisma</em> modifier; frequency 1/round for 6 rounds;
+      effect 1 <em>Str</em>, <em>Dex</em>, or <em>Con</em> damage [chosen when
+      this ability is used]; cure 1 save).</p>
+
+      <p>You can use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier.</p>
+
+      <p>At 5th level, the <em>ability damage</em> of your <em>poison</em>
+      increases to 1d3.</p>
+
+      <p>At 7th level, each time you apply your progenitor’s sting, you can
+      choose two ability scores for your <em>bloodline poison</em> to
+      affect.</p>
+
+      <p>At 11th level, whenever you apply your progenitor’s sting to a weapon,
+      you can magically apply it onto all willing allies’ weapons within 20 feet
+      as well. This counts as one use of your <em>bloodline</em> ability.</p>
+  subType: classFeat
+  tag: classFeat_progenitorsSting
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

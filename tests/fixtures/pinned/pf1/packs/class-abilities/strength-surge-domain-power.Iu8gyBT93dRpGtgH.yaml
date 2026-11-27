@@ -1,0 +1,48 @@
+_id: Iu8gyBT93dRpGtgH
+_key: '!items!Iu8gyBT93dRpGtgH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/stunning-critical.jpg
+name: Strength Surge (Domain Power)
+system:
+  abilityType: sp
+  actions:
+    - _id: i6gl6rvs4yqc0rjr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can touch a creature to give it great
+      strength. For 1 round, the target gains an enhancement bonus equal to 1/2
+      your cleric level (minimum +1) to melee attacks, combat maneuver checks
+      that rely on Strength, Strength-based skills, and Strength checks. You can
+      use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_strengthSurge
+  tags:
+    - Domain Power
+    - Strength Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

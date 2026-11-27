@@ -1,0 +1,47 @@
+_id: 8Ond4JNuSk71RuHM
+_key: '!items!8Ond4JNuSk71RuHM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Sink
+system:
+  abilityType: su
+  actions:
+    - _id: cvq1vpe0ehsbdiqi
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude reduces duration to 1 round
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can cause a creature in water to struggle, imposing a –4
+      penalty on its Swim checks and reducing its swim speed (if any) by 10 feet
+      for 1 minute unless it succeeds at a Fortitude saving throw; on a
+      successful save, the effect’s duration is reduced to 1 round.</p>
+
+      <p>The duration of this hex can be extended with the cackle hex.</p>
+
+      <p>This hex does not stack with itself.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

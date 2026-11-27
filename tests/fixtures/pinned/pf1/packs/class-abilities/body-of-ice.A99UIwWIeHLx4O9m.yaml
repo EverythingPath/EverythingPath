@@ -1,0 +1,43 @@
+_id: A99UIwWIeHLx4O9m
+_key: '!items!A99UIwWIeHLx4O9m'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_09.jpg
+name: Body of Ice
+system:
+  abilityType: su
+  actions:
+    - _id: sn4e20y61n8af9zd
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can transmute your body and equipment to ice for a
+      period of time. It takes a standard action to take on the form of ice, and
+      you can end the transmutation with a free action on your turn. When you
+      take on the form of ice, you are immune to cold and have DR 5/—, but you
+      take twice the normal amount of damage from fire. You can take on the form
+      of ice for a number of rounds per day equal to your cleric level. The
+      rounds need not be consecutive.</p>
+
+      <p>This power replaces the Cold Resistance power of the Water Domain.</p>
+  subType: classFeat
+  tag: classFeat_bodyOfIce
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

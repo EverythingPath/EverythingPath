@@ -1,0 +1,64 @@
+_id: 5k28oftzs0bezve3
+_key: '!items!5k28oftzs0bezve3'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Demand Offering
+system:
+  actions:
+    - _id: sr2w0n3jm8bnqf3r
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: spec
+        value: instantaneous or 1 round
+      name: Use
+      range:
+        units: ft
+        value: '5'
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A creature that fails its save uses an immediate action to hand you
+      whatever object it's currently wielding or holding. If the target doesn't
+      have an immediate action available, it uses a move action at the beginning
+      of its next turn to hand you the object. If it's currently holding or
+      wielding more than one item, determine randomly which item it gives you.
+      If you're no longer adjacent to the creature when it has to give you the
+      item, the spell ends with no effect. A creature that isn't holding an item
+      when you cast this spell is unaffected.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      antipaladin: 1
+      arcanist: 2
+      bard: 2
+      inquisitor: 2
+      mesmerist: 1
+      occultist: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '164'
+  subschool:
+    - compulsion
+type: spell

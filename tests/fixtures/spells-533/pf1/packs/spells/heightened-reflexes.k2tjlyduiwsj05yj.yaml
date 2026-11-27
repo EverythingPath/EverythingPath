@@ -1,0 +1,50 @@
+_id: k2tjlyduiwsj05yj
+_key: '!items!k2tjlyduiwsj05yj'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Heightened Reflexes
+system:
+  actions:
+    - _id: jr361cupc8sgvykq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: allies within a 30-ft.-radius burst centered on you
+      duration:
+        units: spec
+        value: 1 minute/level or until discharged
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You grant each of your allies within the area a +10 competence bonus on
+      a single Reflex saving throw. Each ally must decide whether to use the
+      bonus before making the roll to which it applies. When an ally uses the
+      bonus, the spell ends for that individual.</p>
+  learnedAt:
+    class:
+      bard: 2
+      skald: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1129
+      pages: '184'
+type: spell

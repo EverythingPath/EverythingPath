@@ -1,0 +1,42 @@
+_id: YYdaFefBey2TOHlM
+_key: '!items!YYdaFefBey2TOHlM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_24.jpg
+name: Rallying Cry
+system:
+  abilityType: su
+  actions:
+    - _id: 6jsmfhq0hcr0xspj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: allies
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 3rd level, as a <em>standard action</em> once per day, you can shout
+      a cry instilled with the noble sacrifices of your ancestor. You and any
+      allies within 30 feet who can hear you gain a +1 <em>morale bonus</em> on
+      attack and damage rolls for a number of rounds equal to half your
+      <em>sorcerer</em> level (minimum 1). At 7th level and every four levels
+      thereafter, this bonus increases by +1, to a maximum of +5 at 19th
+      level.</p>
+  subType: classFeat
+  tag: classFeat_rallyingCry
+  uses:
+    maxFormula: floor((@class.level + 1) / 4)
+    per: day
+type: feat

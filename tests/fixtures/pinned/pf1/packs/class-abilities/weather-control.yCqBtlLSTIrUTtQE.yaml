@@ -1,0 +1,42 @@
+_id: yCqBtlLSTIrUTtQE
+_key: '!items!yCqBtlLSTIrUTtQE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Weather Control
+system:
+  abilityType: su
+  actions:
+    - _id: tymbzy87g1d6o6op
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      area: 2-mile-radius circle
+      duration:
+        units: hour
+        value: 4d12
+      name: Use
+      range:
+        units: mi
+        value: '2'
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>A witch with this hex can use
+      @UUID[Compendium.pf1.spells.578t0lra5ll3aifs]{Control Weather} once per
+      day, but creating the weather takes 1 full hour of chanting, dancing, and
+      communing with her familiar.</p>
+  sources:
+    - id: PZO1115
+      pages: '69'
+  subType: classFeat
+  tag: classFeat_weatherControl
+  tags:
+    - Major Hex
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

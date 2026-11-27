@@ -1,0 +1,52 @@
+_id: T4q7Ib0ED01PNDyT
+_key: '!items!T4q7Ib0ED01PNDyT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_18.jpg
+name: Destructive Smite
+system:
+  abilityType: su
+  actions:
+    - _id: meonobmp08o558mk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      notes:
+        effect:
+          - >-
+            Make a single melee attack with +[[max(1, floor(@class.level / 2))]]
+            moral bonus.
+      range:
+        units: seeText
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You gain the destructive smite power: the supernatural ability to make
+      a single melee attack with a morale bonus on damage rolls equal to 1/2
+      your cleric level (minimum 1). You must declare the destructive smite
+      before making the attack. You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p><hr /><p><strong>Usage:</strong>
+      Add conditional modifer to your attacks with following
+      formula:</p><p><code>max(1, floor(@class.level / 2))</code></p>
+  sources:
+    - id: PZO1110
+      pages: '43'
+  subType: classFeat
+  tag: classFeat_destructiveSmite
+  tags:
+    - Domain Power
+    - Destruction Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

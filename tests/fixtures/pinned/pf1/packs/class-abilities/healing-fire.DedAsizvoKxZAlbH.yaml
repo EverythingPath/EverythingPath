@@ -1,0 +1,43 @@
+_id: DedAsizvoKxZAlbH
+_key: '!items!DedAsizvoKxZAlbH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/heal-royal-3.jpg
+name: Healing Fire
+system:
+  abilityType: su
+  actions:
+    - _id: mrpcit5509g8i6l4
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (floor(@class.level / 4))d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: seeText
+      target:
+        value: 30-ft. redius burst
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you can <em>channel energy</em> twice per day as a
+      cleric of half your level. Instead of using this ability to damage undead,
+      you can convert the positive energy to flame and deal an equivalent amount
+      of fire damage instead.</p>
+  subType: classFeat
+  tag: classFeat_healingFire
+  uses:
+    maxFormula: '2'
+    per: day
+type: feat

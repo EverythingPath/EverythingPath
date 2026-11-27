@@ -1,0 +1,45 @@
+_id: 9wfFpfkQZxaob2lw
+_key: '!items!9wfFpfkQZxaob2lw'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_24.jpg
+name: Hateful Aura
+system:
+  abilityType: su
+  actions:
+    - _id: ytumzgyil5p0pjkw
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: foes within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of hatred for a number of
+      rounds per day equal to your cleric level. These rounds need not be
+      consecutive. Enemies within this aura must attempt a Will save (DC = 10 +
+      1/2 your cleric level + your Wisdom modifier). Characters who fail their
+      save are filled with hatred, and cannot consider other characters allies
+      for the purpose of any actions or use any teamwork feats. The effect ends
+      immediately if the creature leaves the aura, you end the aura as a free
+      action, or you expend all rounds of this ability.</p>
+
+      <p>This power replaces the Destructive Aura power of the Destruction
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_hatefulAura
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

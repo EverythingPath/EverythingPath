@@ -1,0 +1,54 @@
+_id: U1CW0u9EbUD7tzWt
+_key: '!items!U1CW0u9EbUD7tzWt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_01.jpg
+name: Vortex of Flesh
+system:
+  abilityType: su
+  actions:
+    - _id: 53wqweahvt3zs9hs
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: 20-ft. radius
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, you can momentarily change into an amalgam of erratic
+      geometric shapes once per day, lashing out at every creature in a
+      20-foot-radius spread around you as a <em>standard action</em>. This
+      attack deals 1d6 points of bludgeoning, piercing, and slashing damage per
+      <em>sorcerer</em> level. If you benefit from a spell or effect that allows
+      you to overcome damage resistance with your <em>natural attacks</em> (such
+      as <em>magic fang</em>), this attack ignores <em>DR</em> of the same type.
+      Those caught in the area can attempt a <em>Reflex</em> saving throw (DC =
+      10 + half your <em>sorcerer</em> level + your <em>Charisma</em> modifier)
+      for half damage. At 17th level, you can use this ability twice per day. At
+      20th level, you can use this ability three times per day.</p>
+  subType: classFeat
+  tag: classFeat_vortexOfFlesh
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 16), 1) + if(gte(@class.level, 20), 1)
+    per: day
+type: feat

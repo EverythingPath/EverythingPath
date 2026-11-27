@@ -1,0 +1,39 @@
+_id: VjyJLTkaNBSclOro
+_key: '!items!VjyJLTkaNBSclOro'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Honeyed Words
+system:
+  abilityType: ex
+  actions:
+    - _id: rgb9ruqthago3qlo
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Rogue
+      - Investigator
+      - Ninja
+  contextNotes:
+    - target: skill.blf
+      text: 'Honeyed Words: roll two dice and take the better result.'
+  description:
+    value: >-
+      <p>Once per day, the character can roll two dice while making a Bluff
+      check, and take the better result. She must choose to use this talent
+      before making the Bluff check. A character can use this ability one
+      additional time per day for every five class levels she possesses.</p>
+  subType: classFeat
+  tag: classFeat_honeyedWords
+  tags:
+    - Rogue Talent
+    - Investigator Talent
+    - Ninja Trick
+  uses:
+    maxFormula: ceil(@class.level / 5)
+    per: day
+type: feat

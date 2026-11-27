@@ -1,0 +1,73 @@
+_id: 4puFBgiy3BBNYCys
+_key: '!items!4puFBgiy3BBNYCys'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Erosion Touch
+system:
+  abilityType: su
+  actions:
+    - _id: 740y7s5f1q83r56d
+      ability:
+        attack: str
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Touch object or construct
+      range:
+        units: touch
+      target:
+        value: object or construct touched
+      touch: true
+    - _id: cgze6zM4XPMnodqp
+      ability:
+        attack: str
+      actionType: mcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Sunder
+      duration:
+        units: inst
+      name: Touch object in another's possesion
+      range:
+        units: touch
+      target:
+        value: object or construct touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a melee touch attack, you can deal 1d6 points of damage per level to
+      objects or constructs. If used against an object in another creature's
+      possession, treat this attack as a sunder combat maneuver.</p>
+
+      <p>You can use this ability once per day, plus one time per day for every
+      three levels you possess.</p>
+  sources:
+    - id: PZO1130
+      pages: '56'
+  subType: classFeat
+  tag: classFeat_erosionTouch
+  tags:
+    - Revelation
+    - Apocalypse Mystery
+    - Nature Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 3)
+    per: day
+type: feat

@@ -1,0 +1,57 @@
+_id: WCxIMzfaq7mV3b2o
+_key: '!items!WCxIMzfaq7mV3b2o'
+_stats:
+  coreVersion: '12.331'
+folder: OHZg8sim2p5PHnsi
+img: systems/pf1/icons/races/undine.png
+name: Inspiration
+system:
+  abilityType: su
+  actions:
+    - _id: ClwGUY1l7nt0rFCC
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: inspire
+      notes:
+        effect:
+          - >-
+            inspire creature with the token gains a +1 insight bonus on Will
+            saves and Craft and Perform checks.
+      range:
+        units: touch
+      target:
+        value: One token / creature at a time
+  description:
+    value: >-
+      <p><strong>Race</strong>: Naiad</p><hr /><p>A naiad can choose another
+      intelligent creature to inspire by giving that creature a token (typically
+      a lock of her hair). As long as the creature carries the naiad's token and
+      retains her favor, that creature gains a +1 insight bonus on Will saving
+      throws and Craft and Perform checks. The naiad retains a link to her token
+      and its carrier as if she had cast a
+      @UUID[Compendium.pf1.spells.Item.4ya1fs9tyvsqnwqx]{status} spell on the
+      carrier. The naiad can end this effect at any time as a free action. A
+      single naiad can only inspire one other creature at a time in this
+      manner.</p><p><strong>Related Buff:</strong> @Toggle[Inspiration]</p>
+  links:
+    supplements:
+      - name: Inspiration
+        uuid: Compendium.pf-content.pf-buffs.Item.ew7pVTMEqJFFMiHv
+  showInQuickbar: true
+  sources:
+    - id: PZO1137
+      pages: '200'
+  subType: racial
+  tags:
+    - Naiad
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
