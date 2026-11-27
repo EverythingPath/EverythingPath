@@ -1,0 +1,57 @@
+_id: vZxgYlH9KOMbIZdN
+_key: '!items!vZxgYlH9KOMbIZdN'
+_stats:
+  coreVersion: '12.331'
+folder: uJ7gNM5P4XNcTc4z
+img: icons/creatures/eyes/humanoid-single-blue.webp
+name: Spell-Like Ability (Undine - Mistsoul)
+system:
+  abilityType: sp
+  actions:
+    - _id: TlDgGxIIEs4SF3hl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft cloud
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.tuh5vc2bojaws3ig]{obscuring
+        mist}</p><p>A misty vapor arises around you. It is stationary. The vapor
+        obscures all sight, including darkvision, beyond @Distance[5 ft;dual]. A
+        creature @Distance[5 ft;dual] away has concealment (attacks have a 20%
+        miss chance). Creatures farther away have total concealment (50% miss
+        chance, and the attacker cannot use sight to locate the target).</p><p>A
+        moderate wind (11+ mph), such as from a gust of wind spell, disperses
+        the fog in 4 rounds. A strong wind (21+ mph) disperses the fog in 1
+        round. A fireball, flame strike, or similar spell burns away the fog in
+        the explosive or fiery spell's area. A Wall of Fire burns away the fog
+        in the area into which it deals damage.</p><p>This spell does not
+        function underwater.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Obscuring Mist
+      range:
+        units: ft
+        value: '20'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Undine - Mistsoul</p><hr /><p>Mistsouls can cast
+      @UUID[Compendium.pf1.spells.Item.tuh5vc2bojaws3ig]{obscuring mist} once
+      per day as a spell-like ability (with a caster level equal to the
+      Mistsoul's character level).</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9492
+      pages: '21'
+  subType: racial
+  tags:
+    - Undine
+    - Mistsoul
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,47 @@
+_id: Ja24dXLJOZAkD5TK
+_key: '!items!Ja24dXLJOZAkD5TK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Ectoplasmic Armor
+system:
+  abilityType: su
+  actions:
+    - _id: t1sslgzplymmwgw8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can conjure armor made of ectoplasm that grants you a +4 armor
+      bonus to AC. In addition, this armor functions as if it had the ghost
+      touch special ability.</p>
+
+      <p>At 7th level and every 4 levels thereafter, the armor bonus increases
+      by 2.</p>
+
+      <p>You can use this armor for 1 hour per day per oracle level. This
+      duration does not need to be consecutive, but it must be spent in 1-hour
+      increments.</p>
+  subType: classFeat
+  tag: classFeat_ectoplasmicArmor
+  tags:
+    - Revelation
+    - Occult Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

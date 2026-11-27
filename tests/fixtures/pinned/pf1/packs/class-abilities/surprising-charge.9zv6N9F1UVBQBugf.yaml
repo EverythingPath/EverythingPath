@@ -1,0 +1,42 @@
+_id: 9zv6N9F1UVBQBugf
+_key: '!items!9zv6N9F1UVBQBugf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Surprising Charge
+system:
+  abilityType: ex
+  actions:
+    - _id: 19dwhfq05u3syo19
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, you can move up to your speed as an immediate action.</p>
+
+      <p>You can use this ability one additional time per day at 7th level and
+      15th level.</p>
+  sources:
+    - id: PZO1115
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_surprisingCharge
+  tags:
+    - Revelation
+    - Battle Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 6), 1) + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

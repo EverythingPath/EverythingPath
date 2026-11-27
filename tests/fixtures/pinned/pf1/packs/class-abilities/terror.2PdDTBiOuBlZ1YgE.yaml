@@ -1,0 +1,41 @@
+_id: 2PdDTBiOuBlZ1YgE
+_key: '!items!2PdDTBiOuBlZ1YgE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/horror-acid-2.jpg
+name: Terror
+system:
+  abilityType: su
+  actions:
+    - _id: j74bakms139yf20b
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you can make a melee <em>touch
+      attack</em> that causes a creature to be assailed by nightmares only it
+      can see. The creature provokes an <em>attack of opportunity</em> from you
+      or an ally of your choice. Creatures with more <em>Hit Dice</em> than your
+      wizard level are unaffected. This is a mind-affecting fear effect. You can
+      use this ability a number of times per day equal to 3 + your
+      <em>Intelligence</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_terror
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

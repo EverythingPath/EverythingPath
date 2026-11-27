@@ -1,0 +1,66 @@
+_id: qcjskol4ac3eemhy
+_key: '!items!qcjskol4ac3eemhy'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Color Spray
+system:
+  actions:
+    - _id: 0je0o0ute92gjamc
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: spec
+        value: instantaneous; see text
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>A vivid cone of clashing colors springs forth from your hand, causing
+      creatures to become stunned, perhaps also blinded, and possibly knocking
+      them unconscious. Each creature within the cone is affected according to
+      its HD.</p><p>2 HD or less: The creature is unconscious, blinded, and
+      stunned for 2d4 rounds, then blinded and stunned for 1d4 rounds, and then
+      stunned for 1 round. (Only living creatures are knocked unconscious.) 3 or
+      4 HD: The creature is blinded and stunned for 1d4 rounds, then stunned for
+      1 round.</p><p>5 or more HD: The creature is stunned for 1
+      round.</p><p>Sightless creatures are not affected by <i>color
+      spray</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 1
+      bloodrager: 1
+      magus: 1
+      mesmerist: 1
+      psychic: 1
+      sorcerer: 1
+      wizard: 1
+  materials:
+    value: red, yellow, and blue powder or colored sand
+  school: ill
+  sources:
+    - id: PZO1110
+      pages: '256'
+  subschool:
+    - pattern
+type: spell

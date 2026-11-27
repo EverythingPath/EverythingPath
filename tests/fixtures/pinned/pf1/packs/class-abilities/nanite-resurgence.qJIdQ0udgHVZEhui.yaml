@@ -1,0 +1,46 @@
+_id: qJIdQ0udgHVZEhui
+_key: '!items!qJIdQ0udgHVZEhui'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_06.jpg
+name: Nanite Resurgence
+system:
+  abilityType: ex
+  actions:
+    - _id: k3fmvnun6knmgri2
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, once per day as an <em>immediate action</em> upon being
+      reduced to one-quarter your maximum <em>hit points</em>, you can force the
+      mechanical <em>swarm</em> living inside you to keep you alive. This
+      ability functions like a
+      @UUID[Compendium.pf1.spells.u7y6niex9e7tbhyp]{Resurgent Transformation}
+      spell using your <em>sorcerer</em> level as the <em>caster level</em>,
+      except it is an extraordinary ability and cannot be dispelled.</p>
+
+      <p>At 17th level, you can use this ability twice per day (though using
+      this ability twice in one 24-hour period entails a chance of system shock
+      and death; see the spell’s description for more details).</p>
+
+      <p>At 20th level, you never die of system shock from using this
+      ability.</p>
+  subType: classFeat
+  tag: classFeat_naniteResurgence
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

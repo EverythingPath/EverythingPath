@@ -1,0 +1,38 @@
+_id: e6MZE23epaeXpxF1
+_key: '!items!e6MZE23epaeXpxF1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Divine Prison
+system:
+  abilityType: sp
+  actions:
+    - _id: 2wm6e63s1vf1z802
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature struck
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, once per day upon making a successful melee attack, you
+      can affect your target with
+      @UUID[Compendium.pf1.spells.d8hypv6zdyan3rzr]{Hold Monster} (Will
+      negates).</p>
+  subType: classFeat
+  tag: classFeat_divinePrison
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

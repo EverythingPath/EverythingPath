@@ -1,0 +1,84 @@
+_id: 2mw29eyL5mzZgKqR
+_key: '!items!2mw29eyL5mzZgKqR'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: systems/pf1/icons/items/weapons/trident.PNG
+name: Trident
+system:
+  actions:
+    - _id: xzamnmf2rl7rxs0w
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Melee
+      range:
+        units: melee
+        value: '10'
+      uses:
+        autoDeductChargesCost: '0'
+    - _id: NuickNLEH0YVjDE1
+      ability:
+        attack: _default
+        damage: str
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+  baseTypes:
+    - Trident
+  description:
+    unidentified: >-
+      <p>A trident has three metal prongs at end of a 4-foot-long shaft. This
+      weapon can be thrown.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    brc: true
+  sources:
+    - id: PZO1110
+      pages: 142, 149
+    - id: PZO1123
+      pages: '18'
+  subType: martial
+  uses:
+    per: single
+  weaponGroups:
+    - spears
+    - thrown
+  weaponSubtype: 1h
+  weight:
+    value: 4
+type: weapon

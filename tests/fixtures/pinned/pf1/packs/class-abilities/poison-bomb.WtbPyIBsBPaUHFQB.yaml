@@ -1,0 +1,108 @@
+_id: WtbPyIBsBPaUHFQB
+_key: '!items!WtbPyIBsBPaUHFQB'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/fog-gas-smoke-dense-brown.webp
+name: Poison Bomb
+system:
+  actions:
+    - _id: H56FUnu0BW9cU1fv
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+    - _id: VSku8SCM29hIqP9x
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      area: 10 feet
+      description: >-
+        <p>These vapors automatically kill any living creature with 3 or fewer
+        HD (no save).</p><p>A living creature with 4 to 6 HD is slain unless it
+        succeeds on a Fortitude save (in which case it takes 1d4 points of
+        Constitution damage on your turn each round while in the cloud).</p><p>A
+        living creature with more than 6 HD takes 1d4 points of Constitution
+        damage on your turn each round while in the cloud (a successful
+        Fortitude save halves this damage). Holding one's breath doesn't help,
+        but creatures immune to poison are unaffected by the spell.</p><p>Unlike
+        a <em>fog cloud</em>, the <em>cloudkill</em> moves away from you at 10
+        feet per round, rolling along the surface of the ground.</p><p>Figure
+        out the cloud's new spread each round based on its new point of origin,
+        which is 10 feet farther away from the point of origin where you cast
+        the spell.</p><p>Because the vapors are heavier than air, they sink to
+        the lowest level of the land, even pouring down den or sinkhole
+        openings. It cannot penetrate liquids, nor can it be cast
+        underwater.</p>
+      duration:
+        units: round
+        value: '@class.level'
+      measureTemplate:
+        color: '#b0b0b0'
+        size: '10'
+        type: circle
+      name: Cloudkill
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates; see text
+        type: fort
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>The effects of the smoke created by an alchemist's bomb duplicates the
+      effects of @UUID[Compendium.pf1.spells.im8z5kfg8ohowie9]{Cloudkill}
+      instead of @UUID[Compendium.pf1.spells.g33euis7yi9pwddy]{Fog Cloud},
+      filling an area equal to twice the bomb's splash radius for 1 round per
+      level.</p>
+
+      <p>An alchemist must be at least 12th level and must possess the smoke
+      bomb discovery before selecting this discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '31'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

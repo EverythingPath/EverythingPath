@@ -1,0 +1,39 @@
+_id: RI3VgcXtCx6l9wa7
+_key: '!items!RI3VgcXtCx6l9wa7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Justice's True Path
+system:
+  abilityType: sp
+  actions:
+    - _id: 8j3z523v30bdz1cb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can touch a creature, granting an insight
+      bonus on one attack roll, skill check, ability check, or saving throw
+      before your next turn; this bonus is equal to half your inquisitor level
+      (minimum 1) and lasts for 1 round. You can use this ability a number of
+      times per day equal to 3 + your Wisdom modifier.</p>
+  subType: classFeat
+  tag: classFeat_justicesTruePath
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

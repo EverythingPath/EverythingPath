@@ -1,0 +1,40 @@
+_id: 8KTJUAsXSVWDAkZm
+_key: '!items!8KTJUAsXSVWDAkZm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+name: Spoiling Touch
+system:
+  abilityType: su
+  actions:
+    - _id: alcy8wnhbxpg3fgy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: object touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can impose the <em>broken</em> condition upon one
+      Medium or smaller object by making a successful melee <em>touch
+      attack</em>. Magical items or objects carried or worn by a creature are
+      allowed a <em>Fortitude</em> save to resist this effect. Multiple uses of
+      this effect do not stack. You can use this ability a number of times per
+      day equal to 3 + your <em>Charisma</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_spoilingTouch
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

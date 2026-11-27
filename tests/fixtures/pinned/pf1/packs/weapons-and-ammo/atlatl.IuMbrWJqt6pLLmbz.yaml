@@ -1,0 +1,62 @@
+_id: IuMbrWJqt6pLLmbz
+_key: '!items!IuMbrWJqt6pLLmbz'
+_stats:
+  coreVersion: '12.343'
+folder: ojvASzhaCGmnx8xQ
+img: icons/weapons/thrown/dart-feathered.webp
+name: Atlatl
+system:
+  actions:
+    - _id: 5jn0p8lb2udg9mmw
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '50'
+  ammo:
+    type: dart
+  baseTypes:
+    - Atlatl
+  description:
+    unidentified: >-
+      <p>This Stone Age weapon is a thin piece of wood or antler used as a lever
+      to hurl a specially fitted dart. An atlatl gives much greater range to a
+      dart, but must be loaded like a projectile weapon. Your Strength modifier
+      applies to damage rolls when you use an atlatl, just as it does for thrown
+      weapons. You can fire-but not load-an atlatl with one hand. Loading an
+      atlatl is a move action that requires two hands and provokes attacks of
+      opportunity. The Rapid Reload feat can be taken for atlatls, allowing you
+      to load a dart as a free action.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 2
+  sources:
+    - id: PZO9452
+      pages: '0'
+  subType: martial
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 2
+type: weapon

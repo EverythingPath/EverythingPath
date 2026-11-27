@@ -1,0 +1,34 @@
+_id: jGe4iz4xgU0L1ipU
+_key: '!items!jGe4iz4xgU0L1ipU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: Inner Peace
+system:
+  abilityType: ex
+  actions:
+    - _id: 0pqyava9538j8xud
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 8th level, the cavalier has learned that while not all things in the
+      world will go as he wishes, he must remain calm and centered. Once per day
+      as an immediate action, the cavalier may ignore an amount of damage from a
+      single source (one attack, spell, or effect) equal to his cavalier level
+      plus his Charisma modifier. He can only ignore hit point damage in this
+      fashion. The cavalier can use this ability one additional time per day at
+      12th level and every four levels thereafter (to a maximum of four times
+      per day at 20th level).</p>
+  subType: classFeat
+  tag: classFeat_innerPeace
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

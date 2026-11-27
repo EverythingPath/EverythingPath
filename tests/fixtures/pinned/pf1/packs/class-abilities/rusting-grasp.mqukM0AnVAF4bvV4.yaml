@@ -1,0 +1,63 @@
+_id: mqukM0AnVAF4bvV4
+_key: '!items!mqukM0AnVAF4bvV4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Rusting Grasp
+system:
+  abilityType: sp
+  actions:
+    - _id: kb2w03xj5xja17zj
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Any iron or iron alloy item you touch crumbles into rust. If the item
+        is so large that it cannot fit within a 3-foot radius, a 3-footradius
+        volume of the metal is rusted and destroyed. Magic items made of metal
+        are immune to this spell.</p><p>You may employ <em>rusting grasp</em> in
+        combat with a successful melee touch attack. <em>Rusting grasp</em> used
+        in this way instantaneously destroys 1d6 points of AC gained from metal
+        armor (to the maximum amount of protection the armor offers) through
+        corrosion.</p><p>Weapons in use by an opponent targeted by the spell are
+        more difficult to grasp. You must succeed on a melee touch attack
+        against the weapon. A metal weapon that is hit is destroyed. Striking at
+        an opponent's weapon provokes an attack of opportunity. Also, you must
+        touch the weapon and not the other way around.</p><p>Against a ferrous
+        creature, <em>rusting grasp</em> instantaneously deals 3d6 points of
+        damage + 1 per caster level (maximum +15) per successful attack. The
+        spell lasts for 1 round per level, and you can make one melee touch
+        attack per round.</p>
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: object touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day as a standard action, you can perform a melee touch attack
+      that rusts iron, as the
+      @UUID[Compendium.pf1.spells.Item.fhary5oz1t4uhc2l]{rusting grasp}
+      spell.</p><p>At 11th level, and every four levels thereafter, you can use
+      this ability an additional time per day.</p><p>You must be at least 7th
+      level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_rustingGrasp
+  tags:
+    - Revelation
+    - Metal Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

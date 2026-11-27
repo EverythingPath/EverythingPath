@@ -1,0 +1,67 @@
+_id: qh9fkdjjk48h0tt6
+_key: '!items!qh9fkdjjk48h0tt6'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/life/cross-flared-green.webp
+name: Symbol of Healing
+system:
+  actions:
+    - _id: sc52hihs989gkjxd
+      actionType: heal
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: seeText
+      effect: one symbol
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        description: Will half (see text)
+        harmless: true
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.g0x2fnktg1553wv1]{symbol of death},
+      except all creatures within 60 feet of the <em>symbol of healing</em>
+      instead are bathed in positive energy and heal 2d8 points + 1 point of
+      damage per caster level (maximum +15). Undead and other creatures harmed
+      by positive energy instead take 2d8 points of damage + 1 point per caster
+      level (maximum +15); a Will save reduces this damage by half. A creature
+      can only be healed or harmed by the symbol once in any 24-hour period.
+      Once triggered, the symbol remains active for 10 minutes per caster
+      level.</p><p><em>Symbol of healing</em> can be made permanent with a
+      <em>permanency</em> spell by a caster of 10th level or higher for the cost
+      of 10,000 gp.</p>
+  learnedAt:
+    class:
+      cleric: 3
+      occultist: 3
+      oracle: 3
+      paladin: 4
+      warpriest: 3
+      witch: 4
+  level: 3
+  materials:
+    gpValue: 500
+    value: >-
+      mercury and phosphorous, plus powdered diamond and opal worth a total of
+      500 gp
+  school: con
+  sources:
+    - id: PZO1117
+      pages: '241'
+  subschool:
+    - healing
+type: spell

@@ -1,0 +1,73 @@
+_id: SkM63G8HnKo8Fj6l
+_key: '!items!SkM63G8HnKo8Fj6l'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/death/blood-corruption-vomit-red.webp
+name: Teratoid Caress
+system:
+  actions:
+    - _id: rS8NTwOP8KLRR3xB
+      ability:
+        attack: str
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude partial
+        type: fort
+      target:
+        value: 1 living non-evil creature
+      touch: true
+  components:
+    divineFocus: 1
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>With a gentle caress, you infuse the creature touched with a blight of
+      energy from the Abyss that feeds upon goodness and transforms flesh into
+      monstrous deformity. The target can resist a <em>teratoid caress</em> with
+      a successful Fortitude save, but even on a successful save, the target
+      becomes sickened for 1 round by the vile energies.</p><p>If the target
+      fails the save, his body becomes infected with Abyssal energy and a small
+      portion of his body distorts and grows hideous, inflicting 2 points of
+      Dexterity damage or 2 points of Charisma damage (50% chance of either
+      effect). This deformity is always unsightly and offensive. Thereafter, the
+      victim suffers a -1 penalty on all saving throws against evil effects.
+      Worse, whenever the victim casts a good spell, channels positive energy,
+      or offers a prayer to a good-aligned deity, the Abyssal energies seethe
+      inside him, forcing a new Fortitude save to resist suffering an additional
+      1 point of Dexterity or Charisma damage. A good-aligned divine spellcaster
+      who suffers from this curse suffers a -4 penalty on all concentration
+      checks. This is a curse effect, but the effect can also be instantly
+      removed with a @UUID[Compendium.pf1.spells.sg3eq6xpsum65fgm]{dispel evil}
+      or @UUID[Compendium.pf1.spells.qr6qcx8zqum6jhc4]{atonement} spell.</p>
+  descriptors:
+    - chaotic
+    - curse
+    - evil
+  learnedAt:
+    class:
+      cleric: 3
+      oracle: 3
+      warpriest: 3
+  level: 3
+  school: con
+  sources:
+    - date: '2013-10-23'
+      name: 'Pathfinder Comics #10'
+      pages: ''
+      publisher: Dynamite Entertainment
+      url: https://paizo.com/products/btpy915f
+  subschool:
+    - calling
+type: spell

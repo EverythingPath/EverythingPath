@@ -1,0 +1,7 @@
+# Spell batch #521 fixtures
+
+The 100 YAML roots and 28 class-context files are byte-identical pinned snapshots recorded in [provenance](provenance.json). Blacklight is specifically held for its record-level `3.5` tag under the owner's policy (2026-10-08); the importer excludes only whole 3.5 packs. All roots remain held or blocked by references. Class and parsed Oracle data are unreviewed context, used only in isolated memory. The linked Arcane Malignancies table is separately pinned under `supporting/` as inert context, with all 37 result rows inspected; it adds no parser entry. The content source directory retains a tracked marker so fresh checkouts can reproduce the parser input.
+
+[Preview](preview.json) contains checked description Notes, not legally admitted content or running Character Modifiers. [Full-context binding preview](binding-preview.json) retains all 100 roots and only their 26 recursive Spell dependencies from verified full CLI extraction. It reproduces every current content/mapping/evidence/notice binding, without a Catalog Release or deployment.
+
+[Catalog tests](../../catalog/spells-521.test.ts) pin real metadata, raw hashes, shared Situations and inherited notice requirements. [Saved-sheet tests](../../../convex/catalogSpells521.integration.test.ts) prove source-backed Oracle/Wizard recording, ordinary casting calculations, member editing, access scope and preview parity. [Batch report](../../../docs/catalog-import/spells-521.md) records holds, independently outstanding mechanics and the two reference failures.

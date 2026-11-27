@@ -1,0 +1,86 @@
+_id: IFQQ7tPmJJM0ADpU
+_key: '!items!IFQQ7tPmJJM0ADpU'
+_stats:
+  coreVersion: '12.331'
+folder: zwPcPvkCuK621YpA
+img: systems/pf1/icons/races/half-orc.png
+name: Fey Magic (Half-Orc)
+system:
+  actions:
+    - _id: oWzV0eMzIl9IakAm
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: l1
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: GjR0RL1eg0gD4XTn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: mhV7NcCgVWHfXb3M
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+    - _id: Lv8FgOLlQ7FWsMyy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: L0
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+  description:
+    instructions: >-
+      <p>Select one terrain type from the ranger's favored terrain list and
+      select three 0-level druid spells and one 1st-level druid spell when you
+      take this trait.</p><p>update the details tab of this trait
+      accordingly.</p>
+    value: >-
+      <p><strong>Race</strong>: Half-Orc<br /><strong>Replaced
+      Trait(s)</strong>: Orc Ferocity</p><hr /><p>The character has a mystic
+      connection to one terrain type, selected from the ranger's favored terrain
+      list. The character selects three 0-level druid spells and one 1st-level
+      druid spell. If the character has a Charisma score of 11 or higher, when
+      in the selected terrain, she gains these spells as spell-like abilities
+      that can be cast once per day. The caster level for these effects is equal
+      to the user's character level. The DC for the spell-like abilities is
+      equal to 10 + the spell's level + the user's Charisma modifier. These
+      spells are treated as being from a fey source for the purposes of the
+      druid's resist nature's lure class feature and similar abilities.</p><p>A
+      half-orc can take it in place of orc ferocity.</p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9456
+      pages: '5'
+  subType: racial
+  tags:
+    - Half-Orc
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

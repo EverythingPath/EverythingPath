@@ -1,0 +1,60 @@
+_id: gDO7etqF3QCXKyWZ
+_key: '!items!gDO7etqF3QCXKyWZ'
+_stats:
+  coreVersion: '12.331'
+folder: V0AMHu01ZqnTvZD7
+img: systems/pf1/icons/races/tiefling.png
+name: Spell-Like Ability (Tiefling - Hungerseed)
+system:
+  abilityType: sp
+  actions:
+    - _id: Z16bpktXlAxiRgRb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{Alter
+        Self}</p><p>When you cast this spell, you can assume the form of any
+        Small or Medium creature of the humanoid type. If the form you assume
+        has any of the following abilities, you gain the listed ability:
+        darkvision @Distance[60 ft;dual], low-light vision, scent, and swim
+        @Distance[30 ft;dual].</p><p>Small creature: If the form you take is
+        that of a Small humanoid, you gain a +2 size bonus to your
+        Dexterity.</p><p>Medium creature: If the form you take is that of a
+        Medium humanoid, you gain a +2 size bonus to your Strength.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Alter Self
+      notes:
+        effect:
+          - Apply @Apply[Alter Self (Small);level=@attributes.hd.total] buff
+          - Apply @Apply[Alter Self (Medium);level=@attributes.hd.total] buff
+      range:
+        units: personal
+        value: '@attributes.hd.total * 10 + 100'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Tiefling - Hungerseed</p><hr /><p>Hungerseed can
+      use @UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{Alter Self} once
+      per day as a spell-like ability (with a caster level equal to their
+      character level).</p><p></p>
+  racePoints: 2
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '252'
+    - id: PZO9423
+      pages: '22'
+  subType: racial
+  tags:
+    - Tiefling
+    - Hungerseed
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,42 @@
+_id: e9Izt3snprV8YUnn
+_key: '!items!e9Izt3snprV8YUnn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_01.jpg
+name: Twisted Fortune
+system:
+  abilityType: sp
+  actions:
+    - _id: bz4v15u6afg50v4u
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can use your <em>supernatural insight</em> to hijack
+      the fortunes of a single target within 30 feet. For 1 round, the target
+      becomes <em>confused</em> and cannot directly control its actions
+      (<em>Will</em> negates). Once a creature has been affected by twisted
+      fortune, it is immune to the ability’s effects for 24 hours. You can use
+      this ability a number of times per day equal to 3 + your <em>Cha</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_twistedFortune
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

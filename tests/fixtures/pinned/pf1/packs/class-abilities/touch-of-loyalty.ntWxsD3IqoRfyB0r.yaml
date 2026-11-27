@@ -1,0 +1,40 @@
+_id: ntWxsD3IqoRfyB0r
+_key: '!items!ntWxsD3IqoRfyB0r'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_08.jpg
+name: Touch of Loyalty
+system:
+  abilityType: su
+  actions:
+    - _id: jouy906o7wc5etn6
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: hour
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can touch a willing creature, granting it a
+      +4 sacred bonus on saving throws to resist charm, compulsion, and fear
+      effects for 1 hour. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+
+      <p>This replaces the Touch of Law power of the Law Domain.</p>
+  subType: classFeat
+  tag: classFeat_touchOfLoyalty
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

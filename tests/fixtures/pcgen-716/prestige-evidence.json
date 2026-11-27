@@ -1,0 +1,251 @@
+{
+  "pcgen": {
+    "commit": "25523dbcf10e86c280fc0f447167ea43d67419d3",
+    "directory": "data/pathfinder/paizo"
+  },
+  "prestigeRecords": 99,
+  "mapped": 99,
+  "advanceLevelTokens": {
+    "ANY": 235,
+    "Arcane": 82,
+    "Divine": 47,
+    "class-named or counted": 1
+  },
+  "rules": {
+    "PREABILITY 1-of-2 → anyOf classFeature": 1,
+    "PREABILITY 1-of-2 → anyOf feat": 4,
+    "PREABILITY 1-of-3 → anyOf feat": 1,
+    "PREABILITY 1-of-7 → anyOf feat": 1,
+    "PREABILITY Internal martial → proficiency": 1,
+    "PREABILITY all → classFeature": 6,
+    "PREABILITY all → feat": 128,
+    "PREALIGN negated → alignment complement": 3,
+    "PREALIGN → alignment": 43,
+    "PREDEITY all → deity": 16,
+    "PREMULT 1-of-k → flat anyOf": 2,
+    "PREMULT all-of → PREABILITY 1-of-2 → anyOf classFeature": 1,
+    "PREMULT all-of → PREABILITY all → classFeature": 1,
+    "PREMULT rule + PCGen alignment bypass → PREALIGN → alignment": 4,
+    "PRESKILL 1-of-2 → anyOf skillRanks": 6,
+    "PRESKILL 1-of-5 → anyOf skillRanks": 1,
+    "PRESKILL all → skillRanks": 215,
+    "PRESPELL 1-of-2 → anyOf castsSpell": 1,
+    "PRESPELL 1-of-3 → anyOf castsSpell": 1,
+    "PRESPELL all → castsSpell": 2,
+    "PRESPELLTYPE 1-of-2 → anyOf canCast": 4,
+    "PRESPELLTYPE all → canCast": 24,
+    "PRETOTALAB → bab": 27,
+    "PREWEAPONPROF all → proficiency": 2,
+    "unchecked: PREABILITY type selector or variable choice": 9,
+    "unchecked: PREALIGN DEITY": 1,
+    "unchecked: PREALIGN Deity": 1,
+    "unchecked: PREDEITY any deity or pantheon": 4,
+    "unchecked: PREFACT": 2,
+    "unchecked: PREGENDER": 1,
+    "unchecked: PRELANG": 10,
+    "unchecked: PREMULT 1-of-2 or compound branch": 4,
+    "unchecked: PREMULT 1-of-3 or compound branch": 3,
+    "unchecked: PRESKILL 3-of-10": 1,
+    "unchecked: PRESKILL 4-of-3": 1,
+    "unchecked: PRESKILL type selector": 5,
+    "unchecked: PRESPELLCAST": 4,
+    "unchecked: PRESPELLDESCRIPTOR": 1,
+    "unchecked: PRESPELLSCHOOL": 6,
+    "unchecked: PRESPELLTYPE whether alchemist extracts meet it is open (S8)": 2,
+    "unchecked: PRETEXT": 27,
+    "unchecked: PREVAREQ": 2,
+    "unchecked: PREVARGT": 1,
+    "unchecked: PREVARGTEQ": 5,
+    "unchecked: PREWEAPONPROF type selector": 3,
+    "unchecked: negation": 4
+  },
+  "uncheckedClauses": 97,
+  "classesWithUnchecked": {
+    "records": 54,
+    "names": 48,
+    "of": 89
+  },
+  "items": {
+    "conflict": 19,
+    "option": 1,
+    "productIdentity": 24,
+    "uncheckedCasting": 10,
+    "uncheckedRequirement": 97
+  },
+  "reviewItems": [
+    {
+      "owner": "adventure_path/reign_of_winter/players_guide/rowpg_classes.lst:8",
+      "key": "Winter Witch",
+      "kind": "uncheckedCasting",
+      "id": "2:REPEATLEVEL:1:ADD:SPELLCASTER|Witch"
+    },
+    {
+      "owner": "campaign_setting/inner_sea_gods/isg_classes.lst:6",
+      "key": "Evangelist",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "campaign_setting/inner_sea_world_guide/iswg_classes.lst:23",
+      "key": "Hellknight",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Heavy)"
+    },
+    {
+      "owner": "campaign_setting/inner_sea_world_guide/iswg_classes.lst:57",
+      "key": "Red Mantis Assassin",
+      "kind": "conflict",
+      "id": "exception:proficiency:Exotic Weapon Proficiency (Sawtooth Sabre)"
+    },
+    {
+      "owner": "campaign_setting/inner_sea_world_guide/iswg_classes.lst:57",
+      "key": "Red Mantis Assassin",
+      "kind": "uncheckedCasting",
+      "id": "ownCasting"
+    },
+    {
+      "owner": "campaign_setting/technology_guide/tg_classes.lst:4",
+      "key": "Technomancer",
+      "kind": "conflict",
+      "id": "MAXLEVEL"
+    },
+    {
+      "owner": "player_companion/elemental_masters_handbook/support/emh_classes_pu.lst:10",
+      "key": "Genie Binder",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "player_companion/pathfinder_society_primer/pfsp_classes.lst:14",
+      "key": "Pathfinder Field Agent",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "player_companion/paths_of_the_righteous/pathr_classes.lst:150",
+      "key": "Sacred Sentinel",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Light)"
+    },
+    {
+      "owner": "player_companion/paths_of_the_righteous/pathr_classes.lst:150",
+      "key": "Sacred Sentinel",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Medium)"
+    },
+    {
+      "owner": "player_companion/paths_of_the_righteous/pathr_classes.lst:150",
+      "key": "Sacred Sentinel",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Heavy)"
+    },
+    {
+      "owner": "player_companion/paths_of_the_righteous/pathr_classes.lst:150",
+      "key": "Sacred Sentinel",
+      "kind": "conflict",
+      "id": "exception:proficiency:Shield Proficiency"
+    },
+    {
+      "owner": "player_companion/paths_of_the_righteous/support/pathr_classes_isg.lst:5",
+      "key": "Crimson Templar",
+      "kind": "conflict",
+      "id": "exception:proficiency:Exotic Weapon Proficiency (bastard sword)"
+    },
+    {
+      "owner": "player_companion/people_of_the_sands/psand_classes.lst:12",
+      "key": "Living Monolith",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "player_companion/taldor_echoes_of_glory/teog_classes.lst:5",
+      "key": "Lion Blade",
+      "kind": "conflict",
+      "id": "dataError:PRESKILL:4,Bluff=6,Disguise=8,Stealth=8"
+    },
+    {
+      "owner": "roleplaying_game/advanced_players_guide/apg_classes.lst:424",
+      "key": "Master Chymist",
+      "kind": "uncheckedCasting",
+      "id": "alchemist"
+    },
+    {
+      "owner": "roleplaying_game/advanced_players_guide/apg_classes.lst:494",
+      "key": "Stalwart Defender",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Light)"
+    },
+    {
+      "owner": "roleplaying_game/advanced_players_guide/apg_classes.lst:494",
+      "key": "Stalwart Defender",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Medium)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:3",
+      "key": "Aldori Swordlord",
+      "kind": "conflict",
+      "id": "exception:proficiency:Exotic Weapon Proficiency (Aldori Dueling Sword)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:61",
+      "key": "Aspis Agent",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:111",
+      "key": "Death Slayer",
+      "kind": "conflict",
+      "id": "exception:proficiency:Exotic Weapon Proficiency (sawtooth sabre)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:136",
+      "key": "Golden Legionnaire",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Heavy)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:170",
+      "key": "Hellknight",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Heavy)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:186",
+      "key": "Hellknight Signifer",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Medium)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:325",
+      "key": "Red Mantis Assassin",
+      "kind": "conflict",
+      "id": "exception:proficiency:Exotic Weapon Proficiency (Sawtooth Sabre)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:325",
+      "key": "Red Mantis Assassin",
+      "kind": "uncheckedCasting",
+      "id": "ownCasting"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:381",
+      "key": "Sanguine Angel",
+      "kind": "conflict",
+      "id": "exception:proficiency:Armor Proficiency (Heavy)"
+    },
+    {
+      "owner": "roleplaying_game/adventurers_guide/ag_classes.lst:474",
+      "key": "Westcrown Devil",
+      "kind": "uncheckedCasting",
+      "id": "feature"
+    },
+    {
+      "owner": "roleplaying_game/core_rulebook/cr_classes.lst:409",
+      "key": "Eldritch Knight",
+      "kind": "conflict",
+      "id": "exception:proficiency:Weapon Prof ~ Martial"
+    }
+  ]
+}

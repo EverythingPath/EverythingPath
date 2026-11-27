@@ -1,0 +1,53 @@
+_id: y76rzmzb9kUgkeSN
+_key: '!items!y76rzmzb9kUgkeSN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_21.jpg
+name: Righteous Fury
+system:
+  abilityType: su
+  actions:
+    - _id: 0d6ttwjagp4mx552
+      ability:
+        attack: cha
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: 60 ft.
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, once per day you can create a spear of pure light and
+      throw it at a creature within 60 feet as a <em>standard action</em>. This
+      is a ranged <em>touch attack</em> that uses your <em>Charisma</em>
+      modifier in place of your <em>Dexterity</em> modifier to determine the
+      <em>attack bonus</em>. The <em>spear</em> deals 1d6 points of damage per
+      <em>sorcerer</em> level and ignores all <em>damage reduction</em> and
+      <em>hardness</em>. This damage increases to 1d8 points of damage per
+      <em>sorcerer</em> level against an evil creature. At 13th level, you can
+      use this ability twice per day. At 17th level, you can use this ability
+      three times per day.</p>
+  subType: classFeat
+  tag: classFeat_righteousFury
+  uses:
+    maxFormula: floor((@class.level - 1) / 4) -1
+    per: day
+type: feat
