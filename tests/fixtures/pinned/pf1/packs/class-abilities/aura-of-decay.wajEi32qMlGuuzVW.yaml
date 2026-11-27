@@ -1,0 +1,52 @@
+_id: wajEi32qMlGuuzVW
+_key: '!items!wajEi32qMlGuuzVW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_27.jpg
+name: Aura of Decay
+system:
+  abilityType: su
+  actions:
+    - _id: egjap4wojpnyo2cq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - untyped
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: creatures within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of decay as a standard
+      action. Living creatures in this aura (except you) take 1d6 points of
+      damage per round as their flesh rots. They also take a cumulative –1
+      penalty to Strength each round they remain in the aura. Once outside the
+      aura, the penalty fades at the rate of –1 per round, but it begins
+      building again if they reenter the aura. Plant creatures take 2d6 points
+      of damage per round. You can use this ability for a number of rounds per
+      day equal to your cleric level. These rounds do not need to be
+      consecutive.</p>
+
+      <p>This power replaces the Bramble Armor power of the Plant Domain.</p>
+  subType: classFeat
+  tag: classFeat_auraOfDecay
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

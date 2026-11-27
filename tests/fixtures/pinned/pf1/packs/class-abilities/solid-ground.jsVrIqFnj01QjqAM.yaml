@@ -1,0 +1,52 @@
+_id: jsVrIqFnj01QjqAM
+_key: '!items!jsVrIqFnj01QjqAM'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/stone/paver-tile-purple.webp
+name: Solid Ground
+system:
+  abilityType: su
+  actions:
+    - _id: tN9PKgHi69MYaYfb
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: rect
+      name: Throw
+      range:
+        units: ft
+        value: '20'
+      splash: true
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>The alchemist launches an explosive paste bomb that bonds with any
+      earthen surface. Each application of this paste deals no damage and
+      affects a 5-foot-cube of dirt, loose soil, or stone, transmuting the earth
+      for a number of minutes equal to the alchemist’s level. Creatures cannot
+      use burrow, earthmeld, or similar abilities (such as the meld into stone
+      spell) while the ground remains transmuted in this way.</p>
+  sources:
+    - id: PZO1115
+      pages: '34'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

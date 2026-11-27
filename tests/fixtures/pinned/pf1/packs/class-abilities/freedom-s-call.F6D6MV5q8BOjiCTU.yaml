@@ -1,0 +1,50 @@
+_id: F6D6MV5q8BOjiCTU
+_key: '!items!F6D6MV5q8BOjiCTU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_10.jpg
+name: Freedom's Call
+system:
+  abilityType: su
+  actions:
+    - _id: 43qjdxwntxkhqsv3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: allies in range
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of freedom for a number of
+      rounds per day equal to your cleric level. Allies within this aura are not
+      affected by the confused, grappled, frightened, panicked, paralyzed,
+      pinned, or shaken conditions. This aura only suppresses these effects, and
+      they return once a creature leaves the aura or when the aura ends, if
+      applicable. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_freedomsCall
+  tags:
+    - Domain Power
+    - Liberation Domain
+    - Freedom Subdomain
+    - Self-Realization Subdomain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

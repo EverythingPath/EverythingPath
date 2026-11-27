@@ -1,0 +1,909 @@
+{
+  "purpose": "100 byte-identical ticket roots; additional read-only pinned class lookup and inherited-content context are not extra reviewed candidates.",
+  "commit": "418761d2e16a6037c0156bb4a241f7cea5a2986d",
+  "contentCommit": "02f4ab0d92e0d64f9eb2d127f42fd809cb23db7d",
+  "orderedTicketKeysSha256": "4c21e6c0a461e098727154e32db09688f1baf48e280e32c2e8770fe8cc700bc0",
+  "manifests": [
+    {
+      "repo": "pf1",
+      "path": "public/system.json",
+      "sha256": "e3e279e9f715dedd8f7a606b6ec2d10d438b4b5e0d4c64d6c6814c82210f5d83"
+    },
+    {
+      "repo": "pf1-content",
+      "path": "module.json",
+      "sha256": "a4009afe112f0f551350fd52e9035085b525027c714513db0fb4e0053e4b67e3"
+    }
+  ],
+  "rawSources": [
+    {
+      "externalKey": "pf1/ZfIcUHFlHI3Ummro",
+      "path": "packs/spells/poisonous-cloud.ZfIcUHFlHI3Ummro.yaml",
+      "sha256": "03a0e3774229bedb9ecccb0e225ce0122c57cf55b2cb02aed5bce7da9a075c23"
+    },
+    {
+      "externalKey": "pf1/ZzgreX1h0BOJAbDu",
+      "path": "packs/spells/mighty-strength.ZzgreX1h0BOJAbDu.yaml",
+      "sha256": "dfdcd8e633047ce4952ddae31850cca9da810d7ea0a6588fdac2c1f2fba03b54"
+    },
+    {
+      "externalKey": "pf1/a0w41d06aqlu70xs",
+      "path": "packs/spells/curse-of-disgust.a0w41d06aqlu70xs.yaml",
+      "sha256": "5d739466283d60c59f9681c983c21887b129f2fa71756b5fce6438cbc75c7f0d"
+    },
+    {
+      "externalKey": "pf1/a111te7xsmnclbjr",
+      "path": "packs/spells/lissalan-snake-sigil.a111te7xsmnclbjr.yaml",
+      "sha256": "35ca04f797beaa867a41b86433fdf0205244ca467793ebc6d63bda736044e105"
+    },
+    {
+      "externalKey": "pf1/a1jn7g374wcrb9mz",
+      "path": "packs/spells/stone-to-flesh.a1jn7g374wcrb9mz.yaml",
+      "sha256": "40fa4c939da90b3831a3e316c8be515eb2922b15362c296b7334e93fd7fbcf5e"
+    },
+    {
+      "externalKey": "pf1/a1yur84hxw6i9w24",
+      "path": "packs/spells/shadow-barbs.a1yur84hxw6i9w24.yaml",
+      "sha256": "8582f707d19d4fe22e5c772373b4dbf1f28f58c6d6cf26e483a82c0c8aa7cd3d"
+    },
+    {
+      "externalKey": "pf1/a24oos1m8mjc793r",
+      "path": "packs/spells/enshroud-thoughts.a24oos1m8mjc793r.yaml",
+      "sha256": "bcf026d81f9062597b8f8e4d2c0eb315052dc321bd6f99ee138941c324af593d"
+    },
+    {
+      "externalKey": "pf1/a284vfyjpxla98v0",
+      "path": "packs/spells/transmogrify.a284vfyjpxla98v0.yaml",
+      "sha256": "961a5ee5dcdf7808ecf69e3473408f747978bac280e1621ad4271fc05ee9d772"
+    },
+    {
+      "externalKey": "pf1/a2h4muihkc4pdpo2",
+      "path": "packs/spells/steal-years-greater.a2h4muihkc4pdpo2.yaml",
+      "sha256": "ce9e9588ddbb67d0a2ba6714a5e35455a7b739b0af0e8b7fa95e158525a48003"
+    },
+    {
+      "externalKey": "pf1/a2y1yf0a4jy3610w",
+      "path": "packs/spells/hallucinatory-terrain.a2y1yf0a4jy3610w.yaml",
+      "sha256": "d462781533a7622b34947b210456106682f0175e838a3e0e6b59c7d3d2b2852c"
+    },
+    {
+      "externalKey": "pf1/a3yc6tgu9zjx7el9",
+      "path": "packs/spells/rebuke-technology.a3yc6tgu9zjx7el9.yaml",
+      "sha256": "436fae58e61a06799b9eb32ee4024d46ac7c48801a0aea97c2727c85829c5b54"
+    },
+    {
+      "externalKey": "pf1/a4u2i842ym28rimq",
+      "path": "packs/spells/quick-throwing.a4u2i842ym28rimq.yaml",
+      "sha256": "78a725b8f90346136ac20e3450031defc35ecb0f6a4afa73be416f57717ea703"
+    },
+    {
+      "externalKey": "pf1/a4z9yazsd7ez1p0h",
+      "path": "packs/spells/aqueous-orb.a4z9yazsd7ez1p0h.yaml",
+      "sha256": "3cea4fabfe520078a1c405c8d3c4b6978d4026b331373ce6f0f6691e46a2dd94"
+    },
+    {
+      "externalKey": "pf1/a5eu53rb6g91o0u4",
+      "path": "packs/spells/alter-musical-instrument.a5eu53rb6g91o0u4.yaml",
+      "sha256": "29013b010e37c189675462dbedeeabbc2c8489df7de411163233235664e6af8f"
+    },
+    {
+      "externalKey": "pf1/a5gcbpwfhu4hh5ic",
+      "path": "packs/spells/earthquake.a5gcbpwfhu4hh5ic.yaml",
+      "sha256": "9f41c2446fdb819e60901f44ffc64fa0415ce4fe7cf9989bb2c70453790553a3"
+    },
+    {
+      "externalKey": "pf1/a6a6s9jysswthu3r",
+      "path": "packs/spells/guiding-star.a6a6s9jysswthu3r.yaml",
+      "sha256": "15f2a22f2f6bbc594f74a2f8d04bbbea43517ab5dc8efe09e361049daef6d95d"
+    },
+    {
+      "externalKey": "pf1/a6fs9lf27jsw3t66",
+      "path": "packs/spells/emblazon-crest.a6fs9lf27jsw3t66.yaml",
+      "sha256": "b9726ead5012adad1b21be7b9e84d1247e8cca3ef69e6df726b7bdc43ff68831"
+    },
+    {
+      "externalKey": "pf1/a6isom7wx0nmhwfp",
+      "path": "packs/spells/prestidigitation.a6isom7wx0nmhwfp.yaml",
+      "sha256": "9a80995d7be30cc85df8af7df96147dfdd853b7d4a32a2f14c9e5a4665859af2"
+    },
+    {
+      "externalKey": "pf1/a6vrmpywwpg4dpwx",
+      "path": "packs/spells/shock-shield.a6vrmpywwpg4dpwx.yaml",
+      "sha256": "2c2d7b4283372d1c58849a38de136d74a47b12a2f47b0dcc6cc351bee4ff107e"
+    },
+    {
+      "externalKey": "pf1/a73dq2t8pd5n0y1g",
+      "path": "packs/spells/retribution.a73dq2t8pd5n0y1g.yaml",
+      "sha256": "f2e267f470c646b57b961897bf03199e02978ab49b44b1d99b2320ae4dcaa254"
+    },
+    {
+      "externalKey": "pf1/a8gphahx0vu294yj",
+      "path": "packs/spells/tail-strike.a8gphahx0vu294yj.yaml",
+      "sha256": "8bcc2afc5326f7edf2409c1d62846562c8a937090c5cc7b88e0b95d5a95dce5a"
+    },
+    {
+      "externalKey": "pf1/a9unnbrmqw6tdd60",
+      "path": "packs/spells/daemon-ward.a9unnbrmqw6tdd60.yaml",
+      "sha256": "74914c78654aa04961d06b3fdadc705f23035dc704efb8211ecbbf0deecadf9f"
+    },
+    {
+      "externalKey": "pf1/aP3q2vkBQ6PnvHFk",
+      "path": "packs/spells/violent-misfire.aP3q2vkBQ6PnvHFk.yaml",
+      "sha256": "5753e992049ebb63c28965be52723e8d82ac434744e03412606b6fb0c10a2905"
+    },
+    {
+      "externalKey": "pf1/aa0w7tk852iqn3ni",
+      "path": "packs/spells/detect-undead.aa0w7tk852iqn3ni.yaml",
+      "sha256": "bfa727f377b7bb00b910553696b18d3eb621a02238adc6d06af434c7f714e364"
+    },
+    {
+      "externalKey": "pf1/aaquu5em3wtjlkk8",
+      "path": "packs/spells/hellfire-ray.aaquu5em3wtjlkk8.yaml",
+      "sha256": "3351e94b6c9f15bcd0a1c3283e95f8cad9af715e341eb5b3852b5fac5a81eb03"
+    },
+    {
+      "externalKey": "pf1/abdap816xisu362w",
+      "path": "packs/spells/honeyed-tongue.abdap816xisu362w.yaml",
+      "sha256": "83d2d266336d50e3e0160bf206abfbf0169af3859f058268d387efbb903cb7aa"
+    },
+    {
+      "externalKey": "pf1/ac8q8gay28rsw7dg",
+      "path": "packs/spells/trail-of-the-rose.ac8q8gay28rsw7dg.yaml",
+      "sha256": "82018ede9bdf0a295c1748ae26bccaf300d281e371eafd41c9dfe2f6161a89d7"
+    },
+    {
+      "externalKey": "pf1/acdzlekp5elvhxy1",
+      "path": "packs/spells/withdraw-affliction.acdzlekp5elvhxy1.yaml",
+      "sha256": "d5bb9759300f7a26052d4460642fa5c10efb30168f56158fbe54c5622ddef9b1"
+    },
+    {
+      "externalKey": "pf1/acjpqe8vchvzt5rl",
+      "path": "packs/spells/air-geyser.acjpqe8vchvzt5rl.yaml",
+      "sha256": "96ba273cd7002829f4b07c3e1b747a9d50be570476020cfd74c937607e94e462"
+    },
+    {
+      "externalKey": "pf1/ad5nqt2ll67zt64d",
+      "path": "packs/spells/shocking-image.ad5nqt2ll67zt64d.yaml",
+      "sha256": "6945176a9ea5bdd70557ba2047b6447f818f4733a03b15d461816f7d2b92777c"
+    },
+    {
+      "externalKey": "pf1/adlgxn32acdb8jdn",
+      "path": "packs/spells/dimensional-blade.adlgxn32acdb8jdn.yaml",
+      "sha256": "a85278bacb9a8c298536ab2ab334288dbd4dde0f80056b557425872400ac02db"
+    },
+    {
+      "externalKey": "pf1/adthxd4ppz2fx89b",
+      "path": "packs/spells/vinetrap.adthxd4ppz2fx89b.yaml",
+      "sha256": "5424c80ab40e0f1be8078c0727f48512f896a657586c84050362d05eda0e0e02"
+    },
+    {
+      "externalKey": "pf1/advqdmonj6ro62u7",
+      "path": "packs/spells/fear-the-sun.advqdmonj6ro62u7.yaml",
+      "sha256": "02ec33c016160a366a094a430ddc44a6c25adabc5f28bdf238dfe393b2a214be"
+    },
+    {
+      "externalKey": "pf1/aer23mbtykma1n1s",
+      "path": "packs/spells/unliving-rage.aer23mbtykma1n1s.yaml",
+      "sha256": "90f072ca39703a38e966932c55b63bf9f9258ec9b8e6c1b85639cee791bffa69"
+    },
+    {
+      "externalKey": "pf1/afixpamfqfc8yx7b",
+      "path": "packs/spells/master-s-mutation.afixpamfqfc8yx7b.yaml",
+      "sha256": "41d68c465d837dc525a9b7dff556be04664ede9db611ee769d10549cda6b4806"
+    },
+    {
+      "externalKey": "pf1/afoxrj4mjkhq0cp1",
+      "path": "packs/spells/lock-gaze.afoxrj4mjkhq0cp1.yaml",
+      "sha256": "c13b1c2e133ffc6955b02046a2e40cf03543b91c85050db00d233f72d6b9b3d4"
+    },
+    {
+      "externalKey": "pf1/ag5rvzbw0zuxsdeh",
+      "path": "packs/spells/healing-leak.ag5rvzbw0zuxsdeh.yaml",
+      "sha256": "286eed7865570104fe5aef03f3519e6f3e2db87d433f4a0fabcad45b3a398644"
+    },
+    {
+      "externalKey": "pf1/ai579ifbficvvnfo",
+      "path": "packs/spells/flash-forward.ai579ifbficvvnfo.yaml",
+      "sha256": "51f61285611abe2420a7c9e685230916fe31c61408cc4b3084625636f9075ff2"
+    },
+    {
+      "externalKey": "pf1/ai9o7xqyftbf9ses",
+      "path": "packs/spells/dance-of-a-thousand-cuts.ai9o7xqyftbf9ses.yaml",
+      "sha256": "f521b6bdc2ddccda2978c5363cdffeea12c546262c46d9fc728648d0ac1429d5"
+    },
+    {
+      "externalKey": "pf1/aigibmi32id0cl65",
+      "path": "packs/spells/ally-across-time.aigibmi32id0cl65.yaml",
+      "sha256": "5042b146ef4ddaa678cd2dc15f2cff56014e4d65aecdfac07c7a83a0feb8bb95"
+    },
+    {
+      "externalKey": "pf1/aij2sbjiqzhfmnod",
+      "path": "packs/spells/numerological-evocation.aij2sbjiqzhfmnod.yaml",
+      "sha256": "57f4b0ba108d0b9f97c4c690ee7f76196b8a166b7fc79408bc352336e2d917d1"
+    },
+    {
+      "externalKey": "pf1/aijcbslqrha12j77",
+      "path": "packs/spells/smite-abomination.aijcbslqrha12j77.yaml",
+      "sha256": "e3c563821eb7ff80cdc905fa8d8a998a6ec6a8235e3088e2b95d137fcd194956"
+    },
+    {
+      "externalKey": "pf1/ajtvhtntlkv3hpuk",
+      "path": "packs/spells/tower-of-iron-will-v.ajtvhtntlkv3hpuk.yaml",
+      "sha256": "57cdd1f3efdf6ce3392a30542c70b037f55ade20d38d30a60936f6c2c1188d72"
+    },
+    {
+      "externalKey": "pf1/akwOzTsxjZcBGzIS",
+      "path": "packs/spells/lightning-conductor.akwOzTsxjZcBGzIS.yaml",
+      "sha256": "1a69d85aedb2243e78664002128580410424b569ea3dec60ca7a6a262689dea9"
+    },
+    {
+      "externalKey": "pf1/al5pmrh401jooziy",
+      "path": "packs/spells/antithetical-constraint.al5pmrh401jooziy.yaml",
+      "sha256": "b619104b250ddbad70e6ea8449262bb2b5504443e99eb08b6765f4f078791b00"
+    },
+    {
+      "externalKey": "pf1/aldwednxmpolaik4",
+      "path": "packs/spells/harmless-form.aldwednxmpolaik4.yaml",
+      "sha256": "d62fedd84eb2c430af0d903af13dd9e24a812e1d87bea53feca8a83a2a31fbd8"
+    },
+    {
+      "externalKey": "pf1/amds6sfc78likqrs",
+      "path": "packs/spells/umbral-weapon.amds6sfc78likqrs.yaml",
+      "sha256": "c6f7eaf37510800f0a4a4669ba49d5ccbc191d07c1ec0423fdedd9160bf30a01"
+    },
+    {
+      "externalKey": "pf1/amrtqcyc53je6wbt",
+      "path": "packs/spells/linebreaker.amrtqcyc53je6wbt.yaml",
+      "sha256": "925e67a240ad1456c9f1bd563feb64d9abc479840eb549d40f32d8c9bb3f8546"
+    },
+    {
+      "externalKey": "pf1/ams8tn2nafvmydzu",
+      "path": "packs/spells/daywalker.ams8tn2nafvmydzu.yaml",
+      "sha256": "518be944fa2d08d5f2da59457c1e2b445b950c1efaf753ae2eba0ca69a035210"
+    },
+    {
+      "externalKey": "pf1/aniaqwkahlczx4m5",
+      "path": "packs/spells/tracking-mark.aniaqwkahlczx4m5.yaml",
+      "sha256": "8605e9fb2a0a78e6a2edf9931d3bc5f5e94081f8eb29d32370bd8b902ed5a246"
+    },
+    {
+      "externalKey": "pf1/anya5qwdjhdfyk8u",
+      "path": "packs/spells/restoration.anya5qwdjhdfyk8u.yaml",
+      "sha256": "1900fe6829bb1ff343f0b3fe0654451e987077f226ed70b0ae57791ccde2de03"
+    },
+    {
+      "externalKey": "pf1/ao15o4r0jwvl9obm",
+      "path": "packs/spells/boneshatter.ao15o4r0jwvl9obm.yaml",
+      "sha256": "eb74677733363a050314dd3cdd0cfd1cccecb60a5af40f5b57c9aa4820a23143"
+    },
+    {
+      "externalKey": "pf1/ao4p40l1bgcxtklf",
+      "path": "packs/spells/mortal-terror.ao4p40l1bgcxtklf.yaml",
+      "sha256": "25cb19058bf7c4db272f22ab1f7241d20b8e7de90bc0e09d6e64f6e778245e53"
+    },
+    {
+      "externalKey": "pf1/aolo0gxn1zvzy1hr",
+      "path": "packs/spells/minor-reversion.aolo0gxn1zvzy1hr.yaml",
+      "sha256": "b0bb1cb7fbc0e9b2a9d282a8f5b0edb0487501069055f0a0b9a0dfae6d88f1e1"
+    },
+    {
+      "externalKey": "pf1/aoov6nqfm195txdb",
+      "path": "packs/spells/forceful-hand.aoov6nqfm195txdb.yaml",
+      "sha256": "61fcdf9540e5474dbef5fce96b83a9423481ae5712d7d3400b2345e6baa7e865"
+    },
+    {
+      "externalKey": "pf1/aou0et73535aanjv",
+      "path": "packs/spells/fearsome-duplicate.aou0et73535aanjv.yaml",
+      "sha256": "a86418ac9559006a660ae8c06c0965a022f9b30e96c8e8ea8b857acca8d61ff4"
+    },
+    {
+      "externalKey": "pf1/aq0ch7ep4av2z214",
+      "path": "packs/spells/sense-vitals.aq0ch7ep4av2z214.yaml",
+      "sha256": "7f39d26eb6b5a1528a36d2807e6baead51b9328d67e170a9519ee0b8dd0bd60a"
+    },
+    {
+      "externalKey": "pf1/aq152bwi65cfz8fo",
+      "path": "packs/spells/phobia.aq152bwi65cfz8fo.yaml",
+      "sha256": "d93156e15fe4bd0be954a503d0a2f685f4bd22e7d03eaff4334b5ed7abda5071"
+    },
+    {
+      "externalKey": "pf1/aq4cspb2nxh71pm8",
+      "path": "packs/spells/flaming-aura.aq4cspb2nxh71pm8.yaml",
+      "sha256": "8637823d7a5230e699b47c34b41990ecf80fed22d7438198761aa3fa7807e57c"
+    },
+    {
+      "externalKey": "pf1/aqeaxoaozlv9vg35",
+      "path": "packs/spells/vision.aqeaxoaozlv9vg35.yaml",
+      "sha256": "7a28e86479aecddbee76589c59403efdda43c63ea8009ce7fecf58376420bc89"
+    },
+    {
+      "externalKey": "pf1/aqri3zf6mzgd4di6",
+      "path": "packs/spells/summon-monster-iv.aqri3zf6mzgd4di6.yaml",
+      "sha256": "3563c2d1d5394fb84f199106e66fd6acabf1f51f2a5dbc606c36ee02008e0699"
+    },
+    {
+      "externalKey": "pf1/arzq5ar5gcteqwtp",
+      "path": "packs/spells/steady-saddle.arzq5ar5gcteqwtp.yaml",
+      "sha256": "2c68c0950dd10470d780d98b62532d9a1c3ab560d8989f7a2720e22a60c3189a"
+    },
+    {
+      "externalKey": "pf1/at1jo3acj1rdlmrn",
+      "path": "packs/spells/imbue-army-special-ability.at1jo3acj1rdlmrn.yaml",
+      "sha256": "1b765bd7245ac278a5124342785ef0e15c6933291ca170d00c7eef240d562981"
+    },
+    {
+      "externalKey": "pf1/atclo4xtkept97ox",
+      "path": "packs/spells/deadeye-s-arrow.atclo4xtkept97ox.yaml",
+      "sha256": "39c43b0e3f8d35ebfda330be699647a8e712e8572b10979fc8e98d514a5bd042"
+    },
+    {
+      "externalKey": "pf1/atml1a51o9w777w7",
+      "path": "packs/spells/undead-anatomy-i.atml1a51o9w777w7.yaml",
+      "sha256": "495e43fdaa812760575762a053942bfbd0c3ba4efeb01af30ddf9256df392e77"
+    },
+    {
+      "externalKey": "pf1/au6p72aztjhtokwr",
+      "path": "packs/spells/akashic-form.au6p72aztjhtokwr.yaml",
+      "sha256": "0ba90431a3c67bc24316ea172e23523af41ad6502a23c8f792f4632495091032"
+    },
+    {
+      "externalKey": "pf1/auliu676zrdjmjs6",
+      "path": "packs/spells/illusory-maze.auliu676zrdjmjs6.yaml",
+      "sha256": "561cd764bbc4b582a1b4ae5e6c5a34bc291292e16328da48c24f67d625093a51"
+    },
+    {
+      "externalKey": "pf1/auqa5b0x0een6jcm",
+      "path": "packs/spells/trace-teleport.auqa5b0x0een6jcm.yaml",
+      "sha256": "5e5959dbf520db1368ebd775886b66a03a20d97c55413b948ae42c56606ce837"
+    },
+    {
+      "externalKey": "pf1/auvsi3fenss2hga9",
+      "path": "packs/spells/burst-of-nettles.auvsi3fenss2hga9.yaml",
+      "sha256": "5d9abe1693aa50d68870dd5f251a1ccc6b8c91c4d29b2b7d943d1331302b4c71"
+    },
+    {
+      "externalKey": "pf1/av7YbbrWBVgNp2hP",
+      "path": "packs/spells/crown-of-glory.av7YbbrWBVgNp2hP.yaml",
+      "sha256": "b9fbf9e1c2a54e30649871e94bd3b4d839dee27b6427d3c65473bc69d7835144"
+    },
+    {
+      "externalKey": "pf1/avofn5q2v0f0qxjy",
+      "path": "packs/spells/spiritual-weapon.avofn5q2v0f0qxjy.yaml",
+      "sha256": "0be73b6fbc10756c193da258970a3ce6bd8815c721ab70fb70bb149876ae7df6"
+    },
+    {
+      "externalKey": "pf1/awia42zci8nufpfl",
+      "path": "packs/spells/nondetection.awia42zci8nufpfl.yaml",
+      "sha256": "a04aad7eb1a977652759ebb12418c20daef7ac95f4f5fab21aad040ea69602cb"
+    },
+    {
+      "externalKey": "pf1/axe8kelwutjkwh80",
+      "path": "packs/spells/jitterbugs.axe8kelwutjkwh80.yaml",
+      "sha256": "0b7ef218a800bbcf5de999d691ceb74b6fd1a1dfdc423298cd4ecc047b4102e3"
+    },
+    {
+      "externalKey": "pf1/axl8z3mae9ydejlt",
+      "path": "packs/spells/deathless.axl8z3mae9ydejlt.yaml",
+      "sha256": "3dd9011c7c436d264d46dc0d3edf65f944735f557db245c8d93f48a61a3a4cdf"
+    },
+    {
+      "externalKey": "pf1/ay8nnkkegcb1zfb0",
+      "path": "packs/spells/resist-energy-communal.ay8nnkkegcb1zfb0.yaml",
+      "sha256": "95c44a092747dbaa6965cd46108461e45cd34c0abd93535d7de364635f409c15"
+    },
+    {
+      "externalKey": "pf1/ayvd6wrq2lmq9211",
+      "path": "packs/spells/bountiful-banquet.ayvd6wrq2lmq9211.yaml",
+      "sha256": "cb18369ca5e6a1077cc7ddf6b6b7e6424170f1e9baa712e5bdf41b182ec2a52d"
+    },
+    {
+      "externalKey": "pf1/azyo7xhfwdtjchtm",
+      "path": "packs/spells/polypurpose-panacea.azyo7xhfwdtjchtm.yaml",
+      "sha256": "01bd493e22a9f369cbf74a141c14f601eba9b84362c78951144188a51c579af7"
+    },
+    {
+      "externalKey": "pf1/b1wzbehqfac9s1be",
+      "path": "packs/spells/mage-s-faithful-hound.b1wzbehqfac9s1be.yaml",
+      "sha256": "53ee65ce745b23db582fe2d3c2e4a61c174f5f0723e2a41e97fc2688a8b584e5"
+    },
+    {
+      "externalKey": "pf1/b2y7l4cronnp5zls",
+      "path": "packs/spells/betraying-sting.b2y7l4cronnp5zls.yaml",
+      "sha256": "5fa1c9c2c6d486da156947f5c1cc668548f927bbad36e980725b71363820db9e"
+    },
+    {
+      "externalKey": "pf1/b2yholbb5a0g8peg",
+      "path": "packs/spells/vicarious-view.b2yholbb5a0g8peg.yaml",
+      "sha256": "5bd0f3594f53e356702809401396e7f301713246e4cfa474646be702d3c8a85d"
+    },
+    {
+      "externalKey": "pf1/b3cj2kuyqat19fx9",
+      "path": "packs/spells/commune-with-birds.b3cj2kuyqat19fx9.yaml",
+      "sha256": "5833735804d8225cc2b4b62bcfe94823bc8874a987f727f2865ac2dfe0ff1892"
+    },
+    {
+      "externalKey": "pf1/b3hyz4dnnkgw9nfu",
+      "path": "packs/spells/blade-lash.b3hyz4dnnkgw9nfu.yaml",
+      "sha256": "2fee7ac71466c64cf7914af7058a11b853a16317eb03a70cd73065f62829001b"
+    },
+    {
+      "externalKey": "pf1/b3koss885z9u6ecl",
+      "path": "packs/spells/shared-sacrifice.b3koss885z9u6ecl.yaml",
+      "sha256": "5037f859ee22898b368fdf7a90d3d5152411be460811a8cbc570b5ba6465f212"
+    },
+    {
+      "externalKey": "pf1/b3slhttlo5jytfti",
+      "path": "packs/spells/ki-leech.b3slhttlo5jytfti.yaml",
+      "sha256": "59bae6e11ffc978d7942321f3f38d357b673d0a786a7c5f202fba1c558121c6d"
+    },
+    {
+      "externalKey": "pf1/b433azw2m5ov8pkq",
+      "path": "packs/spells/thorny-entanglement.b433azw2m5ov8pkq.yaml",
+      "sha256": "40cb0d697ff820fb1fea7b2c3c703b3c1ef28cbfec7ba83366fecfc09a5917a0"
+    },
+    {
+      "externalKey": "pf1/b49ketr3vgjnld0c",
+      "path": "packs/spells/virulent-miasma.b49ketr3vgjnld0c.yaml",
+      "sha256": "498dc547a23f62b92bd13ebf33170fe0b933ecd5d76d515e6ccff0ed45e14be7"
+    },
+    {
+      "externalKey": "pf1/b5apdmp3s5g78uxw",
+      "path": "packs/spells/remove-radioactivity.b5apdmp3s5g78uxw.yaml",
+      "sha256": "d4ce4d5f9db6c8918583cf179a976462bb20234977a596fb0b81c8f0b1f1f9a1"
+    },
+    {
+      "externalKey": "pf1/b5i4dm8hv3is2bky",
+      "path": "packs/spells/conversing-wind.b5i4dm8hv3is2bky.yaml",
+      "sha256": "333d030a83677b947fe505cf2a10c7f490ac9049f8081846758e77db4685f7e8"
+    },
+    {
+      "externalKey": "pf1/b5mz8voksps5g4yq",
+      "path": "packs/spells/legend-lore.b5mz8voksps5g4yq.yaml",
+      "sha256": "69783a9d1cdaaea04a2e97f0242a52e6cdb81cfb0a712711bdd055e8d3c21b1d"
+    },
+    {
+      "externalKey": "pf1/b5wntsqynqa2xb34",
+      "path": "packs/spells/adjustable-disguise.b5wntsqynqa2xb34.yaml",
+      "sha256": "be06be7d24bd60219bff4c3f8e7273ca808eda1a456934af6d7873b19e58ea6a"
+    },
+    {
+      "externalKey": "pf1/b7cjr9x4kqnq9o0l",
+      "path": "packs/spells/barghest-feast.b7cjr9x4kqnq9o0l.yaml",
+      "sha256": "8fb0fec8f3aa31e85995f08f0a66b4e4f1d36166fb208b21cd930add9926bdd2"
+    },
+    {
+      "externalKey": "pf1/b84qtxpkenolyt8b",
+      "path": "packs/spells/contingent-action.b84qtxpkenolyt8b.yaml",
+      "sha256": "45b13a5f2c2a3d55303f693de279b1701f7c05e0fea2de61c73443112def7df7"
+    },
+    {
+      "externalKey": "pf1/b8h35mj2mzvhbqux",
+      "path": "packs/spells/heroic-fortune.b8h35mj2mzvhbqux.yaml",
+      "sha256": "1e7444ee0b5c2af82bfdc31adc072bd5d1d4e0480878776bcd7b8c013fa9ef0c"
+    },
+    {
+      "externalKey": "pf1/b8lt1275mz4ez4d8",
+      "path": "packs/spells/major-creation.b8lt1275mz4ez4d8.yaml",
+      "sha256": "b36b8a04a6abdf7b575d9a7faf0c7682a9126bf9e324249808a2e2864d74cb50"
+    },
+    {
+      "externalKey": "pf1/b8vp8fgt1o6pq1qc",
+      "path": "packs/spells/continual-flame.b8vp8fgt1o6pq1qc.yaml",
+      "sha256": "16a7b6909075096a1b6da72f8dbcf6eb50343635ac5732f0424db903a720e8c7"
+    },
+    {
+      "externalKey": "pf1/b9ggsagifzk4fwut",
+      "path": "packs/spells/owl-s-wisdom.b9ggsagifzk4fwut.yaml",
+      "sha256": "ca04f9a746885515fc5c18e1e69dc5818527b4eddbf582aa5436a2050b40d02c"
+    },
+    {
+      "externalKey": "pf1/b9klr16gssc2x0ab",
+      "path": "packs/spells/entice-fey.b9klr16gssc2x0ab.yaml",
+      "sha256": "afa274c6b1f754a2699d24a125c8465375b791c6a44f3ef3945f574f93cb4e29"
+    },
+    {
+      "externalKey": "pf1/b9v7qh4c7hmcjtfv",
+      "path": "packs/spells/crafter-s-nightmare.b9v7qh4c7hmcjtfv.yaml",
+      "sha256": "c85144de5cdf6570347c8e8e841a6d1d1d428b7ab91cd38c6b310378ebd557ba"
+    },
+    {
+      "externalKey": "pf1/bLOXAvcgrCd2cIty",
+      "path": "packs/spells/curse-of-dragonflies.bLOXAvcgrCd2cIty.yaml",
+      "sha256": "73e251354a4c0b250f2887f3cb0f87ae34afff0db7cf36bfc496136865d313eb"
+    },
+    {
+      "externalKey": "pf1/ba8ur1roqmqxn0j5",
+      "path": "packs/spells/elemental-speech.ba8ur1roqmqxn0j5.yaml",
+      "sha256": "774e5261b74b8b015aafa497d62a51333b9c3a4c1da132b98eaec0e4c6237b1b"
+    }
+  ],
+  "dependencies": [
+    {
+      "externalKey": "pf1/05i5rxwim12hwktu",
+      "path": "packs/spells/bull-s-strength.05i5rxwim12hwktu.yaml",
+      "sha256": "32dab197a8a44ab1e399e81017b2da1cdcd8d6bc0b668debe217c67be1e51a36"
+    },
+    {
+      "externalKey": "pf1/0ahLHNR2864mih3n",
+      "path": "packs/classes/psychic.0ahLHNR2864mih3n.yaml",
+      "sha256": "5058b8f9690a1b8db0a2a5ed75b561dd629cfc22eab69cb471ccc17fe9adbf66"
+    },
+    {
+      "externalKey": "pf1/0c4lYDywj6bQ0i8r",
+      "path": "packs/classes/wizard.0c4lYDywj6bQ0i8r.yaml",
+      "sha256": "f276017613038b0017b04d80024ab8fe2b5ff8372facbfa42874d0c4c3f83670"
+    },
+    {
+      "externalKey": "pf1/16mfrGi2UHTsME4W",
+      "path": "packs/classes/shifter.16mfrGi2UHTsME4W.yaml",
+      "sha256": "d605cad9720ded1172f9f4092342c110e95d9b14121a1caf2faf1e0412599a8f"
+    },
+    {
+      "externalKey": "pf1/24b0LaabeAlUx5gN",
+      "path": "packs/classes/rogue.24b0LaabeAlUx5gN.yaml",
+      "sha256": "29ed8ac4088ed5ab39a0d0c463732f3b4441faea12070a28cd0455e6a4713638"
+    },
+    {
+      "externalKey": "pf1/2nn2tshkn4p7k25l",
+      "path": "packs/spells/entangle.2nn2tshkn4p7k25l.yaml",
+      "sha256": "1503adff8d03c9ed6f07284fb108ebece911409bfb23718bfa497d3cfa789148"
+    },
+    {
+      "externalKey": "pf1/4jsss37x0pplib8f",
+      "path": "packs/spells/mirror-image.4jsss37x0pplib8f.yaml",
+      "sha256": "94136a0e1e8493b5e556a8fd3a15ffb3c9d0bc9c883eb018fea9506898918c58"
+    },
+    {
+      "externalKey": "pf1/52v3fogun1n9jzum",
+      "path": "packs/spells/suggestion-mass.52v3fogun1n9jzum.yaml",
+      "sha256": "fd81e590bc299f367717c9cb8e22c9768146b5a201aca7c65534fd8e3febec53"
+    },
+    {
+      "externalKey": "pf1/5S0u8yFcP861wgd1",
+      "path": "packs/classes/oracle.5S0u8yFcP861wgd1.yaml",
+      "sha256": "650cdc046468e4330a082f47b7ee993e16105ee186d35579ea442bf0f05d7ba2"
+    },
+    {
+      "externalKey": "pf1/5iDrtRQMuIhLymUA",
+      "path": "packs/classes/summoner-unchained.5iDrtRQMuIhLymUA.yaml",
+      "sha256": "63bc5aad77a025e81c08305cfbf211f7e21a2422a510766b22c9668840a53be3"
+    },
+    {
+      "externalKey": "pf1/5mQIOIw4hDhlREPo",
+      "path": "packs/classes/monk-unchained.5mQIOIw4hDhlREPo.yaml",
+      "sha256": "0de1689ae107d723188399f1ea271a857ccbecb36c3bf3b3ffbb4d40f6501bd8"
+    },
+    {
+      "externalKey": "pf1/5nxfoXZ5KpOFYpLm",
+      "path": "packs/classes/adept.5nxfoXZ5KpOFYpLm.yaml",
+      "sha256": "00373cf52ecb71035b24002bc2f488a263220906db378ec5c10c44a89b8e4d67"
+    },
+    {
+      "externalKey": "pf1/5tsZI6zk29yX1ckA",
+      "path": "packs/classes/rogue-unchained.5tsZI6zk29yX1ckA.yaml",
+      "sha256": "68ba9652f1a81e132cf09f5c3319a15a7b6dd80f4bd689e3292cb598cd4ab48a"
+    },
+    {
+      "externalKey": "pf1/5uUzVl0gLZ23vY96",
+      "path": "packs/classes/occultist.5uUzVl0gLZ23vY96.yaml",
+      "sha256": "2cc998a7c5142339cdaddd98fffcba0b82152997f1defda701df673035683642"
+    },
+    {
+      "externalKey": "pf1/6GjOjO6r3R06fLwE",
+      "path": "packs/classes/bard.6GjOjO6r3R06fLwE.yaml",
+      "sha256": "4e042650f15ceabbc3784474cfa70450909385e6cebbab08e52283c6ee49745b"
+    },
+    {
+      "externalKey": "pf1/774kmgcb7ygviht0",
+      "path": "packs/spells/beast-shape-ii.774kmgcb7ygviht0.yaml",
+      "sha256": "6eae4b183e220174f56072e7e601c38eafd604cdb0f065bd6c5a4524d7ea05f7"
+    },
+    {
+      "externalKey": "pf1/7eZQP0MzeO2svmVF",
+      "path": "packs/classes/druid.7eZQP0MzeO2svmVF.yaml",
+      "sha256": "fd54089f7a415c8f4beaac3a99db12adde4c8a7128251ace994c7e65e51715a7"
+    },
+    {
+      "externalKey": "pf1/8u1xa5javcxc6szk",
+      "path": "packs/spells/rage.8u1xa5javcxc6szk.yaml",
+      "sha256": "b0e31f396dfe75c34e31878b179574c812815abe08325129907ce2c7614e888e"
+    },
+    {
+      "externalKey": "pf1/AoWSbnuTSGIxmv61",
+      "path": "packs/classes/sorcerer.AoWSbnuTSGIxmv61.yaml",
+      "sha256": "70461c6678559f480275f3beb5d0f54433a0842d30964a0db7526ca8e1dd4283"
+    },
+    {
+      "externalKey": "pf1/BrnHPJ2EVSQSyNQ8",
+      "path": "packs/classes/summoner.BrnHPJ2EVSQSyNQ8.yaml",
+      "sha256": "e4bfa330b64b8a3779d95903a06f6f0f6d7465b5678f4c9e51fed35303d1705d"
+    },
+    {
+      "externalKey": "pf1/DGDOm05afSJj454X",
+      "path": "packs/classes/ninja.DGDOm05afSJj454X.yaml",
+      "sha256": "dfb9bc8f2feea24b1ecff86f054daec2ca754cf9567b1c751214ac8935cc547b"
+    },
+    {
+      "externalKey": "pf1/E27lMw9YNOAjS009",
+      "path": "packs/classes/bloodrager.E27lMw9YNOAjS009.yaml",
+      "sha256": "7f41ca2834ad2f396b5e17b5e2984bc6dce4a1167cbea61917a01c1d3506fe38"
+    },
+    {
+      "externalKey": "pf1/Fv3FbmXptuDRiL5y",
+      "path": "packs/classes/inquisitor.Fv3FbmXptuDRiL5y.yaml",
+      "sha256": "7a05179a7b749a1786103263dee926f457452f80428ce2f5396e39b126994e02"
+    },
+    {
+      "externalKey": "pf1/G2SqFdNKFxbujzbH",
+      "path": "packs/classes/skald.G2SqFdNKFxbujzbH.yaml",
+      "sha256": "7ec0d610dc802b03827feb85d8c4e4184296cfab967912485cf89808530ee699"
+    },
+    {
+      "externalKey": "pf1/GK6rAenFfgJNNJCX",
+      "path": "packs/classes/arcanist.GK6rAenFfgJNNJCX.yaml",
+      "sha256": "0d98af972918aa3ad7fd22bad6df30deafaa6c7dec95634fd95ed23aabb5ffc1"
+    },
+    {
+      "externalKey": "pf1/H0iUHrBW5tqrL9Zu",
+      "path": "packs/classes/expert.H0iUHrBW5tqrL9Zu.yaml",
+      "sha256": "5aef71535e57ce6210a98e05bc3cfd55e7b19b46b2716e9e6fb18cec11445764"
+    },
+    {
+      "externalKey": "pf1/Immo2BuSe5WGdRW9",
+      "path": "packs/classes/hunter.Immo2BuSe5WGdRW9.yaml",
+      "sha256": "f94c1b1f5df87f007261feb9db3990412809a710ec4d747ed32893b1fadafd1f"
+    },
+    {
+      "externalKey": "pf1/JcaqlAawhf14q1lq",
+      "path": "packs/classes/alchemist.JcaqlAawhf14q1lq.yaml",
+      "sha256": "71f37a060bc8897c89d579f3275d146bbaa08b6a59603a46ae2286404dcf7dea"
+    },
+    {
+      "externalKey": "pf1/KfcnHrgAMpBhScKB",
+      "path": "packs/classes/warrior.KfcnHrgAMpBhScKB.yaml",
+      "sha256": "4069de338174387a9af5d3607cc2b55d5d2b06d9171238652ade16213b06182e"
+    },
+    {
+      "externalKey": "pf1/KgxFsHNv0g1GbvmS",
+      "path": "packs/classes/warpriest.KgxFsHNv0g1GbvmS.yaml",
+      "sha256": "550f07587f1e161b4172e4568f7c2d1bff396d80f98df4f928f611a0c3e55636"
+    },
+    {
+      "externalKey": "pf1/Q3rbWILULpQfpjjZ",
+      "path": "packs/classes/swashbuckler.Q3rbWILULpQfpjjZ.yaml",
+      "sha256": "01f4ad455fe57535b59ccb0827d2f6d6aa08d0d8bd4747ffcf4d765bfd956c96"
+    },
+    {
+      "externalKey": "pf1/RC4D4WFT5kRKkdqp",
+      "path": "packs/classes/witch.RC4D4WFT5kRKkdqp.yaml",
+      "sha256": "27e7d427c6a351a6fac5d2df714922758da959ac68799c2d4f1f47e9d47e8987"
+    },
+    {
+      "externalKey": "pf1/SjFqQceVeVBzBwgn",
+      "path": "packs/classes/cleric.SjFqQceVeVBzBwgn.yaml",
+      "sha256": "4671f71a903844a328c8ccdb81757b16de09f18eff92f362398bc30c0e2c97f2"
+    },
+    {
+      "externalKey": "pf1/W3EjUgYLJ1D9qDKw",
+      "path": "packs/classes/barbarian-unchained.W3EjUgYLJ1D9qDKw.yaml",
+      "sha256": "75008fec447501b7c9ad9bff80e173632e3f8b7b4c3c1b164de90b29d535b3bd"
+    },
+    {
+      "externalKey": "pf1/W8dxwZ1CZiwLKsqr",
+      "path": "packs/classes/monk.W8dxwZ1CZiwLKsqr.yaml",
+      "sha256": "9f64371e67056cd8f43f10a8ae54533e7d605068f6cd554bfd1ffa660a18585a"
+    },
+    {
+      "externalKey": "pf1/WLqBCT5DqmGAx8Wd",
+      "path": "packs/classes/fighter.WLqBCT5DqmGAx8Wd.yaml",
+      "sha256": "87abec6db438015247bbd7619642fa0188751767c0f9e9c241dbd2ff0302075e"
+    },
+    {
+      "externalKey": "pf1/Yf5Wv9X09SUHYCqM",
+      "path": "packs/classes/vigilante.Yf5Wv9X09SUHYCqM.yaml",
+      "sha256": "5fcf8a3e5f77a599a30eb238b9d8c4b45dd3f9e056c3755e5005c1c1182745d8"
+    },
+    {
+      "externalKey": "pf1/c3vws58yy0pk47gs",
+      "path": "packs/spells/planar-ally-lesser.c3vws58yy0pk47gs.yaml",
+      "sha256": "c96deba8462d1abfd7888d3513a0588aeb0dd16b3b94e8466507b7a48db65c40"
+    },
+    {
+      "externalKey": "pf1/cOY76lMUkupH534m",
+      "path": "packs/classes/slayer.cOY76lMUkupH534m.yaml",
+      "sha256": "1843e018149538c1e5a62ae96f23b2bdbbaea0e1c4a3b2a209dbdc54f3bc695e"
+    },
+    {
+      "externalKey": "pf1/e0rlki4hwu76l5ya",
+      "path": "packs/spells/death-ward.e0rlki4hwu76l5ya.yaml",
+      "sha256": "eb87dba945f29c8a4a3dce8aa868aa9afa26797c205c1cf8626c5d448c3a498a"
+    },
+    {
+      "externalKey": "pf1/e3793htz3ml2thev",
+      "path": "packs/spells/tower-of-iron-will-i.e3793htz3ml2thev.yaml",
+      "sha256": "a4575038a16587e16a3bee9f253ef4202591dd33c758e151f024d21b01e18fd2"
+    },
+    {
+      "externalKey": "pf1/fLU25FvuRWMCSxPP",
+      "path": "packs/classes/mesmerist.fLU25FvuRWMCSxPP.yaml",
+      "sha256": "7958f84e1da10f0d07d5be98e63e259e085876d534d8d77503593c31dc6c5eaf"
+    },
+    {
+      "externalKey": "pf1/fv17a5jsmapb0wcz",
+      "path": "packs/spells/entice-fey-lesser.fv17a5jsmapb0wcz.yaml",
+      "sha256": "56f8e4616e5b0ba18e20695b73f857e5c6db201a21a9467768bb3a7466b39bf4"
+    },
+    {
+      "externalKey": "pf1/fxz69pwpqt9b6uss",
+      "path": "packs/spells/restoration-lesser.fxz69pwpqt9b6uss.yaml",
+      "sha256": "5e5b0f313092047460b7275b8a819ed623f25f8b268ee5b8dacca511afc69c78"
+    },
+    {
+      "externalKey": "pf1/g33euis7yi9pwddy",
+      "path": "packs/spells/fog-cloud.g33euis7yi9pwddy.yaml",
+      "sha256": "599578bfd922bb382c1d8d33f7a5a690a7cc3001362ba0ac12629468cf321922"
+    },
+    {
+      "externalKey": "pf1/g3pq7xWWdUVYw6ai",
+      "path": "packs/classes/barbarian.g3pq7xWWdUVYw6ai.yaml",
+      "sha256": "db49a4892916790b9b8477e6a8a62395cd121b1de119c5b79852ed98f7d48bd3"
+    },
+    {
+      "externalKey": "pf1/gmgwyjfpeuuc4t4o",
+      "path": "packs/spells/dispel-magic.gmgwyjfpeuuc4t4o.yaml",
+      "sha256": "93e0b2d301e2bf6c254bfe6dc4a849d5d5f4719aae5c96b2bbe3f3c5966ab79c"
+    },
+    {
+      "externalKey": "pf1/h4n6jfsc64csekxh",
+      "path": "packs/spells/steal-years.h4n6jfsc64csekxh.yaml",
+      "sha256": "08dd788dfb8b25538433f36bf9ed22af0e4dfd17bedec9595446b497196e0d71"
+    },
+    {
+      "externalKey": "pf1/iDlGMIezGuqqt8Us",
+      "path": "packs/classes/brawler.iDlGMIezGuqqt8Us.yaml",
+      "sha256": "56d592b303431d307465560be03eb433da79410f57e7e67bb1555a8461fe735c"
+    },
+    {
+      "externalKey": "pf1/iYAQs7zjFbgcmect",
+      "path": "packs/classes/spiritualist.iYAQs7zjFbgcmect.yaml",
+      "sha256": "71f29c0939e32adc8ae2f80572a8587e1a0543c387ef1bac491d73dd5d32a10c"
+    },
+    {
+      "externalKey": "pf1/j9B52zPw8AwNqYsk",
+      "path": "packs/classes/aristocrat.j9B52zPw8AwNqYsk.yaml",
+      "sha256": "acadab5c7452f7e66c4fae93f162718434e59585b9fb21f41e7c74c04530cffe"
+    },
+    {
+      "externalKey": "pf1/jKH9m5QF1jCnU3s0",
+      "path": "packs/classes/commoner.jKH9m5QF1jCnU3s0.yaml",
+      "sha256": "799e557767e8cc6a98cc2dcbaadb818474bbcfecf334a3d2385288872fd2b287"
+    },
+    {
+      "externalKey": "pf1/jMi3GBtvdG0WhH8L",
+      "path": "packs/classes/shaman.jMi3GBtvdG0WhH8L.yaml",
+      "sha256": "a509baa1817d2ab4efb53cdc5c91b573fef090de4df2277861f7ccecbbaf36b3"
+    },
+    {
+      "externalKey": "pf1/jOUMbWoFZHQlAMpJ",
+      "path": "packs/classes/gunslinger.jOUMbWoFZHQlAMpJ.yaml",
+      "sha256": "2ae53dc066b618d97d22ed1ff5904b1ddb027eef1a039342e42767c22fde62ca"
+    },
+    {
+      "externalKey": "pf1/jsvjsax2eabrlx8g",
+      "path": "packs/spells/minor-creation.jsvjsax2eabrlx8g.yaml",
+      "sha256": "6f57f5f6dc04e3007e34ed163fc40b1bf64f9edd767ac35ba233bce0aa337058"
+    },
+    {
+      "externalKey": "pf1/kyo0kwhw2jhuztju",
+      "path": "packs/spells/summon-monster-i.kyo0kwhw2jhuztju.yaml",
+      "sha256": "07aee0b65a9946025363e26883596a14e0ac21abf2495142a54d5c6b2603c234"
+    },
+    {
+      "externalKey": "pf1/mkn0jklea8knq1lz",
+      "path": "packs/spells/dance-of-a-hundred-cuts.mkn0jklea8knq1lz.yaml",
+      "sha256": "b36d1d1fd34e1af8acecc063e23f649727c0470874c42d5cd0fddc7e49fe6e95"
+    },
+    {
+      "externalKey": "pf1/mqdoexj35atgqafn",
+      "path": "packs/spells/gaseous-form.mqdoexj35atgqafn.yaml",
+      "sha256": "375fe2deae4777755184d31589e73f37135c761ba5078be41ca4aaef5560ea40"
+    },
+    {
+      "externalKey": "pf1/nsxngq65mbrzgwnm",
+      "path": "packs/spells/permanency.nsxngq65mbrzgwnm.yaml",
+      "sha256": "259891f8e53513dbaf4015dd580c055d09ea7840b8b5d5feb07483d22704df15"
+    },
+    {
+      "externalKey": "pf1/ohptcds1d5oG6Bjh",
+      "path": "packs/classes/paladin.ohptcds1d5oG6Bjh.yaml",
+      "sha256": "89962b6ce832307700634118a2de4a1f09b946514851fd88e42df17e2dc550b0"
+    },
+    {
+      "externalKey": "pf1/oj36nfak6jc2s5ky",
+      "path": "packs/spells/disguise-self.oj36nfak6jc2s5ky.yaml",
+      "sha256": "ad62642ad2b2e6b7b019fe2eab5d8db17f1aad3e3e8e6bbcb0b2f3bdaf0f1195"
+    },
+    {
+      "externalKey": "pf1/p8dbns0wei8eayas",
+      "path": "packs/spells/sepia-snake-sigil.p8dbns0wei8eayas.yaml",
+      "sha256": "94925e3094bc0ee94fd2a60b376e4649054ca8f036ba75e467d02be80aa3474f"
+    },
+    {
+      "externalKey": "pf1/s27zdYVFenYBVtfu",
+      "path": "packs/classes/investigator.s27zdYVFenYBVtfu.yaml",
+      "sha256": "d9c55cfc3fafb9c2771b1c3cb68deed106a015c724ef6982df8a2984f191f376"
+    },
+    {
+      "externalKey": "pf1/s9amdo5398alb5p0",
+      "path": "packs/spells/haste.s9amdo5398alb5p0.yaml",
+      "sha256": "c81ba9f6cf18bd1432a3e58fa6143b161cb4a7df5bd03fcf58fb174a32e78f14"
+    },
+    {
+      "externalKey": "pf1/tjdfluulncmqacc3",
+      "path": "packs/spells/beast-shape-i.tjdfluulncmqacc3.yaml",
+      "sha256": "ecae8ba04afb13c296d30af3743cf42594fe5bb2b9a1bc4b697553fc1eb9d3d2"
+    },
+    {
+      "externalKey": "pf1/tkjnm3lw7ni82tag",
+      "path": "packs/spells/resist-energy.tkjnm3lw7ni82tag.yaml",
+      "sha256": "183efca33a28c3921711ff5d7e18f880a215ae4a8a236b2ba90786aba728ef8d"
+    },
+    {
+      "externalKey": "pf1/u1ed3H9xtYQXTP5v",
+      "path": "packs/classes/cavalier.u1ed3H9xtYQXTP5v.yaml",
+      "sha256": "e72c8c64cc3509a00102cc75427e6d1d0a9533c68a32a86e7814de662e88a681"
+    },
+    {
+      "externalKey": "pf1/uynVENa0deVdmf53",
+      "path": "packs/classes/antipaladin.uynVENa0deVdmf53.yaml",
+      "sha256": "9ab3795954eae379225435d09cd7406c99c4be5995a222d4d6c282d75601635e"
+    },
+    {
+      "externalKey": "pf1/v3d3lnjj7ks0ztii",
+      "path": "packs/spells/enthrall.v3d3lnjj7ks0ztii.yaml",
+      "sha256": "d005a4ea100e43e2c9fb9927f4b1477014f21db6286f55309802603bf7884f36"
+    },
+    {
+      "externalKey": "pf1/v8czhud6wpmc9esu",
+      "path": "packs/spells/whispering-wind.v8czhud6wpmc9esu.yaml",
+      "sha256": "a676b14c902a045d1caa95dcb93ef613d9010ef6e4a2d11c055aad98315822b6"
+    },
+    {
+      "externalKey": "pf1/vh9TZBE6BRu9sCfE",
+      "path": "packs/classes/kineticist.vh9TZBE6BRu9sCfE.yaml",
+      "sha256": "44184469b8f980b24200e1c56cdf2235e6820622ac772cfc2635ddc778a920bf"
+    },
+    {
+      "externalKey": "pf1/w3wjj6s3N69BsMc3",
+      "path": "packs/classes/ranger.w3wjj6s3N69BsMc3.yaml",
+      "sha256": "78f2a07039caf2ae6da67ac20e429ac67b98ce76bec80b2dde3bc2530bbe62b7"
+    },
+    {
+      "externalKey": "pf1/wu4y1ilg6iq28cr6",
+      "path": "packs/spells/interposing-hand.wu4y1ilg6iq28cr6.yaml",
+      "sha256": "f967cd2d9da8701e24dcfeb4daa649357972b27bb49edf5d6507d9a0ee4262bd"
+    },
+    {
+      "externalKey": "pf1/xZLcyrEKYZoJPS2k",
+      "path": "packs/classes/magus.xZLcyrEKYZoJPS2k.yaml",
+      "sha256": "fcd033ba405fef263354ed3fab81c5954592f5b6f91835bddbedb8956def67ad"
+    },
+    {
+      "externalKey": "pf1/xtRbNEKYYq4cRiwI",
+      "path": "packs/classes/medium.xtRbNEKYYq4cRiwI.yaml",
+      "sha256": "dc115cbbc4c12378cdb0cd951f80a694f315d96b0622942a9c6d78d87f14885d"
+    },
+    {
+      "externalKey": "pf1/yM8xfml1Xrccfwux",
+      "path": "packs/classes/samurai.yM8xfml1Xrccfwux.yaml",
+      "sha256": "e95fcadadb1b06af522f115970baf22c70c51f99654b280adf0b2e82bcc29b5b"
+    },
+    {
+      "externalKey": "pf1/zqj5qzyl46af27v0",
+      "path": "packs/spells/suggestion.zqj5qzyl46af27v0.yaml",
+      "sha256": "c665fbdc79941bf1d8aca6b30836a93fce10dec8081436c14a7b0333c87f976e"
+    }
+  ],
+  "fullSourceCatalogSha256": "93a7076a9e7a834359e5f96ea21d21b81f603f4007c024716ef6063547d0cba4",
+  "boundary": "Full-source CLI pin verification; raw files copied byte-for-byte. Additional context has no new curation or Attribution Assessment."
+}

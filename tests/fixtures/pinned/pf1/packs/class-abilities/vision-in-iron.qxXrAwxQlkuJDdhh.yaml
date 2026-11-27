@@ -1,0 +1,44 @@
+_id: qxXrAwxQlkuJDdhh
+_key: '!items!qxXrAwxQlkuJDdhh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Vision in Iron
+system:
+  abilityType: sp
+  actions:
+    - _id: c7d5isooxb68yqbr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can use any piece of polished metal at least the size of a dagger
+      as a scrying device, as if using the spell
+      @UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{Scrying}.</p>
+
+      <p>At 15th level, this functions like
+      @UUID[Compendium.pf1.spells.glt6uk3n6g6l2p6l]{Scrying, Greater}.</p>
+
+      <p>You can scry for a number of rounds per day equal to your oracle level;
+      these rounds do not need to be consecutive.</p>
+
+      <p>You must be at least 7th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_visionInIron
+  tags:
+    - Revelation
+    - Metal Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

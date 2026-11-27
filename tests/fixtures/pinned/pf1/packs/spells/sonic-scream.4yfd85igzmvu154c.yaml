@@ -1,0 +1,62 @@
+_id: 4yfd85igzmvu154c
+_key: '!items!4yfd85igzmvu154c'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/sonic/scream-wail-shout-teal.webp
+name: Sonic Scream
+system:
+  actions:
+    - _id: tjvpv927ipr6edbg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped burst
+      duration:
+        units: spec
+        value: 1 round/level or until discharged (see text)
+      measureTemplate:
+        size: '15'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      save:
+        description: Reflex half (see text)
+        type: ref
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Up to three times during this spell's duration, you can emit a cone of
+      powerful sound as a standard action. The first cone deals 4d4 points of
+      sonic damage to every creature in the area. The second deals 2d4 points of
+      sonic damage to every creature in the area. The third deals 1d4 points of
+      sonic damage to every creature in the area. A successful Reflex save
+      against a cone halves that cone's damage. After the third cone of sound,
+      the spell ends. Until you use all three cones, you cannot use your voice
+      for any magic-related purpose (bardic performance, verbal spellcasting,
+      and so on), and cannot speak at any volume lower than a shout.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 2
+      bard: 2
+      bloodrager: 2
+      magus: 2
+      psychic: 2
+      skald: 2
+      sorcerer: 2
+      wizard: 2
+  level: 2
+  school: evo
+  sources:
+    - id: PZO1129
+      pages: '193'
+type: spell

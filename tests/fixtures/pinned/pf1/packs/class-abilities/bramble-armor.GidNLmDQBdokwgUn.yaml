@@ -1,0 +1,66 @@
+_id: GidNLmDQBdokwgUn
+_key: '!items!GidNLmDQBdokwgUn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_26.jpg
+name: Bramble Armor
+system:
+  abilityType: su
+  actions:
+    - _id: 8w991g20urds1h4u
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Activate
+      range:
+        units: personal
+      target:
+        value: self
+    - _id: hWfEfeToQy9S6Hpm
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - piercing
+      duration:
+        units: inst
+      name: Apply damage to enemy
+      target:
+        value: >-
+          foes striking you with an unarmed strike or a melee weapon without
+          reach
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 6th level, you can cause a host of wooden thorns to burst from your
+      skin as a free action. While bramble armor is in effect, any foe striking
+      you with an unarmed strike or a melee weapon without reach takes 1d6
+      points of piercing damage + 1 point per two cleric levels you possess. You
+      can use this ability for a number of rounds per day equal to your cleric
+      level. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_brambleArmor
+  tags:
+    - Domain Power
+    - Plant Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

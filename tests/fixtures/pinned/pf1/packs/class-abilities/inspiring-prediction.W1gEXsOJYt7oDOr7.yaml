@@ -1,0 +1,38 @@
+_id: W1gEXsOJYt7oDOr7
+_key: '!items!W1gEXsOJYt7oDOr7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-blue-2.jpg
+name: Inspiring Prediction
+system:
+  abilityType: su
+  actions:
+    - _id: 9aauq6fgxabjb12q
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: seeText
+      target:
+        value: target ally
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>A number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier, you can predict an ally’s success, bolstering others’ resolve.
+      As a <em>swift action</em>, you can shout an inspiring prediction,
+      granting each ally within 50 feet who can hear you a +4 <em>luck
+      bonus</em> on her next <em>attack roll</em>, saving throw, or skill
+      check.</p>
+  subType: classFeat
+  tag: classFeat_inspiringPrediction
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

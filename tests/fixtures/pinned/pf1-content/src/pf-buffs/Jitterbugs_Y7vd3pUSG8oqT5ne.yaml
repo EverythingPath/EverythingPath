@@ -1,0 +1,34 @@
+_id: Y7vd3pUSG8oqT5ne
+_key: '!items!Y7vd3pUSG8oqT5ne'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/environment/creatures/bug-flea-beige.webp
+name: Jitterbugs
+system:
+  changes:
+    - _id: quylygk3
+      formula: '-4'
+      target: dexSkills
+      type: untyped
+    - _id: y3z53ful
+      formula: '-4'
+      target: dexChecks
+      type: untyped
+  contextNotes:
+    - target: attack
+      text: Can't take the Delay or Readied actions.
+    - target: ac
+      text: Can't take the Total Defense action.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.axe8kelwutjkwh80]{Jitterbugs}</p><p>You
+      take –4 penalty on all Dexterity checks and Dexterity-based skill checks,
+      and cannot take the delay, ready, or total defense actions.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '@item.level'
+  level: 3
+  subType: spell
+type: buff

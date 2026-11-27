@@ -1,0 +1,67 @@
+_id: acjpqe8vchvzt5rl
+_key: '!items!acjpqe8vchvzt5rl'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Air Geyser
+system:
+  actions:
+    - _id: o6plxiymi0pnmsao
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Use
+      notes:
+        effect:
+          - Target is flung [[5[ft] * @cl[CL]]] feet in the air
+      range:
+        units: close
+      save:
+        description: Reflex partial (see text)
+        type: ref
+      target:
+        value: one creature or object up to Large size
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><em>You create a powerful blast of air capable of flinging an opponent
+      upward.</em></p><p>If the target fails its Reflex save, the force of the
+      air deals 2d6 points of bludgeoning damage and hurls the target upward a
+      number of feet equal to 5 x your caster level. If a solid object (such as
+      a ceiling) is encountered, the target strikes the object in the same
+      manner as it would during a normal fall. After this blast of air ceases,
+      the target falls down (unless it was flying), taking falling damage as
+      normal. A successful save means the target takes half damage from the air
+      blast but is not moved by it.</p>
+  descriptors:
+    - air
+  learnedAt:
+    class:
+      arcanist: 3
+      bloodrager: 3
+      druid: 3
+      hunter: 3
+      magus: 3
+      shaman: 4
+      sorcerer: 3
+      witch: 3
+      wizard: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1129
+      pages: '173'
+type: spell

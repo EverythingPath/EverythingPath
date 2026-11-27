@@ -1,0 +1,44 @@
+_id: 2xdHjc4DRWBEOJV5
+_key: '!items!2xdHjc4DRWBEOJV5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Anything to Please
+system:
+  abilityType: su
+  actions:
+    - _id: ys4pe408emrckdwl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can compel a creature within 30 feet to attempt to
+      please you as a standard action. The creature receives a Will save to
+      negate this affect. If the save fails, the creature attacks your enemies
+      for 1 round, gives you its most valuable item, or drops prone at your feet
+      and grovels for 1d4 rounds (GM’s choice). You can use this ability once
+      per day at 8th level and one additional time per day for every four levels
+      beyond 8th. This is a mind-affecting effect.</p>
+
+      <p>This power replaces the Charming Smile power of the Charm Domain.</p>
+  subType: classFeat
+  tag: classFeat_anythingToPlease
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

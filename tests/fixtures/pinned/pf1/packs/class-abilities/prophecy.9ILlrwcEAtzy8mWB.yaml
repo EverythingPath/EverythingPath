@@ -1,0 +1,54 @@
+_id: 9ILlrwcEAtzy8mWB
+_key: '!items!9ILlrwcEAtzy8mWB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Prophecy
+system:
+  abilityType: su
+  actions:
+    - _id: lha4fwkxaict98i2
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use Materials
+      range:
+        units: personal
+      target:
+        value: self
+    - _id: 5PUsrrJNs0nmvayl
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Forgo Materials
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can call on her prophetic ancestors and cast
+      @UUID[Compendium.pf1.spells.pwueht12qqo0268e]{Divination} once per day.
+      She can spend a full hour casting the spell in place of providing the
+      usual material components.</p>
+  subType: classFeat
+  tag: classFeat_prophecy
+  tags:
+    - Major Hex
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

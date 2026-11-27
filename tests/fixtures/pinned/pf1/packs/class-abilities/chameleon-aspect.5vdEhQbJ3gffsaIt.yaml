@@ -1,0 +1,41 @@
+_id: 5vdEhQbJ3gffsaIt
+_key: '!items!5vdEhQbJ3gffsaIt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/emerald_05.jpg
+name: Chameleon Aspect
+system:
+  abilityType: su
+  actions:
+    - _id: 7z8mqlosc4ea0idj
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a swift action, you can subtly alter the color of your scales,
+      blending them with the surrounding environment. While under the effect of
+      this power, you gain concealment from creatures more than 10 feet away
+      (attacks have a 20% miss chance), and total concealment from creatures
+      more than 40 feet away (attacks have a 50% miss chance). You can use this
+      ability a number of rounds per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Copycat power of the Trickery Domain.</p>
+  subType: classFeat
+  tag: classFeat_chameleonAspect
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

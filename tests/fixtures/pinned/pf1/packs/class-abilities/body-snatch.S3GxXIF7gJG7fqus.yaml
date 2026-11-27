@@ -1,0 +1,43 @@
+_id: S3GxXIF7gJG7fqus
+_key: '!items!S3GxXIF7gJG7fqus'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Body Snatch
+system:
+  abilityType: sp
+  actions:
+    - _id: 0pg5o5r3t16xydg9
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 10th level, once per day as an immediate action upon falling
+      unconscious because of dropping below 0 hit points, you can cast your soul
+      from your body and attempt to occupy the body of another creature within
+      30 feet. This ability otherwise functions identically to
+      @UUID[Compendium.pf1.spells.8ai7fslz4zu8xe9s]{Magic Jar} except that your
+      actual body serves as the receptacle and you suppress the consciousness of
+      your target rather than casting it out. Your body continues to bleed as
+      normal unless it is somehow stabilized, and if its hit points drop to a
+      negative number equal to your Constitution score, the magic jar effect
+      prematurely ends and you die as normal.</p>
+  subType: classFeat
+  tag: classFeat_bodySnatch
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

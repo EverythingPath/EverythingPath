@@ -1,0 +1,44 @@
+_id: u7r3RkiMNAhv9I2d
+_key: '!items!u7r3RkiMNAhv9I2d'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/exhausting-critical.jpg
+name: Augment
+system:
+  abilityType: sp
+  actions:
+    - _id: on3q173f0e877bbo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a <em>standard action</em>, you can touch a creature and grant it
+      either a +2 <em>enhancement bonus</em> to a single ability score of your
+      choice or a +1 bonus to <em>natural armor</em> that stacks with any
+      <em>natural armor</em> the creature might possess. At 10th level, the
+      <em>enhancement bonus</em> to one ability score increases to +4. The
+      <em>natural armor bonus</em> increases by +1 for every five wizard levels
+      you possess, to a maximum of +5 at 20th level. This augmentation lasts a
+      number of rounds equal to 1/2 your wizard level (minimum 1 round). You can
+      use this ability a number of times per day equal to 3 + your
+      <em>Intelligence</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_augment
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

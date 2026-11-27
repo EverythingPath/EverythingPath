@@ -1,0 +1,40 @@
+_id: N1GTho1PuIkRmePm
+_key: '!items!N1GTho1PuIkRmePm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Wholeness of Body (UC)
+system:
+  abilityType: su
+  actions:
+    - _id: vfwew1zla5ec4md0
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d8 + @class.level
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+      uses:
+        autoDeductChargesCost: '2'
+  associations:
+    classes:
+      - Monk (Unchained)
+  description:
+    value: >-
+      <p>A monk with this ki power can heal his own wounds as a standard action.
+      By spending 2 points from his ki pool, he can heal an amount of damage
+      equal to 1d8 + his monk level.</p>
+  subType: classFeat
+type: feat

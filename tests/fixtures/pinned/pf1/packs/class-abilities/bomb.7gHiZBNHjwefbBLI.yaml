@@ -1,0 +1,100 @@
+_id: 7gHiZBNHjwefbBLI
+_key: '!items!7gHiZBNHjwefbBLI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/bomb.jpg
+name: Bomb
+system:
+  abilityType: su
+  actions:
+    - _id: pf6f5msnqitrhl47
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  crOffset: '0'
+  description:
+    value: >-
+      <p>In addition to magical extracts, alchemists are adept at swiftly mixing
+      various volatile chemicals and infusing them with their magical reserves
+      to create powerful bombs that they can hurl at their enemies. An alchemist
+      can use a number of bombs each day equal to his class level + his
+      <em>Intelligence</em> modifier. Bombs are unstable, and if not used in the
+      round they are created, they degrade and become inert—their method of
+      creation prevents large volumes of explosive material from being created
+      and stored. In order to create a bomb, the alchemist must use a small vial
+      containing an ounce of liquid catalyst—the alchemist can create this
+      liquid catalyst from small amounts of chemicals from an alchemy lab, and
+      these supplies can be readily refilled in the same manner as a
+      spellcaster’s component pouch. Most alchemists create a number of catalyst
+      vials at the start of the day equal to the total number of bombs they can
+      create in that day—once created, a catalyst vial remains usable by the
+      alchemist for years.</p>
+
+      <p>Drawing the components of, creating, and throwing a bomb requires a
+      <em>standard action</em> that provokes an attack of opportunity. Thrown
+      bombs have a range of 20 feet and use the <em>Throw Splash Weapon</em>
+      special attack. Bombs are considered weapons and can be selected using
+      feats such as @UUID[Compendium.pf1.feats.8rsFtye3PwM6CKli]{Point-Blank
+      Shot} and @UUID[Compendium.pf1.feats.n250dFlbykAIAg5Z]{Weapon Focus}. On a
+      direct hit, an alchemist’s bomb inflicts 1d6 points of fire damage +
+      additional damage equal to the alchemist’s <em>Intelligence</em> modifier.
+      The damage of an alchemist’s bomb increases by 1d6 points at every
+      odd-numbered alchemist level (this bonus damage is not multiplied on a
+      critical hit or by using feats such as
+      @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}). Splash damage
+      from an alchemist bomb is always equal to the bomb’s minimum damage (so if
+      the bomb would deal 2d6+4 points of fire damage on a direct hit, its
+      splash damage would be 6 points of fire damage). Those caught in the
+      splash damage can attempt a <em>Reflex</em> save for half damage. The DC
+      of this save is equal to 10 + 1/2 the alchemist’s level + the alchemist’s
+      <em>Intelligence</em> modifier.</p>
+
+      <p>Alchemists can learn new types of bombs as discoveries (see the
+      <em>Discovery</em> ability) as they level up. An alchemist’s bomb, like an
+      extract, becomes inert if used or carried by anyone else.</p>
+  sources:
+    - id: PZO1115
+      pages: '28'
+  subType: classFeat
+  tag: classFeat_bomb
+  uses:
+    maxFormula: '@class.level + @abilities.int.mod'
+    per: day
+type: feat

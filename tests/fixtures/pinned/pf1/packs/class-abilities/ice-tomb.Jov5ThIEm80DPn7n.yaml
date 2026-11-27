@@ -1,0 +1,50 @@
+_id: Jov5ThIEm80DPn7n
+_key: '!items!Jov5ThIEm80DPn7n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Ice Tomb
+system:
+  abilityType: su
+  actions:
+    - _id: bgwjyr6aw2u8o6k3
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d8
+            types:
+              - cold
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude half
+        type: fort
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>A storm of ice and freezing wind envelops the target, which takes 3d8
+      points of cold damage (Fortitude half). If the target fails its save, it
+      is paralyzed and unconscious but does not need to eat or breathe while the
+      ice lasts. The ice has 20 hit points; destroying the ice frees the
+      creature, which is staggered for 1d4 rounds after being released.</p>
+
+      <p>Whether or not the target's saving throw is successful, it cannot be
+      the target of this hex again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

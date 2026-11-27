@@ -1,0 +1,39 @@
+_id: UtKwkdHtjjYnhAk1
+_key: '!items!UtKwkdHtjjYnhAk1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Elemental Fury (UC)
+system:
+  abilityType: su
+  actions:
+    - _id: jy480svc4wgjscb3
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Monk (Unchained)
+  description:
+    value: >-
+      <p>A monk who selects this ki power must select one type of energy: acid,
+      cold, electricity, or fire. Once this choice is made, it cannot be
+      changed.</p>
+
+      <p>The monk can expend 1 point from his ki pool as a swift action to imbue
+      his natural attacks with this energy, causing them to deal 1d6 points of
+      damage of the chosen type for a number of rounds equal to 1/2 his monk
+      level.</p>
+
+      <p>A monk must be at least 6th level before selecting this ki power.</p>
+  subType: classFeat
+type: feat

@@ -1,0 +1,94 @@
+_id: p5cqz8mzfy93ztee
+_key: '!items!p5cqz8mzfy93ztee'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Grim Stalker
+system:
+  actions:
+    - _id: f0yrn5jlclsuuzce
+      actionType: spellsave
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        dismiss: true
+        units: day
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object); see text
+        type: will
+      target:
+        value: one object touched
+  components:
+    divineFocus: 2
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You bind spirits of ill fate to an object, focusing their wrath onto
+      the next creature that touches the object. When a creature touches the
+      target object, it can attempt a Will save to negate the spell's effect.
+      Although a successful save prevents the creature from becoming haunted,
+      the haunt still resides within the object, and targets either the next
+      creature to touch the object or the same creature again if it still holds
+      the object after 24 hours. The haunt remains within the object until a
+      creature fails its save or the spell's duration ends.  Once a creature is
+      affected by the haunt, it begins noticing a large, black mastiff with
+      ominous green eyes watching and following it from a distance, always just
+      beyond the range of focus or interaction. The grim stalker terrorizes the
+      creature's sleep, affecting it as per <i>nightmare</i> every night during
+      the spell's duration (Will negates for one night). Each time the creature
+      takes hit point damage, the grim stalker lunges closer, causing the
+      creature to become shaken for 1 round (Will negates). Each time the
+      creature is reduced to less than one-tenth of its maximum hit points, the
+      grim stalker lunges at the creature as an immediate action, affecting it
+      as per <i>phantasmal killer</i>.  Each time the grim stalker lunges at the
+      affected creature, the spell's haunt-like manifestation occurs during that
+      round. Alternatively, a haunted creature can attempt to force the grim
+      stalker to manifest using a simple ritual that requires a successful
+      Knowledge (arcana), Knowledge (religion), or Spellcraft check; occult
+      reagents costing 450 gp (which are consumed as part of the ritual); and a
+      full-round action. The DC for this check equals the spell's save DC.
+      Successfully performing the ritual causes the grim stalker to manifest as
+      a Nessian warhound (<i>Pathfinder RPG Bestiary</i> 173) in an available
+      square 20 feet away from the victim, save that its only subtype is
+      extraplanar, its alignment is neutral, its bite and breath weapon deal
+      negative energy damage instead of fire damage, and it has negative energy
+      affinity instead of fire immunity and vulnerability to cold. The grim
+      stalker immediately attacks the affected creature, persisting until either
+      it or the creature is slain, at which point the spell effect (and the
+      warhound) disappears.</p>
+  descriptors:
+    - death
+    - emotion
+    - fear
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 7
+      cleric: 7
+      magus: 6
+      oracle: 7
+      shaman: 7
+      sorcerer: 7
+      summoner: 6
+      summonerUnchained: 6
+      witch: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a hound's fang
+  school: nec
+  sources:
+    - id: PZO9471
+      pages: '27'
+  subschool:
+    - haunted
+type: spell

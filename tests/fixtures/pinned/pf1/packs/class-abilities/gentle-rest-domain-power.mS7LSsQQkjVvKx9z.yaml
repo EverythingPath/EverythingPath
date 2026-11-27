@@ -1,0 +1,83 @@
+_id: mS7LSsQQkjVvKx9z
+_key: '!items!mS7LSsQQkjVvKx9z'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_20.jpg
+name: Gentle Rest (Domain Power)
+system:
+  abilityType: sp
+  actions:
+    - _id: ozJkCLqAkbGBRX9F
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: <p>Creature is staggered</p>
+      duration:
+        units: round
+        value: '1'
+      name: Living target
+      range:
+        units: touch
+      target:
+        value: living creature touched
+      touch: true
+    - _id: XMCjS8AMIGIGcnYH
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: <p>Creature falls asleep</p>
+      duration:
+        units: round
+        value: '1'
+      name: Staggered living target
+      range:
+        units: touch
+      target:
+        value: living creature touched
+      touch: true
+    - _id: fne8jvaue2e7ws7r
+      actionType: mwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.wis.mod'
+      name: Undead target
+      range:
+        units: touch
+      target:
+        value: Undead touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>Your touch can fill a creature with lethargy, causing a living creature
+      to become staggered for 1 round as a melee touch attack. If you touch a
+      staggered living creature, that creature falls asleep for 1 round instead.
+      Undead creatures touched are staggered for a number of rounds equal to
+      your Wisdom modifier. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_gentleRest
+  tags:
+    - Domain Power
+    - Repose Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat
