@@ -1,0 +1,56 @@
+_id: z5kv6gttowphvvxn
+_key: '!items!z5kv6gttowphvvxn'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Merge with Familiar
+system:
+  actions:
+    - _id: b0b8b1epgdl2wn07
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: your familiar or spirit animal; see text
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>As long as the target is at least one size category smaller than you
+      are, it can merge harmlessly into your body while under the effect of this
+      spell. For the duration of this spell, you and the target can separate or
+      merge at will as a move action. While merged, your familiar or spirit
+      animal can't be targeted or affected by most attacks and effects, though
+      it still suffers from ongoing effects and their durations continue. It can
+      be the recipient of effects that originate from you.</p>
+  learnedAt:
+    class:
+      arcanist: 2
+      shaman: 2
+      sorcerer: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1140
+      pages: '231'
+    - id: PZO9454
+      pages: '23'
+type: spell

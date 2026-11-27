@@ -1,0 +1,46 @@
+_id: 2JvXhtCQ6wCGp0YQ
+_key: '!items!2JvXhtCQ6wCGp0YQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_25.jpg
+name: Deadly Weather
+system:
+  abilityType: su
+  actions:
+    - _id: u0k1rigdmtbnlqsu
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: seeText
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can unleash a furious call to the heavens, summoning
+      forth an ever-changing storm of destruction for a number of rounds per day
+      equal to your cleric level. This storm has a radius of 5 feet per cleric
+      level. Each round, the storm has one of the following effects: driving
+      rain (–4 on all Perception checks and ranged attack rolls), howling winds
+      (–8 on Fly skill checks and ranged attack rolls), heavy snow (all terrain
+      is considered difficult), or lightning bolt (as call lightning). Other
+      effects depending on the weather might also apply (at the GM’s
+      discretion). You choose which effect takes place each round, but no effect
+      may be repeated on the following round. These rounds do not need to be
+      consecutive.</p>
+
+      <p>This power replaces the Destructive Aura power of the Destruction
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_deadlyWeather
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,29 @@
+_id: XBjEZImaTvGXh6Gq
+_key: '!items!XBjEZImaTvGXh6Gq'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Evil Eye (Skill)
+system:
+  changes:
+    - _id: 6ydq0xow
+      formula: ifelse(gte(@item.level,8),-4 ,-2)
+      target: skills
+      type: untyped
+  description:
+    instructions: >-
+      <p>Set the item level to the Level of the Witch (Up to level 8) using the
+      ability.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.class-abilities.Item.U4o5YunSfhiWoZi8]{Evil
+      Eye}</p><p>The witch can cause doubt to creep into the mind of a foe
+      within 30 feet that she can see. The target takes a –2 penalty on one of
+      the following (witch's choice): AC, ability checks, attack rolls, saving
+      throws, or skill checks. This hex lasts for a number of rounds equal to 3
+      + the witch's Intelligence modifier. A Will save reduces this to just 1
+      round. This is a mind-affecting effect.</p><p>At 8th level the penalty
+      increases to –4.</p>
+  level: 1
+  subType: feat
+type: buff

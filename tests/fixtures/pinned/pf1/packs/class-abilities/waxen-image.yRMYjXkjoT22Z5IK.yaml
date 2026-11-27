@@ -1,0 +1,74 @@
+_id: yRMYjXkjoT22Z5IK
+_key: '!items!yRMYjXkjoT22Z5IK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Waxen Image
+system:
+  abilityType: su
+  actions:
+    - _id: 345ncc349ar2znt0
+      actionType: save
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      description: '<p>Uses available: [[@abilities.int.mod]]</p>'
+      duration:
+        units: inst
+      name: Create
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+    - _id: u1jtMmhVOdlmV86y
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Control
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: WIll negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can spend a full-round action to create a crude and unnerving
+      wax duplicate of a creature she can see within 30 feet. Once the image is
+      complete, the subject must make a Will save. If the subject fails, the
+      witch gains a small measure of control over the creature. Whenever she
+      exercises this control, the creature receives a new Will save to end the
+      effect. This effect occurs on the witch's turn and does not impede the
+      creature's actions on its turn.</p><p>The witch can use the waxen image a
+      number of times equal to her Intelligence modifier before it
+      melts.</p><p>As a standard action, the witch can cause the subject to do
+      any one of the following things: move up to the creature's speed in any
+      direction, attack itself once with any weapon in hand (this attack
+      automatically hits), lay down on the ground, or drop anything
+      held.</p><p>Alternatively, she can spend one of her uses to simply torture
+      the image, causing the creature to be both sickened and staggered on its
+      turn.</p><p>As soon as the creature has succeeded on a saving throw
+      against this effect, it is immune to it for 24 hours.</p><p>The is an
+      enchantment (compulsion) effect.</p>
+  sources:
+    - id: PZO1115
+      pages: '68'
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

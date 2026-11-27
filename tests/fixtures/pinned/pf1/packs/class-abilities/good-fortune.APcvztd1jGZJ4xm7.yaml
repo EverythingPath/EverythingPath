@@ -1,0 +1,44 @@
+_id: APcvztd1jGZJ4xm7
+_key: '!items!APcvztd1jGZJ4xm7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/ore-gold.jpg
+name: Good Fortune
+system:
+  abilityType: ex
+  actions:
+    - _id: 21qpeju442bq0htv
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 6th level, as an immediate action, you can reroll any one d20 roll
+      that you have just made before the results of the roll are revealed. You
+      must take the result of the reroll, even if it's worse than the original
+      roll. You can use this ability once per day at 6th level, and one
+      additional time per day for every six cleric levels beyond 6th.</p>
+  sources:
+    - id: PZO1110
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_goodFortune
+  tags:
+    - Domain Power
+    - Luck Domain
+  uses:
+    maxFormula: floor(@class.level / 6)
+    per: day
+type: feat

@@ -1,0 +1,41 @@
+_id: DBP5hzLF2hnXeSYF
+_key: '!items!DBP5hzLF2hnXeSYF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/red_13.jpg
+name: Sacrificial Bond
+system:
+  abilityType: su
+  actions:
+    - _id: 4ze5hoc0p9r94a6o
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: damaged ally
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, when an ally within 30 feet takes damage from an attack,
+      you can, as an immediate action, transfer this damage to yourself. This
+      power also transfers any effects that accompany the damage. The damage
+      done to you cannot be reduced in any way. You can use this ability once
+      per day at 8th level, plus on additional time per day at 14th level and
+      20th level.</p>
+
+      <p>This power replaces the Leadership power of the Nobility Domain.</p>
+  subType: classFeat
+  tag: classFeat_sacrificialBond
+  uses:
+    maxFormula: floor((@class.level - 2) / 6)
+    per: day
+type: feat

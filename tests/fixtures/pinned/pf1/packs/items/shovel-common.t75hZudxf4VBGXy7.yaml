@@ -1,0 +1,45 @@
+_id: t75hZudxf4VBGXy7
+_key: '!items!t75hZudxf4VBGXy7'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: icons/tools/hand/shovel-spade-steel-white.webp
+name: Shovel, common
+system:
+  actions:
+    - _id: 9k1sAZyFFyFLdmpD
+      ability:
+        attack: str
+        damage: str
+        damageMult: 1
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackBonus: '-2[Improvised Weapon]'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      name: Attack
+  description:
+    value: >-
+      <p>This tool lets you dig a pit at a rate of 2 cubic feet per
+      minute.</p><p>If a shovel is used in combat, treat it as a one-handed
+      improvised weapon that deals bludgeoning damage equal to that of a club of
+      its size.</p>
+  equipped: false
+  hp:
+    base: 10
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: 57, 71
+    - id: PZO1110
+      pages: 157, 158
+  subType: adventuring
+  weight:
+    value: 8
+type: loot

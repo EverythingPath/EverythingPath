@@ -1,0 +1,47 @@
+_id: NcmkjjcljMYEL9Qb
+_key: '!items!NcmkjjcljMYEL9Qb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Natural Disaster
+system:
+  abilityType: su
+  actions:
+    - _id: 3c4hp9p2gwa5atvy
+      activation:
+        type: round
+        unchained:
+          cost: 3
+          type: action
+      area: 360-ft. radius area
+      duration:
+        units: seeText
+      name: Use
+      range:
+        units: ft
+        value: 100 + 40*@class.level
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>A witch using this hex calls down the forces of nature to wreak havoc
+      on an area. This functions as a
+      @UUID[Compendium.pf1.spells.n4e35m6qu9nmkhgm]{Storm Of Vengeance} combined
+      with an @UUID[Compendium.pf1.spells.a5gcbpwfhu4hh5ic]{Earthquake} that
+      occurs on the second round of the effect (while acid is raining from the
+      sky). A witch must concentrate for the duration of this effect. If
+      disrupted, the effect immediately ends.</p>
+
+      <p>A witch can only use this ability once per day.</p>
+  sources:
+    - id: PZO1115
+      pages: '69'
+  subType: classFeat
+  tag: classFeat_naturalDisaster
+  tags:
+    - Grand Hex
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

@@ -1,0 +1,49 @@
+_id: KU83XZbeoZF7WXPy
+_key: '!items!KU83XZbeoZF7WXPy'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Invisibility
+system:
+  abilityType: su
+  actions:
+    - _id: 1wvq03sflp4ztydn
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can become invisible (as per the
+      @UUID[Compendium.pf1.spells.oylikodnyku2zewu]{Invisibility} spell). You
+      can remain invisible for 1 minute per day per oracle level. This duration
+      does not need to be consecutive, but it must be spent in 1-minute
+      increments.</p>
+
+      <p>Starting at 9th level, each time you activate this ability you can
+      treat it as @UUID[Compendium.pf1.spells.cxgi0ub77t6aink1]{Invisibility,
+      Greater}, though each round spent this way counts as 1 minute of your
+      normal invisibility duration.</p>
+
+      <p>You must be at least 3rd level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_invisibility
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

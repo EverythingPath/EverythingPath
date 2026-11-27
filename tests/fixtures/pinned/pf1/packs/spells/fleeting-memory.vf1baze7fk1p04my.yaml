@@ -1,0 +1,61 @@
+_id: vf1baze7fk1p04my
+_key: '!items!vf1baze7fk1p04my'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Fleeting Memory
+system:
+  actions:
+    - _id: uyz1jj3s5nbda2iq
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will partial
+        type: will
+      target:
+        value: one creature
+  components:
+    verbal: true
+  description:
+    value: >-
+      <p>You create a gap in the target's memory, preventing the target from
+      remembering anything that happens from the moment you cast this spell
+      until the moment its complete duration ends. <i>Fleeting memory</i>
+      doesn't wipe out its target's memories until the end of its duration, so
+      the target can remember the preceding rounds until the spell's duration
+      ends. If the spell ends prematurely, either because you dismiss it or
+      because it is dispelled, it disperses without affecting its target's
+      memory.  Whether or not the target's save is successful, the target
+      forgets that you cast a spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 3
+      mesmerist: 2
+      occultist: 3
+      psychic: 3
+      skald: 3
+      sorcerer: 4
+      wizard: 4
+  level: 4
+  school: enc
+  sources:
+    - id: PZO9462
+      pages: '24'
+  subschool:
+    - compulsion
+type: spell

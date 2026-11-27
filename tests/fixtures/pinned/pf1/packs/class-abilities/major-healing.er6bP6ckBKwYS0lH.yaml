@@ -1,0 +1,48 @@
+_id: er6bP6ckBKwYS0lH
+_key: '!items!er6bP6ckBKwYS0lH'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Major Healing
+system:
+  abilityType: su
+  actions:
+    - _id: ffnmvtvxmqffclsv
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (3 + if(gte(@class.level, 15), 1))d8 + min(20, @class.level)
+            types:
+              - positive
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>By calling upon eerie powers, the witch's touch can mend even the most
+      terrible wounds of those she touches. This acts as
+      @UUID[Compendium.pf1.spells.norn02g8zdsspf2j]{cure serious wounds}, using
+      the witch's caster level.</p><p>Once a creature has benefited from the
+      major healing hex, it cannot benefit from it again for 24 hours.</p><p>At
+      15th level, this hex acts like
+      @UUID[Compendium.pf1.spells.sa076xymi52eq3to]{cure critical wounds}.</p>
+  sources:
+    - id: PZO1115
+      pages: '68'
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

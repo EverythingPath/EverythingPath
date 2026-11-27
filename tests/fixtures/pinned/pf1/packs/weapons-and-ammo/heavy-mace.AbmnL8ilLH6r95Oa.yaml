@@ -1,0 +1,55 @@
+_id: AbmnL8ilLH6r95Oa
+_key: '!items!AbmnL8ilLH6r95Oa'
+_stats:
+  coreVersion: '12.343'
+folder: 3BIbUnQy7dC6EWdX
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Heavy Mace
+system:
+  actions:
+    - _id: zfic7aj0nkinloer
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Heavy Mace
+  description:
+    unidentified: >-
+      <p>A heavy mace has a larger head and a longer handle than a light
+      mace.</p>
+  hardness: 10
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 12
+  sources:
+    - id: PZO1110
+      pages: 142, 147
+    - id: PZO1123
+      pages: '17'
+  weaponGroups:
+    - hammers
+  weaponSubtype: 1h
+  weight:
+    value: 8
+type: weapon

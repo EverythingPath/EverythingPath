@@ -1,0 +1,47 @@
+_id: 7ZiUSYUV1zRqgkrf
+_key: '!items!7ZiUSYUV1zRqgkrf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/link-blue-1.jpg
+name: Aura of Repitition
+system:
+  abilityType: su
+  actions:
+    - _id: pig76pd3mwp0vlrp
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: 30-ft. radius aura
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of repetition for a number of
+      rounds per day equal to your cleric level. All enemies within this aura
+      must make a Will save each round or repeat their action from the previous
+      round (if possible). Creatures that attacked on the previous round attack
+      again on the following round, although they may change their target.
+      Creatures that moved the previous round must take the same move action
+      again, although they may change their route. Creatures that drank a potion
+      must do so again, even they can only drink from an empty bottle. Actions
+      that cannot be repeated are wasted. These rounds do not need to be
+      consecutive.</p>
+
+      <p>This power replaces the Dancing Weapon power of the Artifice
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_auraOfRepitition
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

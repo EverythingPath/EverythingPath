@@ -1,0 +1,41 @@
+_id: yHpAFKyWWMIJNkyc
+_key: '!items!yHpAFKyWWMIJNkyc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Ice Shape
+system:
+  abilityType: su
+  actions:
+    - _id: nunylvxoxoe4xr7s
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: ice or ice touched
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You are able to sculpt ice and snow into almost any shape. This ability
+      functions like @UUID[Compendium.pf1.spells.g1evszmk8wfgnsv5]{Stone Shape},
+      but targeting only ice and snow, not stone.</p>
+
+      <p>You can use this ability a number of times per day equal to 3 + your
+      Charisma modifier.</p>
+  subType: classFeat
+  tag: classFeat_iceShape
+  tags:
+    - Revelation
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

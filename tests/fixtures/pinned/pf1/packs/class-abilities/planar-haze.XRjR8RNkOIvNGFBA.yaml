@@ -1,0 +1,42 @@
+_id: XRjR8RNkOIvNGFBA
+_key: '!items!XRjR8RNkOIvNGFBA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Planar haze
+system:
+  abilityType: su
+  actions:
+    - _id: 1j7d0bgm09bhrykw
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can fill an area with the smoky miasma of the Outer Rifts. Once per
+      day when you cast a spell that has an area, as a swift action you may also
+      fill that area with a thick haze that acts as
+      @UUID[Compendium.pf1.spells.tuh5vc2bojaws3ig]{Obscuring Mist}, except it
+      originates at the center of your spell effect and cannot expand beyond the
+      spell’s area.</p>
+
+      <p>At 10th level, the haze functions as
+      @UUID[Compendium.pf1.spells.g33euis7yi9pwddy]{Fog Cloud}.</p>
+
+      <p>You may use this ability one additional time per day at 7th level, and
+      one additional time per day at 14th level.</p>
+  subType: classFeat
+  tag: classFeat_planarHaze
+  tags:
+    - Revelation
+    - Outer Rifts Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 7)
+    per: day
+type: feat

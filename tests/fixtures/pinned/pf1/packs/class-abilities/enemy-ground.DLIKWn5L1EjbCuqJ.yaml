@@ -1,0 +1,44 @@
+_id: DLIKWn5L1EjbCuqJ
+_key: '!items!DLIKWn5L1EjbCuqJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Enemy Ground
+system:
+  abilityType: su
+  actions:
+    - _id: 0asc8uxhbehqkpj6
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will half and duration reduced to 1 round
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch curses a target with clumsiness when in dangerous terrain.
+      The target takes a –4 penalty on Acrobatics checks to move over slippery
+      or uneven surfaces and to avoid attacks of opportunity while moving
+      through threatened squares. This effect lasts for 1 minute. On a
+      successful Will save, the penalty is reduced by half and the duration is
+      only 1 round.</p>
+
+      <p>At 8th level, this penalty increases to –8.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

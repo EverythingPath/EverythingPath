@@ -1,0 +1,74 @@
+_id: 1qz9sHHlXkyJDCxo
+_key: '!items!1qz9sHHlXkyJDCxo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_20.jpg
+name: Charming Smile
+system:
+  abilityType: sp
+  actions:
+    - _id: yvkk3kakg9jmx3zu
+      activation:
+        type: swift
+        unchained:
+          type: action
+      description: >-
+        <p>This charm makes a humanoid creature regard you as its trusted friend
+        and ally (treat the target's attitude as friendly). If the creature is
+        currently being threatened or attacked by you or your allies, however,
+        it receives a +5 bonus on its saving throw.</p><p>The spell does not
+        enable you to control the charmed person as if it were an automaton, but
+        it perceives your words and actions in the most favorable way. You can
+        try to give the subject orders, but you must win an opposed Charisma
+        check to convince it to do anything it wouldn't ordinarily do. (Retries
+        are not allowed.) An affected creature never obeys suicidal or obviously
+        harmful orders, but it might be convinced that something very dangerous
+        is worth doing. Any act by you or your apparent allies that threatens
+        the charmed person breaks the spell. You must speak the person's
+        language to communicate your commands, or else be good at
+        pantomiming.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will negates
+        type: will
+      target:
+        value: one humanoid creature
+    - _id: 9Dmeb35hAzleeYPG
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Dismiss
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can cast
+      @UUID[Compendium.pf1.spells.tjog6bufg5b08lvq]{Charm Person} as a swift
+      action, with a DC of 10 + 1/2 your cleric level + your Wisdom modifier.
+      You can only have one creature charmed in this way at a time. The total
+      number of rounds of this effect per day is equal to your cleric level. The
+      rounds do not need to be consecutive, and you can dismiss the charm at any
+      time as a free action. Each attempt to use this ability consumes 1 round
+      of its duration, whether or not the creature succeeds on its save to
+      resist the effect.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_charmingSmile
+  tags:
+    - Domain Power
+    - Charm Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

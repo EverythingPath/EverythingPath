@@ -1,0 +1,67 @@
+_id: KXN1Y4DDcWd8ZraE
+_key: '!items!KXN1Y4DDcWd8ZraE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_10.jpg
+name: Divine Presence
+system:
+  abilityType: su
+  actions:
+    - _id: 9eyc92zdcmhsboet
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 30-foot aura
+      description: >-
+        <p>Any opponent attempting to directly attack the warded creature, even
+        with a targeted spell, must attempt a Will save. If the save succeeds,
+        the opponent can attack normally and is unaffected by that casting of
+        the spell. If the save fails, the opponent can't follow through with the
+        attack, that part of its action is lost, and it can't directly attack
+        the warded creature for the duration of the spell.</p><p>Those not
+        attempting to attack the subject remain unaffected. This spell does not
+        prevent the warded creature from being attacked or affected by area of
+        effect spells. The subject cannot attack without breaking the spell but
+        may use nonattack spells or otherwise act</p>
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.wis.mod
+        description: Will negates
+        type: will
+      target:
+        value: All allies within the aura
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura of divine presence for a
+      number of rounds per day equal to your cleric level. All allies within
+      this aura are treated as if under the effects of a
+      @UUID[Compendium.pf1.spells.Item.yk5bgi6j9kbtigof]{sanctuary }spell with a
+      DC equal to 10 + 1/2 your cleric level + your Wisdom modifier. These
+      rounds do not need to be consecutive. Activating this ability is a
+      standard action. If an ally leaves the area or makes an attack, the effect
+      ends for that ally. If you make an attack, the effect ends for you and
+      your allies.</p>
+  sources:
+    - id: PZO1110
+      pages: '44'
+  subType: classFeat
+  tag: classFeat_divinePresence
+  tags:
+    - Domain Power
+    - Glory Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

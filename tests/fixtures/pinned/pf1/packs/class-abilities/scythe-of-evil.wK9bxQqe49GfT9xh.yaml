@@ -1,0 +1,54 @@
+_id: wK9bxQqe49GfT9xh
+_key: '!items!wK9bxQqe49GfT9xh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_24.jpg
+name: Scythe of Evil
+system:
+  abilityType: su
+  actions:
+    - _id: t3f1borlajf8rms3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>An unholy weapon is imbued with unholy power. This power makes the
+        weapon evil-aligned and thus bypasses the corresponding damage
+        reduction. It deals an extra 2d6 points of damage against all creatures
+        of good alignment. It bestows one permanent negative level on any good
+        creature attempting to wield it. The negative level remains as long as
+        the weapon is in hand and disappears when the weapon is no longer
+        wielded. This negative level cannot be overcome in any way (including
+        restoration spells) while the weapon is wielded.</p>
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one weapon
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can give a weapon touched the unholy special weapon
+      quality for a number of rounds equal to 1/2 your cleric level. You can use
+      this ability once per day at 8th level, and an additional time per day for
+      every four levels beyond 8th.</p>
+  sources:
+    - id: PZO1110
+      pages: '44'
+  subType: classFeat
+  tag: classFeat_scytheOfEvil
+  tags:
+    - Domain Power
+    - Evil Domain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

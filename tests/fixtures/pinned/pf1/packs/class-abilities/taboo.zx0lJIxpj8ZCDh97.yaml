@@ -1,0 +1,43 @@
+_id: zx0lJIxpj8ZCDh97
+_key: '!items!zx0lJIxpj8ZCDh97'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_23.jpg
+name: Taboo
+system:
+  abilityType: su
+  actions:
+    - _id: ywegvdsd2e9k78i7
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: attacking creature
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>When a creature touches you or strikes you with a melee attack, you can
+      activate this power as an immediate action. That creature takes a –1
+      penalty on saving throws for 1 minute. This penalty increases by 1 for
+      every 5 levels you possess. When you use this ability, you lose your
+      resistance bonus granted by the Protection domain for 1 minute. You can
+      use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+
+      <p>This power replaces the Resistant Touch power of the Protection
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_taboo
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

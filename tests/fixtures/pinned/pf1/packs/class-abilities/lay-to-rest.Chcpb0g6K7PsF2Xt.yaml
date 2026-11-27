@@ -1,0 +1,44 @@
+_id: Chcpb0g6K7PsF2Xt
+_key: '!items!Chcpb0g6K7PsF2Xt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Lay to Rest
+system:
+  abilityType: sp
+  actions:
+    - _id: vbo5dgvtwaoaro6m
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: <p>Slays [[/r (@class.level)d4]] HD undead creature.</p>
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one undead creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch may target a single undead creature with this hex as if with
+      an @UUID[Compendium.pf1.spells.lllhr9py6w44cxjm]{Undeath to Death} spell.
+      A Will save negates this effect.</p>
+
+      <p>Whether or not the save is successful, a creature cannot be the target
+      of this hex again for 1 day.</p>
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

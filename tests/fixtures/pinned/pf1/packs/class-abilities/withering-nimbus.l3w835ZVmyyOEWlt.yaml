@@ -1,0 +1,37 @@
+_id: l3w835ZVmyyOEWlt
+_key: '!items!l3w835ZVmyyOEWlt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-air-fire-1.jpg
+name: Withering Nimbus
+system:
+  abilityType: su
+  actions:
+    - _id: 7v0jfl98moqjr2bn
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>This ability functions as the nimbus of light domain ability, but it
+      damages plants and creatures with the aquatic or water subtype, not
+      undead.</p>
+
+      <p>This power replaces the Nimbus of Light power of the Sun Domain.</p>
+  subType: classFeat
+  tag: classFeat_witheringNimbus
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat
