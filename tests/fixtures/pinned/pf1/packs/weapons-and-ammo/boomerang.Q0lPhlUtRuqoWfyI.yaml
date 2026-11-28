@@ -1,0 +1,61 @@
+_id: Q0lPhlUtRuqoWfyI
+_key: '!items!Q0lPhlUtRuqoWfyI'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/boomerang.png
+name: Boomerang
+system:
+  actions:
+    - _id: 7gwjczho0xdejc3r
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      name: Throw
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '30'
+  baseTypes:
+    - Boomerang
+  description:
+    unidentified: >-
+      <p>The boomerang is primarily a hunting tool, but it is not uncommon for
+      these versatile thrown weapons to be carried into battle. A boomerang is
+      made of wood and is flat, with a long haft, a pronounced forward curve,
+      and a sharp backward bend at the head. A hunting boomerang does not fly in
+      a returning path.</p>
+  hardness: 5
+  hp:
+    base: 5
+  material:
+    base:
+      value: steel
+  price: 3
+  properties:
+    spc: true
+  sources:
+    - id: PZO9452
+      pages: '33'
+  subType: exotic
+  uses:
+    per: single
+  weaponGroups:
+    - thrown
+  weaponSubtype: ranged
+  weight:
+    value: 3
+type: weapon

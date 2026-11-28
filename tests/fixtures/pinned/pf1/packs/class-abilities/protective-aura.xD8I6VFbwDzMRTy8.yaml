@@ -1,0 +1,44 @@
+_id: xD8I6VFbwDzMRTy8
+_key: '!items!xD8I6VFbwDzMRTy8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_04.jpg
+name: Protective Aura
+system:
+  abilityType: su
+  actions:
+    - _id: mume0gng0bd0pvek
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot protective aura as a standard
+      action. Allies in this aura receive a +2 deflection bonus to AC and a +2
+      resistance bonus on all saving throws. In addition, allies in the area
+      gain the benefits of protection from evil (although the AC bonus and
+      saving throw bonus do not stack with those granted by this effect). You
+      can use this ability for a number of rounds per day equal to your cleric
+      level. These rounds do not have to be consecutive.</p>
+
+      <p>This power replaces the Holy Lance power of the Good Domain.</p>
+  subType: classFeat
+  tag: classFeat_protectiveAura
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

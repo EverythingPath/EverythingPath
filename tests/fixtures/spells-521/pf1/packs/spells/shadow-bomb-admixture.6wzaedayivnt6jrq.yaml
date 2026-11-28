@@ -1,0 +1,58 @@
+_id: 6wzaedayivnt6jrq
+_key: '!items!6wzaedayivnt6jrq'
+_stats:
+  coreVersion: '12.343'
+folder: Ix6Dc5gXEobiIHKD
+img: icons/magic/control/silhouette-hold-beam-blue.webp
+name: Shadow Bomb Admixture
+system:
+  actions:
+    - _id: mxc6sc0u6hd4e55e
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: personal
+      save:
+        description: special, see below
+      target:
+        value: you
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Upon drinking an extract created with this formula, you make a
+      significant change to your magical reserve that modifies the nature of all
+      bombs you create and throw during this extract's duration. This effect on
+      your magical reserve has no effect on any discoveries that you use to
+      modify your bombs, but you can only have one admixture effect (formula
+      with the word "bomb admixture" in its title) active at a time. If you
+      drink another bomb admixture, the effects of the former bomb admixture end
+      and the new one becomes active.  When you throw a bomb and hit a direct
+      target, a shadowy substance is released from the bomb covering the direct
+      target and up to three creatures that take damage from the bomb's splash
+      (alchemist's choice). The affected creatures must successfully make a
+      Fortitude saving throw, or they gain concealment but treat all other
+      creatures as having concealment for the duration of the <i>shadow bomb
+      admixture</i>. This effect does not ignore spell resistance.</p>
+  learnedAt:
+    class:
+      alchemist: 2
+      investigator: 2
+  level: 2
+  school: con
+  sources:
+    - id: PZO1118
+      pages: '243'
+  sr: false
+  subschool:
+    - creation
+type: spell

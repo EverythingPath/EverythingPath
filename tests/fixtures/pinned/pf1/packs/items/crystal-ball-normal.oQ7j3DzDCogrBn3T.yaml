@@ -1,0 +1,50 @@
+_id: oQ7j3DzDCogrBn3T
+_key: '!items!oQ7j3DzDCogrBn3T'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/gems/pearl-glass-purple.webp
+name: Crystal Ball (Normal)
+system:
+  actions:
+    - _id: xm91s5lks48aksup
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@item.cl'
+      name: Use
+      range:
+        units: seeText
+      save:
+        dc: 10[Base] + 4[SL] + 2[CAM]
+        description: Will negates
+        type: will
+  aura:
+    school: div
+  cl: 10
+  description:
+    value: >-
+      <p>This is the most common form of scrying device, a crystal sphere about
+      6 inches in diameter. So well-known are these items that many so-called
+      oracles or fortune-tellers use similar appearing (but completely
+      nonmagical) replicas of these items to ply their trades. A character can
+      use a magical crystal ball to see over virtually any distance or into
+      other planes of existence, as with the spell
+      @UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{Scrying}<em> </em>(Will DC
+      16 negates). A crystal ball can be used multiple times per day, but the DC
+      to resist its power decreases by 1 for each additional use. Certain
+      crystal balls have additional powers that can be used through the crystal
+      ball on the target viewed.</p>
+  hp:
+    base: 10
+  price: 42000
+  subType: misc
+  unidentified:
+    name: Crystal Ball
+  weight:
+    value: 7
+type: consumable

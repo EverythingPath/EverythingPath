@@ -1,0 +1,49 @@
+_id: n11lJHH3cBKXdRdj
+_key: '!items!n11lJHH3cBKXdRdj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/arrow_02.jpg
+name: Hand of the Apprentice
+system:
+  abilityType: su
+  actions:
+    - _id: bjriyvow1255ohsw
+      ability:
+        attack: int
+      actionType: rwak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>You cause your melee weapon to fly from your grasp and strike a foe
+      before instantly returning to you. As a standard action, you can make a
+      single attack using a melee weapon at a range of 30 feet. This attack is
+      treated as a ranged attack with a thrown weapon, except that you add your
+      <em>Intelligence</em> modifier on the attack roll instead of your
+      <em>Dexterity</em> modifier (damage still relies on <em>Strength</em>).
+      This ability cannot be used to perform a combat maneuver. You can use this
+      ability a number of times per day equal to 3 + your <em>Intelligence</em>
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '82'
+  subType: classFeat
+  tag: classFeat_handOfTheApprentice
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

@@ -1,0 +1,39 @@
+_id: Aj7SwIo94HfcpR9R
+_key: '!items!Aj7SwIo94HfcpR9R'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-2.jpg
+name: Bond Senses
+system:
+  abilityType: su
+  actions:
+    - _id: aazxfitnfc6qb3nx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Summoner
+  description:
+    value: >-
+      <p>Starting at 2nd level, a summoner can, as a standard action, share the
+      senses of his eidolon, hearing, seeing, smelling, tasting, and touching
+      everything the eidolon does. He can use this ability a number of rounds
+      per day equal to his summoner level. There is no range to this effect, but
+      the eidolon and the summoner must be on the same plane. The summoner can
+      end this effect as a free action.</p>
+  sources:
+    - id: PZO1115
+      pages: '54'
+  subType: classFeat
+  tag: classFeat_bondSenses
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

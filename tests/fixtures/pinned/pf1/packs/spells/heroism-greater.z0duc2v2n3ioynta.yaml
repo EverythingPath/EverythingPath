@@ -1,0 +1,65 @@
+_id: z0duc2v2n3ioynta
+_key: '!items!z0duc2v2n3ioynta'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/buff-strength-muscle-damage-orange.webp
+name: Heroism, Greater
+system:
+  actions:
+    - _id: 7sczi7u0wbiinij9
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        harmless: true
+        type: will
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.vqfrp8t0c1lw1jna]{Heroism}<em>,</em> except
+      the creature gains a +4 morale bonus on attack rolls, saves, and skill
+      checks, immunity to fear effects, and temporary hit points equal to your
+      caster level (maximum 20).</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    bloodline:
+      Martyred: 6
+    class:
+      arcanist: 6
+      bard: 5
+      psychic: 6
+      skald: 5
+      sorcerer: 6
+      spiritualist: 6
+      summoner: 5
+      summonerUnchained: 6
+      witch: 6
+      wizard: 6
+    subDomain:
+      Competition: 6
+      Heroism: 6
+  level: 6
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '295'
+  subschool:
+    - compulsion
+type: spell

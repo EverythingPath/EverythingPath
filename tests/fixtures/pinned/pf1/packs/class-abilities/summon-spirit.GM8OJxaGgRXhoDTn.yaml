@@ -1,0 +1,64 @@
+_id: GM8OJxaGgRXhoDTn
+_key: '!items!GM8OJxaGgRXhoDTn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Summon Spirit
+system:
+  abilityType: sp
+  actions:
+    - _id: OtYIGatPh6Zpum2L
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Seal Bargain
+      tag: start
+    - _id: pp2yj60g1XyfGxu8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: End Agreement
+      range:
+        units: unlimited
+      tag: end
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch calls forth the ghost of a humanoid creature with no more
+      than 18 Hit Dice. The ghost has its own personality and desires, but is
+      willing to bargain with the witch, as if she had cast
+      @UUID[Compendium.pf1.spells.0wamdkl9gp19l55w]{Planar Ally, Greater}. To
+      seal an agreement with the witch, the ghost requires life energy equal to
+      1 temporary negative level (this is in addition to the standard payment
+      for the ghost's service).</p>
+
+      <p>This negative level persists as long as the ghost remains in the
+      service of the witch; the witch can end the agreement as a standard
+      action, immediately removing the negative level.</p>
+  scriptCalls:
+    - _id: 4gd4mYGD61Urb28B
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Bargain Negative Level Adjust
+      type: script
+      value: |-
+        const tag = shared.attackData.action.tag;
+        const nl = actor.system.attributes.energyDrain || 0;
+        if (tag === "start") {
+        actor.update({"system.attributes.energyDrain": nl + 1})
+        }
+        else if (tag === "end") {
+        actor.update({"system.attributes.energyDrain": Math.max(0, nl - 1)})
+        }
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

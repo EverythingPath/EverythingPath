@@ -1,0 +1,65 @@
+_id: pTJyyNp28f2Yd42u
+_key: '!items!pTJyyNp28f2Yd42u'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/fog-gas-smoke-dense-green.webp
+name: Acid Cloud
+system:
+  abilityType: su
+  actions:
+    - _id: ZEU5YMQE0dLiTZva
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 5 ft. radius
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - acid
+      duration:
+        units: round
+        value: '1'
+      measureTemplate:
+        color: '#00c217'
+        size: '5'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - Creatures in the cloud are sickened for 1 round (fortitude negates).
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude halfes and negates sickend effect
+        type: fort
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action, you can create a 5-foot-radius cloud of acid
+      vapor within 30 feet that lasts for 1 round. This cloud deals 1d6 points
+      of acid damage + 1 point for every two wizard levels you possess to all
+      creatures in the cloud and sickens them for 1 round. A successful
+      Fortitude save negates the sickened effect and halves the damage. The DC
+      of this save is equal to 10 + 1/2 your wizard level + your Intelligence
+      modifier. Creatures that begin their turn inside the cloud can move out
+      that turn without penalty, but those that enter the cloud are affected.
+      You can use this ability a number of times per day equal to 3 + your
+      Intelligence modifier.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Earth School
+  uses:
+    maxFormula: 3 + @class.level
+    per: day
+type: feat

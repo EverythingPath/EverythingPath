@@ -1,0 +1,50 @@
+_id: XUMkVRv3gMsysVbh
+_key: '!items!XUMkVRv3gMsysVbh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_16.jpg
+name: Corrupting Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: a1kiasrtdahpwuhs
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can cause a creature to become
+      <em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.XxLUswkCuXnXmA5T]{shaken}</em>
+      as a melee touch attack. This effect persists for a number of rounds equal
+      to 1/2 your sorcerer level (minimum 1). Creatures <em>shaken</em> by this
+      ability radiate an aura of evil, as if they were an evil outsider (see
+      @UUID[Compendium.pf1.spells.tr7m97npkbgm4wp7]{Detect Evil}). Multiple
+      touches do not stack, but they do add to the duration. You can use this
+      ability a number of times per day equal to 3 + your <em>Charisma</em>
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '77'
+  subType: classFeat
+  tag: classFeat_corruptingTouch
+  tags:
+    - Bloodline Power
+    - Infernal Bloodline
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

@@ -1,0 +1,43 @@
+_id: FDCBEgVbfJ5uid3f
+_key: '!items!FDCBEgVbfJ5uid3f'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Momentary Glimpse
+system:
+  abilityType: su
+  actions:
+    - _id: 9q4q8ce7ivubzl04
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, you can gain a glimpse into your immediate future. On the
+      round after you use this ability, you gain a +2 insight bonus on a single
+      attack roll, saving throw, or skill check or to your Armor Class until the
+      start of your next turn.</p>
+
+      <p>At 5th level, and every four levels thereafter, you can use this
+      ability one additional time per day.</p>
+  subType: classFeat
+  tag: classFeat_momentaryGlimpse
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: 1 + floor((@class.level - 1) / 4)
+    per: day
+type: feat

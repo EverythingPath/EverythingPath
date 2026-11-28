@@ -1,0 +1,47 @@
+_id: bAkzStFXhaihTb5u
+_key: '!items!bAkzStFXhaihTb5u'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Transcendental Bond
+system:
+  abilityType: su
+  actions:
+    - _id: n2bt8011otrzlok7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one ally
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You become so attuned to the common spirit shared by all living things
+      that you can use it to communicate with allies. You may communicate with
+      your allies for a number of rounds per day equal to your oracle level as
+      if using @UUID[Compendium.pf1.spells.zuqlok69lapqc6lg]{Telepathic Bond}.
+      You may designate a number of creatures as your ally equal to your
+      Charisma modifier. Designating a creature is a standard action that
+      requires a touch.</p>
+
+      <p>At 10th level, you may use this bond to cast a touch spell on a
+      designated ally once per day.</p>
+  subType: classFeat
+  tag: classFeat_transcendentalBond
+  tags:
+    - Revelation
+    - Nature Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

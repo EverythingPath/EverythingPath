@@ -1,0 +1,44 @@
+_id: EEhxjLPjqnG05YEc
+_key: '!items!EEhxjLPjqnG05YEc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fog-air-2.jpg
+name: Haze of Daydreams
+system:
+  abilityType: su
+  actions:
+    - _id: qu2ihjagzrchhsi0
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 6th level, you can emit a 15-foot-radius haze of daydreams for a
+      number of rounds per day equal to your cleric level. These rounds do not
+      need to be consecutive. Creatures within the haze gain the fascinated
+      condition unless they succeed at a Will save (DC equal to 10 + 1/2 your
+      cleric level + your Wisdom modifier). You may designate a number of
+      creatures equal to your cleric level that are not affected by the haze.
+      The fascinated condition ends immediately when the creatures leave the
+      area or the aura expires.</p>
+
+      <p>This power replaces the Good Fortune power of the Luck Domain.</p>
+  subType: classFeat
+  tag: classFeat_hazeOfDaydreams
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

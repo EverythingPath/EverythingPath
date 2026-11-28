@@ -1,0 +1,42 @@
+_id: 4AFWimMkQt785Veb
+_key: '!items!4AFWimMkQt785Veb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-blue-1.jpg
+name: Trap Rune
+system:
+  abilityType: sp
+  actions:
+    - _id: l2xybb4ixsqfku58
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, as a <em>standard action</em>, you can sketch a single,
+      nearly <em>invisible</em> magical rune on any 5-foot-square solid surface.
+      When you create a rune, pick one of the following energy types: acid,
+      cold, electricity, or fire. While the rune is active, the next creature
+      other than you who steps on or touches the rune’s area causes the rune to
+      explode. The rune’s explosion deals a number of points of energy damage
+      equal to 1d8 + 1 per <em>sorcerer</em> level you possess to anything in
+      its square. A <em>Reflex</em> saving throw halves the damage (DC 10 + 1/2
+      your <em>sorcerer</em> level + your <em>Charisma</em> modifier). The rune
+      is considered a magical trap for the purpose of perceiving it or disabling
+      it. The DC for both <em>Perception</em> and <em>Disable Device</em> checks
+      is the same as the <em>Reflex</em> saving throw to halve the damage. You
+      can use this ability a number of times per day equal to 3 + your
+      <em>Charisma</em> modifier. Each rune lasts for 24 hours or until
+      discharged.</p>
+  subType: classFeat
+  tag: classFeat_trapRune
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

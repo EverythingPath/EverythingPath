@@ -1,0 +1,31 @@
+_id: CQPv0buKURuMtyLE
+_key: '!items!CQPv0buKURuMtyLE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-paw-bear.jpg
+name: Claws (Attack)
+system:
+  actions:
+    - _id: np0fmka6uhfg52wy
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      attackName: Claws
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size, 4)
+            types:
+              - bludgeoning
+              - slashing
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-paw-bear.jpg
+      name: Attack
+      tag: claws
+  subType: natural
+type: attack

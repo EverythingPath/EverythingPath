@@ -1,0 +1,49 @@
+_id: C9akVrvxNxZV7xY9
+_key: '!items!C9akVrvxNxZV7xY9'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/symbols/runes-star-orange-purple.webp
+name: Dispelling Bomb
+system:
+  actions:
+    - _id: wsgGaE1zFmkTkrWq
+      ability:
+        attack: dex
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      range:
+        units: ft
+        value: '20'
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it dispel
+      magic effects instead of deal damage. Creatures that take a direct hit
+      from a dispelling bomb are subject to a targeted
+      @UUID[Compendium.pf1.spells.gmgwyjfpeuuc4t4o]{Dispel Magic} spell, using
+      the alchemist's level as the caster level. This cannot be used to target a
+      specific spell effect.</p><p>The alchemist must be at least 6th level
+      before selecting this discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '30'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+type: feat

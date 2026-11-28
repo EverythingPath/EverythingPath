@@ -1,0 +1,79 @@
+_id: 7Q7YpOl5uUaGmvCL
+_key: '!items!7Q7YpOl5uUaGmvCL'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/acid/projectile-smoke-glowing.webp
+name: Acid Bomb
+system:
+  actions:
+    - _id: CkLRQWVN6yTjYXZQ
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - acid
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+    - _id: 2n5fCZca32qnQGSB
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - acid
+      img: icons/magic/acid/dissolve-arm-flesh.webp
+      name: Continuous damage
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it inflict
+      acid damage. Creatures that take a direct hit from an acid bomb take an
+      additional 1d6 points of acid damage 1 round later.</p>
+  sources:
+    - id: PZO1115
+      pages: '29'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

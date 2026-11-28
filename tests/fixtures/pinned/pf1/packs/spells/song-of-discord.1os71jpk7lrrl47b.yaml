@@ -1,0 +1,61 @@
+_id: 1os71jpk7lrrl47b
+_key: '!items!1os71jpk7lrrl47b'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Song of Discord
+system:
+  actions:
+    - _id: 0s2974jjgwxrpcjm
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: creatures within a 20-ft.-radius spread
+      duration:
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '20'
+        type: circle
+      name: Use
+      range:
+        units: medium
+      save:
+        description: Will negates
+        type: will
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell causes those within the area to turn on each other rather
+      than attack their foes. Each affected creature has a 50% chance to attack
+      the nearest target each round. (Roll to determine each creature's behavior
+      every round at the beginning of its turn.) A creature that does not attack
+      its nearest neighbor is free to act normally for that round. Creatures
+      forced by a <i>song of discord</i> to attack their fellows employ all
+      methods at their disposal, choosing their deadliest spells and most
+      advantageous combat tactics. They do not, however, harm targets that have
+      fallen unconscious.</p>
+  descriptors:
+    - mindAffecting
+    - sonic
+  learnedAt:
+    class:
+      bard: 5
+      psychic: 5
+      skald: 5
+    subDomain:
+      Riot: 7
+  level: 5
+  school: enc
+  sources:
+    - id: PZO1110
+      pages: '345'
+  subschool:
+    - compulsion
+type: spell

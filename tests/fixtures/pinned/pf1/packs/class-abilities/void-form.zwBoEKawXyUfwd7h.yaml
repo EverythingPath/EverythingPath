@@ -1,0 +1,42 @@
+_id: zwBoEKawXyUfwd7h
+_key: '!items!zwBoEKawXyUfwd7h'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_36.jpg
+name: Void Form
+system:
+  abilityType: su
+  actions:
+    - _id: l5a3rr230jbv20xz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 6th level, you can become semi-tangible as a standard action. While
+      in this form, you are immune to critical hits and gain a +1 deflection
+      bonus to AC. This bonus increases by 1 at 8th level and every 4 levels
+      thereafter. You can use this power a number of rounds per day equal to
+      your cleric level. These rounds need not be consecutive.</p>
+
+      <p>This power replaces the Remote Viewing power of the Knowledge
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_voidForm
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

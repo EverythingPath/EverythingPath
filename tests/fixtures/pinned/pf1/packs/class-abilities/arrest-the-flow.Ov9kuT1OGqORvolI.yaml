@@ -1,0 +1,41 @@
+_id: Ov9kuT1OGqORvolI
+_key: '!items!Ov9kuT1OGqORvolI'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/air-burst-jade-3.jpg
+name: Arrest the Flow
+system:
+  abilityType: su
+  actions:
+    - _id: ulxzl7qzksn03ybq
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, once per day as an <em>immediate action</em>, you can
+      attune yourself to the Astral’s timeless nature to halt the effects of one
+      condition or affliction (such as <em>paralyzed</em>, <em>stunned</em>, a
+      <em>poison</em>, or a curse), including permanent and instantaneous
+      conditions, until the end of your next turn. You can use this ability even
+      when a condition or affliction would normally prevent you from doing so,
+      regardless of whether you’re targeting that prevention effect’s source. At
+      the end of your next turn the condition or affliction resumes its normal
+      effect and the round delayed by this ability does not count toward the
+      condition or affliction’s duration. This ability has no effect on hit
+      point damage, <em>ability damage</em>, or the <em>dead</em> condition.
+      Alternatively, you can use this ability to extend the duration of any one
+      effect affecting you until the end of your next turn; this does not extend
+      the duration for any other creatures under the effect. At 19th level, you
+      can use this ability twice per day.</p>
+  subType: classFeat
+  tag: classFeat_arrestTheFlow
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 19), 1)
+    per: day
+type: feat

@@ -1,0 +1,49 @@
+_id: rWFytr6tCbSUmMAA
+_key: '!items!rWFytr6tCbSUmMAA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Water Sight
+system:
+  abilityType: su
+  actions:
+    - _id: u7ykj9r5bchg0zov
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can see through fog and mist without penalty as long as there is
+      enough light to allow you to see normal.</p>
+
+      <p>At 7th level, you can use any calm pool of water at least 1 foot in
+      diameter as a scrying device, as if using the
+      @UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{Scrying} spell.</p>
+
+      <p>At 15th level, this functions like
+      @UUID[Compendium.pf1.spells.glt6uk3n6g6l2p6l]{Scrying, Greater}.</p>
+
+      <p>You can use the scrying abilities for a number of rounds per day equal
+      to your oracle level, but these rounds do not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_waterSight
+  tags:
+    - Revelation
+    - Waves Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,39 @@
+_id: q1vwjTxyJnFHz8kA
+_key: '!items!q1vwjTxyJnFHz8kA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Locate Focus
+system:
+  abilityType: sp
+  actions:
+    - _id: uhdkudt2f1aojubo
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: mi
+        value: '1'
+      target:
+        value: focus object or person
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, once per day you may use either
+      @UUID[Compendium.pf1.spells.vl2mznu91c3efcam]{Locate Creature} or
+      @UUID[Compendium.pf1.spells.tcnirpnzjdaym1fd]{Locate Object} as a
+      spell-like ability using your current focus as the target. The range of
+      this effect is 1 mile per level.</p>
+  subType: classFeat
+  tag: classFeat_locateFocus
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

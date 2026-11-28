@@ -1,0 +1,66 @@
+_id: nepuuUOpM3QPHO0H
+_key: '!items!nepuuUOpM3QPHO0H'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Eternal Slumber
+system:
+  abilityType: su
+  actions:
+    - _id: w168r0gzpijkzgla
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Creature
+      range:
+        units: touch
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: creature touched
+      touch: true
+    - _id: m0f1XGtvqe6RDuQV
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Poison Food
+      range:
+        units: touch
+      target:
+        value: food or drink
+      touch: true
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can touch a creature, causing it to drift off into a
+      permanent slumber. The creature receives a Will save to negate this
+      effect. If the save fails, the creature falls asleep and cannot be woken.
+      The effect can only be removed with a wish or similar magic, although
+      slaying the witch ends the effect. The witch can use this ability to
+      poison food or drink, causing those who ingest it to make a save or fall
+      into an eternal slumber. She can only have one such dose of poison at any
+      one time, and it loses its potency after 1 minute if not consumed.</p>
+
+      <p>Whether or not the save is successful, a creature cannot be the target
+      of this hex again for 1 day.</p>
+  sources:
+    - id: PZO1115
+      pages: '69'
+  subType: classFeat
+  tags:
+    - Grand Hex
+type: feat

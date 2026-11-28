@@ -1,0 +1,42 @@
+_id: xK4Vdp171RVcOSIB
+_key: '!items!xK4Vdp171RVcOSIB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_10.jpg
+name: Feed on Fear
+system:
+  abilityType: su
+  actions:
+    - _id: w8rsxvx76r6ice3k
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: hour
+        value: '24'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as an immediate action upon successfully landing a melee
+      attack on a creature that is already suffering from a fear effect, you
+      deal 2d6 extra points of damage and gain an equal amount of temporary hit
+      points. These temporary hit points last for 24 hours or until lost. You
+      can use this ability once per day at 8th level, and an additional time per
+      day for every 4 levels beyond 8th.</p>
+
+      <p>This power replaces the Chaos Blade power of the Chaos Domain or the
+      Scythe of Evil power of the Evil Domain.</p>
+  subType: classFeat
+  tag: classFeat_feedOnFear
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

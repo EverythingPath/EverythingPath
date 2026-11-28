@@ -1,0 +1,87 @@
+_id: 1awUTHv9qB2JFQLK
+_key: '!items!1awUTHv9qB2JFQLK'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/sonic/explosion-shock-wave-teal.webp
+name: Concussive Bomb
+system:
+  actions:
+    - _id: 6XyXDplbKhpIAD7s
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - sonic
+        parts:
+          - formula: 1d6
+            types:
+              - sonic
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+    - _id: zj99rkdAOyOpN1W6
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      duration:
+        units: minute
+        value: '1'
+      name: Deafened effect
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Fortitude negates
+        type: fort
+      target:
+        value: Creatures directly hit
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it inflict
+      sonic damage. Concussive bombs deal 1d4 points of sonic damage, plus 1d4
+      points of sonic damage for every odd-numbered level, instead of 1d6.
+      Creatures that take a direct hit from a concussive bomb are deafened for 1
+      minute unless they succeed at a Fortitude save.</p>
+
+      <p>An alchemist must be at least 6th level before selecting this
+      discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '29'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

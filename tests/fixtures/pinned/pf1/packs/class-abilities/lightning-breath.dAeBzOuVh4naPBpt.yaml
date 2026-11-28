@@ -1,0 +1,53 @@
+_id: dAeBzOuVh4naPBpt
+_key: '!items!dAeBzOuVh4naPBpt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Lightning Breath
+system:
+  abilityType: su
+  actions:
+    - _id: ufc1gwv1i5ruv94q
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (@class.level)d4
+            types:
+              - electric
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Reflex half
+        type: ref
+      target:
+        value: 30-ft. line
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can breathe a 30-foot line of electricity.
+      This line deals 1d4 points of electricity damage per oracle level. A
+      Reflex save halves this damage.</p>
+
+      <p>You can use this ability once per day, plus one additional time per day
+      at 5th level and every five levels thereafter.</p>
+  subType: classFeat
+  tag: classFeat_lightningBreath
+  tags:
+    - Revelation
+    - Wind Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

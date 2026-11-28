@@ -1,0 +1,49 @@
+_id: KF3SgIKeBACJhSZ1
+_key: '!items!KF3SgIKeBACJhSZ1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_21.jpg
+name: Ward Against Death
+system:
+  abilityType: su
+  actions:
+    - _id: q1m31dn4wtloexk6
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: creatures within range
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can emit a 30-foot aura that wards against death for
+      a number of rounds per day equal to your cleric level. Living creatures in
+      this area are immune to all death effects, energy drain, and effects that
+      cause negative levels. This ward does not remove negative levels that a
+      creature has already gained, but the negative levels have no effect while
+      the creature is inside the warded area. These rounds do not need to be
+      consecutive.</p>
+  sources:
+    - id: PZO1110
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_wardAgainstDeath
+  tags:
+    - Domain Power
+    - Repose Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

@@ -1,0 +1,50 @@
+_id: Vh7vgyNDNsiEnGHf
+_key: '!items!Vh7vgyNDNsiEnGHf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Restless Slumber
+system:
+  abilityType: su
+  actions:
+    - _id: v6jqj1e0m4vtlmw3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+    - _id: 7nge3hJ0U0wb1lb7
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d10
+            types:
+              - untyped
+      name: Violent Sleep
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch causes a creature within 30 feet to fall into a sleep riddled
+      with nightmares. This functions as the
+      @UUID[Compendium.pf1.class-abilities.ehQflQB4BXvEdHYh]{slumber
+      hex}.</p><p>Additionally, the restless nature of the sleep causes the
+      creature to violently toss and turn, dealing 1d10 points of damage to
+      itself each turn. This damage does not wake the creature.</p><p>When it
+      wakes, the creature’s addled state causes it to be confused for a number
+      of rounds equal to half the witch’s level.</p><p>The witch must have the
+      slumber hex to select this hex.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

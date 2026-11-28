@@ -1,0 +1,62 @@
+_id: 2zw2ud0vprha2uvf
+_key: '!items!2zw2ud0vprha2uvf'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Deceitful Veneer
+system:
+  actions:
+    - _id: 8g87btuqilr1ey7s
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: close
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You subtly alter both the target's aura and subtle cues in its body
+      language, tone of voice, and word choice, which makes everything that the
+      target says seem to be a lie. Every statement that the target makes
+      appears to be a lie under both magical scrutiny (such as <i>discern</i>
+      lies) and mundane scrutiny (such as using the Sense Motive skill). Someone
+      who closely scrutinizes the target can determine when it is actually
+      telling the truth with a successful Sense Motive check (DC = 15 + your
+      caster level).  As long as you are within close range of the target, as a
+      standard action you can suppress or resume the effects of this spell,
+      allowing you to let the target seem to be telling the truth at some times
+      and still seem to be lying at others.</p>
+  learnedAt:
+    class:
+      antipaladin: 3
+      bard: 4
+      inquisitor: 4
+      medium: 3
+      mesmerist: 4
+      psychic: 4
+      skald: 4
+      witch: 5
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '210'
+  subschool:
+    - glamer
+type: spell

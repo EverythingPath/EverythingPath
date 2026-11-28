@@ -1,0 +1,51 @@
+_id: C7UgLJt7yRHnAqyG
+_key: '!items!C7UgLJt7yRHnAqyG'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Poison Lore
+system:
+  abilityType: ex
+  actions:
+    - _id: C1h5azMC12yBZJP9
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Identify poison
+      target:
+        value: Any natural or magical poison
+    - _id: dJdPwIpn5B5C268n
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Neutralize poison
+      target:
+        value: Any natural or magical poison
+  associations:
+    classes:
+      - Investigator
+  description:
+    value: >-
+      <p>An investigator has a deep understanding and appreciation for poisons.
+      At 2nd level, he cannot accidentally <em>poison</em> himself when applying
+      <em>poison</em> to a weapon. If the investigator spends 1 minute
+      physically examining the <em>poison</em>, he can attempt a
+      <em>Knowledge</em> (nature) check to identify any natural <em>poison</em>
+      or <em>Knowledge</em> (arcana) check to identify any magical
+      <em>poison</em> (DC = the <em>poison’s</em> saving throw DC). Lastly, once
+      a <em>poison</em> is identified, he can spend 1 minute and attempt a
+      <em>Craft</em> (alchemy) check (DC = the <em>poison’s</em> saving throw
+      DC) to neutralize 1 dose of the <em>poison</em>. Success renders the dose
+      harmless. The investigator has no chance of accidentally poisoning himself
+      when examining or attempting to neutralize a <em>poison</em>.</p>
+  sources:
+    - id: PZO1129
+      pages: '31'
+  subType: classFeat
+type: feat

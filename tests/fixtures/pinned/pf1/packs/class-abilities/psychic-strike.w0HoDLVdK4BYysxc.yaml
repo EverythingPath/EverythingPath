@@ -1,0 +1,52 @@
+_id: w0HoDLVdK4BYysxc
+_key: '!items!w0HoDLVdK4BYysxc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Psychic Strike
+system:
+  abilityType: su
+  actions:
+    - _id: rk0ff7ecbn8qwkam
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level, you can overwhelm the minds of those nearby. You can
+      target one creature within 30 feet that you can see; that creature must
+      succeed at a <em>Will</em> saving throw (DC = 10 + 1/2 your
+      <em>sorcerer</em> level + your <em>Charisma</em> modifier) or it takes 1d6
+      points of damage + 1 point for every 2 <em>sorcerer</em> levels you
+      possess and becomes <em>shaken</em> for 1 round. You can use this ability
+      a number of times per day equal to 3 + your <em>Charisma</em>
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_psychicStrike
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

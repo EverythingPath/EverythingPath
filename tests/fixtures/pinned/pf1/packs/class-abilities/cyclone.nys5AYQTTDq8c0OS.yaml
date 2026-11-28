@@ -1,0 +1,52 @@
+_id: nys5AYQTTDq8c0OS
+_key: '!items!nys5AYQTTDq8c0OS'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/wind-tornado-cyclone-white.webp
+name: Cyclone
+system:
+  abilityType: su
+  actions:
+    - _id: vBqrfp5ICSOujYqJ
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft. radius + 10 ft. height/level
+      duration:
+        units: round
+        value: '1'
+      measureTemplate:
+        size: '10'
+        type: circle
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can create a vortex of turbulent wind around yourself
+      as a standard action. This vortex has a radius of up to 10 feet and a
+      maximum height of 10 feet per wizard level you possess. Any ranged attack
+      passing through this vortex automatically misses. Any flying creature
+      moving through the vortex must make a
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.iH69GIwm8BjecrPN]{Fly}
+      skill check or immediately fall from the sky, taking falling damage (the
+      creature cannot make a Fly check to reduce or negate this damage).
+      Creatures on the ground cannot pass through the vortex without first
+      making a Strength check. The DC of this check is equal to 10 + your caster
+      level. The vortex is faintly visible and can be spotted with a DC 15
+      @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.2h6hz5AkTDxKPFxr]{Perception}
+      skill check. You can use this ability for a number of rounds per day equal
+      to your wizard level. These rounds do not need to be consecutive.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Air School
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat
