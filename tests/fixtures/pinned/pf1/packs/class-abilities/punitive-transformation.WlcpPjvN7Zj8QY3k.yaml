@@ -1,0 +1,46 @@
+_id: WlcpPjvN7Zj8QY3k
+_key: '!items!WlcpPjvN7Zj8QY3k'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Punitive Transformation
+system:
+  abilityType: su
+  actions:
+    - _id: syouni5hqrh6wx48
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: close
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can transform an opponent into a harmless animal as if using
+      @UUID[Compendium.pf1.spells.t8ei2mrmqg7252vw]{Baleful Polymorph}. This
+      transformation lasts 1 round per oracle level. Transforming another
+      creature causes the first to immediately revert to normal.</p>
+
+      <p>You may use this ability a number of times per day equal to your
+      Charisma modifier.</p>
+
+      <p>You must be at least 7th level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_punitiveTransformation
+  tags:
+    - Revelation
+    - Waves Mystery
+  uses:
+    maxFormula: '@abilities.cha.mod'
+    per: day
+type: feat

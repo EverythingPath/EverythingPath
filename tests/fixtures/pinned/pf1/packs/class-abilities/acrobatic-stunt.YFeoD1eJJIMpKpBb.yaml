@@ -1,0 +1,43 @@
+_id: YFeoD1eJJIMpKpBb
+_key: '!items!YFeoD1eJJIMpKpBb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Acrobatic Stunt
+system:
+  abilityType: ex
+  actions:
+    - _id: 5568cl7h9fhqo5hk
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Rogue
+      - Ninja
+  description:
+    value: >-
+      <p>Once per day, when flanked by at least two opponents, a character with
+      this talent can, as an immediate action when any of the threatening
+      opponents attacks her, attempt an Acrobatics check against the highest CMD
+      of the threatening creatures plus 2 per threatening creature beyond the
+      second. If successful, the character may take a 5-foot step in any
+      direction, so long as she remains within the reach of the attacker
+      triggering the movement. The character’s final position is used to
+      determine whether the attacker benefits from flanking. On a failed check,
+      the character falls prone in her original position and the attack resolves
+      as normal (the opponent gains a +4 bonus for attacking a prone target). A
+      character may use this ability one additional time per day for every 5
+      class levels she possesses. A rogue must be trained in Acrobatics to
+      select this talent.</p>
+  subType: classFeat
+  tag: classFeat_acrobaticStunt
+  tags:
+    - Rogue Talent
+    - Ninja Trick
+  uses:
+    maxFormula: 1 + (floor(@class.level / 5))
+    per: day
+type: feat

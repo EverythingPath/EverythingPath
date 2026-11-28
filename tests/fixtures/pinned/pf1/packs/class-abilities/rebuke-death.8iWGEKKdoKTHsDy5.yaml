@@ -1,0 +1,52 @@
+_id: 8iWGEKKdoKTHsDy5
+_key: '!items!8iWGEKKdoKTHsDy5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-blue-1.jpg
+name: Rebuke Death
+system:
+  abilityType: sp
+  actions:
+    - _id: mo2m6jucoq4xz3uh
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d4 + floor(@class.level / 2)
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can touch a living creature as a standard action, healing it for
+      1d4 points of damage plus 1 for every two cleric levels you possess. You
+      can only use this ability on a creature that is below 0 hit points. You
+      can use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '44'
+  subType: classFeat
+  tag: classFeat_rebukeDeath
+  tags:
+    - Domain Power
+    - Healing Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

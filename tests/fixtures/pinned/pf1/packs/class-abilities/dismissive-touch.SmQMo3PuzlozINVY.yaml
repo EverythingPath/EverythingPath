@@ -1,0 +1,39 @@
+_id: SmQMo3PuzlozINVY
+_key: '!items!SmQMo3PuzlozINVY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Dismissive Touch
+system:
+  abilityType: sp
+  actions:
+    - _id: qmgbx5ap9se8qalp
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: close
+      target:
+        value: one extraplanar creature
+      touch: true
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can cast
+      @UUID[Compendium.pf1.spells.k3zn13pbr5tr9zac]{Dismissal} once per day as a
+      spell-like ability (caster level equal to your inquisitor level) upon
+      making a successful unarmed touch attack against an evil outsider. The DC
+      to save against this ability increases by 2.</p>
+  subType: classFeat
+  tag: classFeat_dismissiveTouch
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

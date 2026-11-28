@@ -1,0 +1,71 @@
+_id: zylvLcc5P4EPkxzu
+_key: '!items!zylvLcc5P4EPkxzu'
+_stats:
+  coreVersion: '12.343'
+folder: BzkdxtDgGZ96mdwR
+img: icons/sundries/lights/lantern-iron-lit-yellow.webp
+name: Hooded lantern
+system:
+  actions:
+    - _id: HsXl5Ig937c6CH0e
+      activation:
+        type: special
+        unchained:
+          type: nonaction
+      duration:
+        units: hour
+        value: '6'
+      name: Ignite
+      tag: ignite
+    - _id: QM380aRjIlmNrxw9
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Extinguish
+      tag: extinguish
+  description:
+    value: >-
+      <p>A hooded lantern sheds normal light in a 30-foot radius and increases
+      the light level by one step for an additional 30 feet beyond that area
+      (darkness becomes dim light and dim light becomes normal light). A hooded
+      lantern does not increase the light level in normal light or bright light.
+      A lantern burns for 6 hours on 1 pint of oil. You can carry a lantern in
+      one hand. </p>
+  hp:
+    base: 10
+  price: 7
+  scriptCalls:
+    - _id: 0IWRRMjQRcllMcG3
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn on light
+      type: script
+      value: |-
+        if (!token) return;
+        if (action.tag !== "ignite") return;
+
+        fromUuid("Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A")
+          .then(lm => lm.execute({ token, range: 60 }));
+    - _id: zbKfZe8I9eRgJYCF
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Turn off light
+      type: script
+      value: |
+        if (!token) return;
+        if (action.tag !== "extinguish") return;
+
+        const light = new foundry.data.LightData().toObject();
+        token.document.update({ light });
+  sources:
+    - id: PZO1110
+      pages: 156, 158
+    - id: PZO1123
+      pages: 57, 67
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

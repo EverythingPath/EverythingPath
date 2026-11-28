@@ -1,0 +1,60 @@
+_id: dm579aw5x8e3tcwf
+_key: '!items!dm579aw5x8e3tcwf'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Detect Fiendish Presence
+system:
+  actions:
+    - _id: yn94ta17h9l7l9o2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        concentration: true
+        dismiss: true
+        units: spec
+        value: concentration, up to 10 minutes/level
+      measureTemplate:
+        size: '60'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '60'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions like
+      @UUID[Compendium.pf1.spells.Item.tr7m97npkbgm4wp7]{detect evil}, except
+      that it detects only outsiders with the evil subtype, as well as the
+      lingering effects caused by their gifts, presence, and spells. It can also
+      detect clerics and paladins of fiendish deities, including Asmodeus,
+      archdevils, daemonic harbingers, and demon lords.</p>
+  learnedAt:
+    class:
+      arcanist: 0
+      bard: 0
+      cleric: 0
+      magus: 0
+      oracle: 0
+      skald: 0
+      sorcerer: 0
+      warpriest: 0
+      witch: 0
+      wizard: 0
+  level: 0
+  school: div
+  sources:
+    - id: PZO9464
+      pages: '16'
+  sr: false
+  uses:
+    autoDeductChargesCost: '0'
+type: spell

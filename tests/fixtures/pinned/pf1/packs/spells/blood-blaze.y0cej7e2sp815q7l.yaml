@@ -1,0 +1,69 @@
+_id: y0cej7e2sp815q7l
+_key: '!items!y0cej7e2sp815q7l'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Blood Blaze
+system:
+  actions:
+    - _id: 4fbr41hti7r1wc2c
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates
+        harmless: true
+        type: fort
+      target:
+        value: creature touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>The target gains a 5-foot-radius aura that causes the blood of
+      creatures in that area to ignite upon contact with air. Any creature
+      (including the spell's target) within the aura that takes at least 5
+      points of piercing, slashing, or bleed damage from a single attack
+      automatically creates a spray of burning blood. The spray strikes a
+      creature in a randomly determined square adjacent to the injured creature.
+      The spray deals 1d6 points of fire damage to any creature in that square,
+      and 1 point of splash damage to all creatures within 5 feet of the spray's
+      target, including the target of this spell. A creature can only create one
+      spray of burning blood per round. Creatures that do not have blood
+      (including oozes and most constructs and undead) do not create blood
+      sprays when attacked.</p>
+  descriptors:
+    - fire
+  learnedAt:
+    class:
+      alchemist: 2
+      antipaladin: 1
+      arcanist: 2
+      bloodrager: 2
+      cleric: 2
+      investigator: 2
+      magus: 2
+      oracle: 2
+      psychic: 2
+      sorcerer: 2
+      warpriest: 2
+      witch: 2
+      wizard: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '143'
+type: spell

@@ -1,0 +1,43 @@
+_id: 60vrihl3qagCqY87
+_key: '!items!60vrihl3qagCqY87'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Natural Divination
+system:
+  abilityType: ex
+  actions:
+    - _id: vfjm1l7sy6qr2o3l
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can read the entrails of a freshly killed animal or humanoid to
+      gain an insight bonus equal to your Charisma modifier on one saving throw.
+      Alternatively, by observing and interpreting the flights of birds, you may
+      apply a +10 competence bonus on any one skill check. Finally, by charting
+      marks in dirt or stone, or observing the behavior of sand when thrown into
+      the wind, you gain a +4 insight bonus on one initiative check. These
+      bonuses must be used during the next 24 hours and you must declare you are
+      using the bonus before the check or save is made. Making a natural
+      divination takes 10 minutes.</p>
+
+      <p>You may use natural divination (in any combination) once per day plus
+      one additional time per day for every four oracle levels you have
+      attained.</p>
+  subType: classFeat
+  tag: classFeat_naturalDivination
+  tags:
+    - Revelation
+    - Nature Mystery
+  uses:
+    maxFormula: 1 + floor(@class.level / 4)
+    per: day
+type: feat

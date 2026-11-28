@@ -1,0 +1,43 @@
+_id: ricBVNmnexcX3vxr
+_key: '!items!ricBVNmnexcX3vxr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Mother's Eye
+system:
+  abilityType: su
+  actions:
+    - _id: ccb5g1duriaa6c9x
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can see through plant matter, as the greensight universal
+      monster ability (Pathfinder RPG Bestiary 4 295), for a number of minutes
+      per day equal to her witch level.</p>
+
+      <p>These minutes do not need to be consecutive, but must be spent in
+      1-minute increments.</p>
+  subType: classFeat
+  tag: classFeat_mothersEye
+  tags:
+    - Hex
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

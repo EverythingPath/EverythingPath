@@ -1,0 +1,35 @@
+_id: JOGQ5xqsUQvvAq9b
+_key: '!items!JOGQ5xqsUQvvAq9b'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rhoka.PNG
+name: Experience Across Ages
+system:
+  abilityType: ex
+  actions:
+    - _id: be2pgsiatnanlqb3
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Slayer
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.races.Item.aQ8RQYKVd2hqI4jh]{Samsaran}
+      only.</p><p>Once per day, a samsaran slayer can draw upon insights from
+      his previous lifetimes to help identify a foe or recall a key piece of
+      information. As a swift action, the slayer can attempt a Knowledge check
+      as if he had a number of ranks in the appropriate Knowledge skill equal to
+      his slayer level.</p><p>A slayer can use this talent one additional time
+      per day for every 5 slayer levels he has.</p>
+  subType: classFeat
+  tag: classFeat_experienceAcrossAges
+  tags:
+    - Slayer Talent
+  uses:
+    maxFormula: 1 + floor(@class.level / 5)
+    per: day
+type: feat

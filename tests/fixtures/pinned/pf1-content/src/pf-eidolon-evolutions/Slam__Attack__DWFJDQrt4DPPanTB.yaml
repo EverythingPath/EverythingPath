@@ -1,0 +1,33 @@
+_id: DWFJDQrt4DPPanTB
+_key: '!items!DWFJDQrt4DPPanTB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/monster-forearm.jpg
+name: Slam (Attack)
+system:
+  actions:
+    - _id: evhrijr9qk76n6bx
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      damage:
+        parts:
+          - formula: sizeRoll(1, 8, @size, 4)
+            types:
+              - bludgeoning
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/monster-forearm.jpg
+      name: Attack
+      tag: slam
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

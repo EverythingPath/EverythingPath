@@ -1,0 +1,45 @@
+_id: cV03JvG2PdoJ3AFA
+_key: '!items!cV03JvG2PdoJ3AFA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/weapon_06.jpg
+name: Noble Visage
+system:
+  abilityType: su
+  actions:
+    - _id: aqwudw7hbq6hf88i
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: ally touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You gain a +1 bonus on Charisma checks and Charisma-based skill checks
+      against creatures that share your creature type (and subtype, if you are a
+      humanoid). This bonus increases by 1 for every 5 levels you possess.<p>As
+      a standard action, you can touch an ally to grant her your noble visage
+      bonus against creatures that share her creature type (or subtype) for 1
+      minute. When you use this ability, you lose your noble visage bonus for 1
+      minute. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+
+      <p>This power replaces the Inspiring Word power of the Nobility
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_nobleVisage
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

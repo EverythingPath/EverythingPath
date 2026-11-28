@@ -1,0 +1,69 @@
+_id: gq2ereen2neiyaxb
+_key: '!items!gq2ereen2neiyaxb'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Compel Tongue, Mass
+system:
+  actions:
+    - _id: iz9ik9bbtnnia1hw
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        dismiss: true
+        units: hour
+        value: '@cl'
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.vl8xeemj0s326gej]{compel tongue}, except
+      it affects multiple creatures. The same language restriction applies to
+      all creatures, and the same language must be imparted to all creatures
+      affected by the same casting of this spell.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 5
+      bard: 4
+      cleric: 5
+      druid: 5
+      hunter: 5
+      medium: 4
+      mesmerist: 4
+      oracle: 5
+      skald: 4
+      sorcerer: 5
+      warpriest: 5
+      witch: 5
+      wizard: 5
+  level: 5
+  materials:
+    value: a wooden block carved with a letter
+  school: enc
+  sources:
+    - id: PZO9462
+      pages: '24'
+  subschool:
+    - compulsion
+type: spell

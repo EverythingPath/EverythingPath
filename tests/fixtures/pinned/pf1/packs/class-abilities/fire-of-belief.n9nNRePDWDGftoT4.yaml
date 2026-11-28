@@ -1,0 +1,53 @@
+_id: n9nNRePDWDGftoT4
+_key: '!items!n9nNRePDWDGftoT4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Fire of Belief
+system:
+  abilityType: sp
+  actions:
+    - _id: k8o5s1fwjtb13km5
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + (max(1, floor(@class.level / 2)))
+            types:
+              - fire
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can unleash a gout of holy or unholy flame that sears one target
+      within 30 feet as a ranged touch attack. The target takes 1d6 points of
+      fire damage plus half your inquisitor level (minimum +1). If you are good,
+      the flames only harm nongood targets. If you are evil, the flames only
+      harm nonevil targets. If you are neither good nor evil, when you gain this
+      ability you must decide whether the flames harm only nongood or nonevil
+      targets; once you make this decision, it cannot be changed (though if your
+      alignment changes, the effect of the flames changes appropriately). You
+      can use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p>
+  subType: classFeat
+  tag: classFeat_fireOfBelief
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

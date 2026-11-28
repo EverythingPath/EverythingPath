@@ -1,0 +1,42 @@
+_id: dUsTySGWGKDXm146
+_key: '!items!dUsTySGWGKDXm146'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Fear the Flames
+system:
+  abilityType: su
+  actions:
+    - _id: rb9cwrpsvy9vfsgm
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can give a creature you can see within 60 feet one chance to avoid
+      an eternity of suffering by ordering it to carry out any one simple action
+      that would take no more than 1 round to complete. Good and neutral
+      creatures that refuse become shaken for 1 round (Will negates), while evil
+      creatures that obey gain a +2 morale bonus on all rolls and checks made
+      for 1 round. You can use this ability a number of times per day equal to 3
+      + your Wisdom modifier. This is a language-dependent, mind-affecting
+      effect.</p>
+  subType: classFeat
+  tag: classFeat_fearTheFlames
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

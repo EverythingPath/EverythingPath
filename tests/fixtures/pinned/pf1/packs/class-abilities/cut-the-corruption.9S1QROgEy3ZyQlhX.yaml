@@ -1,0 +1,39 @@
+_id: 9S1QROgEy3ZyQlhX
+_key: '!items!9S1QROgEy3ZyQlhX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/banner-red.jpg
+name: Cut the Corruption
+system:
+  abilityType: su
+  actions:
+    - _id: cg346a1ug4llzyiu
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: weapon touched
+  associations:
+    classes:
+      - Cavalier
+  description:
+    value: >-
+      <p>At 8th level, an order of the Green cavalier can touch a weapon and
+      enhance it as a free action once per day. For 1 minute, the weapon glows
+      with a deep-green light and deals an additional 1d6 points of damage
+      against aberrations and undead. This damage does not stack with the
+      additional damage granted by the <em>bane</em> weapon special ability. At
+      16th level, the cavalier can use this ability a second time each day.</p>
+  subType: classFeat
+  tag: classFeat_cutTheCorruption
+  uses:
+    maxFormula: floor(@class.level / 8)
+    per: day
+type: feat

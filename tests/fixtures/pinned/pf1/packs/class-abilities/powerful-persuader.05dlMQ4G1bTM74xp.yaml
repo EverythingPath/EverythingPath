@@ -1,0 +1,63 @@
+_id: 05dlMQ4G1bTM74xp
+_key: '!items!05dlMQ4G1bTM74xp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Powerful Persuader
+system:
+  abilityType: su
+  actions:
+    - _id: gw9vq4bo8t6e7cyc
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Diplomacy
+      tag: diplomacy
+    - _id: NG9tzgMnIQBhYqTS
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Intimidate
+      tag: intimidate
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, when you make a Diplomacy or Intimidate check, you can
+      roll twice and take the higher result. Using this ability is a free
+      action. You can use this ability once per day at 8th level, plus one
+      additional time per day for every 2 levels beyond 8th.</p><p>This power
+      replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.F6D6MV5q8BOjiCTU]{Freedom's
+      Call} power of the
+      @UUID[Compendium.pf1.class-abilities.Item.NjMyfBFJ42xbUpwC]{Liberation
+      Domain}.</p>
+  scriptCalls:
+    - _id: eN7i73KtmvDHb6Y8
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Roll twice keep highest
+      type: script
+      value: |-
+        if (shared.attackData.action.tag === "diplomacy") {
+        actor.rollSkill("dip", {dice: "2d20kh"});
+        } else if (shared.attackData.action.tag === "intimidate") {
+        actor.rollSkill("int", {dice: "2d20kh"});
+        }
+  sources:
+    - id: PZO1115
+      pages: '96'
+  subType: classFeat
+  tag: classFeat_powerfulPersuader
+  tags:
+    - Domain Power
+    - Revolution Subdomain
+  uses:
+    maxFormula: floor((@class.level - 6) / 2)
+    per: day
+type: feat

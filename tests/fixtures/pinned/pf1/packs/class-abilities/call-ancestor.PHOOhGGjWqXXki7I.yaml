@@ -1,0 +1,49 @@
+_id: PHOOhGGjWqXXki7I
+_key: '!items!PHOOhGGjWqXXki7I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_26.jpg
+name: Call Ancestor
+system:
+  abilityType: sp
+  actions:
+    - _id: 9kr5m2mex1pelzjk
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, once per day, you can spend a <em>standard action</em> to
+      grant a long-dead relative a brief facsimile of life. This functions as
+      the @UUID[Compendium.pf1.spells.wy8c3at9nrhjfavm]{Simulacrum, Lesser}
+      spell, except the <em>simulacrum</em> lasts only 1 round per
+      <em>sorcerer</em> level you have, has the same statistics as you, and
+      always has the likeness of an ancestor. In addition, the
+      <em>simulacrum</em> has lost knowledge from the past. When
+      <em>summoning</em> the <em>simulacrum</em>, select one <em>Knowledge</em>
+      skill. The <em>simulacrum</em> is considered trained in that skill and has
+      a bonus on <em>Knowledge</em> checks of this type equal to twice your
+      level plus your <em>Intelligence</em> modifier. The <em>simulacrum</em> is
+      under your control, but it cannot attack or take hostile actions. At 17th
+      level, you can use this ability twice per day. At 20th level, you can use
+      this ability three times per day. You cannot have more than one ancestor
+      <em>simulacrum</em> active at any one time.</p>
+  subType: classFeat
+  tag: classFeat_callAncestor
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 16), 1) + if(gte(@class.level, 20), 1)
+    per: day
+type: feat

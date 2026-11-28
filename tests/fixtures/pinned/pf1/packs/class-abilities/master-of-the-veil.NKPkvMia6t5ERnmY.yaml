@@ -1,0 +1,34 @@
+_id: NKPkvMia6t5ERnmY
+_key: '!items!NKPkvMia6t5ERnmY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/blinding-critical.jpg
+name: Master of the Veil
+system:
+  abilityType: sp
+  actions:
+    - _id: qpqi58b5z8fxpu8s
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can create an <em>illusion</em> that hides the
+      appearance of yourself and any number of allies within 30 feet for 1 round
+      per <em>wizard</em> level. This ability otherwise functions like the spell
+      @UUID[Compendium.pf1.spells.fxwycv6d7xwzua4t]{Veil}. The rounds do not
+      need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_masterOfTheVeil
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

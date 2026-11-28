@@ -1,0 +1,62 @@
+_id: 63bmtmuvy392gkv8
+_key: '!items!63bmtmuvy392gkv8'
+_stats:
+  coreVersion: '12.343'
+folder: gb3ao0esijDaJx1q
+img: icons/magic/defensive/illusion-evasion-echo-purple.webp
+name: Complex Hallucination
+system:
+  actions:
+    - _id: dznxw4jv4kdhl4mu
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        concentration: true
+        units: spec
+        value: concentration + 3 rounds
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: long
+      save:
+        description: Will disbelief
+        type: will
+      target:
+        value: one creature/level, no two of which can be more than 30 ft. apart
+  components:
+    somatic: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.u2vipq48algenijz]{audiovisual
+      hallucination}, except that the phantasm you create can also include
+      olfactory, tactile, and thermal effects.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      arcanist: 4
+      bard: 4
+      magus: 4
+      medium: 3
+      mesmerist: 4
+      occultist: 4
+      psychic: 4
+      skald: 4
+      sorcerer: 4
+      witch: 4
+      wizard: 4
+  level: 4
+  school: ill
+  sources:
+    - id: PZO1134
+      pages: '206'
+  subschool:
+    - phantasm
+type: spell

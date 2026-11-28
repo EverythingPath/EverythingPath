@@ -1,0 +1,43 @@
+_id: ujrmDoTMy0oWUEal
+_key: '!items!ujrmDoTMy0oWUEal'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/gray_08.jpg
+name: Bestow Resolve
+system:
+  abilityType: su
+  actions:
+    - _id: v5kp1vo991m45vz0
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '20'
+      target:
+        value: allies in range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, you can bless creatures with the boldness of your deity.
+      You can bestow a number of temporary hit points equal to your level + your
+      Wisdom modifier to all allies within 20 feet. The temporary hit points
+      remain for 1 minute. You can use this ability once per day at 8th level,
+      plus one additional time per day for every 4 levels you possess beyond
+      8th.</p>
+
+      <p>This power replaces the Might of the Gods power of the Strength
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_bestowResolve
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

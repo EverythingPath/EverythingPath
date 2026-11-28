@@ -1,0 +1,41 @@
+_id: vQ6i4zS5T7z1UNOM
+_key: '!items!vQ6i4zS5T7z1UNOM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/evil-eye-eerie-2.jpg
+name: Foretell
+system:
+  abilityType: su
+  actions:
+    - _id: rzf09tio6liyc0t1
+      activation:
+        type: free
+        unchained:
+          type: free
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: spec
+        value: '30'
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can utter a prediction of the immediate future. While
+      your foretelling is in effect, you emit a 30-foot aura of fortune that
+      aids your allies or hinders your enemies, as chosen by you at the time of
+      prediction. If you choose to aid, you and your allies gain a +2 <em>luck
+      bonus</em> on ability checks, attack rolls, <em>caster level</em> checks,
+      <em>saving throws</em>, and skill checks. If you choose to hinder, your
+      enemies take a –2 penalty on those rolls instead. You can use this ability
+      for a number of rounds per day equal to your wizard level. These rounds do
+      not need to be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_foretell
+  uses:
+    maxFormula: '@abilities.int.mod'
+    per: day
+type: feat

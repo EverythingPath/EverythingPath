@@ -1,0 +1,48 @@
+_id: WhKhWQbcos4rl5vR
+_key: '!items!WhKhWQbcos4rl5vR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Automatic Writing
+system:
+  abilityType: su
+  actions:
+    - _id: i3qo71scpuik49de
+      activation:
+        type: hour
+        unchained:
+          type: hour
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, you can spend a full hour in uninterrupted meditation.
+      During this period, your hands produce mysterious writing that pertains to
+      the future. At 1st level, the prophetic writing manifests as an
+      @UUID[Compendium.pf1.spells.d1wxnax51cecplm4]{Augury} spell with 90%
+      effectiveness.</p>
+
+      <p>At 5th level, the writing takes the form of a
+      @UUID[Compendium.pf1.spells.pwueht12qqo0268e]{Divination} with 90%
+      effectiveness.</p>
+
+      <p>At 8th level, the writing manifests as a casting of
+      @UUID[Compendium.pf1.spells.p2kosvizylhy8vfa]{Commune} with no material
+      component required.</p>
+  subType: classFeat
+  tag: classFeat_automaticWriting
+  tags:
+    - Revelation
+    - Occult Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

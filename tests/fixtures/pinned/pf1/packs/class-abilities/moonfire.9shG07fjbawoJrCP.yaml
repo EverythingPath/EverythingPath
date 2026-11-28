@@ -1,0 +1,53 @@
+_id: 9shG07fjbawoJrCP
+_key: '!items!9shG07fjbawoJrCP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_12.jpg
+name: Moonfire
+system:
+  abilityType: su
+  actions:
+    - _id: rf7ejza2neqm834o
+      ability:
+        attack: dex
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (floor(@class.level / 2))d8
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+      touch: true
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as a standard action, you can shoot a blast of divine
+      moonlight from your eyes as a ranged touch attack against a single target
+      within 30 feet. Moonfire deals 1d8 points of damage per 2 class levels you
+      have, and the target is dazzled for 1 round per class level you have.
+      Moonfire deals 1d10 points of damage per class level you have against
+      lycanthropes. You can use this ability once per day at 8th level, and one
+      additional time per day for every 4 levels beyond 8th.</p>
+
+      <p>This power replaces the Eyes of Darkness power of the Darkness
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_moonfire
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

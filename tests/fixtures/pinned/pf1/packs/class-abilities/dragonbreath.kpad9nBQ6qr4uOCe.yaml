@@ -1,0 +1,47 @@
+_id: kpad9nBQ6qr4uOCe
+_key: '!items!kpad9nBQ6qr4uOCe'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fireball-eerie-3.jpg
+name: Dragonbreath
+system:
+  abilityType: su
+  actions:
+    - _id: y5ty3quja300wbxb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      target:
+        value: Cone
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 4th level, you can use a breath weapon once per day as a standard
+      action. When you gain this ability, choose what kind of damage your breath
+      weapon deals: acid, cold, electricity, or fire. Once you make this choice,
+      you can’t change it later. Your breath weapon fills a 15-foot cone and
+      deals 3d6 points of damage; this damage increases by 1d6 points at every
+      even-numbered level you gain beyond 4th level. A creature hit by your
+      dragonbreath attack can attempt a Reflex save (DC = 10 + half your class
+      level + your Wisdom modifier) to take half damage. At 9th level, you can
+      use this ability two times per day, and at 14th level, you can use it
+      three times per day.</p>
+
+      <p>This power replaces the Serpent Companion power of the Scalykind
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_dragonbreath
+  uses:
+    maxFormula: 2 + if(gte(@class.level, 14), 1)
+    per: day
+type: feat

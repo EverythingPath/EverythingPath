@@ -1,0 +1,42 @@
+_id: 9gTGYJwawvYXOiXK
+_key: '!items!9gTGYJwawvYXOiXK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/stand-still.jpg
+name: Power of Giants
+system:
+  abilityType: sp
+  actions:
+    - _id: r73zc9kb8xqiyw3d
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you may grow to Large size as a <em>standard
+      action</em>. At this size you gain a +6 <em>size bonus</em> to
+      <em>Strength</em>, a –2 penalty to <em>Dexterity</em>, a +4 <em>size
+      bonus</em> to <em>Constitution</em>, and a +4 <em>natural armor</em>
+      bonus. You may return to your normal size as a standard action. You may
+      remain in this size for up to 1 minute per character level per day; this
+      duration does not need to be consecutive, but it must be used in 1 minute
+      increments.</p>
+  subType: classFeat
+  tag: classFeat_powerTheGiants
+  uses:
+    maxFormula: '@attributes.hd.total'
+    per: day
+type: feat
