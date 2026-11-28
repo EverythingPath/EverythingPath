@@ -1,0 +1,35 @@
+_id: OtFAdvUxPRkInh8a
+_key: '!items!OtFAdvUxPRkInh8a'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Aura of Enlightenment
+system:
+  abilityType: su
+  actions:
+    - _id: 9pph2qou8g8tt808
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 4th level, you can create a 30-foot-radius aura of normal light.
+      Allies in this aura gain a +2 insight bonus on skill checks. This counts
+      as a 2nd-level light effect for the purpose of countering or dispelling
+      darkness effects. You can use this aura for a number of rounds per day
+      equal to your inquisitor level. These rounds do not need to be
+      consecutive.</p>
+  subType: classFeat
+  tag: classFeat_auraOfEnlightenment
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

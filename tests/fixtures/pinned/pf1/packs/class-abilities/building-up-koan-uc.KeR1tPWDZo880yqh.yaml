@@ -1,0 +1,39 @@
+_id: KeR1tPWDZo880yqh
+_key: '!items!KeR1tPWDZo880yqh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Building-Up Koan (UC)
+system:
+  abilityType: su
+  actions:
+    - _id: n7kfy6izewsltqa9
+      actionType: save
+      activation:
+        type: swift
+        unchained:
+          type: action
+      name: Use
+      save:
+        dc: 15 + floor(@class.level / 2)
+        description: Will succeeds
+        type: will
+  associations:
+    classes:
+      - Monk (Unchained)
+  description:
+    value: >-
+      <p>A monk with this ability can spend 2 ki points as a swift action to ask
+      himself a koan, which he then tries to answer. The monk must attempt a
+      Will save (DC 15 + 1/2 the monk’s level). If successful, he gains an
+      insight bonus equal to his Wisdom modifier to AC and on attack rolls,
+      saving throws, skill checks and until the end of the round. If he fails,
+      the monk is instead confused for 1 round. This is a mind-affecting,
+      language-dependent effect.</p>
+
+      <p>A character who can’t become confused can’t benefit from this
+      ability.</p>
+
+      <p>A monk must be at least 8th level before selecting this ki power.</p>
+  subType: classFeat
+type: feat

@@ -1,0 +1,62 @@
+_id: yPhfZKtNeguRC9bc
+_key: '!items!yPhfZKtNeguRC9bc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Dweller in Darkness
+system:
+  abilityType: sp
+  actions:
+    - _id: exyd161erpd6ehhy
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - untyped
+      duration:
+        units: inst
+      img: icons/magic/death/skull-energy-light-purple.webp
+      name: Use
+      notes:
+        footer:
+          - Damage roll in case save is succesfull.
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.cha.mod
+        description: Will disbelief, then Fortitude partial; see text
+        type: will
+      target:
+        value: one or more creatures (see text)
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, you cast your psyche into the void of space to attract
+      the attention of a terrible otherworldly being. The dweller in darkness
+      behaves in all ways as if you had cast
+      @UUID[Compendium.pf1.spells.6efjgs1qvmj6yxqv]{Phantasmal Killer}. At 17th
+      level, the dweller in darkness can be perceived by more than one creature,
+      as if you had cast
+      @UUID[Compendium.pf1.spells.3wdx7fjulsohi1lk]{Weird}.</p>
+
+      <p>You must be at least 11th level to choose this revelation.</p>
+  sources:
+    - id: PZO1117
+      pages: '54'
+    - id: PZO1129
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_dwellerInDarkness
+  tags:
+    - Revelation
+    - Heavens Mystery
+    - Dark Tapestry Mystery
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

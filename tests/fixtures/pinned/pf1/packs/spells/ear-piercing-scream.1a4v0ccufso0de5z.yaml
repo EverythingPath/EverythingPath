@@ -1,0 +1,60 @@
+_id: 1a4v0ccufso0de5z
+_key: '!items!1a4v0ccufso0de5z'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: systems/pf1/icons/spells/link-blue-2.jpg
+name: Ear-Piercing Scream
+system:
+  actions:
+    - _id: 2w44tqsq5fv6tn7d
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: (clamp(floor(@cl / 2), 1, 5))d6
+            types:
+              - sonic
+      duration:
+        units: spec
+        value: instantaneous; see text
+      name: Use
+      range:
+        units: close
+      save:
+        description: Fortitude partial (see text)
+        type: fort
+      target:
+        value: one creature
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You unleash a powerful scream, inaudible to all but a single target.
+      The target is dazed for 1 round and takes 1d6 points of sonic damage per
+      two caster levels (maximum 5d6). A successful save negates the daze effect
+      and halves the damage.</p>
+  descriptors:
+    - sonic
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      bloodrager: 1
+      inquisitor: 1
+      medium: 1
+      psychic: 1
+      skald: 1
+      sorcerer: 1
+      witch: 1
+      wizard: 1
+  school: evo
+  sources:
+    - id: PZO1117
+      pages: '218'
+type: spell

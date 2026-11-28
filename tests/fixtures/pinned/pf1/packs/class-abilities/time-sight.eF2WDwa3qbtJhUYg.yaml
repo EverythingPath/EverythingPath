@@ -1,0 +1,51 @@
+_id: eF2WDwa3qbtJhUYg
+_key: '!items!eF2WDwa3qbtJhUYg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Time Sight
+system:
+  abilityType: su
+  actions:
+    - _id: h5tsx5rzqgb34icv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can peer through the mists of time to see things as they truly are,
+      as if using the @UUID[Compendium.pf1.spells.jbqo4o2b2tmdz7wv]{True Seeing}
+      spell.</p>
+
+      <p>At 15th level, this functions like
+      @UUID[Compendium.pf1.spells.2vb5orfcy57lrfmc]{Moment of Prescience}.</p>
+
+      <p>At 18th level, this functions like
+      @UUID[Compendium.pf1.spells.vl7yer8k1leyuxld]{Foresight}.</p>
+
+      <p>You can use this ability for a number of minutes per day equal to your
+      oracle level, but these minutes do not need to be consecutive.</p>
+
+      <p>You must be at least 11th level to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_timeSight
+  tags:
+    - Revelation
+    - Time Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

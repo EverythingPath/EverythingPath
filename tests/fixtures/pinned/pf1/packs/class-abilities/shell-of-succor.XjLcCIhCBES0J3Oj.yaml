@@ -1,0 +1,56 @@
+_id: XjLcCIhCBES0J3Oj
+_key: '!items!XjLcCIhCBES0J3Oj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Shell of Succor
+system:
+  abilityType: su
+  actions:
+    - _id: s5vpch0msqfla1s3
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can surround an ally with bolstering energies that supplement its
+      health and grant it extra vigor. With a touch from you (a standard
+      action), one creature gains a ward of restorative energy, granting it a
+      number of temporary hit points equal to your Charisma bonus + 1d6 per 2
+      oracle levels you have (maximum 10d6). These temporary hit points last 1
+      minute per oracle level you have.</p>
+
+      <p>The target always loses these temporary hit points first, even before
+      other temporary hit points (including those from, for example, the purify
+      body spell on page 9 or a kineticist’s force ward defense wild talent). If
+      an attack deals fewer points of damage than the target has as temporary
+      hit points from shell of succor, it still reduces those temporary hit
+      points but otherwise counts as a miss for the purpose of abilities that
+      trigger on a hit or a miss.</p>
+
+      <p>You can use this revelation once per day, plus one additional time at
+      11th and 19th levels.</p>
+
+      <p>You must be at least 3rd level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_shellOfSuccor
+  tags:
+    - Revelation
+    - Succor Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 10), 1) + if(gte(@class.level, 19), 1)
+    per: day
+type: feat

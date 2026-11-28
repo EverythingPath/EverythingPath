@@ -1,0 +1,45 @@
+_id: W8jSr6VXhheSuDU3
+_key: '!items!W8jSr6VXhheSuDU3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Life Link (ORA)
+system:
+  abilityType: su
+  actions:
+    - _id: XHPDVMGjeGQ2k2sx
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: seeText
+      name: Create Bond
+      range:
+        units: ft
+        value: 100 + (10 * @class.level)
+      target:
+        value: One creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you may create a bond between yourself and
+      another creature. Each round at the start of your turn, if the bonded
+      creature is wounded for 5 or more hit points below its maximum hit points,
+      it heals 5 hit points and you take 5 hit points of damage. You may have
+      one bond active per oracle level. This bond continues until the bonded
+      creature dies, you die, the distance between you and the other creature
+      exceeds medium range, or you end it as an immediate action (if you have
+      multiple bonds active, you may end as many as you want as part of the same
+      immediate action).</p>
+  sources:
+    - id: PZO1115
+      pages: '48'
+  subType: classFeat
+  tags:
+    - Revelation
+    - Life Mystery
+type: feat

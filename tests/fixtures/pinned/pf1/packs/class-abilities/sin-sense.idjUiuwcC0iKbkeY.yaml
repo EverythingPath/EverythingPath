@@ -1,0 +1,33 @@
+_id: idjUiuwcC0iKbkeY
+_key: '!items!idjUiuwcC0iKbkeY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Sin Sense
+system:
+  abilityType: su
+  actions:
+    - _id: o3agnqub3xg54j0w
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a full-round action, you can determine which sin most strongly
+      influences a target by quickly reading its mind. Once you learn this fact,
+      you gain a +4 bonus on your next Charisma-based skill check made against
+      the target as long as it somehow incorporates a temptation that relates to
+      that sin. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier. This is a mindaffecting effect.</p>
+  subType: classFeat
+  tag: classFeat_sinSense
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

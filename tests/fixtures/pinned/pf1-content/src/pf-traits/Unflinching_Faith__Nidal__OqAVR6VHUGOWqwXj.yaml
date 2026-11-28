@@ -1,0 +1,73 @@
+_id: OqAVR6VHUGOWqwXj
+_key: '!items!OqAVR6VHUGOWqwXj'
+_stats:
+  coreVersion: '12.331'
+folder: 6b4Oq2nNMw3BxL6l
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Unflinching Faith (Nidal)
+system:
+  actions:
+    - _id: 4RvEM7AAkqYHJDAN
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Once per day, you may reroll a Will saving throw made against an
+        attack or effect that originates from an undead creature. You must
+        decide to use this trait after the first saving throw is rolled, but
+        before the results are revealed. You must take the result of the second
+        roll, even if it is lower.</p>
+      img: icons/environment/settlement/watchtower-city.webp
+      name: Reroll a will save caused by undead
+  contextNotes:
+    - target: will
+      text: >-
+        Once per day, you may reroll a Will saving throw made against an attack
+        or effect that originates from an undead creature. You must decide to
+        use this trait after the first saving throw is rolled, but before the
+        results are revealed. You must take the result of the second roll, even
+        if it is lower.
+  description:
+    value: >-
+      <p><em>Numerous expeditions to accursed regions like </em><span
+      style="text-decoration:underline" data-tooltip="Finder's Gulch is a ruined
+      and abandoned village in the Menador Mountains of western Isger that is
+      home to a powerful priestess of Urgathoa named Illcayna Alonnor who was
+      transformed into a monstrosity known as a daughter of Urgathoa. (there
+      appears to be some error in the cannon sources as this location is not in
+      Nidal)."><em><span style="text-decoration:underline">Nidal’s Finder's
+      Gulch</span></em></span><em> have reinforced your already steadfast
+      faith.</em></p><p><strong>Requirements</strong>: <span
+      style="text-decoration:underline" data-tooltip="Militaristic theocratic
+      nation on the west coast of Avistan, it has been ruled by the same 3
+      immortals devoted to the god Zon-Kuthon since its founding over 10,000
+      years ago."><span
+      style="text-decoration:underline">Nidal</span></span></p><p><strong>Benefits</strong>:
+      Once per day, you may reroll a Will saving throw made against an attack or
+      effect that originates from an undead creature. You must decide to use
+      this trait after the first saving throw is rolled, but before the results
+      are revealed. You must take the result of the second roll, even if it is
+      lower.</p>
+  scriptCalls:
+    - _id: mPY1Z1Bf1U7iaBxR
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll a Will Save
+      type: script
+      value: await actor.rollSavingThrow("will");
+  showInQuickbar: true
+  sources:
+    - id: PZO9444
+      pages: '13'
+  subType: trait
+  tags:
+    - Nidal
+  traitType: region
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,53 @@
+_id: 1hjxxr3k62rcpb5c
+_key: '!items!1hjxxr3k62rcpb5c'
+_stats:
+  coreVersion: '12.343'
+folder: 9hBqwSiT8GIHl0Ht
+img: icons/magic/death/undead-skeleton-worn-blue.webp
+name: Deathwatch
+system:
+  actions:
+    - _id: oxuzes6ifycdaqer
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: cone-shaped emanation
+      duration:
+        units: minute
+        value: 10 * @cl
+      measureTemplate:
+        size: '30'
+        type: cone
+      name: Use
+      range:
+        units: ft
+        value: '30'
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Using the powers of necromancy, you can determine the condition of
+      creatures near death within the spell's range. You instantly know whether
+      each creature within the area is dead, fragile (alive and wounded, with 3
+      or fewer hit points left), fighting off death (alive with 4 or more hit
+      points), healthy, undead, or neither alive nor dead (such as a construct).
+      <i>Deathwatch</i> sees through any spell or ability that allows creatures
+      to feign death.</p>
+  learnedAt:
+    class:
+      cleric: 1
+      medium: 1
+      oracle: 1
+      spiritualist: 1
+      warpriest: 1
+    domain:
+      Repose: 1
+  school: nec
+  sources:
+    - id: PZO1110
+      pages: '265'
+  sr: false
+type: spell

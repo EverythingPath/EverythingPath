@@ -1,0 +1,44 @@
+_id: fWCo0zkDaU0wHl8z
+_key: '!items!fWCo0zkDaU0wHl8z'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-orange-1.jpg
+name: Sacred Threshold
+system:
+  abilityType: su
+  actions:
+    - _id: h3tivkp8k04ga8gl
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: portal touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can bless a door, a window, or another portal
+      with a touch. For 1 minute, you can increase or decrease the DC of any
+      check to unlock or force open the portal by an amount equal to half your
+      cleric level. In addition, your first ally to pass through the portal
+      during this time gains an amount of temporary hit points equal to 1d4 + 1
+      for every 2 cleric levels you have. These temporary hit points last for 1
+      minute. You can use this ability a number of times per day equal to 3 +
+      your Wisdom modifier.</p>
+
+      <p>This power replaces the Agile Feet power of the Travel Domain.</p>
+  subType: classFeat
+  tag: classFeat_sacredThreshold
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

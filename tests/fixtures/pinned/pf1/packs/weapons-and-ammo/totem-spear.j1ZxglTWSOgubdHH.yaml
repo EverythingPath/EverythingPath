@@ -1,0 +1,61 @@
+_id: j1ZxglTWSOgubdHH
+_key: '!items!j1ZxglTWSOgubdHH'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: systems/pf1/icons/items/weapons/totem-spear.png
+name: Totem Spear
+system:
+  actions:
+    - _id: kxpa3w4d47h4dsyz
+      ability:
+        attack: _default
+        critMult: 3
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 10, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '10'
+  baseTypes:
+    - Totem Spear
+  description:
+    unidentified: >-
+      <p>Favored by the Shoanti of the Sklar-Quah, totem spears combine deadly
+      weapons with the mournful music of Varisia's displaced natives. The
+      shovel-like heads of these broad spears are decorated with variously
+      oriented hollows. In addition to its use as a weapon, a totem spear can be
+      played using the Perform (wind instrument) skill.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 25
+  sources:
+    - id: PZO9425
+      pages: '14'
+  subType: exotic
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 6
+type: weapon

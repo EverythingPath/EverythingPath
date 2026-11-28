@@ -1,0 +1,35 @@
+_id: EwbceboL4SyjiyIX
+_key: '!items!EwbceboL4SyjiyIX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Water Sprint (UC)
+system:
+  abilityType: su
+  actions:
+    - _id: xd94vk2ugd91egul
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '@class.level'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Monk (Unchained)
+  description:
+    value: >-
+      <p>A monk with this ki power can spend 1 point from his ki pool as a swift
+      action to gain the ability to walk on water, as if under the effects of
+      @UUID[Compendium.pf1.spells.g2obld7y0lpyztes]{Water Walk}. Once activated,
+      this ability lasts for 1 minute per monk level.</p>
+
+      <p>A monk must be at least 6th level before selecting this ki power.</p>
+  subType: classFeat
+type: feat

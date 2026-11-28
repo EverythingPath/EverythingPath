@@ -1,0 +1,35 @@
+_id: VPbJP5AlyNKL7DxW
+_key: '!items!VPbJP5AlyNKL7DxW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/rock-orange-1.jpg
+name: Supernatural Trap
+system:
+  abilityType: su
+  actions:
+    - _id: rw9ll990khhda7t6
+      activation:
+        type: free
+        unchained:
+          type: free
+      name: Use
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, select a supernatural ranger trap (Pathfinder RPG
+      Ultimate Magic 64). You can use this trap a number of times per day equal
+      to your Wisdom bonus. The DCs for Perception checks, Disable Device
+      checks, and saving throws against the trap are equal to 10 + 1/2 your
+      character level + your Wisdom bonus. The trap lasts for 1 hour or until
+      triggered.</p>
+
+      <p>This power replaces the Dancing Weapons power of the Artifice
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_supernaturalTrap
+  uses:
+    maxFormula: '@abilities.wis.mod'
+    per: day
+type: feat

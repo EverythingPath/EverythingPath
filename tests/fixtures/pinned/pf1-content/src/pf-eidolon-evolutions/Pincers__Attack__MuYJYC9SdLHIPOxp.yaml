@@ -1,0 +1,33 @@
+_id: MuYJYC9SdLHIPOxp
+_key: '!items!MuYJYC9SdLHIPOxp'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/claws/claw-pincer-grey.webp
+name: Pincers (Attack)
+system:
+  actions:
+    - _id: pbyp5ioq1url8qx7
+      ability:
+        attack: _default
+        damage: str
+        damageMult: 0.5
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: action
+      attackBonus: '-5'
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size, 4)
+      duration:
+        units: inst
+      img: icons/commodities/claws/claw-pincer-grey.webp
+      name: Attack
+      tag: pincers
+      uses:
+        autoDeductChargesCost: '0'
+  subType: natural
+  uses:
+    autoDeductChargesCost: '0'
+type: attack

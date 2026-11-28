@@ -1,0 +1,48 @@
+_id: FEiv14SmEjVCOrRU
+_key: '!items!FEiv14SmEjVCOrRU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Steal Voice
+system:
+  abilityType: su
+  actions:
+    - _id: 454ho06cqjkfzk3m
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>The witch can steal the voice of one creature within 30 feet, causing
+      it to lose, for a number of rounds equal to the witch’s Intelligence
+      bonus, all abilities that rely on speech, including talking, casting
+      spells with verbal components, and using auditory bardic
+      performances.</p><p>A successful Will saving throw negates this
+      effect.</p><p>If this hex is used upon a willing target, the duration
+      lasts for a number of hours equal to the witch’s Intelligence
+      bonus.</p><p>Additionally, the witch can change her voice to match that of
+      any creature whose voice she has stolen with this hex, as per
+      @UUID[Compendium.pf1.spells.26g4tysnax570dxo]{vocal alteration}.</p>
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

@@ -1,0 +1,42 @@
+_id: XfCULgDMFWhi7g55
+_key: '!items!XfCULgDMFWhi7g55'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/needles-blue-3.jpg
+name: Refreshing Rain
+system:
+  abilityType: su
+  actions:
+    - _id: hao3u273xe7zaxbs
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: all within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as standard action, you can call a brief shower of rain
+      in a 30-foot radius. Creatures in the area are healed of an amount of
+      nonlethal damage equal to double your cleric level and are no longer
+      exhausted, fatigued, nauseated, or sickened. You can use this ability once
+      per day at 8th level, and one additional time per day for every 4 levels
+      beyond 8th.</p>
+
+      <p>This power replaces the Lightning Lord power of the Weather Domain.</p>
+  subType: classFeat
+  tag: classFeat_refreshingRain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

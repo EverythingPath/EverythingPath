@@ -1,0 +1,60 @@
+_id: uEWfROJls9Td8TWk
+_key: '!items!uEWfROJls9Td8TWk'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Hero's Blade
+system:
+  actions:
+    - _id: xu9xwoir7s771f0m
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: herosBlade
+  aura:
+    school: evo
+  baseTypes:
+    - Longsword
+  cl: 9
+  description:
+    value: >-
+      <p>The pommel of this ornate +2 longsword is made to look like a coiled
+      golden dragon with six small diamond scales running down its back. When
+      made, this sword holds 6 hero points. The wielder can use these points at
+      any time, and they do not count against the wielder's maximum. As the hero
+      points are used, the small diamonds on the dragon's back turn into coal.
+      After the last hero point has been used, the hero's blade remains a +2
+      longsword.</p><p><strong>Base Item</strong>: +2
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, heroic fortune</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 17315
+  showInQuickbar: false
+  sources:
+    - id: PZO1115
+      pages: '325'
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

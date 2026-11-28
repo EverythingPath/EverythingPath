@@ -1,0 +1,45 @@
+_id: EzaxOfsIpvtJJOFK
+_key: '!items!EzaxOfsIpvtJJOFK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Wings of Fire
+system:
+  abilityType: su
+  actions:
+    - _id: 48mwjnmztymm73kd
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a swift action, you can manifest a pair of fiery wings that grant
+      you a fly speed of 60 feet with average maneuverability. You can use these
+      wings for 1 minute per day per oracle level. This duration does not need
+      to be consecutive, but it must be spent in 1 minute increments.</p>
+
+      <p>You must be at least 7th level before selecting this revelation.</p>
+  sources:
+    - id: PZO1115
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_wingsOfFire
+  tags:
+    - Revelation
+    - Flame Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

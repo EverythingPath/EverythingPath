@@ -1,0 +1,49 @@
+_id: 2szDdUmKabhOViHY
+_key: '!items!2szDdUmKabhOViHY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_11.jpg
+name: Retribution Hex
+system:
+  abilityType: su
+  actions:
+    - _id: UOmwicuI5yOgKGWz
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.int.mod'
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Will negates
+        type: will
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+  description:
+    value: >-
+      <p>A witch can place a retribution hex on a creature within 60 feet,
+      causing terrible wounds to open across the target’s flesh whenever it
+      deals damage to another creature in melee.</p><p>Immediately after the
+      hexed creature deals damage in melee, it takes half that damage (round
+      down). This damage bypasses any resistances, immunities, or damage
+      reduction the creature possesses.</p><p>This effect lasts for a number of
+      rounds equal to the witch’s Intelligence modifier.</p><p>A Will save
+      negates this effect.</p>
+  sources:
+    - id: PZO1115
+      pages: '68'
+  subType: classFeat
+  tags:
+    - Major Hex
+type: feat

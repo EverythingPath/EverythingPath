@@ -1,0 +1,46 @@
+_id: D14Nx9ByxLvrJ8L7
+_key: '!items!D14Nx9ByxLvrJ8L7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Battlefield Clarity
+system:
+  abilityType: ex
+  actions:
+    - _id: abaea0shcyb3oki4
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, as an immediate action, whenever you fail a saving throw
+      that causes you to become blind, deaf, frightened, panicked, paralyzed,
+      shaken, or stunned, you may attempt that saving throw again, with a +4
+      insight bonus on the roll. You must take the second result, even if it is
+      worse.</p>
+
+      <p>At 7th and 15th level, you can use this ability one additional time per
+      day.</p>
+  sources:
+    - id: PZO1115
+      pages: '45'
+  subType: classFeat
+  tag: classFeat_battlefieldClarity
+  tags:
+    - Revelation
+    - Battle Mystery
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 6), 1) + if(gte(@class.level, 15), 1)
+    per: day
+type: feat

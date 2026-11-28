@@ -1,0 +1,55 @@
+_id: 1s92QgosTGD2iEfX
+_key: '!items!1s92QgosTGD2iEfX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Wintry Touch
+system:
+  abilityType: su
+  actions:
+    - _id: 2trcwuoxjxlftlze
+      ability:
+        attack: dex
+      actionType: msak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - cold
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can perform a melee touch attack that deals
+      1d6 points of cold damage + 1 point for every two oracle levels you
+      possess.</p>
+
+      <p>You can use the wintry touch ability a number of times per day equal to
+      3 + your Charisma modifier.</p>
+
+      <p>At 11th level, any weapon that you wield is treated as a frost
+      weapon.</p>
+  subType: classFeat
+  tag: classFeat_wintryTouch
+  tags:
+    - Revelation
+    - Waves Mystery
+    - Winter Mystery
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

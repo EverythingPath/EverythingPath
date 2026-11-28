@@ -1,0 +1,38 @@
+_id: Y8Fa9bxd9Bc2NJJT
+_key: '!items!Y8Fa9bxd9Bc2NJJT'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/perception/eye-ringed-glow-angry-red.webp
+name: Smokesight
+system:
+  abilityType: su
+  actions:
+    - _id: 8jQJhaPhju59JFgt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+      target:
+        value: Creature touched
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>You can see normally through natural fog and smoke, as well as any fog
+      and smoke that you (but not others) magically create. A number of times
+      per day equal to 3 + your Intelligence bonus, you can touch another
+      creature as a standard action to grant it this vision for 1 hour.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Smoke School
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

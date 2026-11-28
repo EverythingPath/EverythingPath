@@ -1,0 +1,81 @@
+_id: QhRGBeQuwG6OWZxM
+_key: '!items!QhRGBeQuwG6OWZxM'
+_stats:
+  coreVersion: '12.343'
+folder: 4xIvyTbh6GAnTnPa
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Paddle-Foot Pistol
+system:
+  actions:
+    - _id: ljd4otk2q4sfyy7r
+      ability:
+        attack: _default
+        critMult: 3
+      actionType: rwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      ammo:
+        type: gunBullet
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - bludgeoning
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        maxIncrements: 10
+        units: ft
+        value: '20'
+  ammo:
+    capacity: 4
+    explode: 5
+    misfire: 2
+    type: gunBullet
+  baseTypes:
+    - Paddle-Foot Pistol
+  description:
+    unidentified: >-
+      <h3>Statistics</h3><p><b>Damage</b> 1d4 (small), 1d6 (medium);
+      <b>Critical</b> x3; <b>Range</b> 20 ft.; <b>Type</b> B and P</p>
+
+      <p><b>Misfire</b> 1-2 (5 ft.); <b>Capacity</b> 4</p>
+
+      <h3>Description</h3>
+
+      <p>This early firearm has four barrels, each of which can be fired one at
+      a time with a single adjustable flintlock. The paddle-foot pistol fires in
+      a 20-foot cone when making a scattering shot, and it has a 20-foot range
+      increment when firing a bullet.</p>
+
+      <p>Additionally, the paddle-foot pistol has a maximum range of three range
+      increments. Each barrel of a paddle-foot pistol can hold 1 dose of black
+      powder, along with either pellets or a bullet, or it can hold a single
+      alchemical cartridge.</p>
+  hardness: 10
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 2500
+  properties:
+    sct: true
+  sources:
+    - id: PZO9486
+      pages: '15'
+  subType: exotic
+  tags:
+    - Early Firearm
+  weaponGroups:
+    - firearms
+  weaponSubtype: ranged
+  weight:
+    value: 5
+type: weapon

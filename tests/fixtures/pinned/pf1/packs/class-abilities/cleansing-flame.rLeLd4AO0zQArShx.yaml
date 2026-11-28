@@ -1,0 +1,48 @@
+_id: rLeLd4AO0zQArShx
+_key: '!items!rLeLd4AO0zQArShx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/explosion-orange-2.jpg
+name: Cleansing Flame
+system:
+  abilityType: su
+  actions:
+    - _id: x84z9moookpa37m9
+      actionType: heal
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d8 + @attributes.hd.total
+            types:
+              - untyped
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 9th level, twice per day, you can use fire to restore the health of
+      yourself or your allies. As a standard action, you can wreathe your hand
+      in a halo of flame and touch yourself or another creature. The touch heals
+      2d8 + your character level points of damage. You can also remove one of
+      the following conditions affecting the target: 1d6 points of <em>ability
+      damage</em>, <em>blinded</em>, <em>confused</em>, <em>dazzled</em>,
+      <em>deafened</em>, diseased, <em>exhausted</em>, <em>fatigued</em>,
+      <em>nauseated</em>, poisoned, or <em>sickened</em>. At 20th level, you can
+      use this ability three times per day.</p>
+  subType: classFeat
+  tag: classFeat_cleansingFlame
+  uses:
+    maxFormula: 2 + if(gte(@class.level, 20), 1)
+    per: day
+type: feat

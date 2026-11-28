@@ -1,0 +1,48 @@
+_id: OZ1vgybloYDVfWff
+_key: '!items!OZ1vgybloYDVfWff'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/fireball-eerie-1.jpg
+name: Force Missile
+system:
+  abilityType: sp
+  actions:
+    - _id: undctjx4dh0rw0ch
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d4 + (floor(@class.level / 2))
+            types:
+              - force
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: medium
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action you can unleash a force missile that automatically
+      strikes a foe, as @UUID[Compendium.pf1.spells.49yc9dpr4kvgki2s]{Magic
+      Missile}. The force missile deals 1d4 points of damage plus the damage
+      from your intense spells evocation power. This is a force effect. You can
+      use this ability a number of times per day equal to 3 + your
+      <em>Intelligence</em> modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_forceMissile
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

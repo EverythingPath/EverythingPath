@@ -1,0 +1,51 @@
+_id: hotnncd59q6q6t9z
+_key: '!items!hotnncd59q6q6t9z'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Alchemical Tinkering
+system:
+  actions:
+    - _id: 9fyvxv2b8gqgh2yx
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        type: fort
+      target:
+        value: firearm or alchemical item touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You transform one alchemical item or firearm into another alchemical
+      item or firearm of the same or lesser cost. Magic items are unaffected by
+      this spell. At the end of the spell's duration, alchemical items used
+      while transformed are destroyed and do not return to a usable state and
+      firearms transformed revert back to their original type.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      cleric: 2
+      oracle: 2
+      sorcerer: 1
+      warpriest: 2
+      witch: 1
+      wizard: 1
+  school: trs
+  sources:
+    - id: PZO1121
+      pages: '155'
+type: spell

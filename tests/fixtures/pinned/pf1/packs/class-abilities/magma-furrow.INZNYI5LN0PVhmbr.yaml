@@ -1,0 +1,54 @@
+_id: INZNYI5LN0PVhmbr
+_key: '!items!INZNYI5LN0PVhmbr'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/earth/projectiles-lava-salvo-orange.webp
+name: Magma Furrow
+system:
+  abilityType: su
+  actions:
+    - _id: ZF9Yv2yvNboUF3nL
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 20 ft. line
+      damage:
+        parts:
+          - formula: 1d6 + floor(@class.level / 2)
+            types:
+              - fire
+      measureTemplate:
+        size: '20'
+        type: ray
+      name: Use
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex half
+        type: ref
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>As a standard action, you can send forth a 20-foot line of magma. Any
+      creature in this line takes 1d6 points of fire damage + 1 point for every
+      2 wizard levels you have. A successful Reflex save (DC = 10 + half your
+      wizard level + your Intelligence modifier) halves this damage. In
+      addition, the ground in this area remains molten for another 1d4 rounds.
+      Creatures that begin their turns in the area can move out that turn
+      without penalty, but those that enter the area each take 1d6 points of
+      fire damage. You can use this ability a number of times per day equal to 3
+      + your Intelligence modifier.</p>
+  sources:
+    - id: PZO9483
+      pages: '21'
+  subType: classFeat
+  tags:
+    - Magma School
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat
