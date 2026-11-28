@@ -1,0 +1,75 @@
+_id: 6eYkzFOhZc6mL1Sc
+_key: '!items!6eYkzFOhZc6mL1Sc'
+_stats:
+  coreVersion: '12.331'
+folder: 2Gz1809xjufRnaum
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Alternate Spell-Like Ability (Skinwalker - Aerieborn)
+system:
+  abilityType: sp
+  actions:
+    - _id: FKADrhXd6yZteFuY
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.68m9du7zw2di7ew6]{Feather
+        Fall}</p><p>The affected creatures or objects fall slowly. Feather fall
+        instantly changes the rate at which the targets fall to a mere
+        @Distance[60 ft;dual] per round (equivalent to the end of a fall from a
+        few feet), and the subjects take no damage upon landing while the spell
+        is in effect. When the spell duration expires, a normal rate of falling
+        resumes.</p><p>The spell affects one or more Medium or smaller creatures
+        (including gear and carried objects up to each creature's maximum load)
+        or objects, or the equivalent in larger creatures: a Large creature or
+        object counts as two Medium creatures or objects, a Huge creature or
+        object counts as four Medium creatures or objects, and so
+        forth.</p><p>This spell has no special effect on ranged weapons unless
+        they are falling quite a distance. If the spell is cast on a falling
+        item, the object does half normal damage based on its weight, with no
+        bonus for the height of the drop.</p><p>Feather fall works only upon
+        free-falling objects. It does not affect a sword blow or a charging or
+        flying creature.</p>
+      duration:
+        units: spec
+        value: until landing or [[@attributes.hd.total]] rounds
+      name: Feather fall
+      notes:
+        effect:
+          - Use Wisdom for concentration checks
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: >-
+          [[@attributes.hd.total]] Medium or smaller freefalling object or
+          creatures, no two of which can be more than 20 ft. (6 m) apart
+      uses:
+        self:
+          maxFormula: gte(@abilities.wis.total, 11)
+          per: day
+  description:
+    value: >-
+      <p><strong>Race</strong>: Skinwalker - Aerieborn</p><p><strong>Replaced
+      Trait</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.ZEVsEIPpOyHmpmEe]{Spell-Like
+      Ability (Skinwalker)}</p><hr /><p><strong>Alternate Spell-Like
+      Ability</strong> feather fall 1/day</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO90115
+      pages: '89'
+  subType: racial
+  tags:
+    - Skinwalker
+    - Aerieborn
+  traitCategory: magical
+  uses:
+    value: 0
+type: feat

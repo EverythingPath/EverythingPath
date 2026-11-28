@@ -1,0 +1,83 @@
+_id: s7jujnadsgd9sroc
+_key: '!items!s7jujnadsgd9sroc'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/magic/perception/eye-ringed-green.webp
+name: Seek Thoughts
+system:
+  actions:
+    - _id: ng98s81jg39n7q3f
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 40-ft.-radius emanation centered on you
+      duration:
+        concentration: true
+        units: spec
+        value: concentration, up to 1 minute/level
+      measureTemplate:
+        size: '40'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: '40'
+      save:
+        description: Will negates
+        type: will
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>Similar to <i>detect thoughts</i>, <i>seek thoughts</i> allows you to
+      sift through the surface thoughts of those around you. You may scan for
+      either the answer to a simple question (such as "Where is the hidden lair
+      of the wererats?") or for information on a general topic (such as the
+      beliefs of an evil cult). You detect the number of creatures who are
+      thinking about this question or topic within range, as well as their
+      location if they are visible to you. <i>Seek thoughts</i> does not let you
+      read actual surface thoughts, only if a given creature is thinking about
+      the topic you are concentrating on. A successful Will save prevents you
+      from sensing a creature's thoughts for the duration of the
+      spell.</p><p>You can maintain concentration on <i>seek thoughts</i> while
+      you engage in normal conversation, allowing you to ask leading questions
+      about topics of interest. A creature conversing with you while you
+      concentrate can notice that you are distracted with a successful DC 25
+      Sense Motive check.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      alchemist: 3
+      arcanist: 3
+      bard: 3
+      inquisitor: 3
+      investigator: 3
+      medium: 2
+      mesmerist: 3
+      occultist: 3
+      psychic: 2
+      skald: 3
+      sorcerer: 3
+      spiritualist: 3
+      summoner: 3
+      summonerUnchained: 3
+      witch: 3
+      wizard: 3
+    subDomain:
+      Thought: 3
+  level: 3
+  materials:
+    value: a handful of copper coins
+  school: div
+  sources:
+    - id: PZO1115
+      pages: '242'
+  sr: false
+type: spell

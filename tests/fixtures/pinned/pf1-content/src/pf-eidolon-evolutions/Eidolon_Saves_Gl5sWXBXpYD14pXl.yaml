@@ -1,0 +1,23 @@
+_id: Gl5sWXBXpYD14pXl
+_key: '!items!Gl5sWXBXpYD14pXl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/greater-shield-focus.jpg
+name: Eidolon Saves
+system:
+  associations:
+    classes:
+      - Eidolon
+  description:
+    value: >-
+      <p>These are the eidolon's base saving throw bonuses. An eidolon possesses
+      two good saving throws and one bad saving throw, determined by the
+      creature's base form.</p><p><strong>Good Saves</strong>:
+      [[ifelse(gt(@class.level, 14), 8, ifelse(gt(@class.level, 9), 6,
+      ifelse(gt(@class.level, 4), 4, ifelse(gt(@class.level, 1), 3,
+      2))))]]</p><p><strong>Bad Save</strong>: [[(floor((@class.level + 1) /
+      4))]]</p><p>&nbsp;</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+type: feat

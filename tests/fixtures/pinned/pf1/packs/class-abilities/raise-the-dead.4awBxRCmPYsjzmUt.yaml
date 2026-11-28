@@ -1,0 +1,46 @@
+_id: 4awBxRCmPYsjzmUt
+_key: '!items!4awBxRCmPYsjzmUt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Raise the Dead
+system:
+  abilityType: su
+  actions:
+    - _id: xayzjnlfk9i8n979
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@abilities.cha.mod'
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>As a standard action, you can summon a single skeleton or zombie to
+      serve you. The undead creature has a number of Hit Dice equal to your
+      oracle level. It remains for a number of rounds equal to your Charisma
+      modifier.</p>
+
+      <p>At 7th level, you can summon a bloody skeleton or fast zombie.</p>
+
+      <p>At 15th level, you can summon an advanced skeleton or zombie. You can
+      use this ability once per day plus one additional time per day at 10th
+      level.</p>
+  sources:
+    - id: PZO1115
+      pages: '46'
+  subType: classFeat
+  tag: classFeat_raiseTheDead
+  tags:
+    - Revelation
+    - Bones Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 10), 1)
+    per: day
+type: feat

@@ -1,0 +1,62 @@
+_id: zuJ9vpa3G83SwLzd
+_key: '!items!zuJ9vpa3G83SwLzd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Dagger of Venom
+system:
+  actions:
+    - _id: 4sirwdlnit650f0f
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: daggerOfVenom
+  aura:
+    school: nec
+  baseTypes:
+    - Dagger
+  cl: 5
+  description:
+    value: >-
+      <p>This black +1 dagger has a serrated edge. It allows the wielder to use
+      a poison effect (as the spell, save DC 14) upon a creature struck by the
+      blade once per day. The wielder can decide to use the power after he has
+      struck. Doing so is a free action, but the poison effect must be invoked
+      in the same round that the dagger strikes.</p><p><strong>Base
+      Item</strong>: 
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, poison</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8302
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1110
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

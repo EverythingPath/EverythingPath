@@ -1,0 +1,37 @@
+_id: xspAU6HG7Fd5l32s
+_key: '!items!xspAU6HG7Fd5l32s'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Relentless Footing
+system:
+  abilityType: ex
+  actions:
+    - _id: 5mugwror1b9ydy2e
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a swift action, you can add 10 feet to your land speed. This
+      increase counts as an enhancement bonus, and it affects your jumping
+      distance as normal for increased speed. You can use this ability a number
+      of times per day equal to 3 + your Wisdom bonus (minimum 1).</p>
+  subType: classFeat
+  tag: classFeat_relentlessFooting
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

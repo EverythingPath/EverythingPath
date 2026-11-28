@@ -1,0 +1,59 @@
+_id: gm6k0elwjnuplfwd
+_key: '!items!gm6k0elwjnuplfwd'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Daybreak Arrow
+system:
+  actions:
+    - _id: 0qlynbxzchyakjhg
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: 10 * @cl
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Fortitude negates (object)
+        harmless: true
+        type: fort
+      target:
+        value: >-
+          up to 50 pieces of ammunition, all of which must be together at the
+          time of casting
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause ammunition, including shuriken, to exude radiant energy.
+      Creatures that take penalties in bright light take these penalties for 1
+      round after being struck by such ammunition. Undead and creatures harmed
+      by sunlight take an additional 1d6 points of damage from such projectiles.
+      This extra damage and half of any other damage you deal with an affected
+      projectile results directly from radiant energy and is not subject to
+      damage resistance. Such a projectile sheds light as if it were a sunrod
+      for 1 round after it is fired or thrown.</p>
+  descriptors:
+    - light
+  learnedAt:
+    class:
+      cleric: 3
+      inquisitor: 3
+      occultist: 3
+      oracle: 3
+      paladin: 3
+      warpriest: 3
+  level: 3
+  school: evo
+  sources:
+    - id: PZO1118
+      pages: '226'
+type: spell

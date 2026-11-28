@@ -1,0 +1,49 @@
+_id: Gd6OEMdAlNz4dwIt
+_key: '!items!Gd6OEMdAlNz4dwIt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_24.jpg
+name: Nanite Strike
+system:
+  abilityType: ex
+  actions:
+    - _id: xrvxafbdb8v7r4ai
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: held weapon
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 1st level as a <em>free action</em>, you can cause nanites to flow
+      from your body and coat the striking end of any manufactured melee weapon
+      you wield. When you hit with a melee attack using this weapon, some of the
+      nanites infect the blood of the victim (Poison—injury; save <em>Fort</em>
+      DC 10 + 1/2 your <em>sorcerer</em> level + your <em>Con</em> modifier;
+      frequency 1/round for 6 rounds; effect 1 <em>Str</em> damage; cure 1
+      save).</p>
+
+      <p>At 5th level, weapons you use with this ability are treated as magical
+      for the purposes of overcoming <em>DR</em>, and the <em>poison</em> also
+      deals 1 point of <em>Constitution damage</em>. At 7th level, the damage
+      increases to 1d2 points of <em>Constitution damage</em> and 1d2 points of
+      <em>Strength damage</em>. At 11th level, the cure becomes two successful
+      saves.</p>
+
+      <p>You can use this ability for a number of rounds per day equal to 3 +
+      your <em>Charisma</em> modifier; these rounds need not be consecutive.</p>
+  subType: classFeat
+  tag: classFeat_naniteStrike
+  uses:
+    maxFormula: 3 + @abilities.cha.mod
+    per: day
+type: feat

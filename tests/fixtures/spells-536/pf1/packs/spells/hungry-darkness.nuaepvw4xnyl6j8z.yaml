@@ -1,0 +1,63 @@
+_id: nuaepvw4xnyl6j8z
+_key: '!items!nuaepvw4xnyl6j8z'
+_stats:
+  coreVersion: '12.343'
+folder: NE0tEwSvcr71GnPC
+img: icons/magic/light/beam-rays-blue.webp
+name: Hungry Darkness
+system:
+  actions:
+    - _id: 626nkqbj0dwtfw5c
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 60-ft.-radius spread
+      damage:
+        parts:
+          - formula: 3d6
+            types:
+              - force
+      duration:
+        dismiss: true
+        units: round
+        value: '@cl'
+      measureTemplate:
+        size: '60'
+        type: circle
+      name: Use
+      range:
+        units: close
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell creates an area of intense blackness, as <i>deeper
+      darkness</i>, but filled with unseen chewing teeth and ravenous maws. Any
+      creatures beginning its turn within the <i>hungry darkness</i> is gnawed
+      and slashed by these unseen fangs of force, dealing 3d6 points of force
+      damage and 2 points of Constitution damage per round. Once a creature
+      leaves the cloud, it continues to take 1d6 points of bleed damage each
+      round until it receives magical healing or enters an area of bright light.
+      Spell resistance can prevent damage from the <i>hungry darkness</i> but
+      not against the darkness it creates.</p>
+  descriptors:
+    - darkness
+    - force
+  learnedAt:
+    class:
+      arcanist: 7
+      sorcerer: 7
+      wizard: 7
+  level: 7
+  materials:
+    value: a bat's tooth
+  school: evo
+  sources:
+    - id: PZO9237
+      pages: '56'
+type: spell

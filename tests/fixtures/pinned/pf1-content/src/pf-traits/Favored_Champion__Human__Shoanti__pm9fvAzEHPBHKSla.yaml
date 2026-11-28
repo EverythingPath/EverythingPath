@@ -1,0 +1,49 @@
+_id: pm9fvAzEHPBHKSla
+_key: '!items!pm9fvAzEHPBHKSla'
+_stats:
+  coreVersion: '12.331'
+folder: OJcM9ZeR3TB33I5m
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Favored Champion (Human; Shoanti)
+system:
+  actions:
+    - _id: EnyzuGBXqhORwBOo
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: reroll combat maneuver check
+  contextNotes:
+    - target: cmb
+      text: >-
+        Once per day as an immediate action when you fail a combat maneuver
+        check, you can reroll it. You must take the second result even if it is
+        worse.
+  description:
+    value: >-
+      <p><em>Omens from the spirits indicated you would be a great champion
+      against your tribe’s enemies.</em></p><p><strong>Requirements</strong>:
+      Shoanti Human Heritage</p><p><strong>Benefits</strong>: Once per day as an
+      immediate action when you fail a combat maneuver check, you can reroll it.
+      You must take the second result even if it is worse.</p>
+  scriptCalls:
+    - _id: RRtr48PkiLELRkfP
+      category: postUse
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll Combat Maneuver
+      type: script
+      value: 'await actor.rollAttack({ maneuver: true });'
+  sources:
+    - id: PZO9280
+      pages: '195'
+  subType: trait
+  tags:
+    - Human
+    - Shoanti
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

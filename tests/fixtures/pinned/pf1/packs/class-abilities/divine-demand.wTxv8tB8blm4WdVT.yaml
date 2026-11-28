@@ -1,0 +1,49 @@
+_id: wTxv8tB8blm4WdVT
+_key: '!items!wTxv8tB8blm4WdVT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Divine Demand
+system:
+  abilityType: su
+  actions:
+    - _id: e9hrxa68e2b8v6zc
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 6th level, you can petition your divine patron for far greater power
+      than you deserve. Activating this ability is a swift action that you must
+      use as you cast a spell that has a reduced (but not negated) effect on a
+      successful save. The saving throw DC of the spell increases by 2, and you
+      gain a +2 bonus on caster level checks to overcome spell resistance with
+      the spell. Any creature that succeeds at the saving throw instead avoids
+      the effect entirely. If half or more of the targets are unaffected, you
+      become shaken for a number of rounds equal to the spell’s level. If all of
+      the targets are unaffected, you instead lose the ability to cast divine
+      spells, channel energy, and use domain powers for 1d4+1 rounds; you can
+      end this loss as a full-round action by loudly apologizing to your patron
+      deity as a full-round action that provokes attacks of opportunity. You can
+      use this ability once per day at 6th level, and one additional time per
+      day for every 4 levels beyond 6th.</p>
+
+      <p>This power replaces the Divine Presence power of the Glory Domain or
+      the Leadership power of the Nobility Domain.</p>
+  subType: classFeat
+  tag: classFeat_divineDemand
+  uses:
+    maxFormula: floor((@class.level - 2) / 4)
+    per: day
+type: feat

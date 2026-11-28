@@ -1,0 +1,44 @@
+_id: Rjh7zvCZr2BEgioo
+_key: '!items!Rjh7zvCZr2BEgioo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/wind-grasp-magenta-1.jpg
+name: Agile Feet (Domain Power)
+system:
+  abilityType: su
+  actions:
+    - _id: d43gu3lqgcfrfbel
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a free action, you can gain increased mobility for 1 round. For the
+      next round, you ignore all difficult terrain and do not take any penalties
+      for moving through it. You can use this ability a number of times per day
+      equal to 3 + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '47'
+  subType: classFeat
+  tag: classFeat_agileFeet
+  tags:
+    - Domain Power
+    - Travel Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

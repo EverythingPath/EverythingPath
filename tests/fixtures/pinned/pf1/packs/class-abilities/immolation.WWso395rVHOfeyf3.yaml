@@ -1,0 +1,42 @@
+_id: WWso395rVHOfeyf3
+_key: '!items!WWso395rVHOfeyf3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/fire_12.jpg
+name: Immolation
+system:
+  abilityType: su
+  actions:
+    - _id: qsju6g7le1ppyl7a
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: Self
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 3rd level, you gain the ability to surround yourself in fire as a
+      <em>swift action</em>. This fire burns for a number of rounds per day
+      equal to your character level plus your <em>Charisma</em> bonus. These
+      rounds do not have to be consecutive.</p>
+
+      <p>Any unarmed attacks you make while affected by immolation deal an
+      additional 1d6 points of fire damage, and any creature that ends its turn
+      adjacent to you while you’re affected by immolation also takes 1d6 points
+      of fire damage.</p>
+  subType: classFeat
+  tag: classFeat_immolation
+  uses:
+    maxFormula: '@attributes.hd.total + @abilities.cha.mod'
+    per: day
+type: feat

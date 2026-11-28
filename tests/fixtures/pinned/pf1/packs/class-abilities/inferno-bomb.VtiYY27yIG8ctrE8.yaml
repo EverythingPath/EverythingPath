@@ -1,0 +1,93 @@
+_id: VtiYY27yIG8ctrE8
+_key: '!items!VtiYY27yIG8ctrE8'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/air/fog-gas-smoke-swirling-orange.webp
+name: Inferno Bomb
+system:
+  actions:
+    - _id: 9VIHGKKsU0ZVEcO1
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d6
+            types:
+              - fire
+        parts:
+          - formula: 1d6
+            types:
+              - fire
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage
+        type: ref
+      splash: true
+      touch: true
+    - _id: VSIGcVxfm9rntOOY
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 6d6
+            types:
+              - fire
+      duration:
+        units: round
+        value: '@class.level'
+      measureTemplate:
+        color: '#cc7228'
+        size: '10'
+        type: circle
+      name: Incendiary Cloud
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex half
+        type: ref
+      uses:
+        autoDeductChargesCost: '0'
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>The effects of the smoke created by an alchemist's bomb duplicate the
+      effects of @UUID[Compendium.pf1.spells.iq0as5470o8q9y39]{Incendiary Cloud}
+      instead of @UUID[Compendium.pf1.spells.g33euis7yi9pwddy]{Fog Cloud},
+      filling an area equal to twice the bomb's splash radius for 1 round per
+      level.</p><p>An alchemist must be at least 16th level and must possess the
+      smoke bomb discovery before selecting this discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '30'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

@@ -1,0 +1,51 @@
+_id: FZdWscHJvJpGPoDz
+_key: '!items!FZdWscHJvJpGPoDz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/lighting-sky-3.jpg
+name: Lightning Lord
+system:
+  abilityType: sp
+  actions:
+    - _id: te1mt54jg5xchnjc
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      measureTemplate:
+        size: '15'
+        type: circle
+      name: Use
+      range:
+        units: ft
+        value: 100 + (10 * @class.level)
+      target:
+        value: one or more creatures
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, you can call down a number of bolts of lightning per day
+      equal to your cleric level. You can call down as many bolts as you want
+      with a single standard action, but no creature can be the target of more
+      than one bolt and no two targets can be more than 30 feet apart. This
+      ability otherwise functions as
+      @UUID[Compendium.pf1.spells.Item.rrheoc0h80mbss7z]{call lightning}.</p>
+  sources:
+    - id: PZO1110
+      pages: '48'
+  subType: classFeat
+  tag: classFeat_lightningLord
+  tags:
+    - Domain Power
+    - Weather Domain
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

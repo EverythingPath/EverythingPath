@@ -1,0 +1,49 @@
+_id: eEuj2X72Q5jP6xAj
+_key: '!items!eEuj2X72Q5jP6xAj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_03.jpg
+name: Unity
+system:
+  abilityType: su
+  actions:
+    - _id: p8rtmomy7bne641y
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      range:
+        units: personal
+      target:
+        value: allies within 30 ft.
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>At 8th level, whenever a spell or effect targets you and one or more
+      allies within 30 feet, you can use this ability to allow your allies to
+      use your saving throw against the effect in place of their own. Each ally
+      must decide individually before the rolls are made. Using this ability is
+      an immediate action. You can use this ability once per day at 8th level,
+      and one additional time per day for every four cleric levels beyond
+      8th.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_unity
+  tags:
+    - Domain Power
+    - Community Domain
+  uses:
+    maxFormula: floor((@class.level - 4) / 4)
+    per: day
+type: feat

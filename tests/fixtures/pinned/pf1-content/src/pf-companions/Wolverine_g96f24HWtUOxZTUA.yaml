@@ -1,0 +1,1182 @@
+_id: g96f24HWtUOxZTUA
+_key: '!actors!g96f24HWtUOxZTUA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/races/creature-types/animal.png
+items:
+  - _id: 8a3tm7xOgCyBHA3s
+    _key: '!actors.items!g96f24HWtUOxZTUA.8a3tm7xOgCyBHA3s'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-head.jpg
+    name: Bite
+    system:
+      actions:
+        - _id: tirt0vjdwn2dyn6k
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackName: Bite
+          damage:
+            parts:
+              - formula: sizeRoll(1, 6, @size)
+                types:
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-head.jpg
+          name: Attack
+          range:
+            units: melee
+      subType: natural
+    type: attack
+  - _id: txPh90CYQgzbbfaH
+    _key: '!actors.items!g96f24HWtUOxZTUA.txPh90CYQgzbbfaH'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-paw-bear.jpg
+    name: Claws
+    system:
+      actions:
+        - _id: db4pgcbirtyub6q7
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackName: Claws
+          damage:
+            parts:
+              - formula: sizeRoll(1, 4, @size)
+                types:
+                  - bludgeoning
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-paw-bear.jpg
+          name: Attack
+          range:
+            units: melee
+      subType: natural
+    type: attack
+  - _id: O8SkDL8x7yRsKKMx
+    _key: '!actors.items!g96f24HWtUOxZTUA.O8SkDL8x7yRsKKMx'
+    _stats:
+      coreVersion: '12.331'
+    flags:
+      pf1:
+        links:
+          classAssociations:
+            1p9wyQvBQ3Yp3S5A: 4
+            4XwKVd2jDZOo2ppX: 1
+            7aJWnfM1gUxxvLs6: 15
+            8FTr8SNim5cpdlwK: 1
+            8i9LJTWftG8XpsPF: 6
+            C7LEKbLr3Sac4nfa: 12.75
+            CtCZv6tToPJdyOrU: 1
+            DkLwhpxQheO7FgWv: 1
+            Ga4fyKIhRM1HpMql: 3.75
+            HpQSsZ487Ezaa2ie: 3.75
+            LdkQxuVv150NYTrQ: 1
+            MAHuWnNMW17Ecm8d: 1
+            O97rnGgcXJb8Fe14: 1
+            Peh2E25nVPZ79wWi: 1
+            Q4wLk8kGyRrxeZIW: 3.75
+            Rn53PvUY7uixU2Jy: 1
+            ThwX7ajSX4b2FCO4: 1
+            U7wyruGySNeY1VuF: 3.75
+            XKV3LXO1pt9Akftk: 1
+            XPu7rUWyaARo4bzH: 9
+            XfkmSLTPuWxCYqAv: 4
+            YBmJecAAUBgoL2kr: 1
+            YIxGbwVWsU097kpe: 3
+            anblAslB6FTUdv4C: 1
+            ewMbZykaOiSYg9e7: 1
+            flDfPN4kd6rQVodc: 3
+            i1Zaa9K4xrnGHLI5: 1
+            iPTeoLEmZjosmpHM: 3.75
+            ixsnAPKrnuRek0lV: 1
+            lvFc2uF8WFhYRC7v: 1
+            m0kR0wJNmEwKQBFZ: 4
+            ohHc5o0pE4QE3kkj: 8
+            pjL98Lv2i2aXsaVT: 4
+            vIf6jIszJnzCCcsW: 6
+            z11v22Y9vdY5TZq2: 3
+            zvUjSw2hoYzH3Zbl: 1
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: Animal Companion
+    system:
+      bab: med
+      classSkills:
+        acr: true
+        clm: true
+        fly: true
+        per: true
+        ste: true
+        swm: true
+      customHD: (round(@item.level * 0.75) + 1)
+      description:
+        value: >-
+          <p>An animal companion&rsquo;s abilities are determined by the
+          druid&rsquo;s&nbsp;level and its animal racial
+          traits.&nbsp;<strong>Table: Animal Companion Base
+          Statistics</strong>&nbsp;determines many of the base statistics of the
+          animal companion. They remain creatures of the animal type for
+          purposes of determining which spells can affect them.</p><table
+          style="width: 547px; height: 688px;" border="1"
+          cellpadding="5"><caption><strong>Table: Animal Companion Base
+          Statistics</strong></caption>
+
+          <thead>
+
+          <tr>
+
+          <th class="text" style="text-align: center; width: 41px;">Class
+          Level</th>
+
+          <th class="text" style="text-align: center; width: 24px;">HD</th>
+
+          <th class="text" style="text-align: center; width: 30px;">BAB</th>
+
+          <th class="text" style="text-align: center; width: 26px;">Fort</th>
+
+          <th class="text" style="text-align: center; width: 23px;">Ref</th>
+
+          <th class="text" style="text-align: center; width: 26px;">Will</th>
+
+          <th class="text" style="text-align: center; width: 35px;">Skills</th>
+
+          <th class="text" style="text-align: center; width: 33px;">Feats</th>
+
+          <th class="text" style="text-align: center; width: 65px;">Natural
+          Armor<br />Bonus</th>
+
+          <th class="text" style="text-align: center; width: 49px;">Str/Dex
+          Bonus</th>
+
+          <th class="text" style="text-align: center; width: 55px;">Bonus
+          Tricks</th>
+
+          <th class="text" style="text-align: center; width:
+          127px;">Special</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">1st</td>
+
+          <td class="number" style="text-align: center; width: 24px;">2</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+0</td>
+
+          <td class="number" style="text-align: center; width: 35px;">2</td>
+
+          <td class="number" style="text-align: center; width: 33px;">1</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+0</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+0</td>
+
+          <td class="number" style="text-align: center; width: 55px;">1</td>
+
+          <td class="text" style="width: 127px;">Link,&nbsp;share spells</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">2nd</td>
+
+          <td class="number" style="text-align: center; width: 24px;">3</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 35px;">3</td>
+
+          <td class="number" style="text-align: center; width: 33px;">2</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+0</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+0</td>
+
+          <td class="number" style="text-align: center; width: 55px;">1</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">3rd</td>
+
+          <td class="number" style="text-align: center; width: 24px;">3</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 35px;">3</td>
+
+          <td class="number" style="text-align: center; width: 33px;">2</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 55px;">2</td>
+
+          <td class="text" style="width: 127px;">Evasion</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">4th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">4</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 35px;">4</td>
+
+          <td class="number" style="text-align: center; width: 33px;">2</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 55px;">2</td>
+
+          <td class="text" style="width: 127px;">Ability score increase</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">5th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">5</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 35px;">5</td>
+
+          <td class="number" style="text-align: center; width: 33px;">3</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+1</td>
+
+          <td class="number" style="text-align: center; width: 55px;">2</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">6th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">6</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 35px;">6</td>
+
+          <td class="number" style="text-align: center; width: 33px;">3</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 55px;">3</td>
+
+          <td class="text" style="width: 127px;">Devotion</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">7th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">6</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 35px;">6</td>
+
+          <td class="number" style="text-align: center; width: 33px;">3</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 55px;">3</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">8th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">7</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 35px;">7</td>
+
+          <td class="number" style="text-align: center; width: 33px;">4</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 55px;">3</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">9th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">8</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+2</td>
+
+          <td class="number" style="text-align: center; width: 35px;">8</td>
+
+          <td class="number" style="text-align: center; width: 33px;">4</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 55px;">4</td>
+
+          <td class="text" style="width: 127px;">Ability score
+          increase,&nbsp;Multiattack</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">10th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">9</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 35px;">9</td>
+
+          <td class="number" style="text-align: center; width: 33px;">5</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 55px;">4</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">11th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">9</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 35px;">9</td>
+
+          <td class="number" style="text-align: center; width: 33px;">5</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 55px;">4</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">12th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">10</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+7</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+7</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+7</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 35px;">10</td>
+
+          <td class="number" style="text-align: center; width: 33px;">5</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 55px;">5</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">13th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">11</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+7</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+7</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+3</td>
+
+          <td class="number" style="text-align: center; width: 35px;">11</td>
+
+          <td class="number" style="text-align: center; width: 33px;">6</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 55px;">5</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">14th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">12</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 35px;">12</td>
+
+          <td class="number" style="text-align: center; width: 33px;">6</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 55px;">5</td>
+
+          <td class="text" style="width: 127px;">Ability score increase</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">15th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">12</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 35px;">12</td>
+
+          <td class="number" style="text-align: center; width: 33px;">6</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 55px;">6</td>
+
+          <td class="text" style="width: 127px;">Improved evasion</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">16th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">13</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+8</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 35px;">13</td>
+
+          <td class="number" style="text-align: center; width: 33px;">7</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 55px;">6</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">17th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">14</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+4</td>
+
+          <td class="number" style="text-align: center; width: 35px;">14</td>
+
+          <td class="number" style="text-align: center; width: 33px;">7</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 55px;">6</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">18th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">15</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+11</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 35px;">15</td>
+
+          <td class="number" style="text-align: center; width: 33px;">8</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+12</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 55px;">7</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">19th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">15</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+11</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+9</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 35px;">15</td>
+
+          <td class="number" style="text-align: center; width: 33px;">8</td>
+
+          <td class="number" style="text-align: center; width: 65px;">+12</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 55px;">7</td>
+
+          <td class="marker" style="width: 127px;">&mdash;</td>
+
+          </tr>
+
+          <tr>
+
+          <td class="number" style="text-align: center; width: 39px;">20th</td>
+
+          <td class="number" style="text-align: center; width: 24px;">16</td>
+
+          <td class="number" style="text-align: center; width: 30px;">+12</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 23px;">+10</td>
+
+          <td class="number" style="text-align: center; width: 26px;">+5</td>
+
+          <td class="number" style="text-align: center; width: 35px;">16</td>
+
+          <td class="number" style="text-align: center; width: 33px;">8</td>
+
+          <td class="number" style="text-align: center; width: 67px;">+12</td>
+
+          <td class="number" style="text-align: center; width: 49px;">+6</td>
+
+          <td class="number" style="text-align: center; width: 57px;">7</td>
+
+          <td class="text" style="width: 127px;">Ability score increase</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <hr />
+
+          <h2>Animal Skills</h2>
+
+          <p>Animal companions can have ranks in any of the following
+          skills:</p>
+
+          <ul>
+
+          <li>Acrobatics* (Dex)</li>
+
+          <li>Climb* (Str)</li>
+
+          <li>Escape Artist (Dex)</li>
+
+          <li>Fly* (Dex)</li>
+
+          <li>Intimidate (Cha)</li>
+
+          <li>Perception* (Wis)</li>
+
+          <li>Stealth* (Dex)</li>
+
+          <li>Survival (Wis)</li>
+
+          <li>Swim* (Str)</li>
+
+          </ul>
+
+          <p>All of the skills marked with an (*) are class skills for animal
+          companions. Animal companions with an Intelligence of 3 or higher can
+          put ranks into any skill.</p>
+      links:
+        classAssociations:
+          - level: 1
+            name: Bonus Tricks
+            uuid: Compendium.pf-content.pf-companion-features.Item.I9aVgYTVbwwmdZYz
+          - level: 1
+            name: Link
+            uuid: Compendium.pf-content.pf-companion-features.Item.g6t6hQoc95ASlz7D
+          - level: 1
+            name: Natural Armor Bonus
+            uuid: Compendium.pf-content.pf-companion-features.Item.rSxgmcPwAAmFL4r9
+          - level: 1
+            name: Share Spells
+            uuid: Compendium.pf-content.pf-companion-features.Item.ZaBFpK3HT49DAUpE
+          - level: 1
+            name: STR/DEX Bonus
+            uuid: Compendium.pf-content.pf-companion-features.Item.nWKp65a3AOFqJOs6
+          - level: 1
+            name: Animal Companion Feats
+            uuid: Compendium.pf-content.pf-companion-features.Item.w8QhU9qZ4VXxO4Ij
+          - level: 3
+            name: Evasion
+            uuid: Compendium.pf-content.pf-companion-features.Item.Jcth45jjTCvvGBUS
+          - level: 4
+            name: Ability Score Increase
+            uuid: Compendium.pf-content.pf-companion-features.Item.HYLK9yCcU73xaVNS
+          - level: 6
+            name: Devotion
+            uuid: Compendium.pf-content.pf-companion-features.Item.5uKoaeTitZUnfnQ1
+          - level: 9
+            name: Multiattack
+            uuid: Compendium.pf-content.pf-companion-features.Item.fZ8uC8TAnvzYp9YQ
+          - level: 15
+            name: Improved Evasion
+            uuid: Compendium.pf-content.pf-companion-features.Item.FLDY1YB8IHw4G4gV
+      savingThrows:
+        fort:
+          value: high
+        ref:
+          value: high
+      skillsPerLevel: 1
+      tag: animalCompanion
+    type: class
+  - _id: Peh2E25nVPZ79wWi
+    _key: '!actors.items!g96f24HWtUOxZTUA.Peh2E25nVPZ79wWi'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/fish.jpg
+    name: Bonus Tricks
+    system:
+      associations:
+        classes:
+          - Animal Companion
+      class: animalCompanion
+      description:
+        value: >-
+          <p><strong>Tricks selected</strong>:&nbsp;</p>
+
+          <ol>
+
+          <li>&nbsp;</li>
+
+          </ol>
+
+          <hr />
+
+          <p>Bonus Tricks Granted: [[(floor(@class.level / 3) + 1)]]</p>
+
+          <p>The value given in this column is the total number of
+          &ldquo;bonus&rdquo; tricks that the animal knows in addition to any
+          that the druid might choose to teach it (see the Handle Animal skill
+          for more details on how to teach an animal tricks). These bonus tricks
+          don't require any training time or Handle Animal checks, and they
+          don't count against the normal limit of tricks known by the animal.
+          The druid selects these bonus tricks, and once selected, they can't be
+          changed.&nbsp;</p>
+      subType: classFeat
+    type: feat
+  - _id: CtCZv6tToPJdyOrU
+    _key: '!actors.items!g96f24HWtUOxZTUA.CtCZv6tToPJdyOrU'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/quick-draw.jpg
+    name: Link
+    system:
+      abilityType: ex
+      associations:
+        classes:
+          - Animal Companion
+      class: animalCompanion
+      contextNotes:
+        - target: skill.han
+          text: >-
+            +[[4]] Circumstance bonus when using Wild Empathy or Handle Animal
+            on animal companion. (Not factored in)
+      description:
+        value: >-
+          <p>A druid can handle her animal companion as a free action, or push
+          it as a move action, even if she doesn't have any ranks in the Handle
+          Animal skill. The druid gains a +4 circumstance bonus on all wild
+          empathy checks and Handle Animal checks made regarding an animal
+          companion.&nbsp;</p>
+      subType: classFeat
+    type: feat
+  - _id: DkLwhpxQheO7FgWv
+    _key: '!actors.items!g96f24HWtUOxZTUA.DkLwhpxQheO7FgWv'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_34.jpg
+    name: Natural Armor Bonus
+    system:
+      associations:
+        classes:
+          - Animal Companion
+      changes:
+        - _id: 22vrjim6
+          formula: floor(@class.level / 3) * 2
+          target: nac
+          type: untyped
+      class: animalCompanion
+      description:
+        value: >-
+          <p>The number noted here is an improvement to the animal companion's
+          existing natural armor bonus.</p>
+      subType: classFeat
+    type: feat
+  - _id: ThwX7ajSX4b2FCO4
+    _key: '!actors.items!g96f24HWtUOxZTUA.ThwX7ajSX4b2FCO4'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/improved-counterspell.jpg
+    name: Share Spells
+    system:
+      abilityType: ex
+      associations:
+        classes:
+          - Animal Companion
+      class: animalCompanion
+      description:
+        value: >-
+          <p>The druid may cast a spell with a target of &ldquo;You&rdquo; on
+          her animal companion (as a spell with a range of touch) instead of on
+          herself. A druid may cast spells on her animal companion even if the
+          spells normally do not affect creatures of the companion's type
+          (animal). Spells cast in this way must come from a class that grants
+          an animal companion. This ability does not allow the animal to share
+          abilities that are not spells, even if they function like
+          spells.&nbsp;</p>
+      subType: classFeat
+    type: feat
+  - _id: anblAslB6FTUdv4C
+    _key: '!actors.items!g96f24HWtUOxZTUA.anblAslB6FTUdv4C'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/athletic.jpg
+    name: STR/DEX Bonus
+    system:
+      associations:
+        classes:
+          - Animal Companion
+      changes:
+        - _id: zdsarrn9
+          formula: floor(@class.level / 3)
+          target: str
+          type: untyped
+        - _id: hchux63w
+          formula: floor(@class.level / 3)
+          target: dex
+          type: untyped
+      class: animalCompanion
+      description:
+        value: >-
+          <p>Add this modifier to the animal companion's Strength and Dexterity
+          scores.&nbsp;</p>
+      subType: classFeat
+    type: feat
+  - _id: YBmJecAAUBgoL2kr
+    _key: '!actors.items!g96f24HWtUOxZTUA.YBmJecAAUBgoL2kr'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blood_07.jpg
+    name: Animal Companion Feats
+    system:
+      associations:
+        classes:
+          - Animal Companion
+      class: animalCompanion
+      description:
+        value: >-
+          <h2>Animal Feats</h2>
+
+          <p>Animal companions can select from the following feats:</p>
+
+          <p><em>Note that animal companions cannot select a feat with a
+          requirement of base attack bonus +1 until they gain their second feat
+          at 3 Hit Dice.</em></p>
+
+          <table>
+
+          <tbody>
+
+          <tr>
+
+          <td>Acrobatic</td>
+
+          <td>Agile Maneuvers</td>
+
+          <td>Armor Proficiency, Light</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Armor Proficiency, Medium</td>
+
+          <td>Armor Proficiency, Heavy</td>
+
+          <td>Athletic</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Blind-Fight</td>
+
+          <td>Combat Reflexes</td>
+
+          <td>Devotion against the Unnatural</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Diehard</td>
+
+          <td>Disruptive Companion</td>
+
+          <td>Dodge</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Endurance</td>
+
+          <td>Feral Grace</td>
+
+          <td>Ferocious Beast</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Ferocious Feint</td>
+
+          <td>Friendly Face</td>
+
+          <td>Great Fortitude</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Greater Tenacious Hunter</td>
+
+          <td>Hefty Brute</td>
+
+          <td>Improved Bull Rush</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Improved Initiative</td>
+
+          <td>Improved Intercept Blow</td>
+
+          <td>Improved Natural Armor</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Improved Overrun</td>
+
+          <td>Intercept Blow</td>
+
+          <td>Intimidating Prowess</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Iron Will</td>
+
+          <td>Lightning Reflexes</td>
+
+          <td>Linnorm Hunter Style</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Linnorm Hunter Retreat</td>
+
+          <td>Mobility</td>
+
+          <td>Power Attack</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Reflexive Interception</td>
+
+          <td>Run</td>
+
+          <td>Share Feature</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Skill Focus</td>
+
+          <td>Spring Attack</td>
+
+          <td>Stealthy</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Tenacious Hunter</td>
+
+          <td>Toughness</td>
+
+          <td>Weapon Focus</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <p>Animal companions with an Intelligence of 3 or higher can select
+          any feat they are physically capable of using. GMs might expand this
+          list to include feats from other sources.</p>
+      subType: classFeat
+    type: feat
+name: Wolverine
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    con:
+      value: 15
+    dex:
+      value: 17
+    int:
+      value: 2
+    wis:
+      value: 12
+  attributes:
+    naturalAC: 2
+    speed:
+      burrow:
+        base: 10
+      climb:
+        base: 10
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    notes:
+      value: >-
+        <h2>Base Stats</h2> <p><strong>Str</strong>: 10, <strong>Dex</strong>:
+        17, <strong>Con</strong>: 15, <strong>Int</strong>: 2,
+        <strong>Wis</strong>: 12, <strong>Cha</strong>: 10</p>
+        <p><strong>Attacks</strong>: bite (1d4), 2 claws (1d3)</p>
+        <p><strong>Special Attacks</strong>: rage (as a barbarian for 6 rounds
+        per day)</p><p><strong>Special Qualities</strong>: low-light vision,
+        scent</p> <p><strong>CMD</strong>:</p>  <h2>Advancement (4th level)</h2>
+        <p><strong>Size</strong>: Medium</p><p><strong>Speed</strong>: </p>
+        <p><strong>AC</strong>: 0</p><p><strong>Attack</strong>: bite (1d6), 2
+        claws (1d4)</p><p><strong>Ability</strong>: Str +4, Dex -2, Con +2</p>
+        <p><strong>Special Attack</strong>:</p><p><strong>Special
+        Qualities</strong>: </p><p><strong>Skills</strong>:</p>
+        <p><strong>Feats</strong>:</p><p><strong>CMD</strong>:</p>
+        <p><strong>Monstrous Prerequisites</strong>:</p><p><strong>Monstrous
+        Mastery</strong>: </p>
+    xp:
+      value: 400
+  traits:
+    senses:
+      ll:
+        enabled: true
+      sc:
+        value: 30
+    size: sm
+type: character

@@ -1,0 +1,72 @@
+_id: huwXevOSIgMnwPgl
+_key: '!items!huwXevOSIgMnwPgl'
+_stats:
+  coreVersion: '12.343'
+folder: NC6hzyQTx69Ri5NB
+img: icons/weapons/polearms/spear-simple-barbed.webp
+name: Barbed Spear
+system:
+  actions:
+    - _id: 5q69sy6sx9scgg7y
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 6, @size)
+            types:
+              - piercing
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+        value: '0'
+  baseTypes:
+    - Barbed Spear
+  description:
+    unidentified: >-
+      <p>A barbed spear is a 10-foot-long polearm with a fourpronged head
+      similar to a caltrop. The head is connected to the pole by a single weak
+      bolt, giving the weapon the fragile condition. When you use a barbed spear
+      to attack a creature that is prone, flying above you, or at least one size
+      category larger than you, you can make a melee attack with a -4 penalty to
+      jam the barbed head into the target's foot. If you're successful, the
+      target takes 1 point of damage and the barbed head breaks off in the
+      target's foot. The barb then acts as a caltrop, wounding the creature's
+      foot and halving its speed. This movement penalty lasts for 24 hours, or
+      until the creature is treated with a successful DC 15 Heal check or
+      receives at least 1 point of magical healing. Like caltrops, barbed spears
+      may not work against unusual opponents. A barbed spear that embeds its
+      caltrop-like head into a target's foot gains the broken condition, and
+      can't be used as a weapon until it's repaired.</p>
+  hands: 2
+  hardness: 10
+  held: 2h
+  hp:
+    base: 10
+  material:
+    base:
+      value: steel
+  price: 15
+  properties:
+    frg: true
+    rch: true
+    spc: true
+  sources:
+    - id: PZO9453
+      pages: '24'
+  subType: exotic
+  weaponGroups:
+    - spears
+  weaponSubtype: 2h
+  weight:
+    value: 10
+type: weapon

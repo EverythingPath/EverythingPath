@@ -1,0 +1,166 @@
+_id: xN5RoU7EhodHzdld
+_key: '!items!xN5RoU7EhodHzdld'
+_stats:
+  coreVersion: '12.331'
+folder: 1XqRrec5Ag0n0yM2
+img: systems/pf1/icons/races/gnome.png
+name: Fey-Tongued
+system:
+  abilityType: sp
+  actions:
+    - _id: mJ81MFijKcQTL6QO
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.mtxqp85izkb20djq]{ghost
+        sound},</p><p>Ghost sound allows you to create a volume of sound that
+        rises, recedes, approaches, or remains at a fixed place. You choose what
+        type of sound ghost sound creates when casting it and cannot thereafter
+        change the sound's basic character.</p><p>The volume of sound created
+        depends on your level. You can produce as much noise as four normal
+        humans per caster level (maximum 40 humans). Thus, talking, singing,
+        shouting, walking, marching, or running sounds can be created. The noise
+        a ghost sound spell produces can be virtually any type of sound within
+        the volume limit. A horde of rats running and squeaking is about the
+        same volume as eight humans running and shouting. A roaring lion is
+        equal to the noise from 16 humans, while a roaring dragon is equal to
+        the noise from 32 humans. Anyone who hears a ghost sound receives a Will
+        save to disbelieve.</p><p>Ghost sound can enhance the effectiveness of a
+        silent image spell.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Ghost Sound
+      notes:
+        effect:
+          - Save DC includes the +1 benefit provided by this trait
+      range:
+        units: close
+        value: floor(@attributes.hd.total / 2) * 5 + 25
+      save:
+        dc: '@abilities.cha.mod +10 + 1'
+        description: Disbelief
+        type: will
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: byOWtyunnqAd00aV
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p> @UUID[Compendium.pf1.spells.Item.mlya2f32teqy6jpl]{haunted fey
+        aspect}</p><p>You surround yourself with disturbing illusions, making
+        you look and sound like a bizarre, insane fey creature. You gain DR
+        1/cold iron against a single opponent until the end of the spell, or
+        until you take damage.</p>
+      duration:
+        units: round
+        value: '@attributes.hd.total'
+      name: Haunted Fey Aspect
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: 6FaGqhAuast8kjde
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.rrsefzpm3nhztvld]{speak with
+        plants}</p><p>You can communicate with normal plants and plant
+        creatures, and can ask questions of and receive answers from them. A
+        normal plant's sense of its surroundings is limited, so it won't be able
+        to give (or recognize) detailed descriptions of creatures or answer
+        questions about events outside its immediate vicinity. The spell doesn't
+        make plant creatures any more friendly or cooperative than normal.
+        Furthermore, wary and cunning plant creatures are likely to be terse and
+        evasive, while the more stupid ones may make inane comments. If a plant
+        creature is friendly, it may do some favor or service for you.</p>
+      duration:
+        units: minute
+        value: '@attributes.hd.total'
+      name: Speak with Plants
+      range:
+        units: personal
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+    - _id: 4D3vUdqTzXSzn1i0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.a6isom7wx0nmhwfp]{prestidigitation}.</p><p>Prestidigitations
+        are minor tricks that novice spellcasters use for practice. Once cast, a
+        prestidigitation spell enables you to perform simple magical effects for
+        1 hour. The effects are minor and have severe limitations. A
+        prestidigitation can slowly lift @Weight[1;dual] of material. It can
+        color, clean, or soil items in a @Distance[1 ft;dual] cube each round.
+        It can chill, warm, or flavor @Weight[1;dual] of nonliving material. It
+        cannot deal damage or affect the concentration of spellcasters.
+        Prestidigitation can create small objects, but they look crude and
+        artificial. The materials created by a prestidigitation spell are
+        extremely fragile, and they cannot be used as tools, weapons, or spell
+        components. Finally, prestidigitation lacks the power to duplicate any
+        other spell effects. Any actual change to an object (beyond just moving,
+        cleaning, or soiling it) persists only 1 hour.</p>
+      duration:
+        units: hour
+        value: '1'
+      name: Prestidigitation
+      range:
+        units: spec
+        value: 10 ft (3 m)
+      uses:
+        self:
+          maxFormula: gte(@abilities.cha.total, 11)
+          per: day
+          value: 1
+  changes:
+    - _id: qhNHs22H
+      formula: '1'
+      target: dc.school.ill
+      type: untyped
+  description:
+    instructions: >-
+      <p>Remove
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.MiPbhGqPRX7H4C7a]{Gnome
+      Magic (Gnome)}</p>
+    value: >-
+      <p><strong>Race</strong>: Gnome<br /><strong>Replaced Trait(s)</strong>:
+      Gnome Magic</p><hr /><p>Gnomes with this trait gain
+      <em>@UUID[Compendium.pf1.spells.Item.mlya2f32teqy6jpl]{haunted fey aspect}
+      </em>and <em>@UUID[Compendium.pf1.spells.Item.rrsefzpm3nhztvld]{speak with
+      plants}</em> instead of dancing lights and speak with animals as
+      spell-like abilities from the gnome magic racial trait. This racial trait
+      alters the gnome magic racial trait.</p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9480
+      pages: '4'
+  subType: racial
+  tags:
+    - Gnome
+  traitCategory: magical
+  uses:
+    maxFormula: 4 * gte(@abilities.cha.total, 11)
+    per: day
+    value: 0
+type: feat

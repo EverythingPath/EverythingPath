@@ -1,0 +1,41 @@
+_id: uJckc0CpWQJ2Lify
+_key: '!items!uJckc0CpWQJ2Lify'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_05.jpg
+name: Divine Vessel
+system:
+  abilityType: su
+  actions:
+    - _id: 214fm2h5uclpjj2j
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '15'
+      target:
+        value: allies within range
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>Whenever you are the target of a divine spell, you can, as a swift
+      action, grant each ally within 15 feet of you a divine boon. This boon
+      grants a +2 bonus on the next attack roll, skill check, or ability check
+      made before the end of their next turn. You can use this ability a number
+      of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Hand of the Acolyte power of the Arcane
+      Domain.</p>
+  subType: classFeat
+  tag: classFeat_divineVessel
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

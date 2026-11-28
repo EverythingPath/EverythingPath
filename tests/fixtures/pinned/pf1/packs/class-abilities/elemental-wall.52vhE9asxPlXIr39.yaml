@@ -1,0 +1,38 @@
+_id: 52vhE9asxPlXIr39
+_key: '!items!52vhE9asxPlXIr39'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/beam-red-3.jpg
+name: Elemental Wall
+system:
+  abilityType: sp
+  actions:
+    - _id: 5u5ynqoi7bugn0ow
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you can create a wall of energy that lasts for a number
+      of rounds per day equal to your wizard level. These rounds do not need to
+      be consecutive. This wall deals acid, cold, electricity, or fire damage,
+      determined when you create it. The elemental wall otherwise functions like
+      @UUID[Compendium.pf1.spells.92hth51cs9oi0nfe]{Wall Of Fire}.</p>
+  sources:
+    - id: PZO1110
+      pages: '81'
+  subType: classFeat
+  tag: classFeat_elementalWall
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

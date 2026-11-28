@@ -1,0 +1,55 @@
+_id: 21yha04trfhj0ehd
+_key: '!items!21yha04trfhj0ehd'
+_stats:
+  coreVersion: '12.343'
+folder: 5817mpDMdZrVJXp7
+img: icons/magic/control/control-influence-puppet.webp
+name: Psychic Surgery
+system:
+  actions:
+    - _id: jz63rjgd5a8rn7ag
+      activation:
+        cost: 10
+        type: minute
+        unchained:
+          cost: 10
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: one willing and living creature
+  components:
+    material: true
+    verbal: true
+  description:
+    value: >-
+      <p><i>Psychic surgery</i> cures the target of all Intelligence, Wisdom,
+      and Charisma damage and restores all points permanently drained from the
+      target's Intelligence, Wisdom, and Charisma scores. It also eliminates all
+      ongoing insanity, confusion, and fear effects. <i>Psychic surgery</i> can
+      also remove other mental afflictions, including enchantment spells and
+      abilities, and even instantaneous effects, but in this case, if <i>dispel
+      magic</i> couldn't remove the effect, psychic surgery works only if the
+      spell level or equivalent spell level of the effect was 6th level or
+      lower. <i>Psychic surgery</i> removes all effects magically altering the
+      target's memory, even instantaneous effects, and it can restore a memory
+      to perfect clarity like the second use of <i>modify memory</i>.</p>
+  descriptors:
+    - mindAffecting
+  learnedAt:
+    class:
+      mesmerist: 5
+      psychic: 6
+  level: 6
+  materials:
+    gpValue: 250
+    value: diamond dust worth 250 gp
+  school: enc
+  sources:
+    - id: PZO1132
+      pages: '183'
+  sr: false
+type: spell

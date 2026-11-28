@@ -1,0 +1,45 @@
+_id: cIlA9V3r7tUyS5ir
+_key: '!items!cIlA9V3r7tUyS5ir'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_16.jpg
+name: Cruel Thicket
+system:
+  abilityType: su
+  actions:
+    - _id: f9tyeazd8f5tbq07
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: 5-ft. radius burst
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can cause the ground in a 5-foot-radius burst
+      centered on you to sprout twisting, thorny vines. Any creature moving
+      through it must travel at half speed or take bleed damage equal to half
+      your cleric level; if you activate this ability in an area with numerous
+      plants (grass, weeds, trees, etc.), the area also becomes difficult
+      terrain. These effects last for 1 minute, after which the vines crumble to
+      dust. Creatures able to move through natural undergrowth unhindered ignore
+      the effects of this ability. You can use this ability a number of times
+      per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Wooden Fist power of the Plant Domain.</p>
+  subType: classFeat
+  tag: classFeat_cruelThicket
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

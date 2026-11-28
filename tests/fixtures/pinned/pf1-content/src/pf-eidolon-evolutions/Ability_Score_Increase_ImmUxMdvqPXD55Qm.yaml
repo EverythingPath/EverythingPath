@@ -1,0 +1,21 @@
+_id: ImmUxMdvqPXD55Qm
+_key: '!items!ImmUxMdvqPXD55Qm'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_19.jpg
+name: Ability Score Increase
+system:
+  abilityType: ex
+  associations:
+    classes:
+      - Eidolon
+  description:
+    instructions: <p>Add ability score increase in Changes.&nbsp;</p>
+    value: >-
+      <p>The Eidolon adds +1 to one of its ability scores at levels 5, 10, and
+      15.</p><p>Current Ability Points: [[ifelse(gt(@class.level, 14), 3,
+      ifelse(gt(@class.level, 4), 1, 0))]]</p>
+  subType: classFeat
+  tags:
+    - Eidolon
+type: feat

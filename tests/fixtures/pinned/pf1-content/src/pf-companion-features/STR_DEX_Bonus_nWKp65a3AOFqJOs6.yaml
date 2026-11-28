@@ -1,0 +1,25 @@
+_id: nWKp65a3AOFqJOs6
+_key: '!items!nWKp65a3AOFqJOs6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/athletic.jpg
+name: STR/DEX Bonus
+system:
+  associations:
+    classes:
+      - Animal Companion
+  changes:
+    - _id: zdsarrn9
+      formula: floor(@class.level / 3)
+      target: str
+      type: untyped
+    - _id: hchux63w
+      formula: floor(@class.level / 3)
+      target: dex
+      type: untyped
+  description:
+    value: >-
+      <p>Add this modifier to the animal companion's Strength and Dexterity
+      scores.</p>
+  subType: classFeat
+type: feat

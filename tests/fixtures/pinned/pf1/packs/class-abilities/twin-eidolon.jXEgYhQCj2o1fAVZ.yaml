@@ -1,0 +1,50 @@
+_id: jXEgYhQCj2o1fAVZ
+_key: '!items!jXEgYhQCj2o1fAVZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_14.jpg
+name: Twin Eidolon
+system:
+  abilityType: su
+  actions:
+    - _id: 787l8l0p8b5u8jce
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Summoner
+  description:
+    value: >-
+      <p>At 20th level, a summoner and his eidolon share a true connection. As a
+      standard action, the summoner can assume the shape of his eidolon, copying
+      all of its evolutions, form, and abilities. His Strength, Dexterity, and
+      Constitution scores change to match the base scores of his eidolon. He can
+      choose to have any gear that he carries become absorbed by his new form,
+      as with spells from the polymorph subschool. Items with continuous effects
+      continue to function while absorbed in this way. The summoner loses his
+      natural attacks and all racial traits (except bonus feats, skills, and
+      languages) in favor of the abilities granted by his eidolon’s evolutions.
+      The summoner retains all of his class features. The summoner can keep this
+      form for a number of minutes per day equal to his summoner level. This
+      duration does not need to be consecutive, but it must be spent in 1-minute
+      increments. The summoner can end this effect as a free action.</p>
+  sources:
+    - id: PZO1115
+      pages: '54'
+  subType: classFeat
+  tag: classFeat_twinEidolon
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

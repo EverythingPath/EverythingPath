@@ -1,0 +1,66 @@
+_id: b7b9LL5pcA63eOv1
+_key: '!items!b7b9LL5pcA63eOv1'
+_stats:
+  coreVersion: '12.331'
+folder: Tt3r64jgYimPthNv
+img: systems/pf1/icons/races/oread.png
+name: Spell-Like Ability (Oread)
+system:
+  abilityType: sp
+  actions:
+    - _id: OpkpKUzXTOMqE1nA
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.fv9mgob508qv99zz]{Magic
+        Stone}</p><p>You transmute as many as three pebbles, which can be no
+        larger than sling bullets, so that they strike with great force when
+        thrown or slung. If hurled, they have a range increment of @Distance[20
+        ft;dual]. If slung, treat them as sling bullets (range increment
+        @Distance[50 ft;dual]). The spell gives them a +1 enhancement bonus on
+        attack and damage rolls. The user of the stones makes a normal ranged
+        attack. Each stone that hits deals 1d6+1 points of damage (including the
+        spell's enhancement bonus), or 2d6+2 points against undead.</p>
+      duration:
+        units: spec
+        value: 30 minutes or until discharged
+      name: Magic Stone
+      notes:
+        effect:
+          - each stone deals @Damage[1d6+1] or @Damage[2d6+2] vs undead
+      range:
+        units: touch
+      save:
+        dc: 10 + 1 + @abilities.cha.mod
+        description: will negates (object)
+        harmless: true
+        type: will
+      target:
+        value: up to 3 pebbles touched
+  description:
+    value: >-
+      <p><strong>Race</strong>: Oread</p><hr /><p>Oreads can use
+      @UUID[Compendium.pf1.spells.Item.fv9mgob508qv99zz]{magic stone} 1/day as
+      spell-like ability (with a caster level equal to the oread's character
+      level).</p>
+  racePoints: 1
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '247'
+    - id: PZO1116
+      pages: '205'
+    - id: PZO1121
+      pages: '145'
+  subType: racial
+  tags:
+    - Oread
+  traitCategory: magical
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,35 @@
+_id: 1hxjrJ68yWsiCCFD
+_key: '!items!1hxjrJ68yWsiCCFD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/improved-great-fortitude.jpg
+name: Improved Great Fortitude
+system:
+  description:
+    value: >-
+      <p><em>You can draw upon an inner reserve to resist diseases, poisons, and
+      other grievous harm.</em></p><p><strong>Prerequisites</strong>:
+      @UUID[Compendium.pf1.feats.Item.fVRnBIHR4Jq6btvm]{Great
+      Fortitude}.</p><p><strong>Benefits</strong>: Once per day, you may reroll
+      a Fortitude save. You must decide to use this ability before the results
+      are revealed. You must take the second roll, even if it is worse.</p>
+  scriptCalls:
+    - _id: eebdWLhnbjWeTrbj
+      category: use
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Reroll fortitude
+      type: script
+      value: actor.rollSavingThrow("fort");
+  sources:
+    - id: PZO1110
+      pages: 115, 127
+  tag: feat_improvedGreatFortitude
+  tags:
+    - General
+    - Saving Throw
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat
