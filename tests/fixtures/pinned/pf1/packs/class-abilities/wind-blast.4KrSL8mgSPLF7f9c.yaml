@@ -1,0 +1,59 @@
+_id: 4KrSL8mgSPLF7f9c
+_key: '!items!4KrSL8mgSPLF7f9c'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/air-burst-air-1.jpg
+name: Wind Blast
+system:
+  abilityType: su
+  actions:
+    - _id: e9myfq5dyjktwu7v
+      ability:
+        attack: wis
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      attackName: Bull Rush
+      duration:
+        units: inst
+      measureTemplate:
+        size: '30'
+        type: ray
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: Each creature in line
+  associations:
+    classes:
+      - Cleric
+      - Druid
+      - Inquisitor
+  description:
+    value: >-
+      <p>As a standard action, you can unleash a blast of air in a 30-foot line.
+      Make a combat maneuver check against each creature in the line, using your
+      caster level as your base attack bonus and your Wisdom modifier in place
+      of your Strength modifier. Treat the results as a bull rush attempt. You
+      can use this ability a number of times per day equal to 3 + your Wisdom
+      modifier.</p><p>This power replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.o8rxNsQ7P7Yjlvvu]{Lightning Arc}
+      power of the
+      @UUID[Compendium.pf1.class-abilities.Item.flMrvQOBVwXagqow]{Air
+      domain}.</p>
+  sources:
+    - id: PZO1115
+      pages: '97'
+  subType: classFeat
+  tag: classFeat_windBlast
+  tags:
+    - Domain Power
+    - Wind Subdomain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

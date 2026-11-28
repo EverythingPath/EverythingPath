@@ -1,0 +1,42 @@
+_id: 1cV21XA87dbzJwDZ
+_key: '!items!1cV21XA87dbzJwDZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_10.jpg
+name: Metal Fist
+system:
+  abilityType: su
+  actions:
+    - _id: xe7bpuuhnsl9mp6i
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a swift action, you can turn your fists into metal for 1 round,
+      allowing you to make unarmed strikes that deal 1d6 points of bludgeoning
+      damage plus your Strength modifier. These unarmed strikes do not provoke
+      attacks of opportunity, but attacking with both uses the two-weapon
+      fighting rules as normal. In addition, these unarmed strikes ignore the
+      hardness of items with a hardness of 10 or less. You can use this ability
+      a number of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Acid Dart power of the Earth Domain.</p>
+  subType: classFeat
+  tag: classFeat_metalFist
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

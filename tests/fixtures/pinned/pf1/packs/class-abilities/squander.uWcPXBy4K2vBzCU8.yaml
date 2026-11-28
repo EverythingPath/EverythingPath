@@ -1,0 +1,42 @@
+_id: uWcPXBy4K2vBzCU8
+_key: '!items!uWcPXBy4K2vBzCU8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/greater-disarm.jpg
+name: Squander
+system:
+  abilityType: su
+  actions:
+    - _id: ab95omvzv297uqxz
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '@class.level'
+      name: Use
+      range:
+        units: spec
+        value: '30'
+      target:
+        value: One creature
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 15th level, you gain the ability to force others to waste the
+      opportunities they are given. Once per day as a <em>standard action</em>,
+      you can cause a target within 30 feet to gain the <em>staggered</em>
+      condition for a number of rounds equal to your <em>sorcerer</em> level.
+      The duration is halved if the target makes a successful <em>Will</em> save
+      (DC 10 + 1/2 your <em>sorcerer</em> level + your <em>Cha</em>
+      modifier).</p>
+  subType: classFeat
+  tag: classFeat_squander
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

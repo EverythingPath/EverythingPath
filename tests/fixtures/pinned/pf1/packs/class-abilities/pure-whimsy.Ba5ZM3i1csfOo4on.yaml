@@ -1,0 +1,48 @@
+_id: Ba5ZM3i1csfOo4on
+_key: '!items!Ba5ZM3i1csfOo4on'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Pure Whimsy
+system:
+  abilityType: su
+  actions:
+    - _id: 3ebrfaqsh56my293
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: ft
+        value: '90'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day, you can release a stream of errant chaos from the First
+      World as a standard action. When you do so, identify a target within 90
+      feet and generate a random effect as from a rod of wonder (or, at the GM’s
+      discretion, another random or unusual effect of similar power). The DC of
+      any required saving throw is 10 + half your oracle level + your Charisma
+      modifier, and no effect from this ability persists for more than 1
+      day.</p>
+
+      <p>You can use this ability once per day at 7th level and one additional
+      time per day for every 4 levels beyond 7th. You must be at least 7th level
+      to select this revelation.</p>
+  subType: classFeat
+  tag: classFeat_pureWhimsy
+  tags:
+    - Revelation
+    - Whimsy Mystery
+  uses:
+    maxFormula: floor((@class.level - 3) / 4)
+    per: day
+type: feat

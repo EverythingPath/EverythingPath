@@ -1,0 +1,38 @@
+_id: YZnFYJppNYe6KtBF
+_key: '!items!YZnFYJppNYe6KtBF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/light_07.jpg
+name: Silver-Tongued Haggler
+system:
+  abilityType: su
+  actions:
+    - _id: z73nnv17llxehcfo
+      activation:
+        type: free
+        unchained:
+          type: free
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>Whenever you make a Bluff, Diplomacy, or Sense Motive check, you can,
+      as a free action, grant yourself a bonus on the roll equal to 1/2 your
+      cleric level (minimum +1). You can use this ability a number of times per
+      day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This pwoer replaces the Agile Feet power of the Travel Domain.</p>
+  subType: classFeat
+  tag: classFeat_silvertonguedHaggler
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

@@ -1,0 +1,42 @@
+_id: xgGmqNCUSt41dcpA
+_key: '!items!xgGmqNCUSt41dcpA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Trigger Primal Magic Event
+system:
+  abilityType: su
+  actions:
+    - _id: q3kq1n6ctvbpidir
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>Once per day as an immediate action, you can cause a spellcaster
+      (including yourself ) within 30 feet to trigger a primal magic event as
+      the spell is being cast.</p>
+
+      <p>At 13th level, you can cause any creature in the act of activating a
+      magic item to trigger a primal magic event (see page 13).</p>
+
+      <p>At 17th level, you can use this ability twice per day. A spellcaster
+      can make a concentration check (DC = 15 + twice the spell’s level) to
+      focus the magic and avoid triggering a primal magic effect, but
+      non-spellcasters activating magic items have no such option.</p>
+
+      <p>You must be at least 9th level before selecting this revelation.</p>
+  subType: classFeat
+  tag: classFeat_triggerPrimalMagicEvent
+  tags:
+    - Revelation
+    - Spellscar Mystery
+  uses:
+    maxFormula: 1 + if(gte(@class.level, 17), 1)
+    per: day
+type: feat

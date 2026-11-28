@@ -1,0 +1,40 @@
+_id: hdrnifXPEgWF174e
+_key: '!items!hdrnifXPEgWF174e'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_20.jpg
+name: Fool's Privilege
+system:
+  abilityType: su
+  actions:
+    - _id: 7glxjb8ul752i05p
+      activation:
+        type: swift
+        unchained:
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: personal
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can use this power as a swift action when you fail a Bluff,
+      Diplomacy, or Intimidate check outside of combat. You suffer no negative
+      effects due to the failed check, and the next round you can attempt the
+      check again without the usual penalty for a failed attempt. You can use
+      this ability once per day, and one additional time per day for every 4
+      levels beyond 1st.</p>
+
+      <p>This power replaces the Copycat power of the Trickery Domain.</p>
+  subType: classFeat
+  tag: classFeat_foolsPrivilege
+  uses:
+    maxFormula: 1 + floor((@class.level - 1) / 4)
+    per: day
+type: feat

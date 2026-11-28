@@ -1,0 +1,46 @@
+_id: Jle1tYl0Fr251J97
+_key: '!items!Jle1tYl0Fr251J97'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/ice_16.jpg
+name: Dazing Touch (CLE)
+system:
+  abilityType: sp
+  actions:
+    - _id: 955ng9xu36afun3g
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Cleric
+      - Inquisitor
+  description:
+    value: >-
+      <p>You can cause a living creature to become dazed for 1 round as a melee
+      touch attack. Creatures with more Hit Dice than your cleric level are
+      unaffected. You can use this ability a number of times per day equal to 3
+      + your Wisdom modifier.</p>
+  sources:
+    - id: PZO1110
+      pages: '42'
+  subType: classFeat
+  tag: classFeat_dazingTouchCle
+  tags:
+    - Domain Power
+    - Charm Domain
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

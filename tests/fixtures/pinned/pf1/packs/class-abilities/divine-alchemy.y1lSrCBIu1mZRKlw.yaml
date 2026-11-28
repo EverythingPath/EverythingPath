@@ -1,0 +1,43 @@
+_id: y1lSrCBIu1mZRKlw
+_key: '!items!y1lSrCBIu1mZRKlw'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/major-red.jpg
+name: Divine Alchemy
+system:
+  abilityType: su
+  actions:
+    - _id: 7nymdar9p2kjoff5
+      activation:
+        type: minute
+        unchained:
+          type: minute
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: flask of water
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>You can perform a 1-minute ritual that infuses a flask of water with
+      one of your prepared spells, creating an improvised potion that lasts
+      until consumed or the next time you prepare spells. You can use this
+      ability only with spells that target one or more creatures, and the
+      maximum spell level you can infuse in this way is equal to 1 + 1 for every
+      4 cleric levels you have. These potions are treated as alchemist extracts
+      for the purpose of your domain spells. You can use this ability a number
+      of times per day equal to 3 + your Wisdom modifier.</p>
+
+      <p>This power replaces the Artificer's Touch power from the Artifice
+      Domain or the Hand of the Acolyte power from the Magic Domain.</p>
+  subType: classFeat
+  tag: classFeat_divineAlchemy
+  uses:
+    maxFormula: 3 + @abilities.wis.cha
+    per: day
+type: feat

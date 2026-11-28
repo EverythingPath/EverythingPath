@@ -1,0 +1,43 @@
+_id: VdIakOhu1AVdlLf6
+_key: '!items!VdIakOhu1AVdlLf6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/runes-orange-3.jpg
+name: Aura of Sanctification
+system:
+  abilityType: su
+  actions:
+    - _id: es6in653bll3tq87
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: round
+        value: '1'
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: self
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>At 8th level, as an immediate action, you can emit a 30-foot-radius
+      aura of sanctification for a number of rounds per day equal to your cleric
+      level. These rounds do not need to be consecutive. Within this aura,
+      effects that are specifically harmful to good-aligned creatures are
+      inverted so that they no longer harm good creatures and instead harm evil
+      creatures. Similarly, effects that are specifically beneficial to evil
+      creatures instead become beneficial only to good creatures.</p>
+
+      <p>This power replaces the Holy Lance power of the Good Domain</p>
+  subType: classFeat
+  tag: classFeat_auraOfSanctification
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

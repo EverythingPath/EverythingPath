@@ -1,0 +1,27 @@
+_id: Qqo3DLdlbnXhXe7G
+_key: '!items!Qqo3DLdlbnXhXe7G'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/equipment/chest/robe-collared-blue.webp
+name: Magic Vestment
+system:
+  changes:
+    - _id: hbfeerzt
+      formula: (min(5,(floor(@item.level / 4))))
+      target: aac
+      type: enh
+  description:
+    instructions: >-
+      <p>Disable this buff if the affected armor or shield is removed. If
+      targeting a shield, switch to Shield AC in the Changes tab.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.73han2zqxg59u18g]{Magic
+      Vestment}</p><p>You imbue a suit of armor or a shield with an enhancement
+      bonus of +1 per four caster levels (maximum +5 at 20th level).</p>
+  duration:
+    units: hour
+    value: '@item.level'
+  level: 5
+  subType: spell
+type: buff

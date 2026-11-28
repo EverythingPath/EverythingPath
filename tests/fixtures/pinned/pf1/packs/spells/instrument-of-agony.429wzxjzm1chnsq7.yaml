@@ -1,0 +1,56 @@
+_id: 429wzxjzm1chnsq7
+_key: '!items!429wzxjzm1chnsq7'
+_stats:
+  coreVersion: '12.343'
+folder: EmIafjKl7hvbinLh
+img: icons/magic/defensive/armor-stone-skin.webp
+name: Instrument of Agony
+system:
+  actions:
+    - _id: cem8vlwgji7vho68
+      actionType: spellsave
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '@cl'
+      name: Use
+      range:
+        units: touch
+      save:
+        description: Will negates (object), see text
+        harmless: true
+        type: will
+      target:
+        value: weapon touched
+  components:
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>You cause a weapon to exude a palpable aura of divine fury. While
+      wielding this weapon, a creature gains a +2 morale bonus on Intimidate
+      checks. When an attack made using the targeted weapon hits, the wielder
+      can spend a free action to discharge the effect to inflict agony on the
+      creature the weapon hit. If that creature has spell resistance, it applies
+      against this effect. If the creature fails a Will save, it is nauseated
+      for 1d4+1 rounds. If it succeeds at the saving throw, the creature is
+      instead sickened for 1 round. The sickened condition created by the
+      instrument is a mind-affecting effect.</p>
+  learnedAt:
+    class:
+      cleric: 2
+      inquisitor: 2
+      oracle: 2
+      warpriest: 2
+    subDomain:
+      Kyton: 2
+  level: 2
+  school: trs
+  sources:
+    - id: PZO1118
+      pages: '232'
+type: spell

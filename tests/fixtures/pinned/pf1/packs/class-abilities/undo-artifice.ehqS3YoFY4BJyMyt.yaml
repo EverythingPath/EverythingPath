@@ -1,0 +1,49 @@
+_id: ehqS3YoFY4BJyMyt
+_key: '!items!ehqS3YoFY4BJyMyt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Undo Artifice
+system:
+  abilityType: sp
+  actions:
+    - _id: 4x5po13mnfafu76j
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: perm
+      name: Use
+      range:
+        units: close
+      target:
+        value: one object
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>At 11th-level, you gain the ability to reduce a nonliving item to its
+      component parts, essentially erasing the hand of artifice and rendering
+      the item into a pile of raw natural materials. This effect acts as the
+      spell @UUID[Compendium.pf1.spells.2sa3881har33geo1]{Polymorph Any Object},
+      working on both magical and nonmagical nonliving objects. The duration is
+      always permanent. Unlike polymorph any object, it cannot be used to mimic
+      the effects of other spells. Items subject to this effect receive a
+      Fortitude saving throw to negate the effect. Magic items receive a
+      circumstance bonus on this save equal to +1 for every 5,000 gp in the
+      item's value.</p>
+
+      <p>You may use undo artifice a number of times per day equal to your
+      Charisma modifier.</p>
+  subType: classFeat
+  tag: classFeat_undoArtifice
+  tags:
+    - Revelation
+    - Nature Mystery
+  uses:
+    maxFormula: '@abilities.cha.mod'
+    per: day
+type: feat

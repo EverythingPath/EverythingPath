@@ -1,0 +1,65 @@
+_id: YLr7f3djG85wvbAT
+_key: '!items!YLr7f3djG85wvbAT'
+_stats:
+  coreVersion: '12.331'
+folder: OYizHQkCQbWFXC6A
+img: icons/creatures/magical/humanoid-silhouette-dashing-blue.webp
+name: Kitsune Magic
+system:
+  abilityType: sp
+  actions:
+    - _id: JqgEoGy5tjCU5h9H
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft radius area
+      description: >-
+        <p>Kitsune with a Charisma score of 11 or higher gain the following
+        spell-like ability:
+        3/day-<em>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+        lights}.</em></p>
+      duration:
+        units: minute
+        value: '1'
+      name: Dancing Lights sla
+      range:
+        units: ft
+        value: '@attributes.hd.total * 10 + 100'
+      target:
+        value: up to 4 lights
+      uses:
+        self:
+          maxFormula: 3 * gte(@abilities.cha.total, 11)
+          per: day
+  changes:
+    - _id: S1knlv81
+      formula: '1'
+      target: dc.school.enc
+      type: untyped
+  description:
+    value: >-
+      <p><strong>Race</strong>: Kitsune</p><hr /><p>Kitsune add 1 to the DCs of
+      any saving throws to resist enchantment spells that they cast. Kitsune
+      with a Charisma score of 11 or higher gain the following spell-like
+      ability:
+      3/day-<em>@UUID[Compendium.pf1.spells.Item.zymaptg3vmnvfvxl]{dancing
+      lights}.</em></p>
+  showInQuickbar: true
+  sources:
+    - id: PZO9280
+      pages: '245'
+    - id: PZO1127
+      pages: '175'
+    - id: PZO1121
+      pages: '192'
+    - id: PZO9240
+      pages: '11'
+    - id: PZO9421
+      pages: '4'
+  subType: racial
+  tags:
+    - Kitsune
+  traitCategory: magical
+type: feat

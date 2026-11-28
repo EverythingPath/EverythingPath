@@ -1,0 +1,68 @@
+_id: 0S9wLgzadEbYoQXM
+_key: '!items!0S9wLgzadEbYoQXM'
+_stats:
+  coreVersion: '12.343'
+img: icons/magic/lightning/barrier-shield-crackling-orb-pink.webp
+name: Force Bomb
+system:
+  actions:
+    - _id: zjg7sI5ISWHrq4Tm
+      ability:
+        attack: dex
+        damage: int
+        damageMult: 1
+      actionType: twak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        nonCritParts:
+          - formula: (ceil(@class.level / 2) - 1)d4
+            types:
+              - force
+        parts:
+          - formula: 1d4
+            types:
+              - force
+      duration:
+        units: inst
+      img: systems/pf1/icons/items/inventory/bomb.jpg
+      measureTemplate:
+        size: '5'
+        type: circle
+      name: Throw
+      notes:
+        effect:
+          - '[[ceil(@class.level / 2) + @abilities.int.mod]] Splash Damage'
+      range:
+        units: ft
+        value: '20'
+      save:
+        dc: 10 + floor(@class.level / 2) + @abilities.int.mod
+        description: Reflex halves splash damage and see text
+        type: ref
+      splash: true
+      touch: true
+  associations:
+    classes:
+      - Alchemist
+  description:
+    instructions: <p>Link charges to <em>bomb</em> class feature</p>
+    value: >-
+      <p>When the alchemist creates a bomb, he can choose to have it inflict
+      force damage. Force bombs deal 1d4 points of force damage, plus 1d4 points
+      of force damage for every odd-numbered level, instead of 1d6. Creatures
+      that take a direct hit from a force bomb are knocked prone unless they
+      succeed on a Reflex save.</p><p>An alchemist must be at least 8th level
+      before selecting this discovery.</p>
+  sources:
+    - id: PZO1115
+      pages: '30'
+  subType: classFeat
+  tags:
+    - Alchemist Discovery
+    - Bomb Discovery
+    - Does not stack
+type: feat

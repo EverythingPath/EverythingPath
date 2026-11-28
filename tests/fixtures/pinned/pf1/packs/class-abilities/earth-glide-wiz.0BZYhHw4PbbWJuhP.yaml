@@ -1,0 +1,40 @@
+_id: 0BZYhHw4PbbWJuhP
+_key: '!items!0BZYhHw4PbbWJuhP'
+_stats:
+  coreVersion: '12.343'
+img: icons/environment/wilderness/terrain-rocky-ground.webp
+name: Earth Glide (WIZ)
+system:
+  abilityType: su
+  actions:
+    - _id: xxbvV5nGZImXRBox
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 8th level, you gain the ability to move through earth, dirt, and
+      stone for a number of rounds per day equal to your wizard level. You
+      cannot move through worked earth or stone; only natural substances can be
+      traversed. If your total duration expires before you exit the earth, you
+      are flung back to the point where you entered the stone, take 4d6 points
+      of damage, and are stunned for 1 round. Your burrowing does not leave a
+      hole, nor does it give any sign of your presence (although you can be
+      detected by creatures with tremorsense). These rounds do not need to be
+      consecutive.</p>
+  sources:
+    - id: PZO1115
+      pages: '142'
+  subType: classFeat
+  tags:
+    - Earth School
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

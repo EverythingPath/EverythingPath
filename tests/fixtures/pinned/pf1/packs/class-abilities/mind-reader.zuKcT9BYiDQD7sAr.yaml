@@ -1,0 +1,35 @@
+_id: zuKcT9BYiDQD7sAr
+_key: '!items!zuKcT9BYiDQD7sAr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_11.jpg
+name: Mind Reader
+system:
+  abilityType: sp
+  actions:
+    - _id: g3p002t7fammcze1
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      name: Use
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 3rd level, you can read minds as a spell-like ability. This ability
+      acts like @UUID[Compendium.pf1.spells.xllxylvvqr82o2d5]{Detect Thoughts},
+      except it lasts only 1 round, you use it on a single target as a
+      <em>standard action</em>, and if the target fails its <em>Will</em> save,
+      you gain information as if you had concentrated on it for 3 rounds. You
+      may use this ability once per day at 3rd level and one additional time per
+      day for every four sorcerer levels you possess beyond 3rd, up to five
+      times per day at 20th level.</p>
+  subType: classFeat
+  tag: classFeat_mindReader
+  uses:
+    maxFormula: floor((@class.level - 3) / 3) + 1
+    per: day
+type: feat

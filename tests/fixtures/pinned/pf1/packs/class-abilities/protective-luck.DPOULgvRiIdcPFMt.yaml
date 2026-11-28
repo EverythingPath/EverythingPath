@@ -1,0 +1,46 @@
+_id: DPOULgvRiIdcPFMt
+_key: '!items!DPOULgvRiIdcPFMt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_02.jpg
+name: Protective Luck
+system:
+  abilityType: su
+  actions:
+    - _id: 0qhc085g9naj8dbj
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 1 + min(2, floor(@class.level / 8))
+      name: Use
+      range:
+        units: ft
+        value: '30'
+      target:
+        value: one creature
+  associations:
+    classes:
+      - Witch
+      - Shaman
+  description:
+    value: >-
+      <p>The witch can cause fate to twist so that it benefits a creature within
+      30 feet for 1 round. Whenever that creature is targeted by an effect that
+      requires an attack roll, including weapon attacks, the attacker must roll
+      twice and take the worse result.</p>
+
+      <p>At 8th level and 16th level, the duration of this hex is extended by 1
+      round.</p>
+
+      <p>A witch cannot use this ability on herself.</p>
+
+      <p>Hexes that affect the fortune hex, such as cackle, also affect
+      protective luck.</p>
+  subType: classFeat
+  tags:
+    - Hex
+type: feat

@@ -1,0 +1,53 @@
+_id: iag7mp0kgnmql2mz
+_key: '!items!iag7mp0kgnmql2mz'
+_stats:
+  coreVersion: '12.343'
+folder: eZeI98zuA6EzppaG
+img: icons/commodities/tech/blueprint.webp
+name: Technomancy
+system:
+  actions:
+    - _id: josrys9awaatg19h
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: 3 * @cl
+      name: Use
+      range:
+        units: ft
+        value: '60'
+      target:
+        value: cone-shaped emanation
+  components:
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p>This spell functions as
+      @UUID[Compendium.pf1.spells.Item.uqh87jz757r2cb7r]{detect magic}, except
+      it detects the presence of technological objects instead of magical
+      objects. The spell grants you the Technologist feat for the purposes of
+      attempting Knowledge (engineering) checks to identify the properties of
+      technological items in your possession. If you already possess this feat,
+      you gain a +10 bonus on Knowledge (engineering) checks to identify item
+      properties.</p>
+  learnedAt:
+    class:
+      arcanist: 1
+      bard: 1
+      skald: 1
+      sorcerer: 1
+      wizard: 1
+  materials:
+    value: oil stirred with a coil of wires
+  school: div
+  sources:
+    - id: PZO9272
+      pages: '11'
+  sr: false
+type: spell

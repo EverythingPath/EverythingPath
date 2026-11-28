@@ -1,0 +1,49 @@
+_id: fttm0AJWflhbKEWT
+_key: '!items!fttm0AJWflhbKEWT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/light-royal-1.jpg
+name: Sungazer
+system:
+  abilityType: sp
+  actions:
+    - _id: 8tjl82wapi56cc6p
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '1'
+      name: Use
+  associations:
+    classes:
+      - Oracle
+  description:
+    value: >-
+      <p>You can study the sun and gaze upon any place its light touches. You
+      can use
+      @UUID[Compendium.pf1.spells.6kmkxepwgsbta6ui]{Clairaudience/Clairvoyance}
+      as a spell-like ability, but only for visual observation and you can only
+      place your sensor in places currently being touched by sunlight.</p>
+
+      <p>At 10th level, you can instead use
+      @UUID[Compendium.pf1.spells.g66w32kdup1f43bp]{Scrying} to observe any area
+      touched by sunlight.</p>
+
+      <p>At 15th level, you can use
+      @UUID[Compendium.pf1.spells.glt6uk3n6g6l2p6l]{Scrying, Greater} instead.
+      You must be at least 5th level to select this revelation.</p>
+
+      <p>You can sungaze for 1 minute per day per oracle level; the duration
+      need not be continuous, but it must be used in 1-minute increments.</p>
+  subType: classFeat
+  tag: classFeat_sungazer
+  tags:
+    - Revelation
+    - Solar Mystery
+  uses:
+    maxFormula: '@class.level'
+    per: day
+type: feat

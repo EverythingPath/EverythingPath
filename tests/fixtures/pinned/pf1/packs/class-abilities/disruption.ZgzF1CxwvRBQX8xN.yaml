@@ -1,0 +1,45 @@
+_id: ZgzF1CxwvRBQX8xN
+_key: '!items!ZgzF1CxwvRBQX8xN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/wind-grasp-acid-1.jpg
+name: Disruption
+system:
+  abilityType: su
+  actions:
+    - _id: akq76j14pqturo2y
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: round
+        value: max(1, floor(@class.level / 2))
+      name: Use
+      range:
+        units: touch
+      target:
+        value: Creature touched
+      touch: true
+  associations:
+    classes:
+      - Wizard
+  description:
+    value: >-
+      <p>At 1st level, you gain the ability to disrupt spellcasting with a
+      touch. As a melee <em>touch attack</em>, you can place a disruptive field
+      around the target. While the field is in place, the target must make a
+      <em>concentration</em> check to cast any spell or to use a <em>spell-like
+      ability</em> in addition to any other required <em>concentration</em>
+      checks. The DC of this check is equal to 15 + twice the spell’s level. If
+      the check is failed, the target’s spell is wasted. This field lasts for a
+      number of rounds equal to 1/2 your wizard level (minimum 1). You can use
+      this ability a number of times per day equal to 3 + your
+      <em>Intelligence</em> modifier.</p>
+  subType: classFeat
+  tag: classFeat_disruption
+  uses:
+    maxFormula: 3 + @abilities.int.mod
+    per: day
+type: feat

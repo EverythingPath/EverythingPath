@@ -1,0 +1,43 @@
+_id: U38CG2AbE3KOry9p
+_key: '!items!U38CG2AbE3KOry9p'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_11.jpg
+name: It Is My Nature
+system:
+  abilityType: su
+  actions:
+    - _id: qlq2oxh4ykp1c67a
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+      touch: true
+  associations:
+    classes:
+      - Sorcerer
+  description:
+    value: >-
+      <p>At 20th level, your poisoned blood protects you, reflexively conjuring
+      an ethereal stinger to lash out at foes who come too close. Three times
+      per day when an enemy moves into a square adjacent to you, you can make a
+      melee <em>touch attack</em> against the creature as an <em>immediate
+      action</em>. On a hit, the creature must succeed at a <em>Fortitude</em>
+      save (DC = 10 + half your <em>sorcerer</em> level + your <em>Charisma</em>
+      modifier) or die. A creature that succeeds at this <em>Fortitude</em> save
+      is immune to this effect for 24 hours. This is a poison and death effect.
+      You can use this ability even when you are surprised or
+      <em>flat-footed</em>.</p>
+  subType: classFeat
+  tag: classFeat_itIsMyNature
+  uses:
+    maxFormula: '3'
+    per: day
+type: feat

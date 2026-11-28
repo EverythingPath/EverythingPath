@@ -1,0 +1,42 @@
+_id: TkulrlH2WgE3TrIc
+_key: '!items!TkulrlH2WgE3TrIc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_15.jpg
+name: Touch of Virulence
+system:
+  abilityType: su
+  actions:
+    - _id: 54dige90qxqahuan
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: inst
+      name: Use
+      range:
+        units: touch
+      target:
+        value: creature touched
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p>As a standard action, you can touch a diseased creature and exacerbate
+      its condition. If it fails a Fortitude save (DC = 10 + 1/2 your cleric
+      level + your Wisdom modifier), the creature takes damage as though it had
+      failed its Fortitude save against the disease and any remaining onset time
+      for the disease ends. You can use this ability once per day at 8th level,
+      plus one additional time per day at 14th level and 20th level.</p>
+
+      <p>This power replaces the Death's Embrace power of the Death Domain or
+      the Touch of Evil power of the Evil Domain.</p>
+  subType: classFeat
+  tag: classFeat_touchOfVirulence
+  uses:
+    maxFormula: 1 + if(gt(@class.level, 13), 1) + if(gte(@class.level, 20), 1)
+    per: day
+type: feat
